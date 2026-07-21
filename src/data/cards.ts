@@ -1,0 +1,86 @@
+import setsJson from './generated/sets.json'
+import { defaultSelection, type Selection } from './defaults'
+
+export interface CardMarket {
+  trend: number | null
+  avg30: number | null
+  low: number | null
+  updated: string | null
+}
+
+export interface CardData {
+  id: string
+  localId: string
+  name: string
+  category: string
+  rarity: string | null
+  dexIds: number[]
+  image: string | null
+  market: CardMarket | null
+  preset: { rarity: string; era: string; popularity: string; supply: string }
+}
+
+export interface SetMeta {
+  id: string
+  name: string
+  serie: string | null
+  releaseDate: string
+  logo: string | null
+  symbol: string | null
+  cardCount: number
+  withMarket: number
+}
+
+export const SETS: SetMeta[] = setsJson as SetMeta[]
+
+const cardModules = import.meta.glob('./generated/cards-*.json', { eager: true }) as Record<
+  string,
+  { default: CardData[] }
+>
+
+const cardsBySet: Record<string, CardData[]> = {}
+for (const [path, mod] of Object.entries(cardModules)) {
+  const setId = path.match(/cards-(.+)\.json$/)![1]
+  cardsBySet[setId] = mod.default
+}
+
+export function getSet(setId: string): SetMeta | undefined {
+  return SETS.find((s) => s.id === setId)
+}
+
+export function getCards(setId: string): CardData[] {
+  return cardsBySet[setId] ?? []
+}
+
+export function getCard(cardId: string): CardData | undefined {
+  const setId = cardId.slice(0, cardId.lastIndexOf('-'))
+  return cardsBySet[setId]?.find((c) => c.id === cardId)
+}
+
+/** Vorbelegte Auswahl für eine Karte: Karten-Faktoren aus dem Import, Exemplar auf NM/EN/Unlimited. */
+export function selectionForCard(card: CardData): Selection {
+  return {
+    ...defaultSelection(),
+    rarity: card.preset.rarity,
+    era: card.preset.era,
+    popularity: card.preset.popularity,
+    supply: card.preset.supply,
+  }
+}
+
+/** Bild-URL von TCGdex: braucht Qualität + Format als Suffix. */
+export function cardImage(card: CardData, quality: 'low' | 'high'): string | null {
+  return card.image ? `${card.image}/${quality}.webp` : null
+}
+
+export function setLogo(set: SetMeta): string | null {
+  return set.logo ? `${set.logo}.webp` : null
+}
+
+const dateFmt = new Intl.DateTimeFormat('de-AT', { day: 'numeric', month: 'long', year: 'numeric' })
+
+export function formatDate(iso: string | null | undefined): string {
+  if (!iso) return ''
+  const d = new Date(iso)
+  return Number.isNaN(d.getTime()) ? iso : dateFmt.format(d)
+}
