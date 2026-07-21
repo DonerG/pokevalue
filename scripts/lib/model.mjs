@@ -1,14 +1,14 @@
 /**
  * A small feed-forward neural network with learned embeddings for the
- * categorical card features (Pokémon species, rarity, category). Shared
- * between the training script and anything that needs to load/run a saved
- * model (e.g. a future prediction step in the app's build).
+ * categorical card features (Pokémon species, rarity, category, illustrator).
+ * Shared between the training script and anything that needs to load/run a
+ * saved model (e.g. a future prediction step in the app's build).
  *
- * Architecture: concat(pokemonEmb, rarityEmb, categoryEmb, continuous) →
- * dense(hidden, ReLU) → dense(1, linear) = predicted log(price).
+ * Architecture: concat(pokemonEmb, rarityEmb, categoryEmb, illustratorEmb,
+ * continuous) → dense(hidden, ReLU) → dense(1, linear) = predicted log(price).
  */
 
-export const DIMS = { pokemon: 4, rarity: 4, category: 2, continuous: 3, hidden: 16 }
+export const DIMS = { pokemon: 4, rarity: 4, category: 2, illustrator: 4, continuous: 3, hidden: 20 }
 
 export function mulberry32(seed) {
   let a = seed
@@ -29,14 +29,15 @@ function zeros(n) {
   return new Array(n).fill(0)
 }
 
-export function initModel({ vocabPokemon, vocabRarity, vocabCategory }, seed = 42) {
+export function initModel({ vocabPokemon, vocabRarity, vocabCategory, vocabIllustrator }, seed = 42) {
   const rng = mulberry32(seed)
-  const inputSize = DIMS.pokemon + DIMS.rarity + DIMS.category + DIMS.continuous
+  const inputSize = DIMS.pokemon + DIMS.rarity + DIMS.category + DIMS.illustrator + DIMS.continuous
   return {
     dims: DIMS,
     pokemonEmb: Array.from({ length: vocabPokemon }, () => randVec(DIMS.pokemon, 0.05, rng)),
     rarityEmb: Array.from({ length: vocabRarity }, () => randVec(DIMS.rarity, 0.1, rng)),
     categoryEmb: Array.from({ length: vocabCategory }, () => randVec(DIMS.category, 0.1, rng)),
+    illustratorEmb: Array.from({ length: vocabIllustrator }, () => randVec(DIMS.illustrator, 0.05, rng)),
     W1: Array.from({ length: DIMS.hidden }, () => randVec(inputSize, Math.sqrt(2 / inputSize), rng)),
     b1: zeros(DIMS.hidden),
     W2: randVec(DIMS.hidden, Math.sqrt(2 / DIMS.hidden), rng),
@@ -50,14 +51,15 @@ export function lookupFeatures(model, row) {
     pe: model.pokemonEmb[row.dexIdx],
     re: model.rarityEmb[row.rarityIdx],
     ce: model.categoryEmb[row.categoryIdx],
+    ie: model.illustratorEmb[row.illustratorIdx],
     cont: [row.yearsNorm, row.artworkNorm, row.isRated],
   }
 }
 
 /** Forward pass. Returns everything backward() needs, plus the prediction. */
 export function forward(model, row) {
-  const { pe, re, ce, cont } = lookupFeatures(model, row)
-  const x = [...pe, ...re, ...ce, ...cont]
+  const { pe, re, ce, ie, cont } = lookupFeatures(model, row)
+  const x = [...pe, ...re, ...ce, ...ie, ...cont]
   const hPre = new Array(model.W1.length)
   const h = new Array(model.W1.length)
   for (let j = 0; j < model.W1.length; j++) {

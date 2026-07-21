@@ -1,8 +1,8 @@
 /**
  * Trains the pricing model: a small neural network with learned embeddings
- * for Pokémon species, rarity, and card category, plus continuous features
- * for card age and (once rated) artwork quality. Target is log(Cardmarket
- * 30-day average price).
+ * for Pokémon species, rarity, card category, and illustrator, plus
+ * continuous features for card age and (once rated) artwork quality. Target
+ * is log(Cardmarket 30-day average price).
  *
  * Usage: node scripts/train-model.mjs
  * Reads:  scripts/training-data.json, src/data/artwork-ratings.json
@@ -36,9 +36,11 @@ console.log(`${cards.length} priced cards, ${Object.keys(ratings).length} artwor
 
 const dexSet = new Set()
 const raritySet = new Set()
+const illustratorSet = new Set()
 for (const c of cards) {
   if (c.dexIds?.[0] != null) dexSet.add(c.dexIds[0])
   raritySet.add(c.rarity ?? 'None')
+  if (c.illustrator) illustratorSet.add(c.illustrator)
 }
 const dexList = [...dexSet].sort((a, b) => a - b)
 const dexIndex = new Map(dexList.map((d, i) => [d, i + 1])) // 0 = none/unknown
@@ -46,8 +48,12 @@ const rarityList = [...raritySet].sort()
 const rarityIndex = new Map(rarityList.map((r, i) => [r, i + 1])) // 0 = unknown
 const categoryList = ['Pokemon', 'Trainer', 'Energy']
 const categoryIndex = new Map(categoryList.map((c, i) => [c, i + 1])) // 0 = unknown
+const illustratorList = [...illustratorSet].sort()
+const illustratorIndex = new Map(illustratorList.map((n, i) => [n, i + 1])) // 0 = unknown/missing
 
-console.log(`Vocab: ${dexList.length} Pokémon, ${rarityList.length} rarities, ${categoryList.length} categories.`)
+console.log(
+  `Vocab: ${dexList.length} Pokémon, ${rarityList.length} rarities, ${categoryList.length} categories, ${illustratorList.length} illustrators.`,
+)
 
 // ---------- Feature rows ----------
 
@@ -66,6 +72,7 @@ function buildRow(card) {
     dexIdx: card.dexIds?.[0] != null ? (dexIndex.get(card.dexIds[0]) ?? 0) : 0,
     rarityIdx: rarityIndex.get(card.rarity ?? 'None') ?? 0,
     categoryIdx: categoryIndex.get(card.category) ?? 0,
+    illustratorIdx: card.illustrator ? (illustratorIndex.get(card.illustrator) ?? 0) : 0,
     yearsNorm: Math.min(4, yearsSince(card.releaseDate) / 10),
     artworkNorm: isRated ? (rating - 5.5) / 4.5 : 0,
     isRated,
@@ -94,7 +101,12 @@ console.log(`${trainIdx.length} train, ${valIdx.length} validation examples.`)
 // ---------- Model + training loop ----------
 
 const model = initModel(
-  { vocabPokemon: dexList.length + 1, vocabRarity: rarityList.length + 1, vocabCategory: categoryList.length + 1 },
+  {
+    vocabPokemon: dexList.length + 1,
+    vocabRarity: rarityList.length + 1,
+    vocabCategory: categoryList.length + 1,
+    vocabIllustrator: illustratorList.length + 1,
+  },
   42,
 )
 
@@ -106,6 +118,7 @@ const velocity = {
   pokemonEmb: model.pokemonEmb.map((v) => v.map(() => 0)),
   rarityEmb: model.rarityEmb.map((v) => v.map(() => 0)),
   categoryEmb: model.categoryEmb.map((v) => v.map(() => 0)),
+  illustratorEmb: model.illustratorEmb.map((v) => v.map(() => 0)),
   W1: zerosLike2D(model.W1.length, model.W1[0].length),
   b1: model.b1.map(() => 0),
   W2: model.W2.map(() => 0),
@@ -131,6 +144,7 @@ function trainBatch(batchIdx, lr, momentum, l2Dense, l2Emb) {
   const gPokemon = new Map()
   const gRarity = new Map()
   const gCategory = new Map()
+  const gIllustrator = new Map()
   let lossSum = 0
   const n = batchIdx.length
 
@@ -170,6 +184,8 @@ function trainBatch(batchIdx, lr, momentum, l2Dense, l2Emb) {
     accumulate(gRarity, row.rarityIdx, dx.slice(off, off + DIMS.rarity))
     off += DIMS.rarity
     accumulate(gCategory, row.categoryIdx, dx.slice(off, off + DIMS.category))
+    off += DIMS.category
+    accumulate(gIllustrator, row.illustratorIdx, dx.slice(off, off + DIMS.illustrator))
   }
 
   // ---- apply updates (SGD + momentum + weight decay) ----
@@ -203,6 +219,7 @@ function trainBatch(batchIdx, lr, momentum, l2Dense, l2Emb) {
   applyEmb(model.pokemonEmb, velocity.pokemonEmb, gPokemon, l2Emb)
   applyEmb(model.rarityEmb, velocity.rarityEmb, gRarity, l2Emb)
   applyEmb(model.categoryEmb, velocity.categoryEmb, gCategory, l2Emb)
+  applyEmb(model.illustratorEmb, velocity.illustratorEmb, gIllustrator, l2Emb)
 
   return lossSum / n
 }
@@ -248,6 +265,7 @@ function cloneModel(m) {
     pokemonEmb: m.pokemonEmb.map((v) => [...v]),
     rarityEmb: m.rarityEmb.map((v) => [...v]),
     categoryEmb: m.categoryEmb.map((v) => [...v]),
+    illustratorEmb: m.illustratorEmb.map((v) => [...v]),
     W1: m.W1.map((v) => [...v]),
     b1: [...m.b1],
     W2: [...m.W2],
@@ -337,6 +355,7 @@ await writeFile(
     dexIndex: Object.fromEntries(dexIndex),
     rarityIndex: Object.fromEntries(rarityIndex),
     categoryIndex: Object.fromEntries(categoryIndex),
+    illustratorIndex: Object.fromEntries(illustratorIndex),
     model,
   }),
 )

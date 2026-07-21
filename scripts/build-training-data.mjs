@@ -46,6 +46,7 @@ for (const file of files) {
     category: card.category ?? 'Pokemon',
     dexIds: card.dexId ?? [],
     rarity: card.rarity ?? null,
+    illustrator: card.illustrator ?? null,
     setId: card.set?.id ?? null,
     setName: card.set?.name ?? null,
     releaseDate: releaseDateBySet.get(card.set?.id) ?? null,
