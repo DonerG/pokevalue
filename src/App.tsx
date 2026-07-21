@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { defaultConfig, type Config, type FactorId } from './data/defaults'
 import { clearConfig, loadConfig, saveConfig } from './logic/storage'
 import { useRoute } from './router'
@@ -81,6 +82,7 @@ function App() {
         (Cardmarket). Unofficial fan project — not endorsed or supported by Nintendo, Game Freak, or
         The Pokémon Company.
       </footer>
+      <Analytics />
     </div>
   )
 }
