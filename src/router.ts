@@ -5,12 +5,14 @@ export type Route =
   | { page: 'set'; setId: string }
   | { page: 'card'; cardId: string }
   | { page: 'calculator' }
+  | { page: 'admin-artwork' }
 
 export function parseHash(hash: string): Route {
   const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean)
   if (parts[0] === 'set' && parts[1]) return { page: 'set', setId: parts[1] }
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: parts[1] }
   if (parts[0] === 'calculator') return { page: 'calculator' }
+  if (parts[0] === 'admin' && parts[1] === 'artwork') return { page: 'admin-artwork' }
   return { page: 'home' }
 }
 

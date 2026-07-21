@@ -1,4 +1,4 @@
-import type { Config } from '../data/defaults'
+import type { Config, Selection } from '../data/defaults'
 import {
   formatEuro,
   formatPercent,
@@ -6,6 +6,7 @@ import {
   verdict,
   type Verdict,
 } from '../logic/pricing'
+import { PriceBreakdown } from './PriceBreakdown'
 
 interface Props {
   score: number
@@ -14,6 +15,7 @@ interface Props {
   marketInput: string
   onMarketInput: (value: string) => void
   config: Config
+  selection: Selection
 }
 
 const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint: string }> = {
@@ -41,6 +43,7 @@ export function ResultPanel({
   marketInput,
   onMarketInput,
   config,
+  selection,
 }: Props) {
   const referencePrice = fairPrice ?? baseValue
   const market = parseNumber(marketInput)
@@ -93,6 +96,8 @@ export function ResultPanel({
           Otherwise the market comparison uses the base value.
         </p>
       )}
+
+      <PriceBreakdown selection={selection} config={config} showCopyFactors={fairPrice !== null} />
 
       <div className="market-block">
         <label htmlFor="market-price">Current market price (e.g. Cardmarket)</label>

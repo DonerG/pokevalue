@@ -88,6 +88,27 @@ export function cardmarketUrl(card: CardData, set: SetMeta): string {
   return `https://www.cardmarket.com/en/Pokemon/Products/Singles/${setSlug}?searchString=${query}`
 }
 
+export interface ArtworkCandidate {
+  id: string
+  name: string
+  localId: string
+  image: string | null
+  rarity: string | null
+  setId: string | null
+  setName: string | null
+  releaseDate: string | null
+  price: number
+}
+
+/**
+ * Lazily loaded (dynamic import) so the ~700KB candidate list only ships to
+ * whoever actually opens the hidden artwork-rating page, not every visitor.
+ */
+export async function loadArtworkCandidates(): Promise<ArtworkCandidate[]> {
+  const mod = await import('./generated/artwork-candidates.json')
+  return mod.default as unknown as ArtworkCandidate[]
+}
+
 const dateFmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
 export function formatDate(iso: string | null | undefined): string {

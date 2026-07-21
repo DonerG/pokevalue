@@ -119,6 +119,7 @@ export function CardPage({ cardId, config }: Props) {
             marketInput={marketInput}
             onMarketInput={setMarketInput}
             config={config}
+            selection={selection}
           />
         </aside>
       </div>

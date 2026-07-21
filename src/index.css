@@ -491,7 +491,7 @@ summary:focus-visible {
   color: var(--bad-fg);
 }
 
-/* ---------- Collapsible panels (expert mode, card factors) ---------- */
+/* ---------- Collapsible panels (price breakdown, card factors) ---------- */
 
 details.panel summary {
   cursor: pointer;
@@ -521,73 +521,60 @@ details.panel[open] summary {
   margin-bottom: 16px;
 }
 
-.expert-factor {
+/* ---------- Price breakdown ("why this price") ---------- */
+
+.price-breakdown {
+  margin-top: 16px;
   border-top: 1px solid var(--border);
   padding-top: 12px;
-  margin-top: 12px;
 }
 
-.expert-factor h3 {
-  font-size: 15px;
-  margin: 0 0 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.stage-tag {
-  font-size: 11.5px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  color: var(--text-2);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 1px 8px;
-}
-
-.expert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 10px 14px;
-}
-
-.expert-field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 13px;
-  color: var(--text-2);
-}
-
-.expert-field input {
-  font: inherit;
-  font-size: 15px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  color: var(--text);
-  font-variant-numeric: tabular-nums;
-}
-
-.reset-button {
-  font: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 16px;
-  padding: 8px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  color: var(--text);
+.price-breakdown summary {
   cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
 }
 
-.reset-button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+.price-breakdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.breakdown-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.breakdown-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.breakdown-list li span:first-child {
+  flex: none;
+  width: 110px;
+  font-weight: 600;
+}
+
+.breakdown-list li span:nth-child(2) {
+  flex: 1;
+}
+
+.breakdown-mult {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-2);
+}
+
+.breakdown-total {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 8px !important;
+  font-weight: 600;
 }
 
 /* ---------- Home page ---------- */
@@ -904,4 +891,170 @@ details.panel[open] summary {
 
 .app-footer a {
   color: var(--accent);
+}
+
+/* ---------- Artwork rating admin page ---------- */
+
+.admin-header h2 {
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.admin-header .muted {
+  max-width: 80ch;
+  margin: 0 0 16px;
+}
+
+.admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.admin-toolbar input[type='search'] {
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  min-width: 240px;
+}
+
+.admin-toolbar button {
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.admin-toolbar button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.admin-progress {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.admin-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--text-2);
+}
+
+.rating-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.rating-card img {
+  width: 100%;
+  aspect-ratio: 733 / 1024;
+  object-fit: contain;
+  background: var(--surface-2);
+}
+
+.rating-card-placeholder {
+  aspect-ratio: 733 / 1024;
+  background: var(--surface-2);
+}
+
+.rating-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px 12px;
+  font-size: 13px;
+}
+
+.rating-scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.rating-btn {
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.rating-btn:hover {
+  border-color: var(--accent);
+}
+
+.rating-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.rating-clear {
+  font: inherit;
+  font-size: 11.5px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+.admin-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 13.5px;
+  color: var(--text-2);
+  margin-top: 8px;
+}
+
+.admin-pagination button {
+  font: inherit;
+  font-size: 13.5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.admin-pagination button:disabled {
+  opacity: 0.4;
+  cursor: default;
 }

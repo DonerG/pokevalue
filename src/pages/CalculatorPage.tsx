@@ -4,23 +4,12 @@ import { baseValue, fairPrice, score } from '../logic/pricing'
 import { CardProfileForm } from '../components/CardProfileForm'
 import { ExemplarForm } from '../components/ExemplarForm'
 import { ResultPanel } from '../components/ResultPanel'
-import { ExpertPanel } from '../components/ExpertPanel'
 
 interface Props {
   config: Config
-  onChangeMultiplier: (factorId: FactorId, optionId: string, value: number) => void
-  onChangeAnchor: (value: number) => void
-  onChangeThreshold: (key: 'over' | 'under', value: number) => void
-  onReset: () => void
 }
 
-export function CalculatorPage({
-  config,
-  onChangeMultiplier,
-  onChangeAnchor,
-  onChangeThreshold,
-  onReset,
-}: Props) {
+export function CalculatorPage({ config }: Props) {
   const [selection, setSelection] = useState(() => defaultSelection())
   const [copyEnabled, setCopyEnabled] = useState(false)
   const [marketInput, setMarketInput] = useState('')
@@ -48,13 +37,6 @@ export function CalculatorPage({
           config={config}
           onSelect={handleSelect}
         />
-        <ExpertPanel
-          config={config}
-          onChangeMultiplier={onChangeMultiplier}
-          onChangeAnchor={onChangeAnchor}
-          onChangeThreshold={onChangeThreshold}
-          onReset={onReset}
-        />
       </div>
       <aside className="results">
         <ResultPanel
@@ -64,6 +46,7 @@ export function CalculatorPage({
           marketInput={marketInput}
           onMarketInput={setMarketInput}
           config={config}
+          selection={selection}
         />
       </aside>
     </main>

@@ -1,47 +1,21 @@
-import { useState } from 'react'
+import { lazy, Suspense } from 'react'
 import { Analytics } from '@vercel/analytics/react'
-import { defaultConfig, type Config, type FactorId } from './data/defaults'
-import { clearConfig, loadConfig, saveConfig } from './logic/storage'
+import { defaultConfig } from './data/defaults'
 import { useRoute } from './router'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
 import { CardPage } from './pages/CardPage'
 import { CalculatorPage } from './pages/CalculatorPage'
 
+const AdminArtworkPage = lazy(() =>
+  import('./pages/AdminArtworkPage').then((m) => ({ default: m.AdminArtworkPage })),
+)
+
+// Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
+const CONFIG = defaultConfig()
+
 function App() {
   const route = useRoute()
-  const [config, setConfig] = useState<Config>(() => loadConfig())
-
-  const updateConfig = (updater: (prev: Config) => Config) => {
-    setConfig((prev) => {
-      const next = updater(prev)
-      saveConfig(next)
-      return next
-    })
-  }
-
-  const handleMultiplier = (factorId: FactorId, optionId: string, value: number) =>
-    updateConfig((prev) => ({
-      ...prev,
-      multipliers: {
-        ...prev.multipliers,
-        [factorId]: { ...prev.multipliers[factorId], [optionId]: Number.isFinite(value) ? value : 0 },
-      },
-    }))
-
-  const handleAnchor = (value: number) =>
-    updateConfig((prev) => ({ ...prev, anchor: Number.isFinite(value) && value > 0 ? value : prev.anchor }))
-
-  const handleThreshold = (key: 'over' | 'under', value: number) =>
-    updateConfig((prev) => ({
-      ...prev,
-      thresholds: { ...prev.thresholds, [key]: Number.isFinite(value) && value >= 0 ? value : 0 },
-    }))
-
-  const handleReset = () => {
-    clearConfig()
-    setConfig(defaultConfig())
-  }
 
   return (
     <div className="app">
@@ -61,21 +35,19 @@ function App() {
       </header>
 
       {route.page === 'home' && <HomePage />}
-      {route.page === 'set' && <SetPage setId={route.setId} config={config} />}
-      {route.page === 'card' && <CardPage key={route.cardId} cardId={route.cardId} config={config} />}
-      {route.page === 'calculator' && (
-        <CalculatorPage
-          config={config}
-          onChangeMultiplier={handleMultiplier}
-          onChangeAnchor={handleAnchor}
-          onChangeThreshold={handleThreshold}
-          onReset={handleReset}
-        />
+      {route.page === 'set' && <SetPage setId={route.setId} config={CONFIG} />}
+      {route.page === 'card' && <CardPage key={route.cardId} cardId={route.cardId} config={CONFIG} />}
+      {route.page === 'calculator' && <CalculatorPage config={CONFIG} />}
+      {route.page === 'admin-artwork' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <AdminArtworkPage />
+        </Suspense>
       )}
 
       <footer className="app-footer">
-        The formula is a model, not a market oracle — every multiplier can be adjusted in the free
-        calculator (expert mode). Not financial advice. Card data and prices from{' '}
+        PokéValue estimates a fair price from real Cardmarket data across thousands of cards using
+        a machine-learning model — not a hand-tuned formula. Not financial advice. Card data and
+        prices from{' '}
         <a href="https://tcgdex.dev" target="_blank" rel="noreferrer">
           TCGdex
         </a>{' '}

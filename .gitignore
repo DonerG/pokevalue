@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Raw per-card cache from the bulk data pull (large, regenerable) — the
+# compact training-data.json derived from it is what gets committed.
+scripts/.cache/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

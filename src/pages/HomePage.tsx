@@ -6,10 +6,11 @@ export function HomePage() {
       <section className="hero-block">
         <h2>What is a Pokémon card really worth?</h2>
         <p>
-          PokéValue calculates a fair price for every card using a transparent formula — rarity,
-          age, popularity, and supply are already preset per card. Compare the result with the
-          current Cardmarket price and see instantly whether a card is over- or undervalued. For
-          your specific copy, you only need to set condition, language, and edition.
+          PokéValue estimates a fair price for every card with a pricing model trained on real
+          Cardmarket data across thousands of cards — rarity, age, and Pokémon popularity are
+          already factored in per card. Compare the result with the current market price and see
+          instantly whether a card is over- or undervalued. For your specific copy, you only need
+          to set condition, language, and edition.
         </p>
       </section>
 
