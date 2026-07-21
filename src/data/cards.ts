@@ -77,6 +77,17 @@ export function setLogo(set: SetMeta): string | null {
   return set.logo ? `${set.logo}.webp` : null
 }
 
+/**
+ * Cardmarket has no public direct product-ID URL, so this links to their singles
+ * search scoped to the set, with the card name + local number as the query —
+ * reliably narrows to the exact card (verified for name/number collisions).
+ */
+export function cardmarketUrl(card: CardData, set: SetMeta): string {
+  const setSlug = encodeURIComponent(set.name.replace(/\s+/g, '-'))
+  const query = encodeURIComponent(`${card.name} ${card.localId}`)
+  return `https://www.cardmarket.com/en/Pokemon/Products/Singles/${setSlug}?searchString=${query}`
+}
+
 const dateFmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
 export function formatDate(iso: string | null | undefined): string {

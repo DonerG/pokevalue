@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { CARD_FACTORS, EXEMPLAR_FACTORS, type Config, type FactorId } from '../data/defaults'
 import { baseValue, fairPrice, formatEuro, score } from '../logic/pricing'
-import { cardImage, formatDate, getCard, getSet, selectionForCard } from '../data/cards'
+import { cardImage, cardmarketUrl, formatDate, getCard, getSet, selectionForCard } from '../data/cards'
 import { OptionGroup } from '../components/OptionGroup'
 import { ResultPanel } from '../components/ResultPanel'
 
@@ -65,6 +65,11 @@ export function CardPage({ cardId, config }: Props) {
               </p>
             ) : (
               <p className="muted">No Cardmarket price available.</p>
+            )}
+            {set && (
+              <a className="cardmarket-link" href={cardmarketUrl(card, set)} target="_blank" rel="noreferrer">
+                View on Cardmarket ↗
+              </a>
             )}
           </div>
         </div>

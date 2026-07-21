@@ -734,8 +734,6 @@ details.panel[open] summary {
 .card-tile {
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  color: inherit;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -747,6 +745,30 @@ details.panel[open] summary {
 .card-tile:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+.card-tile-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-tile-external {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 8px;
+  color: var(--text-2);
+  text-decoration: none;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.card-tile-external:hover {
+  color: var(--accent);
 }
 
 .card-tile img {
@@ -861,6 +883,19 @@ details.panel[open] summary {
 
 .card-facts .muted {
   margin: 2px 0 0;
+}
+
+.cardmarket-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.cardmarket-link:hover {
+  text-decoration: underline;
 }
 
 .card-controls {
