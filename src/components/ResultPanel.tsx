@@ -18,7 +18,7 @@ interface Props {
 
 const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint: string }> = {
   undervalued: {
-    icon: '▼',
+    icon: '▲',
     label: 'Undervalued',
     hint: 'The market price is well below the fair price — a good buy per the formula.',
   },
@@ -28,7 +28,7 @@ const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint:
     hint: 'The market price is close to the formula’s fair price.',
   },
   overvalued: {
-    icon: '▲',
+    icon: '▼',
     label: 'Overvalued',
     hint: 'The market price is well above the fair price — too expensive per the formula.',
   },

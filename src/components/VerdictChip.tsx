@@ -2,9 +2,9 @@ import type { Config } from '../data/defaults'
 import { formatPercent, verdict } from '../logic/pricing'
 
 const CHIP: Record<string, { icon: string; label: string }> = {
-  undervalued: { icon: '▼', label: 'undervalued' },
+  undervalued: { icon: '▲', label: 'undervalued' },
   fair: { icon: '✓', label: 'fair' },
-  overvalued: { icon: '▲', label: 'overvalued' },
+  overvalued: { icon: '▼', label: 'overvalued' },
 }
 
 interface Props {
