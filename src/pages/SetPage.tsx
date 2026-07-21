@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { baseValue, formatEuro } from '../logic/pricing'
-import { cardImage, cardmarketUrl, formatDate, getCards, getSet, selectionForCard } from '../data/cards'
+import { cardImage, formatDate, getCards, getSet, selectionForCard } from '../data/cards'
 import { VerdictChip } from '../components/VerdictChip'
 
 type SortKey = 'number' | 'deviation' | 'market' | 'fair'
@@ -79,36 +79,26 @@ export function SetPage({ setId, config }: Props) {
         {rows.map(({ card, fair, market }) => {
           const img = cardImage(card, 'low')
           return (
-            <div key={card.id} className="card-tile">
-              <a className="card-tile-link" href={`#/card/${card.id}`}>
-                {img ? (
-                  <img src={img} alt={card.name} loading="lazy" />
-                ) : (
-                  <div className="card-tile-placeholder">{card.name}</div>
-                )}
-                <div className="card-tile-body">
-                  <strong>{card.name}</strong>
-                  <span className="muted">
-                    #{card.localId} · {card.rarity ?? 'unknown'}
+            <a key={card.id} className="card-tile" href={`#/card/${card.id}`}>
+              {img ? (
+                <img src={img} alt={card.name} loading="lazy" />
+              ) : (
+                <div className="card-tile-placeholder">{card.name}</div>
+              )}
+              <div className="card-tile-body">
+                <strong>{card.name}</strong>
+                <span className="muted">
+                  #{card.localId} · {card.rarity ?? 'unknown'}
+                </span>
+                <span className="card-tile-prices">
+                  <span title="Cardmarket trend price">
+                    Market {market != null ? formatEuro(market) : '–'}
                   </span>
-                  <span className="card-tile-prices">
-                    <span title="Cardmarket trend price">
-                      Market {market != null ? formatEuro(market) : '–'}
-                    </span>
-                    <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
-                  </span>
-                  <VerdictChip market={market} fair={fair} config={config} />
-                </div>
-              </a>
-              <a
-                className="card-tile-external"
-                href={cardmarketUrl(card, set)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on Cardmarket ↗
-              </a>
-            </div>
+                  <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
+                </span>
+                <VerdictChip market={market} fair={fair} config={config} />
+              </div>
+            </a>
           )
         })}
       </div>
