@@ -90,6 +90,21 @@ export function mapRarity(rarity) {
 /** Rarity buckets where artwork/illustration quality meaningfully drives price. */
 export const ARTWORK_RELEVANT_RARITIES = new Set(['ultra', 'fullart', 'altart', 'secret'])
 
+/**
+ * Raw TCGdex rarity strings excluded from artwork rating even though their
+ * bucket is otherwise chase-tier: Double Rare and Ultra Rare use a
+ * standardized card-frame illustration, not a unique composition, so only
+ * the depicted Pokémon (already a feature) drives their price — rating
+ * "artwork quality" here would just be noise.
+ */
+export const ARTWORK_EXCLUDED_RAW_RARITIES = new Set(['double rare', 'ultra rare'])
+
+export function isArtworkRateable(rarity) {
+  if (!rarity) return false
+  if (ARTWORK_EXCLUDED_RAW_RARITIES.has(rarity.toLowerCase())) return false
+  return ARTWORK_RELEVANT_RARITIES.has(mapRarity(rarity))
+}
+
 export function mapEra(releaseDate) {
   const year = Number((releaseDate ?? '2024').slice(0, 4))
   if (year >= 2024) return 'current'
