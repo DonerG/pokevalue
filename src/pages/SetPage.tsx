@@ -91,10 +91,10 @@ export function SetPage({ setId, config }: Props) {
                   #{card.localId} · {card.rarity ?? 'unknown'}
                 </span>
                 <span className="card-tile-prices">
-                  <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
                   <span title="Cardmarket trend price">
                     Market {market != null ? formatEuro(market) : '–'}
                   </span>
+                  <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
                 </span>
                 <VerdictChip market={market} fair={fair} config={config} />
               </div>

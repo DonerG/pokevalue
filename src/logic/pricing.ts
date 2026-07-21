@@ -44,16 +44,21 @@ export type VerdictKind = 'undervalued' | 'fair' | 'overvalued'
 
 export interface Verdict {
   kind: VerdictKind
-  /** Deviation of the market price from the fair price, e.g. 0.35 = 35% above. */
+  /**
+   * Potential move to reach the fair price, relative to the current market price.
+   * Positive = upside (undervalued, price can rise this much); negative = downside
+   * (overvalued, price can fall this much). E.g. 0.35 = can rise 35%, -0.35 = can fall 35%.
+   */
   deviation: number
 }
 
 export function verdict(marketPrice: number, fair: number, config: Config): Verdict | null {
   if (!Number.isFinite(marketPrice) || marketPrice <= 0 || fair <= 0) return null
-  const deviation = (marketPrice - fair) / fair
-  if (deviation > config.thresholds.over / 100) return { kind: 'overvalued', deviation }
-  if (deviation < -config.thresholds.under / 100) return { kind: 'undervalued', deviation }
-  return { kind: 'fair', deviation }
+  const gapToFair = (marketPrice - fair) / fair
+  const upside = (fair - marketPrice) / marketPrice
+  if (gapToFair > config.thresholds.over / 100) return { kind: 'overvalued', deviation: upside }
+  if (gapToFair < -config.thresholds.under / 100) return { kind: 'undervalued', deviation: upside }
+  return { kind: 'fair', deviation: upside }
 }
 
 const euroFmt = new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' })
