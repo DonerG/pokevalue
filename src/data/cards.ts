@@ -57,7 +57,7 @@ export function getCard(cardId: string): CardData | undefined {
   return cardsBySet[setId]?.find((c) => c.id === cardId)
 }
 
-/** Vorbelegte Auswahl für eine Karte: Karten-Faktoren aus dem Import, Exemplar auf NM/EN/Unlimited. */
+/** Preset selection for a card: card factors from the import, copy set to NM/EN/Unlimited. */
 export function selectionForCard(card: CardData): Selection {
   return {
     ...defaultSelection(),
@@ -68,7 +68,7 @@ export function selectionForCard(card: CardData): Selection {
   }
 }
 
-/** Bild-URL von TCGdex: braucht Qualität + Format als Suffix. */
+/** TCGdex image URL: needs a quality + format suffix. */
 export function cardImage(card: CardData, quality: 'low' | 'high'): string | null {
   return card.image ? `${card.image}/${quality}.webp` : null
 }
@@ -77,7 +77,7 @@ export function setLogo(set: SetMeta): string | null {
   return set.logo ? `${set.logo}.webp` : null
 }
 
-const dateFmt = new Intl.DateTimeFormat('de-AT', { day: 'numeric', month: 'long', year: 'numeric' })
+const dateFmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
 export function formatDate(iso: string | null | undefined): string {
   if (!iso) return ''

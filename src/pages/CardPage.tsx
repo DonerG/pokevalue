@@ -11,7 +11,7 @@ interface Props {
 }
 
 function trendToInput(trend: number | null | undefined): string {
-  return trend != null ? trend.toLocaleString('de-AT', { maximumFractionDigits: 2 }) : ''
+  return trend != null ? trend.toLocaleString('en-IE', { maximumFractionDigits: 2 }) : ''
 }
 
 export function CardPage({ cardId, config }: Props) {
@@ -31,7 +31,7 @@ export function CardPage({ cardId, config }: Props) {
   if (!card || !selection || !results) {
     return (
       <p className="muted">
-        Karte nicht gefunden. <a href="#/">Zur Übersicht</a>
+        Card not found. <a href="#/">Back to overview</a>
       </p>
     )
   }
@@ -55,25 +55,25 @@ export function CardPage({ cardId, config }: Props) {
             <h2>{card.name}</h2>
             <p className="muted">
               #{card.localId}
-              {set ? ` · ${set.name}` : ''} · {card.rarity ?? 'Seltenheit unbekannt'}
+              {set ? ` · ${set.name}` : ''} · {card.rarity ?? 'rarity unknown'}
             </p>
             {card.market ? (
               <p className="muted">
                 Cardmarket: Trend {card.market.trend != null ? formatEuro(card.market.trend) : '–'}
-                {card.market.avg30 != null && <> · Ø 30 Tage {formatEuro(card.market.avg30)}</>}
-                {card.market.updated && <> · Stand {formatDate(card.market.updated)}</>}
+                {card.market.avg30 != null && <> · 30-day avg {formatEuro(card.market.avg30)}</>}
+                {card.market.updated && <> · as of {formatDate(card.market.updated)}</>}
               </p>
             ) : (
-              <p className="muted">Kein Cardmarket-Preis vorhanden.</p>
+              <p className="muted">No Cardmarket price available.</p>
             )}
           </div>
         </div>
 
         <div className="card-controls">
           <section className="panel">
-            <h2>Dein Exemplar</h2>
+            <h2>Your Copy</h2>
             <p className="panel-intro">
-              Zustand, Sprache und Auflage bestimmen den konkreten Preis dieses Exemplars.
+              Condition, language, and edition determine the concrete price of this copy.
             </p>
             {EXEMPLAR_FACTORS.map((def) => (
               <OptionGroup
@@ -88,10 +88,10 @@ export function CardPage({ cardId, config }: Props) {
 
           <details className="panel">
             <summary>
-              <h2>Karten-Faktoren (vorbelegt)</h2>
+              <h2>Card Factors (preset)</h2>
               <p className="panel-intro">
-                Seltenheit, Ära, Beliebtheit und Angebot sind aus den Kartendaten voreingestellt —
-                hier kannst du sie für diese Bewertung übersteuern.
+                Rarity, era, popularity, and supply are preset from the card data — you can
+                override them here for this valuation.
               </p>
             </summary>
             {CARD_FACTORS.map((def) => (

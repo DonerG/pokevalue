@@ -2,7 +2,7 @@ import type { Config } from '../data/defaults'
 import {
   formatEuro,
   formatPercent,
-  parseGermanNumber,
+  parseNumber,
   verdict,
   type Verdict,
 } from '../logic/pricing'
@@ -17,20 +17,20 @@ interface Props {
 }
 
 const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint: string }> = {
-  unterbewertet: {
+  undervalued: {
     icon: '▼',
-    label: 'Unterbewertet',
-    hint: 'Der Marktpreis liegt deutlich unter dem fairen Preis — laut Formel ein guter Kauf.',
+    label: 'Undervalued',
+    hint: 'The market price is well below the fair price — a good buy per the formula.',
   },
   fair: {
     icon: '✓',
-    label: 'Fair bewertet',
-    hint: 'Der Marktpreis liegt nahe am fairen Preis der Formel.',
+    label: 'Fairly valued',
+    hint: 'The market price is close to the formula’s fair price.',
   },
-  ueberbewertet: {
+  overvalued: {
     icon: '▲',
-    label: 'Überbewertet',
-    hint: 'Der Marktpreis liegt deutlich über dem fairen Preis — laut Formel zu teuer.',
+    label: 'Overvalued',
+    hint: 'The market price is well above the fair price — too expensive per the formula.',
   },
 }
 
@@ -43,17 +43,17 @@ export function ResultPanel({
   config,
 }: Props) {
   const referencePrice = fairPrice ?? baseValue
-  const market = parseGermanNumber(marketInput)
+  const market = parseNumber(marketInput)
   const v = marketInput.trim() === '' ? null : verdict(market, referencePrice, config)
   const scoreRounded = Math.round(score)
 
   return (
     <section className="panel result-panel">
-      <h2>Bewertung</h2>
+      <h2>Valuation</h2>
 
       <div className="score-block">
         <div className="score-head">
-          <span className="score-title">Karten-Score</span>
+          <span className="score-title">Card Score</span>
           <span className="score-value">
             {scoreRounded}
             <span className="score-max">/100</span>
@@ -65,43 +65,43 @@ export function ResultPanel({
           aria-valuemin={0}
           aria-valuemax={100}
           aria-valuenow={scoreRounded}
-          aria-label="Karten-Score"
+          aria-label="Card Score"
         >
           <div className="score-fill" style={{ width: `${score}%` }} />
         </div>
         <p className="muted">
-          Lage der Karte zwischen der schwächsten und stärksten möglichen Kombination — unabhängig
-          vom Zustand des Exemplars.
+          The card's position between the weakest and strongest possible combination —
+          independent of the copy's condition.
         </p>
       </div>
 
       <dl className="price-list">
         <div className="price-row">
-          <dt>Basiswert der Karte</dt>
+          <dt>Card base value</dt>
           <dd>{formatEuro(baseValue)}</dd>
         </div>
         {fairPrice !== null && (
           <div className="price-row price-row-main">
-            <dt>Fairer Preis (dein Exemplar)</dt>
+            <dt>Fair price (your copy)</dt>
             <dd>{formatEuro(fairPrice)}</dd>
           </div>
         )}
       </dl>
       {fairPrice === null && (
         <p className="muted">
-          Aktiviere „Konkretes Exemplar“, um einen konkreten Preis für Zustand, Sprache und Auflage
-          zu erhalten. Der Marktvergleich nutzt sonst den Basiswert.
+          Enable "Specific Copy" to get a concrete price for condition, language, and edition.
+          Otherwise the market comparison uses the base value.
         </p>
       )}
 
       <div className="market-block">
-        <label htmlFor="market-price">Aktueller Marktpreis (z.&nbsp;B. Cardmarket)</label>
+        <label htmlFor="market-price">Current market price (e.g. Cardmarket)</label>
         <div className="market-input">
           <input
             id="market-price"
             type="text"
             inputMode="decimal"
-            placeholder="z. B. 24,99"
+            placeholder="e.g. 24.99"
             value={marketInput}
             onChange={(e) => onMarketInput(e.target.value)}
           />
@@ -109,7 +109,7 @@ export function ResultPanel({
         </div>
 
         {marketInput.trim() !== '' && v === null && (
-          <p className="muted">Bitte einen gültigen Preis eingeben.</p>
+          <p className="muted">Please enter a valid price.</p>
         )}
         {v && (
           <div className={`verdict verdict-${v.kind}`}>

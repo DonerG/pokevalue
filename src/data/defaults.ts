@@ -7,7 +7,7 @@ export type FactorId =
   | 'language'
   | 'edition'
 
-export type Stage = 'karte' | 'exemplar'
+export type Stage = 'card' | 'copy'
 
 export interface FactorOption {
   id: string
@@ -28,9 +28,9 @@ export interface FactorDef {
 export const FACTORS: FactorDef[] = [
   {
     id: 'rarity',
-    label: 'Seltenheit / Hitrate',
-    description: 'Wie selten ist die Karte beim Öffnen von Packs?',
-    stage: 'karte',
+    label: 'Rarity / Hit Rate',
+    description: 'How rare is the card when opening packs?',
+    stage: 'card',
     defaultOption: 'holo',
     options: [
       { id: 'common', label: 'Common', multiplier: 0.1 },
@@ -45,57 +45,57 @@ export const FACTORS: FactorDef[] = [
   },
   {
     id: 'era',
-    label: 'Alter / Ära',
-    description: 'Aus welcher Zeit stammt das Set der Karte?',
-    stage: 'karte',
+    label: 'Age / Era',
+    description: 'Which era is the card’s set from?',
+    stage: 'card',
     defaultOption: 'current',
     options: [
-      { id: 'current', label: 'Aktuelles Set', hint: 'ab 2024', multiplier: 1 },
+      { id: 'current', label: 'Current Set', hint: 'since 2024', multiplier: 1 },
       { id: 'modern', label: 'Modern', hint: '2017–2023', multiplier: 1.2 },
-      { id: 'mid', label: 'Mittel', hint: '2011–2016', multiplier: 1.5 },
-      { id: 'exdp', label: 'EX-/DP-Ära', hint: '2003–2010', multiplier: 3 },
+      { id: 'mid', label: 'Mid', hint: '2011–2016', multiplier: 1.5 },
+      { id: 'exdp', label: 'EX/DP Era', hint: '2003–2010', multiplier: 3 },
       { id: 'wotc', label: 'WOTC / Vintage', hint: '1999–2003', multiplier: 8 },
     ],
   },
   {
     id: 'popularity',
-    label: 'Beliebtheit des Pokémon',
-    description: 'Wie gefragt ist das abgebildete Pokémon bei Sammlern?',
-    stage: 'karte',
+    label: 'Pokémon Popularity',
+    description: 'How sought-after is the depicted Pokémon among collectors?',
+    stage: 'card',
     defaultOption: 'c',
     options: [
-      { id: 's', label: 'Tier S', hint: 'Glurak, Pikachu, Mewtu, Evoli …', multiplier: 5 },
-      { id: 'a', label: 'Tier A', hint: 'Starter, Legendäre, Fan-Lieblinge', multiplier: 2.5 },
-      { id: 'b', label: 'Tier B', hint: 'beliebt', multiplier: 1.3 },
-      { id: 'c', label: 'Tier C', hint: 'Durchschnitt', multiplier: 1 },
-      { id: 'd', label: 'Tier D', hint: 'kaum gefragt', multiplier: 0.7 },
+      { id: 's', label: 'Tier S', hint: 'Charizard, Pikachu, Mewtwo, Eevee …', multiplier: 5 },
+      { id: 'a', label: 'Tier A', hint: 'Starters, Legendaries, fan favorites', multiplier: 2.5 },
+      { id: 'b', label: 'Tier B', hint: 'popular', multiplier: 1.3 },
+      { id: 'c', label: 'Tier C', hint: 'average', multiplier: 1 },
+      { id: 'd', label: 'Tier D', hint: 'low demand', multiplier: 0.7 },
     ],
   },
   {
     id: 'supply',
-    label: 'Angebot / Population',
-    description: 'Wie viele Exemplare sind tatsächlich am Markt verfügbar?',
-    stage: 'karte',
+    label: 'Supply / Population',
+    description: 'How many copies are actually available on the market?',
+    stage: 'card',
     defaultOption: 'normal',
     options: [
-      { id: 'mass', label: 'Massenware', hint: 'riesige Auflage, überall erhältlich', multiplier: 0.5 },
+      { id: 'mass', label: 'Mass-produced', hint: 'huge print run, available everywhere', multiplier: 0.5 },
       { id: 'normal', label: 'Normal', multiplier: 1 },
-      { id: 'scarce', label: 'Knapp', multiplier: 2 },
-      { id: 'rare', label: 'Selten am Markt', multiplier: 4 },
-      { id: 'barely', label: 'Kaum verfügbar', hint: 'nur vereinzelte Angebote', multiplier: 8 },
+      { id: 'scarce', label: 'Scarce', multiplier: 2 },
+      { id: 'rare', label: 'Rare on the market', multiplier: 4 },
+      { id: 'barely', label: 'Barely available', hint: 'only isolated listings', multiplier: 8 },
     ],
   },
   {
     id: 'condition',
-    label: 'Zustand',
-    description: 'Erhaltungszustand bzw. Grading deines Exemplars.',
-    stage: 'exemplar',
+    label: 'Condition',
+    description: 'Grading or condition of your copy.',
+    stage: 'copy',
     defaultOption: 'nm',
     options: [
       { id: 'psa10', label: 'PSA 10', hint: 'Gem Mint', multiplier: 5 },
       { id: 'psa9', label: 'PSA 9', hint: 'Mint', multiplier: 2 },
       { id: 'psa8', label: 'PSA 8', hint: 'NM-Mint', multiplier: 1.2 },
-      { id: 'nm', label: 'Near Mint', hint: 'ungegradet', multiplier: 1 },
+      { id: 'nm', label: 'Near Mint', hint: 'ungraded', multiplier: 1 },
       { id: 'lp', label: 'Lightly Played', multiplier: 0.7 },
       { id: 'mp', label: 'Moderately Played', multiplier: 0.45 },
       { id: 'hp', label: 'Heavily Played', multiplier: 0.25 },
@@ -104,40 +104,40 @@ export const FACTORS: FactorDef[] = [
   },
   {
     id: 'language',
-    label: 'Sprache',
-    description: 'In welcher Sprache ist die Karte gedruckt?',
-    stage: 'exemplar',
+    label: 'Language',
+    description: 'What language is the card printed in?',
+    stage: 'copy',
     defaultOption: 'en',
     options: [
-      { id: 'en', label: 'Englisch', multiplier: 1 },
-      { id: 'jp', label: 'Japanisch', multiplier: 1 },
-      { id: 'de', label: 'Deutsch', multiplier: 0.7 },
-      { id: 'other', label: 'Andere', multiplier: 0.5 },
+      { id: 'en', label: 'English', multiplier: 1 },
+      { id: 'jp', label: 'Japanese', multiplier: 1 },
+      { id: 'de', label: 'German', multiplier: 0.7 },
+      { id: 'other', label: 'Other', multiplier: 0.5 },
     ],
   },
   {
     id: 'edition',
-    label: 'Auflage',
-    description: 'Besonderheiten des Drucks bzw. der Auflage.',
-    stage: 'exemplar',
+    label: 'Edition',
+    description: 'Print run specifics.',
+    stage: 'copy',
     defaultOption: 'unlimited',
     options: [
-      { id: 'unlimited', label: 'Unlimited', hint: 'normale Auflage', multiplier: 1 },
+      { id: 'unlimited', label: 'Unlimited', hint: 'standard print run', multiplier: 1 },
       { id: 'first', label: '1st Edition', multiplier: 5 },
       { id: 'shadowless', label: 'Shadowless', multiplier: 3 },
-      { id: 'promo', label: 'Promo / Stempel', multiplier: 1.5 },
+      { id: 'promo', label: 'Promo / Stamped', multiplier: 1.5 },
     ],
   },
 ]
 
-export const CARD_FACTORS = FACTORS.filter((f) => f.stage === 'karte')
-export const EXEMPLAR_FACTORS = FACTORS.filter((f) => f.stage === 'exemplar')
+export const CARD_FACTORS = FACTORS.filter((f) => f.stage === 'card')
+export const EXEMPLAR_FACTORS = FACTORS.filter((f) => f.stage === 'copy')
 
-/** Alle Multiplikatoren, Anker und Schwellen — vom Nutzer im Experten-Modus anpassbar. */
+/** All multipliers, the anchor, and the thresholds — adjustable by the user in expert mode. */
 export interface Config {
-  /** Grundwert in €: was eine gewöhnliche moderne Holo-Karte wert ist. */
+  /** Base value in €: what an ordinary modern holo card is worth. */
   anchor: number
-  /** Schwellen in %, ab denen eine Karte als über-/unterbewertet gilt. */
+  /** Thresholds in %, above/below which a card counts as over-/undervalued. */
   thresholds: { over: number; under: number }
   multipliers: Record<FactorId, Record<string, number>>
 }

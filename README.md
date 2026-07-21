@@ -1,56 +1,56 @@
-# PokéPreis – Kartenwert-Rechner
+# PokéValue – Card Value Calculator
 
-Eine Website, die für Pokémon-Karten einen fairen Preis nach einer transparenten Formel berechnet und ihn mit dem aktuellen Cardmarket-Preis vergleicht — pro Karte vorbelegt, Set für Set erweiterbar.
+A website that calculates a fair price for Pokémon cards using a transparent formula and compares it against the current Cardmarket price — preset per card, expandable set by set.
 
-## Funktionen
+## Features
 
-- **Karten-Datenbank:** Sets durchstöbern, jede Karte mit Bild, fairem Preis, Cardmarket-Trendpreis und Urteil („über-/unter-/fair bewertet“). Suche und Sortierung (z. B. unterbewertete zuerst).
-- **Kartenseite:** Seltenheit, Ära, Beliebtheit und Angebot sind aus den Kartendaten voreingestellt; du wählst nur Zustand, Sprache und Auflage deines Exemplars — heraus kommt ein konkreter Preis.
-- **Freier Rechner:** Bewertung beliebiger Karten ohne Datenbankeintrag.
-- **Experten-Modus:** Alle Multiplikatoren, der Anker und die Schwellen sind anpassbar (gespeichert im Browser).
+- **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first).
+- **Card page:** Rarity, era, popularity, and supply are preset from the card data; you only pick condition, language, and edition for your copy — out comes a concrete price.
+- **Free calculator:** Rate any card without a database entry.
+- **Expert mode:** Every multiplier, the anchor, and the thresholds are adjustable (saved in the browser).
 
-## Die Formel
+## The formula
 
 ```
-Basiswert    = Anker × Seltenheit × Ära × Beliebtheit × Angebot     (fix pro Karte)
-Fairer Preis = Basiswert × Zustand × Sprache × Auflage               (dein Exemplar)
-Score        = logarithmische Lage des Basiswerts auf 0–100
+Base value = anchor × rarity × era × popularity × supply     (fixed per card)
+Fair price = base value × condition × language × edition      (your copy)
+Score      = logarithmic position of the base value on a 0–100 scale
 ```
 
-Multiplikativ, weil sich Kartenpreise über Größenordnungen verteilen. Urteil: Abweichung des Marktpreises vom fairen Preis über/unter den Schwellen (Standard ±20 %).
+Multiplicative, because card prices span orders of magnitude. Verdict: deviation of the market price from the fair price above/below the thresholds (default ±20%).
 
-## Entwicklung
+## Development
 
 ```bash
 npm install
-npm run dev              # Dev-Server auf http://localhost:5173
-npm run build            # Produktions-Build nach dist/
-npm run ingest me05 me04 # Set(s) von TCGdex importieren/aktualisieren
+npm run dev              # dev server at http://localhost:5173
+npm run build             # production build to dist/
+npm run ingest me05 me04  # import/refresh set(s) from TCGdex
 ```
 
-Stack: React 19 + TypeScript + Vite, keine weiteren Laufzeit-Abhängigkeiten. Kartendaten und Cardmarket-Preise von der freien [TCGdex-API](https://tcgdex.dev) (Set-IDs z. B. `me05`; Liste: https://api.tcgdex.net/v2/en/sets). Der Import schreibt JSON nach `src/data/generated/` — neue Sets erscheinen automatisch in der App, einfach committen.
+Stack: React 19 + TypeScript + Vite, no further runtime dependencies. Card data and Cardmarket prices come from the free [TCGdex API](https://tcgdex.dev) (set IDs like `me05`; list: https://api.tcgdex.net/v2/en/sets). The import writes JSON to `src/data/generated/` — new sets automatically show up in the app, just commit them.
 
 ## Deployment (GitHub + Vercel)
 
-1. Repository auf GitHub anlegen und pushen.
-2. Auf [vercel.com](https://vercel.com) „Import Project“ → GitHub-Repo wählen. Vercel erkennt Vite automatisch (Build `npm run build`, Output `dist`).
-3. Ab dann wird jeder Push automatisch deployed. Preise aktualisieren = `npm run ingest …` laufen lassen und committen (später automatisierbar per GitHub Action mit Cron).
+1. Create a GitHub repository and push to it.
+2. On [vercel.com](https://vercel.com), "Add New Project" → select the GitHub repo. Vercel detects Vite automatically (build `npm run build`, output `dist`).
+3. From then on, every push deploys automatically. To refresh prices, run `npm run ingest …` and commit (can later be automated with a scheduled GitHub Action).
 
-## Projektstruktur
+## Project structure
 
 ```
-scripts/ingest.mjs        Import von TCGdex (Karten, Preise, Faktor-Presets)
+scripts/ingest.mjs        Import from TCGdex (cards, prices, factor presets)
 src/
-  data/defaults.ts        Faktoren, Optionen, Default-Multiplikatoren
-  data/cards.ts           Zugriff auf importierte Sets/Karten
-  data/generated/         importierte Kartendaten (JSON, committen!)
-  logic/pricing.ts        Preisformel, Score, Urteil, Formatierung
-  logic/storage.ts        localStorage-Persistenz der Konfiguration
-  components/             Faktor-Gruppen, Ergebnis-Panel, Experten-Modus, Chips
-  pages/                  Startseite, Set-Seite, Karten-Seite, freier Rechner
-  router.ts               Hash-Router (#/set/…, #/karte/…, #/rechner)
+  data/defaults.ts        Factors, options, default multipliers
+  data/cards.ts           Access to imported sets/cards
+  data/generated/         imported card data (JSON, commit these!)
+  logic/pricing.ts        Pricing formula, score, verdict, formatting
+  logic/storage.ts        localStorage persistence of the configuration
+  components/             Factor groups, result panel, expert mode, chips
+  pages/                  Home page, set page, card page, free calculator
+  router.ts               Hash router (#/set/…, #/card/…, #/calculator)
 ```
 
-## Hinweise
+## Notes
 
-Inoffizielles Fanprojekt — nicht von Nintendo, Game Freak oder The Pokémon Company unterstützt. Pokémon-Namen und Kartenbilder sind Eigentum ihrer Rechteinhaber. Keine Anlageberatung; die Formel ist ein anpassbares Modell, kein Marktorakel.
+Unofficial fan project — not endorsed by Nintendo, Game Freak, or The Pokémon Company. Pokémon names and card images belong to their rights holders. Not financial advice; the formula is an adjustable model, not a market oracle.

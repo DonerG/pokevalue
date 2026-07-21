@@ -4,17 +4,16 @@ export function HomePage() {
   return (
     <div className="home">
       <section className="hero-block">
-        <h2>Was ist eine Pokémon-Karte wirklich wert?</h2>
+        <h2>What is a Pokémon card really worth?</h2>
         <p>
-          PokéPreis berechnet für jede Karte einen fairen Preis nach einer transparenten Formel —
-          Seltenheit, Alter, Beliebtheit und Angebot sind pro Karte schon vorbelegt. Vergleiche das
-          Ergebnis mit dem aktuellen Cardmarket-Preis und sieh sofort, ob eine Karte über- oder
-          unterbewertet ist. Für dein konkretes Exemplar stellst du nur noch Zustand, Sprache und
-          Auflage ein.
+          PokéValue calculates a fair price for every card using a transparent formula — rarity,
+          age, popularity, and supply are already preset per card. Compare the result with the
+          current Cardmarket price and see instantly whether a card is over- or undervalued. For
+          your specific copy, you only need to set condition, language, and edition.
         </p>
       </section>
 
-      <h3 className="section-title">Sets im System</h3>
+      <h3 className="section-title">Sets in the system</h3>
       <div className="set-grid">
         {SETS.map((s) => {
           const logo = setLogo(s)
@@ -28,7 +27,7 @@ export function HomePage() {
               <div className="set-tile-meta">
                 <strong>{s.name}</strong>
                 <span>
-                  {formatDate(s.releaseDate)} · {s.cardCount} Karten
+                  {formatDate(s.releaseDate)} · {s.cardCount} cards
                 </span>
               </div>
             </a>
@@ -36,8 +35,8 @@ export function HomePage() {
         })}
       </div>
       <p className="muted">
-        Weitere Sets folgen Schritt für Schritt. Bis dahin kannst du jede beliebige Karte mit dem{' '}
-        <a href="#/rechner">freien Rechner</a> bewerten.
+        More sets are added step by step. Until then, you can rate any card with the{' '}
+        <a href="#/calculator">free calculator</a>.
       </p>
     </div>
   )

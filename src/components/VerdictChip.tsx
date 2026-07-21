@@ -2,9 +2,9 @@ import type { Config } from '../data/defaults'
 import { formatPercent, verdict } from '../logic/pricing'
 
 const CHIP: Record<string, { icon: string; label: string }> = {
-  unterbewertet: { icon: '▼', label: 'unterbewertet' },
+  undervalued: { icon: '▼', label: 'undervalued' },
   fair: { icon: '✓', label: 'fair' },
-  ueberbewertet: { icon: '▲', label: 'überbewertet' },
+  overvalued: { icon: '▲', label: 'overvalued' },
 }
 
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
 }
 
 export function VerdictChip({ market, fair, config }: Props) {
-  if (market == null) return <span className="chip chip-none">kein Marktpreis</span>
+  if (market == null) return <span className="chip chip-none">no market price</span>
   const v = verdict(market, fair, config)
   if (!v) return <span className="chip chip-none">–</span>
   const { icon, label } = CHIP[v.kind]

@@ -13,7 +13,7 @@ export function ExemplarForm({ enabled, onToggle, selection, config, onSelect }:
   return (
     <section className="panel">
       <h2>
-        <span className="step-badge">2</span> Konkretes Exemplar
+        <span className="step-badge">2</span> Specific Copy
         <label className="toggle">
           <input
             type="checkbox"
@@ -21,12 +21,12 @@ export function ExemplarForm({ enabled, onToggle, selection, config, onSelect }:
             onChange={(e) => onToggle(e.target.checked)}
           />
           <span className="toggle-track" aria-hidden="true" />
-          <span className="toggle-label">{enabled ? 'aktiv' : 'optional'}</span>
+          <span className="toggle-label">{enabled ? 'on' : 'optional'}</span>
         </label>
       </h2>
       <p className="panel-intro">
-        Du hast eine konkrete Karte im Auge? Dann gib Zustand, Sprache und Auflage an, um einen
-        konkreten Preis zu erhalten.
+        Have a specific card in mind? Enter condition, language, and edition to get a concrete
+        price.
       </p>
       {enabled &&
         EXEMPLAR_FACTORS.map((def) => (

@@ -18,16 +18,16 @@ export function ExpertPanel({
   return (
     <details className="panel expert-panel">
       <summary>
-        <h2>Experten-Modus: Formel anpassen</h2>
+        <h2>Expert Mode: Adjust the Formula</h2>
         <p className="panel-intro">
-          Alle Multiplikatoren, der Anker und die Bewertungs-Schwellen sind nur Vorschläge — stelle
-          sie so ein, wie du sie für richtig hältst. Änderungen werden im Browser gespeichert.
+          Every multiplier, the anchor, and the valuation thresholds are just suggestions — set
+          them however you see fit. Changes are saved in your browser.
         </p>
       </summary>
 
       <div className="expert-grid">
         <label className="expert-field">
-          <span>Anker (€) — Wert einer gewöhnlichen modernen Holo-Karte</span>
+          <span>Anchor (€) — value of an ordinary modern holo card</span>
           <input
             type="number"
             min="0.01"
@@ -37,7 +37,7 @@ export function ExpertPanel({
           />
         </label>
         <label className="expert-field">
-          <span>Schwelle „überbewertet“ (% über fairem Preis)</span>
+          <span>"Overvalued" threshold (% above fair price)</span>
           <input
             type="number"
             min="0"
@@ -47,7 +47,7 @@ export function ExpertPanel({
           />
         </label>
         <label className="expert-field">
-          <span>Schwelle „unterbewertet“ (% unter fairem Preis)</span>
+          <span>"Undervalued" threshold (% below fair price)</span>
           <input
             type="number"
             min="0"
@@ -61,7 +61,7 @@ export function ExpertPanel({
       {FACTORS.map((f) => (
         <div key={f.id} className="expert-factor">
           <h3>
-            {f.label} <span className="stage-tag">{f.stage === 'karte' ? 'Karte' : 'Exemplar'}</span>
+            {f.label} <span className="stage-tag">{f.stage === 'card' ? 'Card' : 'Copy'}</span>
           </h3>
           <div className="expert-grid">
             {f.options.map((o) => (
@@ -81,7 +81,7 @@ export function ExpertPanel({
       ))}
 
       <button type="button" className="reset-button" onClick={onReset}>
-        Auf Standardwerte zurücksetzen
+        Reset to defaults
       </button>
     </details>
   )

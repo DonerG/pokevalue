@@ -4,7 +4,7 @@ import { baseValue, formatEuro } from '../logic/pricing'
 import { cardImage, formatDate, getCards, getSet, selectionForCard } from '../data/cards'
 import { VerdictChip } from '../components/VerdictChip'
 
-type SortKey = 'nummer' | 'abweichung' | 'markt' | 'fair'
+type SortKey = 'number' | 'deviation' | 'market' | 'fair'
 
 interface Props {
   setId: string
@@ -14,7 +14,7 @@ interface Props {
 export function SetPage({ setId, config }: Props) {
   const set = getSet(setId)
   const [query, setQuery] = useState('')
-  const [sort, setSort] = useState<SortKey>('nummer')
+  const [sort, setSort] = useState<SortKey>('number')
 
   const rows = useMemo(() => {
     const cards = getCards(setId).map((card) => {
@@ -28,9 +28,9 @@ export function SetPage({ setId, config }: Props) {
       ? cards.filter((r) => r.card.name.toLowerCase().includes(q) || r.card.localId.includes(q))
       : cards
     const sorted = [...filtered]
-    if (sort === 'abweichung')
+    if (sort === 'deviation')
       sorted.sort((a, b) => (a.deviation ?? Infinity) - (b.deviation ?? Infinity))
-    if (sort === 'markt') sorted.sort((a, b) => (b.market ?? -1) - (a.market ?? -1))
+    if (sort === 'market') sorted.sort((a, b) => (b.market ?? -1) - (a.market ?? -1))
     if (sort === 'fair') sorted.sort((a, b) => b.fair - a.fair)
     return sorted
   }, [setId, config, query, sort])
@@ -38,7 +38,7 @@ export function SetPage({ setId, config }: Props) {
   if (!set) {
     return (
       <p className="muted">
-        Set nicht gefunden. <a href="#/">Zur Übersicht</a>
+        Set not found. <a href="#/">Back to overview</a>
       </p>
     )
   }
@@ -52,24 +52,24 @@ export function SetPage({ setId, config }: Props) {
         <h2>{set.name}</h2>
         <p className="muted">
           {set.serie ? `${set.serie} · ` : ''}
-          {formatDate(set.releaseDate)} · {set.cardCount} Karten. Fairer Preis laut Formel vs.
-          Cardmarket-Trendpreis — Voreinstellungen pro Karte, auf der Kartenseite anpassbar.
+          {formatDate(set.releaseDate)} · {set.cardCount} cards. Fair price per the formula vs.
+          Cardmarket trend price — presets per card, adjustable on the card page.
         </p>
         <div className="set-toolbar">
           <input
             type="search"
-            placeholder="Karte suchen (Name oder Nummer)…"
+            placeholder="Search card (name or number)…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            aria-label="Karte suchen"
+            aria-label="Search card"
           />
           <label>
-            Sortierung{' '}
+            Sort by{' '}
             <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)}>
-              <option value="nummer">Nummer</option>
-              <option value="abweichung">Abweichung (unterbewertet zuerst)</option>
-              <option value="markt">Marktpreis (höchste zuerst)</option>
-              <option value="fair">Fairer Preis (höchste zuerst)</option>
+              <option value="number">Number</option>
+              <option value="deviation">Deviation (undervalued first)</option>
+              <option value="market">Market price (highest first)</option>
+              <option value="fair">Fair price (highest first)</option>
             </select>
           </label>
         </div>
@@ -79,7 +79,7 @@ export function SetPage({ setId, config }: Props) {
         {rows.map(({ card, fair, market }) => {
           const img = cardImage(card, 'low')
           return (
-            <a key={card.id} className="card-tile" href={`#/karte/${card.id}`}>
+            <a key={card.id} className="card-tile" href={`#/card/${card.id}`}>
               {img ? (
                 <img src={img} alt={card.name} loading="lazy" />
               ) : (
@@ -88,12 +88,12 @@ export function SetPage({ setId, config }: Props) {
               <div className="card-tile-body">
                 <strong>{card.name}</strong>
                 <span className="muted">
-                  #{card.localId} · {card.rarity ?? 'unbekannt'}
+                  #{card.localId} · {card.rarity ?? 'unknown'}
                 </span>
                 <span className="card-tile-prices">
-                  <span title="Fairer Preis laut Formel">Fair {formatEuro(fair)}</span>
-                  <span title="Cardmarket-Trendpreis">
-                    Markt {market != null ? formatEuro(market) : '–'}
+                  <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
+                  <span title="Cardmarket trend price">
+                    Market {market != null ? formatEuro(market) : '–'}
                   </span>
                 </span>
                 <VerdictChip market={market} fair={fair} config={config} />
@@ -102,7 +102,7 @@ export function SetPage({ setId, config }: Props) {
           )
         })}
       </div>
-      {rows.length === 0 && <p className="muted">Keine Karte gefunden.</p>}
+      {rows.length === 0 && <p className="muted">No card found.</p>}
     </div>
   )
 }

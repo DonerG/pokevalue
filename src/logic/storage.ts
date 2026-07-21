@@ -1,8 +1,8 @@
 import { defaultConfig, FACTORS, type Config } from '../data/defaults'
 
-const KEY = 'pokepreis-config-v1'
+const KEY = 'pokevalue-config-v1'
 
-/** Lädt die gespeicherte Konfiguration und legt sie über die Defaults (unbekannte Keys werden ignoriert). */
+/** Loads the saved configuration and layers it over the defaults (unknown keys are ignored). */
 export function loadConfig(): Config {
   const config = defaultConfig()
   try {
@@ -21,7 +21,7 @@ export function loadConfig(): Config {
       }
     }
   } catch {
-    // Kaputte/fremde Daten ignorieren, Defaults verwenden
+    // Ignore corrupted/foreign data, fall back to defaults
   }
   return config
 }
@@ -30,7 +30,7 @@ export function saveConfig(config: Config): void {
   try {
     localStorage.setItem(KEY, JSON.stringify(config))
   } catch {
-    // localStorage nicht verfügbar (z. B. Privatmodus) — Änderungen gelten nur für die Sitzung
+    // localStorage unavailable (e.g. private browsing) — changes apply for this session only
   }
 }
 
@@ -38,6 +38,6 @@ export function clearConfig(): void {
   try {
     localStorage.removeItem(KEY)
   } catch {
-    // ignorieren
+    // ignore
   }
 }

@@ -22,7 +22,7 @@ export function CalculatorPage({
   onReset,
 }: Props) {
   const [selection, setSelection] = useState(() => defaultSelection())
-  const [exemplarEnabled, setExemplarEnabled] = useState(false)
+  const [copyEnabled, setCopyEnabled] = useState(false)
   const [marketInput, setMarketInput] = useState('')
 
   const handleSelect = (factorId: FactorId, optionId: string) =>
@@ -32,9 +32,9 @@ export function CalculatorPage({
     () => ({
       score: score(selection, config),
       base: baseValue(selection, config),
-      fair: exemplarEnabled ? fairPrice(selection, config) : null,
+      fair: copyEnabled ? fairPrice(selection, config) : null,
     }),
-    [selection, config, exemplarEnabled],
+    [selection, config, copyEnabled],
   )
 
   return (
@@ -42,8 +42,8 @@ export function CalculatorPage({
       <div className="forms">
         <CardProfileForm selection={selection} config={config} onSelect={handleSelect} />
         <ExemplarForm
-          enabled={exemplarEnabled}
-          onToggle={setExemplarEnabled}
+          enabled={copyEnabled}
+          onToggle={setCopyEnabled}
           selection={selection}
           config={config}
           onSelect={handleSelect}

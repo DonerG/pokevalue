@@ -11,10 +11,10 @@ export function CardProfileForm({ selection, config, onSelect }: Props) {
   return (
     <section className="panel">
       <h2>
-        <span className="step-badge">1</span> Karten-Profil
+        <span className="step-badge">1</span> Card Profile
       </h2>
       <p className="panel-intro">
-        Die festen Eigenschaften der Karte — sie bestimmen Basiswert und Score.
+        The card's fixed properties — they determine the base value and score.
       </p>
       {CARD_FACTORS.map((def) => (
         <OptionGroup

@@ -200,7 +200,7 @@ body {
   margin: 8px 0 0;
 }
 
-/* ---------- Faktor-Gruppen ---------- */
+/* ---------- Factor groups ---------- */
 
 .option-group {
   border: 0;
@@ -283,7 +283,7 @@ summary:focus-visible {
   outline-offset: 2px;
 }
 
-/* ---------- Toggle (Exemplar) ---------- */
+/* ---------- Toggle (specific copy) ---------- */
 
 .toggle {
   margin-left: auto;
@@ -336,7 +336,7 @@ summary:focus-visible {
   background: #fff;
 }
 
-/* ---------- Ergebnis ---------- */
+/* ---------- Result ---------- */
 
 .result-panel h2 {
   margin-bottom: 14px;
@@ -418,7 +418,7 @@ summary:focus-visible {
   color: var(--accent);
 }
 
-/* ---------- Marktvergleich ---------- */
+/* ---------- Market comparison ---------- */
 
 .market-block {
   margin-top: 18px;
@@ -476,7 +476,7 @@ summary:focus-visible {
   line-height: 1.45;
 }
 
-.verdict-unterbewertet {
+.verdict-undervalued {
   background: var(--good-bg);
   color: var(--good-fg);
 }
@@ -486,12 +486,12 @@ summary:focus-visible {
   color: var(--text-2);
 }
 
-.verdict-ueberbewertet {
+.verdict-overvalued {
   background: var(--bad-bg);
   color: var(--bad-fg);
 }
 
-/* ---------- Aufklappbare Panels (Experten-Modus, Karten-Faktoren) ---------- */
+/* ---------- Collapsible panels (expert mode, card factors) ---------- */
 
 details.panel summary {
   cursor: pointer;
@@ -590,7 +590,7 @@ details.panel[open] summary {
   color: var(--accent);
 }
 
-/* ---------- Startseite ---------- */
+/* ---------- Home page ---------- */
 
 .hero-block h2 {
   font-size: 26px;
@@ -663,7 +663,7 @@ details.panel[open] summary {
   color: var(--accent);
 }
 
-/* ---------- Set-Seite ---------- */
+/* ---------- Set page ---------- */
 
 .breadcrumb {
   font-size: 13.5px;
@@ -789,7 +789,7 @@ details.panel[open] summary {
   font-size: 13px;
 }
 
-/* ---------- Urteils-Chips ---------- */
+/* ---------- Verdict chips ---------- */
 
 .chip {
   align-self: flex-start;
@@ -803,7 +803,7 @@ details.panel[open] summary {
   font-variant-numeric: tabular-nums;
 }
 
-.chip-unterbewertet {
+.chip-undervalued {
   background: var(--good-bg);
   color: var(--good-fg);
 }
@@ -813,7 +813,7 @@ details.panel[open] summary {
   color: var(--text-2);
 }
 
-.chip-ueberbewertet {
+.chip-overvalued {
   background: var(--bad-bg);
   color: var(--bad-fg);
 }
@@ -824,7 +824,7 @@ details.panel[open] summary {
   font-weight: 500;
 }
 
-/* ---------- Karten-Seite ---------- */
+/* ---------- Card page ---------- */
 
 .card-layout {
   display: grid;

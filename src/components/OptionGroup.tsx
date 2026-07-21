@@ -7,7 +7,7 @@ interface Props {
   onChange: (optionId: string) => void
 }
 
-const multFmt = new Intl.NumberFormat('de-AT', { maximumFractionDigits: 2 })
+const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
 
 export function OptionGroup({ def, config, value, onChange }: Props) {
   return (
