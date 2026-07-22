@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { CARD_FACTORS, EXEMPLAR_FACTORS, type Config, type FactorId, type Selection } from '../data/defaults'
+import { EXEMPLAR_FACTORS, type Config, type FactorId, type Selection } from '../data/defaults'
 import { baseValue, fairPrice, formatEuro, score } from '../logic/pricing'
 import {
   cardImage,
@@ -115,25 +115,6 @@ export function CardPage({ cardId, config }: Props) {
               />
             ))}
           </section>
-
-          <details className="panel">
-            <summary>
-              <h2>Card Factors (preset)</h2>
-              <p className="panel-intro">
-                Rarity, era, popularity, and supply are preset from the card data — you can
-                override them here for this valuation.
-              </p>
-            </summary>
-            {CARD_FACTORS.map((def) => (
-              <OptionGroup
-                key={def.id}
-                def={def}
-                config={config}
-                value={selection[def.id]}
-                onChange={(optionId) => handleSelect(def.id, optionId)}
-              />
-            ))}
-          </details>
         </div>
 
         <aside className="card-result">

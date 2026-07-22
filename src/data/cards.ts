@@ -17,7 +17,7 @@ export interface CardData {
   dexIds: number[]
   image: string | null
   market: CardMarket | null
-  preset: { rarity: string; era: string; popularity: string; supply: string }
+  preset: { rarity: string; era: string; popularity: string }
 }
 
 export interface SetMeta {
@@ -72,7 +72,6 @@ export function selectionForCard(card: CardData): Selection {
     rarity: card.preset.rarity,
     era: card.preset.era,
     popularity: card.preset.popularity,
-    supply: card.preset.supply,
   }
 }
 

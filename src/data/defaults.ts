@@ -2,7 +2,6 @@ export type FactorId =
   | 'rarity'
   | 'era'
   | 'popularity'
-  | 'supply'
   | 'condition'
   | 'language'
   | 'edition'
@@ -69,20 +68,6 @@ export const FACTORS: FactorDef[] = [
       { id: 'b', label: 'Tier B', hint: 'popular', multiplier: 1.3 },
       { id: 'c', label: 'Tier C', hint: 'average', multiplier: 1 },
       { id: 'd', label: 'Tier D', hint: 'low demand', multiplier: 0.7 },
-    ],
-  },
-  {
-    id: 'supply',
-    label: 'Supply / Population',
-    description: 'How many copies are actually available on the market?',
-    stage: 'card',
-    defaultOption: 'normal',
-    options: [
-      { id: 'mass', label: 'Mass-produced', hint: 'huge print run, available everywhere', multiplier: 0.5 },
-      { id: 'normal', label: 'Normal', multiplier: 1 },
-      { id: 'scarce', label: 'Scarce', multiplier: 2 },
-      { id: 'rare', label: 'Rare on the market', multiplier: 4 },
-      { id: 'barely', label: 'Barely available', hint: 'only isolated listings', multiplier: 8 },
     ],
   },
   {

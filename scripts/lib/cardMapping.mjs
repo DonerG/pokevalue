@@ -113,11 +113,3 @@ export function mapEra(releaseDate) {
   if (year >= 2003) return 'exdp'
   return 'wotc'
 }
-
-/** Modern print runs are huge; only chase cards (alt art/secret) are relatively scarcer. */
-export function mapSupply(era, rarityId) {
-  if (era === 'current' || era === 'modern') {
-    return rarityId === 'altart' || rarityId === 'secret' ? 'normal' : 'mass'
-  }
-  return 'normal'
-}

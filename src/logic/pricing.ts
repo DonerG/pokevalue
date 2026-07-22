@@ -10,7 +10,7 @@ function product(factors: FactorDef[], selection: Selection, config: Config): nu
   return factors.reduce((acc, f) => acc * (config.multipliers[f.id][selection[f.id]] ?? 1), 1)
 }
 
-/** Card base value (stage 1): anchor × rarity × era × popularity × supply. */
+/** Card base value (stage 1): anchor × rarity × era × popularity. */
 export function baseValue(selection: Selection, config: Config): number {
   return config.anchor * product(CARD_FACTORS, selection, config)
 }

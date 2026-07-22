@@ -1,7 +1,7 @@
 /**
  * Loads sets + cards and writes them as JSON to src/data/generated/, for
- * every card presetting the default factors (rarity, era, popularity,
- * supply). Prefers the local bulk cache (scripts/.cache/, populated by
+ * every card presetting the default factors (rarity, era, popularity).
+ * Prefers the local bulk cache (scripts/.cache/, populated by
  * fetch-all-cards.mjs / fetch-all-sets.mjs) when available, falling back to
  * a live TCGdex fetch for anything not cached yet.
  *
@@ -11,7 +11,7 @@ import { existsSync } from 'node:fs'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { mapEra, mapRarity, mapSupply, popularityTier } from './lib/cardMapping.mjs'
+import { mapEra, mapRarity, popularityTier } from './lib/cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const OUT_DIR = join(HERE, '..', 'src', 'data', 'generated')
@@ -94,7 +94,6 @@ async function ingestSet(setId) {
         rarity: rarityId,
         era,
         popularity: popularityTier(dexIds),
-        supply: mapSupply(era, rarityId),
       },
     }
   })
