@@ -5,7 +5,6 @@ import { useRoute } from './router'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
 import { CardPage } from './pages/CardPage'
-import { CalculatorPage } from './pages/CalculatorPage'
 
 const AdminArtworkPage = lazy(() =>
   import('./pages/AdminArtworkPage').then((m) => ({ default: m.AdminArtworkPage })),
@@ -28,16 +27,12 @@ function App() {
           <a href="#/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
             Sets
           </a>
-          <a href="#/calculator" className={route.page === 'calculator' ? 'active' : ''}>
-            Free Calculator
-          </a>
         </nav>
       </header>
 
       {route.page === 'home' && <HomePage />}
       {route.page === 'set' && <SetPage setId={route.setId} config={CONFIG} />}
       {route.page === 'card' && <CardPage key={route.cardId} cardId={route.cardId} config={CONFIG} />}
-      {route.page === 'calculator' && <CalculatorPage config={CONFIG} />}
       {route.page === 'admin-artwork' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <AdminArtworkPage />

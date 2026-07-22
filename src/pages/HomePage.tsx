@@ -35,10 +35,7 @@ export function HomePage() {
           )
         })}
       </div>
-      <p className="muted">
-        More sets are added step by step. Until then, you can rate any card with the{' '}
-        <a href="#/calculator">free calculator</a>.
-      </p>
+      <p className="muted">More sets are added step by step.</p>
     </div>
   )
 }

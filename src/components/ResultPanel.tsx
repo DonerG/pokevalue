@@ -11,7 +11,7 @@ import { PriceBreakdown } from './PriceBreakdown'
 interface Props {
   score: number
   baseValue: number
-  fairPrice: number | null
+  fairPrice: number
   marketInput: string
   onMarketInput: (value: string) => void
   config: Config
@@ -45,9 +45,8 @@ export function ResultPanel({
   config,
   selection,
 }: Props) {
-  const referencePrice = fairPrice ?? baseValue
   const market = parseNumber(marketInput)
-  const v = marketInput.trim() === '' ? null : verdict(market, referencePrice, config)
+  const v = marketInput.trim() === '' ? null : verdict(market, fairPrice, config)
   const scoreRounded = Math.round(score)
 
   return (
@@ -83,21 +82,13 @@ export function ResultPanel({
           <dt>Card base value</dt>
           <dd>{formatEuro(baseValue)}</dd>
         </div>
-        {fairPrice !== null && (
-          <div className="price-row price-row-main">
-            <dt>Fair price (your copy)</dt>
-            <dd>{formatEuro(fairPrice)}</dd>
-          </div>
-        )}
+        <div className="price-row price-row-main">
+          <dt>Fair price (your copy)</dt>
+          <dd>{formatEuro(fairPrice)}</dd>
+        </div>
       </dl>
-      {fairPrice === null && (
-        <p className="muted">
-          Enable "Specific Copy" to get a concrete price for condition, language, and edition.
-          Otherwise the market comparison uses the base value.
-        </p>
-      )}
 
-      <PriceBreakdown selection={selection} config={config} showCopyFactors={fairPrice !== null} />
+      <PriceBreakdown selection={selection} config={config} showCopyFactors />
 
       <div className="market-block">
         <label htmlFor="market-price">Current market price (e.g. Cardmarket)</label>
