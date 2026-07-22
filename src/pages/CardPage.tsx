@@ -1,7 +1,15 @@
-import { useMemo, useState } from 'react'
-import { CARD_FACTORS, EXEMPLAR_FACTORS, type Config, type FactorId } from '../data/defaults'
+import { useEffect, useMemo, useState } from 'react'
+import { CARD_FACTORS, EXEMPLAR_FACTORS, type Config, type FactorId, type Selection } from '../data/defaults'
 import { baseValue, fairPrice, formatEuro, score } from '../logic/pricing'
-import { cardImage, cardmarketUrl, formatDate, getCard, getSet, selectionForCard } from '../data/cards'
+import {
+  cardImage,
+  cardmarketUrl,
+  formatDate,
+  getSet,
+  loadCard,
+  selectionForCard,
+  type CardData,
+} from '../data/cards'
 import { OptionGroup } from '../components/OptionGroup'
 import { ResultPanel } from '../components/ResultPanel'
 
@@ -15,9 +23,22 @@ function trendToInput(trend: number | null | undefined): string {
 }
 
 export function CardPage({ cardId, config }: Props) {
-  const card = getCard(cardId)
-  const [selection, setSelection] = useState(() => (card ? selectionForCard(card) : null))
-  const [marketInput, setMarketInput] = useState(() => trendToInput(card?.market?.trend))
+  // undefined = still loading, null = confirmed not found
+  const [card, setCard] = useState<CardData | null | undefined>(undefined)
+  const [selection, setSelection] = useState<Selection | null>(null)
+  const [marketInput, setMarketInput] = useState('')
+
+  useEffect(() => {
+    setCard(undefined)
+    setSelection(null)
+    loadCard(cardId).then((c) => {
+      setCard(c ?? null)
+      if (c) {
+        setSelection(selectionForCard(c))
+        setMarketInput(trendToInput(c.market?.trend))
+      }
+    })
+  }, [cardId])
 
   const results = useMemo(() => {
     if (!selection) return null
@@ -27,6 +48,10 @@ export function CardPage({ cardId, config }: Props) {
       fair: fairPrice(selection, config),
     }
   }, [selection, config])
+
+  if (card === undefined) {
+    return <p className="muted">Loading card…</p>
+  }
 
   if (!card || !selection || !results) {
     return (

@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { baseValue, formatEuro } from '../logic/pricing'
-import { cardImage, formatDate, getCards, getSet, selectionForCard } from '../data/cards'
+import { cardImage, formatDate, getSet, loadCards, selectionForCard, type CardData } from '../data/cards'
 import { VerdictChip } from '../components/VerdictChip'
 
 type SortKey = 'number' | 'deviation' | 'market' | 'fair'
@@ -13,11 +13,18 @@ interface Props {
 
 export function SetPage({ setId, config }: Props) {
   const set = getSet(setId)
+  const [cards, setCards] = useState<CardData[] | null>(null)
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<SortKey>('number')
 
+  useEffect(() => {
+    setCards(null)
+    loadCards(setId).then(setCards)
+  }, [setId])
+
   const rows = useMemo(() => {
-    const cards = getCards(setId).map((card) => {
+    if (!cards) return []
+    const withPrice = cards.map((card) => {
       const fair = baseValue(selectionForCard(card), config)
       const market = card.market?.trend ?? null
       const deviation = market != null && fair > 0 ? (market - fair) / fair : null
@@ -25,15 +32,15 @@ export function SetPage({ setId, config }: Props) {
     })
     const q = query.trim().toLowerCase()
     const filtered = q
-      ? cards.filter((r) => r.card.name.toLowerCase().includes(q) || r.card.localId.includes(q))
-      : cards
+      ? withPrice.filter((r) => r.card.name.toLowerCase().includes(q) || r.card.localId.includes(q))
+      : withPrice
     const sorted = [...filtered]
     if (sort === 'deviation')
       sorted.sort((a, b) => (a.deviation ?? Infinity) - (b.deviation ?? Infinity))
     if (sort === 'market') sorted.sort((a, b) => (b.market ?? -1) - (a.market ?? -1))
     if (sort === 'fair') sorted.sort((a, b) => b.fair - a.fair)
     return sorted
-  }, [setId, config, query, sort])
+  }, [cards, config, query, sort])
 
   if (!set) {
     return (
@@ -75,34 +82,38 @@ export function SetPage({ setId, config }: Props) {
         </div>
       </header>
 
-      <div className="card-grid">
-        {rows.map(({ card, fair, market }) => {
-          const img = cardImage(card, 'low')
-          return (
-            <a key={card.id} className="card-tile" href={`#/card/${card.id}`}>
-              {img ? (
-                <img src={img} alt={card.name} loading="lazy" />
-              ) : (
-                <div className="card-tile-placeholder">{card.name}</div>
-              )}
-              <div className="card-tile-body">
-                <strong>{card.name}</strong>
-                <span className="muted">
-                  #{card.localId} · {card.rarity ?? 'unknown'}
-                </span>
-                <span className="card-tile-prices">
-                  <span title="Cardmarket trend price">
-                    Market {market != null ? formatEuro(market) : '–'}
+      {!cards && <p className="muted">Loading cards…</p>}
+
+      {cards && (
+        <div className="card-grid">
+          {rows.map(({ card, fair, market }) => {
+            const img = cardImage(card, 'low')
+            return (
+              <a key={card.id} className="card-tile" href={`#/card/${card.id}`}>
+                {img ? (
+                  <img src={img} alt={card.name} loading="lazy" />
+                ) : (
+                  <div className="card-tile-placeholder">{card.name}</div>
+                )}
+                <div className="card-tile-body">
+                  <strong>{card.name}</strong>
+                  <span className="muted">
+                    #{card.localId} · {card.rarity ?? 'unknown'}
                   </span>
-                  <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
-                </span>
-                <VerdictChip market={market} fair={fair} config={config} />
-              </div>
-            </a>
-          )
-        })}
-      </div>
-      {rows.length === 0 && <p className="muted">No card found.</p>}
+                  <span className="card-tile-prices">
+                    <span title="Cardmarket trend price">
+                      Market {market != null ? formatEuro(market) : '–'}
+                    </span>
+                    <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
+                  </span>
+                  <VerdictChip market={market} fair={fair} config={config} />
+                </div>
+              </a>
+            )
+          })}
+        </div>
+      )}
+      {cards && rows.length === 0 && <p className="muted">No card found.</p>}
     </div>
   )
 }

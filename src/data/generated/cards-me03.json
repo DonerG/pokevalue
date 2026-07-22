@@ -1,14 +1,589 @@
 [
  {
-  "id": "me05-001",
+  "id": "me03-001",
   "localId": "001",
-  "name": "Tropius",
+  "name": "Spinarak",
   "category": "Pokemon",
   "rarity": "Common",
   "dexIds": [
-   357
+   167
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/001",
+  "image": "https://assets.tcgdex.net/en/me/me03/001",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-002",
+  "localId": "002",
+  "name": "Ariados",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   168
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/002",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-003",
+  "localId": "003",
+  "name": "Shaymin",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   492
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/003",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-004",
+  "localId": "004",
+  "name": "Snivy",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   495
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/004",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-005",
+  "localId": "005",
+  "name": "Servine",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   496
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/005",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-006",
+  "localId": "006",
+  "name": "Serperior",
+  "category": "Pokemon",
+  "rarity": "Rare",
+  "dexIds": [
+   497
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/006",
+  "market": {
+   "trend": 0.07,
+   "avg30": 0.05,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "rare",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-007",
+  "localId": "007",
+  "name": "Scatterbug",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   664
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/007",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-008",
+  "localId": "008",
+  "name": "Spewpa",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   665
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/008",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-009",
+  "localId": "009",
+  "name": "Vivillon",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   666
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/009",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.285Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-010",
+  "localId": "010",
+  "name": "Rowlet",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   722
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/010",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-011",
+  "localId": "011",
+  "name": "Dartrix",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   723
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/011",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-012",
+  "localId": "012",
+  "name": "Decidueye ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   724
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/012",
+  "market": {
+   "trend": 0.43,
+   "avg30": 0.43,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-013",
+  "localId": "013",
+  "name": "Fletchinder",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   662
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/013",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-014",
+  "localId": "014",
+  "name": "Talonflame",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   663
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/014",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-015",
+  "localId": "015",
+  "name": "Salandit",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   757
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/015",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-016",
+  "localId": "016",
+  "name": "Salazzle ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   758
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/016",
+  "market": {
+   "trend": 0.36,
+   "avg30": 0.37,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-017",
+  "localId": "017",
+  "name": "Turtonator",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   776
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/017",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-018",
+  "localId": "018",
+  "name": "Seel",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   86
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/018",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-019",
+  "localId": "019",
+  "name": "Dewgong",
+  "category": "Pokemon",
+  "rarity": "Rare",
+  "dexIds": [
+   87
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/019",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.05,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "rare",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-020",
+  "localId": "020",
+  "name": "Staryu",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   120
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/020",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.05,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.285Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-021",
+  "localId": "021",
+  "name": "Mega Starmie ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   121
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/021",
+  "market": {
+   "trend": 0.86,
+   "avg30": 1.02,
+   "low": 0.15,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-022",
+  "localId": "022",
+  "name": "Lapras ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   131
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/022",
+  "market": {
+   "trend": 0.46,
+   "avg30": 0.49,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-023",
+  "localId": "023",
+  "name": "Amaura",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   698
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/023",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-024",
+  "localId": "024",
+  "name": "Aurorus",
+  "category": "Pokemon",
+  "rarity": "Rare",
+  "dexIds": [
+   699
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/024",
+  "market": {
+   "trend": 0.08,
+   "avg30": 0.06,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "rare",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-025",
+  "localId": "025",
+  "name": "Volcanion",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   721
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/025",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-026",
+  "localId": "026",
+  "name": "Shinx",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   403
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/026",
   "market": {
    "trend": 0.03,
    "avg30": 0.04,
@@ -23,18 +598,133 @@
   }
  },
  {
-  "id": "me05-002",
-  "localId": "002",
-  "name": "Grubbin",
+  "id": "me03-027",
+  "localId": "027",
+  "name": "Luxio",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   404
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/027",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-028",
+  "localId": "028",
+  "name": "Luxray",
+  "category": "Pokemon",
+  "rarity": "Rare",
+  "dexIds": [
+   405
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/028",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.05,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "rare",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-029",
+  "localId": "029",
+  "name": "Dedenne",
   "category": "Pokemon",
   "rarity": "Common",
   "dexIds": [
-   736
+   702
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/002",
+  "image": "https://assets.tcgdex.net/en/me/me03/029",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-030",
+  "localId": "030",
+  "name": "Clefairy",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   35
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/030",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-031",
+  "localId": "031",
+  "name": "Mega Clefable ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   36
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/031",
+  "market": {
+   "trend": 0.57,
+   "avg30": 0.56,
+   "low": 0.03,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-032",
+  "localId": "032",
+  "name": "Mawile",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   303
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/032",
   "market": {
    "trend": 0.02,
-   "avg30": 0.04,
+   "avg30": 0.03,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -46,68 +736,22 @@
   }
  },
  {
-  "id": "me05-003",
-  "localId": "003",
-  "name": "Fomantis",
+  "id": "me03-033",
+  "localId": "033",
+  "name": "Espurr",
   "category": "Pokemon",
   "rarity": "Common",
   "dexIds": [
-   753
+   677
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/003",
+  "image": "https://assets.tcgdex.net/en/me/me03/033",
   "market": {
-   "trend": 0.06,
-   "avg30": 0.04,
+   "trend": 0.02,
+   "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-004",
-  "localId": "004",
-  "name": "Lurantis ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   754
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/004",
-  "market": {
-   "trend": 0.6,
-   "avg30": 0.54,
-   "low": 0.04,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-005",
-  "localId": "005",
-  "name": "Poltchageist",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   1012
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/005",
-  "market": {
-   "trend": 0.07,
-   "avg30": 0.1,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
    "rarity": "common",
    "era": "current",
    "popularity": "c",
@@ -115,18 +759,18 @@
   }
  },
  {
-  "id": "me05-006",
-  "localId": "006",
-  "name": "Sinistcha",
+  "id": "me03-034",
+  "localId": "034",
+  "name": "Meowstic",
   "category": "Pokemon",
   "rarity": "Uncommon",
   "dexIds": [
-   1013
+   678
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/006",
+  "image": "https://assets.tcgdex.net/en/me/me03/034",
   "market": {
-   "trend": 0.06,
-   "avg30": 0.14,
+   "trend": 0.04,
+   "avg30": 0.03,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -138,66 +782,20 @@
   }
  },
  {
-  "id": "me05-007",
-  "localId": "007",
-  "name": "Heatran",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   485
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/007",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-008",
-  "localId": "008",
-  "name": "Mega Delphox ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   655
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/008",
-  "market": {
-   "trend": 0.89,
-   "avg30": 0.95,
-   "low": 0.1,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-009",
-  "localId": "009",
-  "name": "Sizzlipede",
+  "id": "me03-035",
+  "localId": "035",
+  "name": "Spritzee",
   "category": "Pokemon",
   "rarity": "Common",
   "dexIds": [
-   850
+   682
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/009",
+  "image": "https://assets.tcgdex.net/en/me/me03/035",
   "market": {
-   "trend": 0.04,
+   "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
+   "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
    "rarity": "common",
@@ -207,18 +805,41 @@
   }
  },
  {
-  "id": "me05-010",
-  "localId": "010",
-  "name": "Centiskorch",
+  "id": "me03-036",
+  "localId": "036",
+  "name": "Aromatisse",
   "category": "Pokemon",
-  "rarity": "Common",
+  "rarity": "Uncommon",
   "dexIds": [
-   851
+   683
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/010",
+  "image": "https://assets.tcgdex.net/en/me/me03/036",
   "market": {
    "trend": 0.04,
    "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-037",
+  "localId": "037",
+  "name": "Nosepass",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   299
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/037",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.285Z"
   },
@@ -230,18 +851,110 @@
   }
  },
  {
-  "id": "me05-011",
-  "localId": "011",
-  "name": "Charcadet",
+  "id": "me03-038",
+  "localId": "038",
+  "name": "Probopass",
   "category": "Pokemon",
   "rarity": "Common",
   "dexIds": [
-   935
+   476
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/011",
+  "image": "https://assets.tcgdex.net/en/me/me03/038",
   "market": {
-   "trend": 0.04,
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-039",
+  "localId": "039",
+  "name": "Hippopotas",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   449
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/039",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-040",
+  "localId": "040",
+  "name": "Hippowdon",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   450
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/040",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-041",
+  "localId": "041",
+  "name": "Landorus",
+  "category": "Pokemon",
+  "rarity": "Rare",
+  "dexIds": [
+   645
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/041",
+  "market": {
+   "trend": 0.05,
    "avg30": 0.05,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "rare",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-042",
+  "localId": "042",
+  "name": "Binacle",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   688
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/042",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.04,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -253,17 +966,63 @@
   }
  },
  {
-  "id": "me05-012",
-  "localId": "012",
-  "name": "Armarouge",
+  "id": "me03-043",
+  "localId": "043",
+  "name": "Barbaracle",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   689
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/043",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-044",
+  "localId": "044",
+  "name": "Tyrunt",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   696
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/044",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-045",
+  "localId": "045",
+  "name": "Tyrantrum",
   "category": "Pokemon",
   "rarity": "Rare",
   "dexIds": [
-   936
+   697
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/012",
+  "image": "https://assets.tcgdex.net/en/me/me03/045",
   "market": {
-   "trend": 0.13,
+   "trend": 0.07,
    "avg30": 0.08,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
@@ -276,17 +1035,86 @@
   }
  },
  {
-  "id": "me05-013",
-  "localId": "013",
-  "name": "Goldeen",
+  "id": "me03-046",
+  "localId": "046",
+  "name": "Hawlucha",
   "category": "Pokemon",
   "rarity": "Common",
   "dexIds": [
-   118
+   701
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/013",
+  "image": "https://assets.tcgdex.net/en/me/me03/046",
   "market": {
-   "trend": 0.06,
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-047",
+  "localId": "047",
+  "name": "Mega Zygarde ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   718
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/047",
+  "market": {
+   "trend": 0.49,
+   "avg30": 0.61,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-048",
+  "localId": "048",
+  "name": "Gastly",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   92
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/048",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-049",
+  "localId": "049",
+  "name": "Haunter",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   93
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/049",
+  "market": {
+   "trend": 0.05,
    "avg30": 0.04,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
@@ -299,17 +1127,201 @@
   }
  },
  {
-  "id": "me05-014",
-  "localId": "014",
-  "name": "Seaking",
+  "id": "me03-050",
+  "localId": "050",
+  "name": "Gengar",
+  "category": "Pokemon",
+  "rarity": "Rare",
+  "dexIds": [
+   94
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/050",
+  "market": {
+   "trend": 0.24,
+   "avg30": 0.39,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "rare",
+   "era": "current",
+   "popularity": "s",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-051",
+  "localId": "051",
+  "name": "Skorupi",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   451
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/051",
+  "market": {
+   "trend": 0.04,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-052",
+  "localId": "052",
+  "name": "Drapion",
   "category": "Pokemon",
   "rarity": "Uncommon",
   "dexIds": [
-   119
+   452
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/014",
+  "image": "https://assets.tcgdex.net/en/me/me03/052",
   "market": {
    "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-053",
+  "localId": "053",
+  "name": "Yveltal ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   717
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/053",
+  "market": {
+   "trend": 0.43,
+   "avg30": 0.42,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-054",
+  "localId": "054",
+  "name": "Chien-Pao",
+  "category": "Pokemon",
+  "rarity": "Rare",
+  "dexIds": [
+   1002
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/054",
+  "market": {
+   "trend": 0.05,
+   "avg30": 0.04,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "rare",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-055",
+  "localId": "055",
+  "name": "Mega Skarmory ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   227
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/055",
+  "market": {
+   "trend": 0.56,
+   "avg30": 0.54,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-056",
+  "localId": "056",
+  "name": "Honedge",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   679
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/056",
+  "market": {
+   "trend": 0.06,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-057",
+  "localId": "057",
+  "name": "Doublade",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   680
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/057",
+  "market": {
+   "trend": 0.07,
+   "avg30": 0.04,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-058",
+  "localId": "058",
+  "name": "Aegislash",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   681
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/058",
+  "market": {
+   "trend": 0.05,
    "avg30": 0.03,
    "low": 0.02,
    "updated": "2026-07-21T08:02:31.372Z"
@@ -322,15 +1334,304 @@
   }
  },
  {
-  "id": "me05-015",
-  "localId": "015",
-  "name": "Wailmer",
+  "id": "me03-059",
+  "localId": "059",
+  "name": "Klefki",
   "category": "Pokemon",
   "rarity": "Common",
   "dexIds": [
-   320
+   707
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/015",
+  "image": "https://assets.tcgdex.net/en/me/me03/059",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-060",
+  "localId": "060",
+  "name": "Rattata",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   19
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/060",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-061",
+  "localId": "061",
+  "name": "Raticate",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   20
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/061",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-062",
+  "localId": "062",
+  "name": "Meowth ex",
+  "category": "Pokemon",
+  "rarity": "Double rare",
+  "dexIds": [
+   52
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/062",
+  "market": {
+   "trend": 4.08,
+   "avg30": 4.53,
+   "low": 2.5,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "ultra",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-063",
+  "localId": "063",
+  "name": "Snorlax",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   143
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/063",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.09,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-064",
+  "localId": "064",
+  "name": "Bunnelby",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   659
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/064",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-065",
+  "localId": "065",
+  "name": "Diggersby",
+  "category": "Pokemon",
+  "rarity": "Uncommon",
+  "dexIds": [
+   660
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/065",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-066",
+  "localId": "066",
+  "name": "Fletchling",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   661
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/066",
+  "market": {
+   "trend": 0.02,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-067",
+  "localId": "067",
+  "name": "Furfrou",
+  "category": "Pokemon",
+  "rarity": "Common",
+  "dexIds": [
+   676
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/067",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.02,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-068",
+  "localId": "068",
+  "name": "Antique Jaw Fossil",
+  "category": "Trainer",
+  "rarity": "Common",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/068",
+  "market": {
+   "trend": 0.05,
+   "avg30": 0.04,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-069",
+  "localId": "069",
+  "name": "Antique Sail Fossil",
+  "category": "Trainer",
+  "rarity": "Common",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/069",
+  "market": {
+   "trend": 0.05,
+   "avg30": 0.04,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-070",
+  "localId": "070",
+  "name": "Core Memory",
+  "category": "Trainer",
+  "rarity": "Uncommon",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/070",
+  "market": {
+   "trend": 0.05,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-071",
+  "localId": "071",
+  "name": "Crushing Hammer",
+  "category": "Trainer",
+  "rarity": "Common",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/071",
+  "market": {
+   "trend": 0.07,
+   "avg30": 0.08,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-072",
+  "localId": "072",
+  "name": "Energy Search",
+  "category": "Trainer",
+  "rarity": "Common",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/072",
   "market": {
    "trend": 0.07,
    "avg30": 0.06,
@@ -345,1325 +1646,37 @@
   }
  },
  {
-  "id": "me05-016",
-  "localId": "016",
-  "name": "Wailord ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   321
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/016",
-  "market": {
-   "trend": 0.71,
-   "avg30": 0.93,
-   "low": 0.09,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-017",
-  "localId": "017",
-  "name": "Relicanth",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   369
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/017",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-018",
-  "localId": "018",
-  "name": "Popplio",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   728
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/018",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-019",
-  "localId": "019",
-  "name": "Brionne",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   729
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/019",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.285Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-020",
-  "localId": "020",
-  "name": "Primarina",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   730
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/020",
-  "market": {
-   "trend": 0.02,
-   "avg30": 0.11,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-021",
-  "localId": "021",
-  "name": "Finizen",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   963
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/021",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-022",
-  "localId": "022",
-  "name": "Palafin",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   964
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/022",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-023",
-  "localId": "023",
-  "name": "Electrike",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   309
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/023",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-024",
-  "localId": "024",
-  "name": "Manectric",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   310
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/024",
-  "market": {
-   "trend": 0.02,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-025",
-  "localId": "025",
-  "name": "Charjabug",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   737
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/025",
-  "market": {
-   "trend": 0.02,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-026",
-  "localId": "026",
-  "name": "Vikavolt",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   738
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/026",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-027",
-  "localId": "027",
-  "name": "Mega Zeraora ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   807
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/027",
-  "market": {
-   "trend": 0.91,
-   "avg30": 1.34,
-   "low": 0.24,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-028",
-  "localId": "028",
-  "name": "Miraidon",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   1008
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/028",
-  "market": {
-   "trend": 0.06,
-   "avg30": 0.1,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-029",
-  "localId": "029",
-  "name": "Slowpoke",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   79
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/029",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.08,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-030",
-  "localId": "030",
-  "name": "Slowbro",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   80
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/030",
-  "market": {
-   "trend": 0.06,
-   "avg30": 0.07,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-031",
-  "localId": "031",
-  "name": "Mega Slowbro ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   80
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/031",
-  "market": {
-   "trend": 1.12,
-   "avg30": 1.16,
-   "low": 0.15,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-032",
-  "localId": "032",
-  "name": "Jynx",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   124
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/032",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-033",
-  "localId": "033",
-  "name": "Shuppet",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   353
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/033",
-  "market": {
-   "trend": 0.1,
-   "avg30": 0.12,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-034",
-  "localId": "034",
-  "name": "Banette",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   354
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/034",
-  "market": {
-   "trend": 0.06,
-   "avg30": 0.14,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-035",
-  "localId": "035",
-  "name": "Spiritomb",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   442
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/035",
-  "market": {
-   "trend": 0.16,
-   "avg30": 0.24,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-036",
-  "localId": "036",
-  "name": "Litwick",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   607
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/036",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-037",
-  "localId": "037",
-  "name": "Lampent",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   608
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/037",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.285Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-038",
-  "localId": "038",
-  "name": "Mega Chandelure ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   609
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/038",
-  "market": {
-   "trend": 1.16,
-   "avg30": 1.19,
-   "low": 0.22,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-039",
-  "localId": "039",
-  "name": "Dhelmise",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   781
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/039",
-  "market": {
-   "trend": 0.15,
-   "avg30": 0.33,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-040",
-  "localId": "040",
-  "name": "Marshadow",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   802
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/040",
-  "market": {
-   "trend": 0.02,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-041",
-  "localId": "041",
-  "name": "Annihilape",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   979
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/041",
-  "market": {
-   "trend": 0.02,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-042",
-  "localId": "042",
-  "name": "Mankey",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   56
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/042",
-  "market": {
-   "trend": 0.02,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-043",
-  "localId": "043",
-  "name": "Primeape",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   57
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/043",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-044",
-  "localId": "044",
-  "name": "Cranidos",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   408
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/044",
-  "market": {
-   "trend": 0.06,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-045",
-  "localId": "045",
-  "name": "Rampardos ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   409
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/045",
-  "market": {
-   "trend": 1.03,
-   "avg30": 0.93,
-   "low": 0.1,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-046",
-  "localId": "046",
-  "name": "Drilbur",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   529
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/046",
-  "market": {
-   "trend": 0.09,
-   "avg30": 0.08,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-047",
-  "localId": "047",
-  "name": "Koraidon",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   1007
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/047",
-  "market": {
-   "trend": 0.08,
-   "avg30": 0.11,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-048",
-  "localId": "048",
-  "name": "Mega Darkrai ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   491
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/048",
-  "market": {
-   "trend": 1.74,
-   "avg30": 1.93,
-   "low": 0.45,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-049",
-  "localId": "049",
-  "name": "Vullaby",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   629
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/049",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.03,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-050",
-  "localId": "050",
-  "name": "Mandibuzz",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   630
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/050",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-051",
-  "localId": "051",
-  "name": "Inkay",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   686
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/051",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-052",
-  "localId": "052",
-  "name": "Malamar",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   687
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/052",
-  "market": {
-   "trend": 0.07,
-   "avg30": 0.05,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-053",
-  "localId": "053",
-  "name": "Nickit",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   827
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/053",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-054",
-  "localId": "054",
-  "name": "Thievul",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   828
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/054",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-055",
-  "localId": "055",
-  "name": "Morpeko ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   877
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/055",
-  "market": {
-   "trend": 0.82,
-   "avg30": 0.72,
-   "low": 0.1,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-056",
-  "localId": "056",
-  "name": "Zarude",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   893
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/056",
-  "market": {
-   "trend": 0.16,
-   "avg30": 0.09,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-057",
-  "localId": "057",
-  "name": "Maschiff",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   942
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/057",
-  "market": {
-   "trend": 0.02,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-058",
-  "localId": "058",
-  "name": "Mabosstiff",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   943
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/058",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.03,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-059",
-  "localId": "059",
-  "name": "Chi-Yu",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   1004
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/059",
-  "market": {
-   "trend": 0.2,
-   "avg30": 0.13,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-060",
-  "localId": "060",
-  "name": "Skarmory",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   227
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/060",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.03,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-061",
-  "localId": "061",
-  "name": "Shieldon",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   410
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/061",
-  "market": {
-   "trend": 0.06,
-   "avg30": 0.08,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-062",
-  "localId": "062",
-  "name": "Bastiodon",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   411
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/062",
-  "market": {
-   "trend": 0.39,
-   "avg30": 0.33,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-063",
-  "localId": "063",
-  "name": "Bronzor",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   436
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/063",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-064",
-  "localId": "064",
-  "name": "Bronzong",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   437
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/064",
-  "market": {
-   "trend": 0.03,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-065",
-  "localId": "065",
-  "name": "Mega Excadrill ex",
-  "category": "Pokemon",
-  "rarity": "Double rare",
-  "dexIds": [
-   530
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/065",
-  "market": {
-   "trend": 1.68,
-   "avg30": 1.6,
-   "low": 0.4,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "ultra",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-066",
-  "localId": "066",
-  "name": "Pikipek",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   731
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/066",
-  "market": {
-   "trend": 0.09,
-   "avg30": 0.07,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-067",
-  "localId": "067",
-  "name": "Trumbeak",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   732
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/067",
-  "market": {
-   "trend": 0.06,
-   "avg30": 0.07,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-068",
-  "localId": "068",
-  "name": "Toucannon",
-  "category": "Pokemon",
-  "rarity": "Uncommon",
-  "dexIds": [
-   733
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/068",
-  "market": {
-   "trend": 0.13,
-   "avg30": 0.1,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-069",
-  "localId": "069",
-  "name": "Type: Null",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   772
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/069",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.04,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-070",
-  "localId": "070",
-  "name": "Silvally",
-  "category": "Pokemon",
-  "rarity": "Rare",
-  "dexIds": [
-   773
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/070",
-  "market": {
-   "trend": 0.2,
-   "avg30": 0.13,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-071",
-  "localId": "071",
-  "name": "Bombirdier",
-  "category": "Pokemon",
-  "rarity": "Common",
-  "dexIds": [
-   962
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/071",
-  "market": {
-   "trend": 0.04,
-   "avg30": 0.03,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-072",
-  "localId": "072",
-  "name": "Antique Armor Fossil",
-  "category": "Trainer",
-  "rarity": "Common",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/072",
-  "market": {
-   "trend": 0.06,
-   "avg30": 0.08,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-073",
+  "id": "me03-073",
   "localId": "073",
-  "name": "Antique Skull Fossil",
+  "name": "Energy Swatter",
+  "category": "Trainer",
+  "rarity": "Uncommon",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/073",
+  "market": {
+   "trend": 0.03,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-074",
+  "localId": "074",
+  "name": "Hole-Digging Shovel",
   "category": "Trainer",
   "rarity": "Common",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/073",
+  "image": "https://assets.tcgdex.net/en/me/me03/074",
   "market": {
-   "trend": 0.03,
-   "avg30": 0.09,
+   "trend": 0.04,
+   "avg30": 0.03,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -1675,37 +1688,16 @@
   }
  },
  {
-  "id": "me05-074",
-  "localId": "074",
-  "name": "Backtrack Badge",
-  "category": "Trainer",
-  "rarity": "Uncommon",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/074",
-  "market": {
-   "trend": 0.13,
-   "avg30": 0.1,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-075",
+  "id": "me03-075",
   "localId": "075",
-  "name": "Dark Bell",
+  "name": "Jacinthe",
   "category": "Trainer",
   "rarity": "Uncommon",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/075",
+  "image": "https://assets.tcgdex.net/en/me/me03/075",
   "market": {
-   "trend": 0.16,
-   "avg30": 0.14,
+   "trend": 0.04,
+   "avg30": 0.04,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -1717,16 +1709,16 @@
   }
  },
  {
-  "id": "me05-076",
+  "id": "me03-076",
   "localId": "076",
-  "name": "Fossil Quarry",
+  "name": "Judge",
   "category": "Trainer",
   "rarity": "Uncommon",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/076",
+  "image": "https://assets.tcgdex.net/en/me/me03/076",
   "market": {
-   "trend": 0.23,
-   "avg30": 0.12,
+   "trend": 0.07,
+   "avg30": 0.06,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -1738,16 +1730,100 @@
   }
  },
  {
-  "id": "me05-077",
+  "id": "me03-077",
   "localId": "077",
-  "name": "Gladion's Final Battle",
+  "name": "Lumiose City",
   "category": "Trainer",
   "rarity": "Uncommon",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/077",
+  "image": "https://assets.tcgdex.net/en/me/me03/077",
+  "market": {
+   "trend": 0.06,
+   "avg30": 0.04,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-078",
+  "localId": "078",
+  "name": "Lumiose Galette",
+  "category": "Trainer",
+  "rarity": "Uncommon",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/078",
+  "market": {
+   "trend": 0.06,
+   "avg30": 0.03,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-079",
+  "localId": "079",
+  "name": "Naveen",
+  "category": "Trainer",
+  "rarity": "Uncommon",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/079",
+  "market": {
+   "trend": 0.07,
+   "avg30": 0.04,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "uncommon",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-080",
+  "localId": "080",
+  "name": "Poké Ball",
+  "category": "Trainer",
+  "rarity": "Common",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/080",
   "market": {
    "trend": 0.02,
-   "avg30": 0.12,
+   "avg30": 0.06,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-081",
+  "localId": "081",
+  "name": "Poké Pad",
+  "category": "Trainer",
+  "rarity": "Uncommon",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/081",
+  "market": {
+   "trend": 0.35,
+   "avg30": 0.4,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -1759,100 +1835,58 @@
   }
  },
  {
-  "id": "me05-078",
-  "localId": "078",
-  "name": "Gwynn",
+  "id": "me03-082",
+  "localId": "082",
+  "name": "Pokémon Catcher",
   "category": "Trainer",
-  "rarity": "Uncommon",
+  "rarity": "Common",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/078",
+  "image": "https://assets.tcgdex.net/en/me/me03/082",
   "market": {
-   "trend": 0.05,
-   "avg30": 0.23,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-079",
-  "localId": "079",
-  "name": "Jett",
-  "category": "Trainer",
-  "rarity": "Uncommon",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/079",
-  "market": {
-   "trend": 0.05,
+   "trend": 0.04,
    "avg30": 0.05,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
-   "rarity": "uncommon",
+   "rarity": "common",
    "era": "current",
    "popularity": "c",
    "supply": "mass"
   }
  },
  {
-  "id": "me05-080",
-  "localId": "080",
-  "name": "Misty's Vitality",
+  "id": "me03-083",
+  "localId": "083",
+  "name": "Potion",
   "category": "Trainer",
-  "rarity": "Uncommon",
+  "rarity": "Common",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/080",
+  "image": "https://assets.tcgdex.net/en/me/me03/083",
   "market": {
-   "trend": 0.1,
-   "avg30": 0.15,
+   "trend": 0.04,
+   "avg30": 0.04,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
-   "rarity": "uncommon",
+   "rarity": "common",
    "era": "current",
    "popularity": "c",
    "supply": "mass"
   }
  },
  {
-  "id": "me05-081",
-  "localId": "081",
-  "name": "Rust Syndicate Grunt",
+  "id": "me03-084",
+  "localId": "084",
+  "name": "Rosa's Encouragement",
   "category": "Trainer",
   "rarity": "Uncommon",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/081",
-  "market": {
-   "trend": 0.05,
-   "avg30": 0.08,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "uncommon",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-082",
-  "localId": "082",
-  "name": "Tremendous Bomb",
-  "category": "Trainer",
-  "rarity": "Uncommon",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/082",
+  "image": "https://assets.tcgdex.net/en/me/me03/084",
   "market": {
    "trend": 0.07,
-   "avg30": 0.08,
+   "avg30": 0.07,
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -1864,153 +1898,103 @@
   }
  },
  {
-  "id": "me05-083",
-  "localId": "083",
-  "name": "Shadowy Darkness Energy",
-  "category": "Energy",
-  "rarity": "Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/083",
-  "market": {
-   "trend": 0.12,
-   "avg30": 0.3,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-084",
-  "localId": "084",
-  "name": "Voltaic Lightning Energy",
-  "category": "Energy",
-  "rarity": "Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/084",
-  "market": {
-   "trend": 0.25,
-   "avg30": 0.39,
-   "low": 0.02,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "rare",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-085",
+  "id": "me03-085",
   "localId": "085",
-  "name": "Fomantis",
-  "category": "Pokemon",
-  "rarity": "Illustration rare",
-  "dexIds": [
-   753
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/085",
+  "name": "Tarragon",
+  "category": "Trainer",
+  "rarity": "Uncommon",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/085",
   "market": {
-   "trend": 4.23,
-   "avg30": 4.45,
-   "low": 2.49,
+   "trend": 0.07,
+   "avg30": 0.04,
+   "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
-   "rarity": "fullart",
+   "rarity": "uncommon",
    "era": "current",
    "popularity": "c",
    "supply": "mass"
   }
  },
  {
-  "id": "me05-086",
+  "id": "me03-086",
   "localId": "086",
-  "name": "Armarouge",
-  "category": "Pokemon",
-  "rarity": "Illustration rare",
-  "dexIds": [
-   936
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/086",
+  "name": "Growing Grass Energy",
+  "category": "Energy",
+  "rarity": "Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/086",
   "market": {
-   "trend": 4.67,
-   "avg30": 5.46,
-   "low": 3.49,
+   "trend": 0.13,
+   "avg30": 0.13,
+   "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
-   "rarity": "fullart",
+   "rarity": "rare",
    "era": "current",
    "popularity": "c",
    "supply": "mass"
   }
  },
  {
-  "id": "me05-087",
+  "id": "me03-087",
   "localId": "087",
-  "name": "Goldeen",
-  "category": "Pokemon",
-  "rarity": "Illustration rare",
-  "dexIds": [
-   118
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/087",
+  "name": "Rocky Fighting Energy",
+  "category": "Energy",
+  "rarity": "Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/087",
   "market": {
-   "trend": 14.15,
-   "avg30": 14.06,
-   "low": 6.49,
+   "trend": 0.14,
+   "avg30": 0.16,
+   "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
-   "rarity": "fullart",
+   "rarity": "rare",
    "era": "current",
    "popularity": "c",
    "supply": "mass"
   }
  },
  {
-  "id": "me05-088",
+  "id": "me03-088",
   "localId": "088",
-  "name": "Primarina",
-  "category": "Pokemon",
-  "rarity": "Illustration rare",
-  "dexIds": [
-   730
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/088",
+  "name": "Telepathic Psychic Energy",
+  "category": "Energy",
+  "rarity": "Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/088",
   "market": {
-   "trend": 5.41,
-   "avg30": 6.55,
-   "low": 4,
+   "trend": 0.3,
+   "avg30": 0.37,
+   "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
-   "rarity": "fullart",
+   "rarity": "rare",
    "era": "current",
-   "popularity": "b",
+   "popularity": "c",
    "supply": "mass"
   }
  },
  {
-  "id": "me05-089",
+  "id": "me03-089",
   "localId": "089",
-  "name": "Manectric",
+  "name": "Spewpa",
   "category": "Pokemon",
   "rarity": "Illustration rare",
   "dexIds": [
-   310
+   665
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/089",
+  "image": "https://assets.tcgdex.net/en/me/me03/089",
   "market": {
-   "trend": 4.1,
-   "avg30": 5.16,
-   "low": 2.89,
+   "trend": 2.43,
+   "avg30": 2.54,
+   "low": 1,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
@@ -2021,19 +2005,19 @@
   }
  },
  {
-  "id": "me05-090",
+  "id": "me03-090",
   "localId": "090",
-  "name": "Slowbro",
+  "name": "Rowlet",
   "category": "Pokemon",
   "rarity": "Illustration rare",
   "dexIds": [
-   80
+   722
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/090",
+  "image": "https://assets.tcgdex.net/en/me/me03/090",
   "market": {
-   "trend": 17.12,
-   "avg30": 17.38,
-   "low": 10.99,
+   "trend": 5.66,
+   "avg30": 5.68,
+   "low": 3.79,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
@@ -2044,19 +2028,19 @@
   }
  },
  {
-  "id": "me05-091",
+  "id": "me03-091",
   "localId": "091",
-  "name": "Dhelmise",
+  "name": "Talonflame",
   "category": "Pokemon",
   "rarity": "Illustration rare",
   "dexIds": [
-   781
+   663
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/091",
+  "image": "https://assets.tcgdex.net/en/me/me03/091",
   "market": {
-   "trend": 6.99,
-   "avg30": 8.46,
-   "low": 4.39,
+   "trend": 3.12,
+   "avg30": 3.16,
+   "low": 0.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
@@ -2067,19 +2051,19 @@
   }
  },
  {
-  "id": "me05-092",
+  "id": "me03-092",
   "localId": "092",
-  "name": "Thievul",
+  "name": "Aurorus",
   "category": "Pokemon",
   "rarity": "Illustration rare",
   "dexIds": [
-   828
+   699
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/092",
+  "image": "https://assets.tcgdex.net/en/me/me03/092",
   "market": {
-   "trend": 3.16,
-   "avg30": 3.6,
-   "low": 1.99,
+   "trend": 3.48,
+   "avg30": 3.85,
+   "low": 1.8,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
@@ -2090,41 +2074,18 @@
   }
  },
  {
-  "id": "me05-093",
+  "id": "me03-093",
   "localId": "093",
-  "name": "Bastiodon",
+  "name": "Dedenne",
   "category": "Pokemon",
   "rarity": "Illustration rare",
   "dexIds": [
-   411
+   702
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/093",
+  "image": "https://assets.tcgdex.net/en/me/me03/093",
   "market": {
-   "trend": 4.9,
-   "avg30": 5.17,
-   "low": 2.5,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-094",
-  "localId": "094",
-  "name": "Toucannon",
-  "category": "Pokemon",
-  "rarity": "Illustration rare",
-  "dexIds": [
-   733
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/094",
-  "market": {
-   "trend": 4.13,
-   "avg30": 4.92,
+   "trend": 5.92,
+   "avg30": 6.19,
    "low": 2.99,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -2136,19 +2097,19 @@
   }
  },
  {
-  "id": "me05-095",
-  "localId": "095",
-  "name": "Silvally",
+  "id": "me03-094",
+  "localId": "094",
+  "name": "Clefairy",
   "category": "Pokemon",
   "rarity": "Illustration rare",
   "dexIds": [
-   773
+   35
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/095",
+  "image": "https://assets.tcgdex.net/en/me/me03/094",
   "market": {
-   "trend": 4.01,
-   "avg30": 5.14,
-   "low": 3.3,
+   "trend": 22.58,
+   "avg30": 23.2,
+   "low": 9,
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "preset": {
@@ -2159,110 +2120,18 @@
   }
  },
  {
-  "id": "me05-096",
-  "localId": "096",
-  "name": "Lurantis ex",
+  "id": "me03-095",
+  "localId": "095",
+  "name": "Espurr",
   "category": "Pokemon",
-  "rarity": "Ultra Rare",
+  "rarity": "Illustration rare",
   "dexIds": [
-   754
+   677
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/096",
+  "image": "https://assets.tcgdex.net/en/me/me03/095",
   "market": {
-   "trend": 3.59,
-   "avg30": 3.59,
-   "low": 1.99,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-097",
-  "localId": "097",
-  "name": "Wailord ex",
-  "category": "Pokemon",
-  "rarity": "Ultra Rare",
-  "dexIds": [
-   321
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/097",
-  "market": {
-   "trend": 3.37,
-   "avg30": 3.94,
-   "low": 1.99,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-098",
-  "localId": "098",
-  "name": "Mega Zeraora ex",
-  "category": "Pokemon",
-  "rarity": "Ultra Rare",
-  "dexIds": [
-   807
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/098",
-  "market": {
-   "trend": 7.8,
-   "avg30": 8.41,
-   "low": 6.8,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-099",
-  "localId": "099",
-  "name": "Mega Chandelure ex",
-  "category": "Pokemon",
-  "rarity": "Ultra Rare",
-  "dexIds": [
-   609
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/099",
-  "market": {
-   "trend": 7.34,
-   "avg30": 7.94,
-   "low": 5,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-100",
-  "localId": "100",
-  "name": "Rampardos ex",
-  "category": "Pokemon",
-  "rarity": "Ultra Rare",
-  "dexIds": [
-   409
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/100",
-  "market": {
-   "trend": 4.35,
-   "avg30": 3.49,
+   "trend": 3.68,
+   "avg30": 3.93,
    "low": 1.7,
    "updated": "2026-07-21T08:02:25.039Z"
   },
@@ -2274,212 +2143,180 @@
   }
  },
  {
-  "id": "me05-101",
+  "id": "me03-096",
+  "localId": "096",
+  "name": "Probopass",
+  "category": "Pokemon",
+  "rarity": "Illustration rare",
+  "dexIds": [
+   476
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/096",
+  "market": {
+   "trend": 1.41,
+   "avg30": 1.46,
+   "low": 0.35,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-097",
+  "localId": "097",
+  "name": "Drapion",
+  "category": "Pokemon",
+  "rarity": "Illustration rare",
+  "dexIds": [
+   452
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/097",
+  "market": {
+   "trend": 1.81,
+   "avg30": 2.01,
+   "low": 0.89,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-098",
+  "localId": "098",
+  "name": "Doublade",
+  "category": "Pokemon",
+  "rarity": "Illustration rare",
+  "dexIds": [
+   680
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/098",
+  "market": {
+   "trend": 2.5,
+   "avg30": 3,
+   "low": 1.45,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-099",
+  "localId": "099",
+  "name": "Raticate",
+  "category": "Pokemon",
+  "rarity": "Illustration rare",
+  "dexIds": [
+   20
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/099",
+  "market": {
+   "trend": 4,
+   "avg30": 4.21,
+   "low": 1.98,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-100",
+  "localId": "100",
+  "name": "Decidueye ex",
+  "category": "Pokemon",
+  "rarity": "Ultra Rare",
+  "dexIds": [
+   724
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/100",
+  "market": {
+   "trend": 2.4,
+   "avg30": 2.62,
+   "low": 1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-101",
   "localId": "101",
-  "name": "Mega Darkrai ex",
+  "name": "Salazzle ex",
   "category": "Pokemon",
   "rarity": "Ultra Rare",
   "dexIds": [
-   491
+   758
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/101",
+  "image": "https://assets.tcgdex.net/en/me/me03/101",
   "market": {
-   "trend": 10.99,
-   "avg30": 11.7,
-   "low": 7.99,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "b",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-102",
-  "localId": "102",
-  "name": "Morpeko ex",
-  "category": "Pokemon",
-  "rarity": "Ultra Rare",
-  "dexIds": [
-   877
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/102",
-  "market": {
-   "trend": 5.49,
-   "avg30": 4.9,
-   "low": 2.5,
-   "updated": "2026-07-21T08:02:25.039Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-103",
-  "localId": "103",
-  "name": "Mega Excadrill ex",
-  "category": "Pokemon",
-  "rarity": "Ultra Rare",
-  "dexIds": [
-   530
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/103",
-  "market": {
-   "trend": 7.31,
-   "avg30": 7.28,
-   "low": 5.2,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-104",
-  "localId": "104",
-  "name": "Brave Bangle",
-  "category": "Trainer",
-  "rarity": "Ultra Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/104",
-  "market": {
-   "trend": 2.55,
-   "avg30": 4.55,
-   "low": 2,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-105",
-  "localId": "105",
-  "name": "Crushing Hammer",
-  "category": "Trainer",
-  "rarity": "Ultra Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/105",
-  "market": {
-   "trend": 4.81,
-   "avg30": 5,
-   "low": 2.5,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-106",
-  "localId": "106",
-  "name": "Dark Bell",
-  "category": "Trainer",
-  "rarity": "Ultra Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/106",
-  "market": {
-   "trend": 3.4,
-   "avg30": 3.94,
-   "low": 2,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-107",
-  "localId": "107",
-  "name": "Energy Switch",
-  "category": "Trainer",
-  "rarity": "Ultra Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/107",
-  "market": {
-   "trend": 2.68,
-   "avg30": 3.54,
-   "low": 1.6,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-108",
-  "localId": "108",
-  "name": "Gladion's Final Battle",
-  "category": "Trainer",
-  "rarity": "Ultra Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/108",
-  "market": {
-   "trend": 5.59,
-   "avg30": 4.98,
-   "low": 1.8,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-109",
-  "localId": "109",
-  "name": "Gwynn",
-  "category": "Trainer",
-  "rarity": "Ultra Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/109",
-  "market": {
-   "trend": 7.35,
-   "avg30": 8.44,
-   "low": 6.9,
-   "updated": "2026-07-21T08:02:31.372Z"
-  },
-  "preset": {
-   "rarity": "fullart",
-   "era": "current",
-   "popularity": "c",
-   "supply": "mass"
-  }
- },
- {
-  "id": "me05-110",
-  "localId": "110",
-  "name": "Iron Defender",
-  "category": "Trainer",
-  "rarity": "Ultra Rare",
-  "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/110",
-  "market": {
-   "trend": 2.08,
-   "avg30": 2.1,
+   "trend": 2.43,
+   "avg30": 2.64,
    "low": 0.99,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-102",
+  "localId": "102",
+  "name": "Mega Starmie ex",
+  "category": "Pokemon",
+  "rarity": "Ultra Rare",
+  "dexIds": [
+   121
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/102",
+  "market": {
+   "trend": 7.51,
+   "avg30": 9.09,
+   "low": 4,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-103",
+  "localId": "103",
+  "name": "Mega Clefable ex",
+  "category": "Pokemon",
+  "rarity": "Ultra Rare",
+  "dexIds": [
+   36
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/103",
+  "market": {
+   "trend": 7.25,
+   "avg30": 7.52,
+   "low": 3.19,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2490,17 +2327,172 @@
   }
  },
  {
-  "id": "me05-111",
+  "id": "me03-104",
+  "localId": "104",
+  "name": "Mega Zygarde ex",
+  "category": "Pokemon",
+  "rarity": "Ultra Rare",
+  "dexIds": [
+   718
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/104",
+  "market": {
+   "trend": 6.76,
+   "avg30": 7.39,
+   "low": 4.74,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-105",
+  "localId": "105",
+  "name": "Yveltal ex",
+  "category": "Pokemon",
+  "rarity": "Ultra Rare",
+  "dexIds": [
+   717
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/105",
+  "market": {
+   "trend": 6.05,
+   "avg30": 6.31,
+   "low": 3.5,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "b",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-106",
+  "localId": "106",
+  "name": "Mega Skarmory ex",
+  "category": "Pokemon",
+  "rarity": "Ultra Rare",
+  "dexIds": [
+   227
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/106",
+  "market": {
+   "trend": 6.03,
+   "avg30": 6.29,
+   "low": 4,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-107",
+  "localId": "107",
+  "name": "Meowth ex",
+  "category": "Pokemon",
+  "rarity": "Ultra Rare",
+  "dexIds": [
+   52
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/107",
+  "market": {
+   "trend": 14.66,
+   "avg30": 16.01,
+   "low": 10,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-108",
+  "localId": "108",
+  "name": "Energy Recycler",
+  "category": "Trainer",
+  "rarity": "Ultra Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/108",
+  "market": {
+   "trend": 3.25,
+   "avg30": 3.44,
+   "low": 2,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-109",
+  "localId": "109",
+  "name": "Forest of Vitality",
+  "category": "Trainer",
+  "rarity": "Ultra Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/109",
+  "market": {
+   "trend": 6.15,
+   "avg30": 6.82,
+   "low": 2.9,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-110",
+  "localId": "110",
+  "name": "Jacinthe",
+  "category": "Trainer",
+  "rarity": "Ultra Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/110",
+  "market": {
+   "trend": 3.43,
+   "avg30": 3.7,
+   "low": 1.99,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-111",
   "localId": "111",
-  "name": "Misty's Vitality",
+  "name": "Lumiose City",
   "category": "Trainer",
   "rarity": "Ultra Rare",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/111",
+  "image": "https://assets.tcgdex.net/en/me/me03/111",
   "market": {
-   "trend": 20.75,
-   "avg30": 23.99,
-   "low": 16.99,
+   "trend": 2.66,
+   "avg30": 3.07,
+   "low": 1.5,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2511,17 +2503,17 @@
   }
  },
  {
-  "id": "me05-112",
+  "id": "me03-112",
   "localId": "112",
-  "name": "Rust Syndicate Grunt",
+  "name": "Naveen",
   "category": "Trainer",
   "rarity": "Ultra Rare",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/112",
+  "image": "https://assets.tcgdex.net/en/me/me03/112",
   "market": {
-   "trend": 3.85,
-   "avg30": 4.67,
-   "low": 2.38,
+   "trend": 2.83,
+   "avg30": 2.99,
+   "low": 1.35,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2532,17 +2524,17 @@
   }
  },
  {
-  "id": "me05-113",
+  "id": "me03-113",
   "localId": "113",
-  "name": "Tremendous Bomb",
+  "name": "Poké Pad",
   "category": "Trainer",
   "rarity": "Ultra Rare",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/113",
+  "image": "https://assets.tcgdex.net/en/me/me03/113",
   "market": {
-   "trend": 0.83,
-   "avg30": 1.84,
-   "low": 0.64,
+   "trend": 11.82,
+   "avg30": 12.61,
+   "low": 8.9,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2553,42 +2545,103 @@
   }
  },
  {
-  "id": "me05-114",
+  "id": "me03-114",
   "localId": "114",
-  "name": "Mega Zeraora ex",
-  "category": "Pokemon",
-  "rarity": "Special illustration rare",
-  "dexIds": [
-   807
-  ],
-  "image": "https://assets.tcgdex.net/en/me/me05/114",
+  "name": "Rosa's Encouragement",
+  "category": "Trainer",
+  "rarity": "Ultra Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/114",
   "market": {
-   "trend": 63.38,
-   "avg30": 67.73,
-   "low": 44.5,
+   "trend": 7.16,
+   "avg30": 8.03,
+   "low": 4.99,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
-   "rarity": "altart",
+   "rarity": "fullart",
    "era": "current",
-   "popularity": "b",
-   "supply": "normal"
+   "popularity": "c",
+   "supply": "mass"
   }
  },
  {
-  "id": "me05-115",
+  "id": "me03-115",
   "localId": "115",
-  "name": "Mega Chandelure ex",
+  "name": "Sacred Ash",
+  "category": "Trainer",
+  "rarity": "Ultra Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/115",
+  "market": {
+   "trend": 2.65,
+   "avg30": 2.88,
+   "low": 1,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-116",
+  "localId": "116",
+  "name": "Tarragon",
+  "category": "Trainer",
+  "rarity": "Ultra Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/116",
+  "market": {
+   "trend": 3.23,
+   "avg30": 3.54,
+   "low": 1.9,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-117",
+  "localId": "117",
+  "name": "Wondrous Patch",
+  "category": "Trainer",
+  "rarity": "Ultra Rare",
+  "dexIds": [],
+  "image": "https://assets.tcgdex.net/en/me/me03/117",
+  "market": {
+   "trend": 3.5,
+   "avg30": 3.97,
+   "low": 2.35,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "fullart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "me03-118",
+  "localId": "118",
+  "name": "Mega Starmie ex",
   "category": "Pokemon",
   "rarity": "Special illustration rare",
   "dexIds": [
-   609
+   121
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/115",
+  "image": "https://assets.tcgdex.net/en/me/me03/118",
   "market": {
-   "trend": 48.03,
-   "avg30": 47.56,
-   "low": 34,
+   "trend": 40.48,
+   "avg30": 46.51,
+   "low": 27,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2599,19 +2652,42 @@
   }
  },
  {
-  "id": "me05-116",
-  "localId": "116",
-  "name": "Mega Darkrai ex",
+  "id": "me03-119",
+  "localId": "119",
+  "name": "Mega Clefable ex",
   "category": "Pokemon",
   "rarity": "Special illustration rare",
   "dexIds": [
-   491
+   36
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/116",
+  "image": "https://assets.tcgdex.net/en/me/me03/119",
   "market": {
-   "trend": 370.33,
-   "avg30": 396.61,
-   "low": 245,
+   "trend": 49.71,
+   "avg30": 52.16,
+   "low": 34.5,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "altart",
+   "era": "current",
+   "popularity": "c",
+   "supply": "normal"
+  }
+ },
+ {
+  "id": "me03-120",
+  "localId": "120",
+  "name": "Mega Zygarde ex",
+  "category": "Pokemon",
+  "rarity": "Special illustration rare",
+  "dexIds": [
+   718
+  ],
+  "image": "https://assets.tcgdex.net/en/me/me03/120",
+  "market": {
+   "trend": 51.11,
+   "avg30": 56.75,
+   "low": 39,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2622,19 +2698,19 @@
   }
  },
  {
-  "id": "me05-117",
-  "localId": "117",
-  "name": "Morpeko ex",
+  "id": "me03-121",
+  "localId": "121",
+  "name": "Meowth ex",
   "category": "Pokemon",
   "rarity": "Special illustration rare",
   "dexIds": [
-   877
+   52
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/117",
+  "image": "https://assets.tcgdex.net/en/me/me03/121",
   "market": {
-   "trend": 84.48,
-   "avg30": 72.24,
-   "low": 50,
+   "trend": 90.49,
+   "avg30": 111.4,
+   "low": 72,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2645,17 +2721,17 @@
   }
  },
  {
-  "id": "me05-118",
-  "localId": "118",
-  "name": "Gladion's Final Battle",
+  "id": "me03-122",
+  "localId": "122",
+  "name": "Jacinthe",
   "category": "Trainer",
   "rarity": "Special illustration rare",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/118",
+  "image": "https://assets.tcgdex.net/en/me/me03/122",
   "market": {
-   "trend": 29.07,
-   "avg30": 31.57,
-   "low": 23.9,
+   "trend": 24,
+   "avg30": 25.41,
+   "low": 15,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2666,17 +2742,17 @@
   }
  },
  {
-  "id": "me05-119",
-  "localId": "119",
-  "name": "Gwynn",
+  "id": "me03-123",
+  "localId": "123",
+  "name": "Rosa's Encouragement",
   "category": "Trainer",
   "rarity": "Special illustration rare",
   "dexIds": [],
-  "image": "https://assets.tcgdex.net/en/me/me05/119",
+  "image": "https://assets.tcgdex.net/en/me/me03/123",
   "market": {
-   "trend": 25.13,
-   "avg30": 31.17,
-   "low": 22,
+   "trend": 56.24,
+   "avg30": 54.53,
+   "low": 33,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {
@@ -2687,19 +2763,19 @@
   }
  },
  {
-  "id": "me05-120",
-  "localId": "120",
-  "name": "Mega Darkrai ex",
+  "id": "me03-124",
+  "localId": "124",
+  "name": "Mega Zygarde ex",
   "category": "Pokemon",
   "rarity": "Mega Hyper Rare",
   "dexIds": [
-   491
+   718
   ],
-  "image": "https://assets.tcgdex.net/en/me/me05/120",
+  "image": "https://assets.tcgdex.net/en/me/me03/124",
   "market": {
-   "trend": 212.35,
-   "avg30": 279.08,
-   "low": 155,
+   "trend": 94.54,
+   "avg30": 110.87,
+   "low": 75,
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "preset": {

@@ -33,28 +33,36 @@ export interface SetMeta {
 
 export const SETS: SetMeta[] = setsJson as SetMeta[]
 
-const cardModules = import.meta.glob('./generated/cards-*.json', { eager: true }) as Record<
+// Lazy (code-split) — with 27+ sets, eagerly bundling every set's cards would
+// bloat the main chunk for every visitor. Each cards-*.json only loads when
+// its set is actually opened.
+const cardModuleLoaders = import.meta.glob('./generated/cards-*.json') as Record<
   string,
-  { default: CardData[] }
+  () => Promise<{ default: CardData[] }>
 >
 
-const cardsBySet: Record<string, CardData[]> = {}
-for (const [path, mod] of Object.entries(cardModules)) {
+const loaderBySet: Record<string, () => Promise<{ default: CardData[] }>> = {}
+for (const [path, loader] of Object.entries(cardModuleLoaders)) {
   const setId = path.match(/cards-(.+)\.json$/)![1]
-  cardsBySet[setId] = mod.default
+  loaderBySet[setId] = loader
 }
 
 export function getSet(setId: string): SetMeta | undefined {
   return SETS.find((s) => s.id === setId)
 }
 
-export function getCards(setId: string): CardData[] {
-  return cardsBySet[setId] ?? []
+/** Dynamic import result is cached by the module system, so repeat calls are free. */
+export async function loadCards(setId: string): Promise<CardData[]> {
+  const loader = loaderBySet[setId]
+  if (!loader) return []
+  const mod = await loader()
+  return mod.default
 }
 
-export function getCard(cardId: string): CardData | undefined {
+export async function loadCard(cardId: string): Promise<CardData | undefined> {
   const setId = cardId.slice(0, cardId.lastIndexOf('-'))
-  return cardsBySet[setId]?.find((c) => c.id === cardId)
+  const cards = await loadCards(setId)
+  return cards.find((c) => c.id === cardId)
 }
 
 /** Preset selection for a card: card factors from the import, copy set to NM/EN/Unlimited. */

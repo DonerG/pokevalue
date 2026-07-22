@@ -1,0 +1,772 @@
+[
+ {
+  "id": "mfb-1",
+  "localId": "1",
+  "name": "Bulbasaur",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   1
+  ],
+  "image": null,
+  "market": {
+   "trend": 3.92,
+   "avg30": 3.76,
+   "low": 2.5,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-2",
+  "localId": "2",
+  "name": "Ivysaur",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   2
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.79,
+   "avg30": 0.51,
+   "low": 0.2,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-3",
+  "localId": "3",
+  "name": "Oddish",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   43
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.19,
+   "avg30": 0.37,
+   "low": 0.05,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-4",
+  "localId": "4",
+  "name": "Gloom",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   44
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.35,
+   "avg30": 0.25,
+   "low": 0.05,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-5",
+  "localId": "5",
+  "name": "Exeggcute",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   102
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.25,
+   "avg30": 0.19,
+   "low": 0.1,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-6",
+  "localId": "6",
+  "name": "Exeggutor",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   103
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.25,
+   "avg30": 0.47,
+   "low": 0.1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-7",
+  "localId": "7",
+  "name": "Scyther",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   123
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.71,
+   "avg30": 0.72,
+   "low": 0.45,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-8",
+  "localId": "8",
+  "name": "Grass Energy",
+  "category": "Energy",
+  "rarity": "None",
+  "dexIds": [],
+  "image": null,
+  "market": {
+   "trend": 0.22,
+   "avg30": 0.11,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-9",
+  "localId": "9",
+  "name": "Charmander",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   4
+  ],
+  "image": null,
+  "market": {
+   "trend": 2.29,
+   "avg30": 1.95,
+   "low": 1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-10",
+  "localId": "10",
+  "name": "Charmeleon",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   5
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.74,
+   "avg30": 0.36,
+   "low": 0.05,
+   "updated": "2026-07-21T08:02:25.285Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-11",
+  "localId": "11",
+  "name": "Vulpix",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   37
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.51,
+   "avg30": 0.45,
+   "low": 0.15,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-12",
+  "localId": "12",
+  "name": "Ninetales",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   38
+  ],
+  "image": null,
+  "market": {
+   "trend": 1.25,
+   "avg30": 0.68,
+   "low": 0.79,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-13",
+  "localId": "13",
+  "name": "Growlithe",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   58
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.39,
+   "avg30": 0.26,
+   "low": 0.1,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-14",
+  "localId": "14",
+  "name": "Arcanine",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   59
+  ],
+  "image": null,
+  "market": {
+   "trend": 1.96,
+   "avg30": 1.76,
+   "low": 0.9,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-15",
+  "localId": "15",
+  "name": "Magmar",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   126
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.32,
+   "avg30": 0.32,
+   "low": 0.1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-16",
+  "localId": "16",
+  "name": "Fire Energy",
+  "category": "Energy",
+  "rarity": "None",
+  "dexIds": [],
+  "image": null,
+  "market": {
+   "trend": 0.43,
+   "avg30": 0.17,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-17",
+  "localId": "17",
+  "name": "Pikachu",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   25
+  ],
+  "image": null,
+  "market": {
+   "trend": 12.05,
+   "avg30": 7.24,
+   "low": 3,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "s",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-18",
+  "localId": "18",
+  "name": "Raichu",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   26
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.58,
+   "avg30": 0.37,
+   "low": 0.03,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-19",
+  "localId": "19",
+  "name": "Magnemite",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   81
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.23,
+   "avg30": 0.19,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:31.372Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-20",
+  "localId": "20",
+  "name": "Magneton",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   82
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.18,
+   "avg30": 0.47,
+   "low": 0.1,
+   "updated": "2026-07-21T08:02:24.684Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-21",
+  "localId": "21",
+  "name": "Voltorb",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   100
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.17,
+   "avg30": 0.17,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-22",
+  "localId": "22",
+  "name": "Electrode",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   130
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.22,
+   "avg30": 0.32,
+   "low": 0.1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-23",
+  "localId": "23",
+  "name": "Electabuzz",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   125
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.56,
+   "avg30": 0.34,
+   "low": 0.2,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-24",
+  "localId": "24",
+  "name": "Lightning Energy",
+  "category": "Energy",
+  "rarity": "None",
+  "dexIds": [],
+  "image": null,
+  "market": {
+   "trend": 0.26,
+   "avg30": 0.13,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-25",
+  "localId": "25",
+  "name": "Squirtle",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   7
+  ],
+  "image": null,
+  "market": {
+   "trend": 4.81,
+   "avg30": 3.49,
+   "low": 1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-26",
+  "localId": "26",
+  "name": "Wartortle",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   8
+  ],
+  "image": null,
+  "market": {
+   "trend": 1,
+   "avg30": 0.39,
+   "low": 0.19,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-27",
+  "localId": "27",
+  "name": "Poliwag",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   60
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.52,
+   "avg30": 0.2,
+   "low": 0.03,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-28",
+  "localId": "28",
+  "name": "Poliwhirl",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   61
+  ],
+  "image": null,
+  "market": {
+   "trend": 0.35,
+   "avg30": 0.28,
+   "low": 0.15,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-29",
+  "localId": "29",
+  "name": "Magikarp",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   129
+  ],
+  "image": null,
+  "market": {
+   "trend": 2.34,
+   "avg30": 1.58,
+   "low": 0.5,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-30",
+  "localId": "30",
+  "name": "Gyarados",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   130
+  ],
+  "image": null,
+  "market": {
+   "trend": 3.68,
+   "avg30": 3.88,
+   "low": 1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "a",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-31",
+  "localId": "31",
+  "name": "Lapras",
+  "category": "Pokemon",
+  "rarity": "None",
+  "dexIds": [
+   129
+  ],
+  "image": null,
+  "market": {
+   "trend": 1.87,
+   "avg30": 2.35,
+   "low": 1,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-32",
+  "localId": "32",
+  "name": "Water Energy",
+  "category": "Energy",
+  "rarity": "None",
+  "dexIds": [],
+  "image": null,
+  "market": {
+   "trend": 0.19,
+   "avg30": 0.12,
+   "low": 0.02,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-33",
+  "localId": "33",
+  "name": "Potion",
+  "category": "Trainer",
+  "rarity": "None",
+  "dexIds": [],
+  "image": null,
+  "market": {
+   "trend": 0.2,
+   "avg30": 0.12,
+   "low": 0.03,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ },
+ {
+  "id": "mfb-34",
+  "localId": "34",
+  "name": "Switch",
+  "category": "Trainer",
+  "rarity": "None",
+  "dexIds": [],
+  "image": null,
+  "market": {
+   "trend": 0.22,
+   "avg30": 0.17,
+   "low": 0.04,
+   "updated": "2026-07-21T08:02:25.039Z"
+  },
+  "preset": {
+   "rarity": "common",
+   "era": "modern",
+   "popularity": "c",
+   "supply": "mass"
+  }
+ }
+]

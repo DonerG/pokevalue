@@ -1,16 +1,22 @@
 /**
- * Loads sets + cards from TCGdex (api.tcgdex.net) and writes them as JSON
- * to src/data/generated/. For every card, the default factors (rarity, era,
- * popularity, supply) are preset.
+ * Loads sets + cards and writes them as JSON to src/data/generated/, for
+ * every card presetting the default factors (rarity, era, popularity,
+ * supply). Prefers the local bulk cache (scripts/.cache/, populated by
+ * fetch-all-cards.mjs / fetch-all-sets.mjs) when available, falling back to
+ * a live TCGdex fetch for anything not cached yet.
  *
  * Usage:  node scripts/ingest.mjs me05 me04
  */
+import { existsSync } from 'node:fs'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mapEra, mapRarity, mapSupply, popularityTier } from './lib/cardMapping.mjs'
 
-const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data', 'generated')
+const HERE = dirname(fileURLToPath(import.meta.url))
+const OUT_DIR = join(HERE, '..', 'src', 'data', 'generated')
+const CACHE_CARDS_DIR = join(HERE, '.cache', 'cards')
+const CACHE_SETS_DIR = join(HERE, '.cache', 'sets')
 const API = 'https://api.tcgdex.net/v2/en'
 const CONCURRENCY = 8
 
@@ -30,6 +36,18 @@ async function fetchJson(url, tries = 5) {
   throw new Error(`Task failed: ${url}`)
 }
 
+async function loadSet(setId) {
+  const cachedPath = join(CACHE_SETS_DIR, `${setId}.json`)
+  if (existsSync(cachedPath)) return JSON.parse(await readFile(cachedPath, 'utf8'))
+  return fetchJson(`${API}/sets/${setId}`)
+}
+
+async function loadCard(cardId) {
+  const cachedPath = join(CACHE_CARDS_DIR, `${encodeURIComponent(cardId)}.json`)
+  if (existsSync(cachedPath)) return JSON.parse(await readFile(cachedPath, 'utf8'))
+  return fetchJson(`${API}/cards/${cardId}`)
+}
+
 async function mapLimited(items, limit, fn) {
   const results = new Array(items.length)
   let next = 0
@@ -47,13 +65,13 @@ async function mapLimited(items, limit, fn) {
 
 async function ingestSet(setId) {
   console.log(`Loading set ${setId} …`)
-  const set = await fetchJson(`${API}/sets/${setId}`)
+  const set = await loadSet(setId)
   const cardBriefs = set.cards ?? []
   console.log(`  ${set.name} (${set.releaseDate}), ${cardBriefs.length} cards`)
 
   let done = 0
   const cards = await mapLimited(cardBriefs, CONCURRENCY, async (brief) => {
-    const card = await fetchJson(`${API}/cards/${brief.id}`)
+    const card = await loadCard(brief.id)
     done++
     if (done % 25 === 0) console.log(`  … ${done}/${cardBriefs.length}`)
 
