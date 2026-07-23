@@ -1,5 +1,15 @@
 import { useEffect, useState } from 'react'
 
+// Take scroll restoration fully into our own hands (see restoreScrollSoon
+// below). Left on the default 'auto', the browser's own — unreliable, since
+// SetPage's content height changes after an async load — restoration attempt
+// races ours: whichever happens to finish last wins, so the bug only showed
+// up intermittently (e.g. after a few seconds on the card page, apparently
+// giving the browser's own attempt more room to fire late and stomp on ours).
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual'
+}
+
 export type SetSortKey = 'number' | 'deviation' | 'market' | 'fair'
 
 export type Route =

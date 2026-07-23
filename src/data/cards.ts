@@ -1,5 +1,15 @@
 import setsJson from './generated/sets.json'
 import pricingMetaJson from './generated/pricing-meta.json'
+import pokedexNamesJson from './generated/pokedex-names.json'
+
+const POKEDEX_NAMES = pokedexNamesJson as Record<string, string>
+
+/** Species name for a Pokémon factor's dex-id key ("6" -> "Charizard") — not the card's own title, which may carry a "ex"/"V"/"Mega " suffix that belongs to the card type factor instead. */
+export function pokemonSpeciesName(dexKey: string): string {
+  const name = POKEDEX_NAMES[dexKey]
+  if (!name) return `Pokémon #${dexKey}`
+  return name.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ')
+}
 
 export interface CardMarket {
   trend: number | null

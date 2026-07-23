@@ -1,5 +1,5 @@
 import { FACTORS, type Config, type Selection } from '../data/defaults'
-import type { CardData } from '../data/cards'
+import { pokemonSpeciesName, type CardData } from '../data/cards'
 import { formatEuro } from '../logic/pricing'
 
 const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
@@ -16,7 +16,11 @@ interface Props {
 export function PriceBreakdown({ card, setName, selection, config, fairPrice }: Props) {
   const f = card.factors
   const cardRows = [
-    { label: 'Pokémon', value: f.pokemon.key === 'none' ? '— (Trainer/Energy)' : card.name, mult: f.pokemon.displayFactor },
+    {
+      label: 'Pokémon',
+      value: f.pokemon.key === 'none' ? '— (Trainer/Energy)' : pokemonSpeciesName(f.pokemon.key),
+      mult: f.pokemon.displayFactor,
+    },
     { label: 'Rarity', value: card.rarity ?? 'Unknown', mult: f.rarity.displayFactor },
     { label: 'Illustrator', value: card.illustrator ?? 'Unknown', mult: f.illustrator.displayFactor },
     { label: 'Set', value: setName, mult: f.set.displayFactor },
