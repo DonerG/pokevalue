@@ -5,13 +5,48 @@
   "name": "Grass Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -20,13 +55,48 @@
   "name": "Fire Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -35,13 +105,48 @@
   "name": "Water Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -50,13 +155,48 @@
   "name": "Lightning Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -65,13 +205,48 @@
   "name": "Psychic Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -80,13 +255,48 @@
   "name": "Fighting Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -95,13 +305,48 @@
   "name": "Darkness Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -110,13 +355,48 @@
   "name": "Metal Energy",
   "category": "Energy",
   "rarity": "Common",
+  "illustrator": null,
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "common",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 0.27904448241624313,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Common",
+    "factor": 0.0294,
+    "displayFactor": 0.02939999999999998,
+    "n": 5371,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Unknown",
+    "factor": 1.1647,
+    "displayFactor": 1.1647,
+    "n": 406,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mee",
+    "factor": 1,
+    "displayFactor": 1,
+    "n": 0,
+    "usedFallback": true
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  }
 ]

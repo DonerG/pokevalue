@@ -10,6 +10,7 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { mapCardType } from './lib/cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE_DIR = join(HERE, '.cache', 'cards')
@@ -47,6 +48,7 @@ for (const file of files) {
     dexIds: card.dexId ?? [],
     rarity: card.rarity ?? null,
     illustrator: card.illustrator ?? null,
+    cardType: mapCardType(card),
     setId: card.set?.id ?? null,
     setName: card.set?.name ?? null,
     releaseDate: releaseDateBySet.get(card.set?.id) ?? null,

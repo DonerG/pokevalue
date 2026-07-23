@@ -1,5 +1,5 @@
 import setsJson from './generated/sets.json'
-import { defaultSelection, type Selection } from './defaults'
+import pricingMetaJson from './generated/pricing-meta.json'
 
 export interface CardMarket {
   trend: number | null
@@ -8,16 +8,37 @@ export interface CardMarket {
   updated: string | null
 }
 
+/** One computed factor: the raw statistical estimate, the (small-sample-dampened) value actually used for pricing, and how many cards support it. */
+export interface FactorEntry {
+  key: string
+  factor: number
+  displayFactor: number
+  n: number
+  usedFallback: boolean
+}
+
+export interface CardFactors {
+  pokemon: FactorEntry
+  rarity: FactorEntry
+  illustrator: FactorEntry
+  set: FactorEntry
+  cardType: FactorEntry
+}
+
 export interface CardData {
   id: string
   localId: string
   name: string
   category: string
   rarity: string | null
+  illustrator: string | null
+  cardType: string | null
   dexIds: number[]
   image: string | null
   market: CardMarket | null
-  preset: { rarity: string; era: string; popularity: string }
+  /** Data-derived fair value before condition/language: anchor × every factor in `factors`. */
+  baseValue: number
+  factors: CardFactors
 }
 
 export interface SetMeta {
@@ -31,7 +52,13 @@ export interface SetMeta {
   withMarket: number
 }
 
+export interface PricingMeta {
+  minBaseValue: number
+  maxBaseValue: number
+}
+
 export const SETS: SetMeta[] = setsJson as SetMeta[]
+export const PRICING_META: PricingMeta = pricingMetaJson as PricingMeta
 
 // Lazy (code-split) — with 27+ sets, eagerly bundling every set's cards would
 // bloat the main chunk for every visitor. Each cards-*.json only loads when
@@ -63,16 +90,6 @@ export async function loadCard(cardId: string): Promise<CardData | undefined> {
   const setId = cardId.slice(0, cardId.lastIndexOf('-'))
   const cards = await loadCards(setId)
   return cards.find((c) => c.id === cardId)
-}
-
-/** Preset selection for a card: card factors from the import, copy set to NM/EN/Unlimited. */
-export function selectionForCard(card: CardData): Selection {
-  return {
-    ...defaultSelection(),
-    rarity: card.preset.rarity,
-    era: card.preset.era,
-    popularity: card.preset.popularity,
-  }
 }
 
 /** TCGdex image URL: needs a quality + format suffix. */

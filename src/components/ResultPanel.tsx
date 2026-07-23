@@ -1,4 +1,5 @@
 import type { Config, Selection } from '../data/defaults'
+import type { CardData } from '../data/cards'
 import {
   formatEuro,
   formatPercent,
@@ -9,6 +10,8 @@ import {
 import { PriceBreakdown } from './PriceBreakdown'
 
 interface Props {
+  card: CardData
+  setName: string
   score: number
   baseValue: number
   fairPrice: number
@@ -22,21 +25,23 @@ const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint:
   undervalued: {
     icon: '▲',
     label: 'Undervalued',
-    hint: 'The market price is well below the fair price — a good buy per the formula.',
+    hint: 'The market price is well below the fair price — a good buy per the model.',
   },
   fair: {
     icon: '✓',
     label: 'Fairly valued',
-    hint: 'The market price is close to the formula’s fair price.',
+    hint: 'The market price is close to the model’s fair price.',
   },
   overvalued: {
     icon: '▼',
     label: 'Overvalued',
-    hint: 'The market price is well above the fair price — too expensive per the formula.',
+    hint: 'The market price is well above the fair price — too expensive per the model.',
   },
 }
 
 export function ResultPanel({
+  card,
+  setName,
   score,
   baseValue,
   fairPrice,
@@ -72,8 +77,8 @@ export function ResultPanel({
           <div className="score-fill" style={{ width: `${score}%` }} />
         </div>
         <p className="muted">
-          The card's position between the weakest and strongest possible combination —
-          independent of the copy's condition.
+          The card's position between the cheapest and priciest base value across every card
+          currently on the site — independent of the copy's condition.
         </p>
       </div>
 
@@ -88,7 +93,7 @@ export function ResultPanel({
         </div>
       </dl>
 
-      <PriceBreakdown selection={selection} config={config} showCopyFactors />
+      <PriceBreakdown card={card} setName={setName} selection={selection} config={config} fairPrice={fairPrice} />
 
       <div className="market-block">
         <label htmlFor="market-price">Current market price (e.g. Cardmarket)</label>

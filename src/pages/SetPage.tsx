@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
-import { baseValue, formatEuro } from '../logic/pricing'
-import { cardImage, formatDate, getSet, loadCards, selectionForCard, type CardData } from '../data/cards'
+import { formatEuro } from '../logic/pricing'
+import { cardImage, formatDate, getSet, loadCards, type CardData } from '../data/cards'
 import { VerdictChip } from '../components/VerdictChip'
 
 type SortKey = 'number' | 'deviation' | 'market' | 'fair'
@@ -25,7 +25,7 @@ export function SetPage({ setId, config }: Props) {
   const rows = useMemo(() => {
     if (!cards) return []
     const withPrice = cards.map((card) => {
-      const fair = baseValue(selectionForCard(card), config)
+      const fair = card.baseValue
       const market = card.market?.trend ?? null
       const deviation = market != null && fair > 0 ? (market - fair) / fair : null
       return { card, fair, market, deviation }
@@ -59,8 +59,8 @@ export function SetPage({ setId, config }: Props) {
         <h2>{set.name}</h2>
         <p className="muted">
           {set.serie ? `${set.serie} · ` : ''}
-          {formatDate(set.releaseDate)} · {set.cardCount} cards. Fair price per the formula vs.
-          Cardmarket trend price — presets per card, adjustable on the card page.
+          {formatDate(set.releaseDate)} · {set.cardCount} cards. Fair price from our pricing model
+          vs. the current Cardmarket trend price.
         </p>
         <div className="set-toolbar">
           <input

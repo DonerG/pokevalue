@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from 'react'
-import { EXEMPLAR_FACTORS, type Config, type FactorId, type Selection } from '../data/defaults'
-import { baseValue, fairPrice, formatEuro, score } from '../logic/pricing'
+import { FACTORS, defaultSelection, type Config, type FactorId, type Selection } from '../data/defaults'
+import { fairPrice, formatEuro, score } from '../logic/pricing'
 import {
   cardImage,
   cardmarketUrl,
   formatDate,
   getSet,
   loadCard,
-  selectionForCard,
+  PRICING_META,
   type CardData,
 } from '../data/cards'
 import { OptionGroup } from '../components/OptionGroup'
@@ -25,35 +25,32 @@ function trendToInput(trend: number | null | undefined): string {
 export function CardPage({ cardId, config }: Props) {
   // undefined = still loading, null = confirmed not found
   const [card, setCard] = useState<CardData | null | undefined>(undefined)
-  const [selection, setSelection] = useState<Selection | null>(null)
+  const [selection, setSelection] = useState<Selection>(() => defaultSelection())
   const [marketInput, setMarketInput] = useState('')
 
   useEffect(() => {
     setCard(undefined)
-    setSelection(null)
+    setSelection(defaultSelection())
     loadCard(cardId).then((c) => {
       setCard(c ?? null)
-      if (c) {
-        setSelection(selectionForCard(c))
-        setMarketInput(trendToInput(c.market?.trend))
-      }
+      if (c) setMarketInput(trendToInput(c.market?.trend))
     })
   }, [cardId])
 
   const results = useMemo(() => {
-    if (!selection) return null
+    if (!card) return null
     return {
-      score: score(selection, config),
-      base: baseValue(selection, config),
-      fair: fairPrice(selection, config),
+      score: score(card.baseValue, PRICING_META.minBaseValue, PRICING_META.maxBaseValue),
+      base: card.baseValue,
+      fair: fairPrice(card.baseValue, selection, config),
     }
-  }, [selection, config])
+  }, [card, selection, config])
 
   if (card === undefined) {
     return <p className="muted">Loading card…</p>
   }
 
-  if (!card || !selection || !results) {
+  if (!card || !results) {
     return (
       <p className="muted">
         Card not found. <a href="#/">Back to overview</a>
@@ -64,7 +61,7 @@ export function CardPage({ cardId, config }: Props) {
   const set = getSet(card.id.slice(0, card.id.lastIndexOf('-')))
   const img = cardImage(card, 'high')
   const handleSelect = (factorId: FactorId, optionId: string) =>
-    setSelection((prev) => (prev ? { ...prev, [factorId]: optionId } : prev))
+    setSelection((prev) => ({ ...prev, [factorId]: optionId }))
 
   return (
     <div>
@@ -103,9 +100,10 @@ export function CardPage({ cardId, config }: Props) {
           <section className="panel">
             <h2>Your Copy</h2>
             <p className="panel-intro">
-              Condition, language, and edition determine the concrete price of this copy.
+              Condition and language adjust the price of your specific copy — reasonable
+              assumptions, not computed from Cardmarket data (see "Why this price?" for why).
             </p>
-            {EXEMPLAR_FACTORS.map((def) => (
+            {FACTORS.map((def) => (
               <OptionGroup
                 key={def.id}
                 def={def}
@@ -119,6 +117,8 @@ export function CardPage({ cardId, config }: Props) {
 
         <aside className="card-result">
           <ResultPanel
+            card={card}
+            setName={set?.name ?? card.id}
             score={results.score}
             baseValue={results.base}
             fairPrice={results.fair}

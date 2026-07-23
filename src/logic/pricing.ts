@@ -1,42 +1,20 @@
-import {
-  CARD_FACTORS,
-  EXEMPLAR_FACTORS,
-  type Config,
-  type FactorDef,
-  type Selection,
-} from '../data/defaults'
+import { FACTORS, type Config, type Selection } from '../data/defaults'
 
-function product(factors: FactorDef[], selection: Selection, config: Config): number {
-  return factors.reduce((acc, f) => acc * (config.multipliers[f.id][selection[f.id]] ?? 1), 1)
-}
-
-/** Card base value (stage 1): anchor × rarity × era × popularity. */
-export function baseValue(selection: Selection, config: Config): number {
-  return config.anchor * product(CARD_FACTORS, selection, config)
-}
-
-/** Fair price of a specific copy (stage 2): base value × condition × language × edition. */
-export function fairPrice(selection: Selection, config: Config): number {
-  return baseValue(selection, config) * product(EXEMPLAR_FACTORS, selection, config)
+/** Fair price of a specific copy: the card's data-derived base value × condition × language. */
+export function fairPrice(baseValue: number, selection: Selection, config: Config): number {
+  return FACTORS.reduce((acc, f) => acc * (config.multipliers[f.id][selection[f.id]] ?? 1), baseValue)
 }
 
 /**
- * Card score 0–100: logarithmic position of the card's product between the
- * weakest and strongest possible product of the current multipliers.
- * Independent of the anchor and copy factors, so it's comparable across cards.
+ * Card score 0–100: logarithmic position of the card's base value between the
+ * cheapest and priciest base value across every card currently on the site
+ * (see pricing-meta.json) — an empirical percentile, not a guess.
  */
-export function score(selection: Selection, config: Config): number {
-  let min = 1
-  let max = 1
-  for (const f of CARD_FACTORS) {
-    const values = Object.values(config.multipliers[f.id]).filter((v) => v > 0)
-    if (values.length === 0) continue
-    min *= Math.min(...values)
-    max *= Math.max(...values)
-  }
-  const current = product(CARD_FACTORS, selection, config)
-  if (current <= 0 || max <= min) return 0
-  const s = (100 * (Math.log10(current) - Math.log10(min))) / (Math.log10(max) - Math.log10(min))
+export function score(baseValue: number, minBaseValue: number, maxBaseValue: number): number {
+  if (baseValue <= 0 || maxBaseValue <= minBaseValue) return 0
+  const s =
+    (100 * (Math.log10(baseValue) - Math.log10(minBaseValue))) /
+    (Math.log10(maxBaseValue) - Math.log10(minBaseValue))
   return Math.min(100, Math.max(0, s))
 }
 

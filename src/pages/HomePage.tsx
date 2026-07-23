@@ -6,11 +6,11 @@ export function HomePage() {
       <section className="hero-block">
         <h2>What is a Pokémon card really worth?</h2>
         <p>
-          PokéValue estimates a fair price for every card with a pricing model trained on real
-          Cardmarket data across thousands of cards — rarity, age, and Pokémon popularity are
-          already factored in per card. Compare the result with the current market price and see
-          instantly whether a card is over- or undervalued. For your specific copy, you only need
-          to set condition, language, and edition.
+          PokéValue estimates a fair price for every card with a regression model trained on real
+          Cardmarket data across ~19,000 cards — Pokémon, rarity, illustrator, set, and card type
+          each get their own computed factor. Compare the result with the current market price and
+          see instantly whether a card is over- or undervalued. For your specific copy, you only
+          need to set condition and language.
         </p>
       </section>
 

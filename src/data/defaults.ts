@@ -1,12 +1,11 @@
-export type FactorId =
-  | 'rarity'
-  | 'era'
-  | 'popularity'
-  | 'condition'
-  | 'language'
-  | 'edition'
+// Pokémon, rarity, illustrator, set, and card type are no longer here — they're
+// fixed, data-derived facts computed per card at build time (see
+// analysis/fit_factors.py and scripts/lib/factors.mjs), not user choices.
+// Condition and language stay editable because Cardmarket's price data can't
+// tell us those apart (see README) — they're reasonable assumptions, not
+// computed factors, and are labeled as such in the UI.
 
-export type Stage = 'card' | 'copy'
+export type FactorId = 'condition' | 'language'
 
 export interface FactorOption {
   id: string
@@ -19,62 +18,15 @@ export interface FactorDef {
   id: FactorId
   label: string
   description: string
-  stage: Stage
   options: FactorOption[]
   defaultOption: string
 }
 
 export const FACTORS: FactorDef[] = [
   {
-    id: 'rarity',
-    label: 'Rarity / Hit Rate',
-    description: 'How rare is the card when opening packs?',
-    stage: 'card',
-    defaultOption: 'holo',
-    options: [
-      { id: 'common', label: 'Common', multiplier: 0.1 },
-      { id: 'uncommon', label: 'Uncommon', multiplier: 0.2 },
-      { id: 'rare', label: 'Rare', multiplier: 0.5 },
-      { id: 'holo', label: 'Holo Rare', multiplier: 1 },
-      { id: 'ultra', label: 'Ultra Rare', hint: 'EX / GX / V / ex', multiplier: 3 },
-      { id: 'fullart', label: 'Full Art', multiplier: 6 },
-      { id: 'secret', label: 'Secret / Gold', multiplier: 10 },
-      { id: 'altart', label: 'Alt Art / SIR', hint: 'Special Illustration Rare', multiplier: 20 },
-    ],
-  },
-  {
-    id: 'era',
-    label: 'Age / Era',
-    description: 'Which era is the card’s set from?',
-    stage: 'card',
-    defaultOption: 'current',
-    options: [
-      { id: 'current', label: 'Current Set', hint: 'since 2024', multiplier: 1 },
-      { id: 'modern', label: 'Modern', hint: '2017–2023', multiplier: 1.2 },
-      { id: 'mid', label: 'Mid', hint: '2011–2016', multiplier: 1.5 },
-      { id: 'exdp', label: 'EX/DP Era', hint: '2003–2010', multiplier: 3 },
-      { id: 'wotc', label: 'WOTC / Vintage', hint: '1999–2003', multiplier: 8 },
-    ],
-  },
-  {
-    id: 'popularity',
-    label: 'Pokémon Popularity',
-    description: 'How sought-after is the depicted Pokémon among collectors?',
-    stage: 'card',
-    defaultOption: 'c',
-    options: [
-      { id: 's', label: 'Tier S', hint: 'Charizard, Pikachu, Mewtwo, Eevee …', multiplier: 5 },
-      { id: 'a', label: 'Tier A', hint: 'Starters, Legendaries, fan favorites', multiplier: 2.5 },
-      { id: 'b', label: 'Tier B', hint: 'popular', multiplier: 1.3 },
-      { id: 'c', label: 'Tier C', hint: 'average', multiplier: 1 },
-      { id: 'd', label: 'Tier D', hint: 'low demand', multiplier: 0.7 },
-    ],
-  },
-  {
     id: 'condition',
     label: 'Condition',
     description: 'Grading or condition of your copy.',
-    stage: 'copy',
     defaultOption: 'nm',
     options: [
       { id: 'psa10', label: 'PSA 10', hint: 'Gem Mint', multiplier: 5 },
@@ -91,7 +43,6 @@ export const FACTORS: FactorDef[] = [
     id: 'language',
     label: 'Language',
     description: 'What language is the card printed in?',
-    stage: 'copy',
     defaultOption: 'en',
     options: [
       { id: 'en', label: 'English', multiplier: 1 },
@@ -100,29 +51,10 @@ export const FACTORS: FactorDef[] = [
       { id: 'other', label: 'Other', multiplier: 0.5 },
     ],
   },
-  {
-    id: 'edition',
-    label: 'Edition',
-    description: 'Print run specifics.',
-    stage: 'copy',
-    defaultOption: 'unlimited',
-    options: [
-      { id: 'unlimited', label: 'Unlimited', hint: 'standard print run', multiplier: 1 },
-      { id: 'first', label: '1st Edition', multiplier: 5 },
-      { id: 'shadowless', label: 'Shadowless', multiplier: 3 },
-      { id: 'promo', label: 'Promo / Stamped', multiplier: 1.5 },
-    ],
-  },
 ]
 
-export const CARD_FACTORS = FACTORS.filter((f) => f.stage === 'card')
-export const EXEMPLAR_FACTORS = FACTORS.filter((f) => f.stage === 'copy')
-
-/** All multipliers, the anchor, and the thresholds — adjustable by the user in expert mode. */
+/** Condition/language multipliers, plus the over-/undervalued thresholds. Not data-derived — see FACTORS above. */
 export interface Config {
-  /** Base value in €: what an ordinary modern holo card is worth. */
-  anchor: number
-  /** Thresholds in %, above/below which a card counts as over-/undervalued. */
   thresholds: { over: number; under: number }
   multipliers: Record<FactorId, Record<string, number>>
 }
@@ -132,7 +64,7 @@ export function defaultConfig(): Config {
   for (const f of FACTORS) {
     multipliers[f.id] = Object.fromEntries(f.options.map((o) => [o.id, o.multiplier]))
   }
-  return { anchor: 1, thresholds: { over: 20, under: 20 }, multipliers }
+  return { thresholds: { over: 20, under: 20 }, multipliers }
 }
 
 export type Selection = Record<FactorId, string>

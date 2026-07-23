@@ -5,6 +5,8 @@
   "name": "Meganium",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Uninori",
+  "cardType": null,
   "dexIds": [
    154
   ],
@@ -15,10 +17,43 @@
    "low": 7.99,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 6.742285732143265,
+  "factors": {
+   "pokemon": {
+    "key": "154",
+    "factor": 2.2571,
+    "displayFactor": 2.2571,
+    "n": 19,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Uninori",
+    "factor": 1.1643,
+    "displayFactor": 1.1643,
+    "n": 24,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -27,6 +62,8 @@
   "name": "Inteleon",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Kazumasa Yasukuni",
+  "cardType": null,
   "dexIds": [
    818
   ],
@@ -37,10 +74,43 @@
    "low": 2.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 2.6336749868381326,
+  "factors": {
+   "pokemon": {
+    "key": "818",
+    "factor": 1.1094,
+    "displayFactor": 1.1094,
+    "n": 14,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Kazumasa Yasukuni",
+    "factor": 0.9253,
+    "displayFactor": 0.9253,
+    "n": 25,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -49,6 +119,8 @@
   "name": "Alakazam",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "cochi8i",
+  "cardType": null,
   "dexIds": [
    65
   ],
@@ -59,10 +131,43 @@
    "low": 9.99,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 7.089073242249612,
+  "factors": {
+   "pokemon": {
+    "key": "65",
+    "factor": 2.3783,
+    "displayFactor": 2.3783,
+    "n": 26,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "cochi8i",
+    "factor": 1.1618,
+    "displayFactor": 1.1618,
+    "n": 14,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -71,6 +176,8 @@
   "name": "Lunatone",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Ounishi",
+  "cardType": null,
   "dexIds": [
    337
   ],
@@ -81,10 +188,43 @@
    "low": 7.9,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.556669956608698,
+  "factors": {
+   "pokemon": {
+    "key": "337",
+    "factor": 1.0154,
+    "displayFactor": 1.0154,
+    "n": 18,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Ounishi",
+    "factor": 0.9814,
+    "displayFactor": 0.9814,
+    "n": 11,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -93,6 +233,8 @@
   "name": "Drifloon",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Shimaris Yukichi",
+  "cardType": null,
   "dexIds": [
    425
   ],
@@ -103,10 +245,43 @@
    "low": 4,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 4.1470108410762885,
+  "factors": {
+   "pokemon": {
+    "key": "425",
+    "factor": 1.3167,
+    "displayFactor": 1.3167,
+    "n": 19,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Shimaris Yukichi",
+    "factor": 1.2276,
+    "displayFactor": 1.2276,
+    "n": 22,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -115,6 +290,8 @@
   "name": "Drifblim",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Shimaris Yukichi",
+  "cardType": null,
   "dexIds": [
    426
   ],
@@ -125,10 +302,43 @@
    "low": 1.95,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.5089305354305247,
+  "factors": {
+   "pokemon": {
+    "key": "426",
+    "factor": 0.7966,
+    "displayFactor": 0.7966,
+    "n": 16,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Shimaris Yukichi",
+    "factor": 1.2276,
+    "displayFactor": 1.2276,
+    "n": 22,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -137,6 +347,8 @@
   "name": "Psyduck",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Jiro Sasumo",
+  "cardType": null,
   "dexIds": [
    54
   ],
@@ -147,10 +359,43 @@
    "low": 0.8,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 12.149847504941013,
+  "factors": {
+   "pokemon": {
+    "key": "54",
+    "factor": 4.6098,
+    "displayFactor": 4.6098,
+    "n": 37,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Jiro Sasumo",
+    "factor": 1.0273,
+    "displayFactor": 1.0273,
+    "n": 35,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -159,6 +404,8 @@
   "name": "Golduck",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Jiro Sasumo",
+  "cardType": null,
   "dexIds": [
    55
   ],
@@ -169,10 +416,43 @@
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.1269744753541144,
+  "factors": {
+   "pokemon": {
+    "key": "55",
+    "factor": 0.807,
+    "displayFactor": 0.807,
+    "n": 26,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Jiro Sasumo",
+    "factor": 1.0273,
+    "displayFactor": 1.0273,
+    "n": 35,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -181,6 +461,8 @@
   "name": "Alakazam",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Aya Kusube",
+  "cardType": null,
   "dexIds": [
    65
   ],
@@ -191,10 +473,43 @@
    "low": 6.49,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 6.731507661258195,
+  "factors": {
+   "pokemon": {
+    "key": "65",
+    "factor": 2.3783,
+    "displayFactor": 2.3783,
+    "n": 26,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Aya Kusube",
+    "factor": 1.1032,
+    "displayFactor": 1.1032,
+    "n": 131,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -203,6 +518,8 @@
   "name": "Riolu",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "GOSSAN",
+  "cardType": null,
   "dexIds": [
    447
   ],
@@ -213,10 +530,43 @@
    "low": 4.9,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.6284829479024836,
+  "factors": {
+   "pokemon": {
+    "key": "447",
+    "factor": 1.4752,
+    "displayFactor": 1.4752,
+    "n": 31,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "GOSSAN",
+    "factor": 0.9587,
+    "displayFactor": 0.9587,
+    "n": 75,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -225,6 +575,8 @@
   "name": "Mega Latias ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    380
   ],
@@ -235,10 +587,43 @@
    "low": 0.08,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 14.19648753745252,
+  "factors": {
+   "pokemon": {
+    "key": "380",
+    "factor": 3.0633,
+    "displayFactor": 3.0633,
+    "n": 27,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -247,6 +632,8 @@
   "name": "Mega Lucario ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    448
   ],
@@ -257,10 +644,43 @@
    "low": 0.3,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 9.115356425232712,
+  "factors": {
+   "pokemon": {
+    "key": "448",
+    "factor": 1.9669,
+    "displayFactor": 1.9669,
+    "n": 49,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -269,6 +689,8 @@
   "name": "Mega Venusaur ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    3
   ],
@@ -279,10 +701,43 @@
    "low": 0.45,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 13.978671811189903,
+  "factors": {
+   "pokemon": {
+    "key": "3",
+    "factor": 3.0163,
+    "displayFactor": 3.0163,
+    "n": 42,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -291,6 +746,8 @@
   "name": "Ceruledge",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Anesaki Dynamic",
+  "cardType": null,
   "dexIds": [
    937
   ],
@@ -301,10 +758,43 @@
    "low": 8,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.777693564032238,
+  "factors": {
+   "pokemon": {
+    "key": "937",
+    "factor": 1.6472,
+    "displayFactor": 1.6472,
+    "n": 9,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Anesaki Dynamic",
+    "factor": 0.8939,
+    "displayFactor": 0.8939,
+    "n": 143,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -313,6 +803,8 @@
   "name": "Zacian",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Shiburingaru",
+  "cardType": null,
   "dexIds": [
    888
   ],
@@ -323,10 +815,43 @@
    "low": 5,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 3.085395245065648,
+  "factors": {
+   "pokemon": {
+    "key": "888",
+    "factor": 1.2403,
+    "displayFactor": 1.2403,
+    "n": 32,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Shiburingaru",
+    "factor": 0.9696,
+    "displayFactor": 0.9696,
+    "n": 43,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -335,6 +860,8 @@
   "name": "Flygon",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Oswaldo KATO",
+  "cardType": null,
   "dexIds": [
    330
   ],
@@ -345,10 +872,43 @@
    "low": 8.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.83324212662724,
+  "factors": {
+   "pokemon": {
+    "key": "330",
+    "factor": 1.5075,
+    "displayFactor": 1.5075,
+    "n": 27,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Oswaldo KATO",
+    "factor": 0.9911,
+    "displayFactor": 0.9911,
+    "n": 93,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -357,6 +917,8 @@
   "name": "Toxtricity",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Krgc",
+  "cardType": null,
   "dexIds": [
    849
   ],
@@ -367,10 +929,43 @@
    "low": 6.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 1.9010500006207023,
+  "factors": {
+   "pokemon": {
+    "key": "849",
+    "factor": 0.7737,
+    "displayFactor": 0.7737,
+    "n": 23,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Krgc",
+    "factor": 0.9577,
+    "displayFactor": 0.9577,
+    "n": 15,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -379,6 +974,8 @@
   "name": "Cottonee",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Kariya",
+  "cardType": null,
   "dexIds": [
    546
   ],
@@ -389,10 +986,43 @@
    "low": 0.2,
    "updated": "2026-07-21T08:02:25.285Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.058627753734213,
+  "factors": {
+   "pokemon": {
+    "key": "546",
+    "factor": 0.7903,
+    "displayFactor": 0.7903,
+    "n": 17,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Kariya",
+    "factor": 1.0153,
+    "displayFactor": 1.0153,
+    "n": 17,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -401,6 +1031,8 @@
   "name": "Whimsicott",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Yuka Tanaka",
+  "cardType": null,
   "dexIds": [
    547
   ],
@@ -411,10 +1043,43 @@
    "low": 0.15,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 1.5271375791555535,
+  "factors": {
+   "pokemon": {
+    "key": "547",
+    "factor": 0.641,
+    "displayFactor": 0.641,
+    "n": 24,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Yuka Tanaka",
+    "factor": 0.881,
+    "displayFactor": 0.9286,
+    "n": 3,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -423,6 +1088,8 @@
   "name": "Sneasel",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Souichirou Gunjima",
+  "cardType": null,
   "dexIds": [
    215
   ],
@@ -433,10 +1100,43 @@
    "low": 0.02,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.0890163580477843,
+  "factors": {
+   "pokemon": {
+    "key": "215",
+    "factor": 0.8714,
+    "displayFactor": 0.8714,
+    "n": 28,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Souichirou Gunjima",
+    "factor": 0.9344,
+    "displayFactor": 0.9344,
+    "n": 100,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -445,6 +1145,8 @@
   "name": "Weavile",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "matazo",
+  "cardType": null,
   "dexIds": [
    461
   ],
@@ -455,10 +1157,43 @@
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 1.1926291272278329,
+  "factors": {
+   "pokemon": {
+    "key": "461",
+    "factor": 0.704,
+    "displayFactor": 0.704,
+    "n": 22,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "matazo",
+    "factor": 0.6603,
+    "displayFactor": 0.6603,
+    "n": 21,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -467,6 +1202,8 @@
   "name": "Charcadet",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Teeziro",
+  "cardType": null,
   "dexIds": [
    935
   ],
@@ -477,10 +1214,43 @@
    "low": 0.24,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.0918358875381617,
+  "factors": {
+   "pokemon": {
+    "key": "935",
+    "factor": 1.2021,
+    "displayFactor": 1.2021,
+    "n": 15,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Teeziro",
+    "factor": 1.0025,
+    "displayFactor": 1.0025,
+    "n": 91,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -489,6 +1259,8 @@
   "name": "Mega Charizard X ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": "Mega EX",
   "dexIds": [
    6
   ],
@@ -499,10 +1271,43 @@
    "low": 19.99,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "s"
+  "baseValue": 99.7154215317234,
+  "factors": {
+   "pokemon": {
+    "key": "6",
+    "factor": 12.6398,
+    "displayFactor": 12.6398,
+    "n": 90,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -511,6 +1316,8 @@
   "name": "Oricorio ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Shinji Kanda",
+  "cardType": "EX",
   "dexIds": [
    741
   ],
@@ -521,10 +1328,43 @@
    "low": 11.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 9.096090278989093,
+  "factors": {
+   "pokemon": {
+    "key": "741",
+    "factor": 0.8766,
+    "displayFactor": 0.8766,
+    "n": 22,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Shinji Kanda",
+    "factor": 2.2688,
+    "displayFactor": 2.2688,
+    "n": 28,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "EX",
+    "factor": 1.1794,
+    "displayFactor": 1.1794,
+    "n": 1071,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -533,6 +1373,8 @@
   "name": "Mega Kangaskhan ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    115
   ],
@@ -543,10 +1385,43 @@
    "low": 0.45,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 5.18679491134295,
+  "factors": {
+   "pokemon": {
+    "key": "115",
+    "factor": 1.1192,
+    "displayFactor": 1.1192,
+    "n": 31,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -555,6 +1430,8 @@
   "name": "Meloetta",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Keisin",
+  "cardType": null,
   "dexIds": [
    648
   ],
@@ -565,10 +1442,43 @@
    "low": 5.75,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.4025815893585882,
+  "factors": {
+   "pokemon": {
+    "key": "648",
+    "factor": 1.1904,
+    "displayFactor": 1.1904,
+    "n": 16,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Keisin",
+    "factor": 1.1141,
+    "displayFactor": 1.1141,
+    "n": 12,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -577,6 +1487,8 @@
   "name": "Haunter",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Arai Kiriko",
+  "cardType": null,
   "dexIds": [
    93
   ],
@@ -587,10 +1499,43 @@
    "low": 34.99,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 6.278355020277379,
+  "factors": {
+   "pokemon": {
+    "key": "93",
+    "factor": 1.916,
+    "displayFactor": 1.916,
+    "n": 32,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Arai Kiriko",
+    "factor": 1.3465,
+    "displayFactor": 1.2772000000000001,
+    "n": 4,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -599,13 +1544,48 @@
   "name": "Celebratory Fanfare",
   "category": "Trainer",
   "rarity": "Promo",
+  "illustrator": "Yuu Nishida",
+  "cardType": null,
   "dexIds": [],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.8244690366376863,
+  "factors": {
+   "pokemon": {
+    "key": "none",
+    "factor": 1.0549,
+    "displayFactor": 1.0549,
+    "n": 3100,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Yuu Nishida",
+    "factor": 1.0436,
+    "displayFactor": 1.0436,
+    "n": 68,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -614,6 +1594,8 @@
   "name": "Mega Charizard X ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "takuyoa",
+  "cardType": "Mega EX",
   "dexIds": [
    6
   ],
@@ -624,10 +1606,43 @@
    "low": 1.49,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "s"
+  "baseValue": 55.50382299600826,
+  "factors": {
+   "pokemon": {
+    "key": "6",
+    "factor": 12.6398,
+    "displayFactor": 12.6398,
+    "n": 90,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "takuyoa",
+    "factor": 0.8523,
+    "displayFactor": 0.8523,
+    "n": 81,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -636,6 +1651,8 @@
   "name": "Mega Charizard Y ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Ultimateinudog",
+  "cardType": "Mega EX",
   "dexIds": [
    6
   ],
@@ -646,10 +1663,43 @@
    "low": 2,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "s"
+  "baseValue": 49.34454624021516,
+  "factors": {
+   "pokemon": {
+    "key": "6",
+    "factor": 12.6398,
+    "displayFactor": 12.6398,
+    "n": 90,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Ultimateinudog",
+    "factor": 0.3943,
+    "displayFactor": 0.75772,
+    "n": 2,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -658,6 +1708,8 @@
   "name": "N's Zekrom",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Bun Toujo",
+  "cardType": null,
   "dexIds": [
    644
   ],
@@ -668,10 +1720,43 @@
    "low": 2.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 3.856149782971596,
+  "factors": {
+   "pokemon": {
+    "key": "644",
+    "factor": 1.4871,
+    "displayFactor": 1.4871,
+    "n": 21,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Bun Toujo",
+    "factor": 1.0107,
+    "displayFactor": 1.0107,
+    "n": 14,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -680,6 +1765,8 @@
   "name": "Mega Gardevoir ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": "Mega EX",
   "dexIds": [
    282
   ],
@@ -690,10 +1777,43 @@
    "low": 2.49,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 20.213203772890523,
+  "factors": {
+   "pokemon": {
+    "key": "282",
+    "factor": 2.5622,
+    "displayFactor": 2.5622,
+    "n": 50,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -702,6 +1822,8 @@
   "name": "Mega Lucario ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    448
   ],
@@ -712,10 +1834,43 @@
    "low": 3.98,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 9.115356425232712,
+  "factors": {
+   "pokemon": {
+    "key": "448",
+    "factor": 1.9669,
+    "displayFactor": 1.9669,
+    "n": 49,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -724,6 +1879,8 @@
   "name": "Mega Meganium ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    154
   ],
@@ -734,10 +1891,43 @@
    "low": 0.1,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 10.460252675475493,
+  "factors": {
+   "pokemon": {
+    "key": "154",
+    "factor": 2.2571,
+    "displayFactor": 2.2571,
+    "n": 19,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -746,6 +1936,8 @@
   "name": "Mega Emboar ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    500
   ],
@@ -756,10 +1948,43 @@
    "low": 0.1,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 4.637157780816437,
+  "factors": {
+   "pokemon": {
+    "key": "500",
+    "factor": 1.0006,
+    "displayFactor": 1.0006,
+    "n": 13,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -768,6 +1993,8 @@
   "name": "Mega Feraligatr ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "5ban Graphics",
+  "cardType": "Mega EX",
   "dexIds": [
    160
   ],
@@ -778,10 +2005,43 @@
    "low": 0.29,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 10.881054121106251,
+  "factors": {
+   "pokemon": {
+    "key": "160",
+    "factor": 2.3479,
+    "displayFactor": 2.3479,
+    "n": 23,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "5ban Graphics",
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
+    "n": 1471,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -790,6 +2050,8 @@
   "name": "Bulbasaur",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    1
   ],
@@ -800,10 +2062,43 @@
    "low": 18,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 13.029554493641534,
+  "factors": {
+   "pokemon": {
+    "key": "1",
+    "factor": 3.3167,
+    "displayFactor": 3.3167,
+    "n": 28,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -812,6 +2107,8 @@
   "name": "Charmander",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    4
   ],
@@ -822,10 +2119,43 @@
    "low": 15,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 13.673037783073342,
+  "factors": {
+   "pokemon": {
+    "key": "4",
+    "factor": 3.4805,
+    "displayFactor": 3.4805,
+    "n": 45,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -834,6 +2164,8 @@
   "name": "Squirtle",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    7
   ],
@@ -844,10 +2176,43 @@
    "low": 13,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 15.465991222003002,
+  "factors": {
+   "pokemon": {
+    "key": "7",
+    "factor": 3.9369,
+    "displayFactor": 3.9369,
+    "n": 30,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -856,6 +2221,8 @@
   "name": "Turtwig",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    387
   ],
@@ -866,10 +2233,43 @@
    "low": 4,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 5.1781155299149475,
+  "factors": {
+   "pokemon": {
+    "key": "387",
+    "factor": 1.3181,
+    "displayFactor": 1.3181,
+    "n": 18,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -878,6 +2278,8 @@
   "name": "Chimchar",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    390
   ],
@@ -888,10 +2290,43 @@
    "low": 5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 4.41913523981589,
+  "factors": {
+   "pokemon": {
+    "key": "390",
+    "factor": 1.1249,
+    "displayFactor": 1.1249,
+    "n": 15,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -900,6 +2335,8 @@
   "name": "Piplup",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    393
   ],
@@ -910,10 +2347,43 @@
    "low": 6,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 11.661661444922636,
+  "factors": {
+   "pokemon": {
+    "key": "393",
+    "factor": 2.9685,
+    "displayFactor": 2.9685,
+    "n": 21,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -922,6 +2392,8 @@
   "name": "Rowlet",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    722
   ],
@@ -932,10 +2404,43 @@
    "low": 3.99,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.3812336215748386,
+  "factors": {
+   "pokemon": {
+    "key": "722",
+    "factor": 0.8607,
+    "displayFactor": 0.8607,
+    "n": 16,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -944,6 +2449,8 @@
   "name": "Litten",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    725
   ],
@@ -954,10 +2461,43 @@
    "low": 4.4,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 4.130392738147769,
+  "factors": {
+   "pokemon": {
+    "key": "725",
+    "factor": 1.0514,
+    "displayFactor": 1.0514,
+    "n": 12,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -966,6 +2506,8 @@
   "name": "Popplio",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Saboteri",
+  "cardType": null,
   "dexIds": [
    728
   ],
@@ -976,10 +2518,43 @@
    "low": 4,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 4.222318922352313,
+  "factors": {
+   "pokemon": {
+    "key": "728",
+    "factor": 1.0748,
+    "displayFactor": 1.0748,
+    "n": 7,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Saboteri",
+    "factor": 1.5312,
+    "displayFactor": 1.5312,
+    "n": 45,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -988,6 +2563,8 @@
   "name": "Serperior",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "LINNE",
+  "cardType": null,
   "dexIds": [
    497
   ],
@@ -998,10 +2575,43 @@
    "low": 3,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 3.112036666311861,
+  "factors": {
+   "pokemon": {
+    "key": "497",
+    "factor": 1.1999,
+    "displayFactor": 1.1999,
+    "n": 18,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "LINNE",
+    "factor": 1.0109,
+    "displayFactor": 1.0109,
+    "n": 11,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1010,6 +2620,8 @@
   "name": "Barbaracle",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Hasuno",
+  "cardType": null,
   "dexIds": [
    689
   ],
@@ -1020,10 +2632,43 @@
    "low": 3,
    "updated": "2026-07-21T08:02:31.372Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.0348840404888744,
+  "factors": {
+   "pokemon": {
+    "key": "689",
+    "factor": 0.885,
+    "displayFactor": 0.885,
+    "n": 7,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Hasuno",
+    "factor": 0.8962,
+    "displayFactor": 0.8962,
+    "n": 70,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1032,6 +2677,8 @@
   "name": "Tyrantrum",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Nisota Niso",
+  "cardType": null,
   "dexIds": [
    697
   ],
@@ -1042,10 +2689,43 @@
    "low": 4.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 7.503007972079654,
+  "factors": {
+   "pokemon": {
+    "key": "697",
+    "factor": 3.9783,
+    "displayFactor": 3.9783,
+    "n": 5,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Nisota Niso",
+    "factor": 0.7351,
+    "displayFactor": 0.7351,
+    "n": 50,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1054,6 +2734,8 @@
   "name": "Doublade",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Yukihiro Tada",
+  "cardType": null,
   "dexIds": [
    680
   ],
@@ -1064,10 +2746,43 @@
    "low": 2.5,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.021442579204324,
+  "factors": {
+   "pokemon": {
+    "key": "680",
+    "factor": 0.8594,
+    "displayFactor": 0.8594,
+    "n": 13,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Yukihiro Tada",
+    "factor": 0.9168,
+    "displayFactor": 0.9168,
+    "n": 17,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1076,6 +2791,8 @@
   "name": "Makuhita",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Takeshi Nakamura",
+  "cardType": null,
   "dexIds": [
    296
   ],
@@ -1086,10 +2803,43 @@
    "low": 1.9,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 1.7440927927634005,
+  "factors": {
+   "pokemon": {
+    "key": "296",
+    "factor": 0.7158,
+    "displayFactor": 0.7158,
+    "n": 18,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Takeshi Nakamura",
+    "factor": 0.9497,
+    "displayFactor": 0.9497,
+    "n": 27,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1098,6 +2848,8 @@
   "name": "Chikorita",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Makura Tami",
+  "cardType": null,
   "dexIds": [
    152
   ],
@@ -1108,10 +2860,43 @@
    "low": 0.02,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.058001842116063,
+  "factors": {
+   "pokemon": {
+    "key": "152",
+    "factor": 1.3025,
+    "displayFactor": 1.3025,
+    "n": 18,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Makura Tami",
+    "factor": 0.9151,
+    "displayFactor": 0.9151,
+    "n": 9,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1120,6 +2905,8 @@
   "name": "Tyrunt",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Shimaris Yukichi",
+  "cardType": null,
   "dexIds": [
    696
   ],
@@ -1130,10 +2917,43 @@
    "low": 1.3,
    "updated": "2026-07-21T08:02:25.039Z"
   },
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 9.522723641080715,
+  "factors": {
+   "pokemon": {
+    "key": "696",
+    "factor": 3.5294,
+    "displayFactor": 3.02352,
+    "n": 4,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Shimaris Yukichi",
+    "factor": 1.2276,
+    "displayFactor": 1.2276,
+    "n": 22,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1142,15 +2962,50 @@
   "name": "Mega Zygarde ex",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "takuyoa",
+  "cardType": "Mega EX",
   "dexIds": [
    718
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 4.711312812893975,
+  "factors": {
+   "pokemon": {
+    "key": "718",
+    "factor": 1.0729,
+    "displayFactor": 1.0729,
+    "n": 23,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "takuyoa",
+    "factor": 0.8523,
+    "displayFactor": 0.8523,
+    "n": 81,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Mega EX",
+    "factor": 1.3286,
+    "displayFactor": 1.3286,
+    "n": 128,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1159,15 +3014,50 @@
   "name": "Delphox",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Souichirou Gunjima",
+  "cardType": null,
   "dexIds": [
    655
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "b"
+  "baseValue": 2.8803685496837423,
+  "factors": {
+   "pokemon": {
+    "key": "655",
+    "factor": 1.2015,
+    "displayFactor": 1.2015,
+    "n": 11,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Souichirou Gunjima",
+    "factor": 0.9344,
+    "displayFactor": 0.9344,
+    "n": 100,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1176,15 +3066,50 @@
   "name": "Ampharos",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Taiga Kasai",
+  "cardType": null,
   "dexIds": [
    181
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 4.293975928492092,
+  "factors": {
+   "pokemon": {
+    "key": "181",
+    "factor": 1.8008,
+    "displayFactor": 1.8008,
+    "n": 36,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Taiga Kasai",
+    "factor": 0.9294,
+    "displayFactor": 0.9294,
+    "n": 22,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1193,15 +3118,50 @@
   "name": "Crobat",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Apios",
+  "cardType": null,
   "dexIds": [
    169
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.978972409286933,
+  "factors": {
+   "pokemon": {
+    "key": "169",
+    "factor": 1.3372,
+    "displayFactor": 1.3372,
+    "n": 36,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Apios",
+    "factor": 1.1598,
+    "displayFactor": 1.1598,
+    "n": 8,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1210,15 +3170,50 @@
   "name": "Goodra",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "okayamatakatoshi",
+  "cardType": null,
   "dexIds": [
    706
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 3.2425513342524694,
+  "factors": {
+   "pokemon": {
+    "key": "706",
+    "factor": 1.2982,
+    "displayFactor": 1.2982,
+    "n": 13,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "okayamatakatoshi",
+    "factor": 0.9559,
+    "displayFactor": 0.97354,
+    "n": 3,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1227,15 +3222,50 @@
   "name": "Toxel",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Mina Nakai",
+  "cardType": null,
   "dexIds": [
    848
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 2.4107883539869945,
+  "factors": {
+   "pokemon": {
+    "key": "848",
+    "factor": 0.9913,
+    "displayFactor": 0.9913,
+    "n": 12,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Mina Nakai",
+    "factor": 0.9479,
+    "displayFactor": 0.9479,
+    "n": 88,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1244,15 +3274,50 @@
   "name": "Charmeleon",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "Teeziro",
+  "cardType": null,
   "dexIds": [
    5
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "a"
+  "baseValue": 6.782954498474038,
+  "factors": {
+   "pokemon": {
+    "key": "5",
+    "factor": 2.6372,
+    "displayFactor": 2.6372,
+    "n": 34,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "Teeziro",
+    "factor": 1.0025,
+    "displayFactor": 1.0025,
+    "n": 91,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  },
  {
@@ -1261,15 +3326,50 @@
   "name": "Fennekin",
   "category": "Pokemon",
   "rarity": "Promo",
+  "illustrator": "satoma",
+  "cardType": null,
   "dexIds": [
    653
   ],
   "image": null,
   "market": null,
-  "preset": {
-   "rarity": "holo",
-   "era": "current",
-   "popularity": "c"
+  "baseValue": 1.8572719656911043,
+  "factors": {
+   "pokemon": {
+    "key": "653",
+    "factor": 0.9196,
+    "displayFactor": 0.9196,
+    "n": 13,
+    "usedFallback": false
+   },
+   "rarity": {
+    "key": "Promo",
+    "factor": 0.3226,
+    "displayFactor": 0.3226,
+    "n": 740,
+    "usedFallback": false
+   },
+   "illustrator": {
+    "key": "satoma",
+    "factor": 0.7872,
+    "displayFactor": 0.7872,
+    "n": 26,
+    "usedFallback": false
+   },
+   "set": {
+    "key": "mep",
+    "factor": 1.0295,
+    "displayFactor": 1.0295,
+    "n": 51,
+    "usedFallback": false
+   },
+   "cardType": {
+    "key": "Standard",
+    "factor": 0.6616,
+    "displayFactor": 0.6616,
+    "n": 16700,
+    "usedFallback": false
+   }
   }
  }
 ]
