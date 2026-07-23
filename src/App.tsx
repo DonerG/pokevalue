@@ -31,7 +31,15 @@ function App() {
       </header>
 
       {route.page === 'home' && <HomePage />}
-      {route.page === 'set' && <SetPage setId={route.setId} config={CONFIG} />}
+      {route.page === 'set' && (
+        <SetPage
+          key={route.setId}
+          setId={route.setId}
+          initialQuery={route.query}
+          initialSort={route.sort}
+          config={CONFIG}
+        />
+      )}
       {route.page === 'card' && <CardPage key={route.cardId} cardId={route.cardId} config={CONFIG} />}
       {route.page === 'admin-artwork' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>

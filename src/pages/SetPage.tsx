@@ -2,25 +2,32 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { formatEuro } from '../logic/pricing'
 import { cardImage, formatDate, getSet, loadCards, type CardData } from '../data/cards'
+import { updateSetFilters, type SetSortKey } from '../router'
 import { VerdictChip } from '../components/VerdictChip'
-
-type SortKey = 'number' | 'deviation' | 'market' | 'fair'
 
 interface Props {
   setId: string
+  initialQuery: string
+  initialSort: SetSortKey
   config: Config
 }
 
-export function SetPage({ setId, config }: Props) {
+export function SetPage({ setId, initialQuery, initialSort, config }: Props) {
   const set = getSet(setId)
   const [cards, setCards] = useState<CardData[] | null>(null)
-  const [query, setQuery] = useState('')
-  const [sort, setSort] = useState<SortKey>('number')
+  const [query, setQuery] = useState(initialQuery)
+  const [sort, setSort] = useState<SetSortKey>(initialSort)
 
   useEffect(() => {
     setCards(null)
     loadCards(setId).then(setCards)
   }, [setId])
+
+  // Keep the URL in sync (without spamming history) so the filters survive
+  // opening a card and going back — see router.ts.
+  useEffect(() => {
+    updateSetFilters(setId, query, sort)
+  }, [setId, query, sort])
 
   const rows = useMemo(() => {
     if (!cards) return []
@@ -72,7 +79,7 @@ export function SetPage({ setId, config }: Props) {
           />
           <label>
             Sort by{' '}
-            <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)}>
+            <select value={sort} onChange={(e) => setSort(e.target.value as SetSortKey)}>
               <option value="number">Number</option>
               <option value="deviation">Deviation (undervalued first)</option>
               <option value="market">Market price (highest first)</option>
