@@ -85,10 +85,10 @@ export function AdminArtworkPage() {
       <header className="admin-header">
         <h2>Artwork Rating</h2>
         <p className="muted">
-          Rate the illustration quality of chase cards on a 1–10 scale — this feeds into the
-          pricing model as a real feature, learned from how much it actually moves the market
-          price relative to similar cards. Ratings are saved in this browser only; export and
-          commit the file to make them part of the training data.
+          Rate the illustration quality of chase cards on a 1–10 scale. Not currently used by the
+          live pricing model (descoped for this version — see the README) but kept here for future
+          data collection. Ratings are saved in this browser only; export the file to keep them
+          somewhere durable.
         </p>
         <div className="admin-toolbar">
           <span className="admin-progress">
