@@ -14,7 +14,7 @@ export type SetSortKey = 'number' | 'deviation' | 'market' | 'fair'
 
 export type Route =
   | { page: 'home' }
-  | { page: 'set'; setId: string; query: string; sort: SetSortKey }
+  | { page: 'set'; setId: string; query: string; sort: SetSortKey; minPrice: boolean }
   | { page: 'card'; cardId: string }
   | { page: 'admin-artwork' }
   | { page: 'admin-promo-style' }
@@ -34,6 +34,7 @@ export function parseHash(hash: string): Route {
       setId: parts[1],
       query: params.get('q') ?? '',
       sort: SORT_KEYS.includes(sortParam as SetSortKey) ? (sortParam as SetSortKey) : 'number',
+      minPrice: params.get('min1') === '1',
     }
   }
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: parts[1] }
@@ -49,10 +50,11 @@ export function parseHash(hash: string): Route {
  * the last-seen filters are still there when the user opens a card and then
  * goes back.
  */
-export function updateSetFilters(setId: string, query: string, sort: SetSortKey): void {
+export function updateSetFilters(setId: string, query: string, sort: SetSortKey, minPrice: boolean): void {
   const params = new URLSearchParams()
   if (query) params.set('q', query)
   if (sort !== 'number') params.set('sort', sort)
+  if (minPrice) params.set('min1', '1')
   const qs = params.toString()
   history.replaceState(null, '', `#/set/${setId}${qs ? `?${qs}` : ''}`)
 }

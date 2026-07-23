@@ -10,14 +10,16 @@ interface Props {
   setId: string
   initialQuery: string
   initialSort: SetSortKey
+  initialMinPrice: boolean
   config: Config
 }
 
-export function SetPage({ setId, initialQuery, initialSort, config }: Props) {
+export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, config }: Props) {
   const set = getSet(setId)
   const [cards, setCards] = useState<CardData[] | null>(null)
   const [query, setQuery] = useState(initialQuery)
   const [sort, setSort] = useState<SetSortKey>(initialSort)
+  const [minPrice, setMinPrice] = useState(initialMinPrice)
 
   useEffect(() => {
     setCards(null)
@@ -33,8 +35,8 @@ export function SetPage({ setId, initialQuery, initialSort, config }: Props) {
   // Keep the URL in sync (without spamming history) so the filters survive
   // opening a card and going back — see router.ts.
   useEffect(() => {
-    updateSetFilters(setId, query, sort)
-  }, [setId, query, sort])
+    updateSetFilters(setId, query, sort, minPrice)
+  }, [setId, query, sort, minPrice])
 
   const rows = useMemo(() => {
     if (!cards) return []
@@ -45,16 +47,19 @@ export function SetPage({ setId, initialQuery, initialSort, config }: Props) {
       return { card, fair, market, deviation }
     })
     const q = query.trim().toLowerCase()
-    const filtered = q
+    let filtered = q
       ? withPrice.filter((r) => r.card.name.toLowerCase().includes(q) || r.card.localId.includes(q))
       : withPrice
+    // Below ~€1, a card's whole price is close to noise — a 20-cent swing
+    // reads as a huge percentage but isn't actually a meaningful find.
+    if (minPrice) filtered = filtered.filter((r) => r.market != null && r.market >= 1)
     const sorted = [...filtered]
     if (sort === 'deviation')
       sorted.sort((a, b) => (a.deviation ?? Infinity) - (b.deviation ?? Infinity))
     if (sort === 'market') sorted.sort((a, b) => (b.market ?? -1) - (a.market ?? -1))
     if (sort === 'fair') sorted.sort((a, b) => b.fair - a.fair)
     return sorted
-  }, [cards, config, query, sort])
+  }, [cards, config, query, sort, minPrice])
 
   if (!set) {
     return (
@@ -92,6 +97,10 @@ export function SetPage({ setId, initialQuery, initialSort, config }: Props) {
               <option value="market">Market price (highest first)</option>
               <option value="fair">Fair price (highest first)</option>
             </select>
+          </label>
+          <label className="admin-checkbox">
+            <input type="checkbox" checked={minPrice} onChange={(e) => setMinPrice(e.target.checked)} />
+            Only ≥ €1 market price
           </label>
         </div>
       </header>

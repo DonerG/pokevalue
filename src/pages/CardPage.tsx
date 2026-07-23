@@ -12,6 +12,7 @@ import {
 } from '../data/cards'
 import { OptionGroup } from '../components/OptionGroup'
 import { ResultPanel } from '../components/ResultPanel'
+import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
 
 interface Props {
@@ -98,12 +99,21 @@ export function CardPage({ cardId, config }: Props) {
         </div>
 
         <div className="card-controls">
-          <section className="panel">
-            <h2>Your Copy</h2>
-            <p className="panel-intro">
-              Condition and language adjust the price of your specific copy — reasonable
-              assumptions, not computed from Cardmarket data (see "Why this price?" for why).
-            </p>
+          <PriceBreakdown
+            card={card}
+            setName={set?.name ?? card.id}
+            selection={selection}
+            config={config}
+            fairPrice={results.fair}
+          />
+        </div>
+
+        <aside className="card-result">
+          <details className="panel your-copy-details">
+            <summary>
+              <h2>Your Copy</h2>
+              <p className="panel-intro">Condition &amp; language for your specific copy (optional)</p>
+            </summary>
             {FACTORS.map((def) => (
               <OptionGroup
                 key={def.id}
@@ -113,20 +123,15 @@ export function CardPage({ cardId, config }: Props) {
                 onChange={(optionId) => handleSelect(def.id, optionId)}
               />
             ))}
-          </section>
-        </div>
+          </details>
 
-        <aside className="card-result">
           <ResultPanel
-            card={card}
-            setName={set?.name ?? card.id}
             score={results.score}
             baseValue={results.base}
             fairPrice={results.fair}
             marketInput={marketInput}
             onMarketInput={setMarketInput}
             config={config}
-            selection={selection}
           />
         </aside>
       </div>

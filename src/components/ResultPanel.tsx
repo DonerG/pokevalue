@@ -1,5 +1,4 @@
-import type { Config, Selection } from '../data/defaults'
-import type { CardData } from '../data/cards'
+import type { Config } from '../data/defaults'
 import {
   formatEuro,
   formatPercent,
@@ -7,18 +6,14 @@ import {
   verdict,
   type Verdict,
 } from '../logic/pricing'
-import { PriceBreakdown } from './PriceBreakdown'
 
 interface Props {
-  card: CardData
-  setName: string
   score: number
   baseValue: number
   fairPrice: number
   marketInput: string
   onMarketInput: (value: string) => void
   config: Config
-  selection: Selection
 }
 
 const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint: string }> = {
@@ -40,15 +35,12 @@ const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint:
 }
 
 export function ResultPanel({
-  card,
-  setName,
   score,
   baseValue,
   fairPrice,
   marketInput,
   onMarketInput,
   config,
-  selection,
 }: Props) {
   const market = parseNumber(marketInput)
   const v = marketInput.trim() === '' ? null : verdict(market, fairPrice, config)
@@ -92,8 +84,6 @@ export function ResultPanel({
           <dd>{formatEuro(fairPrice)}</dd>
         </div>
       </dl>
-
-      <PriceBreakdown card={card} setName={setName} selection={selection} config={config} fairPrice={fairPrice} />
 
       <div className="market-block">
         <label htmlFor="market-price">Current market price (e.g. Cardmarket)</label>

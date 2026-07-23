@@ -37,8 +37,14 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice }: 
   })
 
   return (
-    <details className="price-breakdown">
-      <summary>Why this price?</summary>
+    <section className="panel price-breakdown-panel">
+      <h2>Why this price?</h2>
+      <p className="panel-intro">
+        Pokémon, rarity, illustrator, set, and card type come from a regression model trained on
+        real Cardmarket prices across ~19,000 cards — fixed facts, not something you adjust by
+        hand. Condition and language (below) are reasonable assumptions layered on top, since
+        Cardmarket's data doesn't separate those out.
+      </p>
       <ul className="breakdown-list">
         <li>
           <span>Base rate</span>
@@ -72,12 +78,6 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice }: 
           <span className="breakdown-mult">{formatEuro(fairPrice)}</span>
         </li>
       </ul>
-      <p className="muted">
-        Pokémon, rarity, illustrator, set, and card type come from a regression model trained on
-        real Cardmarket prices across ~19,000 cards — fixed facts, not something you adjust by
-        hand. Condition and language are reasonable assumptions layered on top, since Cardmarket's
-        data doesn't separate those out.
-      </p>
-    </details>
+    </section>
   )
 }

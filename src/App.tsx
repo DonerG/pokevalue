@@ -40,6 +40,7 @@ function App() {
           setId={route.setId}
           initialQuery={route.query}
           initialSort={route.sort}
+          initialMinPrice={route.minPrice}
           config={CONFIG}
         />
       )}
