@@ -9,6 +9,9 @@ import { CardPage } from './pages/CardPage'
 const AdminArtworkPage = lazy(() =>
   import('./pages/AdminArtworkPage').then((m) => ({ default: m.AdminArtworkPage })),
 )
+const AdminPromoStylePage = lazy(() =>
+  import('./pages/AdminPromoStylePage').then((m) => ({ default: m.AdminPromoStylePage })),
+)
 
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
@@ -44,6 +47,11 @@ function App() {
       {route.page === 'admin-artwork' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <AdminArtworkPage />
+        </Suspense>
+      )}
+      {route.page === 'admin-promo-style' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <AdminPromoStylePage />
         </Suspense>
       )}
 

@@ -7,10 +7,23 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { mapCardType } from './cardMapping.mjs'
+import { effectiveRarity, mapCardType } from './cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
+const PROMO_STYLES_PATH = join(HERE, '..', '..', 'src', 'data', 'promo-styles.json')
+
+let cachedPromoStyles = null
+function loadPromoStyles() {
+  if (!cachedPromoStyles) {
+    try {
+      cachedPromoStyles = JSON.parse(readFileSync(PROMO_STYLES_PATH, 'utf8'))
+    } catch {
+      cachedPromoStyles = {}
+    }
+  }
+  return cachedPromoStyles
+}
 
 /** Below this many supporting cards, a factor is pulled toward neutral (1x) for on-site
  * display — the raw statistically-estimated value (with its confidence interval) is what
@@ -44,7 +57,7 @@ function lookup(table, key) {
 export function computeCardPricing(card) {
   const data = loadFactors()
   const pokemonKey = card.dexId?.[0] != null ? String(card.dexId[0]) : 'none'
-  const rarityKey = card.rarity ?? 'None'
+  const rarityKey = effectiveRarity(card, loadPromoStyles()) ?? 'None'
   const illustratorKey = card.illustrator ?? 'Unknown'
   const setKey = card.set?.id ?? 'unknown'
   const cardTypeKey = mapCardType(card) ?? 'Standard'

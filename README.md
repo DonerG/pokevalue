@@ -7,6 +7,7 @@ A website that estimates a fair price for Pokémon cards with a regression model
 - **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first).
 - **Card page:** Pokémon, rarity, illustrator, set, and card type each get their own computed factor — fixed facts, not adjustable. You only pick condition and language for your specific copy, plus a "why this price?" breakdown showing every factor that went into the number.
 - **Artwork rating (hidden, `#/admin/artwork`):** Rate illustration quality (1–10) on chase cards. Not currently used by the model (see below) but kept for future data collection. Export/import as JSON.
+- **Promo style tagging (hidden, `#/admin/promo-style`):** Promo cards all share one "Promo" rarity in the source data, but some use an extended "Art Rare" illustration instead of the plain framed template — which swings the price a lot with no field to tell them apart. Tag each candidate "Art Rare" or "Normal" by eye; export/import as JSON. Once tagged, `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) splits "Promo" into "Promo (Art Rare)" / "Promo (Normal)" for both model training and on-site display, so the rarity factor picks up the distinction automatically.
 
 ## The pricing model
 
@@ -29,7 +30,7 @@ Held-out test result: R² ≈ 0.88, median absolute error ≈ 40%.
 ```bash
 node scripts/fetch-all-cards.mjs          # bulk-pull every English card (cached, resumable)
 node scripts/fetch-all-sets.mjs           # set release dates
-node scripts/build-training-data.mjs      # cache -> compact training-data.json
+node scripts/build-training-data.mjs      # cache + src/data/promo-styles.json -> compact training-data.json
 python analysis/fit_factors.py            # fit the model -> analysis/factors.json
 python analysis/build_report.py           # -> analysis/PokeValue-Faktoren.pdf
 node scripts/ingest.mjs sv01 sv02 …       # bake factors into each displayed set's card JSON
@@ -66,17 +67,20 @@ scripts/
   fetch-all-sets.mjs          Bulk pull of set release dates
   build-training-data.mjs     Cache -> compact training-data.json
   build-artwork-candidates.mjs Cache -> candidate list for the (currently unused) rating admin page
-  lib/cardMapping.mjs         Card-type derivation (V/VMAX/GX/EX/Mega EX/…), artwork-candidate rarity filter
+  build-promo-candidates.mjs  Cache -> candidate list (priced Promo-rarity cards) for the style admin page
+  lib/cardMapping.mjs         Card-type derivation, artwork-candidate rarity filter, effectiveRarity() (promo style)
   lib/factors.mjs             Looks up computed factors for a card, applies low-sample dampening
 src/
   data/defaults.ts        Condition/language options — the only user-adjustable factors, and only assumptions
   data/cards.ts            Access to imported sets/cards, pricing-meta (score normalization range)
   data/generated/          Imported card data incl. baked-in factors (JSON, commit these!)
+  data/promo-styles.json  Hand-tagged Promo Art-Rare/Normal styles (commit this!)
   logic/pricing.ts         Fair price, score, verdict, formatting
   logic/artworkRatings.ts  localStorage persistence for the rating admin page
+  logic/promoStyles.ts     localStorage persistence for the promo-style admin page
   components/              Result panel, price breakdown, option groups, chips
-  pages/                   Home, set, card, artwork-rating admin (lazy-loaded)
-  router.ts                Hash router (#/set/…, #/card/…, #/admin/artwork)
+  pages/                   Home, set, card, artwork-rating and promo-style admin (lazy-loaded)
+  router.ts                Hash router (#/set/…, #/card/…, #/admin/artwork, #/admin/promo-style)
 ```
 
 ## Notes

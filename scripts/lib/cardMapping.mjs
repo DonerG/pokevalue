@@ -82,3 +82,21 @@ export function mapCardType(card) {
   if (suffix) return suffix
   return null
 }
+
+// ---------- Promo card style (Art Rare vs. plain framed) ----------
+// TCGdex has no field for this even though it swings a Promo card's price a
+// lot (verified on two real cards: same "Promo" rarity, no structural
+// difference anywhere in the data, very different prices) — hand-tagged via
+// #/admin/promo-style. Where a tag exists, this refines the rarity used for
+// modeling (e.g. "Promo" -> "Promo (Art Rare)") so the existing rarity factor
+// picks up the distinction with no other changes to the regression.
+
+export const PROMO_STYLE_LABELS = { art: 'Promo (Art Rare)', normal: 'Promo (Normal)' }
+
+export function effectiveRarity(card, promoStyles) {
+  const style = promoStyles?.[card.id]
+  if (card.rarity === 'Promo' && style && PROMO_STYLE_LABELS[style]) {
+    return PROMO_STYLE_LABELS[style]
+  }
+  return card.rarity ?? null
+}

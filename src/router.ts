@@ -17,6 +17,7 @@ export type Route =
   | { page: 'set'; setId: string; query: string; sort: SetSortKey }
   | { page: 'card'; cardId: string }
   | { page: 'admin-artwork' }
+  | { page: 'admin-promo-style' }
 
 const SORT_KEYS: SetSortKey[] = ['number', 'deviation', 'market', 'fair']
 
@@ -37,6 +38,7 @@ export function parseHash(hash: string): Route {
   }
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: parts[1] }
   if (parts[0] === 'admin' && parts[1] === 'artwork') return { page: 'admin-artwork' }
+  if (parts[0] === 'admin' && parts[1] === 'promo-style') return { page: 'admin-promo-style' }
   return { page: 'home' }
 }
 

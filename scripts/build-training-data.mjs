@@ -10,12 +10,21 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { mapCardType } from './lib/cardMapping.mjs'
+import { effectiveRarity, mapCardType } from './lib/cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE_DIR = join(HERE, '.cache', 'cards')
 const SETS_CACHE_DIR = join(HERE, '.cache', 'sets')
 const OUT_FILE = join(HERE, 'training-data.json')
+const PROMO_STYLES_FILE = join(HERE, '..', 'src', 'data', 'promo-styles.json')
+
+let promoStyles = {}
+try {
+  promoStyles = JSON.parse(await readFile(PROMO_STYLES_FILE, 'utf8'))
+} catch {
+  // no tags yet
+}
+console.log(`${Object.keys(promoStyles).length} promo cards tagged with a style.`)
 
 // The per-card endpoint's embedded `set` object omits releaseDate, so pull
 // it from the separately-cached set details (fetch-all-sets.mjs) instead.
@@ -46,7 +55,7 @@ for (const file of files) {
     name: card.name,
     category: card.category ?? 'Pokemon',
     dexIds: card.dexId ?? [],
-    rarity: card.rarity ?? null,
+    rarity: effectiveRarity(card, promoStyles),
     illustrator: card.illustrator ?? null,
     cardType: mapCardType(card),
     setId: card.set?.id ?? null,
