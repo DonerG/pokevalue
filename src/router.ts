@@ -45,28 +45,71 @@ export function updateSetFilters(setId: string, query: string, sort: SetSortKey)
   history.replaceState(null, '', `#/set/${setId}${qs ? `?${qs}` : ''}`)
 }
 
+// ---------------------------------------------------------------- scroll memory
+//
+// The browser's native scroll restoration can't be trusted here: a page like
+// SetPage renders "Loading…" first and only reaches full height once its
+// cards arrive asynchronously, so restoring scroll immediately on popstate
+// (before that height exists) has nowhere to scroll to. We remember scroll
+// position per hash ourselves and let pages that load content async
+// (currently just SetPage) re-apply it once they're actually tall enough.
+
+const scrollPositions = new Map<string, number>()
+
+export function saveScrollPosition(hash: string, y: number): void {
+  scrollPositions.set(hash, y)
+}
+
+export function getScrollPosition(hash: string): number | undefined {
+  return scrollPositions.get(hash)
+}
+
+/** Waits two animation frames (one full layout/paint cycle) before scrolling, so it applies after the browser has committed the new content's height. */
+export function restoreScrollSoon(hash: string): void {
+  const y = getScrollPosition(hash)
+  if (y == null) return
+  requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)))
+}
+
 export function useRoute(): Route {
   const [route, setRoute] = useState<Route>(() => parseHash(window.location.hash))
   useEffect(() => {
     // Back/forward navigation fires `popstate` (right before `hashchange`);
     // a fresh link click or programmatic hash change only fires
     // `hashchange`. Only the latter should jump the scroll position back to
-    // the top — restoring history should let the browser put scroll back
-    // where the user left it.
+    // the top — a pop should restore where the user was instead.
     let isPop = false
     const onPop = () => {
       isPop = true
     }
     const onChange = () => {
-      setRoute(parseHash(window.location.hash))
-      if (!isPop) window.scrollTo(0, 0)
+      const hash = window.location.hash
+      setRoute(parseHash(hash))
+      if (isPop) {
+        restoreScrollSoon(hash) // covers pages whose content is already there on first paint
+      } else {
+        window.scrollTo(0, 0)
+      }
       isPop = false
     }
+
+    let scrollFrame = 0
+    const onScroll = () => {
+      if (scrollFrame) return
+      scrollFrame = requestAnimationFrame(() => {
+        scrollFrame = 0
+        saveScrollPosition(window.location.hash, window.scrollY)
+      })
+    }
+
     window.addEventListener('popstate', onPop)
     window.addEventListener('hashchange', onChange)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => {
       window.removeEventListener('popstate', onPop)
       window.removeEventListener('hashchange', onChange)
+      window.removeEventListener('scroll', onScroll)
+      if (scrollFrame) cancelAnimationFrame(scrollFrame)
     }
   }, [])
   return route

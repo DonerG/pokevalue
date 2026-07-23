@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { formatEuro } from '../logic/pricing'
 import { cardImage, formatDate, getSet, loadCards, type CardData } from '../data/cards'
-import { updateSetFilters, type SetSortKey } from '../router'
+import { restoreScrollSoon, updateSetFilters, type SetSortKey } from '../router'
 import { VerdictChip } from '../components/VerdictChip'
 
 interface Props {
@@ -20,7 +20,13 @@ export function SetPage({ setId, initialQuery, initialSort, config }: Props) {
 
   useEffect(() => {
     setCards(null)
-    loadCards(setId).then(setCards)
+    loadCards(setId).then((loaded) => {
+      setCards(loaded)
+      // Only reaches full height once cards are in, so a scroll restore
+      // attempted right on navigation (see router.ts) would've had nowhere
+      // to go yet — try again now that the grid actually has its content.
+      restoreScrollSoon(window.location.hash)
+    })
   }, [setId])
 
   // Keep the URL in sync (without spamming history) so the filters survive
