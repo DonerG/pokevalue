@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { formatDate, SETS, setLogo, type SetMeta } from '../data/cards'
+import { RetryImage } from '../components/RetryImage'
 
 function groupBySeries(sets: SetMeta[]): [string, SetMeta[]][] {
   const groups = new Map<string, SetMeta[]>()
@@ -56,7 +57,12 @@ export function HomePage() {
               return (
                 <a key={s.id} className="set-tile" href={`#/set/${s.id}`}>
                   {logo ? (
-                    <img src={logo} alt="" loading="lazy" />
+                    <RetryImage
+                      src={logo}
+                      alt=""
+                      loading="lazy"
+                      placeholder={<span className="set-tile-name">{s.name}</span>}
+                    />
                   ) : (
                     <span className="set-tile-name">{s.name}</span>
                   )}

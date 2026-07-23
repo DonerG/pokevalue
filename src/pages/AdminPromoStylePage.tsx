@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatDate, loadPromoCandidates, type PromoCandidate } from '../data/cards'
 import { loadPromoStyles, savePromoStyles, type PromoStyle, type PromoStyles } from '../logic/promoStyles'
 import { formatEuro } from '../logic/pricing'
+import { RetryImage } from '../components/RetryImage'
 
 const PAGE_SIZE = 30
 
@@ -146,7 +147,16 @@ export function AdminPromoStylePage() {
               const style = styles[c.id]
               return (
                 <div key={c.id} className="rating-card">
-                  {thumb ? <img src={thumb} alt={c.name} loading="lazy" /> : <div className="rating-card-placeholder" />}
+                  {thumb ? (
+                    <RetryImage
+                      src={thumb}
+                      alt={c.name}
+                      loading="lazy"
+                      placeholder={<div className="rating-card-placeholder" />}
+                    />
+                  ) : (
+                    <div className="rating-card-placeholder" />
+                  )}
                   <div className="rating-card-body">
                     <strong>{c.name}</strong>
                     <span className="muted">

@@ -48,6 +48,10 @@ export const ARTWORK_EXCLUDED_RAW_RARITIES = new Set(['double rare', 'ultra rare
 
 export function isArtworkRateable(rarity) {
   if (!rarity) return false
+  // Promos don't fit the common/rare/… ladder mapRarity() buckets by — they're
+  // all just "Promo" — but their illustration varies a lot (see PROMO_STYLE_LABELS
+  // above), so they're worth rating regardless of that bucket.
+  if (rarity.toLowerCase() === 'promo') return true
   if (ARTWORK_EXCLUDED_RAW_RARITIES.has(rarity.toLowerCase())) return false
   return ARTWORK_RELEVANT_RARITIES.has(mapRarity(rarity))
 }

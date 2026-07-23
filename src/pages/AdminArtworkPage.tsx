@@ -2,9 +2,19 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatDate, loadArtworkCandidates, type ArtworkCandidate } from '../data/cards'
 import { loadRatings, saveRatings, type Ratings } from '../logic/artworkRatings'
 import { formatEuro } from '../logic/pricing'
+import { RetryImage } from '../components/RetryImage'
 
 const PAGE_SIZE = 30
-const SCALE = Array.from({ length: 10 }, (_, i) => i + 1)
+// Four buttons instead of a full 1-10 scale — faster to click through in bulk.
+// "Worse" lumps everything below the top tier into one value (0); a handful of
+// older ratings saved under the old 1-10 scale still show as "worse" here too
+// (anything under 8), so re-rating a card overwrites them consistently.
+const SCALE: { label: string; value: number }[] = [
+  { label: '10', value: 10 },
+  { label: '9', value: 9 },
+  { label: '8', value: 8 },
+  { label: 'worse', value: 0 },
+]
 
 function cardThumb(c: ArtworkCandidate): string | null {
   return c.image ? `${c.image}/low.webp` : null
@@ -15,6 +25,7 @@ export function AdminArtworkPage() {
   const [ratings, setRatings] = useState<Ratings>(() => loadRatings())
   const [query, setQuery] = useState('')
   const [onlyUnrated, setOnlyUnrated] = useState(false)
+  const [onlyPromos, setOnlyPromos] = useState(false)
   const [page, setPage] = useState(0)
   const fileInput = useRef<HTMLInputElement>(null)
 
@@ -44,10 +55,11 @@ export function AdminArtworkPage() {
     const q = query.trim().toLowerCase()
     return candidates.filter((c) => {
       if (onlyUnrated && ratings[c.id] != null) return false
+      if (onlyPromos && c.rarity !== 'Promo') return false
       if (!q) return true
       return c.name.toLowerCase().includes(q) || (c.setName ?? '').toLowerCase().includes(q)
     })
-  }, [candidates, query, onlyUnrated, ratings])
+  }, [candidates, query, onlyUnrated, onlyPromos, ratings])
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const pageSafe = Math.min(page, pageCount - 1)
@@ -85,10 +97,10 @@ export function AdminArtworkPage() {
       <header className="admin-header">
         <h2>Artwork Rating</h2>
         <p className="muted">
-          Rate the illustration quality of chase cards on a 1–10 scale. Not currently used by the
-          live pricing model (descoped for this version — see the README) but kept here for future
-          data collection. Ratings are saved in this browser only; export the file to keep them
-          somewhere durable.
+          Rate the illustration quality of chase cards — 10, 9, 8, or worse. Not currently used by
+          the live pricing model (descoped for this version — see the README) but kept here for
+          future data collection. Ratings are saved in this browser only; export the file to keep
+          them somewhere durable.
         </p>
         <div className="admin-toolbar">
           <span className="admin-progress">
@@ -133,6 +145,17 @@ export function AdminArtworkPage() {
             />
             Only unrated
           </label>
+          <label className="admin-checkbox">
+            <input
+              type="checkbox"
+              checked={onlyPromos}
+              onChange={(e) => {
+                setOnlyPromos(e.target.checked)
+                setPage(0)
+              }}
+            />
+            Only Promos
+          </label>
         </div>
       </header>
 
@@ -146,7 +169,16 @@ export function AdminArtworkPage() {
               const score = ratings[c.id]
               return (
                 <div key={c.id} className="rating-card">
-                  {thumb ? <img src={thumb} alt={c.name} loading="lazy" /> : <div className="rating-card-placeholder" />}
+                  {thumb ? (
+                    <RetryImage
+                      src={thumb}
+                      alt={c.name}
+                      loading="lazy"
+                      placeholder={<div className="rating-card-placeholder" />}
+                    />
+                  ) : (
+                    <div className="rating-card-placeholder" />
+                  )}
                   <div className="rating-card-body">
                     <strong>{c.name}</strong>
                     <span className="muted">
@@ -156,16 +188,19 @@ export function AdminArtworkPage() {
                       {formatEuro(c.price)} · {formatDate(c.releaseDate)}
                     </span>
                     <div className="rating-scale">
-                      {SCALE.map((n) => (
-                        <button
-                          key={n}
-                          type="button"
-                          className={score === n ? 'rating-btn active' : 'rating-btn'}
-                          onClick={() => setRating(c.id, n)}
-                        >
-                          {n}
-                        </button>
-                      ))}
+                      {SCALE.map((opt) => {
+                        const isActive = opt.value === 0 ? score != null && score < 8 : score === opt.value
+                        return (
+                          <button
+                            key={opt.label}
+                            type="button"
+                            className={isActive ? 'rating-btn active' : 'rating-btn'}
+                            onClick={() => setRating(c.id, opt.value)}
+                          >
+                            {opt.label}
+                          </button>
+                        )
+                      })}
                       {score != null && (
                         <button type="button" className="rating-clear" onClick={() => clearRating(c.id)}>
                           clear

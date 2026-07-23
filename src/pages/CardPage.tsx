@@ -12,6 +12,7 @@ import {
 } from '../data/cards'
 import { OptionGroup } from '../components/OptionGroup'
 import { ResultPanel } from '../components/ResultPanel'
+import { RetryImage } from '../components/RetryImage'
 
 interface Props {
   cardId: string
@@ -72,7 +73,7 @@ export function CardPage({ cardId, config }: Props) {
 
       <div className="card-layout">
         <div className="card-visual">
-          {img && <img src={img} alt={card.name} />}
+          {img && <RetryImage src={img} alt={card.name} loading="eager" />}
           <div className="card-facts">
             <h2>{card.name}</h2>
             <p className="muted">

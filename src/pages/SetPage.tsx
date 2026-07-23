@@ -4,6 +4,7 @@ import { formatEuro } from '../logic/pricing'
 import { cardImage, formatDate, getSet, loadCards, type CardData } from '../data/cards'
 import { restoreScrollSoon, updateSetFilters, type SetSortKey } from '../router'
 import { VerdictChip } from '../components/VerdictChip'
+import { RetryImage } from '../components/RetryImage'
 
 interface Props {
   setId: string
@@ -104,7 +105,12 @@ export function SetPage({ setId, initialQuery, initialSort, config }: Props) {
             return (
               <a key={card.id} className="card-tile" href={`#/card/${card.id}`}>
                 {img ? (
-                  <img src={img} alt={card.name} loading="lazy" />
+                  <RetryImage
+                    src={img}
+                    alt={card.name}
+                    loading="lazy"
+                    placeholder={<div className="card-tile-placeholder">{card.name}</div>}
+                  />
                 ) : (
                   <div className="card-tile-placeholder">{card.name}</div>
                 )}

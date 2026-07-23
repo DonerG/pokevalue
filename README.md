@@ -38,6 +38,8 @@ node scripts/ingest.mjs sv01 sv02 …       # bake factors into each displayed s
 
 Python deps: `pip install pandas scikit-learn scipy statsmodels reportlab pypdf`.
 
+**Sets deliberately not ingested:** pure-Energy sets (e.g. `sve` Scarlet & Violet Energy, `mee` Mega Evolution Energy — every card is a basic Energy, nothing to price) and `mfb` My First Battle (a starter-box reprint set, not worth tracking). Skip these when adding new sets.
+
 ## Development
 
 ```bash
