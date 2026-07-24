@@ -10,7 +10,7 @@ A website that estimates a fair price for Pokémon cards with a regression model
 - **Card page:** Pokémon, rarity, illustrator, set, and card type each get their own computed factor — fixed facts, not adjustable. You only pick condition and language for your specific copy, plus a "why this price?" breakdown showing every factor that went into the number.
 - **Artwork rating (hidden, `#/admin/artwork`):** Rate illustration quality (1–10) on chase cards. Not currently used by the model (see below) but kept for future data collection. Export/import as JSON.
 - **Promo style tagging (hidden, `#/admin/promo-style`):** Promo cards all share one "Promo" rarity in the source data, but some use an extended "Art Rare" illustration instead of the plain framed template — which swings the price a lot with no field to tell them apart. Tag each candidate "Art Rare" or "Normal" by eye; export/import as JSON. Once tagged, `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) splits "Promo" into "Promo (Art Rare)" / "Promo (Normal)" for both model training and on-site display, so the rarity factor picks up the distinction automatically.
-- **Price audit (hidden, `#/admin/price-audit`):** The 200 cards site-wide with the biggest market-vs-fair gap — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Flag a card as wrong and it's excluded from the next retrain. Export/import as JSON.
+- **Price audit (hidden, `#/admin/price-audit`):** The 100 cards site-wide with the biggest market-vs-fair gap, in each direction (overvalued/undervalued — split into two tabs since overvalued deviation is unbounded and undervalued is capped at -100%, so one combined ranking was almost entirely overvalued cases) — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Flag a card as wrong and it's excluded from the next retrain, and its (wrong) price stops showing on the site. Export/import as JSON.
 
 ## The pricing model
 
@@ -79,7 +79,7 @@ scripts/
   build-training-data.mjs     Cache -> compact training-data.json
   build-artwork-candidates.mjs Cache -> candidate list for the (currently unused) rating admin page
   build-promo-candidates.mjs  Cache -> candidate list (priced Promo-rarity cards) for the style admin page
-  build-outlier-candidates.mjs Generated cards-*.json -> top 200 market/fair deviations for the price-audit admin page
+  build-outlier-candidates.mjs Generated cards-*.json -> top 100 overvalued + top 100 undervalued for the price-audit page
   lib/cardMapping.mjs         Card-type derivation, artwork-candidate rarity filter, effectiveRarity() (promo style)
   lib/factors.mjs             Looks up computed factors for a card, applies low-sample dampening
 src/

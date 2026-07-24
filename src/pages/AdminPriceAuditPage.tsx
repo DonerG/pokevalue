@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { loadOutlierCandidates, type OutlierCandidate } from '../data/cards'
+import { loadOutlierCandidates, type OutlierCandidate, type OutlierCandidates } from '../data/cards'
 import { loadPriceExclusions, savePriceExclusions, type PriceExclusions } from '../logic/priceExclusions'
 import { formatEuro, formatPercent } from '../logic/pricing'
 import { RetryImage } from '../components/RetryImage'
 
 const PAGE_SIZE = 30
+type Direction = 'overvalued' | 'undervalued'
 
 function cardThumb(c: OutlierCandidate): string | null {
   return c.image ? `${c.image}/low.webp` : null
@@ -17,7 +18,8 @@ function cardmarketSearchUrl(c: OutlierCandidate): string {
 }
 
 export function AdminPriceAuditPage() {
-  const [candidates, setCandidates] = useState<OutlierCandidate[] | null>(null)
+  const [data, setData] = useState<OutlierCandidates | null>(null)
+  const [direction, setDirection] = useState<Direction>('overvalued')
   const [exclusions, setExclusions] = useState<PriceExclusions>(() => loadPriceExclusions())
   const [query, setQuery] = useState('')
   const [onlyUnflagged, setOnlyUnflagged] = useState(true)
@@ -25,8 +27,10 @@ export function AdminPriceAuditPage() {
   const fileInput = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    loadOutlierCandidates().then(setCandidates)
+    loadOutlierCandidates().then(setData)
   }, [])
+
+  const candidates = data ? data[direction] : null
 
   const flag = (cardId: string) => {
     setExclusions((prev) => {
@@ -91,13 +95,42 @@ export function AdminPriceAuditPage() {
       <header className="admin-header">
         <h2>Price Audit</h2>
         <p className="muted">
-          The {candidates?.length ?? '…'} cards with the biggest relative gap between market and
-          fair price, site-wide — most are genuine (a chase card really can be far above its
-          rarity-tier average), but this is also exactly where a bad Cardmarket price shows up (see
-          the README for a confirmed example). Spot-check with "Cardmarket ↗" and flag anything
-          that's clearly wrong — flagged cards are excluded from the next model retrain. Saved in
+          The 100 cards with the biggest market-vs-fair gap in each direction, site-wide — most are
+          genuine (a chase card really can be far above its rarity-tier average), but this is also
+          exactly where a bad Cardmarket price shows up (see the README for a confirmed example).
+          Split into two tabs rather than one ranked list: "overvalued" (market above fair) is
+          mathematically unbounded, while "undervalued" (market below fair) is capped at -100% —
+          combined into one list, overvalued cases buried almost every undervalued one. Spot-check
+          with "Cardmarket ↗" and flag anything that's clearly wrong — flagged cards are excluded
+          from the next model retrain and stop showing their (wrong) price on the site. Saved in
           this browser only; export to keep it somewhere durable.
         </p>
+        <div className="admin-toolbar">
+          <label className="admin-checkbox">
+            <input
+              type="radio"
+              name="direction"
+              checked={direction === 'overvalued'}
+              onChange={() => {
+                setDirection('overvalued')
+                setPage(0)
+              }}
+            />
+            Overvalued (market above fair)
+          </label>
+          <label className="admin-checkbox">
+            <input
+              type="radio"
+              name="direction"
+              checked={direction === 'undervalued'}
+              onChange={() => {
+                setDirection('undervalued')
+                setPage(0)
+              }}
+            />
+            Undervalued (market below fair)
+          </label>
+        </div>
         <div className="admin-toolbar">
           <span className="admin-progress">
             {flaggedCount} / {candidates?.length ?? '…'} flagged

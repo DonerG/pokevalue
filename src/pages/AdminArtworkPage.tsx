@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatDate, loadArtworkCandidates, type ArtworkCandidate } from '../data/cards'
 import { loadRatings, saveRatings, type Ratings } from '../logic/artworkRatings'
+import { loadPromoStyles, savePromoStyles, type PromoStyle, type PromoStyles } from '../logic/promoStyles'
 import { formatEuro } from '../logic/pricing'
 import { RetryImage } from '../components/RetryImage'
 
@@ -23,6 +24,7 @@ function cardThumb(c: ArtworkCandidate): string | null {
 export function AdminArtworkPage() {
   const [candidates, setCandidates] = useState<ArtworkCandidate[] | null>(null)
   const [ratings, setRatings] = useState<Ratings>(() => loadRatings())
+  const [promoStyles, setPromoStyles] = useState<PromoStyles>(() => loadPromoStyles())
   const [query, setQuery] = useState('')
   const [onlyUnrated, setOnlyUnrated] = useState(false)
   const [onlyPromos, setOnlyPromos] = useState(false)
@@ -46,6 +48,23 @@ export function AdminArtworkPage() {
       const next = { ...prev }
       delete next[cardId]
       saveRatings(next)
+      return next
+    })
+  }
+
+  const setPromoStyle = (cardId: string, style: PromoStyle) => {
+    setPromoStyles((prev) => {
+      const next = { ...prev, [cardId]: style }
+      savePromoStyles(next)
+      return next
+    })
+  }
+
+  const clearPromoStyle = (cardId: string) => {
+    setPromoStyles((prev) => {
+      const next = { ...prev }
+      delete next[cardId]
+      savePromoStyles(next)
       return next
     })
   }
@@ -99,8 +118,10 @@ export function AdminArtworkPage() {
         <p className="muted">
           Rate the illustration quality of chase cards — 10, 9, 8, or worse. Not currently used by
           the live pricing model (descoped for this version — see the README) but kept here for
-          future data collection. Ratings are saved in this browser only; export the file to keep
-          them somewhere durable.
+          future data collection. Promo cards also get an Art Rare / Normal toggle right here, so
+          both can be tagged in one pass — same data as{' '}
+          <a href="#/admin/promo-style">#/admin/promo-style</a>. Saved in this browser only; export
+          the file(s) to keep them somewhere durable.
         </p>
         <div className="admin-toolbar">
           <span className="admin-progress">
@@ -207,6 +228,25 @@ export function AdminArtworkPage() {
                         </button>
                       )}
                     </div>
+                    {c.rarity === 'Promo' && (
+                      <div className="rating-scale">
+                        {(['art', 'normal'] as const).map((style) => (
+                          <button
+                            key={style}
+                            type="button"
+                            className={promoStyles[c.id] === style ? 'rating-btn active' : 'rating-btn'}
+                            onClick={() => setPromoStyle(c.id, style)}
+                          >
+                            {style === 'art' ? 'Art Rare' : 'Normal'}
+                          </button>
+                        ))}
+                        {promoStyles[c.id] != null && (
+                          <button type="button" className="rating-clear" onClick={() => clearPromoStyle(c.id)}>
+                            clear
+                          </button>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
               )

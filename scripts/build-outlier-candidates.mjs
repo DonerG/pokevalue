@@ -8,6 +8,14 @@
  * leverage place to spot-check by hand instead of scanning all ~19,000
  * cards.
  *
+ * Split into two separate top-N lists (overvalued: market > fair, and
+ * undervalued: market < fair) rather than one list ranked by |deviation| —
+ * overvalued deviation is unbounded above (market can be arbitrarily many
+ * multiples of fair) while undervalued deviation is capped at -100% (market
+ * can't go below zero), so a single combined ranking was almost entirely
+ * overvalued cases and buried the rarer, equally-worth-checking undervalued
+ * ones under thousands of them.
+ *
  * Deliberately NO minimum price floor: what corrupts a factor during
  * training is the *relative* (log-space) error, not the absolute euro
  * amount — a 2-cent card wrongly priced at 90 cents (45x) is exactly as
@@ -27,7 +35,7 @@ import { fileURLToPath } from 'node:url'
 const HERE = dirname(fileURLToPath(import.meta.url))
 const GENERATED_DIR = join(HERE, '..', 'src', 'data', 'generated')
 const OUT_FILE = join(GENERATED_DIR, 'outlier-candidates.json')
-const TOP_N = 200
+const TOP_N = 100
 
 const sets = JSON.parse(await readFile(join(GENERATED_DIR, 'sets.json'), 'utf8'))
 
@@ -54,8 +62,16 @@ for (const set of sets) {
   }
 }
 
-candidates.sort((a, b) => Math.abs(b.deviation) - Math.abs(a.deviation))
-const top = candidates.slice(0, TOP_N)
+const overvalued = candidates
+  .filter((c) => c.deviation > 0)
+  .sort((a, b) => b.deviation - a.deviation)
+  .slice(0, TOP_N)
+const undervalued = candidates
+  .filter((c) => c.deviation < 0)
+  .sort((a, b) => a.deviation - b.deviation)
+  .slice(0, TOP_N)
 
-await writeFile(OUT_FILE, JSON.stringify(top))
-console.log(`Wrote ${top.length} outlier candidates (of ${candidates.length} priced cards) to ${OUT_FILE}`)
+await writeFile(OUT_FILE, JSON.stringify({ overvalued, undervalued }))
+console.log(
+  `Wrote ${overvalued.length} overvalued + ${undervalued.length} undervalued candidates (of ${candidates.length} priced cards) to ${OUT_FILE}`,
+)

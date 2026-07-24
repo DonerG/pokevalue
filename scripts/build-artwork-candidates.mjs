@@ -32,6 +32,7 @@ const candidates = []
 for (const file of files) {
   const card = JSON.parse(await readFile(join(CACHE_DIR, file), 'utf8'))
   if (!isArtworkRateable(card.rarity)) continue
+  if (!card.image) continue // can't rate illustration quality on a card with no art scanned yet
   const avg30 = card.pricing?.cardmarket?.avg30
   if (avg30 == null) continue // no real market signal, not useful to rate for calibration
   const meta = setMeta.get(card.set?.id)

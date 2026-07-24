@@ -31,6 +31,7 @@ const candidates = []
 for (const file of files) {
   const card = JSON.parse(await readFile(join(CACHE_DIR, file), 'utf8'))
   if (card.rarity !== 'Promo' || card.category !== 'Pokemon') continue
+  if (!card.image) continue // can't tell Art Rare from Normal without seeing the art
   const avg30 = card.pricing?.cardmarket?.avg30
   if (avg30 == null) continue
   const meta = setMeta.get(card.set?.id)

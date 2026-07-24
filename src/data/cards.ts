@@ -177,10 +177,15 @@ export interface OutlierCandidate {
   deviation: number
 }
 
+export interface OutlierCandidates {
+  overvalued: OutlierCandidate[]
+  undervalued: OutlierCandidate[]
+}
+
 /** Lazily loaded, same reasoning as loadArtworkCandidates. */
-export async function loadOutlierCandidates(): Promise<OutlierCandidate[]> {
+export async function loadOutlierCandidates(): Promise<OutlierCandidates> {
   const mod = await import('./generated/outlier-candidates.json')
-  return mod.default as unknown as OutlierCandidate[]
+  return mod.default as unknown as OutlierCandidates
 }
 
 const dateFmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
