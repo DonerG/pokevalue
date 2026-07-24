@@ -8,13 +8,23 @@
  * leverage place to spot-check by hand instead of scanning all ~19,000
  * cards.
  *
- * Split into two separate top-N lists (overvalued: market > fair, and
- * undervalued: market < fair) rather than one list ranked by |deviation| —
- * overvalued deviation is unbounded above (market can be arbitrarily many
- * multiples of fair) while undervalued deviation is capped at -100% (market
- * can't go below zero), so a single combined ranking was almost entirely
- * overvalued cases and buried the rarer, equally-worth-checking undervalued
- * ones under thousands of them.
+ * `deviation` uses the SAME formula as the live site's verdict chips
+ * (src/logic/pricing.ts::verdict, the "upside" value) — (fair - market) /
+ * market, i.e. the % the market price would need to move to reach fair,
+ * expressed relative to the market price. Positive = undervalued (market
+ * can rise this much); negative = overvalued (market can fall this much).
+ * An earlier version of this script computed (market - fair) / fair instead
+ * — the wrong denominator AND the wrong sign relative to the rest of the
+ * site, caught by a user cross-checking a card here against its own listed
+ * verdict elsewhere.
+ *
+ * Split into two separate top-N lists (overvalued / undervalued) rather
+ * than one list ranked by |deviation| — under the formula above, overvalued
+ * is capped at -100% (market can't fall below zero relative to itself)
+ * while undervalued is unbounded above (market can approach zero, sending
+ * fair/market to infinity), so a single combined ranking is almost
+ * entirely undervalued cases and buries the rarer, equally-worth-checking
+ * overvalued ones under thousands of them.
  *
  * Deliberately NO minimum price floor: what corrupts a factor during
  * training is the *relative* (log-space) error, not the absolute euro
@@ -45,7 +55,7 @@ for (const set of sets) {
   for (const card of cards) {
     const market = card.market?.trend ?? null
     if (market == null || market <= 0 || card.baseValue <= 0) continue
-    const deviation = (market - card.baseValue) / card.baseValue
+    const deviation = (card.baseValue - market) / market
     candidates.push({
       id: card.id,
       name: card.name,
@@ -62,13 +72,15 @@ for (const set of sets) {
   }
 }
 
+// Overvalued: market > fair -> deviation < 0 -> rank most-negative (closest to -100%) first.
 const overvalued = candidates
-  .filter((c) => c.deviation > 0)
-  .sort((a, b) => b.deviation - a.deviation)
-  .slice(0, TOP_N)
-const undervalued = candidates
   .filter((c) => c.deviation < 0)
   .sort((a, b) => a.deviation - b.deviation)
+  .slice(0, TOP_N)
+// Undervalued: market < fair -> deviation > 0 -> rank most-positive (largest upside) first.
+const undervalued = candidates
+  .filter((c) => c.deviation > 0)
+  .sort((a, b) => b.deviation - a.deviation)
   .slice(0, TOP_N)
 
 await writeFile(OUT_FILE, JSON.stringify({ overvalued, undervalued }))

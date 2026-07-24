@@ -106,9 +106,11 @@ export function AdminPriceAuditPage() {
           The 100 cards with the biggest market-vs-fair gap in each direction, site-wide — most are
           genuine (a chase card really can be far above its rarity-tier average), but this is also
           exactly where a bad Cardmarket price shows up (see the README for a confirmed example).
-          Split into two tabs rather than one ranked list: "overvalued" (market above fair) is
-          mathematically unbounded, while "undervalued" (market below fair) is capped at -100% —
-          combined into one list, overvalued cases buried almost every undervalued one. Spot-check
+          Percentage matches the site's own verdict chips (upside relative to market price, e.g.
+          +200% = market can rise 3x to reach fair, -80% = market can fall 80%). Split into two tabs
+          rather than one ranked list: "undervalued" is mathematically unbounded (market can approach
+          zero), while "overvalued" is capped at -100% — combined into one list, undervalued cases
+          buried almost every overvalued one. Spot-check
           with "Cardmarket ↗": mark a bad price "Wrong" — excluded from the next model retrain and
           stops showing on the site — or, if the price is real but the model just can't explain it
           (e.g. hype), mark it "Verified" so it's skipped on your next review pass without changing
