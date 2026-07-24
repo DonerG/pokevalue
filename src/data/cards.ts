@@ -47,6 +47,8 @@ export interface CardData {
   dexIds: number[]
   image: string | null
   market: CardMarket | null
+  /** Hand-flagged via #/admin/price-audit as having a known-wrong Cardmarket price — `market` is null because of this, not because TCGdex has no data. */
+  priceFlagged: boolean
   /** Data-derived fair value before condition/language: anchor × every factor in `factors`. */
   baseValue: number
   factors: CardFactors

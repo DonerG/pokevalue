@@ -87,6 +87,8 @@ export function CardPage({ cardId, config }: Props) {
                 {card.market.avg30 != null && <> · 30-day avg {formatEuro(card.market.avg30)}</>}
                 {card.market.updated && <> · as of {formatDate(card.market.updated)}</>}
               </p>
+            ) : card.priceFlagged ? (
+              <p className="muted">Cardmarket price hidden — flagged as inaccurate, excluded from the model.</p>
             ) : (
               <p className="muted">No Cardmarket price available.</p>
             )}
