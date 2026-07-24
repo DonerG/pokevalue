@@ -92,11 +92,9 @@ export function CardPage({ cardId, config }: Props) {
             ) : (
               <p className="muted">No Cardmarket price available.</p>
             )}
-            {set && (
-              <a className="cardmarket-link" href={cardmarketUrl(card, set)} target="_blank" rel="noreferrer">
-                View on Cardmarket ↗
-              </a>
-            )}
+            <a className="cardmarket-link" href={cardmarketUrl(card)} target="_blank" rel="noreferrer">
+              View on Cardmarket ↗
+            </a>
           </div>
         </div>
 

@@ -115,14 +115,16 @@ export function setLogo(set: SetMeta): string | null {
 }
 
 /**
- * Cardmarket has no public direct product-ID URL, so this links to their singles
- * search scoped to the set, with the card name + local number as the query —
+ * Cardmarket has no public direct product-ID URL, so this links to their
+ * general product search with the card name + local number as the query —
  * reliably narrows to the exact card (verified for name/number collisions).
+ * The set-scoped Singles URL (/Products/Singles/{set}?searchString=...)
+ * looks like it should filter but silently ignores searchString entirely,
+ * landing on the full unfiltered category page — confirmed by hand.
  */
-export function cardmarketUrl(card: CardData, set: SetMeta): string {
-  const setSlug = encodeURIComponent(set.name.replace(/\s+/g, '-'))
+export function cardmarketUrl(card: CardData): string {
   const query = encodeURIComponent(`${card.name} ${card.localId}`)
-  return `https://www.cardmarket.com/en/Pokemon/Products/Singles/${setSlug}?searchString=${query}`
+  return `https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=${query}`
 }
 
 export interface ArtworkCandidate {

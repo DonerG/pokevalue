@@ -16,10 +16,12 @@ function cardThumb(c: OutlierCandidate): string | null {
   return c.image ? `${c.image}/low.webp` : null
 }
 
+// The set-scoped Singles URL silently ignores searchString entirely — see
+// cardmarketUrl() in data/cards.ts for the confirmed-by-hand explanation.
+// This mirrors that fix (kept separate: OutlierCandidate isn't a CardData).
 function cardmarketSearchUrl(c: OutlierCandidate): string {
-  const setSlug = encodeURIComponent(c.setName.replace(/\s+/g, '-'))
   const query = encodeURIComponent(`${c.name} ${c.localId}`)
-  return `https://www.cardmarket.com/en/Pokemon/Products/Singles/${setSlug}?searchString=${query}`
+  return `https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=${query}`
 }
 
 export function AdminPriceAuditPage() {
