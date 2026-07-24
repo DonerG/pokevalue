@@ -91,7 +91,7 @@ export function AdminPriceAuditPage() {
       <header className="admin-header">
         <h2>Price Audit</h2>
         <p className="muted">
-          The {candidates?.length ?? '…'} cards (priced ≥ €1) with the biggest gap between market and
+          The {candidates?.length ?? '…'} cards with the biggest relative gap between market and
           fair price, site-wide — most are genuine (a chase card really can be far above its
           rarity-tier average), but this is also exactly where a bad Cardmarket price shows up (see
           the README for a confirmed example). Spot-check with "Cardmarket ↗" and flag anything
