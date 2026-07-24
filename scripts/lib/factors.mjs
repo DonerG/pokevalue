@@ -67,7 +67,9 @@ export function computeCardPricing(card, releaseDate) {
   const setKey = card.set?.id ?? 'unknown'
   const cardTypeKey = mapCardType(card) ?? 'Standard'
   const cardNameKey = card.dexId?.length ? 'n/a' : (card.name ?? 'n/a')
-  const rarityEraKey = `${rarityValue} | ${eraBucket(releaseDate)}`
+  const era = eraBucket(releaseDate)
+  const rarityEraKey = `${rarityValue} | ${era}`
+  const cardTypeEraKey = `${cardTypeKey} | ${era}`
 
   const pokemon = lookup(data.factors.pokemon, pokemonKey)
   const rarity = lookup(data.factors.rarity, rarityValue)
@@ -76,6 +78,7 @@ export function computeCardPricing(card, releaseDate) {
   const cardType = lookup(data.factors.cardType, cardTypeKey)
   const cardName = lookup(data.factors.cardName, cardNameKey)
   const rarityEra = lookup(data.factors.rarityEra, rarityEraKey)
+  const cardTypeEra = lookup(data.factors.cardTypeEra, cardTypeEraKey)
 
   const baseValue =
     data.anchor *
@@ -85,10 +88,11 @@ export function computeCardPricing(card, releaseDate) {
     set.displayFactor *
     cardType.displayFactor *
     cardName.displayFactor *
-    rarityEra.displayFactor
+    rarityEra.displayFactor *
+    cardTypeEra.displayFactor
 
   return {
     baseValue,
-    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName, rarityEra },
+    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName, rarityEra, cardTypeEra },
   }
 }

@@ -35,6 +35,7 @@ export interface CardFactors {
   cardType: FactorEntry
   cardName: FactorEntry
   rarityEra: FactorEntry
+  cardTypeEra: FactorEntry
 }
 
 export interface CardData {

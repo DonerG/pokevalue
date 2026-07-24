@@ -2,12 +2,12 @@
 Fits the PokéValue pricing model: a log-linear (== multiplicative in price
 space) ridge regression that explains Cardmarket price purely from card
 identity — Pokémon, rarity, illustrator, set, card mechanic type, (for
-Trainer/Energy cards specifically) the card's own name, and one deliberate
-interaction term (rarity x era) — exactly matching:
+Trainer/Energy cards specifically) the card's own name, and two deliberate
+interaction terms (rarity x era, card type x era) — exactly matching:
 
     price = anchor x factor(pokemon) x factor(rarity) x factor(illustrator)
             x factor(set) x factor(card type) x factor(card name)
-            x factor(rarity x era)
+            x factor(rarity x era) x factor(card type x era)
 
 `anchor` is fixed at EUR1 by construction (see the rescale step below) — the
 ridge fit's raw intercept is meaningless on its own, so it's folded entirely
@@ -34,11 +34,20 @@ set up/down, it can't change the ratio *between* rarities within it).
 Checked by hand: median Rare/Common price ratio is 32.6x for WOTC-era cards
 vs. 2.3x for SV+ cards, while the model's single global rarity factor sits
 at 5.4x — systematically too high for modern Rares, too low for vintage
-ones. Same reasoning applies to at least "cardType" (old "EX" vs. new "ex"
-show the same kind of gap) but isn't applied there yet. Era buckets: WOTC
-(pre-2003), EX/DP (2003-2010), BW/XY (2011-2016), SM/SWSH (2017-2022), SV+
-(2023+) — see scripts/lib/cardMapping.mjs::eraBucket for the JS mirror used
-at ingest/display time.
+ones.
+
+"cardTypeEra" is the same fix applied to "cardType": TCGdex's `suffix`
+casing for "ex"/"EX" doesn't reliably separate the old (2003-2010) EX era
+from the modern (2023+) ex era (see cardMapping.mjs::mapCardType), so both
+get normalized into one "EX" bucket — but they're priced very differently
+(median EUR64.62 for old "EX" cards vs. EUR1.88 for new "ex" cards, checked
+by hand), the same kind of gap rarity had. Layered on top of "cardType" the
+same way "rarityEra" is layered on top of "rarity".
+
+Era buckets (shared by both interaction terms): WOTC (pre-2003), EX/DP
+(2003-2010), BW/XY (2011-2016), SM/SWSH (2017-2022), SV+ (2023+) — see
+scripts/lib/cardMapping.mjs::eraBucket for the JS mirror used at
+ingest/display time.
 
 Every level of every category gets its own factor, shrunk toward 1x (neutral)
 by L2 regularization in proportion to how little data supports it — a
@@ -76,7 +85,7 @@ TRAINING_DATA = HERE.parent / "scripts" / "training-data.json"
 FACTORS_OUT = HERE / "factors.json"
 REPORT_OUT = HERE / "model_report.json"
 
-CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName", "rarityEra"]
+CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName", "rarityEra", "cardTypeEra"]
 N_BOOTSTRAP = 60
 RNG_SEED = 42
 
@@ -114,6 +123,7 @@ df["set"] = df["setId"].fillna("unknown")
 df["cardType"] = df["cardType"].fillna("Standard")
 df["cardName"] = df.apply(lambda row: "n/a" if row["dexIds"] else row["name"], axis=1)
 df["rarityEra"] = df["rarity"] + " | " + df["releaseDate"].apply(era_bucket)
+df["cardTypeEra"] = df["cardType"] + " | " + df["releaseDate"].apply(era_bucket)
 df["logPrice"] = np.log(df["avg30"].astype(float))
 
 for c in CATEGORIES:

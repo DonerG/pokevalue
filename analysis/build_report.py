@@ -215,6 +215,22 @@ story.append(Spacer(1, 3 * mm))
 story.append(make_table(factor_rows(FACTORS["factors"]["cardType"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
 story.append(PageBreak())
 
+# ---------------------------------------------------------------- card type x era
+
+story.append(Paragraph("Card type x Era factors", styles["H2"]))
+story.append(
+    Paragraph(
+        f"{len(FACTORS['factors']['cardTypeEra'])} distinct card type/era combinations. Layered on top of "
+        "the plain card type factor above, same reasoning as Rarity x Era: old \"EX\" (2003-2010) and new "
+        "\"ex\" (2023+) get normalized into one cardType bucket since TCGdex's casing doesn't reliably tell "
+        "them apart, but they're priced very differently (median EUR64.62 vs. EUR1.88).",
+        styles["Small"],
+    )
+)
+story.append(Spacer(1, 3 * mm))
+story.append(make_table(factor_rows(FACTORS["factors"]["cardTypeEra"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
+story.append(PageBreak())
+
 # ---------------------------------------------------------------- set
 
 set_names = {}
