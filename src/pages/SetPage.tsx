@@ -124,17 +124,19 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
                   <div className="card-tile-placeholder">{card.name}</div>
                 )}
                 <div className="card-tile-body">
-                  <strong>{card.name}</strong>
-                  <span className="muted">
-                    #{card.localId} · {card.rarity ?? 'unknown'}
-                  </span>
-                  <span className="card-tile-prices">
+                  <div className="card-tile-name-block">
+                    <strong>{card.name}</strong>
+                    <span className="muted">
+                      #{card.localId} · {card.rarity ?? 'unknown'}
+                    </span>
+                  </div>
+                  <div className="card-tile-value-block">
                     <span title="Cardmarket trend price">
                       Market {market != null ? formatEuro(market) : '–'}
                     </span>
                     <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
-                  </span>
-                  <VerdictChip market={market} fair={fair} config={config} />
+                    <VerdictChip market={market} fair={fair} config={config} />
+                  </div>
                 </div>
               </a>
             )

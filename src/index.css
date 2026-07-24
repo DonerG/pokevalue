@@ -707,26 +707,41 @@ details.panel[open] summary {
   text-align: center;
 }
 
+/* Two columns: name/rarity on the left, market/fair/verdict stacked on the
+   right — denser than one all-stacked column, and keeps related numbers
+   grouped together instead of interleaved with the name block. */
 .card-tile-body {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
   padding: 10px 12px 12px;
   font-size: 13.5px;
 }
 
-.card-tile-body .muted {
+.card-tile-name-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.card-tile-name-block .muted {
   margin: 0;
   font-size: 12.5px;
 }
 
-.card-tile-prices {
+.card-tile-value-block {
   display: flex;
-  justify-content: space-between;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex: none;
   font-variant-numeric: tabular-nums;
   color: var(--text-2);
   font-size: 13px;
+  white-space: nowrap;
 }
 
 /* Set-grid verdict chips never show the spelled-out "undervalued" /
@@ -742,9 +757,10 @@ details.panel[open] summary {
    single ~200px-min column leaves a phone screen showing just one card at a
    time. Desktop/tablet keep the fluid auto-fill grid untouched otherwise.
    Text is trimmed to what still fits legibly at ~85px per tile; tap through
-   to the card page for the rest. Placed after the rules it overrides so it
-   wins the cascade at equal specificity regardless of source order
-   elsewhere. */
+   to the card page for the rest. The two-column name/value layout doesn't
+   fit at this width either, so it collapses back to one stacked column.
+   Placed after the rules it overrides so it wins the cascade at equal
+   specificity regardless of source order elsewhere. */
 @media (max-width: 640px) {
   .card-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -756,6 +772,8 @@ details.panel[open] summary {
   }
 
   .card-tile-body {
+    flex-direction: column;
+    align-items: stretch;
     padding: 4px 5px 6px;
     gap: 3px;
   }
@@ -768,12 +786,12 @@ details.panel[open] summary {
     text-overflow: ellipsis;
   }
 
-  .card-tile-body .muted {
+  .card-tile-name-block .muted {
     display: none;
   }
 
-  .card-tile-prices {
-    flex-direction: column;
+  .card-tile-value-block {
+    align-items: stretch;
     gap: 0;
     font-size: 9px;
   }
