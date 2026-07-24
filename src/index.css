@@ -735,7 +735,7 @@ details.panel[open] summary {
 .card-tile-value-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 2px;
   flex: none;
   font-variant-numeric: tabular-nums;
