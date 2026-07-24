@@ -7,6 +7,11 @@ NO interaction terms, exactly matching:
     price = anchor x factor(pokemon) x factor(rarity) x factor(illustrator)
             x factor(set) x factor(card type)
 
+`anchor` is fixed at EUR1 by construction (see the rescale step below) — the
+ridge fit's raw intercept is meaningless on its own, so it's folded entirely
+into the "set" factors instead, which is where the same information reads
+most naturally: every card starts at EUR1, its set tells you the ballpark.
+
 Every level of every category gets its own factor, shrunk toward 1x (neutral)
 by L2 regularization in proportion to how little data supports it — a
 Pokémon with 300 cards gets a confident factor, one with 2 cards gets pulled
@@ -153,6 +158,22 @@ print(f"Bootstrap done in {time.time() - t0:.0f}s.")
 # ------------------------------------------------------------------- outputs
 
 sample_counts = {c: df[c].value_counts().to_dict() for c in CATEGORIES}
+
+# -------------------------------------------------- rescale anchor to EUR1
+# Pure reparameterization of price = anchor x f_pokemon x ... x f_set x ...:
+# shifting a constant between the (otherwise meaningless) intercept and one
+# category's coefficients changes no predicted price, only which number
+# "carries" the baseline. Folded into "set" specifically — every card has
+# exactly one home set, so "every card starts at EUR1, its set tells you the
+# ballpark" reads better than an arbitrary EUR11.68 with no real-world
+# meaning. (boot_std / relativeUncertainty is untouched: adding a constant to
+# every bootstrap draw for a column doesn't change that column's std dev.)
+set_mask = np.array([cat == "set" for cat in col_category])
+point_coefs[set_mask] += intercept
+boot_lo[set_mask] += intercept
+boot_hi[set_mask] += intercept
+print(f"\nRescaled: anchor EUR{np.exp(intercept):.2f} -> EUR1.00, folded into the 'set' factors.")
+intercept = 0.0
 
 factors: dict[str, dict] = {c: {} for c in CATEGORIES}
 for i, (cat, level) in enumerate(zip(col_category, col_level)):

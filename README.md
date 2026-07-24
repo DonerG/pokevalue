@@ -1,5 +1,7 @@
 # PokéValue – Card Value Calculator
 
+Live at [pokevalue.cards](https://pokevalue.cards).
+
 A website that estimates a fair price for Pokémon cards with a regression model trained on real Cardmarket data, and compares it against the current market price — expandable set by set.
 
 ## Features
@@ -55,6 +57,7 @@ Stack: React 19 + TypeScript + Vite for the site; Python (pandas/scikit-learn) f
 1. Create a GitHub repository and push to it.
 2. On [vercel.com](https://vercel.com), "Add New Project" → select the GitHub repo. Vercel detects Vite automatically (build `npm run build`, output `dist`).
 3. From then on, every push deploys automatically. To refresh prices, rerun the model-rebuild steps above and commit (can later be automated with a scheduled GitHub Action).
+4. Custom domain: `pokevalue.cards` is attached in the Vercel dashboard (Project → Settings → Domains). `index.html`'s canonical/OG tags and this README already point at it — if the domain ever changes, update `https://pokevalue.cards` in both places.
 
 ## Project structure
 

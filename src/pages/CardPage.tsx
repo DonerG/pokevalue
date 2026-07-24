@@ -105,6 +105,7 @@ export function CardPage({ cardId, config }: Props) {
             selection={selection}
             config={config}
             fairPrice={results.fair}
+            market={card.market?.trend ?? null}
           />
         </div>
 

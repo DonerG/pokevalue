@@ -1,6 +1,7 @@
 import { FACTORS, type Config, type Selection } from '../data/defaults'
 import { pokemonSpeciesName, type CardData } from '../data/cards'
 import { formatEuro } from '../logic/pricing'
+import { VerdictChip } from './VerdictChip'
 
 const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
 
@@ -10,10 +11,11 @@ interface Props {
   selection: Selection
   config: Config
   fairPrice: number
+  market: number | null
 }
 
 /** Read-only "why this price" breakdown: the card's fixed, data-derived factors, then your copy's condition/language on top. */
-export function PriceBreakdown({ card, setName, selection, config, fairPrice }: Props) {
+export function PriceBreakdown({ card, setName, selection, config, fairPrice, market }: Props) {
   const f = card.factors
   const cardRows = [
     {
@@ -39,6 +41,17 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice }: 
   return (
     <section className="panel price-breakdown-panel">
       <h2>Why this price?</h2>
+      <div className="price-compare">
+        <div className="price-compare-item">
+          <span className="muted">Market price</span>
+          <strong>{market != null ? formatEuro(market) : '–'}</strong>
+        </div>
+        <div className="price-compare-item">
+          <span className="muted">Fair price</span>
+          <strong>{formatEuro(card.baseValue)}</strong>
+        </div>
+        <VerdictChip market={market} fair={card.baseValue} config={config} />
+      </div>
       <p className="panel-intro">
         Pokémon, rarity, illustrator, set, and card type come from a regression model trained on
         real Cardmarket prices across ~19,000 cards — fixed facts, not something you adjust by
