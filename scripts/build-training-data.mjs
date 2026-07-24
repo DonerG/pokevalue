@@ -30,16 +30,19 @@ try {
 }
 console.log(`${Object.keys(promoStyles).length} promo cards tagged with a style.`)
 
-// Cards hand-flagged via #/admin/price-audit as having an obviously wrong
-// Cardmarket price (see the module docstring below and analysis/
-// fit_factors.py for why most such errors can't be caught automatically).
+// Cards hand-reviewed via #/admin/price-audit: "wrong" means an obviously
+// bad Cardmarket price (see the module docstring below and analysis/
+// fit_factors.py for why most such errors can't be caught automatically) and
+// gets dropped from training; "verified" means the price is real (e.g. hype-
+// driven) and stays in — the model just can't explain it from its features.
 let priceExclusions = {}
 try {
   priceExclusions = JSON.parse(await readFile(PRICE_EXCLUSIONS_FILE, 'utf8'))
 } catch {
-  // none flagged yet
+  // none reviewed yet
 }
-console.log(`${Object.keys(priceExclusions).length} cards flagged with a bad price.`)
+const wrongCount = Object.values(priceExclusions).filter((v) => v === 'wrong').length
+console.log(`${wrongCount} cards flagged with a bad price.`)
 
 // The per-card endpoint's embedded `set` object omits releaseDate, so pull
 // it from the separately-cached set details (fetch-all-sets.mjs) instead.
@@ -105,7 +108,7 @@ console.log(
   `Dropped ${rawRows.length - afterProductFilter.length} cards sharing a Cardmarket product ID with a different Pokémon (${badProducts.size} bad product IDs).`,
 )
 
-const rows = afterProductFilter.filter((r) => !priceExclusions[r.id])
+const rows = afterProductFilter.filter((r) => priceExclusions[r.id] !== 'wrong')
 console.log(`Dropped ${afterProductFilter.length - rows.length} cards hand-flagged as having a bad price.`)
 
 rows.sort((a, b) => (a.releaseDate ?? '').localeCompare(b.releaseDate ?? '') || a.id.localeCompare(b.id))

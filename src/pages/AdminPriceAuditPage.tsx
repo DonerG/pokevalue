@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadOutlierCandidates, type OutlierCandidate, type OutlierCandidates } from '../data/cards'
-import { loadPriceExclusions, savePriceExclusions, type PriceExclusions } from '../logic/priceExclusions'
+import {
+  loadPriceExclusions,
+  savePriceExclusions,
+  type PriceExclusions,
+  type PriceReview,
+} from '../logic/priceExclusions'
 import { formatEuro, formatPercent } from '../logic/pricing'
 import { RetryImage } from '../components/RetryImage'
 
@@ -22,7 +27,7 @@ export function AdminPriceAuditPage() {
   const [direction, setDirection] = useState<Direction>('overvalued')
   const [exclusions, setExclusions] = useState<PriceExclusions>(() => loadPriceExclusions())
   const [query, setQuery] = useState('')
-  const [onlyUnflagged, setOnlyUnflagged] = useState(true)
+  const [onlyUnreviewed, setOnlyUnreviewed] = useState(true)
   const [page, setPage] = useState(0)
   const fileInput = useRef<HTMLInputElement>(null)
 
@@ -32,15 +37,15 @@ export function AdminPriceAuditPage() {
 
   const candidates = data ? data[direction] : null
 
-  const flag = (cardId: string) => {
+  const setReview = (cardId: string, review: PriceReview) => {
     setExclusions((prev) => {
-      const next = { ...prev, [cardId]: true as const }
+      const next = { ...prev, [cardId]: review }
       savePriceExclusions(next)
       return next
     })
   }
 
-  const unflag = (cardId: string) => {
+  const clearReview = (cardId: string) => {
     setExclusions((prev) => {
       const next = { ...prev }
       delete next[cardId]
@@ -53,17 +58,18 @@ export function AdminPriceAuditPage() {
     if (!candidates) return []
     const q = query.trim().toLowerCase()
     return candidates.filter((c) => {
-      if (onlyUnflagged && exclusions[c.id]) return false
+      if (onlyUnreviewed && exclusions[c.id]) return false
       if (!q) return true
       return c.name.toLowerCase().includes(q) || c.setName.toLowerCase().includes(q)
     })
-  }, [candidates, query, onlyUnflagged, exclusions])
+  }, [candidates, query, onlyUnreviewed, exclusions])
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const pageSafe = Math.min(page, pageCount - 1)
   const pageItems = filtered.slice(pageSafe * PAGE_SIZE, pageSafe * PAGE_SIZE + PAGE_SIZE)
 
-  const flaggedCount = candidates ? candidates.filter((c) => exclusions[c.id]).length : 0
+  const wrongCount = candidates ? candidates.filter((c) => exclusions[c.id] === 'wrong').length : 0
+  const verifiedCount = candidates ? candidates.filter((c) => exclusions[c.id] === 'verified').length : 0
 
   const handleExport = () => {
     const blob = new Blob([JSON.stringify(exclusions, null, 1)], { type: 'application/json' })
@@ -101,9 +107,10 @@ export function AdminPriceAuditPage() {
           Split into two tabs rather than one ranked list: "overvalued" (market above fair) is
           mathematically unbounded, while "undervalued" (market below fair) is capped at -100% —
           combined into one list, overvalued cases buried almost every undervalued one. Spot-check
-          with "Cardmarket ↗" and flag anything that's clearly wrong — flagged cards are excluded
-          from the next model retrain and stop showing their (wrong) price on the site. Saved in
-          this browser only; export to keep it somewhere durable.
+          with "Cardmarket ↗": mark a bad price "Wrong" — excluded from the next model retrain and
+          stops showing on the site — or, if the price is real but the model just can't explain it
+          (e.g. hype), mark it "Verified" so it's skipped on your next review pass without changing
+          how it's used. Saved in this browser only; export to keep it somewhere durable.
         </p>
         <div className="admin-toolbar">
           <label className="admin-checkbox">
@@ -133,7 +140,7 @@ export function AdminPriceAuditPage() {
         </div>
         <div className="admin-toolbar">
           <span className="admin-progress">
-            {flaggedCount} / {candidates?.length ?? '…'} flagged
+            {wrongCount} wrong · {verifiedCount} verified / {candidates?.length ?? '…'}
           </span>
           <button type="button" onClick={handleExport}>
             Export exclusions (JSON)
@@ -166,13 +173,13 @@ export function AdminPriceAuditPage() {
           <label className="admin-checkbox">
             <input
               type="checkbox"
-              checked={onlyUnflagged}
+              checked={onlyUnreviewed}
               onChange={(e) => {
-                setOnlyUnflagged(e.target.checked)
+                setOnlyUnreviewed(e.target.checked)
                 setPage(0)
               }}
             />
-            Only unflagged
+            Only unreviewed
           </label>
         </div>
       </header>
@@ -184,7 +191,7 @@ export function AdminPriceAuditPage() {
           <div className="rating-grid">
             {pageItems.map((c) => {
               const thumb = cardThumb(c)
-              const flagged = exclusions[c.id] === true
+              const review = exclusions[c.id]
               return (
                 <div key={c.id} className="rating-card">
                   {thumb ? (
@@ -211,11 +218,24 @@ export function AdminPriceAuditPage() {
                     <div className="rating-scale">
                       <button
                         type="button"
-                        className={flagged ? 'rating-btn active' : 'rating-btn'}
-                        onClick={() => (flagged ? unflag(c.id) : flag(c.id))}
+                        className={review === 'wrong' ? 'rating-btn active' : 'rating-btn'}
+                        onClick={() => setReview(c.id, 'wrong')}
                       >
-                        {flagged ? 'Flagged as wrong' : 'Flag as wrong'}
+                        Wrong
                       </button>
+                      <button
+                        type="button"
+                        className={review === 'verified' ? 'rating-btn active' : 'rating-btn'}
+                        onClick={() => setReview(c.id, 'verified')}
+                        title="Price is real (e.g. hype) — kept in training, just marked as reviewed"
+                      >
+                        Verified
+                      </button>
+                      {review != null && (
+                        <button type="button" className="rating-clear" onClick={() => clearReview(c.id)}>
+                          clear
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -6,9 +6,10 @@
  * Prefers the local bulk cache (scripts/.cache/, populated by
  * fetch-all-cards.mjs / fetch-all-sets.mjs) when available, falling back to
  * a live TCGdex fetch for anything not cached yet. Also nulls out `market`
- * for any card hand-flagged via #/admin/price-audit (src/data/
- * price-exclusions.json) — flagging excludes a card from training AND
- * suppresses its own wrong price on the site, rather than just the former.
+ * for any card marked "wrong" via #/admin/price-audit (src/data/
+ * price-exclusions.json) — that excludes it from training AND suppresses
+ * its own wrong price on the site. Cards marked "verified" (real price,
+ * just not explainable from the model's features) are left untouched.
  *
  * Run analysis/fit_factors.py first (or after refreshing training data) so
  * analysis/factors.json is up to date before ingesting.
@@ -29,12 +30,12 @@ const CACHE_SETS_DIR = join(HERE, '.cache', 'sets')
 const API = 'https://api.tcgdex.net/v2/en'
 const CONCURRENCY = 8
 
-// Cards hand-flagged via #/admin/price-audit as having a known-wrong
-// Cardmarket price (see build-training-data.mjs, which excludes the same
-// cards from training). Flagging a card doesn't just stop it from
-// corrupting other cards' factors — it also has to stop the site from
-// showing that visitor the wrong number, so its own `market` gets nulled
-// out here too (same treatment as a card TCGdex has no price for at all).
+// Cards hand-reviewed via #/admin/price-audit — see build-training-data.mjs
+// for the "wrong" vs "verified" distinction. A "wrong" flag doesn't just
+// stop a card from corrupting other cards' factors during training — it
+// also has to stop the site from showing that visitor the wrong number, so
+// its own `market` gets nulled out here too (same treatment as a card
+// TCGdex has no price for at all).
 let priceExclusions = {}
 try {
   priceExclusions = JSON.parse(await readFile(join(HERE, '..', 'src', 'data', 'price-exclusions.json'), 'utf8'))
@@ -99,7 +100,7 @@ async function ingestSet(setId) {
 
     const dexIds = card.dexId ?? []
     const cm = card.pricing?.cardmarket
-    const priceFlagged = Boolean(priceExclusions[card.id])
+    const priceFlagged = priceExclusions[card.id] === 'wrong'
     const { baseValue, breakdown } = computeCardPricing(card)
     return {
       id: card.id,

@@ -1,6 +1,10 @@
 const KEY = 'pokevalue-price-exclusions-v1'
 
-export type PriceExclusions = Record<string, true>
+/** "wrong" excludes the card from training and hides its price on site. "verified" means the
+ * price is real (e.g. hype-driven) and the model just can't explain it — kept in training,
+ * only recorded so a re-review pass can skip it. */
+export type PriceReview = 'wrong' | 'verified'
+export type PriceExclusions = Record<string, PriceReview>
 
 export function loadPriceExclusions(): PriceExclusions {
   try {
