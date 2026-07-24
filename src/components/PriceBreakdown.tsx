@@ -17,19 +17,26 @@ interface Props {
 /** Read-only "why this price" breakdown: the card's fixed, data-derived factors, then your copy's condition/language on top. */
 export function PriceBreakdown({ card, setName, selection, config, fairPrice, market }: Props) {
   const f = card.factors
-  const cardRows = [
+  // "Card" (cardName factor) only applies to Trainer/Energy cards — Pokémon
+  // cards get "n/a" there since "pokemon" already carries their identity.
+  // Always folded into factorProduct (so the derived anchor stays exact),
+  // but only shown as its own row when it's not the neutral n/a bucket.
+  const allFactorRows = [
     {
       label: 'Pokémon',
       value: f.pokemon.key === 'none' ? '— (Trainer/Energy)' : pokemonSpeciesName(f.pokemon.key),
       mult: f.pokemon.displayFactor,
+      hidden: false,
     },
-    { label: 'Rarity', value: card.rarity ?? 'Unknown', mult: f.rarity.displayFactor },
-    { label: 'Illustrator', value: card.illustrator ?? 'Unknown', mult: f.illustrator.displayFactor },
-    { label: 'Set', value: setName, mult: f.set.displayFactor },
-    { label: 'Card type', value: card.cardType ?? 'Standard', mult: f.cardType.displayFactor },
+    { label: 'Rarity', value: card.rarity ?? 'Unknown', mult: f.rarity.displayFactor, hidden: false },
+    { label: 'Illustrator', value: card.illustrator ?? 'Unknown', mult: f.illustrator.displayFactor, hidden: false },
+    { label: 'Set', value: setName, mult: f.set.displayFactor, hidden: false },
+    { label: 'Card type', value: card.cardType ?? 'Standard', mult: f.cardType.displayFactor, hidden: false },
+    { label: 'Card', value: card.name, mult: f.cardName.displayFactor, hidden: f.cardName.key === 'n/a' },
   ]
-  const factorProduct = cardRows.reduce((acc, r) => acc * r.mult, 1)
+  const factorProduct = allFactorRows.reduce((acc, r) => acc * r.mult, 1)
   const anchor = factorProduct > 0 ? card.baseValue / factorProduct : card.baseValue
+  const cardRows = allFactorRows.filter((r) => !r.hidden)
 
   const copyRows = FACTORS.map((def) => {
     const optionId = selection[def.id]

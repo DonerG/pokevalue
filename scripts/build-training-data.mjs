@@ -39,7 +39,7 @@ console.log(`Loaded release dates for ${releaseDateBySet.size} sets.`)
 const files = await readdir(CACHE_DIR)
 console.log(`Reading ${files.length} cached cards …`)
 
-const rows = []
+const rawRows = []
 let skippedNoPrice = 0
 
 for (const file of files) {
@@ -50,7 +50,7 @@ for (const file of files) {
     skippedNoPrice++
     continue
   }
-  rows.push({
+  rawRows.push({
     id: card.id,
     name: card.name,
     category: card.category ?? 'Pokemon',
@@ -64,8 +64,31 @@ for (const file of files) {
     avg30,
     trend: card.pricing?.cardmarket?.trend ?? null,
     low: card.pricing?.cardmarket?.low ?? null,
+    idProduct: card.pricing?.cardmarket?.idProduct ?? null,
   })
 }
+
+// Drop cards whose Cardmarket product ID is shared with a DIFFERENT Pokémon
+// — a confirmed TCGdex mapping bug (e.g. two unrelated cards pointing at the
+// same idProduct), where the price is guaranteed wrong for at least one of
+// them and there's no way to tell which. Narrow defense: it only catches
+// literal id-sharing across different names, not a card mapped to a
+// wrong-but-otherwise-unique product, which looks like an ordinary price and
+// isn't statistically detectable (confirmed by hand for one such report —
+// see analysis/fit_factors.py's docstring for the caveat this leaves).
+const byProduct = new Map()
+for (const r of rawRows) {
+  if (r.idProduct == null) continue
+  if (!byProduct.has(r.idProduct)) byProduct.set(r.idProduct, new Set())
+  byProduct.get(r.idProduct).add(r.name)
+}
+const badProducts = new Set([...byProduct].filter(([, names]) => names.size > 1).map(([id]) => id))
+const rows = rawRows
+  .filter((r) => !(r.idProduct != null && badProducts.has(r.idProduct)))
+  .map(({ idProduct, ...rest }) => rest)
+console.log(
+  `Dropped ${rawRows.length - rows.length} cards sharing a Cardmarket product ID with a different Pokémon (${badProducts.size} bad product IDs).`,
+)
 
 rows.sort((a, b) => (a.releaseDate ?? '').localeCompare(b.releaseDate ?? '') || a.id.localeCompare(b.id))
 

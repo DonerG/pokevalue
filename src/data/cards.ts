@@ -33,6 +33,7 @@ export interface CardFactors {
   illustrator: FactorEntry
   set: FactorEntry
   cardType: FactorEntry
+  cardName: FactorEntry
 }
 
 export interface CardData {

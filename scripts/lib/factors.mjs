@@ -61,12 +61,14 @@ export function computeCardPricing(card) {
   const illustratorKey = card.illustrator ?? 'Unknown'
   const setKey = card.set?.id ?? 'unknown'
   const cardTypeKey = mapCardType(card) ?? 'Standard'
+  const cardNameKey = card.dexId?.length ? 'n/a' : (card.name ?? 'n/a')
 
   const pokemon = lookup(data.factors.pokemon, pokemonKey)
   const rarity = lookup(data.factors.rarity, rarityKey)
   const illustrator = lookup(data.factors.illustrator, illustratorKey)
   const set = lookup(data.factors.set, setKey)
   const cardType = lookup(data.factors.cardType, cardTypeKey)
+  const cardName = lookup(data.factors.cardName, cardNameKey)
 
   const baseValue =
     data.anchor *
@@ -74,10 +76,11 @@ export function computeCardPricing(card) {
     rarity.displayFactor *
     illustrator.displayFactor *
     set.displayFactor *
-    cardType.displayFactor
+    cardType.displayFactor *
+    cardName.displayFactor
 
   return {
     baseValue,
-    breakdown: { pokemon, rarity, illustrator, set, cardType },
+    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName },
   }
 }

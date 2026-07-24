@@ -230,6 +230,22 @@ story.append(Paragraph("Pokemon factors", styles["H2"]))
 story.append(Paragraph(f"{len(FACTORS['factors']['pokemon'])} distinct Pokemon (plus the Trainer/Energy baseline).", styles["Small"]))
 story.append(Spacer(1, 3 * mm))
 story.append(make_table(factor_rows(FACTORS["factors"]["pokemon"], name_fn=pokemon_name), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
+story.append(PageBreak())
+
+# ---------------------------------------------------------------- card name (trainer/energy)
+
+story.append(Paragraph("Card name factors (Trainer / Energy)", styles["H2"]))
+story.append(
+    Paragraph(
+        f"{len(FACTORS['factors']['cardName'])} distinct Trainer/Energy card names (plus the n/a baseline for "
+        "Pokemon cards, whose identity is already covered by the Pokemon factor above). Most names are one-off "
+        "reprints with too little data to say anything - shrinkage pulls those to neutral, same as anywhere else "
+        "in this report.",
+        styles["Small"],
+    )
+)
+story.append(Spacer(1, 3 * mm))
+story.append(make_table(factor_rows(FACTORS["factors"]["cardName"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
 
 # ---------------------------------------------------------------- build
 

@@ -1,21 +1,41 @@
 """
 Fits the PokéValue pricing model: a log-linear (== multiplicative in price
 space) ridge regression that explains Cardmarket price purely from card
-identity — Pokémon, rarity, illustrator, set, and card mechanic type — with
-NO interaction terms, exactly matching:
+identity — Pokémon, rarity, illustrator, set, card mechanic type, and (for
+Trainer/Energy cards specifically) the card's own name — with NO interaction
+terms, exactly matching:
 
     price = anchor x factor(pokemon) x factor(rarity) x factor(illustrator)
-            x factor(set) x factor(card type)
+            x factor(set) x factor(card type) x factor(card name)
 
 `anchor` is fixed at EUR1 by construction (see the rescale step below) — the
 ridge fit's raw intercept is meaningless on its own, so it's folded entirely
 into the "set" factors instead, which is where the same information reads
 most naturally: every card starts at EUR1, its set tells you the ballpark.
 
+"cardName" is the Trainer/Energy analogue of "pokemon": Pokémon cards get
+"n/a" here (their identity is already fully captured by "pokemon"), while
+Trainer/Energy cards — which otherwise all share "pokemon" = "none" and so
+were indistinguishable from each other — get their own factor per exact
+printed name (e.g. "Iono" vs a generic Item). Most Trainer/Energy names are
+one-off reprints with too little data to say anything (median: 1 card), but
+ridge shrinkage handles that the same way it handles rare Pokémon/
+illustrators: low-n levels get pulled to neutral automatically, so this only
+meaningfully affects the ~20% of names with real reprint history.
+
 Every level of every category gets its own factor, shrunk toward 1x (neutral)
 by L2 regularization in proportion to how little data supports it — a
 Pokémon with 300 cards gets a confident factor, one with 2 cards gets pulled
 close to the average and flagged as low-confidence in the report.
+
+Known data-quality caveat: a small number of cards have a Cardmarket price
+mapped to the wrong (but otherwise unremarkable-looking) product on TCGdex's
+end — confirmed by hand for one report (a Chaos Rising Delphox showing
+~EUR1.89 instead of its real ~EUR0.07). Because the wrong number still looks
+like an ordinary price for its rarity tier, this class of error isn't
+statistically detectable and isn't filtered here. build-training-data.mjs
+does drop the one sub-case that *is* detectable: cards whose Cardmarket
+product ID is literally shared with a different Pokémon.
 
 Reads:  scripts/training-data.json  (~19,400 English cards, real Cardmarket price)
 Writes: analysis/factors.json       (every factor + sample size + 95% CI)
@@ -39,7 +59,7 @@ TRAINING_DATA = HERE.parent / "scripts" / "training-data.json"
 FACTORS_OUT = HERE / "factors.json"
 REPORT_OUT = HERE / "model_report.json"
 
-CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType"]
+CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName"]
 N_BOOTSTRAP = 60
 RNG_SEED = 42
 
@@ -55,6 +75,7 @@ df["rarity"] = df["rarity"].fillna("None")
 df["illustrator"] = df["illustrator"].fillna("Unknown")
 df["set"] = df["setId"].fillna("unknown")
 df["cardType"] = df["cardType"].fillna("Standard")
+df["cardName"] = df.apply(lambda row: "n/a" if row["dexIds"] else row["name"], axis=1)
 df["logPrice"] = np.log(df["avg30"].astype(float))
 
 for c in CATEGORIES:
