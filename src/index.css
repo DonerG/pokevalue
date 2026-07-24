@@ -722,19 +722,29 @@ details.panel[open] summary {
 
 .card-tile-prices {
   display: flex;
-  justify-content: space-between;
-  gap: 8px;
+  flex-direction: column;
+  gap: 2px;
   font-variant-numeric: tabular-nums;
   color: var(--text-2);
   font-size: 13px;
 }
 
+/* Set-grid verdict chips never show the spelled-out "undervalued" /
+   "overvalued" / "fair" word on the tiles — the color + arrow + percentage
+   already carry that meaning, and it's redundant at any tile size. Still
+   shown in full on the card detail page's own comparison chip, which uses a
+   different context outside .card-tile-body. */
+.card-tile-body .chip-label {
+  display: none;
+}
+
 /* Phones only — four columns instead of the auto-fill grid's one, since a
    single ~200px-min column leaves a phone screen showing just one card at a
-   time. Desktop/tablet keep the fluid auto-fill grid untouched. Text is
-   trimmed to what still fits legibly at ~85px per tile; tap through to the
-   card page for the rest. Placed after the rules it overrides so it wins the
-   cascade at equal specificity regardless of source order elsewhere. */
+   time. Desktop/tablet keep the fluid auto-fill grid untouched otherwise.
+   Text is trimmed to what still fits legibly at ~85px per tile; tap through
+   to the card page for the rest. Placed after the rules it overrides so it
+   wins the cascade at equal specificity regardless of source order
+   elsewhere. */
 @media (max-width: 640px) {
   .card-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -763,7 +773,6 @@ details.panel[open] summary {
   }
 
   .card-tile-prices {
-    flex-direction: column;
     gap: 0;
     font-size: 9px;
   }
@@ -774,13 +783,6 @@ details.panel[open] summary {
     font-size: 9px;
     padding: 2px 4px;
     gap: 3px;
-  }
-
-  /* Keep the icon + percentage, drop the spelled-out "undervalued" /
-     "overvalued" / "fair" word — no room for it at ~85px, and the color +
-     arrow + percentage already carry the same information. */
-  .card-tile-body .chip-label {
-    display: none;
   }
 }
 
