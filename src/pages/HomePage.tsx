@@ -1,6 +1,12 @@
-import { useMemo, useState } from 'react'
-import { formatDate, SETS, setLogo, type SetMeta } from '../data/cards'
+import { useEffect, useMemo, useState } from 'react'
+import { formatDate, loadSearchIndex, SETS, setLogo, type SearchIndexCard, type SetMeta } from '../data/cards'
 import { RetryImage } from '../components/RetryImage'
+
+const MAX_CARD_RESULTS = 30
+
+function cardThumb(c: SearchIndexCard): string | null {
+  return c.image ? `${c.image}/low.webp` : null
+}
 
 function groupBySeries(sets: SetMeta[]): [string, SetMeta[]][] {
   const groups = new Map<string, SetMeta[]>()
@@ -17,12 +23,27 @@ function groupBySeries(sets: SetMeta[]): [string, SetMeta[]][] {
 
 export function HomePage() {
   const [query, setQuery] = useState('')
+  const [cardIndex, setCardIndex] = useState<SearchIndexCard[] | null>(null)
+
+  // Kicked off on mount, not on first keystroke — it's a ~200KB gzipped
+  // lazy chunk, usually already loaded by the time someone finishes typing.
+  useEffect(() => {
+    loadSearchIndex().then(setCardIndex)
+  }, [])
 
   const groups = useMemo(() => {
     const q = query.trim().toLowerCase()
     const filtered = q ? SETS.filter((s) => s.name.toLowerCase().includes(q)) : SETS
     return groupBySeries(filtered)
   }, [query])
+
+  const matchingCards = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    if (!q || !cardIndex) return []
+    return cardIndex
+      .filter((c) => c.name.toLowerCase().includes(q) || c.localId.toLowerCase().includes(q))
+      .slice(0, MAX_CARD_RESULTS)
+  }, [query, cardIndex])
 
   return (
     <div className="home">
@@ -41,12 +62,48 @@ export function HomePage() {
         <h3 className="section-title">Sets in the system</h3>
         <input
           type="search"
-          placeholder="Search sets…"
+          placeholder="Search sets or cards (name, number)…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          aria-label="Search sets"
+          aria-label="Search sets or cards"
         />
       </div>
+
+      {query.trim() && matchingCards.length > 0 && (
+        <section className="serie-group">
+          <h4 className="serie-title">Cards</h4>
+          <div className="card-grid">
+            {matchingCards.map((c) => {
+              const thumb = cardThumb(c)
+              return (
+                <a key={c.id} className="card-tile" href={`#/card/${c.id}`}>
+                  {thumb ? (
+                    <RetryImage
+                      src={thumb}
+                      alt={c.name}
+                      loading="lazy"
+                      placeholder={<div className="card-tile-placeholder">{c.name}</div>}
+                    />
+                  ) : (
+                    <div className="card-tile-placeholder">{c.name}</div>
+                  )}
+                  <div className="card-tile-body">
+                    <div className="card-tile-name-block">
+                      <strong>{c.name}</strong>
+                      <span className="muted">
+                        {c.setName} · #{c.localId}
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              )
+            })}
+          </div>
+          {matchingCards.length === MAX_CARD_RESULTS && (
+            <p className="muted">Showing the first {MAX_CARD_RESULTS} matches — refine your search for more specific results.</p>
+          )}
+        </section>
+      )}
 
       {groups.map(([serie, sets]) => (
         <section key={serie} className="serie-group">
@@ -78,7 +135,7 @@ export function HomePage() {
           </div>
         </section>
       ))}
-      {groups.length === 0 && <p className="muted">No set found.</p>}
+      {groups.length === 0 && matchingCards.length === 0 && <p className="muted">No set or card found.</p>}
 
       <p className="muted">More sets are added step by step.</p>
     </div>

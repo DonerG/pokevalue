@@ -6,7 +6,7 @@ A website that estimates a fair price for Pokémon cards with a regression model
 
 ## Features
 
-- **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first).
+- **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first). The homepage search bar also matches individual cards by name or number, site-wide, via a lightweight lazy-loaded search index (see `scripts/build-search-index.mjs`) — not just set names.
 - **Card page:** Pokémon, rarity, illustrator, set, and card type each get their own computed factor — fixed facts, not adjustable. You only pick condition and language for your specific copy, plus a "why this price?" breakdown showing every factor that went into the number.
 - **Artwork rating (hidden, `#/admin/artwork`):** Rate illustration quality (1–10) on chase cards. Not currently used by the model (see below) but kept for future data collection. Export/import as JSON.
 - **Promo style tagging (hidden, `#/admin/promo-style`):** Promo cards all share one "Promo" rarity in the source data, but some use an extended "Art Rare" illustration instead of the plain framed template — which swings the price a lot with no field to tell them apart. Tag each candidate "Art Rare" or "Normal" by eye; export/import as JSON. Once tagged, `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) splits "Promo" into "Promo (Art Rare)" / "Promo (Normal)" for both model training and on-site display, so the rarity factor picks up the distinction automatically.
@@ -45,6 +45,7 @@ python analysis/fit_factors.py            # fit the model -> analysis/factors.js
 python analysis/build_report.py           # -> analysis/PokeValue-Faktoren.pdf
 node scripts/ingest.mjs sv01 sv02 …       # bake factors into each displayed set's card JSON
 node scripts/build-outlier-candidates.mjs # (after ingest) -> candidate list for #/admin/price-audit
+node scripts/build-search-index.mjs       # (after ingest) -> homepage card search index
 ```
 
 Python deps: `pip install pandas scikit-learn scipy statsmodels reportlab pypdf`.
@@ -83,6 +84,7 @@ scripts/
   build-artwork-candidates.mjs Cache -> candidate list for the (currently unused) rating admin page
   build-promo-candidates.mjs  Cache -> candidate list (priced Promo-rarity cards) for the style admin page
   build-outlier-candidates.mjs Generated cards-*.json -> top 100 overvalued + top 100 undervalued for the price-audit page
+  build-search-index.mjs      Generated cards-*.json -> lightweight name/number index for the homepage search bar
   lib/cardMapping.mjs         Card-type derivation, artwork-candidate rarity filter, effectiveRarity() (promo style), eraBucket()
   lib/factors.mjs             Looks up computed factors for a card, applies low-sample dampening
 src/

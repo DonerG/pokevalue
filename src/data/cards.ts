@@ -192,6 +192,26 @@ export async function loadOutlierCandidates(): Promise<OutlierCandidates> {
   return mod.default as unknown as OutlierCandidates
 }
 
+export interface SearchIndexCard {
+  id: string
+  name: string
+  localId: string
+  image: string | null
+  rarity: string | null
+  setId: string
+  setName: string
+}
+
+/**
+ * Lazily loaded (not part of the main bundle) but the homepage kicks the
+ * fetch off on mount rather than waiting for the first keystroke, so it's
+ * usually already in by the time someone finishes typing.
+ */
+export async function loadSearchIndex(): Promise<SearchIndexCard[]> {
+  const mod = await import('./generated/search-index.json')
+  return mod.default as unknown as SearchIndexCard[]
+}
+
 const dateFmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
 export function formatDate(iso: string | null | undefined): string {
