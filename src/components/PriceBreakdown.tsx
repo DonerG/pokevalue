@@ -29,6 +29,12 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       hidden: false,
     },
     { label: 'Rarity', value: card.rarity ?? 'Unknown', mult: f.rarity.displayFactor, hidden: false },
+    {
+      label: 'Rarity (era)',
+      value: `${f.rarityEra.key.split(' | ')[1] ?? 'Unknown'} adjustment`,
+      mult: f.rarityEra.displayFactor,
+      hidden: false,
+    },
     { label: 'Illustrator', value: card.illustrator ?? 'Unknown', mult: f.illustrator.displayFactor, hidden: false },
     { label: 'Set', value: setName, mult: f.set.displayFactor, hidden: false },
     { label: 'Card type', value: card.cardType ?? 'Standard', mult: f.cardType.displayFactor, hidden: false },
@@ -62,8 +68,10 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       <p className="panel-intro">
         Pokémon, rarity, illustrator, set, and card type come from a regression model trained on
         real Cardmarket prices across ~19,000 cards — fixed facts, not something you adjust by
-        hand. Condition and language (below) are reasonable assumptions layered on top, since
-        Cardmarket's data doesn't separate those out.
+        hand. "Rarity (era)" corrects for how much a rarity tier is worth today vs. when the card
+        was printed — a modern "Rare" and a 1999 "Rare" mean very different things. Condition and
+        language (below) are reasonable assumptions layered on top, since Cardmarket's data
+        doesn't separate those out.
       </p>
       <ul className="breakdown-list">
         <li>

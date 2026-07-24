@@ -73,7 +73,11 @@ export function isArtworkRateable(rarity) {
 // old-EX-era vs. new-ex-era distinction (both casings show up scattered
 // across both eras — a source-data quirk, not a signal), so we normalize
 // case rather than let it fragment one mechanic into noisy near-duplicates.
-// The real old/new distinction is already carried by the Set factor.
+// This used to assume the old/new price gap was already covered by the Set
+// factor — checked that empirically and it isn't (old "EX" cards: median
+// EUR64.62, new "ex" cards: median EUR1.88, a card-type premium that
+// compressed over time much like rarity's did — see RARITY_ERA_BUCKETS
+// below), so cardType is also worth an era interaction at some point.
 
 const SPECIAL_STAGES = new Set(['VMAX', 'VSTAR', 'BREAK', 'V-UNION', 'LEVEL-UP', 'RESTORED'])
 
@@ -103,4 +107,27 @@ export function effectiveRarity(card, promoStyles) {
     return PROMO_STYLE_LABELS[style]
   }
   return card.rarity ?? null
+}
+
+// ---------- Era bucket (for the rarity x era interaction) ----------
+// A "Rare" card meant something very different in 1999 than it does today —
+// the game has added tier after tier above it (Double Rare, Ultra Rare,
+// Illustration Rare, Special Illustration Rare, Hyper Rare, ...), diluting
+// what "Rare" signals. Checked empirically: median Rare/Common price ratio
+// is 32.55x for WOTC-era cards vs. 2.25x for SV+ cards — the model's single
+// global rarity factor (5.38x) can't represent that shift, and neither can
+// the Set factor (it can only move a whole set up/down, not change the
+// ratio between rarities within it). Same boundaries as the era buckets
+// used ad hoc in chat analysis this session, kept here so training and
+// on-site lookup agree on where one block ends and the next begins.
+
+export function eraBucket(releaseDate) {
+  if (!releaseDate) return 'Unknown'
+  const year = parseInt(releaseDate.slice(0, 4), 10)
+  if (!Number.isFinite(year)) return 'Unknown'
+  if (year < 2003) return 'WOTC'
+  if (year < 2011) return 'EX/DP'
+  if (year < 2017) return 'BW/XY'
+  if (year < 2023) return 'SM/SWSH'
+  return 'SV+'
 }

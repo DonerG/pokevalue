@@ -1,12 +1,13 @@
 """
 Fits the PokéValue pricing model: a log-linear (== multiplicative in price
 space) ridge regression that explains Cardmarket price purely from card
-identity — Pokémon, rarity, illustrator, set, card mechanic type, and (for
-Trainer/Energy cards specifically) the card's own name — with NO interaction
-terms, exactly matching:
+identity — Pokémon, rarity, illustrator, set, card mechanic type, (for
+Trainer/Energy cards specifically) the card's own name, and one deliberate
+interaction term (rarity x era) — exactly matching:
 
     price = anchor x factor(pokemon) x factor(rarity) x factor(illustrator)
             x factor(set) x factor(card type) x factor(card name)
+            x factor(rarity x era)
 
 `anchor` is fixed at EUR1 by construction (see the rescale step below) — the
 ridge fit's raw intercept is meaningless on its own, so it's folded entirely
@@ -22,6 +23,22 @@ one-off reprints with too little data to say anything (median: 1 card), but
 ridge shrinkage handles that the same way it handles rare Pokémon/
 illustrators: low-n levels get pulled to neutral automatically, so this only
 meaningfully affects the ~20% of names with real reprint history.
+
+"rarityEra" ("Rarity (era)" in the UI) is the one deliberate interaction
+term, layered ON TOP of the plain "rarity" factor rather than replacing it —
+a rarity tier means something very different depending on when the card was
+printed (the game has stacked tier after tier above "Rare" over 25 years:
+Double Rare, Ultra Rare, Illustration Rare, ...), and a single global rarity
+factor can't represent that, nor can the Set factor (it only moves a whole
+set up/down, it can't change the ratio *between* rarities within it).
+Checked by hand: median Rare/Common price ratio is 32.6x for WOTC-era cards
+vs. 2.3x for SV+ cards, while the model's single global rarity factor sits
+at 5.4x — systematically too high for modern Rares, too low for vintage
+ones. Same reasoning applies to at least "cardType" (old "EX" vs. new "ex"
+show the same kind of gap) but isn't applied there yet. Era buckets: WOTC
+(pre-2003), EX/DP (2003-2010), BW/XY (2011-2016), SM/SWSH (2017-2022), SV+
+(2023+) — see scripts/lib/cardMapping.mjs::eraBucket for the JS mirror used
+at ingest/display time.
 
 Every level of every category gets its own factor, shrunk toward 1x (neutral)
 by L2 regularization in proportion to how little data supports it — a
@@ -59,9 +76,29 @@ TRAINING_DATA = HERE.parent / "scripts" / "training-data.json"
 FACTORS_OUT = HERE / "factors.json"
 REPORT_OUT = HERE / "model_report.json"
 
-CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName"]
+CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName", "rarityEra"]
 N_BOOTSTRAP = 60
 RNG_SEED = 42
+
+
+def era_bucket(release_date):
+    """Mirrors scripts/lib/cardMapping.mjs::eraBucket — keep both in sync."""
+    if not release_date:
+        return "Unknown"
+    try:
+        year = int(str(release_date)[:4])
+    except ValueError:
+        return "Unknown"
+    if year < 2003:
+        return "WOTC"
+    if year < 2011:
+        return "EX/DP"
+    if year < 2017:
+        return "BW/XY"
+    if year < 2023:
+        return "SM/SWSH"
+    return "SV+"
+
 
 # ---------------------------------------------------------------- load data
 
@@ -76,6 +113,7 @@ df["illustrator"] = df["illustrator"].fillna("Unknown")
 df["set"] = df["setId"].fillna("unknown")
 df["cardType"] = df["cardType"].fillna("Standard")
 df["cardName"] = df.apply(lambda row: "n/a" if row["dexIds"] else row["name"], axis=1)
+df["rarityEra"] = df["rarity"] + " | " + df["releaseDate"].apply(era_bucket)
 df["logPrice"] = np.log(df["avg30"].astype(float))
 
 for c in CATEGORIES:

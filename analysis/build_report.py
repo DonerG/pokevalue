@@ -191,6 +191,22 @@ story.append(Spacer(1, 3 * mm))
 story.append(make_table(factor_rows(FACTORS["factors"]["rarity"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
 story.append(PageBreak())
 
+# ---------------------------------------------------------------- rarity x era
+
+story.append(Paragraph("Rarity x Era factors", styles["H2"]))
+story.append(
+    Paragraph(
+        f"{len(FACTORS['factors']['rarityEra'])} distinct rarity/era combinations. Layered on top of the "
+        "plain rarity factor above: a rarity tier means something very different depending on when the "
+        "card was printed (median Rare/Common price ratio: 32.6x for WOTC-era cards vs. 2.3x for SV+ "
+        "cards) - this factor corrects for that shift.",
+        styles["Small"],
+    )
+)
+story.append(Spacer(1, 3 * mm))
+story.append(make_table(factor_rows(FACTORS["factors"]["rarityEra"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
+story.append(PageBreak())
+
 # ---------------------------------------------------------------- card type
 
 story.append(Paragraph("Card type factors", styles["H2"]))

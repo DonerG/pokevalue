@@ -18,48 +18,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.039832122304635634,
+  "baseValue": 0.04038879973804501,
   "factors": {
    "pokemon": {
     "key": "357",
-    "factor": 0.7242,
-    "displayFactor": 0.7242,
+    "factor": 0.6878,
+    "displayFactor": 0.6878,
     "n": 19,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Akino Fukuji",
-    "factor": 1.1747,
-    "displayFactor": 1.13976,
+    "factor": 1.0459,
+    "displayFactor": 1.03672,
     "n": 4,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -83,48 +90,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04110081622483914,
+  "baseValue": 0.0456606807912132,
   "factors": {
    "pokemon": {
     "key": "736",
-    "factor": 0.8954,
-    "displayFactor": 0.8954,
+    "factor": 0.845,
+    "displayFactor": 0.845,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Mina Nakai",
-    "factor": 0.9512,
-    "displayFactor": 0.9512,
+    "factor": 0.954,
+    "displayFactor": 0.954,
     "n": 88,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -148,48 +162,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04983373486259762,
+  "baseValue": 0.055017534925386545,
   "factors": {
    "pokemon": {
     "key": "753",
-    "factor": 0.8359,
-    "displayFactor": 0.8359,
+    "factor": 0.7935,
+    "displayFactor": 0.7935,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "nisimono",
-    "factor": 1.2354,
-    "displayFactor": 1.2354,
+    "factor": 1.2241,
+    "displayFactor": 1.2241,
     "n": 14,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -213,48 +234,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.771732458411772,
+  "baseValue": 0.7693261600064712,
   "factors": {
    "pokemon": {
     "key": "754",
-    "factor": 0.7497,
-    "displayFactor": 0.7497,
+    "factor": 0.7381,
+    "displayFactor": 0.7381,
     "n": 8,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -278,48 +306,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04818077151696797,
+  "baseValue": 0.05274045677455997,
   "factors": {
    "pokemon": {
     "key": "1012",
-    "factor": 0.8686,
-    "displayFactor": 0.89488,
+    "factor": 0.825,
+    "displayFactor": 0.86,
     "n": 4,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Mousho",
-    "factor": 1.1157,
-    "displayFactor": 1.1157,
+    "factor": 1.0827,
+    "displayFactor": 1.0827,
     "n": 17,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -343,48 +378,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.05483863895218122,
+  "baseValue": 0.056810635210995795,
   "factors": {
    "pokemon": {
     "key": "1013",
-    "factor": 0.673,
-    "displayFactor": 0.673,
+    "factor": 0.795,
+    "displayFactor": 0.795,
     "n": 5,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "mingo",
-    "factor": 1.1812,
-    "displayFactor": 1.1812,
+    "factor": 1.1294,
+    "displayFactor": 1.1294,
     "n": 13,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -408,48 +450,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.06164949085244416,
+  "baseValue": 0.0607935772134116,
   "factors": {
    "pokemon": {
     "key": "485",
-    "factor": 0.9181,
-    "displayFactor": 0.9181,
+    "factor": 0.9362,
+    "displayFactor": 0.9362,
     "n": 24,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Takeshi Nakamura",
-    "factor": 0.9734,
-    "displayFactor": 0.9734,
+    "factor": 1.0263,
+    "displayFactor": 1.0263,
     "n": 27,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -473,48 +522,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 1.281006341329562,
+  "baseValue": 1.27538117906002,
   "factors": {
    "pokemon": {
     "key": "655",
-    "factor": 1.0264,
-    "displayFactor": 1.0264,
+    "factor": 1.0379,
+    "displayFactor": 1.0379,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -538,48 +594,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.030926792416466568,
+  "baseValue": 0.03925009861034765,
   "factors": {
    "pokemon": {
     "key": "850",
-    "factor": 0.7213,
-    "displayFactor": 0.7213,
+    "factor": 0.6984,
+    "displayFactor": 0.6984,
     "n": 11,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Yuya Oka",
-    "factor": 0.8885,
-    "displayFactor": 0.8885,
+    "factor": 0.9922,
+    "displayFactor": 0.9922,
     "n": 42,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -603,48 +666,55 @@
    "updated": "2026-07-21T08:02:25.285Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.027135041287050306,
+  "baseValue": 0.0311278478170516,
   "factors": {
    "pokemon": {
     "key": "851",
-    "factor": 0.6043,
-    "displayFactor": 0.6043,
+    "factor": 0.5945,
+    "displayFactor": 0.5945,
     "n": 19,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Kouki Saitou",
-    "factor": 0.9305,
-    "displayFactor": 0.9305,
+    "factor": 0.9244,
+    "displayFactor": 0.9244,
     "n": 620,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -668,48 +738,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04949189532818535,
+  "baseValue": 0.05399364146873458,
   "factors": {
    "pokemon": {
     "key": "935",
-    "factor": 1.2005,
-    "displayFactor": 1.2005,
+    "factor": 1.0496,
+    "displayFactor": 1.0496,
     "n": 15,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Ryuta Fuse",
-    "factor": 0.8543,
-    "displayFactor": 0.8543,
+    "factor": 0.9082,
+    "displayFactor": 0.9082,
     "n": 101,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -733,48 +810,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.16858861520662907,
+  "baseValue": 0.1048243075107859,
   "factors": {
    "pokemon": {
     "key": "936",
-    "factor": 0.6429,
-    "displayFactor": 0.6429,
+    "factor": 0.7669,
+    "displayFactor": 0.7669,
     "n": 11,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Jiro Sasumo",
-    "factor": 1.0106,
-    "displayFactor": 1.0106,
+    "factor": 1.0935,
+    "displayFactor": 1.0935,
     "n": 35,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -798,48 +882,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04142856322875055,
+  "baseValue": 0.053900761890327845,
   "factors": {
    "pokemon": {
     "key": "118",
-    "factor": 0.7268,
-    "displayFactor": 0.7268,
+    "factor": 0.8155,
+    "displayFactor": 0.8155,
     "n": 19,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Shibuzoh.",
-    "factor": 1.1812,
-    "displayFactor": 1.1812,
+    "factor": 1.1669,
+    "displayFactor": 1.1669,
     "n": 102,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -863,48 +954,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04768868532502246,
+  "baseValue": 0.04172081740140271,
   "factors": {
    "pokemon": {
     "key": "119",
-    "factor": 0.6485,
-    "displayFactor": 0.6485,
+    "factor": 0.645,
+    "displayFactor": 0.645,
     "n": 16,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "OKUBO",
-    "factor": 1.066,
-    "displayFactor": 1.066,
+    "factor": 1.0223,
+    "displayFactor": 1.0223,
     "n": 26,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -928,48 +1026,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.10212108723660536,
+  "baseValue": 0.11535416730931616,
   "factors": {
    "pokemon": {
     "key": "320",
-    "factor": 0.9394,
-    "displayFactor": 0.9394,
+    "factor": 0.8972,
+    "displayFactor": 0.8972,
     "n": 15,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Asako Ito",
-    "factor": 2.2527,
-    "displayFactor": 2.2527,
+    "factor": 2.2699,
+    "displayFactor": 2.2699,
     "n": 36,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -993,48 +1098,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 1.0728285556312507,
+  "baseValue": 1.187499382326748,
   "factors": {
    "pokemon": {
     "key": "321",
-    "factor": 1.0422,
-    "displayFactor": 1.0422,
+    "factor": 1.1393,
+    "displayFactor": 1.1393,
     "n": 20,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -1058,48 +1170,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.07683897257427522,
+  "baseValue": 0.06836478784790809,
   "factors": {
    "pokemon": {
     "key": "369",
-    "factor": 0.9852,
-    "displayFactor": 0.9852,
+    "factor": 0.989,
+    "displayFactor": 0.989,
     "n": 16,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Naoyo Kimura",
-    "factor": 1.1306,
-    "displayFactor": 1.1306,
+    "factor": 1.0925,
+    "displayFactor": 1.0925,
     "n": 260,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -1123,48 +1242,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.05237551236483557,
+  "baseValue": 0.06258298347322071,
   "factors": {
    "pokemon": {
     "key": "728",
-    "factor": 1.0672,
-    "displayFactor": 1.0672,
+    "factor": 1.0563,
+    "displayFactor": 1.0563,
     "n": 7,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Oswaldo KATO",
-    "factor": 1.017,
-    "displayFactor": 1.017,
+    "factor": 1.046,
+    "displayFactor": 1.046,
     "n": 93,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -1188,48 +1314,55 @@
    "updated": "2026-07-21T08:02:25.285Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.059049245772270255,
+  "baseValue": 0.0635422685364087,
   "factors": {
    "pokemon": {
     "key": "729",
-    "factor": 1.4099,
-    "displayFactor": 1.24594,
+    "factor": 1.3029,
+    "displayFactor": 1.18174,
     "n": 3,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "MINAMINAMI Take",
-    "factor": 0.9821,
-    "displayFactor": 0.9821,
+    "factor": 0.9493,
+    "displayFactor": 0.9493,
     "n": 20,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -1253,48 +1386,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.2736365719920467,
+  "baseValue": 0.14929383563914397,
   "factors": {
    "pokemon": {
     "key": "730",
-    "factor": 1.001,
-    "displayFactor": 1.001,
+    "factor": 1.1437,
+    "displayFactor": 1.1437,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Taira Akitsu",
-    "factor": 1.0535,
-    "displayFactor": 1.0535,
+    "factor": 1.0443,
+    "displayFactor": 1.0443,
     "n": 64,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -1318,48 +1458,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.034988448585239314,
+  "baseValue": 0.03800482564739868,
   "factors": {
    "pokemon": {
     "key": "963",
-    "factor": 0.8547,
-    "displayFactor": 0.8547,
+    "factor": 0.7832,
+    "displayFactor": 0.7832,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Yukiko Baba",
-    "factor": 0.8483,
-    "displayFactor": 0.8483,
+    "factor": 0.8567,
+    "displayFactor": 0.8567,
     "n": 153,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -1383,48 +1530,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04016007801352664,
+  "baseValue": 0.04276540145715323,
   "factors": {
    "pokemon": {
     "key": "964",
-    "factor": 0.7611,
-    "displayFactor": 0.7611,
+    "factor": 0.816,
+    "displayFactor": 0.816,
     "n": 12,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "satoma",
-    "factor": 0.7649,
-    "displayFactor": 0.7649,
+    "factor": 0.8283,
+    "displayFactor": 0.8283,
     "n": 26,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -1448,48 +1602,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.028753905467021123,
+  "baseValue": 0.036261424580897914,
   "factors": {
    "pokemon": {
     "key": "309",
-    "factor": 0.7118,
-    "displayFactor": 0.7118,
+    "factor": 0.7279,
+    "displayFactor": 0.7279,
     "n": 31,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Dsuke",
-    "factor": 0.8371,
-    "displayFactor": 0.8371,
+    "factor": 0.8795,
+    "displayFactor": 0.8795,
     "n": 26,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -1513,48 +1674,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.054184919287933585,
+  "baseValue": 0.05090221981423802,
   "factors": {
    "pokemon": {
     "key": "310",
-    "factor": 0.6584,
-    "displayFactor": 0.6584,
+    "factor": 0.6816,
+    "displayFactor": 0.6816,
     "n": 30,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Uninori",
-    "factor": 1.193,
-    "displayFactor": 1.193,
+    "factor": 1.1803,
+    "displayFactor": 1.1803,
     "n": 24,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -1578,48 +1746,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.03547437040629029,
+  "baseValue": 0.03706155742187962,
   "factors": {
    "pokemon": {
     "key": "737",
-    "factor": 0.7357,
-    "displayFactor": 0.7357,
+    "factor": 0.6891,
+    "displayFactor": 0.6891,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Kazuhisa Uragami",
-    "factor": 0.999,
-    "displayFactor": 0.9992,
+    "factor": 0.9369,
+    "displayFactor": 0.9495199999999999,
     "n": 4,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -1643,48 +1818,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04912249431302398,
+  "baseValue": 0.04755005996654676,
   "factors": {
    "pokemon": {
     "key": "738",
-    "factor": 0.7143,
-    "displayFactor": 0.7143,
+    "factor": 0.7224,
+    "displayFactor": 0.7224,
     "n": 14,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "KEIICHIRO ITO",
-    "factor": 0.9969,
-    "displayFactor": 0.9969,
+    "factor": 1.0403,
+    "displayFactor": 1.0403,
     "n": 62,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -1708,48 +1890,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 1.577919249165009,
+  "baseValue": 1.6087571438726063,
   "factors": {
    "pokemon": {
     "key": "807",
-    "factor": 1.2643,
-    "displayFactor": 1.2643,
+    "factor": 1.3092,
+    "displayFactor": 1.3092,
     "n": 28,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -1773,48 +1962,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.22772060880253966,
+  "baseValue": 0.13574310962590613,
   "factors": {
    "pokemon": {
     "key": "1008",
-    "factor": 1.091,
-    "displayFactor": 1.091,
+    "factor": 1.1682,
+    "displayFactor": 1.1682,
     "n": 18,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "mashu",
-    "factor": 0.8044,
-    "displayFactor": 0.8044,
+    "factor": 0.9296,
+    "displayFactor": 0.9296,
     "n": 13,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -1838,48 +2034,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.0988455638902298,
+  "baseValue": 0.1222347702169717,
   "factors": {
    "pokemon": {
     "key": "79",
-    "factor": 1.7872,
-    "displayFactor": 1.7872,
+    "factor": 1.8808,
+    "displayFactor": 1.8808,
     "n": 35,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Nelnal",
-    "factor": 1.1461,
-    "displayFactor": 1.1461,
+    "factor": 1.1474,
+    "displayFactor": 1.1474,
     "n": 21,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -1903,48 +2106,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.1161261349204951,
+  "baseValue": 0.1125991479636815,
   "factors": {
    "pokemon": {
     "key": "80",
-    "factor": 1.4271,
-    "displayFactor": 1.4271,
+    "factor": 1.3577,
+    "displayFactor": 1.3577,
     "n": 26,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "CHORISO",
-    "factor": 1.2993,
-    "displayFactor": 1.1795799999999999,
+    "factor": 1.5179,
+    "displayFactor": 1.31074,
     "n": 3,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -1968,48 +2178,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 1.781103029726635,
+  "baseValue": 1.6683543952305515,
   "factors": {
    "pokemon": {
     "key": "80",
-    "factor": 1.4271,
-    "displayFactor": 1.4271,
+    "factor": 1.3577,
+    "displayFactor": 1.3577,
     "n": 26,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -2033,48 +2250,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.03459006114954614,
+  "baseValue": 0.03567353027392901,
   "factors": {
    "pokemon": {
     "key": "124",
-    "factor": 0.7992,
-    "displayFactor": 0.7992,
+    "factor": 0.7564,
+    "displayFactor": 0.7564,
     "n": 27,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Yoshimoto Yoshimon",
-    "factor": 0.8711,
-    "displayFactor": 0.89688,
+    "factor": 0.7908,
+    "displayFactor": 0.8326399999999999,
     "n": 4,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -2098,48 +2322,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04720718019454337,
+  "baseValue": 0.06195832601114678,
   "factors": {
    "pokemon": {
     "key": "353",
-    "factor": 0.9283,
-    "displayFactor": 0.9283,
+    "factor": 0.9146,
+    "displayFactor": 0.9146,
     "n": 18,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Bun Toujo",
-    "factor": 1.0538,
-    "displayFactor": 1.0538,
+    "factor": 1.196,
+    "displayFactor": 1.196,
     "n": 14,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -2163,48 +2394,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.09116701976838416,
+  "baseValue": 0.07734372407708712,
   "factors": {
    "pokemon": {
     "key": "354",
-    "factor": 1.0267,
-    "displayFactor": 1.0267,
+    "factor": 1.0027,
+    "displayFactor": 1.0027,
     "n": 23,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Mugi Hamada",
-    "factor": 1.2872,
-    "displayFactor": 1.2872,
+    "factor": 1.2191,
+    "displayFactor": 1.2191,
     "n": 9,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -2228,48 +2466,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.17863705235041752,
+  "baseValue": 0.12295086019405067,
   "factors": {
    "pokemon": {
     "key": "442",
-    "factor": 0.7492,
-    "displayFactor": 0.7492,
+    "factor": 0.8309,
+    "displayFactor": 0.8309,
     "n": 22,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "danciao",
-    "factor": 0.9189,
-    "displayFactor": 0.9189,
+    "factor": 1.1838,
+    "displayFactor": 1.1838,
     "n": 12,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -2293,48 +2538,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.049861647753370236,
+  "baseValue": 0.05473199551565882,
   "factors": {
    "pokemon": {
     "key": "607",
-    "factor": 0.8237,
-    "displayFactor": 0.8237,
+    "factor": 0.7797,
+    "displayFactor": 0.7797,
     "n": 18,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "HYOGONOSUKE",
-    "factor": 1.2544,
-    "displayFactor": 1.2544,
+    "factor": 1.2393,
+    "displayFactor": 1.2393,
     "n": 85,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -2358,48 +2610,55 @@
    "updated": "2026-07-21T08:02:25.285Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.06572324244214206,
+  "baseValue": 0.05524516567419872,
   "factors": {
    "pokemon": {
     "key": "608",
-    "factor": 0.8403,
-    "displayFactor": 0.8403,
+    "factor": 0.7784,
+    "displayFactor": 0.7784,
     "n": 16,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "sowsow",
-    "factor": 1.1338,
-    "displayFactor": 1.1338,
+    "factor": 1.1217,
+    "displayFactor": 1.1217,
     "n": 111,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -2423,48 +2682,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 1.598637005659622,
+  "baseValue": 1.6697060854675354,
   "factors": {
    "pokemon": {
     "key": "609",
-    "factor": 1.2809,
-    "displayFactor": 1.2809,
+    "factor": 1.3588,
+    "displayFactor": 1.3588,
     "n": 24,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -2488,48 +2754,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.06553761486520031,
+  "baseValue": 0.05520809433875361,
   "factors": {
    "pokemon": {
     "key": "781",
-    "factor": 0.7827,
-    "displayFactor": 0.7827,
+    "factor": 0.7287,
+    "displayFactor": 0.7287,
     "n": 15,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Oku",
-    "factor": 1.2138,
-    "displayFactor": 1.2138,
+    "factor": 1.1974,
+    "displayFactor": 1.1974,
     "n": 12,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -2553,48 +2826,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04767734712021729,
+  "baseValue": 0.043326987582061244,
   "factors": {
    "pokemon": {
     "key": "802",
-    "factor": 0.9896,
-    "displayFactor": 0.9896,
+    "factor": 0.9788,
+    "displayFactor": 0.9788,
     "n": 12,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Nakamura Ippan",
-    "factor": 0.6984,
-    "displayFactor": 0.6984,
+    "factor": 0.6996,
+    "displayFactor": 0.6996,
     "n": 9,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -2618,48 +2898,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.03426497240799211,
+  "baseValue": 0.04236929559827999,
   "factors": {
    "pokemon": {
     "key": "979",
-    "factor": 0.5802,
-    "displayFactor": 0.5802,
+    "factor": 0.7414,
+    "displayFactor": 0.7414,
     "n": 8,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Haru Akasaka",
-    "factor": 0.8561,
-    "displayFactor": 0.8561,
+    "factor": 0.9032,
+    "displayFactor": 0.9032,
     "n": 18,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -2683,48 +2970,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.05556990292406625,
+  "baseValue": 0.07136870950954392,
   "factors": {
    "pokemon": {
     "key": "56",
-    "factor": 0.752,
-    "displayFactor": 0.752,
+    "factor": 0.8064,
+    "displayFactor": 0.8064,
     "n": 26,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Yuka Morii",
-    "factor": 1.5313,
-    "displayFactor": 1.5313,
+    "factor": 1.5625,
+    "displayFactor": 1.5625,
     "n": 207,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -2748,48 +3042,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.03282812345004134,
+  "baseValue": 0.04519494105415717,
   "factors": {
    "pokemon": {
     "key": "57",
-    "factor": 0.7869,
-    "displayFactor": 0.7869,
+    "factor": 0.7589,
+    "displayFactor": 0.7589,
     "n": 25,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "GOSSAN",
-    "factor": 0.8645,
-    "displayFactor": 0.8645,
+    "factor": 1.0514,
+    "displayFactor": 1.0514,
     "n": 75,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -2813,48 +3114,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04923923401010367,
+  "baseValue": 0.051494133672028215,
   "factors": {
    "pokemon": {
     "key": "408",
-    "factor": 0.8118,
-    "displayFactor": 0.8118,
+    "factor": 0.7726,
+    "displayFactor": 0.7726,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Hideki Ishikawa",
-    "factor": 1.2569,
-    "displayFactor": 1.2569,
+    "factor": 1.1767,
+    "displayFactor": 1.1767,
     "n": 100,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -2878,48 +3186,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 1.1029950898922578,
+  "baseValue": 1.2816739115579168,
   "factors": {
    "pokemon": {
     "key": "409",
-    "factor": 0.9832,
-    "displayFactor": 0.9832,
+    "factor": 0.9429,
+    "displayFactor": 0.9429,
     "n": 8,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "hncl",
-    "factor": 0.9501,
-    "displayFactor": 0.9501,
+    "factor": 1.1308,
+    "displayFactor": 1.1308,
     "n": 42,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -2943,48 +3258,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.05032403215788249,
+  "baseValue": 0.05847476945517294,
   "factors": {
    "pokemon": {
     "key": "529",
-    "factor": 0.8094,
-    "displayFactor": 0.8094,
+    "factor": 0.7782,
+    "displayFactor": 0.7782,
     "n": 15,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Atsushi Furusawa",
-    "factor": 1.2884,
-    "displayFactor": 1.2884,
+    "factor": 1.3266,
+    "displayFactor": 1.3266,
     "n": 50,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3008,48 +3330,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.19461332721360744,
+  "baseValue": 0.11477192945429568,
   "factors": {
    "pokemon": {
     "key": "1007",
-    "factor": 0.895,
-    "displayFactor": 0.895,
+    "factor": 0.9906,
+    "displayFactor": 0.9906,
     "n": 18,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "kodama",
-    "factor": 0.838,
-    "displayFactor": 0.838,
+    "factor": 0.9269,
+    "displayFactor": 0.9269,
     "n": 95,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -3073,48 +3402,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.0719690262554407,
+  "baseValue": 3.2230439296237847,
   "factors": {
    "pokemon": {
     "key": "491",
-    "factor": 2.4614,
-    "displayFactor": 2.4614,
+    "factor": 2.6229,
+    "displayFactor": 2.6229,
     "n": 29,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -3138,48 +3474,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.03584655643868389,
+  "baseValue": 0.04245962990839463,
   "factors": {
    "pokemon": {
     "key": "629",
-    "factor": 0.76,
-    "displayFactor": 0.76,
+    "factor": 0.7102,
+    "displayFactor": 0.7102,
     "n": 12,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Shiburingaru",
-    "factor": 0.9774,
-    "displayFactor": 0.9774,
+    "factor": 1.0555,
+    "displayFactor": 1.0555,
     "n": 43,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3203,48 +3546,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.025966748165474497,
+  "baseValue": 0.03102083780058032,
   "factors": {
    "pokemon": {
     "key": "630",
-    "factor": 0.7356,
-    "displayFactor": 0.7356,
+    "factor": 0.6936,
+    "displayFactor": 0.6936,
     "n": 12,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Nisota Niso",
-    "factor": 0.7315,
-    "displayFactor": 0.7315,
+    "factor": 0.7896,
+    "displayFactor": 0.7896,
     "n": 50,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3268,48 +3618,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04113417107248119,
+  "baseValue": 0.04381116181711004,
   "factors": {
    "pokemon": {
     "key": "686",
-    "factor": 0.8379,
-    "displayFactor": 0.8379,
+    "factor": 0.7912,
+    "displayFactor": 0.7912,
     "n": 17,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Yuriko Akase",
-    "factor": 1.0173,
-    "displayFactor": 1.0173,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 12,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3333,48 +3690,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04647676119714321,
+  "baseValue": 0.04588024781277996,
   "factors": {
    "pokemon": {
     "key": "687",
-    "factor": 0.624,
-    "displayFactor": 0.624,
+    "factor": 0.6855,
+    "displayFactor": 0.6855,
     "n": 20,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Naoki Saito",
-    "factor": 1.0797,
-    "displayFactor": 1.0797,
+    "factor": 1.0578,
+    "displayFactor": 1.0578,
     "n": 244,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -3398,48 +3762,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.03875498970589288,
+  "baseValue": 0.04439159560169455,
   "factors": {
    "pokemon": {
     "key": "827",
-    "factor": 0.8305,
-    "displayFactor": 0.8305,
+    "factor": 0.8157,
+    "displayFactor": 0.8157,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Krgc",
-    "factor": 0.967,
-    "displayFactor": 0.967,
+    "factor": 0.9608,
+    "displayFactor": 0.9608,
     "n": 15,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3463,48 +3834,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04295244965807806,
+  "baseValue": 0.0454628912648427,
   "factors": {
    "pokemon": {
     "key": "828",
-    "factor": 0.6185,
-    "displayFactor": 0.6185,
+    "factor": 0.7274,
+    "displayFactor": 0.7274,
     "n": 11,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "GOTO minori",
-    "factor": 1.0067,
-    "displayFactor": 1.0067,
+    "factor": 0.9878,
+    "displayFactor": 0.9878,
     "n": 12,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -3528,48 +3906,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.9527366467937216,
+  "baseValue": 0.9665951640434813,
   "factors": {
    "pokemon": {
     "key": "877",
-    "factor": 1.0342,
-    "displayFactor": 1.0342,
+    "factor": 1.0924,
+    "displayFactor": 1.0924,
     "n": 32,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "aky CG Works",
-    "factor": 0.7802,
-    "displayFactor": 0.7802,
+    "factor": 0.7361,
+    "displayFactor": 0.7361,
     "n": 174,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -3593,48 +3978,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.14300731467159872,
+  "baseValue": 0.08959008545777503,
   "factors": {
    "pokemon": {
     "key": "893",
-    "factor": 0.7992,
-    "displayFactor": 0.7992,
+    "factor": 0.8777,
+    "displayFactor": 0.8777,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "matazo",
-    "factor": 0.6896,
-    "displayFactor": 0.6896,
+    "factor": 0.8166,
+    "displayFactor": 0.8166,
     "n": 21,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -3658,48 +4050,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.03867781303849757,
+  "baseValue": 0.03940421084225858,
   "factors": {
    "pokemon": {
     "key": "942",
-    "factor": 0.8634,
-    "displayFactor": 0.8634,
+    "factor": 0.7734,
+    "displayFactor": 0.7734,
     "n": 8,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "ryoma uratsuka",
-    "factor": 0.9283,
-    "displayFactor": 0.9283,
+    "factor": 0.8995,
+    "displayFactor": 0.8995,
     "n": 53,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3723,48 +4122,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.028068304316595873,
+  "baseValue": 0.03514861364205365,
   "factors": {
    "pokemon": {
     "key": "943",
-    "factor": 0.5713,
-    "displayFactor": 0.5713,
+    "factor": 0.6013,
+    "displayFactor": 0.6013,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "kawayoo",
-    "factor": 1.0181,
-    "displayFactor": 1.0181,
+    "factor": 1.032,
+    "displayFactor": 1.032,
     "n": 201,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3788,48 +4194,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.2544463735378808,
+  "baseValue": 0.15259818976716227,
   "factors": {
    "pokemon": {
     "key": "1004",
-    "factor": 0.9683,
-    "displayFactor": 0.9683,
+    "factor": 1.0943,
+    "displayFactor": 1.0943,
     "n": 9,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "IKEDA Saki",
-    "factor": 1.0127,
-    "displayFactor": 1.0127,
+    "factor": 1.1156,
+    "displayFactor": 1.1156,
     "n": 12,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -3853,48 +4266,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.036828925926599136,
+  "baseValue": 0.044892685506690976,
   "factors": {
    "pokemon": {
     "key": "227",
-    "factor": 0.8493,
-    "displayFactor": 0.8493,
+    "factor": 0.7824,
+    "displayFactor": 0.7824,
     "n": 33,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Anesaki Dynamic",
-    "factor": 0.8986,
-    "displayFactor": 0.8986,
+    "factor": 1.013,
+    "displayFactor": 1.013,
     "n": 141,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3918,48 +4338,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04624921530384383,
+  "baseValue": 0.04996642187328687,
   "factors": {
    "pokemon": {
     "key": "410",
-    "factor": 0.7788,
-    "displayFactor": 0.7788,
+    "factor": 0.7523,
+    "displayFactor": 0.7523,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Kurata So",
-    "factor": 1.2306,
-    "displayFactor": 1.2306,
+    "factor": 1.1726,
+    "displayFactor": 1.1726,
     "n": 27,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -3983,48 +4410,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.29176926091594974,
+  "baseValue": 0.1614400883057899,
   "factors": {
    "pokemon": {
     "key": "411",
-    "factor": 0.7453,
-    "displayFactor": 0.7453,
+    "factor": 0.7659,
+    "displayFactor": 0.7659,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Kinu Nishimura",
-    "factor": 1.5087,
-    "displayFactor": 1.5087,
+    "factor": 1.6863,
+    "displayFactor": 1.6863,
     "n": 6,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -4048,48 +4482,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.052897456687831544,
+  "baseValue": 0.05801926716300322,
   "factors": {
    "pokemon": {
     "key": "436",
-    "factor": 0.6845,
-    "displayFactor": 0.6845,
+    "factor": 0.6712,
+    "displayFactor": 0.6712,
     "n": 23,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Saboteri",
-    "factor": 1.6014,
-    "displayFactor": 1.6014,
+    "factor": 1.5261,
+    "displayFactor": 1.5261,
     "n": 45,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -4113,48 +4554,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.050988933490289594,
+  "baseValue": 0.0490740240337666,
   "factors": {
    "pokemon": {
     "key": "437",
-    "factor": 0.8457,
-    "displayFactor": 0.8457,
+    "factor": 0.8281,
+    "displayFactor": 0.8281,
     "n": 28,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Uta",
-    "factor": 0.874,
-    "displayFactor": 0.874,
+    "factor": 0.9366,
+    "displayFactor": 0.9366,
     "n": 57,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -4178,48 +4626,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 1.3136103592371933,
+  "baseValue": 1.1905722979379874,
   "factors": {
    "pokemon": {
     "key": "530",
-    "factor": 0.7282,
-    "displayFactor": 0.7282,
+    "factor": 0.7219,
+    "displayFactor": 0.7219,
     "n": 21,
     "usedFallback": false
    },
    "rarity": {
     "key": "Double rare",
-    "factor": 0.3961,
-    "displayFactor": 0.3961,
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
     "n": 317,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Keisuke Azuma",
-    "factor": 1.3251,
-    "displayFactor": 1.2600799999999999,
+    "factor": 1.2047,
+    "displayFactor": 1.1637600000000001,
     "n": 4,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Double rare | SV+",
+    "factor": 0.3917,
+    "displayFactor": 0.39169999999999994,
+    "n": 317,
     "usedFallback": false
    }
   }
@@ -4243,48 +4698,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04821451213212988,
+  "baseValue": 0.05447952644009551,
   "factors": {
    "pokemon": {
     "key": "731",
-    "factor": 0.9757,
-    "displayFactor": 0.9757,
+    "factor": 0.9653,
+    "displayFactor": 0.9653,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Koji Nakata",
-    "factor": 1.04,
-    "displayFactor": 1.024,
+    "factor": 0.994,
+    "displayFactor": 0.9964,
     "n": 3,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -4308,48 +4770,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.049998231653680995,
+  "baseValue": 0.05617918290572988,
   "factors": {
    "pokemon": {
     "key": "732",
-    "factor": 1.1492,
-    "displayFactor": 1.11936,
+    "factor": 1.0893,
+    "displayFactor": 1.07144,
     "n": 4,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "miki kudo",
-    "factor": 0.9256,
-    "displayFactor": 0.9256,
+    "factor": 0.9257,
+    "displayFactor": 0.9257,
     "n": 63,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -4373,48 +4842,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04169239127743135,
+  "baseValue": 0.04987129375211983,
   "factors": {
    "pokemon": {
     "key": "733",
-    "factor": 0.7479,
-    "displayFactor": 0.7479,
+    "factor": 0.8056,
+    "displayFactor": 0.8056,
     "n": 5,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Masako Tomii",
-    "factor": 0.8081,
-    "displayFactor": 0.8081,
+    "factor": 0.9784,
+    "displayFactor": 0.9784,
     "n": 16,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -4438,48 +4914,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.04173019154208803,
+  "baseValue": 0.050159452708613654,
   "factors": {
    "pokemon": {
     "key": "772",
-    "factor": 0.991,
-    "displayFactor": 0.991,
+    "factor": 1.0046,
+    "displayFactor": 1.0046,
     "n": 5,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Ligton",
-    "factor": 0.8726,
-    "displayFactor": 0.8726,
+    "factor": 0.8815,
+    "displayFactor": 0.8815,
     "n": 20,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -4503,48 +4986,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.18556857286630882,
+  "baseValue": 0.10866255608302886,
   "factors": {
    "pokemon": {
     "key": "773",
-    "factor": 1.2782,
-    "displayFactor": 1.2782,
+    "factor": 1.2249,
+    "displayFactor": 1.2249,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Takumi Wada",
-    "factor": 0.5595,
-    "displayFactor": 0.5595,
+    "factor": 0.7097,
+    "displayFactor": 0.7097,
     "n": 20,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -4568,48 +5058,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.038315575214037265,
+  "baseValue": 0.04082452179588133,
   "factors": {
    "pokemon": {
     "key": "962",
-    "factor": 0.7511,
-    "displayFactor": 0.7511,
+    "factor": 0.754,
+    "displayFactor": 0.754,
     "n": 8,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Wintr Wandr",
-    "factor": 1.0571,
-    "displayFactor": 1.0571,
+    "factor": 0.9559,
+    "displayFactor": 0.9559,
     "n": 10,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -4631,48 +5128,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.06082643954242816,
+  "baseValue": 0.0711939032908272,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "AYUMI ODASHIMA",
-    "factor": 1.1641,
-    "displayFactor": 1.1641,
+    "factor": 1.3034,
+    "displayFactor": 1.3034,
     "n": 76,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Antique Armor Fossil",
-    "factor": 1.1633,
-    "displayFactor": 1.03266,
+    "factor": 1.0451,
+    "displayFactor": 1.00902,
     "n": 1,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -4694,48 +5198,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.06166050146399072,
+  "baseValue": 0.07183315401312695,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Common",
-    "factor": 0.0305,
-    "displayFactor": 0.03049999999999997,
+    "factor": 0.115,
+    "displayFactor": 0.11499999999999999,
     "n": 5347,
     "usedFallback": false
    },
    "illustrator": {
     "key": "AYUMI ODASHIMA",
-    "factor": 1.1641,
-    "displayFactor": 1.1641,
+    "factor": 1.3034,
+    "displayFactor": 1.3034,
     "n": 76,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Antique Skull Fossil",
-    "factor": 1.2341,
-    "displayFactor": 1.04682,
+    "factor": 1.0904,
+    "displayFactor": 1.01808,
     "n": 1,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Common | SV+",
+    "factor": 0.1544,
+    "displayFactor": 0.15439999999999998,
+    "n": 1471,
     "usedFallback": false
    }
   }
@@ -4757,48 +5268,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.07183706381543814,
+  "baseValue": 0.06015105683859341,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Toyste Beach",
-    "factor": 0.9547,
-    "displayFactor": 0.9547,
+    "factor": 0.9536,
+    "displayFactor": 0.9536,
     "n": 300,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Backtrack Badge",
-    "factor": 1.2014,
-    "displayFactor": 1.04028,
+    "factor": 1.2156,
+    "displayFactor": 1.04312,
     "n": 1,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -4820,48 +5338,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.08377538003070033,
+  "baseValue": 0.07024696817314834,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Toyste Beach",
-    "factor": 0.9547,
-    "displayFactor": 0.9547,
+    "factor": 0.9536,
+    "displayFactor": 0.9536,
     "n": 300,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Dark Bell",
-    "factor": 1.5329,
-    "displayFactor": 1.21316,
+    "factor": 1.5455,
+    "displayFactor": 1.2182,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -4883,48 +5408,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.07762094137320125,
+  "baseValue": 0.06649558854895772,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Oswaldo KATO",
-    "factor": 1.017,
-    "displayFactor": 1.017,
+    "factor": 1.046,
+    "displayFactor": 1.046,
     "n": 93,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Fossil Quarry",
-    "factor": 1.2759,
-    "displayFactor": 1.05518,
+    "factor": 1.2564,
+    "displayFactor": 1.05128,
     "n": 1,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -4946,48 +5478,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.1064597284295445,
+  "baseValue": 0.10038092066147443,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "akagi",
-    "factor": 1.2393,
-    "displayFactor": 1.2393,
+    "factor": 1.3603,
+    "displayFactor": 1.3603,
     "n": 30,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Gladion's Final Battle",
-    "factor": 1.3127,
-    "displayFactor": 1.18762,
+    "factor": 1.3672,
+    "displayFactor": 1.22032,
     "n": 3,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -5009,48 +5548,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.10935045130490798,
+  "baseValue": 0.09751036454539715,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "nagimiso",
-    "factor": 0.9839,
-    "displayFactor": 0.9839,
+    "factor": 1.0302,
+    "displayFactor": 1.0302,
     "n": 152,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Gwynn",
-    "factor": 1.8942,
-    "displayFactor": 1.5365199999999999,
+    "factor": 1.9421,
+    "displayFactor": 1.5652599999999999,
     "n": 3,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -5072,48 +5618,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.07323900375441457,
+  "baseValue": 0.06869741257319914,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "GIDORA",
-    "factor": 1.0533,
-    "displayFactor": 1.0533,
+    "factor": 1.1637,
+    "displayFactor": 1.1637,
     "n": 78,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Jett",
-    "factor": 0.8065,
-    "displayFactor": 0.9613,
+    "factor": 0.8812,
+    "displayFactor": 0.97624,
     "n": 1,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -5135,48 +5688,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.16217281055500815,
+  "baseValue": 0.13365358713173925,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "En Morikura",
-    "factor": 1.584,
-    "displayFactor": 1.584,
+    "factor": 1.6151,
+    "displayFactor": 1.6151,
     "n": 20,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Misty's Vitality",
-    "factor": 2.0386,
-    "displayFactor": 1.41544,
+    "factor": 1.9212,
+    "displayFactor": 1.36848,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -5198,48 +5758,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.08198040929750362,
+  "baseValue": 0.07344145084848594,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Teeziro",
-    "factor": 1.0162,
-    "displayFactor": 1.0162,
+    "factor": 1.0843,
+    "displayFactor": 1.0843,
     "n": 91,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Rust Syndicate Grunt",
-    "factor": 1.2883,
-    "displayFactor": 1.11532,
+    "factor": 1.3002,
+    "displayFactor": 1.12008,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -5261,48 +5828,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.06190547418777998,
+  "baseValue": 0.05608964263807101,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Uncommon",
-    "factor": 0.0436,
-    "displayFactor": 0.04359999999999997,
+    "factor": 0.1704,
+    "displayFactor": 0.1704,
     "n": 4745,
     "usedFallback": false
    },
    "illustrator": {
     "key": "inose yukie",
-    "factor": 0.8271,
-    "displayFactor": 0.8271,
+    "factor": 0.8798,
+    "displayFactor": 0.8798,
     "n": 31,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Tremendous Bomb",
-    "factor": 1.0869,
-    "displayFactor": 1.03476,
+    "factor": 1.1357,
+    "displayFactor": 1.0542799999999999,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Uncommon | SV+",
+    "factor": 0.1164,
+    "displayFactor": 0.11640000000000006,
+    "n": 1018,
     "usedFallback": false
    }
   }
@@ -5324,48 +5898,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.280269999850214,
+  "baseValue": 0.13099976448372086,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Unknown",
-    "factor": 1.023,
-    "displayFactor": 1.023,
+    "factor": 1.0195,
+    "displayFactor": 1.0195,
     "n": 389,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Shadowy Darkness Energy",
-    "factor": 1.0348,
-    "displayFactor": 1.00696,
+    "factor": 1.378,
+    "displayFactor": 1.0756,
     "n": 1,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -5387,48 +5968,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 0.2883694844331579,
+  "baseValue": 0.1343246934260838,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Rare",
-    "factor": 0.164,
-    "displayFactor": 0.16400000000000003,
+    "factor": 0.4998,
+    "displayFactor": 0.4998,
     "n": 3805,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Unknown",
-    "factor": 1.023,
-    "displayFactor": 1.023,
+    "factor": 1.0195,
+    "displayFactor": 1.0195,
     "n": 389,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Voltaic Lightning Energy",
-    "factor": 1.1803,
-    "displayFactor": 1.03606,
+    "factor": 1.5145,
+    "displayFactor": 1.1029,
     "n": 1,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Rare | SV+",
+    "factor": 0.0784,
+    "displayFactor": 0.07840000000000003,
+    "n": 402,
     "usedFallback": false
    }
   }
@@ -5452,48 +6040,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 10.960499125431966,
+  "baseValue": 10.97126674206348,
   "factors": {
    "pokemon": {
     "key": "753",
-    "factor": 0.8359,
-    "displayFactor": 0.8359,
+    "factor": 0.7935,
+    "displayFactor": 0.7935,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Jiro Sasumo",
-    "factor": 1.0106,
-    "displayFactor": 1.0106,
+    "factor": 1.0935,
+    "displayFactor": 1.0935,
     "n": 35,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5517,48 +6112,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 11.040707310278655,
+  "baseValue": 11.959100757271544,
   "factors": {
    "pokemon": {
     "key": "936",
-    "factor": 0.6429,
-    "displayFactor": 0.6429,
+    "factor": 0.7669,
+    "displayFactor": 0.7669,
     "n": 11,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Iwamoto05",
-    "factor": 1.3236,
-    "displayFactor": 1.3236,
+    "factor": 1.2333,
+    "displayFactor": 1.2333,
     "n": 5,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5582,48 +6184,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 9.233854692674425,
+  "baseValue": 9.89475989881827,
   "factors": {
    "pokemon": {
     "key": "118",
-    "factor": 0.7268,
-    "displayFactor": 0.7268,
+    "factor": 0.8155,
+    "displayFactor": 0.8155,
     "n": 19,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Gemi",
-    "factor": 0.9792,
-    "displayFactor": 0.9792,
+    "factor": 0.9596,
+    "displayFactor": 0.9596,
     "n": 22,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5647,48 +6256,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 9.934258371992556,
+  "baseValue": 11.978180083193571,
   "factors": {
    "pokemon": {
     "key": "730",
-    "factor": 1.001,
-    "displayFactor": 1.001,
+    "factor": 1.1437,
+    "displayFactor": 1.1437,
     "n": 6,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "satoma",
-    "factor": 0.7649,
-    "displayFactor": 0.7649,
+    "factor": 0.8283,
+    "displayFactor": 0.8283,
     "n": 26,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5712,48 +6328,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 8.230898925811756,
+  "baseValue": 9.029372737296889,
   "factors": {
    "pokemon": {
     "key": "310",
-    "factor": 0.6584,
-    "displayFactor": 0.6584,
+    "factor": 0.6816,
+    "displayFactor": 0.6816,
     "n": 30,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "HICO KIM",
-    "factor": 0.9392,
-    "displayFactor": 0.96352,
+    "factor": 1.0795,
+    "displayFactor": 1.0476999999999999,
     "n": 3,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5777,48 +6400,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 19.44567991144513,
+  "baseValue": 16.76531020817141,
   "factors": {
    "pokemon": {
     "key": "80",
-    "factor": 1.4271,
-    "displayFactor": 1.4271,
+    "factor": 1.3577,
+    "displayFactor": 1.3577,
     "n": 26,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Mékayu",
-    "factor": 1.0502,
-    "displayFactor": 1.0502,
+    "factor": 0.9766,
+    "displayFactor": 0.9766,
     "n": 14,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5842,48 +6472,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 7.092449907246093,
+  "baseValue": 6.445989978162402,
   "factors": {
    "pokemon": {
     "key": "781",
-    "factor": 0.7827,
-    "displayFactor": 0.7827,
+    "factor": 0.7287,
+    "displayFactor": 0.7287,
     "n": 15,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Nakamura Ippan",
-    "factor": 0.6984,
-    "displayFactor": 0.6984,
+    "factor": 0.6996,
+    "displayFactor": 0.6996,
     "n": 9,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5907,48 +6544,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 7.132478357275083,
+  "baseValue": 8.204986894693,
   "factors": {
    "pokemon": {
     "key": "828",
-    "factor": 0.6185,
-    "displayFactor": 0.6185,
+    "factor": 0.7274,
+    "displayFactor": 0.7274,
     "n": 11,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Jerky",
-    "factor": 0.8888,
-    "displayFactor": 0.8888,
+    "factor": 0.8921,
+    "displayFactor": 0.8921,
     "n": 45,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -5972,48 +6616,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 9.764796573200083,
+  "baseValue": 9.72098597388401,
   "factors": {
    "pokemon": {
     "key": "411",
-    "factor": 0.7453,
-    "displayFactor": 0.7453,
+    "factor": 0.7659,
+    "displayFactor": 0.7659,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Yoriyuki Ikegami",
-    "factor": 1.0098,
-    "displayFactor": 1.0098,
+    "factor": 1.0038,
+    "displayFactor": 1.0038,
     "n": 24,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -6037,48 +6688,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 8.981804373929233,
+  "baseValue": 9.429328736763582,
   "factors": {
    "pokemon": {
     "key": "733",
-    "factor": 0.7479,
-    "displayFactor": 0.7479,
+    "factor": 0.8056,
+    "displayFactor": 0.8056,
     "n": 5,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "miki kudo",
-    "factor": 0.9256,
-    "displayFactor": 0.9256,
+    "factor": 0.9257,
+    "displayFactor": 0.9257,
     "n": 63,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -6102,48 +6760,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 15.264132800935306,
+  "baseValue": 15.693858512581928,
   "factors": {
    "pokemon": {
     "key": "773",
-    "factor": 1.2782,
-    "displayFactor": 1.2782,
+    "factor": 1.2249,
+    "displayFactor": 1.2249,
     "n": 10,
     "usedFallback": false
    },
    "rarity": {
     "key": "Illustration rare",
-    "factor": 8.2004,
-    "displayFactor": 8.2004,
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
     "n": 491,
     "usedFallback": false
    },
    "illustrator": {
     "key": "DOM",
-    "factor": 0.9204,
-    "displayFactor": 0.9204,
+    "factor": 1.0133,
+    "displayFactor": 1.0133,
     "n": 46,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Illustration rare | SV+",
+    "factor": 1.9909,
+    "displayFactor": 1.9909,
+    "n": 491,
     "usedFallback": false
    }
   }
@@ -6167,48 +6832,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 2.7594160082014456,
+  "baseValue": 3.214824227883457,
   "factors": {
    "pokemon": {
     "key": "754",
-    "factor": 0.7497,
-    "displayFactor": 0.7497,
+    "factor": 0.7381,
+    "displayFactor": 0.7381,
     "n": 8,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6232,48 +6904,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.8360188925537506,
+  "baseValue": 4.962266959528008,
   "factors": {
    "pokemon": {
     "key": "321",
-    "factor": 1.0422,
-    "displayFactor": 1.0422,
+    "factor": 1.1393,
+    "displayFactor": 1.1393,
     "n": 20,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6297,48 +6976,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 5.642027348125226,
+  "baseValue": 6.72259921963234,
   "factors": {
    "pokemon": {
     "key": "807",
-    "factor": 1.2643,
-    "displayFactor": 1.2643,
+    "factor": 1.3092,
+    "displayFactor": 1.3092,
     "n": 28,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6362,48 +7048,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 5.71610601140046,
+  "baseValue": 6.977289810293632,
   "factors": {
    "pokemon": {
     "key": "609",
-    "factor": 1.2809,
-    "displayFactor": 1.2809,
+    "factor": 1.3588,
+    "displayFactor": 1.3588,
     "n": 24,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6427,48 +7120,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.61885796887243,
+  "baseValue": 4.106838862581374,
   "factors": {
    "pokemon": {
     "key": "409",
-    "factor": 0.9832,
-    "displayFactor": 0.9832,
+    "factor": 0.9429,
+    "displayFactor": 0.9429,
     "n": 8,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6492,48 +7192,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 10.984169987088057,
+  "baseValue": 13.468305448498064,
   "factors": {
    "pokemon": {
     "key": "491",
-    "factor": 2.4614,
-    "displayFactor": 2.4614,
+    "factor": 2.6229,
+    "displayFactor": 2.6229,
     "n": 29,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6557,48 +7264,55 @@
    "updated": "2026-07-21T08:02:25.039Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.8065733435800113,
+  "baseValue": 4.757992123750019,
   "factors": {
    "pokemon": {
     "key": "877",
-    "factor": 1.0342,
-    "displayFactor": 1.0342,
+    "factor": 1.0924,
+    "displayFactor": 1.0924,
     "n": 32,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6622,48 +7336,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 4.696961251672903,
+  "baseValue": 4.975107915771027,
   "factors": {
    "pokemon": {
     "key": "530",
-    "factor": 0.7282,
-    "displayFactor": 0.7282,
+    "factor": 0.7219,
+    "displayFactor": 0.7219,
     "n": 21,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Keisuke Azuma",
-    "factor": 1.3251,
-    "displayFactor": 1.2600799999999999,
+    "factor": 1.2047,
+    "displayFactor": 1.1637600000000001,
     "n": 4,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6685,48 +7406,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.435767678684071,
+  "baseValue": 2.723641595134833,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Toyste Beach",
-    "factor": 0.9547,
-    "displayFactor": 0.9547,
+    "factor": 0.9536,
+    "displayFactor": 0.9536,
     "n": 300,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Brave Bangle",
-    "factor": 2.3291,
-    "displayFactor": 1.53164,
+    "factor": 2.153,
+    "displayFactor": 1.4612,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6748,48 +7476,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 2.88589756396234,
+  "baseValue": 2.435709937311338,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Ayaka Yoshida",
-    "factor": 0.8365,
-    "displayFactor": 0.8365,
+    "factor": 0.8852,
+    "displayFactor": 0.8852,
     "n": 137,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Crushing Hammer",
-    "factor": 1.4683,
-    "displayFactor": 1.4683,
+    "factor": 1.4077,
+    "displayFactor": 1.4077,
     "n": 11,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6811,48 +7546,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 2.721354833428461,
+  "baseValue": 2.270695449762697,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Toyste Beach",
-    "factor": 0.9547,
-    "displayFactor": 0.9547,
+    "factor": 0.9536,
+    "displayFactor": 0.9536,
     "n": 300,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Dark Bell",
-    "factor": 1.5329,
-    "displayFactor": 1.21316,
+    "factor": 1.5455,
+    "displayFactor": 1.2182,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6874,48 +7616,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.0618278225498448,
+  "baseValue": 2.6098758897927317,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Studio Bora Inc.",
-    "factor": 1.2974,
-    "displayFactor": 1.2974,
+    "factor": 1.336,
+    "displayFactor": 1.336,
     "n": 115,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Energy Switch",
-    "factor": 1.0044,
-    "displayFactor": 1.0044,
+    "factor": 0.9994,
+    "displayFactor": 0.9994,
     "n": 21,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -6937,48 +7686,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.4582319581367877,
+  "baseValue": 3.244759250351924,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "akagi",
-    "factor": 1.2393,
-    "displayFactor": 1.2393,
+    "factor": 1.3603,
+    "displayFactor": 1.3603,
     "n": 30,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Gladion's Final Battle",
-    "factor": 1.3127,
-    "displayFactor": 1.18762,
+    "factor": 1.3672,
+    "displayFactor": 1.22032,
     "n": 3,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -7000,48 +7756,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 3.552134040897735,
+  "baseValue": 3.151970068404614,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "nagimiso",
-    "factor": 0.9839,
-    "displayFactor": 0.9839,
+    "factor": 1.0302,
+    "displayFactor": 1.0302,
     "n": 152,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Gwynn",
-    "factor": 1.8942,
-    "displayFactor": 1.5365199999999999,
+    "factor": 1.9421,
+    "displayFactor": 1.5652599999999999,
     "n": 3,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -7063,48 +7826,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 2.777715563428334,
+  "baseValue": 2.4934055428998403,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Studio Bora Inc.",
-    "factor": 1.2974,
-    "displayFactor": 1.2974,
+    "factor": 1.336,
+    "displayFactor": 1.336,
     "n": 115,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Iron Defender",
-    "factor": 0.778,
-    "displayFactor": 0.9112,
+    "factor": 0.887,
+    "displayFactor": 0.9548,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -7126,48 +7896,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 5.268012651125187,
+  "baseValue": 4.32028029161989,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "En Morikura",
-    "factor": 1.584,
-    "displayFactor": 1.584,
+    "factor": 1.6151,
+    "displayFactor": 1.6151,
     "n": 20,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Misty's Vitality",
-    "factor": 2.0386,
-    "displayFactor": 1.41544,
+    "factor": 1.9212,
+    "displayFactor": 1.36848,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -7189,48 +7966,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 2.6630471029370284,
+  "baseValue": 2.3739553834491667,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Teeziro",
-    "factor": 1.0162,
-    "displayFactor": 1.0162,
+    "factor": 1.0843,
+    "displayFactor": 1.0843,
     "n": 91,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Rust Syndicate Grunt",
-    "factor": 1.2883,
-    "displayFactor": 1.11532,
+    "factor": 1.3002,
+    "displayFactor": 1.12008,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -7252,48 +8036,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 2.010934015875065,
+  "baseValue": 1.8130675192010273,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 1.4163,
-    "displayFactor": 1.4163,
+    "factor": 1.4308,
+    "displayFactor": 1.4308,
     "n": 1389,
     "usedFallback": false
    },
    "illustrator": {
     "key": "inose yukie",
-    "factor": 0.8271,
-    "displayFactor": 0.8271,
+    "factor": 0.8798,
+    "displayFactor": 0.8798,
     "n": 31,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Tremendous Bomb",
-    "factor": 1.0869,
-    "displayFactor": 1.03476,
+    "factor": 1.1357,
+    "displayFactor": 1.0542799999999999,
     "n": 2,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Ultra Rare | SV+",
+    "factor": 0.4481,
+    "displayFactor": 0.44809999999999994,
+    "n": 409,
     "usedFallback": false
    }
   }
@@ -7317,48 +8108,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 76.75519195039894,
+  "baseValue": 88.77500892377844,
   "factors": {
    "pokemon": {
     "key": "807",
-    "factor": 1.2643,
-    "displayFactor": 1.2643,
+    "factor": 1.3092,
+    "displayFactor": 1.3092,
     "n": 28,
     "usedFallback": false
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 15.9475,
-    "displayFactor": 15.9475,
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
     "n": 222,
     "usedFallback": false
    },
    "illustrator": {
     "key": "GIDORA",
-    "factor": 1.0533,
-    "displayFactor": 1.0533,
+    "factor": 1.1637,
+    "displayFactor": 1.1637,
     "n": 78,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Special illustration rare | SV+",
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
+    "n": 222,
     "usedFallback": false
    }
   }
@@ -7382,48 +8180,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 69.50900791886714,
+  "baseValue": 74.0463627044513,
   "factors": {
    "pokemon": {
     "key": "609",
-    "factor": 1.2809,
-    "displayFactor": 1.2809,
+    "factor": 1.3588,
+    "displayFactor": 1.3588,
     "n": 24,
     "usedFallback": false
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 15.9475,
-    "displayFactor": 15.9475,
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
     "n": 222,
     "usedFallback": false
    },
    "illustrator": {
     "key": "REND",
-    "factor": 0.9415,
-    "displayFactor": 0.9415,
+    "factor": 0.9352,
+    "displayFactor": 0.9352,
     "n": 21,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Special illustration rare | SV+",
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
+    "n": 222,
     "usedFallback": false
    }
   }
@@ -7447,48 +8252,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 137.15902144287887,
+  "baseValue": 163.6108490561505,
   "factors": {
    "pokemon": {
     "key": "491",
-    "factor": 2.4614,
-    "displayFactor": 2.4614,
+    "factor": 2.6229,
+    "displayFactor": 2.6229,
     "n": 29,
     "usedFallback": false
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 15.9475,
-    "displayFactor": 15.9475,
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
     "n": 222,
     "usedFallback": false
    },
    "illustrator": {
     "key": "AKIRA EGAWA",
-    "factor": 0.9668,
-    "displayFactor": 0.9668,
+    "factor": 1.0705,
+    "displayFactor": 1.0705,
     "n": 85,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Special illustration rare | SV+",
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
+    "n": 222,
     "usedFallback": false
    }
   }
@@ -7512,48 +8324,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 50.8364519189117,
+  "baseValue": 58.895392119457604,
   "factors": {
    "pokemon": {
     "key": "877",
-    "factor": 1.0342,
-    "displayFactor": 1.0342,
+    "factor": 1.0924,
+    "displayFactor": 1.0924,
     "n": 32,
     "usedFallback": false
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 15.9475,
-    "displayFactor": 15.9475,
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
     "n": 222,
     "usedFallback": false
    },
    "illustrator": {
     "key": "NC Empire",
-    "factor": 1.034,
-    "displayFactor": 1.034,
+    "factor": 1.0908,
+    "displayFactor": 1.0908,
     "n": 39,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "EX",
-    "factor": 1.1717,
-    "displayFactor": 1.1717,
+    "factor": 1.5598,
+    "displayFactor": 1.5598,
     "n": 1050,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Special illustration rare | SV+",
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
+    "n": 222,
     "usedFallback": false
    }
   }
@@ -7575,48 +8394,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 28.919556989618304,
+  "baseValue": 23.783046204623243,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 15.9475,
-    "displayFactor": 15.9475,
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
     "n": 222,
     "usedFallback": false
    },
    "illustrator": {
     "key": "DOM",
-    "factor": 0.9204,
-    "displayFactor": 0.9204,
+    "factor": 1.0133,
+    "displayFactor": 1.0133,
     "n": 46,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Gladion's Final Battle",
-    "factor": 1.3127,
-    "displayFactor": 1.18762,
+    "factor": 1.3672,
+    "displayFactor": 1.22032,
     "n": 3,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Special illustration rare | SV+",
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
+    "n": 222,
     "usedFallback": false
    }
   }
@@ -7638,48 +8464,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 43.891340211887695,
+  "baseValue": 31.84533029153207,
   "factors": {
    "pokemon": {
     "key": "none",
-    "factor": 1.024,
-    "displayFactor": 1.024,
+    "factor": 0.9776,
+    "displayFactor": 0.9776,
     "n": 3086,
     "usedFallback": false
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 15.9475,
-    "displayFactor": 15.9475,
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
     "n": 222,
     "usedFallback": false
    },
    "illustrator": {
     "key": "Naoki Saito",
-    "factor": 1.0797,
-    "displayFactor": 1.0797,
+    "factor": 1.0578,
+    "displayFactor": 1.0578,
     "n": 244,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Standard",
-    "factor": 0.6219,
-    "displayFactor": 0.6219,
+    "factor": 0.6351,
+    "displayFactor": 0.6351,
     "n": 16582,
     "usedFallback": false
    },
    "cardName": {
     "key": "Gwynn",
-    "factor": 1.8942,
-    "displayFactor": 1.5365199999999999,
+    "factor": 1.9421,
+    "displayFactor": 1.5652599999999999,
     "n": 3,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Special illustration rare | SV+",
+    "factor": 2.5117,
+    "displayFactor": 2.5117,
+    "n": 222,
     "usedFallback": false
    }
   }
@@ -7703,48 +8536,55 @@
    "updated": "2026-07-21T08:02:31.372Z"
   },
   "priceFlagged": false,
-  "baseValue": 177.64682686594765,
+  "baseValue": 221.65184266030903,
   "factors": {
    "pokemon": {
     "key": "491",
-    "factor": 2.4614,
-    "displayFactor": 2.4614,
+    "factor": 2.6229,
+    "displayFactor": 2.6229,
     "n": 29,
     "usedFallback": false
    },
    "rarity": {
     "key": "Mega Hyper Rare",
-    "factor": 22.9058,
-    "displayFactor": 22.9058,
+    "factor": 3.2483,
+    "displayFactor": 3.2483,
     "n": 8,
     "usedFallback": false
    },
    "illustrator": {
     "key": "5ban Graphics",
-    "factor": 0.8718,
-    "displayFactor": 0.8718,
+    "factor": 0.8671,
+    "displayFactor": 0.8671,
     "n": 1443,
     "usedFallback": false
    },
    "set": {
     "key": "me05",
-    "factor": 2.6051,
-    "displayFactor": 2.6051,
+    "factor": 4.9104,
+    "displayFactor": 4.9104,
     "n": 120,
     "usedFallback": false
    },
    "cardType": {
     "key": "Mega EX",
-    "factor": 1.4206,
-    "displayFactor": 1.4206,
+    "factor": 1.8389,
+    "displayFactor": 1.8389,
     "n": 128,
     "usedFallback": false
    },
    "cardName": {
     "key": "n/a",
-    "factor": 0.9766,
-    "displayFactor": 0.9766,
+    "factor": 1.0229,
+    "displayFactor": 1.0229,
     "n": 16169,
+    "usedFallback": false
+   },
+   "rarityEra": {
+    "key": "Mega Hyper Rare | SV+",
+    "factor": 3.2483,
+    "displayFactor": 3.2483,
+    "n": 8,
     "usedFallback": false
    }
   }

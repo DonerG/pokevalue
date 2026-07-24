@@ -101,7 +101,7 @@ async function ingestSet(setId) {
     const dexIds = card.dexId ?? []
     const cm = card.pricing?.cardmarket
     const priceFlagged = priceExclusions[card.id] === 'wrong'
-    const { baseValue, breakdown } = computeCardPricing(card)
+    const { baseValue, breakdown } = computeCardPricing(card, set.releaseDate)
     return {
       id: card.id,
       localId: String(card.localId),

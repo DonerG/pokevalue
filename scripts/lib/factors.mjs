@@ -7,7 +7,7 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { effectiveRarity, mapCardType } from './cardMapping.mjs'
+import { effectiveRarity, mapCardType, eraBucket } from './cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
@@ -53,22 +53,29 @@ function lookup(table, key) {
   }
 }
 
-/** Computes a card's data-derived base value + the per-factor breakdown for display. */
-export function computeCardPricing(card) {
+/**
+ * Computes a card's data-derived base value + the per-factor breakdown for
+ * display. `releaseDate` is the card's SET's release date (the per-card API
+ * response doesn't carry it) — pass `set.releaseDate` from the already-
+ * loaded set metadata; only used to bucket the rarity x era factor.
+ */
+export function computeCardPricing(card, releaseDate) {
   const data = loadFactors()
   const pokemonKey = card.dexId?.[0] != null ? String(card.dexId[0]) : 'none'
-  const rarityKey = effectiveRarity(card, loadPromoStyles()) ?? 'None'
+  const rarityValue = effectiveRarity(card, loadPromoStyles()) ?? 'None'
   const illustratorKey = card.illustrator ?? 'Unknown'
   const setKey = card.set?.id ?? 'unknown'
   const cardTypeKey = mapCardType(card) ?? 'Standard'
   const cardNameKey = card.dexId?.length ? 'n/a' : (card.name ?? 'n/a')
+  const rarityEraKey = `${rarityValue} | ${eraBucket(releaseDate)}`
 
   const pokemon = lookup(data.factors.pokemon, pokemonKey)
-  const rarity = lookup(data.factors.rarity, rarityKey)
+  const rarity = lookup(data.factors.rarity, rarityValue)
   const illustrator = lookup(data.factors.illustrator, illustratorKey)
   const set = lookup(data.factors.set, setKey)
   const cardType = lookup(data.factors.cardType, cardTypeKey)
   const cardName = lookup(data.factors.cardName, cardNameKey)
+  const rarityEra = lookup(data.factors.rarityEra, rarityEraKey)
 
   const baseValue =
     data.anchor *
@@ -77,10 +84,11 @@ export function computeCardPricing(card) {
     illustrator.displayFactor *
     set.displayFactor *
     cardType.displayFactor *
-    cardName.displayFactor
+    cardName.displayFactor *
+    rarityEra.displayFactor
 
   return {
     baseValue,
-    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName },
+    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName, rarityEra },
   }
 }
