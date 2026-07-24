@@ -722,8 +722,8 @@ details.panel[open] summary {
 
 .card-tile-prices {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  justify-content: space-between;
+  gap: 8px;
   font-variant-numeric: tabular-nums;
   color: var(--text-2);
   font-size: 13px;
@@ -773,6 +773,7 @@ details.panel[open] summary {
   }
 
   .card-tile-prices {
+    flex-direction: column;
     gap: 0;
     font-size: 9px;
   }
