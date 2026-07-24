@@ -729,6 +729,49 @@ details.panel[open] summary {
   font-size: 13px;
 }
 
+/* Phones only — four columns instead of the auto-fill grid's one, since a
+   single ~200px-min column leaves a phone screen showing just one card at a
+   time. Desktop/tablet keep the fluid auto-fill grid untouched. Text is
+   trimmed to what still fits legibly at ~85px per tile; tap through to the
+   card page for the rest. Placed after the rules it overrides so it wins the
+   cascade at equal specificity regardless of source order elsewhere. */
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .card-tile {
+    border-radius: 8px;
+  }
+
+  .card-tile-body {
+    padding: 4px 5px 6px;
+    gap: 3px;
+  }
+
+  .card-tile-body strong {
+    font-size: 10.5px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-tile-body .muted,
+  .card-tile-prices {
+    display: none;
+  }
+
+  .card-tile-body .chip {
+    align-self: stretch;
+    justify-content: center;
+    font-size: 9px;
+    padding: 2px 4px;
+    gap: 3px;
+  }
+}
+
 /* ---------- Verdict chips ---------- */
 
 .chip {
