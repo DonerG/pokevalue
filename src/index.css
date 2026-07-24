@@ -758,9 +758,14 @@ details.panel[open] summary {
     text-overflow: ellipsis;
   }
 
-  .card-tile-body .muted,
-  .card-tile-prices {
+  .card-tile-body .muted {
     display: none;
+  }
+
+  .card-tile-prices {
+    flex-direction: column;
+    gap: 0;
+    font-size: 9px;
   }
 
   .card-tile-body .chip {
@@ -769,6 +774,13 @@ details.panel[open] summary {
     font-size: 9px;
     padding: 2px 4px;
     gap: 3px;
+  }
+
+  /* Keep the icon + percentage, drop the spelled-out "undervalued" /
+     "overvalued" / "fair" word — no room for it at ~85px, and the color +
+     arrow + percentage already carry the same information. */
+  .card-tile-body .chip-label {
+    display: none;
   }
 }
 

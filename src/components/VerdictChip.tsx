@@ -20,7 +20,9 @@ export function VerdictChip({ market, fair, config }: Props) {
   const { icon, label } = CHIP[v.kind]
   return (
     <span className={`chip chip-${v.kind}`}>
-      <span aria-hidden="true">{icon}</span> {label} {formatPercent(v.deviation)}
+      <span aria-hidden="true">{icon}</span>
+      <span className="chip-label">{label}</span>
+      <span className="chip-value">{formatPercent(v.deviation)}</span>
     </span>
   )
 }
