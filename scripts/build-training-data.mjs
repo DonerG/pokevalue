@@ -3,7 +3,10 @@
  * a compact training dataset: one row per card that has a real Cardmarket
  * price, with just the fields the pricing model needs. Cards without a price
  * (mostly digital-only "TCG Pocket" cards and a handful of obscure promos)
- * are dropped — there's no target to learn from for those.
+ * are dropped — there's no target to learn from for those. Also drops cards
+ * whose Cardmarket price is known to be wrong: either a detected shared-
+ * product-ID mapping bug, or hand-flagged via #/admin/price-audit and
+ * recorded in src/data/price-exclusions.json.
  *
  * Usage: node scripts/build-training-data.mjs
  */
@@ -17,6 +20,7 @@ const CACHE_DIR = join(HERE, '.cache', 'cards')
 const SETS_CACHE_DIR = join(HERE, '.cache', 'sets')
 const OUT_FILE = join(HERE, 'training-data.json')
 const PROMO_STYLES_FILE = join(HERE, '..', 'src', 'data', 'promo-styles.json')
+const PRICE_EXCLUSIONS_FILE = join(HERE, '..', 'src', 'data', 'price-exclusions.json')
 
 let promoStyles = {}
 try {
@@ -25,6 +29,17 @@ try {
   // no tags yet
 }
 console.log(`${Object.keys(promoStyles).length} promo cards tagged with a style.`)
+
+// Cards hand-flagged via #/admin/price-audit as having an obviously wrong
+// Cardmarket price (see the module docstring below and analysis/
+// fit_factors.py for why most such errors can't be caught automatically).
+let priceExclusions = {}
+try {
+  priceExclusions = JSON.parse(await readFile(PRICE_EXCLUSIONS_FILE, 'utf8'))
+} catch {
+  // none flagged yet
+}
+console.log(`${Object.keys(priceExclusions).length} cards flagged with a bad price.`)
 
 // The per-card endpoint's embedded `set` object omits releaseDate, so pull
 // it from the separately-cached set details (fetch-all-sets.mjs) instead.
@@ -83,12 +98,15 @@ for (const r of rawRows) {
   byProduct.get(r.idProduct).add(r.name)
 }
 const badProducts = new Set([...byProduct].filter(([, names]) => names.size > 1).map(([id]) => id))
-const rows = rawRows
+const afterProductFilter = rawRows
   .filter((r) => !(r.idProduct != null && badProducts.has(r.idProduct)))
   .map(({ idProduct, ...rest }) => rest)
 console.log(
-  `Dropped ${rawRows.length - rows.length} cards sharing a Cardmarket product ID with a different Pokémon (${badProducts.size} bad product IDs).`,
+  `Dropped ${rawRows.length - afterProductFilter.length} cards sharing a Cardmarket product ID with a different Pokémon (${badProducts.size} bad product IDs).`,
 )
+
+const rows = afterProductFilter.filter((r) => !priceExclusions[r.id])
+console.log(`Dropped ${afterProductFilter.length - rows.length} cards hand-flagged as having a bad price.`)
 
 rows.sort((a, b) => (a.releaseDate ?? '').localeCompare(b.releaseDate ?? '') || a.id.localeCompare(b.id))
 

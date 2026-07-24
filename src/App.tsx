@@ -12,6 +12,9 @@ const AdminArtworkPage = lazy(() =>
 const AdminPromoStylePage = lazy(() =>
   import('./pages/AdminPromoStylePage').then((m) => ({ default: m.AdminPromoStylePage })),
 )
+const AdminPriceAuditPage = lazy(() =>
+  import('./pages/AdminPriceAuditPage').then((m) => ({ default: m.AdminPriceAuditPage })),
+)
 
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
@@ -53,6 +56,11 @@ function App() {
       {route.page === 'admin-promo-style' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <AdminPromoStylePage />
+        </Suspense>
+      )}
+      {route.page === 'admin-price-audit' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <AdminPriceAuditPage />
         </Suspense>
       )}
 

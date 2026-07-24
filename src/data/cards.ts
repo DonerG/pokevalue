@@ -161,6 +161,26 @@ export async function loadPromoCandidates(): Promise<PromoCandidate[]> {
   return mod.default as unknown as PromoCandidate[]
 }
 
+export interface OutlierCandidate {
+  id: string
+  name: string
+  localId: string
+  image: string | null
+  rarity: string | null
+  setId: string
+  setName: string
+  releaseDate: string
+  market: number
+  fair: number
+  deviation: number
+}
+
+/** Lazily loaded, same reasoning as loadArtworkCandidates. */
+export async function loadOutlierCandidates(): Promise<OutlierCandidate[]> {
+  const mod = await import('./generated/outlier-candidates.json')
+  return mod.default as unknown as OutlierCandidate[]
+}
+
 const dateFmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
 export function formatDate(iso: string | null | undefined): string {
