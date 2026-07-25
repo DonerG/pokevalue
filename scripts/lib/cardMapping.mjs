@@ -182,27 +182,30 @@ export function effectiveRarity(card, promoStyles) {
   return card.rarity ?? null
 }
 
-// ---------- Era bucket (for the rarity x era interaction) ----------
+// ---------- Release year (for the rarity x year / card type x year terms) ----------
 // A "Rare" card meant something very different in 1999 than it does today —
 // the game has added tier after tier above it (Double Rare, Ultra Rare,
 // Illustration Rare, Special Illustration Rare, Hyper Rare, ...), diluting
-// what "Rare" signals. Checked empirically: median Rare/Common price ratio
-// is 32.55x for WOTC-era cards vs. 2.25x for SV+ cards — the model's single
-// global rarity factor (5.38x) can't represent that shift, and neither can
-// the Set factor (it can only move a whole set up/down, not change the
-// ratio between rarities within it). Same boundaries as the era buckets
-// used ad hoc in chat analysis this session, kept here so training and
-// on-site lookup agree on where one block ends and the next begins.
+// what "Rare" signals. Checked empirically: median Rare/Common price ratio is
+// 32.55x for cards printed before 2003 vs. 2.25x for cards from 2023 on, and a
+// single global rarity factor can't represent that shift. Neither can the Set
+// factor — it moves a whole set up or down, it can't change the ratio BETWEEN
+// rarities inside it.
+//
+// This used to bucket into five broad eras (WOTC / EX-DP / BW-XY / SM-SWSH /
+// SV+), which turned out too coarse at the recent end: one "SV+" bucket spans
+// 2023-2026, and within it Illustration Rare prices drifted 1.4-2.1x while
+// Special Illustration Rares went the other way. Plain release year fixes that
+// with no extra factor in the formula — measured, it removes more of the bias
+// than adding separate rarity x set and card type x set factors did, while
+// keeping the model two terms shorter.
+//
+// Mirrors analysis/fit_factors.py::release_year — keep both in sync.
 
-export function eraBucket(releaseDate) {
+export function releaseYear(releaseDate) {
   if (!releaseDate) return 'Unknown'
-  const year = parseInt(releaseDate.slice(0, 4), 10)
-  if (!Number.isFinite(year)) return 'Unknown'
-  if (year < 2003) return 'WOTC'
-  if (year < 2011) return 'EX/DP'
-  if (year < 2017) return 'BW/XY'
-  if (year < 2023) return 'SM/SWSH'
-  return 'SV+'
+  const year = releaseDate.slice(0, 4)
+  return /^\d{4}$/.test(year) ? year : 'Unknown'
 }
 
 // ---------- Price tier (bulk / mid / chase) ----------

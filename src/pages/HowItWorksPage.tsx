@@ -66,12 +66,13 @@ export function HowItWorksPage() {
           learned from data:
         </p>
         <p className="formula">
-          fair price = €1 × Pokémon × rarity × illustrator × set × card type
+          fair price = typical card × Pokémon × rarity × illustrator × set × card type
           <br />
-          <span className="formula-cont">× card name × rarity·era × card type·era</span>
+          <span className="formula-cont">× card name × rarity·year × card type·year</span>
         </p>
         <p>
-          So a card is worth €1 to start, then multiplied up or down by which Pokémon it shows, how
+          So a card starts at what an average card is worth, then gets multiplied up or down by
+          which Pokémon it shows, how
           rare it is, who illustrated it, which set it's from, and which mechanic it uses (ex, V,
           VMAX, …). If a Pokémon's factor is ×12, cards showing it sell for about twelve times what
           an otherwise identical card would.
@@ -116,13 +117,13 @@ export function HowItWorksPage() {
         </p>
         <p>
           A "Rare" in 1999 was near the top of the ladder. Today there are half a dozen tiers above
-          it. Measured directly: for cards from the original era, a Rare sold for about 32× a Common
-          from the same era — for current cards it's about 2×. One global rarity factor can't
-          represent both, and the set factor can't fix it either, since that shifts a whole set up or
-          down without changing the ratio <em>between</em> rarities inside it. So rarity gets a
-          second factor that depends on the era. Card type gets the same treatment, for the same
-          reason (an old "EX" and a modern "ex" are written almost identically but priced worlds
-          apart).
+          it. Measured directly: for cards from 1999, a Rare sold for about 32× a Common from the
+          same year — for current cards it's about 2×. One global rarity factor can't represent
+          both, and the set factor can't fix it either, since that shifts a whole set up or down
+          without changing the ratio <em>between</em> rarities inside it. So rarity gets a second
+          factor that depends on the card's release year. Card type gets the same treatment, for the
+          same reason (an old "EX" and a modern "ex" are written almost identically but priced
+          worlds apart).
         </p>
         <p>
           This is applied narrowly on purpose. Combining every category with every other one would
@@ -190,7 +191,7 @@ export function HowItWorksPage() {
             />
             <FactorTable
               title="Rarities"
-              note="The base rarity factor, before the era correction below."
+              note="The base rarity factor, before the year correction below."
               rows={data.rarities}
             />
             <FactorTable
@@ -204,8 +205,8 @@ export function HowItWorksPage() {
               rows={data.cardTypes}
             />
             <FactorTable
-              title={'"Rare" across the eras'}
-              note="The clearest case for the rarity·era factor: the same word, worth 30× less today."
+              title={'"Rare" over the years'}
+              note="The clearest case for the rarity·year factor: the same word, worth ~15× less today than in 1999."
               rows={data.rarityAcrossEras}
             />
           </section>

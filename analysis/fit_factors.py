@@ -5,13 +5,25 @@ card identity:
 
     price = anchor x factor(pokemon)^tierExponent x factor(rarity)
             x factor(illustrator) x factor(set) x factor(card type)
-            x factor(card name) x factor(rarity x era) x factor(card type x era)
-            x factor(rarity x set) x factor(card type x set)
+            x factor(card name) x factor(rarity x year) x factor(card type x year)
 
-`anchor` is fixed at EUR1 by construction (see the rescale step below) — the
-ridge fit's raw intercept is meaningless on its own, so it's folded entirely
-into the "set" factors instead, which is where the same information reads
-most naturally: every card starts at EUR1, its set tells you the ballpark.
+Eight factors, deliberately. The point of the site is a SIMPLE defensible
+reference to compare the market against, not a maximally accurate price
+predictor — a model that reproduced the market exactly would flag nothing as
+over- or undervalued and would say nothing at all. Two per-set interaction terms
+were tried and removed again: they bought 2.3pp of median accuracy while making
+the formula a third longer and, by construction, declaring the median card in
+every (set, rarity) group fair.
+
+`anchor` is the price of a TYPICAL card, and every factor is centred so that 1x
+means "no different from typical" — see the centring step near the end. This
+matters for reading the numbers: the split of the overall price level between
+categories is not pinned by the data at all (multiply every set factor by k,
+divide every rarity factor by k, and no prediction changes), so it is a
+presentation choice. The previous choice — fold the whole baseline into "set" —
+left set factors averaging 5.6x against rarity's 0.29x, which made a card's set
+look about as important as its rarity when rarity actually spans 117x across its
+levels and set 23x.
 
 WHAT THIS MODEL IS TUNED FOR
 ----------------------------
@@ -52,32 +64,25 @@ rewrite. Expressed as a varying coefficient (two extra parameters, one per
 non-bulk tier) rather than a pokemon x tier interaction: the full interaction
 was tested and lost, being far too sparse at 1026 Pokémon x 3 tiers.
 
-Interaction terms, each layered ON TOP of its plain factor rather than
-replacing it:
+Two interaction terms, each layered ON TOP of its plain factor rather than
+replacing it: rarity x year and card type x year. A rarity tier or card
+mechanic means something very different depending on when the card was printed
+— median Rare/Common price ratio is 32.6x for pre-2003 cards vs. 2.3x for
+2023+ cards, and old "EX" cards have a median price of EUR64.62 against
+EUR1.88 for new "ex". Neither the plain rarity factor nor the Set factor can
+express that (Set moves a whole set together; it cannot change the ratio
+*between* rarities inside it).
 
-  - rarity x era / card type x era: a rarity tier or card mechanic means
-    something very different depending on when the card was printed. Median
-    Rare/Common price ratio is 32.6x for WOTC-era cards vs. 2.3x for SV+ cards;
-    old "EX" cards have a median price of EUR64.62 vs. EUR1.88 for new "ex".
-  - rarity x set / card type x set: the same drift happens WITHIN the SV+ era
-    bucket, which spans 2023-2026 and is far too coarse for it. Measured before
-    these terms existed: Illustration Rare fair prices ran 1.4-2.1x high on
-    2025-26 sets while Special Illustration Rares ran 0.53-0.92x low, with older
-    SV sets showing the reverse. Neither the Set factor (it moves a whole set
-    together, it cannot change the ratio *between* rarities inside it) nor the
-    era terms can express that.
+The bucket is the plain release YEAR. It used to be five broad eras (WOTC /
+EX-DP / BW-XY / SM-SWSH / SV+), which proved too coarse at the recent end: one
+"SV+" bucket spans 2023-2026, and inside it Illustration Rare prices drifted
+1.4-2.1x high while Special Illustration Rares ran 0.53-0.92x low. Per-set
+factors were added to fix that and then removed again — switching the bucket to
+year fixes MORE of the bias (SIR 0.75 -> 1.00 out of fold) with two fewer terms
+in the formula.
 
-`raritySet` additionally gets HALF the shrinkage of everything else
-(RARITY_SET_SCALE below): it encodes a real, sharply-varying effect measured on
-10-70 cards per level, and pulling it toward neutral as hard as the sparse
-one-off categories left the bias it exists to remove. Implemented by scaling
-those columns, which is an exact reparameterization — scaling a block by c
-divides its effective ridge penalty by c².
-
-Era buckets: WOTC (pre-2003), EX/DP (2003-2010), BW/XY (2011-2016), SM/SWSH
-(2017-2022), SV+ (2023+) — see scripts/lib/cardMapping.mjs::eraBucket.
-Price tiers: bulk / mid / chase — see cardMapping.mjs::rarityTier. Both have a
-JS mirror used at ingest/display time; keep them in sync.
+Price tiers: bulk / mid / chase — see cardMapping.mjs::rarityTier, mirrored in
+JS along with releaseYear; keep both in sync.
 
 DISPLAYED VS. TRAINING-ONLY SETS
 --------------------------------
@@ -127,7 +132,7 @@ REPORT_OUT = HERE / "model_report.json"
 
 CATEGORIES = [
     "pokemon", "rarity", "illustrator", "set", "cardType", "cardName",
-    "rarityEra", "cardTypeEra", "raritySet", "cardTypeSet",
+    "rarityYear", "cardTypeYear",
 ]
 N_BOOTSTRAP = 60
 RNG_SEED = 42
@@ -135,32 +140,18 @@ N_FOLDS = 5
 
 DISPLAYED_SET_WEIGHT = 1.0
 TRAINING_ONLY_WEIGHT = 0.2
-# Column scale for raritySet -> a quarter of the effective ridge penalty. See
-# the docstring; swept in analysis/tune_model.py.
-RARITY_SET_SCALE = 2.0
 TIERS = ["bulk", "mid", "chase"]
 VARYING_TIERS = ["mid", "chase"]  # bulk is the reference (exponent fixed at 1)
 
 PRICE_BANDS = [(0, 0.30), (0.30, 3), (3, 30), (30, float("inf"))]
 
 
-def era_bucket(release_date):
-    """Mirrors scripts/lib/cardMapping.mjs::eraBucket — keep both in sync."""
+def release_year(release_date):
+    """Mirrors scripts/lib/cardMapping.mjs::releaseYear — keep both in sync."""
     if not release_date:
         return "Unknown"
-    try:
-        year = int(str(release_date)[:4])
-    except ValueError:
-        return "Unknown"
-    if year < 2003:
-        return "WOTC"
-    if year < 2011:
-        return "EX/DP"
-    if year < 2017:
-        return "BW/XY"
-    if year < 2023:
-        return "SM/SWSH"
-    return "SV+"
+    year = str(release_date)[:4]
+    return year if year.isdigit() else "Unknown"
 
 
 CHASE_RARITIES = {"illustration rare", "special illustration rare", "hyper rare", "shiny rare"}
@@ -202,12 +193,10 @@ df["illustrator"] = df["illustrator"].fillna("Unknown")
 df["set"] = df["setId"].fillna("unknown")
 df["cardType"] = df["cardType"].fillna("Standard")
 df["cardName"] = df.apply(lambda row: "n/a" if row["dexIds"] else row["name"], axis=1)
-df["era"] = df["releaseDate"].apply(era_bucket)
+df["year"] = df["releaseDate"].apply(release_year)
 df["tier"] = df["rarity"].apply(rarity_tier)
-df["rarityEra"] = df["rarity"] + " | " + df["era"]
-df["cardTypeEra"] = df["cardType"] + " | " + df["era"]
-df["raritySet"] = df["rarity"] + " | " + df["set"]
-df["cardTypeSet"] = df["cardType"] + " | " + df["set"]
+df["rarityYear"] = df["rarity"] + " | " + df["year"]
+df["cardTypeYear"] = df["cardType"] + " | " + df["year"]
 df["logPrice"] = np.log(df["trend"].astype(float))
 
 for c in CATEGORIES:
@@ -236,11 +225,7 @@ for c in CATEGORIES:
 X_raw = sparse.hstack(blocks, format="csr")
 col_category = np.array(col_category)
 
-# Per-category shrinkage via column scaling (exact reparameterization: the
-# fitted coefficient comes back divided by the same scale, see unscale below).
-col_scale = np.ones(X_raw.shape[1])
-col_scale[col_category == "raritySet"] = RARITY_SET_SCALE
-X = (X_raw @ sparse.diags(col_scale)).tocsr()
+X = X_raw
 
 y = df["logPrice"].to_numpy()
 trend = df["trend"].to_numpy().astype(float)
@@ -345,8 +330,6 @@ full_model, X2_full = fit_two_stage(np.arange(n_samples), best_alpha)
 point_coefs = full_model.coef_[:n_features].copy()
 tier_coefs = full_model.coef_[n_features:].copy()
 intercept = float(full_model.intercept_)
-# Undo the column scaling so the stored factors refer to the original one-hots.
-point_coefs *= col_scale
 
 pokemon_tier_exponent = {"bulk": 1.0}
 for t, c in zip(VARYING_TIERS, tier_coefs):
@@ -366,7 +349,7 @@ for b in range(N_BOOTSTRAP):
     sample_idx = boot_rng.integers(0, n_samples, n_samples)
     m = Ridge(alpha=best_alpha, fit_intercept=True, solver="sparse_cg")
     m.fit(X[sample_idx], y[sample_idx], sample_weight=sample_weight[sample_idx])
-    boot_coefs[b] = m.coef_ * col_scale
+    boot_coefs[b] = m.coef_
     if (b + 1) % 20 == 0:
         print(f"  … {b + 1}/{N_BOOTSTRAP}  ({time.time() - t0:.0f}s elapsed)")
 
@@ -379,18 +362,36 @@ print(f"Bootstrap done in {time.time() - t0:.0f}s.")
 
 sample_counts = {c: df[c].value_counts().to_dict() for c in CATEGORIES}
 
-# Rescale the anchor to EUR1: pure reparameterization of
-# price = anchor x f_pokemon x ... x f_set x ..., shifting a constant between
-# the (otherwise meaningless) intercept and the "set" coefficients. Folded into
-# "set" specifically because every card has exactly one home set, so "every card
-# starts at EUR1, its set tells you the ballpark" reads better than an arbitrary
-# EUR5.26 with no real-world meaning.
-set_mask = col_category == "set"
-point_coefs[set_mask] += intercept
-boot_lo[set_mask] += intercept
-boot_hi[set_mask] += intercept
-print(f"\nRescaled: anchor EUR{np.exp(intercept):.2f} -> EUR1.00, folded into the 'set' factors.")
-intercept = 0.0
+# ------------------------------------------------- centre every category on 1x
+#
+# price = anchor x f_pokemon x ... x f_set x ... is only pinned by the data up
+# to a constant per category: multiply every set factor by k and divide every
+# rarity factor by k and not one predicted price changes. Which particular
+# split you get out of the fit is therefore a presentation choice, and the
+# previous one — fold the whole baseline into "set" — was actively misleading.
+# It left set factors sitting around 5.6x and rarity factors around 0.29x, so a
+# set read as roughly as important as a rarity when in truth rarity spans 29x
+# across its levels and set only 4x.
+#
+# So: shift each category to a card-weighted geometric mean of exactly 1x, and
+# collect what's left over in the anchor. Now a factor means "this attribute
+# multiplies the price by X versus a typical card", the anchor means "a typical
+# card is worth this much", and factors are comparable across categories.
+# Still a pure reparameterization: no predicted price moves.
+print()
+for cat in CATEGORIES:
+    mask = col_category == cat
+    weights = np.array([sample_counts[cat].get(lvl, 0) for lvl in np.array(col_level)[mask]], dtype=float)
+    if weights.sum() == 0:
+        continue
+    offset = float(np.average(point_coefs[mask], weights=weights))
+    point_coefs[mask] -= offset
+    boot_lo[mask] -= offset
+    boot_hi[mask] -= offset
+    intercept += offset
+    print(f"  centred {cat:<14} (was averaging x{np.exp(offset):.2f})")
+anchor = float(np.exp(intercept))
+print(f"Anchor now EUR{anchor:.2f} — what a typical card is worth before any factor applies.")
 
 factors: dict[str, dict] = {c: {} for c in CATEGORIES}
 for i, (cat, level) in enumerate(zip(col_category, col_level)):
@@ -408,7 +409,7 @@ FACTORS_OUT.write_text(
         {
             "trainedAt": pd.Timestamp.utcnow().isoformat(),
             "target": "trend",
-            "anchor": round(float(np.exp(intercept)), 4),
+            "anchor": round(anchor, 4),
             "alpha": best_alpha,
             "nRows": int(n_samples),
             "nBootstrap": N_BOOTSTRAP,
@@ -430,7 +431,6 @@ REPORT_OUT.write_text(
             "nDisplayedRows": int(displayed.sum()),
             "displayedSetWeight": DISPLAYED_SET_WEIGHT,
             "trainingOnlyWeight": TRAINING_ONLY_WEIGHT,
-            "raritySetScale": RARITY_SET_SCALE,
             "alpha": best_alpha,
             "cvMedianAPEByAlpha": cv_scores,
             "pokemonTierExponent": {t: round(pokemon_tier_exponent[t], 4) for t in TIERS},

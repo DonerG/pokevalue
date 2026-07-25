@@ -221,10 +221,10 @@ story.append(PageBreak())
 
 # ---------------------------------------------------------------- rarity x era
 
-story.append(Paragraph("Rarity x Era factors", styles["H2"]))
+story.append(Paragraph("Rarity x Year factors", styles["H2"]))
 story.append(
     Paragraph(
-        f"{len(FACTORS['factors']['rarityEra'])} distinct rarity/era combinations. Layered on top of the "
+        f"{len(FACTORS['factors']['rarityYear'])} distinct rarity/year combinations. Layered on top of the "
         "plain rarity factor above: a rarity tier means something very different depending on when the "
         "card was printed (median Rare/Common price ratio: 32.6x for WOTC-era cards vs. 2.3x for SV+ "
         "cards) - this factor corrects for that shift.",
@@ -232,7 +232,7 @@ story.append(
     )
 )
 story.append(Spacer(1, 3 * mm))
-story.append(make_table(factor_rows(FACTORS["factors"]["rarityEra"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
+story.append(make_table(factor_rows(FACTORS["factors"]["rarityYear"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
 story.append(PageBreak())
 
 # ---------------------------------------------------------------- card type
@@ -245,18 +245,18 @@ story.append(PageBreak())
 
 # ---------------------------------------------------------------- card type x era
 
-story.append(Paragraph("Card type x Era factors", styles["H2"]))
+story.append(Paragraph("Card type x Year factors", styles["H2"]))
 story.append(
     Paragraph(
-        f"{len(FACTORS['factors']['cardTypeEra'])} distinct card type/era combinations. Layered on top of "
-        "the plain card type factor above, same reasoning as Rarity x Era: old \"EX\" (2003-2010) and new "
+        f"{len(FACTORS['factors']['cardTypeYear'])} distinct card type/year combinations. Layered on top of "
+        "the plain card type factor above, same reasoning as Rarity x Year: old \"EX\" (2003-2010) and new "
         "\"ex\" (2023+) get normalized into one cardType bucket since TCGdex's casing doesn't reliably tell "
         "them apart, but they're priced very differently (median EUR64.62 vs. EUR1.88).",
         styles["Small"],
     )
 )
 story.append(Spacer(1, 3 * mm))
-story.append(make_table(factor_rows(FACTORS["factors"]["cardTypeEra"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
+story.append(make_table(factor_rows(FACTORS["factors"]["cardTypeYear"]), [70 * mm, 18 * mm, 18 * mm, 28 * mm, 26 * mm], HEADER))
 story.append(PageBreak())
 
 # ---------------------------------------------------------------- set

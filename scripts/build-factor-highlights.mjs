@@ -64,14 +64,15 @@ const highlights = {
   rarities: topOf('rarity', { limit: 14, minN: 30 }),
   topIllustrators: topOf('illustrator', { minN: 25 }),
   cardTypes: topOf('cardType', { limit: 10, minN: 20, skip: (k) => k === 'Standard' }),
-  // Rarity x era is the clearest illustration of why the interaction exists,
-  // so pick one rarity and show it across every era rather than a top list.
-  rarityAcrossEras: ['WOTC', 'EX/DP', 'BW/XY', 'SM/SWSH', 'SV+']
-    .map((era) => {
-      const entry = factors.factors.rarityEra[`Rare | ${era}`]
-      return entry ? { label: era, factor: entry.factor, n: entry.n } : null
-    })
-    .filter(Boolean),
+  // Rarity x year is the clearest illustration of why the interaction exists,
+  // so pick one rarity and walk it through time rather than showing a top list.
+  // Every fourth year keeps it readable while still spanning 1999 to now.
+  rarityAcrossEras: Object.entries(factors.factors.rarityYear)
+    .filter(([key, v]) => key.startsWith('Rare | ') && v.n >= 20)
+    .map(([key, v]) => ({ label: key.split(' | ')[1], factor: v.factor, n: v.n }))
+    .filter((r) => /^\d{4}$/.test(r.label))
+    .sort((a, b) => a.label.localeCompare(b.label))
+    .filter((_, i, all) => i % Math.ceil(all.length / 7) === 0 || i === all.length - 1),
 }
 
 await writeFile(OUT_FILE, JSON.stringify(highlights, null, 1))

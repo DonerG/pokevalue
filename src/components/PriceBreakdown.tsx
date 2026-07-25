@@ -44,31 +44,19 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
     // the raw "Promo" here would leave that multiplier unexplained.
     { label: 'Rarity', value: f.rarity.key, mult: f.rarity.displayFactor, hidden: false },
     {
-      label: 'Rarity (era)',
-      value: `${f.rarityEra.key.split(' | ')[1] ?? 'Unknown'} adjustment`,
-      mult: f.rarityEra.displayFactor,
-      hidden: false,
-    },
-    {
-      label: 'Rarity (this set)',
-      value: `${f.rarity.key} in ${setName}`,
-      mult: f.raritySet.displayFactor,
+      label: 'Rarity (year)',
+      value: `what that rarity meant in ${f.rarityYear.key.split(' | ')[1] ?? 'Unknown'}`,
+      mult: f.rarityYear.displayFactor,
       hidden: false,
     },
     { label: 'Illustrator', value: card.illustrator ?? 'Unknown', mult: f.illustrator.displayFactor, hidden: false },
     { label: 'Set', value: setName, mult: f.set.displayFactor, hidden: false },
     { label: 'Card type', value: card.cardType ?? 'Standard', mult: f.cardType.displayFactor, hidden: false },
     {
-      label: 'Card type (era)',
-      value: `${f.cardTypeEra.key.split(' | ')[1] ?? 'Unknown'} adjustment`,
-      mult: f.cardTypeEra.displayFactor,
+      label: 'Card type (year)',
+      value: `what that type meant in ${f.cardTypeYear.key.split(' | ')[1] ?? 'Unknown'}`,
+      mult: f.cardTypeYear.displayFactor,
       hidden: false,
-    },
-    {
-      label: 'Card type (this set)',
-      value: `${card.cardType ?? 'Standard'} in ${setName}`,
-      mult: f.cardTypeSet.displayFactor,
-      hidden: isNeutral(f.cardTypeSet.displayFactor),
     },
     {
       label: 'Card',
@@ -111,8 +99,8 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       </p>
       <ul className="breakdown-list">
         <li>
-          <span>Base rate</span>
-          <span className="muted">every card starts here</span>
+          <span>Typical card</span>
+          <span className="muted">what an average card is worth, before anything specific to this one</span>
           <span className="breakdown-mult">{formatEuro(anchor)}</span>
         </li>
         {cardRows.map((r) => (

@@ -35,10 +35,8 @@ export interface CardFactors {
   set: FactorEntry
   cardType: FactorEntry
   cardName: FactorEntry
-  rarityEra: FactorEntry
-  cardTypeEra: FactorEntry
-  raritySet: FactorEntry
-  cardTypeSet: FactorEntry
+  rarityYear: FactorEntry
+  cardTypeYear: FactorEntry
 }
 
 export interface CardData {
