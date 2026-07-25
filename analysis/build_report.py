@@ -147,28 +147,41 @@ story.append(
     )
 )
 story.append(Spacer(1, 4 * mm))
+band_text = ", ".join(
+    f"EUR{label}: {s['medianAPE']*100:.0f}% (n={s['n']:,})"
+    for label, s in REPORT["byPriceBand"].items()
+)
 story.append(
     Paragraph(
-        f"<b>Model accuracy, on the sets actually shown on the site</b> "
-        f"(held-out Scarlet & Violet / Mega Evolution cards): "
-        f"R-squared = {REPORT['displayedTestR2']:.3f} (the model explains "
-        f"{REPORT['displayedTestR2']*100:.0f}% of the price variation between cards), "
-        f"median prediction error {REPORT['displayedTestMedianAPE']*100:.0f}%. This is the number that matters "
-        "for what you actually see on pokevalue.cards.",
+        f"<b>Model accuracy</b>, measured the way the site is actually used: median error against the "
+        f"Cardmarket <i>trend</i> price (the number shown on every card page), on the "
+        f"{REPORT['nDisplayedRows']:,} cards from the 24 displayed sets, cross-validated so no card is "
+        f"scored by a model that saw it. <b>Median error {REPORT['displayedMedianAPE']*100:.0f}%</b>; "
+        f"{REPORT['displayedWithin20']*100:.0f}% of cards land within 20% of their market price.",
         styles["Body"],
     )
 )
 story.append(Spacer(1, 2 * mm))
 story.append(
     Paragraph(
-        f"For reference, accuracy on the full held-out set "
-        f"({REPORT['nTest']:,} cards, {REPORT['nRows'] - REPORT['nDisplayedRows']:,} of the "
-        f"{REPORT['nRows']:,} training rows come from sets not shown on the site — see README): "
-        f"R-squared = {REPORT['testR2']:.3f}, median prediction error {REPORT['testMedianAPE']*100:.0f}%. "
-        f"Training rows from non-displayed sets are down-weighted "
-        f"({REPORT['trainingOnlyWeight']}x vs. {REPORT['displayedSetWeight']}x) rather than dropped, so the "
-        "fit still borrows their statistical support for sparsely-represented Pokémon and illustrators "
-        "without letting older, more condition-blended prices pull the site's own numbers off target.",
+        f"That single median hides a lot, so it is also broken out by price: {band_text}. "
+        "Over half of all cards trade under EUR0.30, where Cardmarket's EUR0.01 price steps alone "
+        "put a floor on the achievable error - so the overall median is dominated by cards nobody "
+        "looks up, and the expensive end is where the model is genuinely hardest.",
+        styles["Body"],
+    )
+)
+story.append(Spacer(1, 2 * mm))
+tiers = REPORT["pokemonTierExponent"]
+story.append(
+    Paragraph(
+        f"A Pokemon's popularity premium is not a constant multiplier: fitted on the data, it applies "
+        f"{tiers['mid']:.2f}x as strongly on mid-tier cards and {tiers['chase']:.2f}x as strongly on chase "
+        f"cards (illustration/special illustration/hyper/shiny rares) as it does on bulk cards. "
+        f"Training rows from the {REPORT['nRows'] - REPORT['nDisplayedRows']:,} cards in sets not shown on "
+        f"the site are down-weighted ({REPORT['trainingOnlyWeight']}x vs. {REPORT['displayedSetWeight']}x) "
+        "rather than dropped - enough to keep sparsely-represented Pokemon and illustrators estimable, "
+        "without letting them pull the displayed sets' own numbers off target.",
         styles["Body"],
     )
 )

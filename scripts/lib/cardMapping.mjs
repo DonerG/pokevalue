@@ -183,3 +183,28 @@ export function eraBucket(releaseDate) {
   if (year < 2023) return 'SM/SWSH'
   return 'SV+'
 }
+
+// ---------- Price tier (bulk / mid / chase) ----------
+// Groups rarities by what they actually sell for, measured across the displayed
+// sets: bulk sits at ~EUR0.04-0.08, mid at ~EUR0.6-2.5, chase at ~EUR3-31.
+// Used for one thing only: how strongly a Pokémon's popularity premium applies.
+// It is measurably NOT a constant multiplier — the fitted premium is ~2x
+// stronger on chase cards than on bulk (see analysis/fit_factors.py, "Pokémon
+// premium varies by tier"), which is why an Illustration Rare of an unloved
+// Pokémon used to be priced far too high and a chase Special Illustration Rare
+// far too low.
+// Mirrors analysis/fit_factors.py::rarity_tier — keep both in sync.
+const CHASE_RARITIES = new Set([
+  'illustration rare',
+  'special illustration rare',
+  'hyper rare',
+  'shiny rare',
+])
+const MID_RARITIES = new Set(['double rare', 'ultra rare', 'promo', 'ace spec rare'])
+
+export function rarityTier(rarity) {
+  const key = (rarity ?? '').toLowerCase()
+  if (CHASE_RARITIES.has(key)) return 'chase'
+  if (MID_RARITIES.has(key)) return 'mid'
+  return 'bulk'
+}

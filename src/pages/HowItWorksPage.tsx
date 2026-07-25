@@ -6,7 +6,17 @@ import { howItWorksMeta } from '../logic/pageMeta.js'
 const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
 const intFmt = new Intl.NumberFormat('en-GB')
 
-function FactorTable({ title, note, rows }: { title: string; note: string; rows: FactorExample[] }) {
+function FactorTable({
+  title,
+  note,
+  rows,
+  format = (v: number) => `×${multFmt.format(v)}`,
+}: {
+  title: string
+  note: string
+  rows: FactorExample[]
+  format?: (value: number) => string
+}) {
   return (
     <div className="factor-table">
       <h4>{title}</h4>
@@ -16,7 +26,7 @@ function FactorTable({ title, note, rows }: { title: string; note: string; rows:
           <li key={r.label}>
             <span className="factor-table-label">{r.label}</span>
             <span className="factor-table-n">{r.n} cards</span>
-            <span className="factor-table-value">×{multFmt.format(r.factor)}</span>
+            <span className="factor-table-value">{format(r.factor)}</span>
           </li>
         ))}
       </ul>
@@ -133,20 +143,34 @@ export function HowItWorksPage() {
                 <span>cards on the site this is measured on</span>
               </li>
               <li>
-                <strong>{(data.model.testR2 * 100).toFixed(0)}%</strong>
-                <span>of price variation explained (R², on held-out cards)</span>
+                <strong>{(data.model.medianError * 100).toFixed(0)}%</strong>
+                <span>median error vs. the market price shown here</span>
               </li>
               <li>
-                <strong>{(data.model.medianError * 100).toFixed(0)}%</strong>
-                <span>median error on cards the model never saw</span>
+                <strong>{(data.model.within20 * 100).toFixed(0)}%</strong>
+                <span>of cards land within 20% of their market price</span>
               </li>
             </ul>
             <p className="muted">
-              A median error around a third sounds large, and it is — but it's the honest number, and
-              it's measured on cards held out of training entirely. Card prices carry a lot of
-              genuine noise (hype, print runs, a card suddenly becoming tournament-relevant) that no
-              model reading only card attributes can predict. The point isn't to nail every price to
-              the cent; it's to have a defensible reference to compare the market against.
+              Measured the way the site is actually used: against the same Cardmarket trend price
+              every card page shows, on cards from these sets only, and cross-validated — no card is
+              scored by a model that was allowed to see it.
+            </p>
+            <FactorTable
+              title="Median error by price"
+              note="One overall median hides a lot. Over half of all cards trade under €0.30, where Cardmarket's 1-cent price steps alone put a floor on how close anything can get — so the headline number is dominated by cards nobody looks up, and the expensive end is where this is genuinely hardest."
+              rows={Object.entries(data.model.byPriceBand).map(([label, s]) => ({
+                label: label.endsWith('+') ? `€${label.slice(0, -1)} and up` : `€${label.replace('-', ' – €')}`,
+                factor: s.medianAPE,
+                n: s.n,
+              }))}
+              format={(v) => `${(v * 100).toFixed(0)}%`}
+            />
+            <p className="muted">
+              Card prices carry a lot of genuine noise (hype, print runs, a card suddenly becoming
+              tournament-relevant) that no model reading only card attributes can predict. The point
+              isn't to nail every price to the cent; it's to have a defensible reference to compare
+              the market against.
             </p>
             <p className="muted">
               Every factor is fitted on {intFmt.format(data.model.cardsTotal)} cards spanning the

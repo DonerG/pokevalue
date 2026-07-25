@@ -17,14 +17,25 @@ interface Props {
 /** Read-only "why this price" breakdown: the card's fixed, data-derived factors, then your copy's condition/language on top. */
 export function PriceBreakdown({ card, setName, selection, config, fairPrice, market }: Props) {
   const f = card.factors
-  // "Card" (cardName factor) only applies to Trainer/Energy cards — Pokémon
-  // cards get "n/a" there since "pokemon" already carries their identity.
-  // Always folded into factorProduct (so the derived anchor stays exact),
-  // but only shown as its own row when it's not the neutral n/a bucket.
+  // A row is hidden only when its multiplier would read "×1" anyway. Rows are
+  // otherwise always shown, even the ones that name a bucket rather than a
+  // property of this card ("n/a" for a Pokémon card's cardName factor): they
+  // are genuinely applied to the price, so hiding them would leave the visible
+  // list multiplying out to something other than the stated total.
+  const isNeutral = (mult: number) => Math.abs(mult - 1) < 0.005
   const allFactorRows = [
     {
       label: 'Pokémon',
-      value: f.pokemon.key === 'none' ? '— (Trainer/Energy)' : pokemonSpeciesName(f.pokemon.key),
+      // The multiplier shown already includes the tier exponent, so the note
+      // explains why this Pokémon's premium is bigger here than on a bulk card.
+      value:
+        f.pokemon.key === 'none'
+          ? '— (Trainer/Energy)'
+          : `${pokemonSpeciesName(f.pokemon.key)}${
+              f.pokemon.tierExponent > 1.01
+                ? ` — popularity counts ${multFmt.format(f.pokemon.tierExponent)}× on ${f.pokemon.tier} cards`
+                : ''
+            }`,
       mult: f.pokemon.displayFactor,
       hidden: false,
     },
@@ -33,6 +44,12 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       label: 'Rarity (era)',
       value: `${f.rarityEra.key.split(' | ')[1] ?? 'Unknown'} adjustment`,
       mult: f.rarityEra.displayFactor,
+      hidden: false,
+    },
+    {
+      label: 'Rarity (this set)',
+      value: `${card.rarity ?? 'Unknown'} in ${setName}`,
+      mult: f.raritySet.displayFactor,
       hidden: false,
     },
     { label: 'Illustrator', value: card.illustrator ?? 'Unknown', mult: f.illustrator.displayFactor, hidden: false },
@@ -44,7 +61,21 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       mult: f.cardTypeEra.displayFactor,
       hidden: false,
     },
-    { label: 'Card', value: card.name, mult: f.cardName.displayFactor, hidden: f.cardName.key === 'n/a' },
+    {
+      label: 'Card type (this set)',
+      value: `${card.cardType ?? 'Standard'} in ${setName}`,
+      mult: f.cardTypeSet.displayFactor,
+      hidden: isNeutral(f.cardTypeSet.displayFactor),
+    },
+    {
+      label: 'Card',
+      // Only Trainer/Energy cards get a per-name factor; a Pokémon card's
+      // identity is already carried by the Pokémon factor, so it lands in a
+      // shared "n/a" bucket — which still has a value, so it still shows.
+      value: f.cardName.key === 'n/a' ? '— (covered by Pokémon)' : card.name,
+      mult: f.cardName.displayFactor,
+      hidden: isNeutral(f.cardName.displayFactor),
+    },
   ]
   const factorProduct = allFactorRows.reduce((acc, r) => acc * r.mult, 1)
   const anchor = factorProduct > 0 ? card.baseValue / factorProduct : card.baseValue

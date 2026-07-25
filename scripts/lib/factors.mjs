@@ -7,7 +7,7 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { effectiveDexIds, effectiveRarity, mapCardType, eraBucket } from './cardMapping.mjs'
+import { effectiveDexIds, effectiveRarity, mapCardType, eraBucket, rarityTier } from './cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
@@ -69,10 +69,13 @@ export function computeCardPricing(card, releaseDate) {
   const cardTypeKey = mapCardType(card) ?? 'Standard'
   const cardNameKey = dexIds.length ? 'n/a' : (card.name ?? 'n/a')
   const era = eraBucket(releaseDate)
+  const tier = rarityTier(rarityValue)
   const rarityEraKey = `${rarityValue} | ${era}`
   const cardTypeEraKey = `${cardTypeKey} | ${era}`
+  const raritySetKey = `${rarityValue} | ${setKey}`
+  const cardTypeSetKey = `${cardTypeKey} | ${setKey}`
 
-  const pokemon = lookup(data.factors.pokemon, pokemonKey)
+  const pokemonRaw = lookup(data.factors.pokemon, pokemonKey)
   const rarity = lookup(data.factors.rarity, rarityValue)
   const illustrator = lookup(data.factors.illustrator, illustratorKey)
   const set = lookup(data.factors.set, setKey)
@@ -80,6 +83,20 @@ export function computeCardPricing(card, releaseDate) {
   const cardName = lookup(data.factors.cardName, cardNameKey)
   const rarityEra = lookup(data.factors.rarityEra, rarityEraKey)
   const cardTypeEra = lookup(data.factors.cardTypeEra, cardTypeEraKey)
+  const raritySet = lookup(data.factors.raritySet, raritySetKey)
+  const cardTypeSet = lookup(data.factors.cardTypeSet, cardTypeSetKey)
+
+  // A Pokémon's premium is not a constant multiplier — it is ~2x stronger on
+  // chase cards than on bulk ones (see analysis/fit_factors.py). The fitted
+  // exponent per tier is what carries that, applied AFTER dampening so a
+  // low-sample factor that was pulled to neutral (1x) stays neutral: 1^n = 1.
+  const tierExponent = data.pokemonTierExponent?.[tier] ?? 1
+  const pokemon = {
+    ...pokemonRaw,
+    tier,
+    tierExponent,
+    displayFactor: Math.pow(pokemonRaw.displayFactor, tierExponent),
+  }
 
   const baseValue =
     data.anchor *
@@ -90,10 +107,15 @@ export function computeCardPricing(card, releaseDate) {
     cardType.displayFactor *
     cardName.displayFactor *
     rarityEra.displayFactor *
-    cardTypeEra.displayFactor
+    cardTypeEra.displayFactor *
+    raritySet.displayFactor *
+    cardTypeSet.displayFactor
 
   return {
     baseValue,
-    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName, rarityEra, cardTypeEra },
+    breakdown: {
+      pokemon, rarity, illustrator, set, cardType, cardName,
+      rarityEra, cardTypeEra, raritySet, cardTypeSet,
+    },
   }
 }

@@ -28,7 +28,8 @@ export interface FactorEntry {
 }
 
 export interface CardFactors {
-  pokemon: FactorEntry
+  /** `displayFactor` already has the tier exponent applied — see scripts/lib/factors.mjs. */
+  pokemon: FactorEntry & { tier: 'bulk' | 'mid' | 'chase'; tierExponent: number }
   rarity: FactorEntry
   illustrator: FactorEntry
   set: FactorEntry
@@ -36,6 +37,8 @@ export interface CardFactors {
   cardName: FactorEntry
   rarityEra: FactorEntry
   cardTypeEra: FactorEntry
+  raritySet: FactorEntry
+  cardTypeSet: FactorEntry
 }
 
 export interface CardData {
@@ -195,6 +198,8 @@ export interface FactorHighlights {
     cardsTotal: number
     testR2: number
     medianError: number
+    within20: number
+    byPriceBand: Record<string, { n: number; medianAPE: number; within20: number }>
     anchor: number
     categories: Record<string, number>
   }
