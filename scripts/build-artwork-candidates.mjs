@@ -7,6 +7,13 @@
  * standardized card-frame template, not a unique composition, so only the
  * depicted Pokémon (already a model feature) drives their price.
  *
+ * IMPORTANT: Only artwork ratings from cards in this filtered list should ever
+ * be factored into the pricing model. If artwork ratings are later integrated
+ * (currently descoped, stored in localStorage only for data collection), only
+ * apply them to cards where isArtworkRateable(card.rarity) would have returned
+ * true. This ensures non-art-rare cards rated as "worse" (as a bulk fill) do not
+ * affect pricing.
+ *
  * Usage: node scripts/build-artwork-candidates.mjs
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises'

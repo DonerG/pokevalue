@@ -30,31 +30,13 @@ export interface Verdict {
   deviation: number
 }
 
-export function verdict(marketPrice: number, fair: number, config: Config): Verdict | null {
-  if (!Number.isFinite(marketPrice) || marketPrice <= 0 || fair <= 0) return null
-  const gapToFair = (marketPrice - fair) / fair
-  const upside = (fair - marketPrice) / marketPrice
-  if (gapToFair > config.thresholds.over / 100) return { kind: 'overvalued', deviation: upside }
-  if (gapToFair < -config.thresholds.under / 100) return { kind: 'undervalued', deviation: upside }
-  return { kind: 'fair', deviation: upside }
-}
+// Lives in plain JS so the Node prerender script reaches the same judgement —
+// see src/logic/verdict.js.
+export { verdict } from './verdict.js'
 
-const euroFmt = new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' })
-const euroFmtRound = new Intl.NumberFormat('en-IE', {
-  style: 'currency',
-  currency: 'EUR',
-  maximumFractionDigits: 0,
-})
-
-export function formatEuro(value: number): string {
-  return value >= 1000 ? euroFmtRound.format(value) : euroFmt.format(value)
-}
-
-export function formatPercent(value: number): string {
-  const pct = value * 100
-  const sign = pct > 0 ? '+' : ''
-  return `${sign}${pct.toLocaleString('en-IE', { maximumFractionDigits: 0 })}%`
-}
+// Live in plain JS so the Node prerender script can format prices identically —
+// see src/logic/format.js. Re-exported here so app code keeps its old import.
+export { formatEuro, formatPercent } from './format.js'
 
 /** Parses number input using either a comma or a dot as the decimal separator. */
 export function parseNumber(input: string): number {

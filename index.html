@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Everything between the seo markers is replaced per route by
+         scripts/prerender.mjs at build time (see README → URLs and SEO).
+         What's here is the fallback for any route that isn't prerendered. -->
+    <!--seo-->
     <title>PokéValue – Card Value Calculator</title>
     <meta
       name="description"
@@ -24,8 +28,12 @@
       name="twitter:description"
       content="A data-driven fair price for every Pokémon card, compared against the current Cardmarket price."
     />
+    <!--/seo-->
   </head>
   <body>
+    <!-- prerender.mjs fills #root with a plain-HTML version of the page, which
+         React replaces as soon as it mounts. It is real, visible content, not
+         a hidden crawler-only copy: without JavaScript the page still reads. -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

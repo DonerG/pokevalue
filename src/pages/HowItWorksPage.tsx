@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { loadFactorHighlights, type FactorExample, type FactorHighlights } from '../data/cards'
 import { useDocumentMeta } from '../logic/documentMeta'
+import { howItWorksMeta } from '../logic/pageMeta.js'
 
 const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
 const intFmt = new Intl.NumberFormat('en-GB')
@@ -30,11 +31,8 @@ export function HowItWorksPage() {
     loadFactorHighlights().then(setData)
   }, [])
 
-  useDocumentMeta(
-    'How the fair price is calculated',
-    'How PokéValue estimates a fair price for every Pokémon card: a ridge regression trained on ~19,000 real Cardmarket prices, with a separate computed factor for Pokémon, rarity, illustrator, set, and card type.',
-    '/how-it-works',
-  )
+  const meta = howItWorksMeta()
+  useDocumentMeta(meta.title, meta.description, '/how-it-works')
 
   return (
     <div className="how-it-works">

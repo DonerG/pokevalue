@@ -118,7 +118,7 @@ export function AdminArtworkPage() {
         <p className="muted">
           Rate the illustration quality of chase cards — 10, 9, 8, or worse. Not currently used by
           the live pricing model (descoped for this version — see the README) but kept here for
-          future data collection. Promo cards also get an Art Rare / Normal toggle right here, so
+          future data collection. <strong>Only artwork ratings for art-rateable cards (Ultra, Full Art, Alt Art, Secret, and Promos) will be factored into pricing if integrated.</strong> Promo cards also get an Art Rare / Normal toggle right here, so
           both can be tagged in one pass — same data as{' '}
           <a href="/admin/promo-style">/admin/promo-style</a>. Saved in this browser only; export
           the file(s) to keep them somewhere durable.

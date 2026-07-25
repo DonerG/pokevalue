@@ -1239,3 +1239,98 @@ details.panel[open] summary {
   min-width: 52px;
   text-align: right;
 }
+
+/* ---------- Prerendered shell ----------
+   The plain-HTML copy of each page that scripts/prerender.mjs writes into
+   #root, so the site is readable (and indexable) before — or entirely without —
+   JavaScript. React replaces it on mount, so this only ever shows for the few
+   hundred milliseconds the bundle takes to boot: styled to match the real
+   layout's width and rhythm so that swap isn't a visible jump. */
+
+.prerender-shell {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+.prerender-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.prerender-brand {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.prerender-crumbs {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.prerender-shell h1 {
+  font-size: 28px;
+  letter-spacing: -0.4px;
+  margin: 0 0 12px;
+}
+
+.prerender-shell h2 {
+  font-size: 20px;
+  margin: 28px 0 12px;
+}
+
+.prerender-shell p {
+  color: var(--text-2);
+  max-width: 70ch;
+  margin: 0 0 12px;
+}
+
+.prerender-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px 20px;
+  margin: 20px 0;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.prerender-facts dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.prerender-facts dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+
+.prerender-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 4px 20px;
+}
+
+.prerender-list li {
+  border-bottom: 1px solid var(--border);
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.prerender-list span {
+  color: var(--muted);
+}
+
+.prerender-links a {
+  color: var(--accent);
+}

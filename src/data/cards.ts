@@ -116,18 +116,9 @@ export function setLogo(set: SetMeta): string | null {
   return set.logo ? `${set.logo}.webp` : null
 }
 
-/**
- * Cardmarket has no public direct product-ID URL, so this links to their
- * general product search with the card name + local number as the query —
- * reliably narrows to the exact card (verified for name/number collisions).
- * The set-scoped Singles URL (/Products/Singles/{set}?searchString=...)
- * looks like it should filter but silently ignores searchString entirely,
- * landing on the full unfiltered category page — confirmed by hand.
- */
-export function cardmarketUrl(card: CardData): string {
-  const query = encodeURIComponent(`${card.name} ${card.localId}`)
-  return `https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=${query}`
-}
+// Defined in src/logic/pageMeta.js (shared with the prerender script, which
+// needs it for each card page's structured-data offer URL).
+export { cardmarketUrl } from '../logic/pageMeta.js'
 
 export interface ArtworkCandidate {
   id: string

@@ -15,6 +15,7 @@ import { ResultPanel } from '../components/ResultPanel'
 import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
 import { useDocumentMeta } from '../logic/documentMeta'
+import { cardMeta } from '../logic/pageMeta.js'
 
 interface Props {
   cardId: string
@@ -52,16 +53,12 @@ export function CardPage({ cardId, config }: Props) {
   // Computed before the early returns below so the hook call stays
   // unconditional — `set` is derived again after them for rendering.
   const metaSet = card ? getSet(card.id.slice(0, card.id.lastIndexOf('-'))) : undefined
+  const meta = cardMeta(card, metaSet)
   useDocumentMeta(
-    card ? `${card.name} #${card.localId}${metaSet ? ` (${metaSet.name})` : ''} price` : null,
-    card
-      ? `What is ${card.name} #${card.localId}${metaSet ? ` from ${metaSet.name}` : ''} worth? ` +
-        `PokéValue's fair price is ${formatEuro(card.baseValue)}` +
-        (card.market?.trend != null
-          ? `, against a current Cardmarket price of ${formatEuro(card.market.trend)}.`
-          : '.')
-      : null,
+    meta.title,
+    meta.description,
     `/card/${cardId}`,
+    card ? cardImage(card, 'high') : null,
   )
 
   if (card === undefined) {

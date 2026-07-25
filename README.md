@@ -61,13 +61,19 @@ Python deps: `pip install pandas scikit-learn scipy statsmodels reportlab pypdf`
 
 Routing uses **real paths** (`/set/sv08.5`, `/card/sv08.5-006`), not the URL fragment it started with. A fragment is never sent to the server, so under the old `#/card/…` scheme every card and set looked like one single URL to a crawler — nothing to index, and a sitemap would have had nothing to point at. Pieces that make the path-based version work:
 
-- **`vercel.json`** rewrites any non-asset path to `index.html`, so a direct hit on `/card/x` (from Google, a shared link, or a refresh) serves the app instead of 404ing. Without this, deep links only work via in-app navigation.
+- **`vercel.json`** sets `cleanUrls` (so `dist/card/x.html` is served at `/card/x`), `trailingSlash: false`, and rewrites any non-asset path to `index.html`, so a direct hit on a route with no prerendered file (`/admin/…`) still serves the app instead of 404ing. Vercel gives "precedence to the filesystem prior to rewrites being applied", so the prerendered pages below win over that rewrite automatically and the rewrite stays a fallback.
 - **`src/router.ts`** navigates with `history.pushState` and intercepts clicks on internal links from a single document-level listener. Links stay plain `<a href="/card/x">` — crawlers and "open in new tab" see a normal URL, and only ordinary left-clicks get upgraded to a no-reload transition. Modifier-clicks, `target="_blank"`, downloads, and external hosts are deliberately left to the browser.
 - **Legacy hash URLs** (`/#/set/sv01`) are rewritten to the real path on load, so old bookmarks and previously shared links keep working.
-- **`src/logic/documentMeta.ts`** gives every route its own `<title>`, meta description, canonical URL, and OG tags. Card pages put the actual numbers in the description ("PokéValue's fair price is €X, against a current Cardmarket price of €Y") since that text is what shows up as the search-result snippet.
+- **`src/logic/pageMeta.js`** holds every route's `<title>` and meta description as pure functions. It is plain JS, not TS, for one reason: both the browser bundle and the Node build scripts import *this same module*, so the tags a crawler reads can't drift from what the app sets. `src/logic/format.js` and `src/logic/verdict.js` exist for the same reason (prices and the over-/undervalued judgement have to match too); `pricing.ts` re-exports them, so app code imports them from where it always did.
+- **`src/logic/documentMeta.ts`** applies those values at runtime — `<title>`, meta description, canonical, OG/Twitter tags, plus the card image as `og:image`. This is what keeps metadata correct across client-side navigations, where no new document is ever fetched.
+- **`scripts/prerender.mjs`** bakes the same values into the static HTML at build time, writing one `dist/<route>.html` per URL (~4,700). Chained onto `npm run build`, after `vite build`. Each file gets the real title/description/canonical/OG tags, JSON-LD structured data (`Product` + `AggregateOffer` for cards — emitted only when a real Cardmarket price exists, never invented — `CollectionPage` for sets, `BreadcrumbList` throughout), and a plain-HTML rendering of the page inside `#root` that React replaces on mount.
 - **`scripts/build-sitemap.mjs`** writes `public/sitemap.xml` (~4,700 URLs: home + every set + every card), linked from `robots.txt`. Admin pages are excluded there and disallowed in `robots.txt`.
 
-**Known limitation:** the metadata above is applied client-side, so a crawler that doesn't execute JavaScript sees only `index.html`'s defaults. Google does render JS and will pick them up. Getting per-page metadata into the raw HTML response would need prerendering or SSR — a much larger change, not done here.
+**Why prerender at all, given Google runs JS?** Google does render JavaScript, but on a second pass that can trail the initial crawl by days — and link-preview bots (Discord, WhatsApp, X, Slack, Facebook) never run it at all, so every shared card link used to preview as the generic homepage. Serving the real tags in the first byte fixes both and gives the first crawl actual content instead of an empty `<div id="root">`.
+
+The markup written into `#root` is real, visible content — the site reads with JavaScript disabled — not a hidden crawler-only copy, which search engines treat as cloaking. It is styled (`.prerender-shell` in `index.css`) to match the real layout's width and rhythm so the swap on mount isn't a visible jump.
+
+`index.html` carries `<!--seo-->…<!--/seo-->` markers and an empty `<div id="root">`; `prerender.mjs` replaces both and re-emits the markers, so it can be re-run on an already-prerendered `dist/` without a fresh `vite build`. If you change either seam in `index.html`, the script fails loudly rather than silently producing pages with default metadata.
 
 ## Development
 
@@ -84,8 +90,8 @@ Stack: React 19 + TypeScript + Vite for the site; Python (pandas/scikit-learn) f
 1. Create a GitHub repository and push to it.
 2. On [vercel.com](https://vercel.com), "Add New Project" → select the GitHub repo. Vercel detects Vite automatically (build `npm run build`, output `dist`).
 3. From then on, every push deploys automatically. To refresh prices, rerun the model-rebuild steps above and commit (can later be automated with a scheduled GitHub Action).
-4. Custom domain: `pokevalue.cards` is attached in the Vercel dashboard (Project → Settings → Domains). If the domain ever changes, update `https://pokevalue.cards` in `index.html` (canonical/OG tags), `src/logic/documentMeta.ts` (`SITE_ORIGIN`), `scripts/build-sitemap.mjs` (`ORIGIN`), `public/robots.txt`, and this README.
-5. `vercel.json` is what makes deep links work (see "URLs and SEO") — don't remove it, or `/card/x` will 404 on direct load while still working via in-app clicks, which is an easy failure mode to miss in local testing.
+4. Custom domain: `pokevalue.cards` is attached in the Vercel dashboard (Project → Settings → Domains). If the domain ever changes, update `https://pokevalue.cards` in `index.html` (canonical/OG tags), `src/logic/pageMeta.js` (`SITE_ORIGIN`), `scripts/build-sitemap.mjs` (`ORIGIN`), `public/robots.txt`, and this README.
+5. `vercel.json` is what makes deep links work (see "URLs and SEO") — don't remove it, or `/card/x` will 404 on direct load while still working via in-app clicks, which is an easy failure mode to miss in local testing. Note that `npm run preview` (plain `vite preview`) does *not* reproduce Vercel's `cleanUrls`, so it serves the SPA fallback for `/card/x` and hides the prerendered pages — that's a local-only artifact, not a deployment problem.
 
 ## Project structure
 
@@ -104,6 +110,7 @@ scripts/
   build-outlier-candidates.mjs Generated cards-*.json -> top 100 overvalued + top 100 undervalued for the price-audit page
   build-search-index.mjs      Generated cards-*.json -> lightweight name/number index for the homepage search bar
   build-sitemap.mjs           Generated cards-*.json -> public/sitemap.xml (home + every set + every card)
+  prerender.mjs               Post-build: one static dist/<route>.html per URL, with real metadata + JSON-LD
   build-factor-highlights.mjs analysis/factors.json -> small example-factor slice for the /how-it-works page
   lib/cardMapping.mjs         Card-type derivation, artwork-candidate rarity filter, effectiveRarity() (promo style), eraBucket()
   lib/factors.mjs             Looks up computed factors for a card, applies low-sample dampening
@@ -113,7 +120,10 @@ src/
   data/generated/          Imported card data incl. baked-in factors (JSON, commit these!)
   data/promo-styles.json  Hand-tagged Promo Art-Rare/Normal styles (commit this!)
   data/price-exclusions.json Hand-flagged cards with a known-bad Cardmarket price (commit this!)
-  logic/pricing.ts         Fair price, score, verdict, formatting
+  logic/pricing.ts         Fair price, score; re-exports verdict + formatting from the shared JS modules
+  logic/pageMeta.js        Per-route title/description (shared with scripts/prerender.mjs — see "URLs and SEO")
+  logic/format.js          Euro/percent formatting, shared with the build scripts
+  logic/verdict.js         Over-/undervalued judgement + default thresholds, shared with the build scripts
   logic/artworkRatings.ts  localStorage persistence for the rating admin page
   logic/promoStyles.ts     localStorage persistence for the promo-style admin page
   logic/priceExclusions.ts localStorage persistence for the price-audit admin page

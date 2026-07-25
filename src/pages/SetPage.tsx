@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { formatEuro } from '../logic/pricing'
-import { cardImage, formatDate, getSet, loadCards, type CardData } from '../data/cards'
+import { cardImage, formatDate, getSet, loadCards, setLogo, type CardData } from '../data/cards'
 import { currentLocationKey, restoreScrollSoon, updateSetFilters, type SetSortKey } from '../router'
 import { useDocumentMeta } from '../logic/documentMeta'
+import { setMeta as buildSetMeta } from '../logic/pageMeta.js'
 import { VerdictChip } from '../components/VerdictChip'
 import { RetryImage } from '../components/RetryImage'
 
@@ -62,13 +63,8 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
     return sorted
   }, [cards, config, query, sort, minPrice])
 
-  useDocumentMeta(
-    set ? `${set.name} card prices` : 'Set not found',
-    set
-      ? `Fair price estimates for all ${set.cardCount} cards in ${set.name}, compared against current Cardmarket prices. Find which cards are over- or undervalued.`
-      : null,
-    `/set/${setId}`,
-  )
+  const meta = buildSetMeta(set)
+  useDocumentMeta(meta.title, meta.description, `/set/${setId}`, set ? setLogo(set) : null)
 
   if (!set) {
     return (

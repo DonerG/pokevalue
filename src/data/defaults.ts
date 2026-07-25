@@ -1,3 +1,5 @@
+import { DEFAULT_THRESHOLDS } from '../logic/verdict.js'
+
 // Pokémon, rarity, illustrator, set, and card type are no longer here — they're
 // fixed, data-derived facts computed per card at build time (see
 // analysis/fit_factors.py and scripts/lib/factors.mjs), not user choices.
@@ -64,7 +66,7 @@ export function defaultConfig(): Config {
   for (const f of FACTORS) {
     multipliers[f.id] = Object.fromEntries(f.options.map((o) => [o.id, o.multiplier]))
   }
-  return { thresholds: { over: 20, under: 20 }, multipliers }
+  return { thresholds: { ...DEFAULT_THRESHOLDS }, multipliers }
 }
 
 export type Selection = Record<FactorId, string>

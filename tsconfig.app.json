@@ -7,6 +7,9 @@
     "types": ["vite/client"],
     "allowArbitraryExtensions": true,
     "resolveJsonModule": true,
+    /* format.js / pageMeta.js are plain JS so scripts/prerender.mjs can import
+       the very same modules under bare Node — see the header in pageMeta.js. */
+    "allowJs": true,
     "skipLibCheck": true,
 
     /* Bundler mode */
