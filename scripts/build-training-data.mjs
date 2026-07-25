@@ -13,7 +13,7 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { effectiveRarity, mapCardType } from './lib/cardMapping.mjs'
+import { effectiveDexIds, effectiveRarity, mapCardType } from './lib/cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE_DIR = join(HERE, '.cache', 'cards')
@@ -72,7 +72,7 @@ for (const file of files) {
     id: card.id,
     name: card.name,
     category: card.category ?? 'Pokemon',
-    dexIds: card.dexId ?? [],
+    dexIds: effectiveDexIds(card),
     rarity: effectiveRarity(card, promoStyles),
     illustrator: card.illustrator ?? null,
     cardType: mapCardType(card),

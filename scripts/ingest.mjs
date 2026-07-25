@@ -20,7 +20,7 @@ import { existsSync } from 'node:fs'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { mapCardType } from './lib/cardMapping.mjs'
+import { effectiveDexIds, mapCardType } from './lib/cardMapping.mjs'
 import { computeCardPricing } from './lib/factors.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
@@ -98,7 +98,7 @@ async function ingestSet(setId) {
     done++
     if (done % 25 === 0) console.log(`  … ${done}/${cardBriefs.length}`)
 
-    const dexIds = card.dexId ?? []
+    const dexIds = effectiveDexIds(card)
     const cm = card.pricing?.cardmarket
     const priceFlagged = priceExclusions[card.id] === 'wrong'
     const { baseValue, breakdown } = computeCardPricing(card, set.releaseDate)

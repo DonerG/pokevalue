@@ -7,7 +7,7 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { effectiveRarity, mapCardType, eraBucket } from './cardMapping.mjs'
+import { effectiveDexIds, effectiveRarity, mapCardType, eraBucket } from './cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
@@ -61,12 +61,13 @@ function lookup(table, key) {
  */
 export function computeCardPricing(card, releaseDate) {
   const data = loadFactors()
-  const pokemonKey = card.dexId?.[0] != null ? String(card.dexId[0]) : 'none'
+  const dexIds = effectiveDexIds(card)
+  const pokemonKey = dexIds[0] != null ? String(dexIds[0]) : 'none'
   const rarityValue = effectiveRarity(card, loadPromoStyles()) ?? 'None'
   const illustratorKey = card.illustrator ?? 'Unknown'
   const setKey = card.set?.id ?? 'unknown'
   const cardTypeKey = mapCardType(card) ?? 'Standard'
-  const cardNameKey = card.dexId?.length ? 'n/a' : (card.name ?? 'n/a')
+  const cardNameKey = dexIds.length ? 'n/a' : (card.name ?? 'n/a')
   const era = eraBucket(releaseDate)
   const rarityEraKey = `${rarityValue} | ${era}`
   const cardTypeEraKey = `${cardTypeKey} | ${era}`

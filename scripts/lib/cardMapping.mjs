@@ -4,6 +4,58 @@
  * this in one place means everything agrees on what "rarity" and "card type"
  * mean for a given card.
  */
+import { readFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const HERE = dirname(fileURLToPath(import.meta.url))
+
+// ---------- "Trainer's Pokémon" species recovery ----------
+// Scarlet & Violet introduced cards owned by a Trainer ("Team Rocket's
+// Mewtwo ex", "N's Reshiram", "Erika's Vileplume ex"). TCGdex files these
+// as category "Pokemon" but leaves dexId EMPTY — so without this they fall
+// into the same "no Pokémon" bucket as Trainers and Energy, losing the
+// single strongest price signal a card has (54 distinct names, 66 cards).
+// The species is always the tail of the name after the possessive, minus
+// any card-type suffix, so recover the dex id from that and let the normal
+// Pokémon factor apply. Verified: all 54 names resolve, including the
+// hyphenated "Ethan's Ho-Oh ex".
+
+const POKEDEX_NAMES = JSON.parse(
+  readFileSync(join(HERE, '..', '..', 'src', 'data', 'generated', 'pokedex-names.json'), 'utf8'),
+)
+
+const DEX_ID_BY_SPECIES = new Map()
+for (const [id, name] of Object.entries(POKEDEX_NAMES)) {
+  if (!DEX_ID_BY_SPECIES.has(name)) DEX_ID_BY_SPECIES.set(name, Number(id))
+}
+
+const POSSESSIVE_PREFIX = /^.+?'s\s+/
+const CARD_TYPE_SUFFIX = /\s+(ex|EX|V|VMAX|VSTAR|GX|BREAK|LV\.X)$/
+
+function speciesDexIdFromName(name) {
+  if (!name) return null
+  let species = name.replace(POSSESSIVE_PREFIX, '')
+  let previous
+  do {
+    previous = species
+    species = species.replace(CARD_TYPE_SUFFIX, '')
+  } while (species !== previous)
+  return DEX_ID_BY_SPECIES.get(species.toLowerCase().replace(/\s+/g, '-')) ?? null
+}
+
+/**
+ * The dex IDs a card should be modeled under: TCGdex's own when present,
+ * otherwise recovered from the name for Trainer-owned Pokémon (see above).
+ * Everything downstream keys off this, so a card gets its Pokémon factor and
+ * is kept out of the Trainer/Energy-only "cardName" factor.
+ */
+export function effectiveDexIds(card) {
+  if (card.dexId?.length) return card.dexId
+  if (card.category !== 'Pokemon') return []
+  const dexId = speciesDexIdFromName(card.name)
+  return dexId == null ? [] : [dexId]
+}
 
 // ---------- Mapping TCGdex rarity → coarse bucket (used only for artwork-rating candidate filtering) ----------
 

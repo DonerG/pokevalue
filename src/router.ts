@@ -25,6 +25,7 @@ export type Route =
   | { page: 'home' }
   | { page: 'set'; setId: string; query: string; sort: SetSortKey; minPrice: boolean }
   | { page: 'card'; cardId: string }
+  | { page: 'how-it-works' }
   | { page: 'admin-artwork' }
   | { page: 'admin-promo-style' }
   | { page: 'admin-price-audit' }
@@ -46,6 +47,7 @@ export function parsePath(pathname: string, search: string): Route {
     }
   }
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: decodeURIComponent(parts[1]) }
+  if (parts[0] === 'how-it-works') return { page: 'how-it-works' }
   if (parts[0] === 'admin' && parts[1] === 'artwork') return { page: 'admin-artwork' }
   if (parts[0] === 'admin' && parts[1] === 'promo-style') return { page: 'admin-promo-style' }
   if (parts[0] === 'admin' && parts[1] === 'price-audit') return { page: 'admin-price-audit' }

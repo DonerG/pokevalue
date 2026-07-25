@@ -72,12 +72,8 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
         <VerdictChip market={market} fair={card.baseValue} config={config} />
       </div>
       <p className="panel-intro">
-        Pokémon, rarity, illustrator, set, and card type come from a regression model trained on
-        real Cardmarket prices across ~19,000 cards — fixed facts, not something you adjust by
-        hand. "Rarity (era)" and "Card type (era)" correct for how much a rarity tier or mechanic
-        (EX, GX, V, …) is worth today vs. when the card was printed — a modern "Rare" and a 1999
-        "Rare" mean very different things. Condition and language (below) are reasonable
-        assumptions layered on top, since Cardmarket's data doesn't separate those out.
+        Each factor below is computed from real Cardmarket prices across ~19,000 cards.{' '}
+        <a href="/how-it-works">How this is calculated →</a>
       </p>
       <ul className="breakdown-list">
         <li>

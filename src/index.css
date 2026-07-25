@@ -667,8 +667,8 @@ details.panel[open] summary {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
 }
 
 .card-tile {
@@ -707,40 +707,49 @@ details.panel[open] summary {
   text-align: center;
 }
 
-/* Two columns: name/rarity on the left, market/fair/verdict stacked on the
-   right — denser than one all-stacked column, and keeps related numbers
-   grouped together instead of interleaved with the name block. */
+/* One stacked column everywhere: name, then market/fair, then the verdict
+   chip stretched across the full tile width. This started as the phone-only
+   fallback and turned out to read better at every size than the two-column
+   name/values split it replaced — everything lines up under the image
+   instead of splitting the eye between two columns, and dropping the
+   rarity/number line (still on the card page) buys the room to keep the
+   tiles small without shrinking the text. */
 .card-tile-body {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 12px 12px;
-  font-size: 13.5px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 3px;
+  padding: 8px 10px 10px;
+  font-size: 13px;
 }
 
 .card-tile-name-block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
   min-width: 0;
 }
 
+.card-tile-body strong {
+  font-size: 13px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Rarity + number: card page only, never on a tile. */
 .card-tile-name-block .muted {
-  margin: 0;
-  font-size: 12.5px;
+  display: none;
 }
 
 .card-tile-value-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  flex: none;
+  align-items: stretch;
+  gap: 0;
   font-variant-numeric: tabular-nums;
   color: var(--text-2);
-  font-size: 13px;
+  font-size: 12.5px;
   white-space: nowrap;
 }
 
@@ -753,14 +762,17 @@ details.panel[open] summary {
   display: none;
 }
 
-/* Phones only — four columns instead of the auto-fill grid's one, since a
-   single ~200px-min column leaves a phone screen showing just one card at a
-   time. Desktop/tablet keep the fluid auto-fill grid untouched otherwise.
-   Text is trimmed to what still fits legibly at ~85px per tile; tap through
-   to the card page for the rest. The two-column name/value layout doesn't
-   fit at this width either, so it collapses back to one stacked column.
-   Placed after the rules it overrides so it wins the cascade at equal
-   specificity regardless of source order elsewhere. */
+.card-tile-body .chip {
+  align-self: stretch;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 12px;
+  padding: 3px 6px;
+}
+
+/* Phones: four fixed columns rather than the auto-fill grid, which would
+   otherwise leave a phone screen showing one card at a time. Same layout as
+   above, just scaled down to what stays legible at ~85px per tile. */
 @media (max-width: 640px) {
   .card-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -772,27 +784,15 @@ details.panel[open] summary {
   }
 
   .card-tile-body {
-    flex-direction: column;
-    align-items: stretch;
     padding: 4px 5px 6px;
-    gap: 3px;
   }
 
   .card-tile-body strong {
     font-size: 10.5px;
     line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .card-tile-name-block .muted {
-    display: none;
   }
 
   .card-tile-value-block {
-    align-items: stretch;
-    gap: 0;
     font-size: 9px;
   }
 
@@ -1105,4 +1105,137 @@ details.panel[open] summary {
 .admin-pagination button:disabled {
   opacity: 0.4;
   cursor: default;
+}
+
+/* ---------- How it works ---------- */
+
+.prose-panel {
+  margin-bottom: 20px;
+}
+
+.prose-panel h3 {
+  font-size: 19px;
+  margin: 0 0 12px;
+}
+
+.prose-panel h3:not(:first-child) {
+  margin-top: 24px;
+}
+
+.prose-panel p {
+  margin: 0 0 12px;
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 72ch;
+}
+
+.prose-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.formula {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13.5px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--text) !important;
+  overflow-x: auto;
+}
+
+.formula-cont {
+  padding-left: 2ch;
+}
+
+.stat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.stat-list li {
+  flex: 1 1 150px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.stat-list strong {
+  display: block;
+  font-size: 26px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-list span {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.factor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.factor-table {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.factor-table h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.factor-table .muted {
+  margin: 0 0 12px;
+}
+
+.factor-table ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.factor-table li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 0;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.factor-table-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.factor-table-n {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.factor-table-value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 52px;
+  text-align: right;
 }

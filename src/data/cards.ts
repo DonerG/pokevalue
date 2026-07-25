@@ -192,6 +192,33 @@ export async function loadOutlierCandidates(): Promise<OutlierCandidates> {
   return mod.default as unknown as OutlierCandidates
 }
 
+export interface FactorExample {
+  label: string
+  factor: number
+  n: number
+}
+
+export interface FactorHighlights {
+  model: {
+    cards: number
+    testR2: number
+    medianError: number
+    anchor: number
+    categories: Record<string, number>
+  }
+  topPokemon: FactorExample[]
+  rarities: FactorExample[]
+  topIllustrators: FactorExample[]
+  cardTypes: FactorExample[]
+  rarityAcrossEras: FactorExample[]
+}
+
+/** Lazily loaded — only the "How it works" page needs it. */
+export async function loadFactorHighlights(): Promise<FactorHighlights> {
+  const mod = await import('./generated/factor-highlights.json')
+  return mod.default as unknown as FactorHighlights
+}
+
 export interface SearchIndexCard {
   id: string
   name: string

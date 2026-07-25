@@ -15,6 +15,9 @@ const AdminPromoStylePage = lazy(() =>
 const AdminPriceAuditPage = lazy(() =>
   import('./pages/AdminPriceAuditPage').then((m) => ({ default: m.AdminPriceAuditPage })),
 )
+const HowItWorksPage = lazy(() =>
+  import('./pages/HowItWorksPage').then((m) => ({ default: m.HowItWorksPage })),
+)
 
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
@@ -33,6 +36,9 @@ function App() {
           <a href="/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
             Sets
           </a>
+          <a href="/how-it-works" className={route.page === 'how-it-works' ? 'active' : ''}>
+            How it works
+          </a>
         </nav>
       </header>
 
@@ -48,6 +54,11 @@ function App() {
         />
       )}
       {route.page === 'card' && <CardPage key={route.cardId} cardId={route.cardId} config={CONFIG} />}
+      {route.page === 'how-it-works' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <HowItWorksPage />
+        </Suspense>
+      )}
       {route.page === 'admin-artwork' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <AdminArtworkPage />
