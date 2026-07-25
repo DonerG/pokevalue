@@ -99,6 +99,12 @@ export function AdminPromoStylePage() {
           rarity level in the model. Cards already tagged drop out of the queue below, so this list
           only ever shows what's still open. Saved in this browser only; export to keep it.
         </p>
+        <p className="muted">
+          <strong>Every alt art and every stamped promo is already tagged.</strong> What's left below
+          is the plain remainder — they all share one "Promo" level and are priced reasonably as a
+          group, so tagging more is optional. The page stays for the promos that arrive with each new
+          set.
+        </p>
         <div className="admin-toolbar">
           <span className="admin-progress">
             {taggedCount} / {candidates?.length ?? '…'} tagged

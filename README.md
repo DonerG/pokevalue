@@ -12,7 +12,20 @@ A website that estimates a fair price for Pokémon cards with a regression model
 - **Artwork rating (hidden, `/admin/artwork`):** Rate illustration quality (10/9/8/worse) on chase cards whose artwork is genuinely their own — illustration, special illustration, secret and full art rares. Double Rares and Ultra Rares are excluded (standard frame, nothing to judge), and so are Promos, which are handled entirely on `/admin/promo-style`. Not yet used by the model — kept to collect enough data to make it a factor. Export/import as JSON.
 - **Promo style tagging (hidden, `/admin/promo-style`):** Promo cards all share one "Promo" rarity in the source data, but they aren't one kind of card — some are **alt arts** with a full unique illustration, the rest look like ordinary Commons/Rares (or like glittery ex/V cards that still have no real artwork), and some of those carry an **event stamp** that lifts the price. Nothing in the data separates them. Tag each by eye as `Alt Art 10/9/8`, `Stamped` or `Normal`; export/import as JSON into `src/data/promo-styles.json`. `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) then turns the tag into its own rarity level ("Promo" → "Promo (Alt Art 9)") for both training and display, so the rarity, rarity × era and rarity × set factors pick it up with no other change. Tagged cards drop out of the queue, so the list only ever shows what's still open.
 
-  The three alt-art grades are kept apart rather than merged into one "alt art" bucket because they measurably aren't one thing: against the untagged model, grade 10 promos were underpriced ~8×, grade 9 ~1.7× and grade 8 ~1.5×, while cards marked as having no real artwork were already correct (0.96×). Fitted, they come out cleanly ordered with barely-overlapping confidence intervals — Promo ×0.89, Alt Art 8 ×1.03, Alt Art 9 ×1.20, Alt Art 10 ×1.57 — and the grade-10 mispricing drops from 0.12× to 0.95×. Promos are deliberately *not* listed on `/admin/artwork`; their artwork grade is part of this one pass.
+  The alt-art grades are kept apart rather than merged into one "alt art" bucket because they measurably aren't one thing. Fitted, the levels come out cleanly ordered with barely-overlapping confidence intervals:
+
+  | level | factor | n |
+  |---|---|---|
+  | Promo (Alt Art 10) | ×1.55 | 12 |
+  | Promo (Stamped) | ×1.26 | 50 |
+  | Promo (Alt Art 9) | ×1.23 | 23 |
+  | Promo (Alt Art 8) | ×1.08 | 11 |
+  | Promo (Alt Art, weak) | ×1.02 | 10 |
+  | Promo (untagged) | ×0.76 | 572 |
+
+  Every group it touches got closer to the market: stamped promos were underpriced 3× before they had their own level (0.32× → 0.94×), grade-10 alt arts were underpriced ~8× (0.12× → 1.15×), and the plain-Promo bucket — which had been inflated by all the valuable cards sitting inside it, overpricing ordinary promos by 1.68× — dropped to ×0.76 and now sits at 1.16×. Promos are deliberately *not* listed on `/admin/artwork`; their artwork grade is part of this one pass.
+
+  Two hand-maintained files feed this: `src/data/promo-styles.json` says *what* a promo is (alt art / stamped / plain), and the artwork ratings say *how good* the illustration is. They're merged at tagging time into a single level per card — an alt art graded "worse" becomes `altart0` rather than being dropped, since it is still an alt art.
 - **Price audit (hidden, `/admin/price-audit`):** The 100 cards site-wide with the biggest market-vs-fair gap, in each direction (percentage uses the same "upside relative to market" formula as the site's own verdict chips — see `src/logic/pricing.ts::verdict`). Split into two tabs since undervalued deviation is unbounded (market can approach zero) and overvalued is capped at -100%, so one combined ranking was almost entirely undervalued cases — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Mark a card "Wrong" and it's excluded from the next retrain, with its (wrong) price hidden on the site; mark it "Verified" if the price is real but the model can't explain it (e.g. hype-driven) — kept in training, just remembered as reviewed so it doesn't need re-checking. Export/import as JSON.
 
 ## The pricing model

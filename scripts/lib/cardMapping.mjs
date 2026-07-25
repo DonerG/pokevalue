@@ -165,8 +165,13 @@ export const PROMO_STYLE_LABELS = {
   altart10: 'Promo (Alt Art 10)',
   altart9: 'Promo (Alt Art 9)',
   altart8: 'Promo (Alt Art 8)',
+  altart0: 'Promo (Alt Art, weak)',
   stamped: 'Promo (Stamped)',
   normal: 'Promo (Normal)',
+  // Legacy value from the first version of the tagging page, which only knew
+  // "art" vs "normal". Kept so re-importing an older export degrades to an
+  // ungraded alt art instead of silently dropping the tag altogether.
+  art: 'Promo (Alt Art)',
 }
 
 export function effectiveRarity(card, promoStyles) {
