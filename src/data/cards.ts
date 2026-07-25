@@ -54,6 +54,8 @@ export interface CardData {
   market: CardMarket | null
   /** Hand-flagged via #/admin/price-audit as having a known-wrong Cardmarket price — `market` is null because of this, not because TCGdex has no data. */
   priceFlagged: boolean
+  /** Price was hand-read off Cardmarket to replace a broken one — trend only, no 30-day average. */
+  priceCorrected?: boolean
   /** Data-derived fair value before condition/language: anchor × every factor in `factors`. */
   baseValue: number
   factors: CardFactors

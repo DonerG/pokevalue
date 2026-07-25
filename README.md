@@ -26,7 +26,13 @@ A website that estimates a fair price for Pokémon cards with a regression model
   Every group it touches got closer to the market: stamped promos were underpriced 3× before they had their own level (0.32× → 0.94×), grade-10 alt arts were underpriced ~8× (0.12× → 1.15×), and the plain-Promo bucket — which had been inflated by all the valuable cards sitting inside it, overpricing ordinary promos by 1.68× — dropped to ×0.76 and now sits at 1.16×. Promos are deliberately *not* listed on `/admin/artwork`; their artwork grade is part of this one pass.
 
   Two hand-maintained files feed this: `src/data/promo-styles.json` says *what* a promo is (alt art / stamped / plain), and the artwork ratings say *how good* the illustration is. They're merged at tagging time into a single level per card — an alt art graded "worse" becomes `altart0` rather than being dropped, since it is still an alt art.
-- **Price audit (hidden, `/admin/price-audit`):** The 100 cards site-wide with the biggest market-vs-fair gap, in each direction (percentage uses the same "upside relative to market" formula as the site's own verdict chips — see `src/logic/pricing.ts::verdict`). Split into two tabs since undervalued deviation is unbounded (market can approach zero) and overvalued is capped at -100%, so one combined ranking was almost entirely undervalued cases — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Mark a card "Wrong" and it's excluded from the next retrain, with its (wrong) price hidden on the site; mark it "Verified" if the price is real but the model can't explain it (e.g. hype-driven) — kept in training, just remembered as reviewed so it doesn't need re-checking. Export/import as JSON.
+- **Price audit (hidden, `/admin/price-audit`):** The 100 cards site-wide with the biggest market-vs-fair gap, in each direction (percentage uses the same "upside relative to market" formula as the site's own verdict chips — see `src/logic/pricing.ts::verdict`). Split into two tabs since undervalued deviation is unbounded (market can approach zero) and overvalued is capped at -100%, so one combined ranking was almost entirely undervalued cases — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Three verdicts, all stored in `src/data/price-exclusions.json` and parsed by one shared module (`src/logic/priceReview.js`) so the site and both build scripts agree:
+
+  - **Type the correct trend price** into the box — the best option when the real number can be read off Cardmarket. It replaces the broken one on the site *and* in training, so the card stays in the model instead of being thrown away. Only the trend price is entered, because that's what the site shows and the model is fitted on; a corrected card therefore displays that price **alone**, with no 30-day average beside it (there is no hand-entered average, and showing a stale automatic one next to a hand-fixed trend would mix two different provenances). Stored as `{ "corrected": 0.07 }`, and labelled "corrected by hand" on the card page rather than attributed to the Cardmarket feed.
+  - **Wrong** — the price is broken and there's nothing better to put there. Excluded from the next retrain, price hidden on the site.
+  - **Verified** — the price is real but the model can't explain it (e.g. hype-driven). Kept in training, just remembered as reviewed so it doesn't need re-checking.
+
+  Export/import as JSON.
 
 ## The pricing model
 
@@ -155,7 +161,7 @@ src/
   data/cards.ts            Access to imported sets/cards, pricing-meta (score normalization range)
   data/generated/          Imported card data incl. baked-in factors (JSON, commit these!)
   data/promo-styles.json  Hand-tagged Promo styles: Alt Art 10/9/8, Stamped, Normal (commit this!)
-  data/price-exclusions.json Hand-flagged cards with a known-bad Cardmarket price (commit this!)
+  data/price-exclusions.json Hand-reviewed prices: wrong / verified / {corrected: n} (commit this!)
   logic/pricing.ts         Fair price, score; re-exports verdict + formatting from the shared JS modules
   logic/pageMeta.js        Per-route title/description (shared with scripts/prerender.mjs — see "URLs and SEO")
   logic/format.js          Euro/percent formatting, shared with the build scripts

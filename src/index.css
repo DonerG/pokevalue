@@ -1334,3 +1334,27 @@ details.panel[open] summary {
 .prerender-links a {
   color: var(--accent);
 }
+
+/* Correct-price input on the price audit page — see AdminPriceAuditPage. */
+.price-fix {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 6px;
+}
+
+.price-fix span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.price-fix input {
+  width: 100%;
+  padding: 4px 6px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}

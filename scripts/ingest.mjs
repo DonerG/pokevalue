@@ -21,6 +21,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { effectiveDexIds, mapCardType } from './lib/cardMapping.mjs'
+import { correctedTrend, isPriceWrong } from '../src/logic/priceReview.js'
 import { computeCardPricing } from './lib/factors.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
@@ -100,7 +101,13 @@ async function ingestSet(setId) {
 
     const dexIds = effectiveDexIds(card)
     const cm = card.pricing?.cardmarket
-    const priceFlagged = priceExclusions[card.id] === 'wrong'
+    const review = priceExclusions[card.id]
+    const priceFlagged = isPriceWrong(review)
+    // A hand-read correction replaces the broken price rather than hiding it.
+    // Only the trend price is entered by hand, so avg30/low are dropped
+    // instead of leaving stale numbers beside a fixed one — CardPage then
+    // shows the trend price alone. See src/logic/priceReview.js.
+    const corrected = correctedTrend(review)
     const { baseValue, breakdown } = computeCardPricing(card, set.releaseDate)
     return {
       id: card.id,
@@ -112,11 +119,13 @@ async function ingestSet(setId) {
       cardType: mapCardType(card),
       dexIds,
       image: card.image ?? null,
-      market:
-        cm && !priceFlagged
+      market: corrected
+        ? { trend: corrected, avg30: null, low: null, updated: null }
+        : cm && !priceFlagged
           ? { trend: cm.trend ?? null, avg30: cm.avg30 ?? null, low: cm.low ?? null, updated: cm.updated ?? null }
           : null,
       priceFlagged,
+      priceCorrected: corrected != null,
       baseValue,
       factors: breakdown,
     }

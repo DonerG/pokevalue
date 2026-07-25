@@ -14,6 +14,7 @@ import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { effectiveDexIds, effectiveRarity, mapCardType } from './lib/cardMapping.mjs'
+import { correctedTrend, isPriceWrong } from '../src/logic/priceReview.js'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE_DIR = join(HERE, '.cache', 'cards')
@@ -41,8 +42,9 @@ try {
 } catch {
   // none reviewed yet
 }
-const wrongCount = Object.values(priceExclusions).filter((v) => v === 'wrong').length
-console.log(`${wrongCount} cards flagged with a bad price.`)
+const wrongCount = Object.values(priceExclusions).filter(isPriceWrong).length
+const correctedCount = Object.values(priceExclusions).filter((v) => correctedTrend(v) != null).length
+console.log(`${wrongCount} cards flagged with a bad price, ${correctedCount} with a hand-corrected price.`)
 
 // The per-card endpoint's embedded `set` object omits releaseDate, so pull
 // it from the separately-cached set details (fetch-all-sets.mjs) instead.
@@ -63,7 +65,12 @@ let skippedNoPrice = 0
 for (const file of files) {
   const raw = await readFile(join(CACHE_DIR, file), 'utf8')
   const card = JSON.parse(raw)
-  const avg30 = card.pricing?.cardmarket?.avg30
+  // A hand-read correction stands in for the broken source price. Only the
+  // trend price is entered by hand, and that's what the model is fitted on —
+  // avg30 is set to the same number so this row still passes the price check
+  // below rather than being dropped for lacking an average nobody can supply.
+  const corrected = correctedTrend(priceExclusions[card.id])
+  const avg30 = corrected ?? card.pricing?.cardmarket?.avg30
   if (avg30 == null || avg30 <= 0) {
     skippedNoPrice++
     continue
@@ -80,8 +87,8 @@ for (const file of files) {
     setName: card.set?.name ?? null,
     releaseDate: releaseDateBySet.get(card.set?.id) ?? null,
     avg30,
-    trend: card.pricing?.cardmarket?.trend ?? null,
-    low: card.pricing?.cardmarket?.low ?? null,
+    trend: corrected ?? card.pricing?.cardmarket?.trend ?? null,
+    low: corrected ? null : (card.pricing?.cardmarket?.low ?? null),
     idProduct: card.pricing?.cardmarket?.idProduct ?? null,
   })
 }
@@ -108,7 +115,9 @@ console.log(
   `Dropped ${rawRows.length - afterProductFilter.length} cards sharing a Cardmarket product ID with a different Pokémon (${badProducts.size} bad product IDs).`,
 )
 
-const rows = afterProductFilter.filter((r) => priceExclusions[r.id] !== 'wrong')
+// Only "wrong" drops a card. A correction keeps it, with the hand-read price
+// already substituted above.
+const rows = afterProductFilter.filter((r) => !isPriceWrong(priceExclusions[r.id]))
 console.log(`Dropped ${afterProductFilter.length - rows.length} cards hand-flagged as having a bad price.`)
 
 rows.sort((a, b) => (a.releaseDate ?? '').localeCompare(b.releaseDate ?? '') || a.id.localeCompare(b.id))

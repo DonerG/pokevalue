@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadOutlierCandidates, type OutlierCandidate, type OutlierCandidates } from '../data/cards'
 import {
+  correctedTrend,
   loadPriceExclusions,
+  reviewKind,
   savePriceExclusions,
   type PriceExclusions,
   type PriceReview,
 } from '../logic/priceExclusions'
-import { formatEuro, formatPercent } from '../logic/pricing'
+import { formatEuro, formatPercent, parseNumber } from '../logic/pricing'
 import { RetryImage } from '../components/RetryImage'
 
 const PAGE_SIZE = 30
@@ -70,8 +72,11 @@ export function AdminPriceAuditPage() {
   const pageSafe = Math.min(page, pageCount - 1)
   const pageItems = filtered.slice(pageSafe * PAGE_SIZE, pageSafe * PAGE_SIZE + PAGE_SIZE)
 
-  const wrongCount = candidates ? candidates.filter((c) => exclusions[c.id] === 'wrong').length : 0
-  const verifiedCount = candidates ? candidates.filter((c) => exclusions[c.id] === 'verified').length : 0
+  const countKind = (k: 'wrong' | 'verified' | 'corrected') =>
+    candidates ? candidates.filter((c) => reviewKind(exclusions[c.id]) === k).length : 0
+  const wrongCount = countKind('wrong')
+  const verifiedCount = countKind('verified')
+  const correctedCount = countKind('corrected')
 
   const handleExport = () => {
     const blob = new Blob([JSON.stringify(exclusions, null, 1)], { type: 'application/json' })
@@ -110,11 +115,26 @@ export function AdminPriceAuditPage() {
           +200% = market can rise 3x to reach fair, -80% = market can fall 80%). Split into two tabs
           rather than one ranked list: "undervalued" is mathematically unbounded (market can approach
           zero), while "overvalued" is capped at -100% — combined into one list, undervalued cases
-          buried almost every overvalued one. Spot-check
-          with "Cardmarket ↗": mark a bad price "Wrong" — excluded from the next model retrain and
-          stops showing on the site — or, if the price is real but the model just can't explain it
-          (e.g. hype), mark it "Verified" so it's skipped on your next review pass without changing
-          how it's used. Saved in this browser only; export to keep it somewhere durable.
+          buried almost every overvalued one. Spot-check with "Cardmarket ↗", then either:
+        </p>
+        <ul className="muted">
+          <li>
+            <strong>Type the real trend price</strong> into the box — best option when you can read
+            the correct number off Cardmarket. It replaces the broken one on the site and in the
+            next retrain. Only the trend price is needed; a corrected card then shows that price
+            alone, with no 30-day average beside it.
+          </li>
+          <li>
+            <strong>Wrong</strong> — the price is broken and there's nothing better to put there.
+            Dropped from training, price hidden on the site.
+          </li>
+          <li>
+            <strong>Verified</strong> — the price is real, the model just can't explain it (e.g.
+            hype). Nothing changes; it's only recorded so your next review pass can skip it.
+          </li>
+        </ul>
+        <p className="muted">
+          Saved in this browser only; export to keep it somewhere durable.
         </p>
         <div className="admin-toolbar">
           <label className="admin-checkbox">
@@ -144,7 +164,8 @@ export function AdminPriceAuditPage() {
         </div>
         <div className="admin-toolbar">
           <span className="admin-progress">
-            {wrongCount} wrong · {verifiedCount} verified / {candidates?.length ?? '…'}
+            {wrongCount} wrong · {correctedCount} corrected · {verifiedCount} verified /{' '}
+            {candidates?.length ?? '…'}
           </span>
           <button type="button" onClick={handleExport}>
             Export exclusions (JSON)
@@ -196,6 +217,7 @@ export function AdminPriceAuditPage() {
             {pageItems.map((c) => {
               const thumb = cardThumb(c)
               const review = exclusions[c.id]
+              const kind = reviewKind(review)
               return (
                 <div key={c.id} className="rating-card">
                   {thumb ? (
@@ -222,14 +244,15 @@ export function AdminPriceAuditPage() {
                     <div className="rating-scale">
                       <button
                         type="button"
-                        className={review === 'wrong' ? 'rating-btn active' : 'rating-btn'}
+                        className={kind === 'wrong' ? 'rating-btn active' : 'rating-btn'}
                         onClick={() => setReview(c.id, 'wrong')}
+                        title="Price is broken and we have nothing better — dropped from training, hidden on the site"
                       >
                         Wrong
                       </button>
                       <button
                         type="button"
-                        className={review === 'verified' ? 'rating-btn active' : 'rating-btn'}
+                        className={kind === 'verified' ? 'rating-btn active' : 'rating-btn'}
                         onClick={() => setReview(c.id, 'verified')}
                         title="Price is real (e.g. hype) — kept in training, just marked as reviewed"
                       >
@@ -241,6 +264,33 @@ export function AdminPriceAuditPage() {
                         </button>
                       )}
                     </div>
+                    {/* Read the real trend price off Cardmarket and type it in: it
+                        replaces the broken one everywhere, instead of the card just
+                        being dropped. Trend only — that's what the site shows and
+                        the model is fitted on. */}
+                    <label className="price-fix">
+                      <span>Correct trend price</span>
+                      <input
+                        type="text"
+                        inputMode="decimal"
+                        placeholder="e.g. 0.07"
+                        defaultValue={correctedTrend(review) ?? ''}
+                        key={`${c.id}-${correctedTrend(review) ?? ''}`}
+                        onBlur={(e) => {
+                          const raw = e.target.value.trim()
+                          if (!raw) {
+                            if (kind === 'corrected') clearReview(c.id)
+                            return
+                          }
+                          const value = parseNumber(raw)
+                          if (Number.isFinite(value) && value > 0) setReview(c.id, { corrected: value })
+                          else e.target.value = String(correctedTrend(review) ?? '')
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') e.currentTarget.blur()
+                        }}
+                      />
+                    </label>
                   </div>
                 </div>
               )

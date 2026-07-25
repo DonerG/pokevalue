@@ -96,7 +96,11 @@ export function CardPage({ cardId, config }: Props) {
             </p>
             {card.market ? (
               <p className="muted">
-                Cardmarket: Trend {card.market.trend != null ? formatEuro(card.market.trend) : '–'}
+                {/* A corrected price is hand-read off Cardmarket, so it isn't
+                    attributed to the automatic feed — and it carries a trend
+                    price only, which is why no 30-day average appears here. */}
+                {card.priceCorrected ? 'Trend price (corrected by hand): ' : 'Cardmarket: Trend '}
+                {card.market.trend != null ? formatEuro(card.market.trend) : '–'}
                 {card.market.avg30 != null && <> · 30-day avg {formatEuro(card.market.avg30)}</>}
                 {card.market.updated && <> · as of {formatDate(card.market.updated)}</>}
               </p>
