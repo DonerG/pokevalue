@@ -63,6 +63,32 @@ statistically detectable and isn't filtered here. build-training-data.mjs
 does drop the one sub-case that *is* detectable: cards whose Cardmarket
 product ID is literally shared with a different Pokémon.
 
+Regression target: `avg30`, except for cards younger than `avg30`'s own
+30-day window, where `trend` is used instead. The site displays and computes
+its over-/undervalued verdict from `card.market.trend` everywhere (see
+scripts/ingest.mjs, src/pages/SetPage.tsx, src/pages/CardPage.tsx), so in
+principle training should match that. In practice the two only disagree in two
+situations, and only one of them is a reason to prefer `trend`:
+
+  - A set fresh off release: `avg30` is a rolling 30-day average, so for a
+    set 8 days old it's mostly averaging those same 8 (hype-inflated,
+    settling) days — it hasn't had 30 real days to exist yet, and lags what
+    `trend` already shows. Checked: median avg30/trend ratio is 0.95-1.02
+    across every set older than ~30 days, but was 1.67 for Pitch Black at 8
+    days old — alone enough to make most of that set's cards look wildly
+    undervalued against a stale reference.
+  - Cheap bulk cards generally: `trend` reacts fast to individual recent
+    listings, which is exactly what makes it *unreliable* at the low end — a
+    single lowball listing on an otherwise ~EUR0.15 card can drag `trend` to
+    EUR0.02 (checked by hand across several sets, old and new alike).
+    `avg30`'s smoothing is a feature there, not a lag.
+
+So: `trend` only substitutes for `avg30` when the card's set is younger than
+the 30-day window `avg30` needs to mean anything; everywhere else `avg30`
+stays the more reliable target. Both fields have identical coverage
+(19,436/19,440 cached cards have either both or neither), so this loses no
+training data either way.
+
 Displayed vs. training-only sets: the site currently shows only the Scarlet &
 Violet + Mega Evolution sets (src/data/generated/sets.json), but this script
 trains on every English card TCGdex has (~170 sets back to 1999) — the older
@@ -160,7 +186,15 @@ df["cardType"] = df["cardType"].fillna("Standard")
 df["cardName"] = df.apply(lambda row: "n/a" if row["dexIds"] else row["name"], axis=1)
 df["rarityEra"] = df["rarity"] + " | " + df["releaseDate"].apply(era_bucket)
 df["cardTypeEra"] = df["cardType"] + " | " + df["releaseDate"].apply(era_bucket)
-df["logPrice"] = np.log(df["avg30"].astype(float))
+# See "Regression target" in the module docstring: avg30 is unreliable for a
+# set that hasn't existed for 30 days yet, so those rows use trend instead.
+AVG30_WINDOW_DAYS = 30
+release_dt = pd.to_datetime(df["releaseDate"], errors="coerce", utc=True)
+age_days = (pd.Timestamp.now(tz="UTC") - release_dt).dt.days
+too_young = age_days.notna() & (age_days < AVG30_WINDOW_DAYS)
+df["price"] = np.where(too_young, df["trend"], df["avg30"]).astype(float)
+df["logPrice"] = np.log(df["price"])
+print(f"  {int(too_young.sum())} rows younger than {AVG30_WINDOW_DAYS} days: trained on trend, not avg30")
 
 for c in CATEGORIES:
     print(f"  {c}: {df[c].nunique()} distinct values")
