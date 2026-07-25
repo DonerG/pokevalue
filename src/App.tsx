@@ -25,12 +25,12 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <a className="brand" href="#/">
+        <a className="brand" href="/">
           <span className="pokeball" aria-hidden="true" />
           <h1>PokéValue</h1>
         </a>
         <nav className="main-nav">
-          <a href="#/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
+          <a href="/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
             Sets
           </a>
         </nav>

@@ -14,6 +14,7 @@ import { OptionGroup } from '../components/OptionGroup'
 import { ResultPanel } from '../components/ResultPanel'
 import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
+import { useDocumentMeta } from '../logic/documentMeta'
 
 interface Props {
   cardId: string
@@ -48,6 +49,21 @@ export function CardPage({ cardId, config }: Props) {
     }
   }, [card, selection, config])
 
+  // Computed before the early returns below so the hook call stays
+  // unconditional — `set` is derived again after them for rendering.
+  const metaSet = card ? getSet(card.id.slice(0, card.id.lastIndexOf('-'))) : undefined
+  useDocumentMeta(
+    card ? `${card.name} #${card.localId}${metaSet ? ` (${metaSet.name})` : ''} price` : null,
+    card
+      ? `What is ${card.name} #${card.localId}${metaSet ? ` from ${metaSet.name}` : ''} worth? ` +
+        `PokéValue's fair price is ${formatEuro(card.baseValue)}` +
+        (card.market?.trend != null
+          ? `, against a current Cardmarket price of ${formatEuro(card.market.trend)}.`
+          : '.')
+      : null,
+    `/card/${cardId}`,
+  )
+
   if (card === undefined) {
     return <p className="muted">Loading card…</p>
   }
@@ -55,7 +71,7 @@ export function CardPage({ cardId, config }: Props) {
   if (!card || !results) {
     return (
       <p className="muted">
-        Card not found. <a href="#/">Back to overview</a>
+        Card not found. <a href="/">Back to overview</a>
       </p>
     )
   }
@@ -68,8 +84,8 @@ export function CardPage({ cardId, config }: Props) {
   return (
     <div>
       <nav className="breadcrumb">
-        <a href="#/">Sets</a> /{' '}
-        {set ? <a href={`#/set/${set.id}`}>{set.name}</a> : 'Set'} / <strong>{card.name}</strong>
+        <a href="/">Sets</a> /{' '}
+        {set ? <a href={`/set/${set.id}`}>{set.name}</a> : 'Set'} / <strong>{card.name}</strong>
       </nav>
 
       <div className="card-layout">

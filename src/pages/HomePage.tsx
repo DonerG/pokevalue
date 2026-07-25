@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { formatDate, loadSearchIndex, SETS, setLogo, type SearchIndexCard, type SetMeta } from '../data/cards'
 import { RetryImage } from '../components/RetryImage'
+import { useDocumentMeta } from '../logic/documentMeta'
 
 const MAX_CARD_RESULTS = 30
 
@@ -45,6 +46,8 @@ export function HomePage() {
       .slice(0, MAX_CARD_RESULTS)
   }, [query, cardIndex])
 
+  useDocumentMeta(null, null, '/')
+
   return (
     <div className="home">
       <section className="hero-block">
@@ -76,7 +79,7 @@ export function HomePage() {
             {matchingCards.map((c) => {
               const thumb = cardThumb(c)
               return (
-                <a key={c.id} className="card-tile" href={`#/card/${c.id}`}>
+                <a key={c.id} className="card-tile" href={`/card/${c.id}`}>
                   {thumb ? (
                     <RetryImage
                       src={thumb}
@@ -112,7 +115,7 @@ export function HomePage() {
             {sets.map((s) => {
               const logo = setLogo(s)
               return (
-                <a key={s.id} className="set-tile" href={`#/set/${s.id}`}>
+                <a key={s.id} className="set-tile" href={`/set/${s.id}`}>
                   {logo ? (
                     <RetryImage
                       src={logo}

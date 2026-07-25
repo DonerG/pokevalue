@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { formatEuro } from '../logic/pricing'
 import { cardImage, formatDate, getSet, loadCards, type CardData } from '../data/cards'
-import { restoreScrollSoon, updateSetFilters, type SetSortKey } from '../router'
+import { currentLocationKey, restoreScrollSoon, updateSetFilters, type SetSortKey } from '../router'
+import { useDocumentMeta } from '../logic/documentMeta'
 import { VerdictChip } from '../components/VerdictChip'
 import { RetryImage } from '../components/RetryImage'
 
@@ -28,7 +29,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
       // Only reaches full height once cards are in, so a scroll restore
       // attempted right on navigation (see router.ts) would've had nowhere
       // to go yet — try again now that the grid actually has its content.
-      restoreScrollSoon(window.location.hash)
+      restoreScrollSoon(currentLocationKey())
     })
   }, [setId])
 
@@ -61,10 +62,18 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
     return sorted
   }, [cards, config, query, sort, minPrice])
 
+  useDocumentMeta(
+    set ? `${set.name} card prices` : 'Set not found',
+    set
+      ? `Fair price estimates for all ${set.cardCount} cards in ${set.name}, compared against current Cardmarket prices. Find which cards are over- or undervalued.`
+      : null,
+    `/set/${setId}`,
+  )
+
   if (!set) {
     return (
       <p className="muted">
-        Set not found. <a href="#/">Back to overview</a>
+        Set not found. <a href="/">Back to overview</a>
       </p>
     )
   }
@@ -72,7 +81,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
   return (
     <div>
       <nav className="breadcrumb">
-        <a href="#/">Sets</a> / <strong>{set.name}</strong>
+        <a href="/">Sets</a> / <strong>{set.name}</strong>
       </nav>
       <header className="set-header">
         <h2>{set.name}</h2>
@@ -112,7 +121,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
           {rows.map(({ card, fair, market }) => {
             const img = cardImage(card, 'low')
             return (
-              <a key={card.id} className="card-tile" href={`#/card/${card.id}`}>
+              <a key={card.id} className="card-tile" href={`/card/${card.id}`}>
                 {img ? (
                   <RetryImage
                     src={img}

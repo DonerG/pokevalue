@@ -120,7 +120,7 @@ export function AdminArtworkPage() {
           the live pricing model (descoped for this version — see the README) but kept here for
           future data collection. Promo cards also get an Art Rare / Normal toggle right here, so
           both can be tagged in one pass — same data as{' '}
-          <a href="#/admin/promo-style">#/admin/promo-style</a>. Saved in this browser only; export
+          <a href="/admin/promo-style">/admin/promo-style</a>. Saved in this browser only; export
           the file(s) to keep them somewhere durable.
         </p>
         <div className="admin-toolbar">

@@ -8,9 +8,9 @@ A website that estimates a fair price for Pokémon cards with a regression model
 
 - **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first). The homepage search bar also matches individual cards by name or number, site-wide, via a lightweight lazy-loaded search index (see `scripts/build-search-index.mjs`) — not just set names.
 - **Card page:** Pokémon, rarity, illustrator, set, and card type each get their own computed factor — fixed facts, not adjustable. You only pick condition and language for your specific copy, plus a "why this price?" breakdown showing every factor that went into the number.
-- **Artwork rating (hidden, `#/admin/artwork`):** Rate illustration quality (1–10) on chase cards. Not currently used by the model (see below) but kept for future data collection. Export/import as JSON.
-- **Promo style tagging (hidden, `#/admin/promo-style`):** Promo cards all share one "Promo" rarity in the source data, but some use an extended "Art Rare" illustration instead of the plain framed template — which swings the price a lot with no field to tell them apart. Tag each candidate "Art Rare" or "Normal" by eye; export/import as JSON. Once tagged, `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) splits "Promo" into "Promo (Art Rare)" / "Promo (Normal)" for both model training and on-site display, so the rarity factor picks up the distinction automatically.
-- **Price audit (hidden, `#/admin/price-audit`):** The 100 cards site-wide with the biggest market-vs-fair gap, in each direction (percentage uses the same "upside relative to market" formula as the site's own verdict chips — see `src/logic/pricing.ts::verdict`). Split into two tabs since undervalued deviation is unbounded (market can approach zero) and overvalued is capped at -100%, so one combined ranking was almost entirely undervalued cases — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Mark a card "Wrong" and it's excluded from the next retrain, with its (wrong) price hidden on the site; mark it "Verified" if the price is real but the model can't explain it (e.g. hype-driven) — kept in training, just remembered as reviewed so it doesn't need re-checking. Export/import as JSON.
+- **Artwork rating (hidden, `/admin/artwork`):** Rate illustration quality (1–10) on chase cards. Not currently used by the model (see below) but kept for future data collection. Export/import as JSON.
+- **Promo style tagging (hidden, `/admin/promo-style`):** Promo cards all share one "Promo" rarity in the source data, but some use an extended "Art Rare" illustration instead of the plain framed template — which swings the price a lot with no field to tell them apart. Tag each candidate "Art Rare" or "Normal" by eye; export/import as JSON. Once tagged, `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) splits "Promo" into "Promo (Art Rare)" / "Promo (Normal)" for both model training and on-site display, so the rarity factor picks up the distinction automatically.
+- **Price audit (hidden, `/admin/price-audit`):** The 100 cards site-wide with the biggest market-vs-fair gap, in each direction (percentage uses the same "upside relative to market" formula as the site's own verdict chips — see `src/logic/pricing.ts::verdict`). Split into two tabs since undervalued deviation is unbounded (market can approach zero) and overvalued is capped at -100%, so one combined ranking was almost entirely undervalued cases — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Mark a card "Wrong" and it's excluded from the next retrain, with its (wrong) price hidden on the site; mark it "Verified" if the price is real but the model can't explain it (e.g. hype-driven) — kept in training, just remembered as reviewed so it doesn't need re-checking. Export/import as JSON.
 
 ## The pricing model
 
@@ -31,7 +31,7 @@ Regularization strength is picked via 5-fold cross-validation; a 60-resample boo
 
 Held-out test result: R² ≈ 0.90, median absolute error ≈ 37%.
 
-**Known data issue:** TCGdex's Cardmarket price for a small number of cards is mapped to the wrong product — confirmed by hand for one user-reported card (a Chaos Rising Delphox showing ~€1.89 instead of its real ~€0.07 on Cardmarket). Verified this isn't a stale-cache problem (the live TCGdex API serves the same wrong number) and isn't statistically detectable (the wrong price looks like an ordinary price for its rarity tier — no internal inconsistency to catch). `build-training-data.mjs` automatically drops the one sub-case that *is* detectable — a Cardmarket product ID literally shared with a different Pokémon (180 of ~19,400 cards, a confirmed TCGdex bug). Everything else relies on manual spot-checking via `#/admin/price-audit` (see above) and `src/data/price-exclusions.json`.
+**Known data issue:** TCGdex's Cardmarket price for a small number of cards is mapped to the wrong product — confirmed by hand for one user-reported card (a Chaos Rising Delphox showing ~€1.89 instead of its real ~€0.07 on Cardmarket). Verified this isn't a stale-cache problem (the live TCGdex API serves the same wrong number) and isn't statistically detectable (the wrong price looks like an ordinary price for its rarity tier — no internal inconsistency to catch). `build-training-data.mjs` automatically drops the one sub-case that *is* detectable — a Cardmarket product ID literally shared with a different Pokémon (180 of ~19,400 cards, a confirmed TCGdex bug). Everything else relies on manual spot-checking via `/admin/price-audit` (see above) and `src/data/price-exclusions.json`.
 
 **Not modeled:** reverse holo / 1st Edition / Shadowless pricing (Cardmarket's variant-level data turned out too inconsistent across cards to trust — some of the most famous vintage variants have no separate price at all) and the manual artwork ratings (descoped for this version — see the admin page above). Condition and language remain adjustable on the card page but are explicitly labeled as assumptions, not computed factors: querying TCGdex in different languages for the same physical card returns the identical Cardmarket product ID and price, so there's no real data to derive a language multiplier from, and Cardmarket doesn't track prices by grade either.
 
@@ -44,13 +44,26 @@ node scripts/build-training-data.mjs      # cache + promo-styles.json + price-ex
 python analysis/fit_factors.py            # fit the model -> analysis/factors.json
 python analysis/build_report.py           # -> analysis/PokeValue-Faktoren.pdf
 node scripts/ingest.mjs sv01 sv02 …       # bake factors into each displayed set's card JSON
-node scripts/build-outlier-candidates.mjs # (after ingest) -> candidate list for #/admin/price-audit
+node scripts/build-outlier-candidates.mjs # (after ingest) -> candidate list for /admin/price-audit
 node scripts/build-search-index.mjs       # (after ingest) -> homepage card search index
+node scripts/build-sitemap.mjs            # (after ingest) -> public/sitemap.xml
 ```
 
 Python deps: `pip install pandas scikit-learn scipy statsmodels reportlab pypdf`.
 
 **Sets deliberately not ingested:** pure-Energy sets (e.g. `sve` Scarlet & Violet Energy, `mee` Mega Evolution Energy — every card is a basic Energy, nothing to price) and `mfb` My First Battle (a starter-box reprint set, not worth tracking). Skip these when adding new sets.
+
+## URLs and SEO
+
+Routing uses **real paths** (`/set/sv08.5`, `/card/sv08.5-006`), not the URL fragment it started with. A fragment is never sent to the server, so under the old `#/card/…` scheme every card and set looked like one single URL to a crawler — nothing to index, and a sitemap would have had nothing to point at. Pieces that make the path-based version work:
+
+- **`vercel.json`** rewrites any non-asset path to `index.html`, so a direct hit on `/card/x` (from Google, a shared link, or a refresh) serves the app instead of 404ing. Without this, deep links only work via in-app navigation.
+- **`src/router.ts`** navigates with `history.pushState` and intercepts clicks on internal links from a single document-level listener. Links stay plain `<a href="/card/x">` — crawlers and "open in new tab" see a normal URL, and only ordinary left-clicks get upgraded to a no-reload transition. Modifier-clicks, `target="_blank"`, downloads, and external hosts are deliberately left to the browser.
+- **Legacy hash URLs** (`/#/set/sv01`) are rewritten to the real path on load, so old bookmarks and previously shared links keep working.
+- **`src/logic/documentMeta.ts`** gives every route its own `<title>`, meta description, canonical URL, and OG tags. Card pages put the actual numbers in the description ("PokéValue's fair price is €X, against a current Cardmarket price of €Y") since that text is what shows up as the search-result snippet.
+- **`scripts/build-sitemap.mjs`** writes `public/sitemap.xml` (~4,700 URLs: home + every set + every card), linked from `robots.txt`. Admin pages are excluded there and disallowed in `robots.txt`.
+
+**Known limitation:** the metadata above is applied client-side, so a crawler that doesn't execute JavaScript sees only `index.html`'s defaults. Google does render JS and will pick them up. Getting per-page metadata into the raw HTML response would need prerendering or SSR — a much larger change, not done here.
 
 ## Development
 
@@ -67,7 +80,8 @@ Stack: React 19 + TypeScript + Vite for the site; Python (pandas/scikit-learn) f
 1. Create a GitHub repository and push to it.
 2. On [vercel.com](https://vercel.com), "Add New Project" → select the GitHub repo. Vercel detects Vite automatically (build `npm run build`, output `dist`).
 3. From then on, every push deploys automatically. To refresh prices, rerun the model-rebuild steps above and commit (can later be automated with a scheduled GitHub Action).
-4. Custom domain: `pokevalue.cards` is attached in the Vercel dashboard (Project → Settings → Domains). `index.html`'s canonical/OG tags and this README already point at it — if the domain ever changes, update `https://pokevalue.cards` in both places.
+4. Custom domain: `pokevalue.cards` is attached in the Vercel dashboard (Project → Settings → Domains). If the domain ever changes, update `https://pokevalue.cards` in `index.html` (canonical/OG tags), `src/logic/documentMeta.ts` (`SITE_ORIGIN`), `scripts/build-sitemap.mjs` (`ORIGIN`), `public/robots.txt`, and this README.
+5. `vercel.json` is what makes deep links work (see "URLs and SEO") — don't remove it, or `/card/x` will 404 on direct load while still working via in-app clicks, which is an easy failure mode to miss in local testing.
 
 ## Project structure
 
@@ -85,6 +99,7 @@ scripts/
   build-promo-candidates.mjs  Cache -> candidate list (priced Promo-rarity cards) for the style admin page
   build-outlier-candidates.mjs Generated cards-*.json -> top 100 overvalued + top 100 undervalued for the price-audit page
   build-search-index.mjs      Generated cards-*.json -> lightweight name/number index for the homepage search bar
+  build-sitemap.mjs           Generated cards-*.json -> public/sitemap.xml (home + every set + every card)
   lib/cardMapping.mjs         Card-type derivation, artwork-candidate rarity filter, effectiveRarity() (promo style), eraBucket()
   lib/factors.mjs             Looks up computed factors for a card, applies low-sample dampening
 src/
@@ -99,7 +114,8 @@ src/
   logic/priceExclusions.ts localStorage persistence for the price-audit admin page
   components/              Result panel, price breakdown, option groups, chips
   pages/                   Home, set, card, artwork-rating, promo-style, and price-audit admin (lazy-loaded)
-  router.ts                Hash router (#/set/…, #/card/…, #/admin/artwork, #/admin/promo-style, #/admin/price-audit)
+  router.ts                History-API router (/set/…, /card/…, /admin/…) + scroll memory
+  logic/documentMeta.ts    Per-route <title>, meta description, canonical + OG tags
 ```
 
 ## Notes
