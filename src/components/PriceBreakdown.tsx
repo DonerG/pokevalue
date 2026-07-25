@@ -39,7 +39,10 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       mult: f.pokemon.displayFactor,
       hidden: false,
     },
-    { label: 'Rarity', value: card.rarity ?? 'Unknown', mult: f.rarity.displayFactor, hidden: false },
+    // Label from the factor's own key, not card.rarity: a hand-tagged promo is
+    // modeled as "Promo (Alt Art 10)" and shows a factor to match, so printing
+    // the raw "Promo" here would leave that multiplier unexplained.
+    { label: 'Rarity', value: f.rarity.key, mult: f.rarity.displayFactor, hidden: false },
     {
       label: 'Rarity (era)',
       value: `${f.rarityEra.key.split(' | ')[1] ?? 'Unknown'} adjustment`,
@@ -48,7 +51,7 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
     },
     {
       label: 'Rarity (this set)',
-      value: `${card.rarity ?? 'Unknown'} in ${setName}`,
+      value: `${f.rarity.key} in ${setName}`,
       mult: f.raritySet.displayFactor,
       hidden: false,
     },

@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatDate, loadArtworkCandidates, type ArtworkCandidate } from '../data/cards'
 import { loadRatings, saveRatings, type Ratings } from '../logic/artworkRatings'
-import { loadPromoStyles, savePromoStyles, type PromoStyle, type PromoStyles } from '../logic/promoStyles'
 import { formatEuro } from '../logic/pricing'
 import { RetryImage } from '../components/RetryImage'
 
@@ -24,10 +23,8 @@ function cardThumb(c: ArtworkCandidate): string | null {
 export function AdminArtworkPage() {
   const [candidates, setCandidates] = useState<ArtworkCandidate[] | null>(null)
   const [ratings, setRatings] = useState<Ratings>(() => loadRatings())
-  const [promoStyles, setPromoStyles] = useState<PromoStyles>(() => loadPromoStyles())
   const [query, setQuery] = useState('')
   const [onlyUnrated, setOnlyUnrated] = useState(false)
-  const [onlyPromos, setOnlyPromos] = useState(false)
   const [page, setPage] = useState(0)
   const fileInput = useRef<HTMLInputElement>(null)
 
@@ -52,33 +49,15 @@ export function AdminArtworkPage() {
     })
   }
 
-  const setPromoStyle = (cardId: string, style: PromoStyle) => {
-    setPromoStyles((prev) => {
-      const next = { ...prev, [cardId]: style }
-      savePromoStyles(next)
-      return next
-    })
-  }
-
-  const clearPromoStyle = (cardId: string) => {
-    setPromoStyles((prev) => {
-      const next = { ...prev }
-      delete next[cardId]
-      savePromoStyles(next)
-      return next
-    })
-  }
-
   const filtered = useMemo(() => {
     if (!candidates) return []
     const q = query.trim().toLowerCase()
     return candidates.filter((c) => {
       if (onlyUnrated && ratings[c.id] != null) return false
-      if (onlyPromos && c.rarity !== 'Promo') return false
       if (!q) return true
       return c.name.toLowerCase().includes(q) || (c.setName ?? '').toLowerCase().includes(q)
     })
-  }, [candidates, query, onlyUnrated, onlyPromos, ratings])
+  }, [candidates, query, onlyUnrated, ratings])
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const pageSafe = Math.min(page, pageCount - 1)
@@ -116,12 +95,14 @@ export function AdminArtworkPage() {
       <header className="admin-header">
         <h2>Artwork Rating</h2>
         <p className="muted">
-          Rate the illustration quality of chase cards — 10, 9, 8, or worse. Not currently used by
-          the live pricing model (descoped for this version — see the README) but kept here for
-          future data collection. <strong>Only artwork ratings for art-rateable cards (Ultra, Full Art, Alt Art, Secret, and Promos) will be factored into pricing if integrated.</strong> Promo cards also get an Art Rare / Normal toggle right here, so
-          both can be tagged in one pass — same data as{' '}
-          <a href="/admin/promo-style">/admin/promo-style</a>. Saved in this browser only; export
-          the file(s) to keep them somewhere durable.
+          Rate the illustration quality of chase cards — 10, 9, 8, or worse. Only cards whose
+          artwork is genuinely their own are listed (illustration / special illustration / secret /
+          full art); Double Rares and Ultra Rares use a standard frame, so rating them would just
+          add noise. Not yet used by the live pricing model — kept here to collect enough data to
+          make it a factor. <strong>Promos are not listed here:</strong> their whole classification
+          (alt art and its grade, stamped, plain) happens in one pass on{' '}
+          <a href="/admin/promo-style">/admin/promo-style</a>, and that one <em>is</em> already
+          priced in. Saved in this browser only; export the file to keep it somewhere durable.
         </p>
         <div className="admin-toolbar">
           <span className="admin-progress">
@@ -165,17 +146,6 @@ export function AdminArtworkPage() {
               }}
             />
             Only unrated
-          </label>
-          <label className="admin-checkbox">
-            <input
-              type="checkbox"
-              checked={onlyPromos}
-              onChange={(e) => {
-                setOnlyPromos(e.target.checked)
-                setPage(0)
-              }}
-            />
-            Only Promos
           </label>
         </div>
       </header>
@@ -228,25 +198,6 @@ export function AdminArtworkPage() {
                         </button>
                       )}
                     </div>
-                    {c.rarity === 'Promo' && (
-                      <div className="rating-scale">
-                        {(['art', 'normal'] as const).map((style) => (
-                          <button
-                            key={style}
-                            type="button"
-                            className={promoStyles[c.id] === style ? 'rating-btn active' : 'rating-btn'}
-                            onClick={() => setPromoStyle(c.id, style)}
-                          >
-                            {style === 'art' ? 'Art Rare' : 'Normal'}
-                          </button>
-                        ))}
-                        {promoStyles[c.id] != null && (
-                          <button type="button" className="rating-clear" onClick={() => clearPromoStyle(c.id)}>
-                            clear
-                          </button>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </div>
               )

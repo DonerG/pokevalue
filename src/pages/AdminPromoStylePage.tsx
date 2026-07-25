@@ -1,6 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatDate, loadPromoCandidates, type PromoCandidate } from '../data/cards'
-import { loadPromoStyles, savePromoStyles, type PromoStyle, type PromoStyles } from '../logic/promoStyles'
+import {
+  PROMO_STYLE_OPTIONS,
+  loadPromoStyles,
+  savePromoStyles,
+  type PromoStyle,
+  type PromoStyles,
+} from '../logic/promoStyles'
 import { formatEuro } from '../logic/pricing'
 import { RetryImage } from '../components/RetryImage'
 
@@ -85,11 +91,13 @@ export function AdminPromoStylePage() {
       <header className="admin-header">
         <h2>Promo Card Style</h2>
         <p className="muted">
-          Promo cards all share one "Promo" rarity in the data, but some use an extended, poster-like
-          illustration ("Art Rare" style) while most use the plain framed template — and that swings
-          the price a lot. There's no field for this in the source data, so it has to be tagged by
-          eye. Once enough are tagged, this becomes its own factor for Promo cards, the same way card
-          type already is. Saved in this browser only; export to keep it somewhere durable.
+          Promo cards all share one "Promo" rarity in the data, but they are not one kind of card:
+          some are <strong>alt arts</strong> with a full unique illustration, the rest look like
+          ordinary Commons/Rares (or like glittery ex/V cards that still have no real artwork), and
+          some of those carry an <strong>event stamp</strong> that lifts the price. Nothing in the
+          source data separates them, so it's tagged by eye here — and each tag becomes its own
+          rarity level in the model. Cards already tagged drop out of the queue below, so this list
+          only ever shows what's still open. Saved in this browser only; export to keep it.
         </p>
         <div className="admin-toolbar">
           <span className="admin-progress">
@@ -166,20 +174,17 @@ export function AdminPromoStylePage() {
                       {formatEuro(c.price)} · {formatDate(c.releaseDate)}
                     </span>
                     <div className="rating-scale">
-                      <button
-                        type="button"
-                        className={style === 'art' ? 'rating-btn active' : 'rating-btn'}
-                        onClick={() => setStyle(c.id, 'art')}
-                      >
-                        Art Rare
-                      </button>
-                      <button
-                        type="button"
-                        className={style === 'normal' ? 'rating-btn active' : 'rating-btn'}
-                        onClick={() => setStyle(c.id, 'normal')}
-                      >
-                        Normal
-                      </button>
+                      {PROMO_STYLE_OPTIONS.map((opt) => (
+                        <button
+                          key={opt.id}
+                          type="button"
+                          title={opt.hint}
+                          className={style === opt.id ? 'rating-btn active' : 'rating-btn'}
+                          onClick={() => setStyle(c.id, opt.id)}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
                       {style != null && (
                         <button type="button" className="rating-clear" onClick={() => clearStyle(c.id)}>
                           clear

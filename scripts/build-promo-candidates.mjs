@@ -26,6 +26,17 @@ const displayedSetIds = new Set(
   JSON.parse(await readFile(join(GENERATED_DIR, 'sets.json'), 'utf8')).map((s) => s.id),
 )
 
+// Cards already tagged drop out: the queue should only ever show what's still
+// open, so working through it is finite and visible progress.
+let taggedIds = new Set()
+try {
+  taggedIds = new Set(
+    Object.keys(JSON.parse(await readFile(join(HERE, '..', 'src', 'data', 'promo-styles.json'), 'utf8'))),
+  )
+} catch {
+  // none tagged yet
+}
+
 const setFiles = await readdir(SETS_CACHE_DIR)
 const setMeta = new Map()
 for (const file of setFiles) {
@@ -39,6 +50,7 @@ const candidates = []
 for (const file of files) {
   const card = JSON.parse(await readFile(join(CACHE_DIR, file), 'utf8'))
   if (!displayedSetIds.has(card.set?.id)) continue
+  if (taggedIds.has(card.id)) continue
   if (card.rarity !== 'Promo' || card.category !== 'Pokemon') continue
   // Cards with no art scanned on TCGdex yet are kept (not skipped) — same
   // reasoning as build-artwork-candidates.mjs.

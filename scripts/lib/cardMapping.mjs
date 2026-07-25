@@ -100,10 +100,11 @@ export const ARTWORK_EXCLUDED_RAW_RARITIES = new Set(['double rare', 'ultra rare
 
 export function isArtworkRateable(rarity) {
   if (!rarity) return false
-  // Promos don't fit the common/rare/… ladder mapRarity() buckets by — they're
-  // all just "Promo" — but their illustration varies a lot (see PROMO_STYLE_LABELS
-  // above), so they're worth rating regardless of that bucket.
-  if (rarity.toLowerCase() === 'promo') return true
+  // Promos are deliberately NOT rated here. They used to be, but their whole
+  // classification — alt art and its 8/9/10 grade, stamped, plain — now lives
+  // on /admin/promo-style in one pass (see PROMO_STYLE_LABELS). Listing them
+  // in both places would mean tagging the same card twice, in two schemes.
+  if (rarity.toLowerCase() === 'promo') return false
   if (ARTWORK_EXCLUDED_RAW_RARITIES.has(rarity.toLowerCase())) return false
   return ARTWORK_RELEVANT_RARITIES.has(mapRarity(rarity))
 }
@@ -143,15 +144,30 @@ export function mapCardType(card) {
   return null
 }
 
-// ---------- Promo card style (Art Rare vs. plain framed) ----------
-// TCGdex has no field for this even though it swings a Promo card's price a
-// lot (verified on two real cards: same "Promo" rarity, no structural
-// difference anywhere in the data, very different prices) — hand-tagged via
-// #/admin/promo-style. Where a tag exists, this refines the rarity used for
-// modeling (e.g. "Promo" -> "Promo (Art Rare)") so the existing rarity factor
-// picks up the distinction with no other changes to the regression.
-
-export const PROMO_STYLE_LABELS = { art: 'Promo (Art Rare)', normal: 'Promo (Normal)' }
+// ---------- Promo card style ----------
+// Every promo carries the single rarity "Promo" on TCGdex, but they are not
+// one kind of card. Some are alt arts with a full unique illustration, some
+// are ordinary-looking reprints, some of those carry an event stamp — and the
+// price gap between them is large. Nothing in the data distinguishes them, so
+// they are hand-tagged via /admin/promo-style.
+//
+// A tag refines the rarity used for modeling ("Promo" -> "Promo (Alt Art 9)"),
+// which means the existing rarity, rarity x era and rarity x set factors pick
+// the distinction up with no other change to the regression.
+//
+// The alt-art tiers are the reviewer's own 8/9/10 artwork grades, kept apart
+// rather than merged into one "alt art" bucket because they measurably are not
+// one thing: against the untagged model, grade 10 promos were underpriced ~8x,
+// grade 9 ~1.7x and grade 8 ~1.5x, while cards the reviewer marked as having no
+// real artwork were already priced correctly (0.96x). Merging them would leave
+// the top tier badly underpriced and overcorrect the bottom one.
+export const PROMO_STYLE_LABELS = {
+  altart10: 'Promo (Alt Art 10)',
+  altart9: 'Promo (Alt Art 9)',
+  altart8: 'Promo (Alt Art 8)',
+  stamped: 'Promo (Stamped)',
+  normal: 'Promo (Normal)',
+}
 
 export function effectiveRarity(card, promoStyles) {
   const style = promoStyles?.[card.id]
