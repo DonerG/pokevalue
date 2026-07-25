@@ -16,7 +16,15 @@ import { fileURLToPath } from 'node:url'
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE_DIR = join(HERE, '.cache', 'cards')
 const SETS_CACHE_DIR = join(HERE, '.cache', 'sets')
-const OUT_FILE = join(HERE, '..', 'src', 'data', 'generated', 'promo-candidates.json')
+const GENERATED_DIR = join(HERE, '..', 'src', 'data', 'generated')
+const OUT_FILE = join(GENERATED_DIR, 'promo-candidates.json')
+
+// Same reasoning as build-artwork-candidates.mjs: the bulk cache spans every
+// set ever printed (it's the training corpus), so candidates are scoped down
+// to sets.json — the sets actually ingested for display.
+const displayedSetIds = new Set(
+  JSON.parse(await readFile(join(GENERATED_DIR, 'sets.json'), 'utf8')).map((s) => s.id),
+)
 
 const setFiles = await readdir(SETS_CACHE_DIR)
 const setMeta = new Map()
@@ -30,6 +38,7 @@ const candidates = []
 
 for (const file of files) {
   const card = JSON.parse(await readFile(join(CACHE_DIR, file), 'utf8'))
+  if (!displayedSetIds.has(card.set?.id)) continue
   if (card.rarity !== 'Promo' || card.category !== 'Pokemon') continue
   // Cards with no art scanned on TCGdex yet are kept (not skipped) — same
   // reasoning as build-artwork-candidates.mjs.

@@ -1,8 +1,9 @@
 {
  "model": {
-  "cards": 19255,
-  "testR2": 0.8995891514115248,
-  "medianError": 0.3666748407579115,
+  "cards": 4645,
+  "cardsTotal": 19255,
+  "testR2": 0.9338250049648991,
+  "medianError": 0.3298660666604666,
   "anchor": 1,
   "categories": {
    "pokemon": 1026,
@@ -18,275 +19,275 @@
  "topPokemon": [
   {
    "label": "Gengar",
-   "factor": 13.7741,
+   "factor": 8.9268,
    "n": 46
   },
   {
+   "label": "Pikachu",
+   "factor": 8.4914,
+   "n": 128
+  },
+  {
    "label": "Charizard",
-   "factor": 12.3244,
+   "factor": 8.1688,
    "n": 88
   },
   {
    "label": "Umbreon",
-   "factor": 10.4155,
+   "factor": 7.499,
    "n": 41
   },
   {
    "label": "Mew",
-   "factor": 9.7923,
+   "factor": 7.1927,
    "n": 35
   },
   {
-   "label": "Pikachu",
-   "factor": 9.3512,
-   "n": 128
-  },
-  {
-   "label": "Lugia",
-   "factor": 6.878,
-   "n": 32
-  },
-  {
    "label": "Rayquaza",
-   "factor": 6.4509,
+   "factor": 4.68,
    "n": 44
   },
   {
-   "label": "Arceus",
-   "factor": 5.7526,
-   "n": 22
+   "label": "Lugia",
+   "factor": 4.547,
+   "n": 32
   },
   {
    "label": "Snorlax",
-   "factor": 4.9365,
+   "factor": 3.9345,
    "n": 50
   },
   {
+   "label": "Dragonite",
+   "factor": 3.8571,
+   "n": 45
+  },
+  {
    "label": "Espeon",
-   "factor": 4.9284,
+   "factor": 3.7461,
    "n": 33
   },
   {
-   "label": "Psyduck",
-   "factor": 4.8554,
-   "n": 37
+   "label": "Arceus",
+   "factor": 3.6248,
+   "n": 22
   },
   {
-   "label": "Dragonite",
-   "factor": 4.8378,
-   "n": 45
+   "label": "Psyduck",
+   "factor": 3.6018,
+   "n": 37
   }
  ],
  "rarities": [
   {
    "label": "Special illustration rare",
-   "factor": 3.0631,
+   "factor": 3.1984,
    "n": 222
   },
   {
    "label": "Secret Rare",
-   "factor": 2.7249,
+   "factor": 2.8096,
    "n": 581
   },
   {
-   "label": "Rare Holo LV.X",
-   "factor": 2.4337,
-   "n": 43
-  },
-  {
    "label": "Illustration rare",
-   "factor": 1.9969,
+   "factor": 2.0806,
    "n": 491
   },
   {
-   "label": "Shiny rare",
-   "factor": 1.5335,
-   "n": 224
+   "label": "Rare Holo LV.X",
+   "factor": 2.0377,
+   "n": 43
   },
   {
    "label": "Hyper rare",
-   "factor": 1.5263,
+   "factor": 1.5697,
    "n": 69
   },
   {
+   "label": "Shiny rare",
+   "factor": 1.5277,
+   "n": 224
+  },
+  {
    "label": "Ultra Rare",
-   "factor": 1.3244,
+   "factor": 1.4586,
    "n": 1389
   },
   {
    "label": "Rare Holo",
-   "factor": 1.1948,
+   "factor": 1.24,
    "n": 279
   },
   {
+   "label": "Promo",
+   "factor": 0.9887,
+   "n": 678
+  },
+  {
    "label": "Holo Rare VMAX",
-   "factor": 1.1286,
+   "factor": 0.9543,
    "n": 91
   },
   {
    "label": "Holo Rare VSTAR",
-   "factor": 1.0341,
+   "factor": 0.9208,
    "n": 32
   },
   {
    "label": "Holo Rare V",
-   "factor": 0.8553,
+   "factor": 0.7513,
    "n": 235
   },
   {
-   "label": "Promo",
-   "factor": 0.8295,
-   "n": 678
+   "label": "ACE SPEC Rare",
+   "factor": 0.7146,
+   "n": 33
   },
   {
    "label": "None",
-   "factor": 0.7109,
+   "factor": 0.6922,
    "n": 262
-  },
-  {
-   "label": "ACE SPEC Rare",
-   "factor": 0.7044,
-   "n": 33
   }
  ],
  "topIllustrators": [
   {
-   "label": "Shinji Kanda",
-   "factor": 2.293,
-   "n": 28
-  },
-  {
    "label": "Asako Ito",
-   "factor": 2.2726,
+   "factor": 2.1558,
    "n": 36
   },
   {
-   "label": "Tomokazu Komiya",
-   "factor": 1.7891,
-   "n": 247
+   "label": "Shinji Kanda",
+   "factor": 2.0443,
+   "n": 28
   },
   {
    "label": "Hironobu Yoshida",
-   "factor": 1.7373,
+   "factor": 1.678,
    "n": 30
   },
   {
+   "label": "Tomokazu Komiya",
+   "factor": 1.6642,
+   "n": 247
+  },
+  {
    "label": "Yuka Morii",
-   "factor": 1.5945,
+   "factor": 1.5209,
    "n": 207
   },
   {
    "label": "Saboteri",
-   "factor": 1.4991,
+   "factor": 1.467,
    "n": 45
   },
   {
-   "label": "akagi",
-   "factor": 1.351,
-   "n": 30
-  },
-  {
    "label": "Megumi Mizutani",
-   "factor": 1.3396,
+   "factor": 1.3626,
    "n": 119
   },
   {
    "label": "Atsushi Furusawa",
-   "factor": 1.3276,
+   "factor": 1.3572,
    "n": 50
   },
   {
-   "label": "AYUMI ODASHIMA",
-   "factor": 1.2964,
-   "n": 76
-  },
-  {
    "label": "Studio Bora Inc.",
-   "factor": 1.2923,
+   "factor": 1.3426,
    "n": 115
   },
   {
-   "label": "You Iribi",
-   "factor": 1.2685,
-   "n": 47
+   "label": "akagi",
+   "factor": 1.3417,
+   "n": 30
+  },
+  {
+   "label": "AYUMI ODASHIMA",
+   "factor": 1.2896,
+   "n": 76
+  },
+  {
+   "label": "yuu",
+   "factor": 1.2402,
+   "n": 34
   }
  ],
  "cardTypes": [
   {
-   "label": "Mega EX",
-   "factor": 1.8186,
-   "n": 128
-  },
-  {
    "label": "EX",
-   "factor": 1.7718,
+   "factor": 1.7237,
    "n": 1050
   },
   {
+   "label": "Mega EX",
+   "factor": 1.507,
+   "n": 128
+  },
+  {
    "label": "LEVEL-UP",
-   "factor": 1.2963,
+   "factor": 1.4707,
    "n": 42
   },
   {
    "label": "BREAK",
-   "factor": 1.1254,
+   "factor": 1.0826,
    "n": 30
   },
   {
    "label": "PRIME",
-   "factor": 1.0357,
+   "factor": 0.9587,
    "n": 27
   },
   {
    "label": "TAG TEAM-GX",
-   "factor": 0.8707,
+   "factor": 0.924,
    "n": 87
   },
   {
    "label": "VMAX",
-   "factor": 0.6942,
+   "factor": 0.8284,
    "n": 206
   },
   {
    "label": "VSTAR",
-   "factor": 0.5737,
+   "factor": 0.677,
    "n": 91
   },
   {
    "label": "V",
-   "factor": 0.5383,
+   "factor": 0.625,
    "n": 581
   },
   {
    "label": "GX",
-   "factor": 0.5281,
+   "factor": 0.5456,
    "n": 348
   }
  ],
  "rarityAcrossEras": [
   {
    "label": "WOTC",
-   "factor": 3.4974,
+   "factor": 3.3972,
    "n": 439
   },
   {
    "label": "EX/DP",
-   "factor": 1.6868,
+   "factor": 1.6577,
    "n": 1175
   },
   {
    "label": "BW/XY",
-   "factor": 0.9652,
+   "factor": 0.913,
    "n": 809
   },
   {
    "label": "SM/SWSH",
-   "factor": 0.4907,
+   "factor": 0.5088,
    "n": 980
   },
   {
    "label": "SV+",
-   "factor": 0.1168,
+   "factor": 0.129,
    "n": 402
   }
  ]

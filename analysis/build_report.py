@@ -149,11 +149,26 @@ story.append(
 story.append(Spacer(1, 4 * mm))
 story.append(
     Paragraph(
-        f"<b>Model accuracy</b> (on {REPORT['nTest']:,} cards held out of training): "
-        f"R-squared = {REPORT['testR2']:.3f} (the model explains {REPORT['testR2']*100:.0f}% of the price variation "
-        f"between cards), median prediction error {REPORT['testMedianAPE']*100:.0f}%. "
-        "This is comparable to a neural-network version of the same model tried earlier, "
-        "but every number below is directly interpretable instead of hidden inside the network.",
+        f"<b>Model accuracy, on the sets actually shown on the site</b> "
+        f"(held-out Scarlet & Violet / Mega Evolution cards): "
+        f"R-squared = {REPORT['displayedTestR2']:.3f} (the model explains "
+        f"{REPORT['displayedTestR2']*100:.0f}% of the price variation between cards), "
+        f"median prediction error {REPORT['displayedTestMedianAPE']*100:.0f}%. This is the number that matters "
+        "for what you actually see on pokevalue.cards.",
+        styles["Body"],
+    )
+)
+story.append(Spacer(1, 2 * mm))
+story.append(
+    Paragraph(
+        f"For reference, accuracy on the full held-out set "
+        f"({REPORT['nTest']:,} cards, {REPORT['nRows'] - REPORT['nDisplayedRows']:,} of the "
+        f"{REPORT['nRows']:,} training rows come from sets not shown on the site — see README): "
+        f"R-squared = {REPORT['testR2']:.3f}, median prediction error {REPORT['testMedianAPE']*100:.0f}%. "
+        f"Training rows from non-displayed sets are down-weighted "
+        f"({REPORT['trainingOnlyWeight']}x vs. {REPORT['displayedSetWeight']}x) rather than dropped, so the "
+        "fit still borrows their statistical support for sparsely-represented Pokémon and illustrators "
+        "without letting older, more condition-blended prices pull the site's own numbers off target.",
         styles["Body"],
     )
 )

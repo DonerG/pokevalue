@@ -192,6 +192,7 @@ export interface FactorExample {
 export interface FactorHighlights {
   model: {
     cards: number
+    cardsTotal: number
     testR2: number
     medianError: number
     anchor: number

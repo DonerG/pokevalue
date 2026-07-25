@@ -130,7 +130,7 @@ export function HowItWorksPage() {
             <ul className="stat-list">
               <li>
                 <strong>{intFmt.format(data.model.cards)}</strong>
-                <span>cards used for training</span>
+                <span>cards on the site this is measured on</span>
               </li>
               <li>
                 <strong>{(data.model.testR2 * 100).toFixed(0)}%</strong>
@@ -147,6 +147,14 @@ export function HowItWorksPage() {
               genuine noise (hype, print runs, a card suddenly becoming tournament-relevant) that no
               model reading only card attributes can predict. The point isn't to nail every price to
               the cent; it's to have a defensible reference to compare the market against.
+            </p>
+            <p className="muted">
+              Every factor is fitted on {intFmt.format(data.model.cardsTotal)} cards spanning the
+              game's full history back to 1999 — older sets aren't shown on the site, but they're
+              what gives thinly-represented Pokémon and illustrators enough data to fit a confident
+              factor at all. The accuracy numbers above are deliberately measured only on cards
+              actually on the site, and older cards count for less during fitting, so that history
+              doesn't come at the cost of getting today's cards right.
             </p>
           </section>
 

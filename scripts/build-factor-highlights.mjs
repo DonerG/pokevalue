@@ -47,9 +47,14 @@ const pokemonLabel = (key) => (pokedexNames[key] ? titleCase(pokedexNames[key]) 
 
 const highlights = {
   model: {
-    cards: report.nRows,
-    testR2: report.testR2,
-    medianError: report.testMedianAPE,
+    // Displayed-set numbers are the headline: they measure accuracy on cards
+    // someone can actually look up on the site. cards/cardsTotal are shown
+    // together so the page can be upfront about training on a much larger
+    // historical corpus without implying the whole thing is what's graded.
+    cards: report.nDisplayedRows,
+    cardsTotal: report.nRows,
+    testR2: report.displayedTestR2,
+    medianError: report.displayedTestMedianAPE,
     anchor: factors.anchor,
     categories: report.categoryCardinality,
   },

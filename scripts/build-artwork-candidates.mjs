@@ -24,7 +24,18 @@ import { isArtworkRateable } from './lib/cardMapping.mjs'
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE_DIR = join(HERE, '.cache', 'cards')
 const SETS_CACHE_DIR = join(HERE, '.cache', 'sets')
-const OUT_FILE = join(HERE, '..', 'src', 'data', 'generated', 'artwork-candidates.json')
+const GENERATED_DIR = join(HERE, '..', 'src', 'data', 'generated')
+const OUT_FILE = join(GENERATED_DIR, 'artwork-candidates.json')
+
+// The bulk cache (scripts/.cache/cards) spans every set ever printed — it's
+// the training corpus, not the site's display list (see README → "URLs and
+// SEO" / the pricing model notes: factors are fit on that full history on
+// purpose). Rating candidates should only ever be cards a reviewer can
+// actually see on the live site, so this is scoped to sets.json — the exact
+// set of sets ingest.mjs has imported for display.
+const displayedSetIds = new Set(
+  JSON.parse(await readFile(join(GENERATED_DIR, 'sets.json'), 'utf8')).map((s) => s.id),
+)
 
 const setFiles = await readdir(SETS_CACHE_DIR)
 const setMeta = new Map()
@@ -38,6 +49,7 @@ const candidates = []
 
 for (const file of files) {
   const card = JSON.parse(await readFile(join(CACHE_DIR, file), 'utf8'))
+  if (!displayedSetIds.has(card.set?.id)) continue
   if (!isArtworkRateable(card.rarity)) continue
   // Cards with no art scanned on TCGdex yet are kept (not skipped) — the
   // reviewer can still look the card up elsewhere (e.g. on their phone) and

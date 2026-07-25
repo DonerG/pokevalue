@@ -63,7 +63,31 @@ statistically detectable and isn't filtered here. build-training-data.mjs
 does drop the one sub-case that *is* detectable: cards whose Cardmarket
 product ID is literally shared with a different Pokémon.
 
+Displayed vs. training-only sets: the site currently shows only the Scarlet &
+Violet + Mega Evolution sets (src/data/generated/sets.json), but this script
+trains on every English card TCGdex has (~170 sets back to 1999) — the older
+sets exist purely to give categories like "pokemon" or "illustrator" enough
+data to fit a confident factor; a card that's only ever appeared in 2 displayed
+-set rows but 40 historical ones would otherwise get a near-meaningless
+estimate. Two things follow from that split:
+
+  1. DISPLAYED_SET_WEIGHT down-weights (not drops) training-only rows in the
+     loss the ridge regression actually minimizes, so a tension between "fit
+     the vast historical corpus" and "fit the 24 sets someone can actually
+     look up on the site" resolves in the site's favor, while non-displayed
+     rows still stabilize sparse categories. The weight is a judgment call,
+     not a derived optimum — 0.4 means a training-only row counts for 40% of
+     a displayed-set row; tune it if displayedTestR2 below moves the wrong way.
+  2. Model selection (alpha) and the headline accuracy number are evaluated
+     ONLY on displayed-set rows in the held-out test split (see
+     `displayedTestR2`/`displayedTestMedianAPE` in model_report.json) — CV'd
+     or reported against the full mixed corpus, alpha would be tuned mostly
+     for 1999-2022 cards (76% of rows) with different price-noise
+     characteristics (see the condition/grading discussion in README), not for
+     what's actually on the site.
+
 Reads:  scripts/training-data.json  (~19,400 English cards, real Cardmarket price)
+        src/data/generated/sets.json (which sets are actually displayed)
 Writes: analysis/factors.json       (every factor + sample size + 95% CI)
         analysis/model_report.json  (overall fit quality, for the PDF)
 
@@ -82,12 +106,16 @@ from sklearn.model_selection import KFold
 
 HERE = Path(__file__).resolve().parent
 TRAINING_DATA = HERE.parent / "scripts" / "training-data.json"
+DISPLAYED_SETS = HERE.parent / "src" / "data" / "generated" / "sets.json"
 FACTORS_OUT = HERE / "factors.json"
 REPORT_OUT = HERE / "model_report.json"
 
 CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName", "rarityEra", "cardTypeEra"]
 N_BOOTSTRAP = 60
 RNG_SEED = 42
+# See the module docstring's "Displayed vs. training-only sets" section.
+DISPLAYED_SET_WEIGHT = 1.0
+TRAINING_ONLY_WEIGHT = 0.4
 
 
 def era_bucket(release_date):
@@ -115,6 +143,14 @@ print("Loading training data …")
 raw = json.loads(TRAINING_DATA.read_text(encoding="utf-8"))
 df = pd.DataFrame(raw)
 print(f"  {len(df)} priced cards")
+
+displayed_set_ids = {s["id"] for s in json.loads(DISPLAYED_SETS.read_text(encoding="utf-8"))}
+df["displayed"] = df["setId"].isin(displayed_set_ids)
+sample_weight = np.where(df["displayed"], DISPLAYED_SET_WEIGHT, TRAINING_ONLY_WEIGHT)
+print(
+    f"  {df['displayed'].sum()} rows in displayed sets (weight {DISPLAYED_SET_WEIGHT}), "
+    f"{(~df['displayed']).sum()} training-only (weight {TRAINING_ONLY_WEIGHT})"
+)
 
 df["pokemon"] = df["dexIds"].apply(lambda ids: str(ids[0]) if ids else "none")
 df["rarity"] = df["rarity"].fillna("None")
@@ -156,21 +192,29 @@ print(f"  X: {n_samples} rows x {n_features} columns (sparse)")
 
 # ------------------------------------------------------- pick regularization
 
-print("\nSelecting ridge alpha via 5-fold cross-validation …")
+print("\nSelecting ridge alpha via 5-fold cross-validation (scored on displayed-set rows only) …")
 alphas = np.logspace(-2, 3, 21)  # 0.01 .. 1000
 kf = KFold(n_splits=5, shuffle=True, random_state=RNG_SEED)
+displayed_arr = df["displayed"].to_numpy()
 cv_scores = {}
 for alpha in alphas:
     fold_scores = []
     for train_idx, test_idx in kf.split(X):
         model = Ridge(alpha=alpha, fit_intercept=True, solver="sparse_cg")
-        model.fit(X[train_idx], y[train_idx])
-        pred = model.predict(X[test_idx])
-        sse = np.sum((y[test_idx] - pred) ** 2)
-        sst = np.sum((y[test_idx] - y[test_idx].mean()) ** 2)
+        model.fit(X[train_idx], y[train_idx], sample_weight=sample_weight[train_idx])
+        # Fit on everything (training-only rows still down-weighted, not
+        # dropped — they're what stabilizes sparse categories), but SCORE only
+        # on displayed-set rows: alpha should be picked for what it's actually
+        # good at predicting, not for the 76%-vintage mixed corpus.
+        eval_idx = test_idx[displayed_arr[test_idx]]
+        if len(eval_idx) == 0:
+            continue
+        pred = model.predict(X[eval_idx])
+        sse = np.sum((y[eval_idx] - pred) ** 2)
+        sst = np.sum((y[eval_idx] - y[eval_idx].mean()) ** 2)
         fold_scores.append(1 - sse / sst)
     cv_scores[alpha] = float(np.mean(fold_scores))
-    print(f"  alpha={alpha:8.2f}  mean CV R²={cv_scores[alpha]:.4f}")
+    print(f"  alpha={alpha:8.2f}  mean CV R² (displayed sets)={cv_scores[alpha]:.4f}")
 
 best_alpha = max(cv_scores, key=cv_scores.get)
 print(f"Best alpha: {best_alpha:.2f} (CV R²={cv_scores[best_alpha]:.4f})")
@@ -184,7 +228,7 @@ split = int(n_samples * 0.85)
 train_idx, test_idx = order[:split], order[split:]
 
 final_model = Ridge(alpha=best_alpha, fit_intercept=True, solver="sparse_cg")
-final_model.fit(X[train_idx], y[train_idx])
+final_model.fit(X[train_idx], y[train_idx], sample_weight=sample_weight[train_idx])
 
 pred_test = final_model.predict(X[test_idx])
 actual_test = np.exp(y[test_idx])
@@ -195,13 +239,32 @@ sst = np.sum((y[test_idx] - y[test_idx].mean()) ** 2)
 test_r2 = 1 - sse / sst
 test_median_ape = float(np.median(ape))
 test_mean_ape = float(np.mean(ape))
-print(f"\nHeld-out test (n={len(test_idx)}): R²={test_r2:.4f}  medianAPE={test_median_ape*100:.1f}%  meanAPE={test_mean_ape*100:.1f}%")
+print(f"\nHeld-out test, full mixed corpus (n={len(test_idx)}): R²={test_r2:.4f}  medianAPE={test_median_ape*100:.1f}%  meanAPE={test_mean_ape*100:.1f}%")
+
+# The number that actually matters: same held-out split, filtered to rows from
+# sets someone can actually look up on the site. This — not the number above —
+# is what ships to model_report.json as the headline and what /how-it-works
+# shows, since the full-corpus number is 76%-dominated by 1999-2022 cards.
+disp_test_idx = test_idx[displayed_arr[test_idx]]
+pred_disp = final_model.predict(X[disp_test_idx])
+actual_disp = np.exp(y[disp_test_idx])
+pred_disp_price = np.exp(pred_disp)
+ape_disp = np.abs(pred_disp_price - actual_disp) / actual_disp
+sse_disp = np.sum((y[disp_test_idx] - pred_disp) ** 2)
+sst_disp = np.sum((y[disp_test_idx] - y[disp_test_idx].mean()) ** 2)
+displayed_test_r2 = 1 - sse_disp / sst_disp
+displayed_test_median_ape = float(np.median(ape_disp))
+displayed_test_mean_ape = float(np.mean(ape_disp))
+print(
+    f"Held-out test, displayed sets only (n={len(disp_test_idx)}): "
+    f"R²={displayed_test_r2:.4f}  medianAPE={displayed_test_median_ape*100:.1f}%  meanAPE={displayed_test_mean_ape*100:.1f}%"
+)
 
 # Now refit on ALL data at the chosen alpha for the coefficients we actually ship —
 # more data in, more reliable factors out.
 print("\nFitting final model on all data …")
 full_model = Ridge(alpha=best_alpha, fit_intercept=True, solver="sparse_cg")
-full_model.fit(X, y)
+full_model.fit(X, y, sample_weight=sample_weight)
 point_coefs = full_model.coef_
 intercept = float(full_model.intercept_)
 
@@ -214,7 +277,7 @@ boot_rng = np.random.default_rng(RNG_SEED + 1)
 for b in range(N_BOOTSTRAP):
     sample_idx = boot_rng.integers(0, n_samples, n_samples)
     m = Ridge(alpha=best_alpha, fit_intercept=True, solver="sparse_cg")
-    m.fit(X[sample_idx], y[sample_idx])
+    m.fit(X[sample_idx], y[sample_idx], sample_weight=sample_weight[sample_idx])
     boot_coefs[b] = m.coef_
     if (b + 1) % 10 == 0:
         print(f"  … {b + 1}/{N_BOOTSTRAP}  ({time.time() - t0:.0f}s elapsed)")
@@ -277,13 +340,23 @@ REPORT_OUT.write_text(
         {
             "trainedAt": pd.Timestamp.utcnow().isoformat(),
             "nRows": int(n_samples),
+            "nDisplayedRows": int(df["displayed"].sum()),
             "nTrain": int(len(train_idx)),
             "nTest": int(len(test_idx)),
+            "displayedSetWeight": DISPLAYED_SET_WEIGHT,
+            "trainingOnlyWeight": TRAINING_ONLY_WEIGHT,
             "alpha": best_alpha,
             "cvR2ByAlpha": cv_scores,
+            # Full-mixed-corpus numbers, kept for comparison/debugging — NOT
+            # what the site should show as the headline (see displayedTest*).
             "testR2": float(test_r2),
             "testMedianAPE": test_median_ape,
             "testMeanAPE": test_mean_ape,
+            # The honest headline: held-out accuracy on cards someone can
+            # actually look up on the site right now.
+            "displayedTestR2": float(displayed_test_r2),
+            "displayedTestMedianAPE": displayed_test_median_ape,
+            "displayedTestMeanAPE": displayed_test_mean_ape,
             "categoryCardinality": {c: int(df[c].nunique()) for c in CATEGORIES},
         },
         indent=1,
