@@ -37,6 +37,8 @@ export interface CardFactors {
   cardName: FactorEntry
   rarityYear: FactorEntry
   cardTypeYear: FactorEntry
+  /** Hand-rated illustration quality; 'none' (×1) for anything unrated or not worth judging. */
+  artwork: FactorEntry
 }
 
 export interface CardData {

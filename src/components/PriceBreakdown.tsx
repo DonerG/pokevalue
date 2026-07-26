@@ -59,6 +59,21 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       hidden: false,
     },
     {
+      label: 'Artwork',
+      // Only the chase rarities get rated, and only 10/9/worse are modeled —
+      // everything else lands on 'none' at ×1 and is hidden by isNeutral.
+      value:
+        f.artwork.key === 'top'
+          ? 'outstanding illustration'
+          : f.artwork.key === 'strong'
+            ? 'strong illustration'
+            : f.artwork.key === 'weak'
+              ? 'weak illustration for its tier'
+              : '— (not rated)',
+      mult: f.artwork.displayFactor,
+      hidden: isNeutral(f.artwork.displayFactor),
+    },
+    {
       label: 'Card',
       // Only Trainer/Energy cards get a per-name factor; a Pokémon card's
       // identity is already carried by the Pokémon factor, so it lands in a

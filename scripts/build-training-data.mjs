@@ -13,7 +13,7 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { effectiveDexIds, effectiveRarity, mapCardType } from './lib/cardMapping.mjs'
+import { artworkGrade, effectiveDexIds, effectiveRarity, mapCardType } from './lib/cardMapping.mjs'
 import { correctedTrend, isPriceWrong } from '../src/logic/priceReview.js'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
@@ -22,6 +22,7 @@ const SETS_CACHE_DIR = join(HERE, '.cache', 'sets')
 const OUT_FILE = join(HERE, 'training-data.json')
 const PROMO_STYLES_FILE = join(HERE, '..', 'src', 'data', 'promo-styles.json')
 const PRICE_EXCLUSIONS_FILE = join(HERE, '..', 'src', 'data', 'price-exclusions.json')
+const ARTWORK_RATINGS_FILE = join(HERE, '..', 'src', 'data', 'artwork-ratings.json')
 
 let promoStyles = {}
 try {
@@ -30,6 +31,14 @@ try {
   // no tags yet
 }
 console.log(`${Object.keys(promoStyles).length} promo cards tagged with a style.`)
+
+let artworkRatings = {}
+try {
+  artworkRatings = JSON.parse(await readFile(ARTWORK_RATINGS_FILE, 'utf8'))
+} catch {
+  // none rated yet
+}
+console.log(`${Object.keys(artworkRatings).length} cards with a hand-rated artwork grade.`)
 
 // Cards hand-reviewed via #/admin/price-audit: "wrong" means an obviously
 // bad Cardmarket price (see the module docstring below and analysis/
@@ -81,6 +90,7 @@ for (const file of files) {
     category: card.category ?? 'Pokemon',
     dexIds: effectiveDexIds(card),
     rarity: effectiveRarity(card, promoStyles),
+    artwork: artworkGrade(card.id, artworkRatings, promoStyles),
     illustrator: card.illustrator ?? null,
     cardType: mapCardType(card),
     setId: card.set?.id ?? null,

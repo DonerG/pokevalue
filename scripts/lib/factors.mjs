@@ -7,11 +7,24 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { effectiveDexIds, effectiveRarity, mapCardType, releaseYear, rarityTier } from './cardMapping.mjs'
+import { artworkGrade, effectiveDexIds, effectiveRarity, mapCardType, releaseYear, rarityTier } from './cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
 const PROMO_STYLES_PATH = join(HERE, '..', '..', 'src', 'data', 'promo-styles.json')
+const ARTWORK_RATINGS_PATH = join(HERE, '..', '..', 'src', 'data', 'artwork-ratings.json')
+
+let cachedArtworkRatings = null
+function loadArtworkRatings() {
+  if (!cachedArtworkRatings) {
+    try {
+      cachedArtworkRatings = JSON.parse(readFileSync(ARTWORK_RATINGS_PATH, 'utf8'))
+    } catch {
+      cachedArtworkRatings = {}
+    }
+  }
+  return cachedArtworkRatings
+}
 
 let cachedPromoStyles = null
 function loadPromoStyles() {
@@ -63,7 +76,9 @@ export function computeCardPricing(card, releaseDate) {
   const data = loadFactors()
   const dexIds = effectiveDexIds(card)
   const pokemonKey = dexIds[0] != null ? String(dexIds[0]) : 'none'
-  const rarityValue = effectiveRarity(card, loadPromoStyles()) ?? 'None'
+  const promoStyles = loadPromoStyles()
+  const rarityValue = effectiveRarity(card, promoStyles) ?? 'None'
+  const artworkKey = artworkGrade(card.id, loadArtworkRatings(), promoStyles)
   const illustratorKey = card.illustrator ?? 'Unknown'
   const setKey = card.set?.id ?? 'unknown'
   const cardTypeKey = mapCardType(card) ?? 'Standard'
@@ -81,6 +96,7 @@ export function computeCardPricing(card, releaseDate) {
   const cardName = lookup(data.factors.cardName, cardNameKey)
   const rarityYear = lookup(data.factors.rarityYear, rarityYearKey)
   const cardTypeYear = lookup(data.factors.cardTypeYear, cardTypeYearKey)
+  const artwork = lookup(data.factors.artwork, artworkKey)
 
   // A Pokémon's premium is not a constant multiplier — it is ~2x stronger on
   // chase cards than on bulk ones (see analysis/fit_factors.py). The fitted
@@ -103,10 +119,11 @@ export function computeCardPricing(card, releaseDate) {
     cardType.displayFactor *
     cardName.displayFactor *
     rarityYear.displayFactor *
-    cardTypeYear.displayFactor
+    cardTypeYear.displayFactor *
+    artwork.displayFactor
 
   return {
     baseValue,
-    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName, rarityYear, cardTypeYear },
+    breakdown: { pokemon, rarity, illustrator, set, cardType, cardName, rarityYear, cardTypeYear, artwork },
   }
 }

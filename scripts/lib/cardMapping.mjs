@@ -208,6 +208,27 @@ export function releaseYear(releaseDate) {
   return /^\d{4}$/.test(year) ? year : 'Unknown'
 }
 
+// ---------- Artwork grade ----------
+// Hand-rated illustration quality (src/data/artwork-ratings.json, entered on
+// /admin/artwork as 10 / 9 / 8 / worse). Only the chase rarities are rated —
+// a Double Rare uses a standard frame, there is nothing to judge.
+//
+// The 8s are deliberately thrown away. The reviewer flagged them as unreliable
+// ("I used 8 both for acceptable artwork and for cards I couldn't judge,
+// mostly the gold Hyper Rares"), and the data agrees exactly: measured against
+// the model, an 8 outside Hyper Rares sits at 1.00 and an unrated chase card
+// at 0.98 — indistinguishable. The other three grades are strongly ordered
+// (10 -> 0.63, 9 -> 0.73, worse -> 1.36), so those are what gets modeled.
+//
+// Promos are excluded: their grade is already baked into their rarity level
+// ("Promo (Alt Art 9)"), so counting it again here would double it.
+const ARTWORK_GRADE_LABELS = { 10: 'top', 9: 'strong', 0: 'weak' }
+
+export function artworkGrade(cardId, ratings, promoStyles) {
+  if (!cardId || promoStyles?.[cardId]) return 'none'
+  return ARTWORK_GRADE_LABELS[ratings?.[cardId]] ?? 'none'
+}
+
 // ---------- Price tier (bulk / mid / chase) ----------
 // Groups rarities by what they actually sell for, measured across the displayed
 // sets: bulk sits at ~EUR0.04-0.08, mid at ~EUR0.6-2.5, chase at ~EUR3-31.

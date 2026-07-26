@@ -132,7 +132,7 @@ REPORT_OUT = HERE / "model_report.json"
 
 CATEGORIES = [
     "pokemon", "rarity", "illustrator", "set", "cardType", "cardName",
-    "rarityYear", "cardTypeYear",
+    "rarityYear", "cardTypeYear", "artwork",
 ]
 N_BOOTSTRAP = 60
 RNG_SEED = 42
@@ -197,6 +197,7 @@ df["year"] = df["releaseDate"].apply(release_year)
 df["tier"] = df["rarity"].apply(rarity_tier)
 df["rarityYear"] = df["rarity"] + " | " + df["year"]
 df["cardTypeYear"] = df["cardType"] + " | " + df["year"]
+df["artwork"] = df["artwork"].fillna("none")
 df["logPrice"] = np.log(df["trend"].astype(float))
 
 for c in CATEGORIES:
