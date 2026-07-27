@@ -158,22 +158,6 @@ body {
 
 /* ---------- Factor groups ---------- */
 
-.option-group {
-  border: 0;
-  padding: 0;
-  margin: 0 0 18px;
-}
-
-.option-group:last-child {
-  margin-bottom: 0;
-}
-
-.option-group legend {
-  font-weight: 600;
-  padding: 0;
-  margin-bottom: 8px;
-}
-
 .factor-description {
   display: block;
   font-weight: 400;
@@ -904,18 +888,6 @@ details.panel[open] summary {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.your-copy-details {
-  padding: 14px 20px;
-}
-
-.your-copy-details summary h2 {
-  font-size: 16px;
-}
-
-.your-copy-details[open] {
-  padding-bottom: 20px;
 }
 
 .your-copy-details .option-group:first-of-type {

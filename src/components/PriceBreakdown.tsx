@@ -1,4 +1,4 @@
-import { FACTORS, type Config, type Selection } from '../data/defaults'
+import type { Config } from '../data/defaults'
 import { pokemonSpeciesName, type CardData } from '../data/cards'
 import { formatEuro, verdict } from '../logic/pricing'
 import { VerdictChip } from './VerdictChip'
@@ -8,9 +8,7 @@ const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
 interface Props {
   card: CardData
   setName: string
-  selection: Selection
   config: Config
-  fairPrice: number
   market: number | null
 }
 
@@ -22,7 +20,7 @@ const VIEWS: { key: 'broad' | 'standard' | 'local'; label: string; hint: string 
 ]
 
 /** Read-only "why this price" breakdown: the card's fixed, data-derived factors, then your copy's condition/language on top. */
-export function PriceBreakdown({ card, setName, selection, config, fairPrice, market }: Props) {
+export function PriceBreakdown({ card, setName, config, market }: Props) {
   const f = card.factors
 
   // Do the three views agree on the verdict? Drives the consensus line below.
@@ -101,13 +99,6 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
   const anchor = factorProduct > 0 ? card.fairs.standard / factorProduct : card.fairs.standard
   const cardRows = allFactorRows.filter((r) => !r.hidden)
 
-  const copyRows = FACTORS.map((def) => {
-    const optionId = selection[def.id]
-    const option = def.options.find((o) => o.id === optionId)
-    const mult = config.multipliers[def.id][optionId] ?? 1
-    return { label: def.label, value: option?.label ?? optionId, mult }
-  })
-
   return (
     <section className="panel price-breakdown-panel">
       <h2>Why this price?</h2>
@@ -174,22 +165,10 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
         </li>
       </ul>
       <ul className="breakdown-list">
-        <li>
-          <span>Fair price</span>
-          <span className="muted">the middle of the three views</span>
-          <span className="breakdown-mult">{formatEuro(card.baseValue)}</span>
-        </li>
-        {copyRows.map((r) => (
-          <li key={r.label}>
-            <span>{r.label}</span>
-            <span className="muted">{r.value}</span>
-            <span className="breakdown-mult">×{multFmt.format(r.mult)}</span>
-          </li>
-        ))}
         <li className="breakdown-total">
-          <span>Fair price (your copy)</span>
-          <span />
-          <span className="breakdown-mult">{formatEuro(fairPrice)}</span>
+          <span>Fair price</span>
+          <span className="muted">the middle of the three views above</span>
+          <span className="breakdown-mult">{formatEuro(card.baseValue)}</span>
         </li>
       </ul>
     </section>

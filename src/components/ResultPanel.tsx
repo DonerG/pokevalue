@@ -10,7 +10,6 @@ import {
 interface Props {
   score: number
   baseValue: number
-  fairPrice: number
   marketInput: string
   onMarketInput: (value: string) => void
   config: Config
@@ -37,13 +36,12 @@ const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint:
 export function ResultPanel({
   score,
   baseValue,
-  fairPrice,
   marketInput,
   onMarketInput,
   config,
 }: Props) {
   const market = parseNumber(marketInput)
-  const v = marketInput.trim() === '' ? null : verdict(market, fairPrice, config)
+  const v = marketInput.trim() === '' ? null : verdict(market, baseValue, config)
   const scoreRounded = Math.round(score)
 
   return (
@@ -69,19 +67,15 @@ export function ResultPanel({
           <div className="score-fill" style={{ width: `${score}%` }} />
         </div>
         <p className="muted">
-          The card's position between the cheapest and priciest base value across every card
-          currently on the site — independent of the copy's condition.
+          The card's position between the cheapest and priciest fair price across every card
+          currently on the site.
         </p>
       </div>
 
       <dl className="price-list">
-        <div className="price-row">
-          <dt>Card base value</dt>
-          <dd>{formatEuro(baseValue)}</dd>
-        </div>
         <div className="price-row price-row-main">
-          <dt>Fair price (your copy)</dt>
-          <dd>{formatEuro(fairPrice)}</dd>
+          <dt>Fair price</dt>
+          <dd>{formatEuro(baseValue)}</dd>
         </div>
       </dl>
 

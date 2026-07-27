@@ -1,10 +1,3 @@
-import { FACTORS, type Config, type Selection } from '../data/defaults'
-
-/** Fair price of a specific copy: the card's data-derived base value × condition × language. */
-export function fairPrice(baseValue: number, selection: Selection, config: Config): number {
-  return FACTORS.reduce((acc, f) => acc * (config.multipliers[f.id][selection[f.id]] ?? 1), baseValue)
-}
-
 /**
  * Card score 0–100: logarithmic position of the card's base value between the
  * cheapest and priciest base value across every card currently on the site

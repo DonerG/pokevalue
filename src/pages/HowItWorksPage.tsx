@@ -249,10 +249,16 @@ export function HowItWorksPage() {
       <section className="panel prose-panel">
         <h3>What the model doesn't know</h3>
         <p>
-          Condition and language are <em>not</em> computed — they're reasonable assumptions you can
-          adjust on each card page. Cardmarket doesn't publish prices split by grade or language, so
-          there's no data to derive them from, and they're labelled as assumptions rather than
-          dressed up as model output.
+          <strong>Condition and language.</strong> Every price here describes the card as the market
+          trades it, not your specific copy. Cardmarket doesn't publish prices split by grade or
+          language — querying the same physical card in different languages returns the identical
+          product and price — so there is nothing to derive those from. The site used to offer
+          adjustable condition and language multipliers; they were removed, because guessed numbers
+          presented inside a calculation look like model output when they aren't.
+        </p>
+        <p>
+          One consequence worth knowing: for older cards, a single market price blends copies in
+          very different conditions, so it carries real ambiguity that no number here can resolve.
         </p>
         <p>
           It also can't see hype. If a card spikes because of a video or a tournament result, the

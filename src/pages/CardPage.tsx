@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { FACTORS, defaultSelection, type Config, type FactorId, type Selection } from '../data/defaults'
-import { fairPrice, formatEuro, score } from '../logic/pricing'
+import type { Config } from '../data/defaults'
+import { formatEuro, score } from '../logic/pricing'
 import {
   cardImage,
   cardmarketUrl,
@@ -10,7 +10,6 @@ import {
   PRICING_META,
   type CardData,
 } from '../data/cards'
-import { OptionGroup } from '../components/OptionGroup'
 import { ResultPanel } from '../components/ResultPanel'
 import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
@@ -29,12 +28,10 @@ function trendToInput(trend: number | null | undefined): string {
 export function CardPage({ cardId, config }: Props) {
   // undefined = still loading, null = confirmed not found
   const [card, setCard] = useState<CardData | null | undefined>(undefined)
-  const [selection, setSelection] = useState<Selection>(() => defaultSelection())
   const [marketInput, setMarketInput] = useState('')
 
   useEffect(() => {
     setCard(undefined)
-    setSelection(defaultSelection())
     loadCard(cardId).then((c) => {
       setCard(c ?? null)
       if (c) setMarketInput(trendToInput(c.market?.trend))
@@ -46,9 +43,8 @@ export function CardPage({ cardId, config }: Props) {
     return {
       score: score(card.baseValue, PRICING_META.minBaseValue, PRICING_META.maxBaseValue),
       base: card.baseValue,
-      fair: fairPrice(card.baseValue, selection, config),
     }
-  }, [card, selection, config])
+  }, [card])
 
   // Computed before the early returns below so the hook call stays
   // unconditional — `set` is derived again after them for rendering.
@@ -75,9 +71,6 @@ export function CardPage({ cardId, config }: Props) {
 
   const set = getSet(card.id.slice(0, card.id.lastIndexOf('-')))
   const img = cardImage(card, 'high')
-  const handleSelect = (factorId: FactorId, optionId: string) =>
-    setSelection((prev) => ({ ...prev, [factorId]: optionId }))
-
   return (
     <div>
       <nav className="breadcrumb">
@@ -119,34 +112,15 @@ export function CardPage({ cardId, config }: Props) {
           <PriceBreakdown
             card={card}
             setName={set?.name ?? card.id}
-            selection={selection}
             config={config}
-            fairPrice={results.fair}
             market={card.market?.trend ?? null}
           />
         </div>
 
         <aside className="card-result">
-          <details className="panel your-copy-details">
-            <summary>
-              <h2>Your Copy</h2>
-              <p className="panel-intro">Condition &amp; language for your specific copy (optional)</p>
-            </summary>
-            {FACTORS.map((def) => (
-              <OptionGroup
-                key={def.id}
-                def={def}
-                config={config}
-                value={selection[def.id]}
-                onChange={(optionId) => handleSelect(def.id, optionId)}
-              />
-            ))}
-          </details>
-
           <ResultPanel
             score={results.score}
             baseValue={results.base}
-            fairPrice={results.fair}
             marketInput={marketInput}
             onMarketInput={setMarketInput}
             config={config}

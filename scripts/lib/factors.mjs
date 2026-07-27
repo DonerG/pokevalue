@@ -81,7 +81,6 @@ function lookup(table, key) {
 
 /** One variant's fair value for the given per-category keys. */
 function variantValue(variantData, keys, tier, withBreakdown) {
-  const categories = withBreakdown ? Object.keys(keys) : null
   let value = variantData.anchor ?? 1
   const breakdown = {}
   for (const [cat, key] of Object.entries(keys)) {

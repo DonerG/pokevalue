@@ -7,7 +7,7 @@ A website that estimates a fair price for Pokémon cards with a regression model
 ## Features
 
 - **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first). The homepage search bar also matches individual cards by name or number, site-wide, via a lightweight lazy-loaded search index (see `scripts/build-search-index.mjs`) — not just set names.
-- **Card page:** Pokémon, rarity, illustrator, set, and card type each get their own computed factor — fixed facts, not adjustable. You only pick condition and language for your specific copy, plus a "why this price?" breakdown showing every factor that went into the number.
+- **Card page:** Pokémon, rarity, illustrator, set, card type and artwork each get their own computed factor — fixed facts, nothing user-adjustable. A "why this price?" breakdown shows every factor that went into the number, the three model views behind it, and how much they agree.
 - **How it works (`/how-it-works`):** Public explanation of the model — the multiplicative formula, why it's fitted on log prices, what ridge regularization does for thinly-supported cards, why rarity and card type get a release-year interaction, and what the model can't see. Includes live example factors (top Pokémon, rarities, illustrators, card types, and "Rare" over the years) pulled from a small generated slice of `factors.json` — see `scripts/build-factor-highlights.mjs`.
 - **Artwork rating (hidden, `/admin/artwork`):** Rate illustration quality (10/9/8/worse) on chase cards whose artwork is genuinely their own — illustration, special illustration, secret and full art rares. Double Rares and Ultra Rares are excluded (standard frame, nothing to judge), and so are Promos, which are handled entirely on `/admin/promo-style`. **This is a live model factor**, fed from `src/data/artwork-ratings.json`.
 
@@ -91,7 +91,7 @@ Over half of all cards trade under €0.30, where Cardmarket's 1-cent price step
 
 **Known data issue:** TCGdex's Cardmarket price for a small number of cards is mapped to the wrong product — confirmed by hand for one user-reported card (a Chaos Rising Delphox showing ~€1.89 instead of its real ~€0.07 on Cardmarket). Verified this isn't a stale-cache problem (the live TCGdex API serves the same wrong number) and isn't statistically detectable (the wrong price looks like an ordinary price for its rarity tier — no internal inconsistency to catch). `build-training-data.mjs` automatically drops the one sub-case that *is* detectable — a Cardmarket product ID literally shared with a different Pokémon (180 of ~19,400 cards, a confirmed TCGdex bug). Everything else relies on manual spot-checking via `/admin/price-audit` (see above) and `src/data/price-exclusions.json`.
 
-**Not modeled:** reverse holo / 1st Edition / Shadowless pricing (Cardmarket's variant-level data turned out too inconsistent across cards to trust — some of the most famous vintage variants have no separate price at all) and the manual artwork ratings (descoped for this version — see the admin page above). Condition and language remain adjustable on the card page but are explicitly labeled as assumptions, not computed factors: querying TCGdex in different languages for the same physical card returns the identical Cardmarket product ID and price, so there's no real data to derive a language multiplier from, and Cardmarket doesn't track prices by grade either.
+**Not modeled:** reverse holo / 1st Edition / Shadowless pricing (Cardmarket's variant-level data turned out too inconsistent across cards to trust — some of the most famous vintage variants have no separate price at all). **Condition and language are not modeled at all** — and no longer adjustable. They used to be hand-set multipliers in a "your copy" panel; that was removed, because guessed numbers sitting inside a calculation read as model output when they aren't. There is no data behind them: querying TCGdex in different languages for the same physical card returns the identical Cardmarket product ID and price, and Cardmarket doesn't track prices by grade either. Every price on the site therefore describes the card as the market trades it, not a specific copy.
 
 ### Rebuilding the model
 
@@ -170,7 +170,7 @@ scripts/
   lib/cardMapping.mjs         Card-type derivation, artwork-candidate rarity filter, effectiveRarity() (promo style), eraBucket()
   lib/factors.mjs             Looks up computed factors for a card, applies low-sample dampening
 src/
-  data/defaults.ts        Condition/language options — the only user-adjustable factors, and only assumptions
+  data/defaults.ts        Just the over-/undervalued thresholds — nothing else is configurable
   data/cards.ts            Access to imported sets/cards, pricing-meta (score normalization range)
   data/generated/          Imported card data incl. baked-in factors (JSON, commit these!)
   data/promo-styles.json  Hand-tagged Promo styles: Alt Art 10/9/8, Stamped, Normal (commit this!)
