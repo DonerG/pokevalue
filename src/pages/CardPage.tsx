@@ -97,13 +97,6 @@ export function CardPage({ cardId, config }: Props) {
               View on Cardmarket ↗
             </a>
           </div>
-
-          <ResultPanel
-            fair={card.baseValue}
-            marketInput={marketInput}
-            onMarketInput={setMarketInput}
-            config={config}
-          />
         </div>
 
         <div className="card-controls">
@@ -114,6 +107,15 @@ export function CardPage({ cardId, config }: Props) {
             market={card.market?.trend ?? null}
           />
         </div>
+
+        <aside className="card-result">
+          <ResultPanel
+            fair={card.baseValue}
+            marketInput={marketInput}
+            onMarketInput={setMarketInput}
+            config={config}
+          />
+        </aside>
       </div>
     </div>
   )

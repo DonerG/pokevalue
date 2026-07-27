@@ -752,7 +752,7 @@ details.panel[open] summary {
 
 .card-layout {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 1fr) 360px;
   gap: 20px;
   align-items: start;
 }
@@ -761,18 +761,15 @@ details.panel[open] summary {
   .card-layout {
     grid-template-columns: 260px minmax(0, 1fr);
   }
+  .card-result {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 720px) {
   .card-layout {
     grid-template-columns: 1fr;
   }
-}
-
-.card-visual {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 .card-visual img {
@@ -801,6 +798,14 @@ details.panel[open] summary {
 
 .cardmarket-link:hover {
   text-decoration: underline;
+}
+
+.card-result {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .card-controls {
