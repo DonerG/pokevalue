@@ -1,15 +1,9 @@
 import type { Config } from '../data/defaults'
-import {
-  formatEuro,
-  formatPercent,
-  parseNumber,
-  verdict,
-  type Verdict,
-} from '../logic/pricing'
+import { formatPercent, parseNumber, verdict, type Verdict } from '../logic/pricing'
 
 interface Props {
-  score: number
-  baseValue: number
+  /** The card's fair price — what an entered price is judged against. */
+  fair: number
   marketInput: string
   onMarketInput: (value: string) => void
   config: Config
@@ -33,54 +27,20 @@ const VERDICT_TEXT: Record<Verdict['kind'], { icon: string; label: string; hint:
   },
 }
 
-export function ResultPanel({
-  score,
-  baseValue,
-  marketInput,
-  onMarketInput,
-  config,
-}: Props) {
+export function ResultPanel({ fair, marketInput, onMarketInput, config }: Props) {
   const market = parseNumber(marketInput)
-  const v = marketInput.trim() === '' ? null : verdict(market, baseValue, config)
-  const scoreRounded = Math.round(score)
+  const v = marketInput.trim() === '' ? null : verdict(market, fair, config)
 
   return (
     <section className="panel result-panel">
-      <h2>Valuation</h2>
-
-      <div className="score-block">
-        <div className="score-head">
-          <span className="score-title">Card Score</span>
-          <span className="score-value">
-            {scoreRounded}
-            <span className="score-max">/100</span>
-          </span>
-        </div>
-        <div
-          className="score-meter"
-          role="meter"
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={scoreRounded}
-          aria-label="Card Score"
-        >
-          <div className="score-fill" style={{ width: `${score}%` }} />
-        </div>
-        <p className="muted">
-          The card's position between the cheapest and priciest fair price across every card
-          currently on the site.
-        </p>
-      </div>
-
-      <dl className="price-list">
-        <div className="price-row price-row-main">
-          <dt>Fair price</dt>
-          <dd>{formatEuro(baseValue)}</dd>
-        </div>
-      </dl>
+      <h2>Check a price</h2>
+      <p className="panel-intro">
+        Prefilled with the current Cardmarket price. Change it to whatever you're being asked or
+        offered, and see how that compares with the fair price.
+      </p>
 
       <div className="market-block">
-        <label htmlFor="market-price">Current market price (e.g. Cardmarket)</label>
+        <label htmlFor="market-price">Price to check</label>
         <div className="market-input">
           <input
             id="market-price"

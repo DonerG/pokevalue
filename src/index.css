@@ -228,82 +228,6 @@ summary:focus-visible {
   margin-bottom: 14px;
 }
 
-.score-block {
-  margin-bottom: 18px;
-}
-
-.score-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-
-.score-title {
-  font-weight: 600;
-}
-
-.score-value {
-  font-size: 30px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.5px;
-}
-
-.score-max {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--muted);
-}
-
-.score-meter {
-  height: 10px;
-  border-radius: 5px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  overflow: hidden;
-}
-
-.score-fill {
-  height: 100%;
-  border-radius: 4px;
-  background: var(--meter);
-  transition: width 0.25s ease;
-}
-
-.price-list {
-  margin: 0;
-  border-top: 1px solid var(--border);
-}
-
-.price-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.price-row dt {
-  color: var(--text-2);
-  font-size: 14.5px;
-}
-
-.price-row dd {
-  margin: 0;
-  font-weight: 600;
-  font-size: 17px;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-.price-row-main dd {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
 /* ---------- Market comparison ---------- */
 
 .market-block {
@@ -828,7 +752,7 @@ details.panel[open] summary {
 
 .card-layout {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr) 360px;
+  grid-template-columns: 300px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
 }
@@ -837,15 +761,18 @@ details.panel[open] summary {
   .card-layout {
     grid-template-columns: 260px minmax(0, 1fr);
   }
-  .card-result {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (max-width: 720px) {
   .card-layout {
     grid-template-columns: 1fr;
   }
+}
+
+.card-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .card-visual img {
@@ -882,25 +809,12 @@ details.panel[open] summary {
   gap: 20px;
 }
 
-.card-result {
-  position: sticky;
-  top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .your-copy-details .option-group:first-of-type {
   margin-top: 4px;
 }
 
 @media (max-width: 1100px) {
-  .card-result {
-    position: static;
-  }
-}
-
-/* ---------- Footer ---------- */
+  /* ---------- Footer ---------- */
 
 .app-footer {
   margin-top: 28px;

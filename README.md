@@ -7,7 +7,7 @@ A website that estimates a fair price for Pokémon cards with a regression model
 ## Features
 
 - **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first). The homepage search bar also matches individual cards by name or number, site-wide, via a lightweight lazy-loaded search index (see `scripts/build-search-index.mjs`) — not just set names.
-- **Card page:** Pokémon, rarity, illustrator, set, card type and artwork each get their own computed factor — fixed facts, nothing user-adjustable. A "why this price?" breakdown shows every factor that went into the number, the three model views behind it, and how much they agree.
+- **Card page:** Pokémon, rarity, illustrator, set, card type and artwork each get their own computed factor — fixed facts, nothing user-adjustable. A "why this price?" breakdown shows every factor that went into the number, the three model views behind it, and how much they agree. Alongside the card sits a small "check a price" box: prefilled with the current Cardmarket price, change it to whatever you're being asked or offered and it re-judges against the fair price.
 - **How it works (`/how-it-works`):** Public explanation of the model — the multiplicative formula, why it's fitted on log prices, what ridge regularization does for thinly-supported cards, why rarity and card type get a release-year interaction, and what the model can't see. Includes live example factors (top Pokémon, rarities, illustrators, card types, and "Rare" over the years) pulled from a small generated slice of `factors.json` — see `scripts/build-factor-highlights.mjs`.
 - **Artwork rating (hidden, `/admin/artwork`):** Rate illustration quality (10/9/8/worse) on chase cards whose artwork is genuinely their own — illustration, special illustration, secret and full art rares. Double Rares and Ultra Rares are excluded (standard frame, nothing to judge), and so are Promos, which are handled entirely on `/admin/promo-style`. **This is a live model factor**, fed from `src/data/artwork-ratings.json`.
 
@@ -171,12 +171,12 @@ scripts/
   lib/factors.mjs             Looks up computed factors for a card, applies low-sample dampening
 src/
   data/defaults.ts        Just the over-/undervalued thresholds — nothing else is configurable
-  data/cards.ts            Access to imported sets/cards, pricing-meta (score normalization range)
+  data/cards.ts            Access to imported sets/cards
   data/generated/          Imported card data incl. baked-in factors (JSON, commit these!)
   data/promo-styles.json  Hand-tagged Promo styles: Alt Art 10/9/8, Stamped, Normal (commit this!)
   data/artwork-ratings.json Hand-rated illustration quality, 10/9/8/worse (commit this!)
   data/price-exclusions.json Hand-reviewed prices: wrong / verified / {corrected: n} (commit this!)
-  logic/pricing.ts         Fair price, score; re-exports verdict + formatting from the shared JS modules
+  logic/pricing.ts         Re-exports verdict + formatting from the shared JS modules
   logic/pageMeta.js        Per-route title/description (shared with scripts/prerender.mjs — see "URLs and SEO")
   logic/format.js          Euro/percent formatting, shared with the build scripts
   logic/verdict.js         Over-/undervalued judgement + default thresholds, shared with the build scripts

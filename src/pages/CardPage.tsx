@@ -1,13 +1,12 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Config } from '../data/defaults'
-import { formatEuro, score } from '../logic/pricing'
+import { formatEuro } from '../logic/pricing'
 import {
   cardImage,
   cardmarketUrl,
   formatDate,
   getSet,
   loadCard,
-  PRICING_META,
   type CardData,
 } from '../data/cards'
 import { ResultPanel } from '../components/ResultPanel'
@@ -38,14 +37,6 @@ export function CardPage({ cardId, config }: Props) {
     })
   }, [cardId])
 
-  const results = useMemo(() => {
-    if (!card) return null
-    return {
-      score: score(card.baseValue, PRICING_META.minBaseValue, PRICING_META.maxBaseValue),
-      base: card.baseValue,
-    }
-  }, [card])
-
   // Computed before the early returns below so the hook call stays
   // unconditional — `set` is derived again after them for rendering.
   const metaSet = card ? getSet(card.id.slice(0, card.id.lastIndexOf('-'))) : undefined
@@ -61,7 +52,7 @@ export function CardPage({ cardId, config }: Props) {
     return <p className="muted">Loading card…</p>
   }
 
-  if (!card || !results) {
+  if (!card) {
     return (
       <p className="muted">
         Card not found. <a href="/">Back to overview</a>
@@ -106,6 +97,13 @@ export function CardPage({ cardId, config }: Props) {
               View on Cardmarket ↗
             </a>
           </div>
+
+          <ResultPanel
+            fair={card.baseValue}
+            marketInput={marketInput}
+            onMarketInput={setMarketInput}
+            config={config}
+          />
         </div>
 
         <div className="card-controls">
@@ -116,16 +114,6 @@ export function CardPage({ cardId, config }: Props) {
             market={card.market?.trend ?? null}
           />
         </div>
-
-        <aside className="card-result">
-          <ResultPanel
-            score={results.score}
-            baseValue={results.base}
-            marketInput={marketInput}
-            onMarketInput={setMarketInput}
-            config={config}
-          />
-        </aside>
       </div>
     </div>
   )

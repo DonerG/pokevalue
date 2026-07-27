@@ -1,16 +1,3 @@
-/**
- * Card score 0–100: logarithmic position of the card's base value between the
- * cheapest and priciest base value across every card currently on the site
- * (see pricing-meta.json) — an empirical percentile, not a guess.
- */
-export function score(baseValue: number, minBaseValue: number, maxBaseValue: number): number {
-  if (baseValue <= 0 || maxBaseValue <= minBaseValue) return 0
-  const s =
-    (100 * (Math.log10(baseValue) - Math.log10(minBaseValue))) /
-    (Math.log10(maxBaseValue) - Math.log10(minBaseValue))
-  return Math.min(100, Math.max(0, s))
-}
-
 export type VerdictKind = 'undervalued' | 'fair' | 'overvalued'
 
 export interface Verdict {
