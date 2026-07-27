@@ -56,8 +56,11 @@ export interface CardData {
   priceFlagged: boolean
   /** Price was hand-read off Cardmarket to replace a broken one — trend only, no 30-day average. */
   priceCorrected?: boolean
-  /** Data-derived fair value before condition/language: anchor × every factor in `factors`. */
+  /** Shipped fair value before condition/language: the MEDIAN of the three variant estimates in `fairs`. */
   baseValue: number
+  /** The three model variants' fair prices — see /how-it-works: broad (widest comparison circle), standard, local (same rarity, same set). */
+  fairs: { broad: number; standard: number; local: number }
+  /** Per-factor breakdown of the STANDARD variant (the middle one). */
   factors: CardFactors
 }
 

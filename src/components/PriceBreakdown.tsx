@@ -1,6 +1,6 @@
 import { FACTORS, type Config, type Selection } from '../data/defaults'
 import { pokemonSpeciesName, type CardData } from '../data/cards'
-import { formatEuro } from '../logic/pricing'
+import { formatEuro, verdict } from '../logic/pricing'
 import { VerdictChip } from './VerdictChip'
 
 const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
@@ -14,9 +14,21 @@ interface Props {
   market: number | null
 }
 
+/** The three model variants in zoom order — see /how-it-works for why three exist. */
+const VIEWS: { key: 'broad' | 'standard' | 'local'; label: string; hint: string }[] = [
+  { key: 'broad', label: 'Wide view', hint: 'vs. broadly similar cards across every set' },
+  { key: 'standard', label: 'Standard view', hint: 'adds release-year and artwork context' },
+  { key: 'local', label: 'Close-up view', hint: 'vs. the same rarity in this same set' },
+]
+
 /** Read-only "why this price" breakdown: the card's fixed, data-derived factors, then your copy's condition/language on top. */
 export function PriceBreakdown({ card, setName, selection, config, fairPrice, market }: Props) {
   const f = card.factors
+
+  // Do the three views agree on the verdict? Drives the consensus line below.
+  const viewVerdicts =
+    market != null ? VIEWS.map((v) => verdict(market, card.fairs[v.key], config)?.kind ?? null) : []
+  const allAgree = viewVerdicts.length > 0 && viewVerdicts.every((k) => k != null && k === viewVerdicts[0])
   // A row is hidden only when its multiplier would read "×1" anyway. Rows are
   // otherwise always shown, even the ones that name a bucket rather than a
   // property of this card ("n/a" for a Pokémon card's cardName factor): they
@@ -83,8 +95,10 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
       hidden: isNeutral(f.cardName.displayFactor),
     },
   ]
+  // The factor list documents the STANDARD view, so it must multiply out to
+  // that view's price — not to baseValue, which is the median of all three.
   const factorProduct = allFactorRows.reduce((acc, r) => acc * r.mult, 1)
-  const anchor = factorProduct > 0 ? card.baseValue / factorProduct : card.baseValue
+  const anchor = factorProduct > 0 ? card.fairs.standard / factorProduct : card.fairs.standard
   const cardRows = allFactorRows.filter((r) => !r.hidden)
 
   const copyRows = FACTORS.map((def) => {
@@ -106,8 +120,36 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
           <span className="muted">Fair price</span>
           <strong>{formatEuro(card.baseValue)}</strong>
         </div>
-        <VerdictChip market={market} fair={card.baseValue} config={config} />
+        <VerdictChip market={market} fair={card.baseValue} config={config} fairs={card.fairs} />
       </div>
+
+      {/* The three comparison circles behind the fair price. The number shown
+          above is their MEDIAN; the real information for anyone digging in is
+          how much they agree — see /how-it-works. */}
+      <ul className="views-list">
+        {VIEWS.map((v) => (
+          <li key={v.key}>
+            <span className="views-label">
+              {v.label}
+              <span className="muted"> — {v.hint}</span>
+            </span>
+            <span className="views-fair">{formatEuro(card.fairs[v.key])}</span>
+            <VerdictChip market={market} fair={card.fairs[v.key]} config={config} />
+          </li>
+        ))}
+        <li className="views-summary">
+          {market == null ? (
+            <span className="muted">No market price to compare the three views against.</span>
+          ) : allAgree ? (
+            <span className="views-agree">✓ All three views agree — a solid verdict.</span>
+          ) : (
+            <span className="views-disagree">
+              ◐ The views disagree — this card sits on a boundary, and the verdict depends on how you
+              compare. The fair price shown is the middle of the three.
+            </span>
+          )}
+        </li>
+      </ul>
       <p className="panel-intro">
         Each factor below is computed from real Cardmarket prices across ~19,000 cards.{' '}
         <a href="/how-it-works">How this is calculated →</a>
@@ -126,12 +168,17 @@ export function PriceBreakdown({ card, setName, selection, config, fairPrice, ma
           </li>
         ))}
         <li className="breakdown-total">
-          <span>Card base value</span>
-          <span />
-          <span className="breakdown-mult">{formatEuro(card.baseValue)}</span>
+          <span>Standard view</span>
+          <span className="muted">the factors above multiplied together</span>
+          <span className="breakdown-mult">{formatEuro(card.fairs.standard)}</span>
         </li>
       </ul>
       <ul className="breakdown-list">
+        <li>
+          <span>Fair price</span>
+          <span className="muted">the middle of the three views</span>
+          <span className="breakdown-mult">{formatEuro(card.baseValue)}</span>
+        </li>
         {copyRows.map((r) => (
           <li key={r.label}>
             <span>{r.label}</span>

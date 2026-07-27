@@ -1,50 +1,59 @@
 {
- "trainedAt": "2026-07-26T06:37:52.535275+00:00",
+ "trainedAt": "2026-07-27T05:55:14.755800+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4645,
  "displayedSetWeight": 1.0,
  "trainingOnlyWeight": 0.2,
  "alpha": 1.78,
- "cvMedianAPEByAlpha": {
-  "0.32": 0.30863530378039467,
-  "1.0": 0.3024607806555294,
-  "1.78": 0.29708098708698005,
-  "3.16": 0.29740990506176124,
-  "5.62": 0.3034091567558817,
-  "10.0": 0.311326079935386,
-  "17.78": 0.3296274175178444
- },
  "pokemonTierExponent": {
   "bulk": 1.0,
   "mid": 1.2234,
   "chase": 1.5078
  },
- "displayedMedianAPE": 0.29708098708698005,
- "displayedWithin20": 0.34940796555435955,
- "displayedTestR2": 0.9450676325606334,
+ "displayedMedianAPE": 0.2943141035011246,
+ "displayedWithin20": 0.3519913885898816,
+ "displayedTestR2": 0.946006361086425,
  "byPriceBand": {
   "0-0.3": {
    "n": 2704,
-   "medianAPE": 0.2664447890601416,
-   "within20": 0.3890532544378698
+   "medianAPE": 0.2674906022057138,
+   "within20": 0.3905325443786982
   },
   "0.3-3": {
    "n": 844,
-   "medianAPE": 0.35002685896562236,
-   "within20": 0.3127962085308057
+   "medianAPE": 0.3448900599341689,
+   "within20": 0.3175355450236967
   },
   "3-30": {
    "n": 882,
-   "medianAPE": 0.34710199902919553,
-   "within20": 0.28798185941043086
+   "medianAPE": 0.34125488534283055,
+   "within20": 0.2891156462585034
   },
   "30+": {
    "n": 215,
-   "medianAPE": 0.4296300916693994,
-   "within20": 0.24651162790697675
+   "medianAPE": 0.4350893579015542,
+   "within20": 0.26046511627906976
   }
  },
+ "perVariant": {
+  "broad": {
+   "medianAPE": 0.3491913325763832,
+   "within20": 0.3069967707212056,
+   "alpha": 1.78
+  },
+  "standard": {
+   "medianAPE": 0.29708098708698005,
+   "within20": 0.34940796555435955,
+   "alpha": 1.78
+  },
+  "local": {
+   "medianAPE": 0.2825074486879682,
+   "within20": 0.3705059203444564,
+   "alpha": 1.78
+  }
+ },
+ "verdictAgreement": 0.6383207750269106,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,
@@ -54,6 +63,7 @@
   "cardName": 1435,
   "rarityYear": 202,
   "cardTypeYear": 88,
-  "artwork": 4
+  "artwork": 4,
+  "raritySet": 793
  }
 }

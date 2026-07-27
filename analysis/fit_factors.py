@@ -1,115 +1,87 @@
 """
-Fits the PokéValue pricing model: a log-linear (== multiplicative in price
-space) ridge regression that explains a card's Cardmarket price purely from
-card identity:
+Fits the PokéValue pricing model — as THREE parallel variants of one log-linear
+(== multiplicative in price space) ridge regression, differing only in how
+finely they slice the comparison group for a card:
 
-    price = anchor x factor(pokemon)^tierExponent x factor(rarity)
-            x factor(illustrator) x factor(set) x factor(card type)
-            x factor(card name) x factor(rarity x year) x factor(card type x year)
+  broad     price = anchor x pokemon x rarity x illustrator x set x cardType
+                    x cardName
+            "compared with broadly similar cards" — no year interactions, no
+            artwork, no tier exponent. The widest comparison circle: blunt,
+            but immune to one weird set or year polluting a narrow bucket.
 
-Eight factors, deliberately. The point of the site is a SIMPLE defensible
-reference to compare the market against, not a maximally accurate price
-predictor — a model that reproduced the market exactly would flag nothing as
-over- or undervalued and would say nothing at all. Two per-set interaction terms
-were tried and removed again: they bought 2.3pp of median accuracy while making
-the formula a third longer and, by construction, declaring the median card in
-every (set, rarity) group fair.
+  standard  broad + rarity x year + cardType x year + artwork
+            + the Pokémon tier exponent. The balanced default.
 
-`anchor` is the price of a TYPICAL card, and every factor is centred so that 1x
-means "no different from typical" — see the centring step near the end. This
-matters for reading the numbers: the split of the overall price level between
-categories is not pinned by the data at all (multiply every set factor by k,
-divide every rarity factor by k, and no prediction changes), so it is a
-presentation choice. The previous choice — fold the whole baseline into "set" —
-left set factors averaging 5.6x against rarity's 0.29x, which made a card's set
-look about as important as its rarity when rarity actually spans 117x across its
-levels and set 23x.
+  local     standard + rarity x set. The tightest circle: a card is compared
+            against its direct neighbours (same rarity, same set). Most
+            accurate per card — and, by construction, least able to call a
+            whole (set, rarity) group collectively mispriced, because that
+            group average IS its factor.
 
-WHAT THIS MODEL IS TUNED FOR
-----------------------------
-Everything below is chosen to minimize MEDIAN ABSOLUTE PERCENTAGE ERROR against
-`trend`, on cards from the 24 sets the site actually displays. That is a
-deliberate change from an earlier version tuned on log-space R² against
-`avg30`, which flattered itself badly:
+WHY THREE
+---------
+The variants answer genuinely different questions. "Undervalued" under broad
+means "cheap for this kind of card anywhere"; under local it means "cheap next
+to its own neighbours". Both are legitimate, neither is the truth, and any
+single choice silently decides the question for the visitor. Measured symptoms
+of that (see the session that led here): with only coarse terms, Black Bolt's
+expensive Illustration Rares polluted the 2025 rarity-year bucket and made
+every ordinary 2025 IR read as a fake bargain; with rarity x set, only 5 of
+147 (set, rarity) groups could still be flagged as collectively off, versus 34
+without it.
 
-  - R² in log space stayed ~0.93 while whole rarity tiers were off by 2x,
-    because that error is small on a log scale next to the EUR0.02-to-EUR400
-    spread it is measured over.
-  - Fitting `avg30` while the site shows and judges by `trend` meant the model
-    was accurate at predicting a number no visitor ever sees.
-  - Even median APE over ALL cards is misleading: 53% of cards trade under
-    EUR0.10, where Cardmarket's EUR0.01 quantization alone dominates the error.
-    Accuracy is therefore tracked per price band, not as one number.
+THE SHIPPED NUMBER is the MEDIAN of the three fair prices — "the middle of the
+three estimates". It is evaluated out of fold below exactly like the variants
+themselves. Agreement between the three is shipped alongside and shown as a
+design element (three dots on the verdict chip), deliberately NOT folded into
+the number.
 
-analysis/tune_model.py is the bake-off harness these choices came out of; rerun
-it after any data refresh to check they still hold.
+WHAT THIS IS TUNED FOR
+----------------------
+Median absolute percentage error against `trend` (the price the site shows),
+on cards from the 24 displayed sets, cross-validated so no card is scored by a
+model that saw it. Per price band, because one median over a EUR0.02-EUR400
+range hides exactly the errors that matter (53% of cards trade under EUR0.10,
+where Cardmarket's 1-cent steps floor the achievable error). R² flattered a
+badly-biased model before and is kept only as a footnote. Fitting `avg30`
+while the site judges by `trend` was an earlier bug of the same kind.
+analysis/tune_model.py is the bake-off harness these choices came out of.
 
-THE FACTORS
------------
-"cardName" is the Trainer/Energy analogue of "pokemon": Pokémon cards get "n/a"
-here (their identity is already fully captured by "pokemon"), while
-Trainer/Energy cards — which otherwise all share "pokemon" = "none" and so were
-indistinguishable from each other — get their own factor per exact printed name
-(e.g. "Iono" vs a generic Item). Most Trainer/Energy names are one-off reprints
-with too little data to say anything, but ridge shrinkage pulls low-n levels to
-neutral automatically.
-
-Pokémon premium varies by tier. A Pokémon's popularity is NOT a constant
-multiplier: fitted on the data, the premium is ~2x stronger on chase cards than
-on bulk ones (exact numbers printed at the end of a run and shipped as
-`pokemonTierExponent`). A single global factor averages the two, which
-systematically overpriced Illustration Rares of unloved Pokémon and underpriced
-chase Special Illustration Rares — the exact complaint that prompted this
-rewrite. Expressed as a varying coefficient (two extra parameters, one per
-non-bulk tier) rather than a pokemon x tier interaction: the full interaction
-was tested and lost, being far too sparse at 1026 Pokémon x 3 tiers.
-
-Two interaction terms, each layered ON TOP of its plain factor rather than
-replacing it: rarity x year and card type x year. A rarity tier or card
-mechanic means something very different depending on when the card was printed
-— median Rare/Common price ratio is 32.6x for pre-2003 cards vs. 2.3x for
-2023+ cards, and old "EX" cards have a median price of EUR64.62 against
-EUR1.88 for new "ex". Neither the plain rarity factor nor the Set factor can
-express that (Set moves a whole set together; it cannot change the ratio
-*between* rarities inside it).
-
-The bucket is the plain release YEAR. It used to be five broad eras (WOTC /
-EX-DP / BW-XY / SM-SWSH / SV+), which proved too coarse at the recent end: one
-"SV+" bucket spans 2023-2026, and inside it Illustration Rare prices drifted
-1.4-2.1x high while Special Illustration Rares ran 0.53-0.92x low. Per-set
-factors were added to fix that and then removed again — switching the bucket to
-year fixes MORE of the bias (SIR 0.75 -> 1.00 out of fold) with two fewer terms
-in the formula.
-
-Price tiers: bulk / mid / chase — see cardMapping.mjs::rarityTier, mirrored in
-JS along with releaseYear; keep both in sync.
-
-DISPLAYED VS. TRAINING-ONLY SETS
---------------------------------
-The site shows only the Scarlet & Violet + Mega Evolution sets
-(src/data/generated/sets.json), but this fits on every English card TCGdex has
-(~170 sets back to 1999). The older sets are there purely to give categories
-like "pokemon" or "illustrator" enough data to fit a confident factor — a card
-appearing in 2 displayed-set rows but 40 historical ones would otherwise get a
-near-meaningless estimate. They are down-weighted to TRAINING_ONLY_WEIGHT (swept:
-dropping them entirely scores worse, and so does counting them fully), and both
-alpha selection and every reported number are computed ONLY on displayed-set
-cards.
-
-DATA CAVEATS
-------------
-A small number of cards have a Cardmarket price mapped to the wrong (but
-otherwise unremarkable-looking) product on TCGdex's end — confirmed by hand for
-one report (a Chaos Rising Delphox showing ~EUR1.89 instead of its real ~EUR0.07).
-Because the wrong number still looks like an ordinary price for its rarity tier,
-this class of error isn't statistically detectable and isn't filtered here.
-build-training-data.mjs does drop the one sub-case that *is* detectable: cards
-whose Cardmarket product ID is literally shared with a different Pokémon.
+SHARED MACHINERY (all variants)
+-------------------------------
+- "cardName" is the Trainer/Energy analogue of "pokemon": Pokémon cards land
+  in a shared "n/a" bucket, Trainer/Energy cards get a factor per printed name.
+- The Pokémon premium is not a constant multiplier: fitted, it applies ~1.2x
+  as strongly on mid-tier and ~1.8x on chase cards as on bulk. Carried as a
+  varying coefficient (pokemonTierExponent), two parameters — the full
+  pokemon x tier interaction was tested and lost (1026 Pokémon x 3 tiers is
+  far too sparse). Applied in standard and local; broad stays deliberately
+  simple.
+- rarity x year / cardType x year: what a rarity tier or card mechanic is
+  worth has been redefined repeatedly (median Rare/Common ratio 32.6x pre-2003
+  vs 2.3x now; old "EX" median EUR64.62 vs new "ex" EUR1.88). Year buckets, not
+  eras: one "SV+" era spanning 2023-2026 proved far too coarse.
+- artwork: hand-rated illustration quality (src/data/artwork-ratings.json).
+  Grades 10/9/worse map to top/strong/weak; the 8s are DISCARDED — the
+  reviewer flagged them as "acceptable or couldn't judge", and measured, an 8
+  sits at 1.00 vs the model, indistinguishable from unrated (0.98).
+- Every category is centred to a card-weighted geometric mean of exactly 1x
+  (the split of the price level between categories is not identified by the
+  data — it's presentation — and folding it all into "set" used to make set
+  look as important as rarity when rarity spans ~100x and set ~20x). The
+  anchor is then "what a typical card is worth".
+- Training rows from sets not displayed on the site (the ~150 historical sets)
+  are down-weighted to TRAINING_ONLY_WEIGHT — they stabilize sparse Pokémon /
+  illustrator levels without outvoting the displayed sets.
+- Data caveat: a few cards carry a Cardmarket price mapped to the wrong
+  product on TCGdex's end; not statistically detectable. Hand-reviewed via
+  /admin/price-audit (wrong / verified / corrected — see priceReview.js).
 
 Reads:  scripts/training-data.json   (~19,000 English cards with a real price)
         src/data/generated/sets.json (which sets are actually displayed)
-Writes: analysis/factors.json        (every factor + sample size + 95% CI)
-        analysis/model_report.json   (fit quality, per price band)
+Writes: analysis/factors.json        (standard top-level for compatibility;
+                                      broad/local under "variants")
+        analysis/model_report.json   (per-variant + combined quality)
 
 Usage: python analysis/fit_factors.py
 """
@@ -130,13 +102,22 @@ DISPLAYED_SETS = HERE.parent / "src" / "data" / "generated" / "sets.json"
 FACTORS_OUT = HERE / "factors.json"
 REPORT_OUT = HERE / "model_report.json"
 
-CATEGORIES = [
-    "pokemon", "rarity", "illustrator", "set", "cardType", "cardName",
-    "rarityYear", "cardTypeYear", "artwork",
-]
+BROAD_CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName"]
+STANDARD_CATEGORIES = BROAD_CATEGORIES + ["rarityYear", "cardTypeYear", "artwork"]
+LOCAL_CATEGORIES = STANDARD_CATEGORIES + ["raritySet"]
+ALL_CATEGORIES = LOCAL_CATEGORIES
+
+# Mirrors VARIANT_CATEGORIES in scripts/lib/factors.mjs — keep both in sync.
+VARIANTS = {
+    "broad": {"categories": BROAD_CATEGORIES, "tier_exponent": False},
+    "standard": {"categories": STANDARD_CATEGORIES, "tier_exponent": True},
+    "local": {"categories": LOCAL_CATEGORIES, "tier_exponent": True},
+}
+
 N_BOOTSTRAP = 60
 RNG_SEED = 42
 N_FOLDS = 5
+ALPHA_GRID = [0.32, 1.0, 1.78, 3.16, 5.62, 10.0]
 
 DISPLAYED_SET_WEIGHT = 1.0
 TRAINING_ONLY_WEIGHT = 0.2
@@ -144,6 +125,7 @@ TIERS = ["bulk", "mid", "chase"]
 VARYING_TIERS = ["mid", "chase"]  # bulk is the reference (exponent fixed at 1)
 
 PRICE_BANDS = [(0, 0.30), (0.30, 3), (3, 30), (30, float("inf"))]
+VERDICT_THRESHOLD = 0.20  # site's over/under threshold, for the agreement stats
 
 
 def release_year(release_date):
@@ -197,25 +179,26 @@ df["year"] = df["releaseDate"].apply(release_year)
 df["tier"] = df["rarity"].apply(rarity_tier)
 df["rarityYear"] = df["rarity"] + " | " + df["year"]
 df["cardTypeYear"] = df["cardType"] + " | " + df["year"]
+df["raritySet"] = df["rarity"] + " | " + df["set"]
 df["artwork"] = df["artwork"].fillna("none")
 df["logPrice"] = np.log(df["trend"].astype(float))
 
-for c in CATEGORIES:
+for c in ALL_CATEGORIES:
     print(f"  {c}: {df[c].nunique()} distinct values")
 
 # ---------------------------------------------------- build the design matrix
 
+# One matrix for the union of all categories; each variant selects its columns.
 # Full one-hot per category (every level, no dropped reference) — with an
-# unpenalized intercept, ridge naturally pushes the shared grand-mean level
-# into the intercept and leaves each category's (penalized) coefficients as
-# genuine deviations from that baseline.
+# unpenalized intercept, ridge pushes the shared grand-mean level into the
+# intercept and leaves each category's coefficients as genuine deviations.
 print("\nBuilding one-hot design matrix …")
 category_values: dict[str, list[str]] = {}
 blocks = []
 col_category = []
 col_level = []
 
-for c in CATEGORIES:
+for c in ALL_CATEGORIES:
     dummies = pd.get_dummies(df[c], prefix="", prefix_sep="", sparse=True)
     levels = list(dummies.columns)
     category_values[c] = levels
@@ -223,78 +206,102 @@ for c in CATEGORIES:
     col_category.extend([c] * len(levels))
     col_level.extend(levels)
 
-X_raw = sparse.hstack(blocks, format="csr")
+X_all = sparse.hstack(blocks, format="csr").tocsc()
 col_category = np.array(col_category)
-
-X = X_raw
+col_level = np.array(col_level)
 
 y = df["logPrice"].to_numpy()
 trend = df["trend"].to_numpy().astype(float)
 displayed = df["displayed"].to_numpy()
 tier = df["tier"].to_numpy()
-n_samples, n_features = X.shape
-print(f"  X: {n_samples} rows x {n_features} columns (sparse)")
+n_samples = X_all.shape[0]
+print(f"  X (union): {n_samples} rows x {X_all.shape[1]} columns (sparse)")
 
-pokemon_mask = col_category == "pokemon"
-
-
-def tier_columns(pokemon_contrib):
-    """The varying-coefficient block: each row's fitted Pokémon log-contribution,
-    switched on only for its tier, so the fit can rescale that premium per tier."""
-    return sparse.csr_matrix(
-        np.column_stack([pokemon_contrib * (tier == t) for t in VARYING_TIERS])
-    )
-
-
-def fit_two_stage(train_idx, alpha):
-    """Stage 1 fits the plain model; stage 2 adds the tier-varying Pokémon term
-    (which needs stage 1's Pokémon coefficients to exist at all)."""
-    m1 = Ridge(alpha=alpha, fit_intercept=True, solver="sparse_cg")
-    m1.fit(X[train_idx], y[train_idx], sample_weight=sample_weight[train_idx])
-    contrib = np.asarray(X[:, pokemon_mask] @ m1.coef_[pokemon_mask]).ravel()
-    X2 = sparse.hstack([X, tier_columns(contrib)], format="csr")
-    m2 = Ridge(alpha=alpha, fit_intercept=True, solver="sparse_cg")
-    m2.fit(X2[train_idx], y[train_idx], sample_weight=sample_weight[train_idx])
-    return m2, X2
-
-
-# ------------------------------------------------------- pick regularization
-
-print(f"\nSelecting alpha by median APE vs trend on displayed sets ({N_FOLDS}-fold CV) …")
 disp_idx = np.flatnonzero(displayed)
 other_idx = np.flatnonzero(~displayed)
 kf = KFold(n_splits=N_FOLDS, shuffle=True, random_state=RNG_SEED)
 folds = list(kf.split(disp_idx))
 
-
-def cv_ape(alpha):
-    """Out-of-fold absolute percentage error for every displayed card."""
-    apes = np.empty(len(disp_idx))
-    for train_part, test_part in folds:
-        train_idx = np.concatenate([other_idx, disp_idx[train_part]])
-        model, X2 = fit_two_stage(train_idx, alpha)
-        test_idx = disp_idx[test_part]
-        pred = np.exp(model.predict(X2[test_idx]))
-        apes[test_part] = np.abs(pred - trend[test_idx]) / trend[test_idx]
-    return apes
+sample_counts = {c: df[c].value_counts().to_dict() for c in ALL_CATEGORIES}
 
 
-cv_scores = {}
-for alpha in [0.32, 1.0, 1.78, 3.16, 5.62, 10.0, 17.78]:
-    apes = cv_ape(alpha)
-    cv_scores[alpha] = float(np.median(apes))
-    print(f"  alpha={alpha:6.2f}  median APE={cv_scores[alpha]*100:5.1f}%  within 20%={np.mean(apes <= 0.2)*100:4.1f}%")
+class Variant:
+    """One fitted model variant over a column subset of the shared matrix."""
 
-best_alpha = min(cv_scores, key=cv_scores.get)
-print(f"Best alpha: {best_alpha:.2f} (median APE={cv_scores[best_alpha]*100:.1f}%)")
+    def __init__(self, name, categories, tier_exponent):
+        self.name = name
+        self.categories = categories
+        self.use_tier = tier_exponent
+        self.col_mask = np.isin(col_category, categories)
+        self.X = X_all[:, self.col_mask].tocsr()
+        self.cats = col_category[self.col_mask]
+        self.levels = col_level[self.col_mask]
+        self.pokemon_mask = self.cats == "pokemon"
+        self.alpha = None
+
+    def _tier_columns(self, contrib):
+        return sparse.csr_matrix(np.column_stack([contrib * (tier == t) for t in VARYING_TIERS]))
+
+    def fit(self, train_idx, alpha):
+        """Two-stage: plain fit, then (if enabled) add the tier-varying Pokémon term."""
+        m1 = Ridge(alpha=alpha, fit_intercept=True, solver="sparse_cg")
+        m1.fit(self.X[train_idx], y[train_idx], sample_weight=sample_weight[train_idx])
+        if not self.use_tier:
+            return m1, self.X
+        contrib = np.asarray(self.X[:, self.pokemon_mask] @ m1.coef_[self.pokemon_mask]).ravel()
+        X2 = sparse.hstack([self.X, self._tier_columns(contrib)], format="csr")
+        m2 = Ridge(alpha=alpha, fit_intercept=True, solver="sparse_cg")
+        m2.fit(X2[train_idx], y[train_idx], sample_weight=sample_weight[train_idx])
+        return m2, X2
+
+    def oof_predictions(self, alpha):
+        """Out-of-fold price prediction for every displayed card."""
+        pred = np.empty(len(disp_idx))
+        for train_part, test_part in folds:
+            train_idx = np.concatenate([other_idx, disp_idx[train_part]])
+            model, X2 = self.fit(train_idx, alpha)
+            pred[test_part] = np.exp(model.predict(X2[disp_idx[test_part]]))
+        return pred
+
+    def select_alpha(self):
+        print(f"\n[{self.name}] selecting alpha ({len(self.categories)} categories) …")
+        scores = {}
+        for alpha in ALPHA_GRID:
+            pred = self.oof_predictions(alpha)
+            ape = np.abs(pred - trend[disp_idx]) / trend[disp_idx]
+            scores[alpha] = float(np.median(ape))
+            print(f"  alpha={alpha:6.2f}  median APE={scores[alpha]*100:5.1f}%")
+        self.alpha = min(scores, key=scores.get)
+        print(f"  -> alpha={self.alpha:.2f}")
+        return scores
+
+
+def ape_stats(pred):
+    ape = np.abs(pred - trend[disp_idx]) / trend[disp_idx]
+    return {"medianAPE": float(np.median(ape)), "within20": float(np.mean(ape <= 0.2))}
+
+
+variants = {name: Variant(name, spec["categories"], spec["tier_exponent"]) for name, spec in VARIANTS.items()}
+cv_scores = {name: v.select_alpha() for name, v in variants.items()}
 
 # ------------------------------------------------------------- honest scoring
 
-# Same CV predictions at the chosen alpha — every displayed card scored by a
-# model that never saw it. Reported per price band because one median over a
-# four-orders-of-magnitude range hides exactly the errors that matter.
-apes = cv_ape(best_alpha)
+# All three out-of-fold prediction sets at their chosen alphas, plus the
+# combination the site actually ships: the per-card MEDIAN of the three.
+oof = {name: v.oof_predictions(v.alpha) for name, v in variants.items()}
+oof_combined = np.median(np.column_stack([oof[n] for n in VARIANTS]), axis=1)
+
+print("\nOut-of-fold on displayed cards:")
+per_variant_stats = {}
+for name in VARIANTS:
+    s = ape_stats(oof[name])
+    per_variant_stats[name] = {**s, "alpha": variants[name].alpha}
+    print(f"  {name:<9} median APE={s['medianAPE']*100:5.1f}%  within 20%={s['within20']*100:3.0f}%")
+combined_stats = ape_stats(oof_combined)
+print(f"  {'combined':<9} median APE={combined_stats['medianAPE']*100:5.1f}%  within 20%={combined_stats['within20']*100:3.0f}%   <- shipped")
+
 band_stats = {}
+apes_combined = np.abs(oof_combined - trend[disp_idx]) / trend[disp_idx]
 for lo, hi in PRICE_BANDS:
     sel = (trend[disp_idx] >= lo) & (trend[disp_idx] < hi)
     if sel.sum() < 10:
@@ -302,120 +309,112 @@ for lo, hi in PRICE_BANDS:
     label = f"{lo:g}-{hi:g}" if np.isfinite(hi) else f"{lo:g}+"
     band_stats[label] = {
         "n": int(sel.sum()),
-        "medianAPE": float(np.median(apes[sel])),
-        "within20": float(np.mean(apes[sel] <= 0.2)),
+        "medianAPE": float(np.median(apes_combined[sel])),
+        "within20": float(np.mean(apes_combined[sel] <= 0.2)),
     }
-
-displayed_median_ape = float(np.median(apes))
-displayed_within20 = float(np.mean(apes <= 0.2))
-print(f"\nOut-of-fold on {len(disp_idx)} displayed cards: median APE={displayed_median_ape*100:.1f}%  within 20%={displayed_within20*100:.0f}%")
 for label, s in band_stats.items():
-    print(f"  EUR{label:<8} n={s['n']:>5}  median APE={s['medianAPE']*100:5.1f}%  within 20%={s['within20']*100:3.0f}%")
+    print(f"    EUR{label:<8} n={s['n']:>5}  median APE={s['medianAPE']*100:5.1f}%  within 20%={s['within20']*100:3.0f}%")
 
-# Log-space R² on the same held-out predictions, kept only for continuity with
-# the older reports — see the docstring for why it is not the headline.
-oof_pred_log = np.empty(len(disp_idx))
-for train_part, test_part in folds:
-    train_idx = np.concatenate([other_idx, disp_idx[train_part]])
-    model, X2 = fit_two_stage(train_idx, best_alpha)
-    oof_pred_log[test_part] = model.predict(X2[disp_idx[test_part]])
-sse = np.sum((y[disp_idx] - oof_pred_log) ** 2)
+# Agreement between the three variants' verdicts, at the site's threshold —
+# shipped to the report so the site can honestly describe how often the three
+# views actually differ.
+def verdicts(pred):
+    gap = (trend[disp_idx] - pred) / pred
+    return np.where(gap > VERDICT_THRESHOLD, 1, np.where(gap < -VERDICT_THRESHOLD, -1, 0))
+
+verdict_matrix = np.column_stack([verdicts(oof[n]) for n in VARIANTS])
+all_agree = float(np.mean((verdict_matrix == verdict_matrix[:, [0]]).all(axis=1)))
+print(f"\n  all three verdicts agree on {all_agree*100:.0f}% of displayed cards")
+
+# Log-space R² of the combined prediction, footnote only.
+sse = np.sum((np.log(oof_combined) - y[disp_idx]) ** 2)
 sst = np.sum((y[disp_idx] - y[disp_idx].mean()) ** 2)
 displayed_r2 = float(1 - sse / sst)
-print(f"  (log-space R² on the same predictions: {displayed_r2:.4f})")
 
-# --------------------------------------------------------------- final fit
+# --------------------------------------------------------------- final fits
 
-print("\nFitting final model on all data …")
-full_model, X2_full = fit_two_stage(np.arange(n_samples), best_alpha)
-point_coefs = full_model.coef_[:n_features].copy()
-tier_coefs = full_model.coef_[n_features:].copy()
-intercept = float(full_model.intercept_)
+def finalize(v: Variant, with_bootstrap: bool):
+    """Fit on all data, centre every category on 1x, return the factor tables."""
+    print(f"\n[{v.name}] fitting final model on all data …")
+    model, X2 = v.fit(np.arange(n_samples), v.alpha)
+    n_feat = v.X.shape[1]
+    point = model.coef_[:n_feat].copy()
+    intercept = float(model.intercept_)
 
-pokemon_tier_exponent = {"bulk": 1.0}
-for t, c in zip(VARYING_TIERS, tier_coefs):
-    pokemon_tier_exponent[t] = float(1.0 + c)
-print(
-    "  Pokémon premium by tier (exponent on the Pokémon factor): "
-    + ", ".join(f"{t}={pokemon_tier_exponent[t]:.2f}x" for t in TIERS)
-)
+    tier_exponent = {"bulk": 1.0, "mid": 1.0, "chase": 1.0}
+    if v.use_tier:
+        for t, c in zip(VARYING_TIERS, model.coef_[n_feat:]):
+            tier_exponent[t] = float(1.0 + c)
+        print("  Pokémon premium by tier: " + ", ".join(f"{t}={tier_exponent[t]:.2f}x" for t in TIERS))
 
-# ------------------------------------------------------------------ bootstrap
+    boot_lo = boot_hi = boot_std = None
+    if with_bootstrap:
+        print(f"  bootstrapping ({N_BOOTSTRAP} resamples) …")
+        t0 = time.time()
+        boot = np.zeros((N_BOOTSTRAP, n_feat))
+        rng = np.random.default_rng(RNG_SEED + 1)
+        for b in range(N_BOOTSTRAP):
+            idx = rng.integers(0, n_samples, n_samples)
+            m = Ridge(alpha=v.alpha, fit_intercept=True, solver="sparse_cg")
+            m.fit(v.X[idx], y[idx], sample_weight=sample_weight[idx])
+            boot[b] = m.coef_
+        boot_std = boot.std(axis=0)
+        boot_lo = np.percentile(boot, 2.5, axis=0)
+        boot_hi = np.percentile(boot, 97.5, axis=0)
+        print(f"  bootstrap done in {time.time() - t0:.0f}s")
 
-print(f"\nBootstrapping ({N_BOOTSTRAP} resamples) for confidence intervals …")
-t0 = time.time()
-boot_coefs = np.zeros((N_BOOTSTRAP, n_features))
-boot_rng = np.random.default_rng(RNG_SEED + 1)
-for b in range(N_BOOTSTRAP):
-    sample_idx = boot_rng.integers(0, n_samples, n_samples)
-    m = Ridge(alpha=best_alpha, fit_intercept=True, solver="sparse_cg")
-    m.fit(X[sample_idx], y[sample_idx], sample_weight=sample_weight[sample_idx])
-    boot_coefs[b] = m.coef_
-    if (b + 1) % 20 == 0:
-        print(f"  … {b + 1}/{N_BOOTSTRAP}  ({time.time() - t0:.0f}s elapsed)")
+    # Centre every category on a card-weighted geometric mean of 1x (see the
+    # module docstring); the remainder becomes this variant's anchor.
+    for cat in v.categories:
+        mask = v.cats == cat
+        weights = np.array([sample_counts[cat].get(lvl, 0) for lvl in v.levels[mask]], dtype=float)
+        if weights.sum() == 0:
+            continue
+        offset = float(np.average(point[mask], weights=weights))
+        point[mask] -= offset
+        if boot_lo is not None:
+            boot_lo[mask] -= offset
+            boot_hi[mask] -= offset
+        intercept += offset
+    anchor = float(np.exp(intercept))
+    print(f"  anchor EUR{anchor:.2f}")
 
-boot_std = boot_coefs.std(axis=0)
-boot_lo = np.percentile(boot_coefs, 2.5, axis=0)
-boot_hi = np.percentile(boot_coefs, 97.5, axis=0)
-print(f"Bootstrap done in {time.time() - t0:.0f}s.")
+    factors: dict[str, dict] = {c: {} for c in v.categories}
+    for i in range(len(point)):
+        cat, level = v.cats[i], v.levels[i]
+        n = int(sample_counts[cat].get(level, 0))
+        entry = {"factor": round(float(np.exp(point[i])), 4), "n": n}
+        if boot_lo is not None:
+            entry["ciLow"] = round(float(np.exp(boot_lo[i])), 4)
+            entry["ciHigh"] = round(float(np.exp(boot_hi[i])), 4)
+            entry["relativeUncertainty"] = round(float(boot_std[i]), 4)
+        factors[cat][level] = entry
+
+    return {
+        "anchor": round(anchor, 4),
+        "alpha": v.alpha,
+        "pokemonTierExponent": {t: round(tier_exponent[t], 4) for t in TIERS},
+        "factors": factors,
+    }
+
+
+results = {
+    name: finalize(v, with_bootstrap=(name == "standard")) for name, v in variants.items()
+}
 
 # ------------------------------------------------------------------- outputs
 
-sample_counts = {c: df[c].value_counts().to_dict() for c in CATEGORIES}
-
-# ------------------------------------------------- centre every category on 1x
-#
-# price = anchor x f_pokemon x ... x f_set x ... is only pinned by the data up
-# to a constant per category: multiply every set factor by k and divide every
-# rarity factor by k and not one predicted price changes. Which particular
-# split you get out of the fit is therefore a presentation choice, and the
-# previous one — fold the whole baseline into "set" — was actively misleading.
-# It left set factors sitting around 5.6x and rarity factors around 0.29x, so a
-# set read as roughly as important as a rarity when in truth rarity spans 29x
-# across its levels and set only 4x.
-#
-# So: shift each category to a card-weighted geometric mean of exactly 1x, and
-# collect what's left over in the anchor. Now a factor means "this attribute
-# multiplies the price by X versus a typical card", the anchor means "a typical
-# card is worth this much", and factors are comparable across categories.
-# Still a pure reparameterization: no predicted price moves.
-print()
-for cat in CATEGORIES:
-    mask = col_category == cat
-    weights = np.array([sample_counts[cat].get(lvl, 0) for lvl in np.array(col_level)[mask]], dtype=float)
-    if weights.sum() == 0:
-        continue
-    offset = float(np.average(point_coefs[mask], weights=weights))
-    point_coefs[mask] -= offset
-    boot_lo[mask] -= offset
-    boot_hi[mask] -= offset
-    intercept += offset
-    print(f"  centred {cat:<14} (was averaging x{np.exp(offset):.2f})")
-anchor = float(np.exp(intercept))
-print(f"Anchor now EUR{anchor:.2f} — what a typical card is worth before any factor applies.")
-
-factors: dict[str, dict] = {c: {} for c in CATEGORIES}
-for i, (cat, level) in enumerate(zip(col_category, col_level)):
-    n = int(sample_counts[cat].get(level, 0))
-    factors[cat][level] = {
-        "factor": round(float(np.exp(point_coefs[i])), 4),
-        "n": n,
-        "ciLow": round(float(np.exp(boot_lo[i])), 4),
-        "ciHigh": round(float(np.exp(boot_hi[i])), 4),
-        "relativeUncertainty": round(float(boot_std[i]), 4),
-    }
-
+# `standard` stays top-level so build_report.py, build-factor-highlights.mjs
+# and anything else reading the old shape keeps working unchanged.
 FACTORS_OUT.write_text(
     json.dumps(
         {
             "trainedAt": pd.Timestamp.utcnow().isoformat(),
             "target": "trend",
-            "anchor": round(anchor, 4),
-            "alpha": best_alpha,
             "nRows": int(n_samples),
             "nBootstrap": N_BOOTSTRAP,
-            "pokemonTierExponent": {t: round(pokemon_tier_exponent[t], 4) for t in TIERS},
-            "factors": factors,
+            **results["standard"],
+            "variants": {name: results[name] for name in ("broad", "local")},
         },
         indent=1,
     ),
@@ -432,16 +431,17 @@ REPORT_OUT.write_text(
             "nDisplayedRows": int(displayed.sum()),
             "displayedSetWeight": DISPLAYED_SET_WEIGHT,
             "trainingOnlyWeight": TRAINING_ONLY_WEIGHT,
-            "alpha": best_alpha,
-            "cvMedianAPEByAlpha": cv_scores,
-            "pokemonTierExponent": {t: round(pokemon_tier_exponent[t], 4) for t in TIERS},
-            # Headline: out-of-fold, against the price the site displays,
-            # on the cards the site displays.
-            "displayedMedianAPE": displayed_median_ape,
-            "displayedWithin20": displayed_within20,
+            "alpha": variants["standard"].alpha,
+            "pokemonTierExponent": results["standard"]["pokemonTierExponent"],
+            # Headline numbers describe the SHIPPED prediction: the per-card
+            # median of the three variants, out of fold.
+            "displayedMedianAPE": combined_stats["medianAPE"],
+            "displayedWithin20": combined_stats["within20"],
             "displayedTestR2": displayed_r2,
             "byPriceBand": band_stats,
-            "categoryCardinality": {c: int(df[c].nunique()) for c in CATEGORIES},
+            "perVariant": per_variant_stats,
+            "verdictAgreement": all_agree,
+            "categoryCardinality": {c: int(df[c].nunique()) for c in ALL_CATEGORIES},
         },
         indent=1,
     ),

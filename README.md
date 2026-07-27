@@ -38,13 +38,23 @@ A website that estimates a fair price for Pokémon cards with a regression model
 
 ## The pricing model
 
-`analysis/fit_factors.py` fits a log-linear ridge regression — in price terms, purely multiplicative — on `scripts/training-data.json` (~19,000 English-language cards with a real Cardmarket price):
+`analysis/fit_factors.py` fits a log-linear ridge regression — in price terms, purely multiplicative — on `scripts/training-data.json` (~19,000 English-language cards with a real Cardmarket price). **It is fitted three times**, as three variants that differ only in how finely they slice a card's comparison group:
+
+| variant | adds | answers |
+|---|---|---|
+| **broad** | Pokémon, rarity, illustrator, set, card type, card name | "cheap for this kind of card, anywhere?" |
+| **standard** | + rarity × year, card type × year, artwork, Pokémon tier exponent | the balanced default |
+| **local** | + rarity × set | "cheap next to its direct neighbours?" |
 
 ```
-fair price = typical card (€0.72) × factor(Pokémon)^tierExponent × factor(rarity)
-             × factor(illustrator) × factor(set) × factor(card type) × factor(card name)
-             × factor(rarity × year) × factor(card type × year) × factor(artwork)
+fair price (standard) = typical card (€0.72) × factor(Pokémon)^tierExponent × factor(rarity)
+                        × factor(illustrator) × factor(set) × factor(card type) × factor(card name)
+                        × factor(rarity × year) × factor(card type × year) × factor(artwork)
 ```
+
+**Why three:** the variants answer genuinely different questions, and any single choice silently decides the question for the visitor. Measured symptoms of picking one: with only coarse terms, Black Bolt (a set that is 40% expensive Illustration Rares) polluted the 2025 rarity-year bucket and made every ordinary 2025 IR read as a fake bargain; with rarity × set, only 5 of 147 (set, rarity) groups could still be flagged as collectively mispriced, versus 34 without it — the model had absorbed the very signal the site exists to show.
+
+**The shipped number is the per-card MEDIAN of the three fair prices** ("the middle of the three estimates"), evaluated out of fold exactly like the variants themselves. Agreement is a design element, deliberately not folded into the number: every verdict chip carries **three dots** (wide → standard → close-up, coloured by each view's verdict). Three matching dots = the verdict survives any comparison; mixed dots = a boundary case — often the most interesting information on the page (cheap in the wide view but ordinary in the close-up means the card's whole *group* is cheap, not the card). The card page lists all three views with their own verdicts plus a consensus line; `/how-it-works` explains the scheme. The three views agree on the verdict for ~64% of displayed cards. Each card's `fairs: {broad, standard, local}` ships in its JSON; `baseValue` is their median.
 
 **What it's tuned for.** Every choice above is made to minimise **median error against the Cardmarket `trend` price** — the number shown on every card page — **on cards from the 24 displayed sets**, cross-validated so no card is scored by a model that saw it. That replaced an earlier setup tuned on log-space R² against `avg30`, which flattered itself badly on both counts: R² stayed ~0.93 while whole rarity tiers were mispriced by 2×, because that error is small on a log scale next to the €0.02-to-€400 spread it's measured over; and fitting `avg30` while the site displays and judges by `trend` made the model accurate at predicting a number no visitor ever sees. `analysis/tune_model.py` is the bake-off harness these choices came out of — rerun it after a data refresh to check they still hold.
 

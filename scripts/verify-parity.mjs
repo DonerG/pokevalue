@@ -31,4 +31,5 @@ for (const r of rows) {
 ratios.sort((a, b) => a - b)
 console.log(`n=${ratios.length}`)
 console.log(`JS in-sample median APE vs trend: ${(ratios[Math.floor(ratios.length / 2)] * 100).toFixed(1)}%`)
-console.log(`(Python out-of-fold reported 29.6%; in-sample should be somewhat LOWER, not higher)`)
+console.log('(compare against the combined out-of-fold median APE printed by fit_factors.py;')
+console.log(' in-sample should be somewhat LOWER, not higher — if not, JS and Python have diverged)')

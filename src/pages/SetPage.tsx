@@ -140,7 +140,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
                       Market {market != null ? formatEuro(market) : '–'}
                     </span>
                     <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
-                    <VerdictChip market={market} fair={fair} config={config} />
+                    <VerdictChip market={market} fair={fair} config={config} fairs={card.fairs} />
                   </div>
                 </div>
               </a>

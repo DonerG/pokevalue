@@ -109,6 +109,39 @@ export function HowItWorksPage() {
       </section>
 
       <section className="panel prose-panel">
+        <h3>Three zoom levels, one number</h3>
+        <p>
+          "Is this card undervalued?" quietly depends on a second question: <em>compared with
+          what?</em> A card can be cheap next to broadly similar cards across every set, yet
+          perfectly ordinary next to its direct neighbours — same rarity, same set. Both readings
+          are legitimate, and neither is "the" truth. So instead of silently picking one, the model
+          is fitted three times with differently sized comparison circles:
+        </p>
+        <ul className="stat-list stat-list-views">
+          <li>
+            <strong>Wide view</strong>
+            <span>the widest circle — Pokémon, rarity, illustrator, set and card type only</span>
+          </li>
+          <li>
+            <strong>Standard view</strong>
+            <span>adds release-year context and the hand-rated artwork grade</span>
+          </li>
+          <li>
+            <strong>Close-up view</strong>
+            <span>additionally compares against the same rarity inside the same set</span>
+          </li>
+        </ul>
+        <p>
+          The fair price shown everywhere is the <strong>middle of the three estimates</strong>. The
+          three coloured dots on every verdict chip show how much the views agree: three matching
+          dots mean the verdict holds no matter how you compare — mixed dots mean the card sits on a
+          boundary, which is often the most interesting information on the page. When the views
+          disagree, the pattern tells you <em>why</em>: cheap in the wide view but ordinary in the
+          close-up usually means the card's whole group is cheap, not the card itself.
+        </p>
+      </section>
+
+      <section className="panel prose-panel">
         <h3>Why some factors are combined</h3>
         <p>
           Mostly the factors are independent: a Pokémon's factor doesn't depend on which set the

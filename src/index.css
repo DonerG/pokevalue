@@ -1358,3 +1358,83 @@ details.panel[open] summary {
   border: 1px solid var(--border);
   border-radius: 6px;
 }
+
+/* ---------- Three-views (broad / standard / local) ----------
+   Agreement between the three model variants is a design element, not part of
+   the headline number: three dots on the verdict chip, and a per-view list on
+   the card page. See /how-it-works. */
+
+.chip-dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 6px;
+  align-items: center;
+}
+
+.chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.chip-dot-undervalued { background: var(--good-fg); }
+.chip-dot-overvalued { background: var(--bad-fg); }
+.chip-dot-fair { background: var(--muted); }
+
+.views-list {
+  list-style: none;
+  margin: 14px 0 4px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.views-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.views-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.views-fair {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.views-list .chip {
+  font-size: 11px;
+  padding: 2px 7px;
+}
+
+.views-summary {
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  margin-top: 2px;
+  font-size: 12.5px;
+}
+
+.views-agree { color: var(--good-fg); }
+.views-disagree { color: var(--warn-fg); }
+
+@media (max-width: 560px) {
+  .views-list li {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+  .views-label { flex-basis: 100%; }
+}
+
+.stat-list-views li strong {
+  font-size: 15px;
+}
