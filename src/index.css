@@ -814,12 +814,7 @@ details.panel[open] summary {
   gap: 20px;
 }
 
-.your-copy-details .option-group:first-of-type {
-  margin-top: 4px;
-}
-
-@media (max-width: 1100px) {
-  /* ---------- Footer ---------- */
+/* ---------- Footer ---------- */
 
 .app-footer {
   margin-top: 28px;
