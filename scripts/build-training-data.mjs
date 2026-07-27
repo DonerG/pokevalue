@@ -14,7 +14,7 @@ import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { artworkGrade, effectiveDexIds, effectiveRarity, mapCardType } from './lib/cardMapping.mjs'
-import { correctedTrend, isPriceWrong } from '../src/logic/priceReview.js'
+import { correctedTrend, isPriceWrong, unrecognisedReviews } from '../src/logic/priceReview.js'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE_DIR = join(HERE, '.cache', 'cards')
@@ -51,6 +51,15 @@ try {
 } catch {
   // none reviewed yet
 }
+const badReviews = unrecognisedReviews(priceExclusions)
+if (badReviews.length) {
+  throw new Error(
+    `price-exclusions.json has ${badReviews.length} entr${badReviews.length === 1 ? 'y' : 'ies'} with an ` +
+      `unrecognised value: ${badReviews.join(', ')}. Expected "wrong", "verified" or { "corrected": n } ` +
+      '— see src/logic/priceReview.js. Refusing to run rather than silently ignoring them.',
+  )
+}
+
 const wrongCount = Object.values(priceExclusions).filter(isPriceWrong).length
 const correctedCount = Object.values(priceExclusions).filter((v) => correctedTrend(v) != null).length
 console.log(`${wrongCount} cards flagged with a bad price, ${correctedCount} with a hand-corrected price.`)

@@ -34,7 +34,7 @@ A website that estimates a fair price for Pokémon cards with a regression model
   - **Wrong** — the price is broken and there's nothing better to put there. Excluded from the next retrain, price hidden on the site.
   - **Verified** — the price is real but the model can't explain it (e.g. hype-driven). Kept in training, just remembered as reviewed so it doesn't need re-checking.
 
-  Export/import as JSON.
+  Export/import as JSON. A value the parser doesn't recognise makes both build scripts **fail loudly** rather than skip the entry — an unrecognised verdict looks "reviewed" in the admin UI while doing nothing at all to the price, which is exactly how a known-bad card silently found its way back into the model once. The very first version of the page stored a bare `true` per excluded card; those still arrive through old exports and are read as `"wrong"`.
 
 ## The pricing model
 
@@ -76,14 +76,14 @@ Regularization strength is picked via 5-fold cross-validation; a 60-resample boo
 
 **Trained on more sets than are displayed.** The site shows only the Scarlet & Violet + Mega Evolution sets (`src/data/generated/sets.json`), but the model fits on TCGdex's full English catalog — ~170 sets back to 1999. That breadth is deliberate: a Pokémon or illustrator with only 2 appearances across the displayed sets but 40 across history would otherwise get a near-meaningless factor. Rows from non-displayed sets are down-weighted to 0.2× (`TRAINING_ONLY_WEIGHT`) — swept, and both dropping them entirely and counting them fully score worse. Alpha and every reported number come *only* from held-out displayed-set cards.
 
-**Accuracy, measured the way the site is used** — median error vs. the trend price, on the 24 displayed sets, cross-validated: **29.6% median, 34% of cards within 20%**. Broken out by price, because one median over four orders of magnitude hides exactly what matters:
+**Accuracy, measured the way the site is used** — median error vs. the trend price, on the 24 displayed sets, cross-validated: **28.4% median, 37% of cards within 20%**. Broken out by price, because one median over four orders of magnitude hides exactly what matters:
 
 | price band | median error |
 |---|---|
-| under €0.30 (58% of all cards) | 26% |
-| €0.30 – €3 | 33% |
-| €3 – €30 | 38% |
-| €30+ | 48% |
+| under €0.30 (58% of all cards) | 25% |
+| €0.30 – €3 | 34% |
+| €3 – €30 | 33% |
+| €30+ | 42% |
 
 Over half of all cards trade under €0.30, where Cardmarket's 1-cent price steps alone floor the achievable error — so the headline is dominated by cards nobody looks up, and the expensive end is where this is genuinely hardest. For reference: two *real* price fields for the same card (`avg30` vs `trend`) differ by a median 11.6%, and predicting every card by the median of its own set × rarity group scores 31.7% — so the model is doing real work beyond a lookup table, but a large part of what's left is genuine market noise no card-attribute model can reach.
 

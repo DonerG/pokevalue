@@ -23,6 +23,12 @@
  * Cardmarket directly. There is no hand-entered 30-day average, so a corrected
  * card shows its trend price alone (see CardPage) rather than displaying a
  * stale average next to a fixed trend.
+ *
+ * Legacy: the first version of the audit page stored a plain `true` per
+ * excluded card. Those survive in browser localStorage and come back through
+ * exports, so `true` is read as "wrong" rather than being silently ignored —
+ * which is what used to happen, quietly letting a known-bad price back into
+ * both the model and the site.
  */
 
 /**
@@ -48,7 +54,7 @@ export function correctedTrend(review) {
  * @returns {boolean}
  */
 export function isPriceWrong(review) {
-  return review === 'wrong'
+  return review === 'wrong' || review === true
 }
 
 /**
@@ -57,7 +63,21 @@ export function isPriceWrong(review) {
  * @returns {'wrong' | 'verified' | 'corrected' | null}
  */
 export function reviewKind(review) {
-  if (review === 'wrong' || review === 'verified') return review
+  if (review === 'verified') return 'verified'
+  if (isPriceWrong(review)) return 'wrong'
   if (correctedTrend(review) != null) return 'corrected'
   return null
+}
+
+/**
+ * Anything stored that isn't one of the recognised verdicts. A build script
+ * should shout about these rather than skip them: an unrecognised value looks
+ * like a reviewed card in the admin UI while doing nothing at all to the price.
+ * @param {Record<string, unknown>} exclusions
+ * @returns {string[]} card ids with an unusable value
+ */
+export function unrecognisedReviews(exclusions) {
+  return Object.entries(exclusions ?? {})
+    .filter(([, v]) => reviewKind(v) == null)
+    .map(([id]) => id)
 }

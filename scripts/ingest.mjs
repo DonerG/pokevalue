@@ -21,7 +21,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { effectiveDexIds, mapCardType } from './lib/cardMapping.mjs'
-import { correctedTrend, isPriceWrong } from '../src/logic/priceReview.js'
+import { correctedTrend, isPriceWrong, unrecognisedReviews } from '../src/logic/priceReview.js'
 import { computeCardPricing } from './lib/factors.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
@@ -42,6 +42,15 @@ try {
   priceExclusions = JSON.parse(await readFile(join(HERE, '..', 'src', 'data', 'price-exclusions.json'), 'utf8'))
 } catch {
   // none flagged yet
+}
+
+const badReviews = unrecognisedReviews(priceExclusions)
+if (badReviews.length) {
+  throw new Error(
+    `price-exclusions.json has ${badReviews.length} entr${badReviews.length === 1 ? 'y' : 'ies'} with an ` +
+      `unrecognised value: ${badReviews.join(', ')}. Expected "wrong", "verified" or { "corrected": n } ` +
+      '— see src/logic/priceReview.js. Refusing to run rather than silently ignoring them.',
+  )
 }
 
 // ---------- API helpers ----------
