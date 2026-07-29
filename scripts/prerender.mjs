@@ -149,8 +149,11 @@ function cardShell(card, set) {
     factRow('Card type', card.cardType),
     factRow('Illustrator', card.illustrator),
     factRow('Fair price', formatEuro(card.baseValue)),
+    // No "Lowest listing" row. It was the one fact the prerendered page showed
+    // that the React card page does not, so a crawler and a visitor saw
+    // different content — and the site doesn't use market.low for anything
+    // else either.
     factRow('Cardmarket price', trend != null ? formatEuro(trend) : null),
-    factRow('Lowest listing', card.market?.low != null ? formatEuro(card.market.low) : null),
   ].join('')
 
   const inner =
@@ -187,15 +190,18 @@ function cardStructuredData(card, set) {
   if (card.image) product.image = `${card.image}/high.webp`
   // Only when there is a real Cardmarket price behind it — never invented.
   //
-  // A single Offer at the TREND price, which is the number the page itself
-  // shows. This used to be an AggregateOffer spanning market.low to trend, and
-  // that broke Google's rule that structured data "must be a true
-  // representation of the page content" and that you must not "mark up content
-  // that is not visible to readers of the page": market.low is nowhere on the
-  // card page, yet it was the price a search snippet would lead with. It
-  // differed from the visible price on 93% of cards and was less than half of
-  // it on 2,409 of them — exactly the "cheaper in the snippet than on the page"
-  // pattern that earns a spammy-structured-data manual action.
+  // A single Offer at the TREND price, which is the number the page leads with.
+  // This used to be an AggregateOffer spanning market.low to trend. market.low
+  // differs from the trend price on 93% of cards and is less than half of it on
+  // 2,409 of them, so a snippet built from that range advertised a price the
+  // visitor would not find on arrival. Google's rules ask that structured data
+  // "must be a true representation of the page content" and that you not "mark
+  // up content that is not visible to readers of the page"; the range only ever
+  // half-satisfied that, since market.low appeared in the prerendered HTML but
+  // never in the hydrated React page. The trend price is the one figure both
+  // renderings agree on, which is what makes it the safe one to mark up.
+  // (The prerendered "Lowest listing" row is gone now too, so market.low is no
+  // longer displayed anywhere.)
   //
   // Hand-corrected cards carry their corrected value in market.trend (with
   // avg30 and low null), so this stays in step with the page for those too.
