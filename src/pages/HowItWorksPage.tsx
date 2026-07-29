@@ -252,9 +252,9 @@ export function HowItWorksPage() {
           <strong>Condition and language.</strong> Every price here describes the card as the market
           trades it, not your specific copy. Cardmarket doesn't publish prices split by grade or
           language — querying the same physical card in different languages returns the identical
-          product and price — so there is nothing to derive those from. The site used to offer
-          adjustable condition and language multipliers; they were removed, because guessed numbers
-          presented inside a calculation look like model output when they aren't.
+          product and price — so there is nothing to derive those from, and this site does not
+          guess at them: a made-up number sitting inside a calculation reads as model output when
+          it isn't.
         </p>
         <p>
           One consequence worth knowing: for older cards, a single market price blends copies in
