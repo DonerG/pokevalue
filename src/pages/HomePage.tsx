@@ -59,8 +59,7 @@ export function HomePage() {
           PokéValue estimates a fair price for every card with a regression model trained on real
           Cardmarket data across ~19,000 cards — Pokémon, rarity, illustrator, set, and card type
           each get their own computed factor. Compare the result with the current market price and
-          see instantly whether a card is over- or undervalued. For your specific copy, you only
-          need to set condition and language.
+          see instantly whether a card is over- or undervalued.
         </p>
       </section>
 
