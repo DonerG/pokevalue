@@ -57,7 +57,7 @@ function loadPromoStyles() {
 //
 // It only ever applied at DISPLAY time, never in the fit — so the model was
 // evaluated on numbers the site did not actually show, for 678 of 4,652 cards
-// (14.6%). It measurably hurt: shipped median APE 23.9% with it, 23.0%
+// (14.6%). It measurably hurt: shipped median APE 23.9% with it, 22.8%
 // without. And it duplicated work ridge already does — of 1,531 factors with
 // n < 5, only five are stronger than 3x at all, and those are real (Paradise
 // Resort at x13.7 backs a card that genuinely trades at EUR142).
@@ -94,9 +94,9 @@ function variantValue(variantData, keys, tier, withBreakdown) {
     if (!(cat in variantData.factors)) continue
     let entry = lookup(variantData.factors[cat], key)
     if (cat === 'pokemon') {
-      // The Pokémon premium is tier-dependent (see fit_factors.py). Applied
-      // A factor of exactly 1x stays 1x under any exponent, so a level with no
-      // signal is unaffected by the tier amplification.
+      // The Pokémon premium is tier-dependent (see fit_factors.py). A factor of
+      // exactly 1x stays 1x under any exponent, so a level with no signal is
+      // unaffected by the amplification.
       const tierExponent = variantData.pokemonTierExponent?.[tier] ?? 1
       entry = { ...entry, tier, tierExponent, displayFactor: Math.pow(entry.displayFactor, tierExponent) }
     }
