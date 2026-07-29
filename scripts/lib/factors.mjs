@@ -13,7 +13,7 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { artworkGrade, effectiveDexIds, effectiveRarity, mapCardType, releaseYear, rarityTier } from './cardMapping.mjs'
+import { artworkGrade, effectiveDexIds, effectiveRarity, mapCardType, releaseYear } from './cardMapping.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
@@ -51,20 +51,25 @@ function loadPromoStyles() {
   return cachedPromoStyles
 }
 
-/** Below this many supporting cards, a factor is pulled toward neutral (1x) for on-site
- * display — the raw statistically-estimated value (with its confidence interval) is what
- * ships in the PDF report instead. Avoids a single freak card dominating a shown price. */
-const FULL_TRUST_N = 5
+// There used to be a second shrinkage step here: any factor backed by fewer
+// than 5 cards was pulled toward neutral before being shown. It is gone, for
+// three measured reasons.
+//
+// It only ever applied at DISPLAY time, never in the fit — so the model was
+// evaluated on numbers the site did not actually show, for 678 of 4,652 cards
+// (14.6%). It measurably hurt: shipped median APE 23.9% with it, 23.0%
+// without. And it duplicated work ridge already does — of 1,531 factors with
+// n < 5, only five are stronger than 3x at all, and those are real (Paradise
+// Resort at x13.7 backs a card that genuinely trades at EUR142).
+//
+// Worse, it actively fought the per-rarity calibration in fit_factors.py:
+// on the Black White Rare cards it removed a third of a correction that had
+// just been computed and leave-one-out validated.
 
 let cached = null
 export function loadFactors() {
   if (!cached) cached = JSON.parse(readFileSync(FACTORS_PATH, 'utf8'))
   return cached
-}
-
-function dampen(factor, n) {
-  const weight = Math.min(1, n / FULL_TRUST_N)
-  return 1 + (factor - 1) * weight
 }
 
 function lookup(table, key) {
@@ -73,7 +78,9 @@ function lookup(table, key) {
   return {
     key,
     factor: entry.factor,
-    displayFactor: dampen(entry.factor, entry.n),
+    // Equal to `factor` for every category but pokemon, where the tier
+    // exponent is applied on top — see variantValue().
+    displayFactor: entry.factor,
     n: entry.n,
     usedFallback: false,
   }
@@ -88,7 +95,8 @@ function variantValue(variantData, keys, tier, withBreakdown) {
     let entry = lookup(variantData.factors[cat], key)
     if (cat === 'pokemon') {
       // The Pokémon premium is tier-dependent (see fit_factors.py). Applied
-      // AFTER dampening so a factor pulled to neutral stays neutral: 1^n = 1.
+      // A factor of exactly 1x stays 1x under any exponent, so a level with no
+      // signal is unaffected by the tier amplification.
       const tierExponent = variantData.pokemonTierExponent?.[tier] ?? 1
       entry = { ...entry, tier, tierExponent, displayFactor: Math.pow(entry.displayFactor, tierExponent) }
     }
@@ -112,7 +120,11 @@ export function computeCardPricing(card, releaseDate) {
   const setKey = card.set?.id ?? 'unknown'
   const cardTypeKey = mapCardType(card) ?? 'Standard'
   const year = releaseYear(releaseDate)
-  const tier = rarityTier(rarityValue)
+  // Price tier decides how strongly the Pokémon premium applies. Derived from
+  // each rarity's actual median price at fit time and shipped in factors.json,
+  // so there is no second hand-maintained list here to fall out of sync — the
+  // previous one silently classified EUR380 "Black White Rare" cards as bulk.
+  const tier = data.rarityTiers?.[rarityValue] ?? 'bulk'
 
   const keys = {
     pokemon: dexIds[0] != null ? String(dexIds[0]) : 'none',

@@ -136,18 +136,26 @@ def release_year(release_date):
     return year if year.isdigit() else "Unknown"
 
 
-CHASE_RARITIES = {"illustration rare", "special illustration rare", "hyper rare", "shiny rare"}
-MID_RARITIES = {"double rare", "ultra rare", "promo", "ace spec rare"}
+# Price tiers are DERIVED, not hand-listed. They used to be two literal sets of
+# rarity names — one here, one mirrored in JS — and that broke exactly the way
+# hand-maintained lists do: Black Bolt introduced "Black White Rare" (median
+# EUR380) and Mega Evolution "Mega Hyper Rare" (EUR170), neither was in the
+# list, so both silently fell through to "bulk" and their Pokémon premium was
+# never amplified. "Shiny Ultra Rare" had the same problem more mildly.
+#
+# So the tier now comes from what a rarity actually SELLS for. The two
+# thresholds below reproduce every previously-correct classification exactly
+# while fixing the three broken ones, and any rarity a future set invents is
+# placed automatically. The resulting map ships in factors.json, so the JS side
+# looks it up instead of keeping a second copy that can drift.
+TIER_THRESHOLDS = [(0.30, "bulk"), (3.00, "mid")]  # above the last threshold: "chase"
 
 
-def rarity_tier(rarity):
-    """Mirrors scripts/lib/cardMapping.mjs::rarityTier — keep both in sync."""
-    key = (rarity or "").lower()
-    if key in CHASE_RARITIES:
-        return "chase"
-    if key in MID_RARITIES:
-        return "mid"
-    return "bulk"
+def tier_for_median_price(median_price):
+    for limit, tier in TIER_THRESHOLDS:
+        if median_price < limit:
+            return tier
+    return "chase"
 
 
 # ---------------------------------------------------------------- load data
@@ -176,7 +184,14 @@ df["set"] = df["setId"].fillna("unknown")
 df["cardType"] = df["cardType"].fillna("Standard")
 df["cardName"] = df.apply(lambda row: "n/a" if row["dexIds"] else row["name"], axis=1)
 df["year"] = df["releaseDate"].apply(release_year)
-df["tier"] = df["rarity"].apply(rarity_tier)
+# Median trend price per rarity level -> tier. Computed on displayed-set cards:
+# those are what the tiers are used to price, and historical sets drag the
+# medians around (a 1999 "Rare" is nothing like a 2026 one).
+_tier_basis = df[df["displayed"]].groupby("rarity")["trend"].median()
+rarity_tiers = {r: tier_for_median_price(p) for r, p in _tier_basis.items()}
+df["tier"] = df["rarity"].map(rarity_tiers).fillna("bulk")
+print("  price tiers: " + ", ".join(
+    f"{t}={sum(1 for v in rarity_tiers.values() if v == t)}" for t in TIERS))
 df["rarityYear"] = df["rarity"] + " | " + df["year"]
 df["cardTypeYear"] = df["cardType"] + " | " + df["year"]
 df["raritySet"] = df["rarity"] + " | " + df["set"]
@@ -347,6 +362,34 @@ def finalize(v: Variant, with_bootstrap: bool):
             tier_exponent[t] = float(1.0 + c)
         print("  Pokémon premium by tier: " + ", ".join(f"{t}={tier_exponent[t]:.2f}x" for t in TIERS))
 
+    # ---- per-rarity calibration -------------------------------------------
+    # Ridge shrinks a level purely by how MANY cards back it, never by whether
+    # those cards agree. "Black White Rare" has 4 cards priced EUR300-450 — a
+    # tight cluster whose level is well determined — yet it was pulled toward
+    # neutral as hard as a 4-card level scattered over two orders of magnitude,
+    # leaving all four ~4x underpriced.
+    #
+    # So: give each rarity level back the systematic offset its own cards still
+    # show, scaled by how far that offset stands out from their scatter
+    # (w = m^2 / (m^2 + se^2)) — a consistent offset is applied in full, one
+    # indistinguishable from noise is ignored. Validated leave-one-out in
+    # analysis/test_calibration.py, so a level is never judged on a card that
+    # helped set its own correction: median APE 24.0% -> 23.5%, and only the two
+    # levels that need it move at all (Black White Rare 4.12x, Mega Hyper Rare
+    # 1.63x; every other level lands within 15% of neutral).
+    residual = y - model.predict(X2)
+    rarity_by_row = df["rarity"].to_numpy()
+    for idx in np.flatnonzero(v.cats == "rarity"):
+        rows = displayed & (rarity_by_row == v.levels[idx])
+        if rows.sum() < 2:
+            continue
+        r = residual[rows]
+        m = float(np.mean(r))
+        se = float(np.std(r, ddof=1) / np.sqrt(rows.sum()))
+        weight = m * m / (m * m + se * se) if (m or se) else 0.0
+        if abs(m * weight) > 0.01:
+            point[idx] += m * weight
+
     boot_lo = boot_hi = boot_std = None
     if with_bootstrap:
         print(f"  bootstrapping ({N_BOOTSTRAP} resamples) …")
@@ -413,6 +456,10 @@ FACTORS_OUT.write_text(
             "target": "trend",
             "nRows": int(n_samples),
             "nBootstrap": N_BOOTSTRAP,
+            # Which price tier each rarity falls in — derived above from what it
+            # actually sells for. Shipped so scripts/lib/factors.mjs looks it up
+            # instead of keeping a second, drift-prone copy.
+            "rarityTiers": rarity_tiers,
             **results["standard"],
             "variants": {name: results[name] for name in ("broad", "local")},
         },

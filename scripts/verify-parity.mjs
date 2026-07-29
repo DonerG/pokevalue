@@ -2,7 +2,7 @@
  * Guards the one structural risk in this pipeline: the price a card is fitted
  * with (analysis/fit_factors.py, Python) and the price baked into the site
  * (scripts/lib/factors.mjs, JS) are computed by two separate implementations
- * that must agree. eraBucket/rarityTier are duplicated in both languages, and
+ * that must agree. releaseYear is duplicated in both languages, and
  * a factor added on one side and forgotten on the other would silently ship
  * wrong prices — nothing would crash.
  *
