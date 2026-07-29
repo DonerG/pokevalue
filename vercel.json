@@ -10,6 +10,10 @@
     }
   ],
   "rewrites": [
+    { "source": "/card/svp-:n", "destination": "/api/gone?set=svp" },
+    { "source": "/card/mep-:n", "destination": "/api/gone?set=mep" },
+    { "source": "/set/svp", "destination": "/api/gone?set=svp" },
+    { "source": "/set/mep", "destination": "/api/gone?set=mep" },
     {
       "source": "/((?!assets/|favicon\\.svg|robots\\.txt|sitemap\\.xml).*)",
       "destination": "/"

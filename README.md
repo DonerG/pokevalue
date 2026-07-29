@@ -112,6 +112,17 @@ Python deps: `pip install pandas scikit-learn scipy statsmodels reportlab pypdf`
 
 **Sets deliberately not ingested:** pure-Energy sets (e.g. `sve` Scarlet & Violet Energy, `mee` Mega Evolution Energy — every card is a basic Energy, nothing to price) and `mfb` My First Battle (a starter-box reprint set, not worth tracking). Skip these when adding new sets.
 
+### Removing a set
+
+`scripts/ingest.mjs` only ever adds, so removal is manual — four steps, and the last one is the one that's easy to forget:
+
+1. Drop the set's entry from `src/data/generated/sets.json` and delete its `cards-<id>.json`.
+2. Refit (`python analysis/fit_factors.py`) — the set's rows aren't discarded, they fall to `TRAINING_ONLY_WEIGHT` — then re-run `ingest.mjs` for *all* remaining sets, since every fair price moves.
+3. Rebuild the search index and the sitemap.
+4. **Serve 410 for its old URLs.** Add two rewrites in `vercel.json` (`/card/<id>-:n` and `/set/<id>`, both pointing at `/api/gone?set=<id>`) and the set id to `GONE_SET_IDS` in `api/gone.js`. Without this the old URLs hit the SPA fallback, which answers **200** with a "Card not found" body — a soft 404 that Google takes far longer to drop than an explicit 410.
+
+The rewrites are written per removed set on purpose rather than as one catch-all on `/card/:id`. A catch-all is only correct because Vercel checks the filesystem before applying rewrites; if that ever stopped holding it would 404 every card page at once, whereas a rule matching only a removed set's own prefix cannot hit a live page either way.
+
 ## URLs and SEO
 
 Routing uses **real paths** (`/set/sv08.5`, `/card/sv08.5-006`), not the URL fragment it started with. A fragment is never sent to the server, so under the old `#/card/…` scheme every card and set looked like one single URL to a crawler — nothing to index, and a sitemap would have had nothing to point at. Pieces that make the path-based version work:
