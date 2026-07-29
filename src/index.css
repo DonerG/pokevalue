@@ -82,8 +82,11 @@ body {
   color: inherit;
 }
 
-.app-header h1 {
+/* Was `.app-header h1` — the brand is a plain span now (see App.tsx), so the
+   font-weight an h1 supplied for free has to be stated here. */
+.app-header .brand-name {
   font-size: 26px;
+  font-weight: 700;
   letter-spacing: -0.5px;
   margin: 0;
 }
@@ -406,8 +409,9 @@ details.panel[open] summary {
 
 /* ---------- Home page ---------- */
 
-.hero-block h2 {
+.hero-block h1 {
   font-size: 26px;
+  font-weight: 700;
   letter-spacing: -0.4px;
   margin: 8px 0 8px;
 }
@@ -528,8 +532,9 @@ details.panel[open] summary {
   text-decoration: underline;
 }
 
-.set-header h2 {
+.set-header h1 {
   font-size: 24px;
+  font-weight: 700;
   margin: 0 0 4px;
 }
 
@@ -778,8 +783,9 @@ details.panel[open] summary {
   box-shadow: var(--shadow);
 }
 
-.card-facts h2 {
+.card-facts h1 {
   font-size: 20px;
+  font-weight: 700;
   margin: 12px 0 4px;
 }
 

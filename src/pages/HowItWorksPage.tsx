@@ -51,7 +51,7 @@ export function HowItWorksPage() {
       </nav>
 
       <section className="hero-block">
-        <h2>How the fair price is calculated</h2>
+        <h1>How the fair price is calculated</h1>
         <p>
           Every price on this site comes from a statistical model trained on real Cardmarket data —
           not from a hand-written formula, and not from anyone's opinion about what a card

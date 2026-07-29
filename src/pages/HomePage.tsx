@@ -51,7 +51,10 @@ export function HomePage() {
   return (
     <div className="home">
       <section className="hero-block">
-        <h2>What is a Pokémon card really worth?</h2>
+        {/* The brand name belongs in the homepage's h1: it is the one page the
+            query "pokevalue" should land on, and the heading was the only place
+            on it that didn't say so. */}
+        <h1>PokéValue — what is a Pokémon card really worth?</h1>
         <p>
           PokéValue estimates a fair price for every card with a regression model trained on real
           Cardmarket data across ~19,000 cards — Pokémon, rarity, illustrator, set, and card type

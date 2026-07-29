@@ -100,10 +100,10 @@ export const ARTWORK_EXCLUDED_RAW_RARITIES = new Set(['double rare', 'ultra rare
 
 export function isArtworkRateable(rarity) {
   if (!rarity) return false
-  // Promos are deliberately NOT rated here. They used to be, but their whole
-  // classification — alt art and its 8/9/10 grade, stamped, plain — now lives
-  // on /admin/promo-style in one pass (see PROMO_STYLE_LABELS). Listing them
-  // in both places would mean tagging the same card twice, in two schemes.
+  // Promos are deliberately NOT rated here: their classification — alt art and
+  // its 8/9/10 grade, stamped, plain — is its own scheme (PROMO_STYLE_LABELS),
+  // and since the two promo sets came off the site none of them is displayed
+  // anyway. The existing tags still refine their rarity in training.
   if (rarity.toLowerCase() === 'promo') return false
   if (ARTWORK_EXCLUDED_RAW_RARITIES.has(rarity.toLowerCase())) return false
   return ARTWORK_RELEVANT_RARITIES.has(mapRarity(rarity))
@@ -149,7 +149,17 @@ export function mapCardType(card) {
 // one kind of card. Some are alt arts with a full unique illustration, some
 // are ordinary-looking reprints, some of those carry an event stamp — and the
 // price gap between them is large. Nothing in the data distinguishes them, so
-// they are hand-tagged via /admin/promo-style.
+// 110 of them were hand-tagged (src/data/promo-styles.json).
+//
+// The two promo sets are no longer DISPLAYED on the site. Measured before the
+// removal, promos ran ~2x the median error of normal cards in every price band
+// (EUR0.30-3: 49% vs 24%; EUR3-30: 38% vs 26%; EUR30+: 60% vs 33%), and only 3%
+// of them are cheap enough for that to be a percentage artifact. Tagging helped
+// a lot — untagged 62% median error, tagged 31-35% — but not enough: what a
+// promo sells for is mostly a function of how hard it was to get hold of
+// (prerelease, tournament, Pokemon Center exclusive, magazine insert), and no
+// amount of tagging puts that in the data. The tags are kept because they still
+// refine the rarity level of the training-only rows below.
 //
 // A tag refines the rarity used for modeling ("Promo" -> "Promo (Alt Art 9)"),
 // which means the existing rarity, rarity x era and rarity x set factors pick

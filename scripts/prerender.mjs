@@ -228,7 +228,9 @@ function homeShell(sets) {
     .join('')
 
   const inner =
-    `<h1>What is a Pokémon card really worth?</h1>` +
+    // Kept identical to HomePage.tsx's h1, so the crawler's first byte and the
+    // hydrated DOM say the same thing.
+    `<h1>${esc(SITE_NAME)} — what is a Pokémon card really worth?</h1>` +
     `<p>${esc(DEFAULT_DESCRIPTION)}</p>` +
     `<p>Pokémon, rarity, illustrator, set, and card type each get their own factor computed from real Cardmarket prices across ~19,000 cards. Compare the result with the current market price and see whether a card is over- or undervalued.</p>` +
     `<h2>Sets</h2>` +

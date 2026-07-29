@@ -99,10 +99,10 @@ export function AdminArtworkPage() {
           artwork is genuinely their own are listed (illustration / special illustration / secret /
           full art); Double Rares and Ultra Rares use a standard frame, so rating them would just
           add noise. Not yet used by the live pricing model — kept here to collect enough data to
-          make it a factor. <strong>Promos are not listed here:</strong> their whole classification
-          (alt art and its grade, stamped, plain) happens in one pass on{' '}
-          <a href="/admin/promo-style">/admin/promo-style</a>, and that one <em>is</em> already
-          priced in. Saved in this browser only; export the file to keep it somewhere durable.
+          make it a factor. <strong>Promos are not listed here:</strong> the two promo sets were
+          taken off the site — what a promo is worth depends mostly on how hard it was to obtain,
+          and that is nowhere in the data. Saved in this browser only; export the file to keep it
+          somewhere durable.
         </p>
         <div className="admin-toolbar">
           <span className="admin-progress">

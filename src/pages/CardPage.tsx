@@ -73,7 +73,7 @@ export function CardPage({ cardId, config }: Props) {
         <div className="card-visual">
           {img && <RetryImage src={img} alt={card.name} loading="eager" />}
           <div className="card-facts">
-            <h2>{card.name}</h2>
+            <h1>{card.name}</h1>
             <p className="muted">
               #{card.localId}
               {set ? ` · ${set.name}` : ''} · {card.rarity ?? 'rarity unknown'}

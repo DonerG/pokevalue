@@ -9,25 +9,21 @@ A website that estimates a fair price for Pokémon cards with a regression model
 - **Card database:** Browse sets, see every card with image, fair price, Cardmarket trend price, and a verdict ("over-/under-/fairly valued"). Search and sort (e.g. undervalued first). The homepage search bar also matches individual cards by name or number, site-wide, via a lightweight lazy-loaded search index (see `scripts/build-search-index.mjs`) — not just set names.
 - **Card page:** Pokémon, rarity, illustrator, set, card type and artwork each get their own computed factor — fixed facts, nothing user-adjustable. A "why this price?" breakdown shows every factor that went into the number, the three model views behind it, and how much they agree. A separate "check a price" box, prefilled with the current Cardmarket price, re-judges against the fair price when you change it to whatever you're being asked or offered.
 - **How it works (`/how-it-works`):** Public explanation of the model — the multiplicative formula, why it's fitted on log prices, what ridge regularization does for thinly-supported cards, why rarity and card type get a release-year interaction, and what the model can't see. Includes live example factors (top Pokémon, rarities, illustrators, card types, and "Rare" over the years) pulled from a small generated slice of `factors.json` — see `scripts/build-factor-highlights.mjs`.
-- **Artwork rating (hidden, `/admin/artwork`):** Rate illustration quality (10/9/8/worse) on chase cards whose artwork is genuinely their own — illustration, special illustration, secret and full art rares. Double Rares and Ultra Rares are excluded (standard frame, nothing to judge), and so are Promos, which are handled entirely on `/admin/promo-style`. **This is a live model factor**, fed from `src/data/artwork-ratings.json`.
+- **Artwork rating (hidden, `/admin/artwork`):** Rate illustration quality (10/9/8/worse) on chase cards whose artwork is genuinely their own — illustration, special illustration, secret and full art rares. Double Rares and Ultra Rares are excluded (standard frame, nothing to judge), and so are Promos (see "Why the promo sets aren't displayed" below). **This is a live model factor**, fed from `src/data/artwork-ratings.json`.
 
   The **8s are deliberately discarded**. The reviewer flagged them as unreliable — used both for "acceptable" and for "couldn't judge this one", mostly the gold Hyper Rares — and the data agrees exactly: an 8 outside Hyper Rares sits at ×1.00 against the model and an *unrated* chase card at ×0.98, i.e. indistinguishable. The other three grades are strongly ordered, so only those are modeled: **top ×2.10 (n=37), strong ×1.57 (n=197), none ×1.00, weak ×0.63 (n=95)** — a 3.3× spread from one hand-judged property, worth 1.1pp of median error on its own.
-- **Promo style tagging (hidden, `/admin/promo-style`):** Promo cards all share one "Promo" rarity in the source data, but they aren't one kind of card — some are **alt arts** with a full unique illustration, the rest look like ordinary Commons/Rares (or like glittery ex/V cards that still have no real artwork), and some of those carry an **event stamp** that lifts the price. Nothing in the data separates them. Tag each by eye as `Alt Art 10/9/8`, `Stamped` or `Normal`; export/import as JSON into `src/data/promo-styles.json`. `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) then turns the tag into its own rarity level ("Promo" → "Promo (Alt Art 9)") for both training and display, so the rarity and rarity × year factors pick it up with no other change. Tagged cards drop out of the queue, so the list only ever shows what's still open.
+- **Why the promo sets aren't displayed.** The two Black Star Promo sets (`svp`, 226 cards; `mep`, 60) used to be on the site and were removed. Promos all share one "Promo" rarity in the source data while being wildly different cards, so 110 of them were hand-tagged as alt art (graded 10/9/8/weak), stamped, or plain, and `effectiveRarity()` (`scripts/lib/cardMapping.mjs`) turns the tag into its own rarity level ("Promo" → "Promo (Alt Art 9)"). That helped a great deal and still wasn't enough:
 
-  The alt-art grades are kept apart rather than merged into one "alt art" bucket because they measurably aren't one thing. Fitted, the levels come out cleanly ordered with barely-overlapping confidence intervals:
-
-  | level | factor | n |
+  | group | median error vs. trend | more than 100% off |
   |---|---|---|
-  | Promo (Alt Art 10) | ×1.55 | 12 |
-  | Promo (Stamped) | ×1.26 | 50 |
-  | Promo (Alt Art 9) | ×1.23 | 23 |
-  | Promo (Alt Art 8) | ×1.08 | 11 |
-  | Promo (Alt Art, weak) | ×1.02 | 10 |
-  | Promo (untagged) | ×0.76 | 572 |
+  | untagged | 62% | 20% |
+  | Stamped (tagged) | 31% | 4% |
+  | Alt Art (tagged) | 35% | 8% |
+  | *a normal set, for comparison* | *17–26%* | *0–5%* |
 
-  Every group it touches got closer to the market: stamped promos were underpriced 3× before they had their own level (0.32× → 0.94×), grade-10 alt arts were underpriced ~8× (0.12× → 1.15×), and the plain-Promo bucket — which had been inflated by all the valuable cards sitting inside it, overpricing ordinary promos by 1.68× — dropped to ×0.76 and now sits at 1.16×. Promos are deliberately *not* listed on `/admin/artwork`; their artwork grade is part of this one pass.
+  Promos ran roughly **2× the median error of normal cards in every price band** (€0.30–3: 49% vs 24%; €3–30: 38% vs 26%; €30+: 60% vs 33%), and only 3% of them are cheap enough for that to be the usual sub-€0.10 percentage artifact — so this was real, not a display effect. The reason is structural: what a promo sells for is mostly a function of *how hard it was to obtain* — prerelease, tournament prize, Pokémon Center exclusive, magazine insert — and none of that exists anywhere in the data. Finishing the tagging would not have fixed it.
 
-  Two hand-maintained files feed this: `src/data/promo-styles.json` says *what* a promo is (alt art / stamped / plain), and the artwork ratings say *how good* the illustration is. They're merged at tagging time into a single level per card — an alt art graded "worse" becomes `altart0` rather than being dropped, since it is still an alt art.
+  `src/data/promo-styles.json` is **kept and still committed**: the promo rows remain in the training corpus at `TRAINING_ONLY_WEIGHT`, where the tags still refine their rarity level. The `/admin/promo-style` page that produced them is gone, since nothing it tags is displayed any more.
 - **Price audit (hidden, `/admin/price-audit`):** The 100 cards site-wide with the biggest market-vs-fair gap, in each direction (percentage uses the same "upside relative to market" formula as the site's own verdict chips — see `src/logic/pricing.ts::verdict`). Split into two tabs since undervalued deviation is unbounded (market can approach zero) and overvalued is capped at -100%, so one combined ranking was almost entirely undervalued cases — the highest-leverage place to manually spot-check for a bad Cardmarket price (see "Known data issue" below) without scanning all ~19,000 cards. Three verdicts, all stored in `src/data/price-exclusions.json` and parsed by one shared module (`src/logic/priceReview.js`) so the site and both build scripts agree:
 
   - **Type the correct trend price** into the box — the best option when the real number can be read off Cardmarket. It replaces the broken one on the site *and* in training, so the card stays in the model instead of being thrown away. Only the trend price is entered, because that's what the site shows and the model is fitted on; a corrected card therefore displays that price **alone**, with no 30-day average beside it (there is no hand-entered average, and showing a stale automatic one next to a hand-fixed trend would mix two different provenances). Stored as `{ "corrected": 0.07 }`, and labelled "corrected by hand" on the card page rather than attributed to the Cardmarket feed.
@@ -47,7 +43,7 @@ A website that estimates a fair price for Pokémon cards with a regression model
 | **local** | + rarity × set | "cheap next to its direct neighbours?" |
 
 ```
-fair price (standard) = typical card (€0.72) × factor(Pokémon)^tierExponent × factor(rarity)
+fair price (standard) = typical card (€0.71) × factor(Pokémon)^tierExponent × factor(rarity)
                         × factor(illustrator) × factor(set) × factor(card type) × factor(card name)
                         × factor(rarity × year) × factor(card type × year) × factor(artwork)
 ```
@@ -56,7 +52,7 @@ fair price (standard) = typical card (€0.72) × factor(Pokémon)^tierExponent 
 
 **The shipped number is the per-card MEDIAN of the three fair prices** ("the middle of the three estimates"), evaluated out of fold exactly like the variants themselves. Agreement is a design element, deliberately not folded into the number: every verdict chip carries **three dots** (wide → standard → close-up, coloured by each view's verdict). Three matching dots = the verdict survives any comparison; mixed dots = a boundary case — often the most interesting information on the page (cheap in the wide view but ordinary in the close-up means the card's whole *group* is cheap, not the card). The card page lists all three views with their own verdicts plus a consensus line; `/how-it-works` explains the scheme. The three views agree on the verdict for ~64% of displayed cards. Each card's `fairs: {broad, standard, local}` ships in its JSON; `baseValue` is their median.
 
-**What it's tuned for.** Every choice above is made to minimise **median error against the Cardmarket `trend` price** — the number shown on every card page — **on cards from the 24 displayed sets**, cross-validated so no card is scored by a model that saw it. That replaced an earlier setup tuned on log-space R² against `avg30`, which flattered itself badly on both counts: R² stayed ~0.93 while whole rarity tiers were mispriced by 2×, because that error is small on a log scale next to the €0.02-to-€400 spread it's measured over; and fitting `avg30` while the site displays and judges by `trend` made the model accurate at predicting a number no visitor ever sees. `analysis/tune_model.py` is the bake-off harness these choices came out of — rerun it after a data refresh to check they still hold.
+**What it's tuned for.** Every choice above is made to minimise **median error against the Cardmarket `trend` price** — the number shown on every card page — **on cards from the displayed sets**, cross-validated so no card is scored by a model that saw it. That replaced an earlier setup tuned on log-space R² against `avg30`, which flattered itself badly on both counts: R² stayed ~0.93 while whole rarity tiers were mispriced by 2×, because that error is small on a log scale next to the €0.02-to-€400 spread it's measured over; and fitting `avg30` while the site displays and judges by `trend` made the model accurate at predicting a number no visitor ever sees. `analysis/tune_model.py` is the bake-off harness these choices came out of — rerun it after a data refresh to check they still hold.
 
 Interaction terms are deliberate and few — rarity and card type each get an × year version (below), plus the Pokémon premium varies by price tier. Everything else stays plainly multiplicative: an illustrator's factor doesn't depend on which set the card is from. Every level of every category gets its own factor, computed from data — not a hand-picked tier. Card type (V/VMAX/GX/EX/Mega EX/…) comes from TCGdex's `suffix` + `stage` fields (see `scripts/lib/cardMapping.mjs::mapCardType`). "Card name" is the Trainer/Energy analogue of "Pokémon" — Pokémon cards get a neutral "n/a" there (their identity is already covered by the Pokémon factor), while every Trainer/Energy card (which otherwise all shared one blended bucket) gets its own factor by exact printed name — e.g. Ultra Ball and a bulk Potion are no longer priced identically.
 
@@ -64,7 +60,7 @@ Interaction terms are deliberate and few — rarity and card type each get an ×
 
 **Rarity × year** and **card type × year**, each layered on top of its plain factor rather than replacing it: a rarity tier or card mechanic means something very different depending on when the card was printed. Rarity: the game has stacked tier after tier above "Rare" over 25 years (Double Rare, Ultra Rare, Illustration Rare, …), diluting what it signals — median Rare/Common price ratio is 32.6× for pre-2003 cards vs. 2.3× for 2023+ cards, and the fitted "Rare" factor now walks steadily down from ×3.64 in 1999 to ×0.24 in 2026. Card type: TCGdex's `suffix` casing for "ex"/"EX" doesn't reliably separate the old 2003–2010 EX era from the modern 2023+ ex era, so both get normalized into one bucket, but old "EX" cards have a median price of €64.62 vs. €1.88 for new "ex" — the same kind of gap. Neither is fixable by the Set factor (it can only move a whole set up/down, not change the ratio *between* rarities/mechanics within it). The bucket is the plain release year — see `scripts/lib/cardMapping.mjs::releaseYear`. Chose these two interactions over the alternatives: combining *every* category pairwise (e.g. Pokémon × illustrator, ~407,000 possible combinations) would be almost entirely one-off noise. Rarity and card type are different in kind from the other categories — both are game-*designed* tier systems formally redefined over the game's history, unlike organic/cultural factors like which Pokémon or illustrator is popular (checked: Charizard's premium has stayed roughly 150–210× across every era, far more stable than rarity's swing — no similar case for a Pokémon × year interaction).
 
-**Every category is centred on ×1.** How the overall price level is split between categories is not pinned by the data at all — multiply every set factor by *k* and divide every rarity factor by *k* and not one predicted price changes — so it's a presentation choice. The old choice (fold the whole baseline into "set") left set factors averaging ×5.6 against rarity's ×0.29, which made a card's set look about as important as its rarity. It isn't: rarity spans **117×** across its levels, set **23×**. Each category is now shifted to a card-weighted geometric mean of exactly ×1, with the remainder collected in the anchor. So ×1 means "no different from a typical card", the anchor means "a typical card is worth €0.72", and factors are finally comparable across categories. Still a pure reparameterization — no predicted price moves.
+**Every category is centred on ×1.** How the overall price level is split between categories is not pinned by the data at all — multiply every set factor by *k* and divide every rarity factor by *k* and not one predicted price changes — so it's a presentation choice. The old choice (fold the whole baseline into "set") left set factors averaging ×5.6 against rarity's ×0.29, which made a card's set look about as important as its rarity. It isn't: rarity spans **117×** across its levels, set **23×**. Each category is now shifted to a card-weighted geometric mean of exactly ×1, with the remainder collected in the anchor. So ×1 means "no different from a typical card", the anchor means "a typical card is worth €0.71", and factors are finally comparable across categories. Still a pure reparameterization — no predicted price moves.
 
 Regularization strength is picked via 5-fold cross-validation; a 60-resample bootstrap gives every factor a 95% confidence interval, so entries backed by very little data are identifiable rather than silently trusted. **Price tiers are derived, not listed.** Which tier a rarity belongs to (bulk / mid / chase — it decides how strongly the Pokémon premium applies) used to be two hand-written name lists, one in Python and one mirrored in JS. That broke the way hand-maintained lists do: Black Bolt introduced "Black White Rare" (median €380) and Mega Evolution "Mega Hyper Rare" (€170), neither was in the list, so both silently fell through to *bulk* and never got the amplification. The tier now comes from what a rarity actually sells for; the map ships in `factors.json` so there is no second copy to drift.
 
@@ -78,16 +74,16 @@ Regularization strength is picked via 5-fold cross-validation; a 60-resample boo
 
 **The era interaction buckets by plain release year.** It used to use five broad eras (WOTC / EX-DP / BW-XY / SM-SWSH / SV+), which is too coarse at the recent end: one "SV+" bucket spans 2023–2026, and inside it Illustration Rare prices drifted 1.4–2.1× high while Special Illustration Rares ran 0.53–0.92× low. Switching the bucket to release year removes *more* of that bias (SIR 0.75 → 1.00 out of fold) than the per-set factors did, with two fewer terms in the formula.
 
-**Trained on more sets than are displayed.** The site shows only the Scarlet & Violet + Mega Evolution sets (`src/data/generated/sets.json`), but the model fits on TCGdex's full English catalog — ~170 sets back to 1999. That breadth is deliberate: a Pokémon or illustrator with only 2 appearances across the displayed sets but 40 across history would otherwise get a near-meaningless factor. Rows from non-displayed sets are down-weighted to 0.2× (`TRAINING_ONLY_WEIGHT`) — swept, and both dropping them entirely and counting them fully score worse. Alpha and every reported number come *only* from held-out displayed-set cards.
+**Trained on more sets than are displayed.** The site shows only the Scarlet & Violet + Mega Evolution main sets (`src/data/generated/sets.json`), but the model fits on TCGdex's full English catalog — ~170 sets back to 1999. That breadth is deliberate: a Pokémon or illustrator with only 2 appearances across the displayed sets but 40 across history would otherwise get a near-meaningless factor. Rows from non-displayed sets are down-weighted to 0.2× (`TRAINING_ONLY_WEIGHT`) — swept, and both dropping them entirely and counting them fully score worse. Alpha and every reported number come *only* from held-out displayed-set cards.
 
-**Accuracy, measured the way the site is used** — median error vs. the trend price, on the 24 displayed sets, cross-validated: **28.3% median, 37% of cards within 20%**. Broken out by price, because one median over four orders of magnitude hides exactly what matters:
+**Accuracy, measured the way the site is used** — median error vs. the trend price, on the displayed sets, cross-validated: **27.9% median, 38% of cards within 20%**. Broken out by price, because one median over four orders of magnitude hides exactly what matters:
 
 | price band | median error |
 |---|---|
-| under €0.30 (58% of all cards) | 25% |
-| €0.30 – €3 | 34% |
-| €3 – €30 | 33% |
-| €30+ | 42% |
+| under €0.30 (62% of all cards) | 25% |
+| €0.30 – €3 | 31% |
+| €3 – €30 | 34% |
+| €30+ | 43% |
 
 Over half of all cards trade under €0.30, where Cardmarket's 1-cent price steps alone floor the achievable error — so the headline is dominated by cards nobody looks up, and the expensive end is where this is genuinely hardest. For reference: two *real* price fields for the same card (`avg30` vs `trend`) differ by a median 11.6%, and predicting every card by the median of its own set × rarity group scores 31.7% — so the model is doing real work beyond a lookup table, but a large part of what's left is genuine market noise no card-attribute model can reach.
 
@@ -166,7 +162,6 @@ scripts/
   fetch-all-sets.mjs          Bulk pull of set release dates
   build-training-data.mjs     Cache -> compact training-data.json
   build-artwork-candidates.mjs Cache -> candidate list for the (currently unused) rating admin page
-  build-promo-candidates.mjs  Cache -> candidate list (priced Promo-rarity cards) for the style admin page
   build-outlier-candidates.mjs Generated cards-*.json -> top 100 overvalued + top 100 undervalued for the price-audit page
   build-search-index.mjs      Generated cards-*.json -> lightweight name/number index for the homepage search bar
   build-sitemap.mjs           Generated cards-*.json -> public/sitemap.xml (home + every set + every card)
@@ -178,7 +173,7 @@ src/
   data/defaults.ts        Just the over-/undervalued thresholds — nothing else is configurable
   data/cards.ts            Access to imported sets/cards
   data/generated/          Imported card data incl. baked-in factors (JSON, commit these!)
-  data/promo-styles.json  Hand-tagged Promo styles: Alt Art 10/9/8, Stamped, Normal (commit this!)
+  data/promo-styles.json  Hand-tagged Promo styles, training-corpus only now (commit this!)
   data/artwork-ratings.json Hand-rated illustration quality, 10/9/8/worse (commit this!)
   data/price-exclusions.json Hand-reviewed prices: wrong / verified / {corrected: n} (commit this!)
   logic/pricing.ts         Re-exports verdict + formatting from the shared JS modules
@@ -186,10 +181,9 @@ src/
   logic/format.js          Euro/percent formatting, shared with the build scripts
   logic/verdict.js         Over-/undervalued judgement + default thresholds, shared with the build scripts
   logic/artworkRatings.ts  localStorage persistence for the rating admin page
-  logic/promoStyles.ts     localStorage persistence for the promo-style admin page
   logic/priceExclusions.ts localStorage persistence for the price-audit admin page
   components/              Result panel, price breakdown, option groups, chips
-  pages/                   Home, set, card, artwork-rating, promo-style, and price-audit admin (lazy-loaded)
+  pages/                   Home, set, card, how-it-works, artwork-rating and price-audit admin (lazy-loaded)
   router.ts                History-API router (/set/…, /card/…, /admin/…) + scroll memory
   logic/documentMeta.ts    Per-route <title>, meta description, canonical + OG tags
 ```

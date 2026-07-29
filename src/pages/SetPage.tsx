@@ -80,7 +80,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
         <a href="/">Sets</a> / <strong>{set.name}</strong>
       </nav>
       <header className="set-header">
-        <h2>{set.name}</h2>
+        <h1>{set.name}</h1>
         <p className="muted">
           {set.serie ? `${set.serie} · ` : ''}
           {formatDate(set.releaseDate)} · {set.cardCount} cards. Fair price from our pricing model

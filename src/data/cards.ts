@@ -149,23 +149,6 @@ export async function loadArtworkCandidates(): Promise<ArtworkCandidate[]> {
   return mod.default as unknown as ArtworkCandidate[]
 }
 
-export interface PromoCandidate {
-  id: string
-  name: string
-  localId: string
-  image: string | null
-  setId: string | null
-  setName: string | null
-  releaseDate: string | null
-  price: number
-}
-
-/** Lazily loaded, same reasoning as loadArtworkCandidates. */
-export async function loadPromoCandidates(): Promise<PromoCandidate[]> {
-  const mod = await import('./generated/promo-candidates.json')
-  return mod.default as unknown as PromoCandidate[]
-}
-
 export interface OutlierCandidate {
   id: string
   name: string

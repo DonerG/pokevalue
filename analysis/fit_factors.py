@@ -39,7 +39,7 @@ the number.
 WHAT THIS IS TUNED FOR
 ----------------------
 Median absolute percentage error against `trend` (the price the site shows),
-on cards from the 24 displayed sets, cross-validated so no card is scored by a
+on cards from the displayed sets, cross-validated so no card is scored by a
 model that saw it. Per price band, because one median over a EUR0.02-EUR400
 range hides exactly the errors that matter (53% of cards trade under EUR0.10,
 where Cardmarket's 1-cent steps floor the achievable error). R² flattered a

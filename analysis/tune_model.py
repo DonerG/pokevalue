@@ -13,7 +13,7 @@ actually looks like. Two mismatches caused that:
      next to the total spread.
 
 So this script fixes the yardstick first: every variant is scored by MEDIAN
-ABSOLUTE PERCENTAGE ERROR AGAINST `trend`, on cards from the 24 displayed sets
+ABSOLUTE PERCENTAGE ERROR AGAINST `trend`, on cards from the displayed sets
 only, via K-fold cross-validation (each displayed card is predicted by a model
 that never saw it). That is as close as a single number gets to "how wrong does
 the site look".

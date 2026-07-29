@@ -155,7 +155,7 @@ story.append(
     Paragraph(
         f"<b>Model accuracy</b>, measured the way the site is actually used: median error against the "
         f"Cardmarket <i>trend</i> price (the number shown on every card page), on the "
-        f"{REPORT['nDisplayedRows']:,} cards from the 24 displayed sets, cross-validated so no card is "
+        f"{REPORT['nDisplayedRows']:,} cards from the displayed sets, cross-validated so no card is "
         f"scored by a model that saw it. <b>Median error {REPORT['displayedMedianAPE']*100:.0f}%</b>; "
         f"{REPORT['displayedWithin20']*100:.0f}% of cards land within 20% of their market price.",
         styles["Body"],
