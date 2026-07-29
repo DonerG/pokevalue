@@ -175,7 +175,6 @@ function cardShell(card, set) {
 
 function cardStructuredData(card, set) {
   const trend = card.market?.trend
-  const low = card.market?.low
   const product = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -187,13 +186,30 @@ function cardStructuredData(card, set) {
   }
   if (card.image) product.image = `${card.image}/high.webp`
   // Only when there is a real Cardmarket price behind it — never invented.
-  // lowPrice is the cheapest current listing, highPrice the trend price.
+  //
+  // A single Offer at the TREND price, which is the number the page itself
+  // shows. This used to be an AggregateOffer spanning market.low to trend, and
+  // that broke Google's rule that structured data "must be a true
+  // representation of the page content" and that you must not "mark up content
+  // that is not visible to readers of the page": market.low is nowhere on the
+  // card page, yet it was the price a search snippet would lead with. It
+  // differed from the visible price on 93% of cards and was less than half of
+  // it on 2,409 of them — exactly the "cheaper in the snippet than on the page"
+  // pattern that earns a spammy-structured-data manual action.
+  //
+  // Hand-corrected cards carry their corrected value in market.trend (with
+  // avg30 and low null), so this stays in step with the page for those too.
+  //
+  // The Offer describes Cardmarket's price and links there — this site sells
+  // nothing. That is the "product snippet" case in Google's docs, explicitly
+  // meant for pages "where people can't directly purchase the product"; the
+  // stricter "merchant listing" rules don't apply. No availability or
+  // priceValidUntil for the same reason: we'd be inventing stock we can't see.
   if (trend != null) {
     product.offers = {
-      '@type': 'AggregateOffer',
+      '@type': 'Offer',
       priceCurrency: 'EUR',
-      lowPrice: Number((low != null ? Math.min(low, trend) : trend).toFixed(2)),
-      highPrice: Number(trend.toFixed(2)),
+      price: Number(trend.toFixed(2)),
       url: cardmarketUrl(card),
     }
   }
