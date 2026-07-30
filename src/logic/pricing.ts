@@ -12,7 +12,7 @@ export interface Verdict {
 
 // Lives in plain JS so the Node prerender script reaches the same judgement —
 // see src/logic/verdict.js.
-export { verdict } from './verdict.js'
+export { verdict, viewsSentence } from './verdict.js'
 
 // Live in plain JS so the Node prerender script can format prices identically —
 // see src/logic/format.js. Re-exported here so app code keeps its old import.

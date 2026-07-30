@@ -34,3 +34,45 @@ export function verdict(marketPrice, fair, config) {
   if (gapToFair < -config.thresholds.under / 100) return { kind: 'undervalued', deviation: upside }
   return { kind: 'fair', deviation: upside }
 }
+
+// ---------------------------------------------------------------- three-view sentence
+//
+// The three model variants (broad / standard / local, see fit_factors.py)
+// differ only in the comparison window they use, so each one's verdict maps to
+// a fixed clause naming that window. A card's overall sentence is composed from
+// whichever views are NOT "fair" — the whole 27-way table (3 verdicts ^ 3
+// views) falls out of this, so there are three clauses to maintain, not 27
+// strings. A fair view contributes nothing; all-fair collapses to one line.
+
+/** One clause per view, naming what that view compares the card against. */
+const VIEW_CLAUSES = {
+  broad: 'the broad average for a card like this',
+  standard: 'similar cards from this era',
+  local: 'other cards of the same rarity in this set',
+}
+const VIEW_ORDER = ['broad', 'standard', 'local']
+
+/** "A", "A and with B", "A, with B, and with C" — always in broad→local order. */
+function joinClauses(keys) {
+  const c = keys.map((k) => VIEW_CLAUSES[k])
+  if (c.length === 1) return c[0]
+  if (c.length === 2) return `${c[0]} and with ${c[1]}`
+  return `${c[0]}, with ${c[1]}, and with ${c[2]}`
+}
+
+/**
+ * Plain-language summary of the three views for a card, e.g.
+ * "This card is cheap compared with the broad average for a card like this,
+ *  but expensive compared with other cards of the same rarity in this set."
+ *
+ * @param {{ broad: VerdictKind|null, standard: VerdictKind|null, local: VerdictKind|null }} kinds
+ * @returns {string}
+ */
+export function viewsSentence(kinds) {
+  const cheap = VIEW_ORDER.filter((k) => kinds[k] === 'undervalued')
+  const pricey = VIEW_ORDER.filter((k) => kinds[k] === 'overvalued')
+  if (cheap.length === 0 && pricey.length === 0) return 'This card is fairly valued at every level of comparison.'
+  if (pricey.length === 0) return `This card is cheap compared with ${joinClauses(cheap)}.`
+  if (cheap.length === 0) return `This card is expensive compared with ${joinClauses(pricey)}.`
+  return `This card is cheap compared with ${joinClauses(cheap)}, but expensive compared with ${joinClauses(pricey)}.`
+}

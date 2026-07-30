@@ -112,32 +112,35 @@ export function HowItWorksPage() {
         <h3>Three zoom levels, one number</h3>
         <p>
           "Is this card undervalued?" quietly depends on a second question: <em>compared with
-          what?</em> A card can be cheap next to broadly similar cards across every set, yet
-          perfectly ordinary next to its direct neighbours — same rarity, same set. Both readings
-          are legitimate, and neither is "the" truth. So instead of silently picking one, the model
-          is fitted three times with differently sized comparison circles:
+          what?</em> A card can be cheap next to the broad average for its kind, yet perfectly
+          ordinary next to its direct neighbours — same rarity, same set. Both readings are
+          legitimate, and neither is "the" truth. So instead of silently picking one, the model is
+          fitted three times, and the three differ on exactly one thing: <strong>how wide a window
+          of cards the price is compared against.</strong>
         </p>
         <ul className="stat-list stat-list-views">
           <li>
             <strong>Wide view</strong>
-            <span>the widest circle — Pokémon, rarity, illustrator, set and card type only</span>
+            <span>vs. the broad average for a card like this</span>
           </li>
           <li>
             <strong>Standard view</strong>
-            <span>adds release-year context and the hand-rated artwork grade</span>
+            <span>vs. similar cards from the card's own era</span>
           </li>
           <li>
             <strong>Close-up view</strong>
-            <span>additionally compares against the same rarity inside the same set</span>
+            <span>vs. the same rarity inside the same set</span>
           </li>
         </ul>
         <p>
           The fair price shown everywhere is the <strong>middle of the three estimates</strong>. The
-          three coloured dots on every verdict chip show how much the views agree: three matching
-          dots mean the verdict holds no matter how you compare — mixed dots mean the card sits on a
-          boundary, which is often the most interesting information on the page. When the views
-          disagree, the pattern tells you <em>why</em>: cheap in the wide view but ordinary in the
-          close-up usually means the card's whole group is cheap, not the card itself.
+          three coloured dots on every verdict chip show how much the views agree, and a plain
+          sentence under them spells it out — "cheap compared with the broad average for a card like
+          this, but expensive compared with other cards of the same rarity in this set". Because the
+          only difference between the views is the comparison window, a disagreement pins down{' '}
+          <em>why</em> exactly: a wide-view/standard split is a change over time (this rarity is
+          priced differently now than its all-time average), a standard/close-up split is a
+          within-set effect (its whole rarity trades high or low in this particular set).
         </p>
       </section>
 

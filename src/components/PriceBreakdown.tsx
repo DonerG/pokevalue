@@ -1,6 +1,6 @@
 import type { Config } from '../data/defaults'
 import { pokemonSpeciesName, type CardData } from '../data/cards'
-import { formatEuro, verdict } from '../logic/pricing'
+import { formatEuro, verdict, viewsSentence } from '../logic/pricing'
 import { VerdictChip } from './VerdictChip'
 
 const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
@@ -12,11 +12,12 @@ interface Props {
   market: number | null
 }
 
-/** The three model variants in zoom order — see /how-it-works for why three exist. */
+/** The three model variants in zoom order — see /how-it-works for why three exist.
+    The three hints name the same comparison windows the summary sentence uses. */
 const VIEWS: { key: 'broad' | 'standard' | 'local'; label: string; hint: string }[] = [
-  { key: 'broad', label: 'Wide view', hint: 'vs. broadly similar cards across every set' },
-  { key: 'standard', label: 'Standard view', hint: 'adds release-year and artwork context' },
-  { key: 'local', label: 'Close-up view', hint: 'vs. the same rarity in this same set' },
+  { key: 'broad', label: 'Wide view', hint: 'vs. the broad average for a card like this' },
+  { key: 'standard', label: 'Standard view', hint: 'vs. similar cards from this era' },
+  { key: 'local', label: 'Close-up view', hint: 'vs. the same rarity in this set' },
 ]
 
 /** Read-only "why this price" breakdown: the card's fixed, data-derived factors, then your copy's condition/language on top. */
@@ -131,12 +132,14 @@ export function PriceBreakdown({ card, setName, config, market }: Props) {
         <li className="views-summary">
           {market == null ? (
             <span className="muted">No market price to compare the three views against.</span>
-          ) : allAgree ? (
-            <span className="views-agree">✓ All three views agree — a solid verdict.</span>
           ) : (
-            <span className="views-disagree">
-              ◐ The views disagree — this card sits on a boundary, and the verdict depends on how you
-              compare. The fair price shown is the middle of the three.
+            <span className={allAgree ? 'views-agree' : 'views-disagree'}>
+              {allAgree ? '✓ ' : '◐ '}
+              {viewsSentence({
+                broad: viewVerdicts[0],
+                standard: viewVerdicts[1],
+                local: viewVerdicts[2],
+              })}
             </span>
           )}
         </li>

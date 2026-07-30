@@ -1314,9 +1314,13 @@ details.panel[open] summary {
   padding-top: 8px;
   margin-top: 2px;
   font-size: 12.5px;
+  line-height: 1.5;
 }
 
-.views-agree { color: var(--good-fg); }
+/* Agreement is coloured neutrally, not green: the three views agreeing on
+   "overvalued" is still agreement, and green here reads as "good/undervalued".
+   Only disagreement gets an accent, because that's the line worth noticing. */
+.views-agree { color: var(--text-2); }
 .views-disagree { color: var(--warn-fg); }
 
 @media (max-width: 560px) {
