@@ -1080,6 +1080,212 @@ details.panel[open] summary {
   color: var(--warn-fg);
 }
 
+/* ---------- Watchlist + portfolio ---------- */
+
+.nav-count {
+  display: inline-block;
+  min-width: 16px;
+  margin-left: 5px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.collection-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.watch-btn,
+.portfolio-btn,
+.qty-stepper button {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.watch-btn.is-watched {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.watch-btn:hover,
+.portfolio-btn:hover {
+  border-color: var(--accent);
+}
+
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2px 4px;
+  background: var(--surface);
+}
+
+.qty-stepper button {
+  border: none;
+  background: none;
+  padding: 4px 8px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.qty-value {
+  font-size: 13px;
+  min-width: 1ch;
+  text-align: center;
+}
+
+.collection-page {
+  max-width: 1100px;
+}
+
+.collection-page > h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+/* Reuse the set grid's tiles, plus a remove affordance in the corner. */
+.watch-tile {
+  position: relative;
+}
+
+.tile-remove {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.tile-remove:hover {
+  background: var(--accent);
+}
+
+.portfolio-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.portfolio-total {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.portfolio-total strong {
+  font-size: 22px;
+}
+
+.portfolio-verdict {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.portfolio-verdict.verdict-undervalued {
+  color: var(--good-fg);
+}
+
+.portfolio-verdict.verdict-overvalued {
+  color: var(--warn-fg);
+}
+
+.portfolio-verdict.verdict-fair {
+  color: var(--text-2);
+}
+
+.portfolio-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portfolio-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.portfolio-row img,
+.portfolio-thumb-ph {
+  width: 40px;
+  aspect-ratio: 733 / 1024;
+  object-fit: contain;
+  border-radius: 4px;
+  background: var(--surface-2);
+  flex: none;
+}
+
+.portfolio-row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.portfolio-row-main a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio-row-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.portfolio-remove {
+  position: static;
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+
+@media (max-width: 560px) {
+  .portfolio-row-main .muted {
+    font-size: 11px;
+  }
+}
+
 /* ---------- Admin bar (site-wide while unlocked) ---------- */
 
 .admin-bar {

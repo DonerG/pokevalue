@@ -111,6 +111,24 @@ export async function loadCards(setId: string): Promise<CardData[]> {
   return mod.default
 }
 
+/** Loads a set of cards by id across sets, for the watchlist and portfolio pages. */
+export async function loadCardsByIds(ids: string[]): Promise<CardData[]> {
+  const bySet = new Map<string, Set<string>>()
+  for (const id of ids) {
+    const setId = id.slice(0, id.lastIndexOf('-'))
+    if (!bySet.has(setId)) bySet.set(setId, new Set())
+    bySet.get(setId)!.add(id)
+  }
+  const out: CardData[] = []
+  await Promise.all(
+    [...bySet].map(async ([setId, want]) => {
+      const cards = await loadCards(setId)
+      for (const c of cards) if (want.has(c.id)) out.push(c)
+    }),
+  )
+  return out
+}
+
 export async function loadCard(cardId: string): Promise<CardData | undefined> {
   const setId = cardId.slice(0, cardId.lastIndexOf('-'))
   const cards = await loadCards(setId)

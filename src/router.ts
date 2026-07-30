@@ -26,6 +26,8 @@ export type Route =
   | { page: 'set'; setId: string; query: string; sort: SetSortKey; minPrice: boolean }
   | { page: 'card'; cardId: string }
   | { page: 'how-it-works' }
+  | { page: 'watchlist' }
+  | { page: 'portfolio' }
   | { page: 'admin-hub' }
   | { page: 'admin-artwork' }
   | { page: 'admin-tera' }
@@ -50,6 +52,8 @@ export function parsePath(pathname: string, search: string): Route {
   }
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: decodeURIComponent(parts[1]) }
   if (parts[0] === 'how-it-works') return { page: 'how-it-works' }
+  if (parts[0] === 'watchlist') return { page: 'watchlist' }
+  if (parts[0] === 'portfolio') return { page: 'portfolio' }
   if (parts[0] === 'admin' && !parts[1]) return { page: 'admin-hub' }
   if (parts[0] === 'admin' && parts[1] === 'artwork') return { page: 'admin-artwork' }
   if (parts[0] === 'admin' && parts[1] === 'tera') return { page: 'admin-tera' }

@@ -12,6 +12,7 @@ import {
 import { ResultPanel } from '../components/ResultPanel'
 import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
+import { CollectionControls } from '../components/CollectionControls'
 import { useDocumentMeta } from '../logic/documentMeta'
 import { cardMeta } from '../logic/pageMeta.js'
 import { useAdminUnlocked } from '../logic/adminGate'
@@ -113,6 +114,7 @@ export function CardPage({ cardId, config }: Props) {
             <a className="cardmarket-link" href={cardmarketUrl(card)} target="_blank" rel="noreferrer">
               View on Cardmarket ↗
             </a>
+            <CollectionControls cardId={card.id} />
           </div>
         </div>
 

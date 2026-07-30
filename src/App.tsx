@@ -4,6 +4,7 @@ import { defaultConfig } from './data/defaults'
 import { useRoute } from './router'
 import { useAdminUnlocked } from './logic/adminGate'
 import { seedAdminStores } from './logic/adminSeed'
+import { usePortfolio, useWatchlist } from './logic/collection'
 import { AdminBar } from './components/AdminBar'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
@@ -27,16 +28,27 @@ const AdminPriceAuditPage = lazy(() =>
 const HowItWorksPage = lazy(() =>
   import('./pages/HowItWorksPage').then((m) => ({ default: m.HowItWorksPage })),
 )
+const WatchlistPage = lazy(() =>
+  import('./pages/WatchlistPage').then((m) => ({ default: m.WatchlistPage })),
+)
+const PortfolioPage = lazy(() =>
+  import('./pages/PortfolioPage').then((m) => ({ default: m.PortfolioPage })),
+)
 
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
 
-const ADMIN_PAGES = new Set(['admin-hub', 'admin-artwork', 'admin-tera', 'admin-price-audit'])
+const ADMIN_PAGES = new Set(['admin-hub', 'admin-artwork', 'admin-tera', 'admin-corrections', 'admin-price-audit'])
+// Nothing personal or admin-only belongs in a search index — the watchlist and
+// portfolio are this browser's own, empty to a crawler.
+const NOINDEX_PAGES = new Set([...ADMIN_PAGES, 'watchlist', 'portfolio'])
 
 function App() {
   const route = useRoute()
   const unlocked = useAdminUnlocked()
-  const onAdminRoute = ADMIN_PAGES.has(route.page)
+  const noindex = NOINDEX_PAGES.has(route.page)
+  const watchCount = useWatchlist().length
+  const portfolioCount = Object.keys(usePortfolio()).length
 
   // Once unlocked, load the committed data into the editing stores so the
   // per-card editor reflects the real current state (see adminSeed).
@@ -44,10 +56,11 @@ function App() {
     if (unlocked) seedAdminStores()
   }, [unlocked])
 
-  // Keep the admin area out of any index that runs JS. The pages are already
-  // unlinked and absent from the sitemap; this is the belt to that's braces.
+  // Keep personal/admin pages out of any index that runs JS. They're already
+  // unlinked from crawler-visible content and absent from the sitemap; this is
+  // the belt to that's braces.
   useEffect(() => {
-    if (!onAdminRoute) return
+    if (!noindex) return
     const meta = document.createElement('meta')
     meta.name = 'robots'
     meta.content = 'noindex'
@@ -55,7 +68,7 @@ function App() {
     return () => {
       document.head.removeChild(meta)
     }
-  }, [onAdminRoute])
+  }, [noindex])
 
   // Every admin route but the hub is gated: locked → show the hub (which is the
   // unlock form when locked); unlocked → the requested page.
@@ -85,6 +98,12 @@ function App() {
           <a href="/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
             Sets
           </a>
+          <a href="/watchlist" className={route.page === 'watchlist' ? 'active' : ''}>
+            Watchlist{watchCount > 0 && <span className="nav-count">{watchCount}</span>}
+          </a>
+          <a href="/portfolio" className={route.page === 'portfolio' ? 'active' : ''}>
+            Portfolio{portfolioCount > 0 && <span className="nav-count">{portfolioCount}</span>}
+          </a>
           <a href="/how-it-works" className={route.page === 'how-it-works' ? 'active' : ''}>
             How it works
           </a>
@@ -106,6 +125,16 @@ function App() {
       {route.page === 'how-it-works' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <HowItWorksPage />
+        </Suspense>
+      )}
+      {route.page === 'watchlist' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <WatchlistPage config={CONFIG} />
+        </Suspense>
+      )}
+      {route.page === 'portfolio' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <PortfolioPage config={CONFIG} />
         </Suspense>
       )}
       {route.page === 'admin-hub' && (
