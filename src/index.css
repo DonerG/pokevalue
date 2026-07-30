@@ -984,6 +984,153 @@ details.panel[open] summary {
   font-size: 12px;
 }
 
+/* ---------- Price warning (public card page) ---------- */
+
+.price-warning {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid var(--warn-fg);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--warn-fg) 12%, transparent);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.price-warning strong {
+  color: var(--warn-fg);
+}
+
+/* ---------- Admin hub + unlock ---------- */
+
+.admin-hub {
+  max-width: 820px;
+}
+
+.admin-unlock {
+  margin: 48px auto 0;
+  text-align: center;
+}
+
+.admin-unlock-form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.admin-unlock-form input {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  font-size: 14px;
+}
+
+.admin-unlock-error {
+  color: var(--warn-fg);
+  margin-top: 10px;
+}
+
+.admin-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 4px 0 16px;
+}
+
+.admin-hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-hub-card:hover {
+  border-color: var(--accent);
+}
+
+.admin-hub-browse {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.admin-hub-note {
+  font-size: 12.5px;
+}
+
+/* ---------- Admin inline card editor ---------- */
+
+.admin-card-controls {
+  margin-top: 16px;
+  border: 1px dashed var(--accent);
+}
+
+.admin-edit-hint {
+  margin-top: -4px;
+  font-size: 12px;
+}
+
+.admin-edit-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.admin-edit-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.admin-edit-row input[type='text'] {
+  width: 110px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+}
+
+.admin-edit-row button {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.admin-edit-note {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  resize: vertical;
+}
+
 .rating-card {
   display: flex;
   flex-direction: column;
@@ -1264,6 +1411,17 @@ details.panel[open] summary {
   color: var(--text-2);
   max-width: 70ch;
   margin: 0 0 12px;
+}
+
+.prerender-warning {
+  border: 1px solid var(--warn-fg);
+  border-radius: 10px;
+  padding: 10px 12px;
+  max-width: 70ch;
+}
+
+.prerender-warning strong {
+  color: var(--warn-fg);
 }
 
 .prerender-facts {

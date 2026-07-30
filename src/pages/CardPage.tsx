@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { formatEuro } from '../logic/pricing'
 import {
@@ -14,6 +14,16 @@ import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
 import { useDocumentMeta } from '../logic/documentMeta'
 import { cardMeta } from '../logic/pageMeta.js'
+import { useAdminUnlocked } from '../logic/adminGate'
+import { loadPriceWarnings, warningText, type PriceWarnings } from '../logic/priceWarnings'
+import committedWarningsJson from '../data/price-warnings.json'
+
+const COMMITTED_WARNINGS = committedWarningsJson as PriceWarnings
+
+// The admin editor only ships to whoever unlocks the admin area.
+const AdminCardControls = lazy(() =>
+  import('../components/AdminCardControls').then((m) => ({ default: m.AdminCardControls })),
+)
 
 interface Props {
   cardId: string
@@ -28,6 +38,9 @@ export function CardPage({ cardId, config }: Props) {
   // undefined = still loading, null = confirmed not found
   const [card, setCard] = useState<CardData | null | undefined>(undefined)
   const [marketInput, setMarketInput] = useState('')
+  const admin = useAdminUnlocked()
+  // Bumped when the admin edits a warning, so the public note below re-reads it.
+  const [warnTick, setWarnTick] = useState(0)
 
   useEffect(() => {
     setCard(undefined)
@@ -62,6 +75,10 @@ export function CardPage({ cardId, config }: Props) {
 
   const set = getSet(card.id.slice(0, card.id.lastIndexOf('-')))
   const img = cardImage(card, 'high')
+  // Public caveat. Committed warnings show to everyone; while the admin area is
+  // unlocked, an uncommitted (localStorage) warning is previewed on top.
+  void warnTick
+  const warning = (admin ? loadPriceWarnings()[card.id] : undefined) ?? COMMITTED_WARNINGS[card.id]
   return (
     <div>
       <nav className="breadcrumb">
@@ -100,12 +117,23 @@ export function CardPage({ cardId, config }: Props) {
         </div>
 
         <div className="card-controls">
+          {warning && (
+            <div className="price-warning" role="note">
+              <strong>⚠ Price caveat</strong>
+              <span>{warningText(warning)}</span>
+            </div>
+          )}
           <PriceBreakdown
             card={card}
             setName={set?.name ?? card.id}
             config={config}
             market={card.market?.trend ?? null}
           />
+          {admin && (
+            <Suspense fallback={<p className="muted">Loading editor…</p>}>
+              <AdminCardControls card={card} onChange={() => setWarnTick((n) => n + 1)} />
+            </Suspense>
+          )}
         </div>
 
         <aside className="card-result">

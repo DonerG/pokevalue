@@ -1,11 +1,15 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, type ReactNode } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import { defaultConfig } from './data/defaults'
 import { useRoute } from './router'
+import { useAdminUnlocked } from './logic/adminGate'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
 import { CardPage } from './pages/CardPage'
 
+const AdminHubPage = lazy(() =>
+  import('./pages/AdminHubPage').then((m) => ({ default: m.AdminHubPage })),
+)
 const AdminArtworkPage = lazy(() =>
   import('./pages/AdminArtworkPage').then((m) => ({ default: m.AdminArtworkPage })),
 )
@@ -22,8 +26,36 @@ const HowItWorksPage = lazy(() =>
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
 
+const ADMIN_PAGES = new Set(['admin-hub', 'admin-artwork', 'admin-tera', 'admin-price-audit'])
+
 function App() {
   const route = useRoute()
+  const unlocked = useAdminUnlocked()
+  const onAdminRoute = ADMIN_PAGES.has(route.page)
+
+  // Keep the admin area out of any index that runs JS. The pages are already
+  // unlinked and absent from the sitemap; this is the belt to that's braces.
+  useEffect(() => {
+    if (!onAdminRoute) return
+    const meta = document.createElement('meta')
+    meta.name = 'robots'
+    meta.content = 'noindex'
+    document.head.appendChild(meta)
+    return () => {
+      document.head.removeChild(meta)
+    }
+  }, [onAdminRoute])
+
+  // Every admin route but the hub is gated: locked → show the hub (which is the
+  // unlock form when locked); unlocked → the requested page.
+  const gated = (node: ReactNode): ReactNode =>
+    unlocked ? (
+      node
+    ) : (
+      <Suspense fallback={<p className="muted">Loading…</p>}>
+        <AdminHubPage />
+      </Suspense>
+    )
 
   return (
     <div className="app">
@@ -64,21 +96,29 @@ function App() {
           <HowItWorksPage />
         </Suspense>
       )}
-      {route.page === 'admin-artwork' && (
+      {route.page === 'admin-hub' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
-          <AdminArtworkPage />
+          <AdminHubPage />
         </Suspense>
       )}
-      {route.page === 'admin-tera' && (
-        <Suspense fallback={<p className="muted">Loading…</p>}>
-          <AdminTeraPage />
-        </Suspense>
-      )}
-      {route.page === 'admin-price-audit' && (
-        <Suspense fallback={<p className="muted">Loading…</p>}>
-          <AdminPriceAuditPage />
-        </Suspense>
-      )}
+      {route.page === 'admin-artwork' &&
+        gated(
+          <Suspense fallback={<p className="muted">Loading…</p>}>
+            <AdminArtworkPage />
+          </Suspense>,
+        )}
+      {route.page === 'admin-tera' &&
+        gated(
+          <Suspense fallback={<p className="muted">Loading…</p>}>
+            <AdminTeraPage />
+          </Suspense>,
+        )}
+      {route.page === 'admin-price-audit' &&
+        gated(
+          <Suspense fallback={<p className="muted">Loading…</p>}>
+            <AdminPriceAuditPage />
+          </Suspense>,
+        )}
 
       <footer className="app-footer">
         PokéValue estimates a fair price from real Cardmarket data across thousands of cards using

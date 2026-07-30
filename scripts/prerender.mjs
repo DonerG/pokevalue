@@ -40,12 +40,22 @@ import {
   setMeta,
 } from '../src/logic/pageMeta.js'
 import { DEFAULT_THRESHOLDS, verdict } from '../src/logic/verdict.js'
+import { warningText } from '../src/logic/warningText.js'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const DIST = join(HERE, '..', 'dist')
 const GENERATED_DIR = join(HERE, '..', 'src', 'data', 'generated')
 
 const CONFIG = { thresholds: DEFAULT_THRESHOLDS }
+
+// Display-only per-card caveats (tournament demand / manipulation). Shared with
+// the app, which reads the same file — see src/logic/priceWarnings.ts.
+let PRICE_WARNINGS = {}
+try {
+  PRICE_WARNINGS = JSON.parse(await readFile(join(HERE, '..', 'src', 'data', 'price-warnings.json'), 'utf8'))
+} catch {
+  // no warnings file
+}
 
 // ------------------------------------------------------------------ escaping
 
@@ -156,9 +166,15 @@ function cardShell(card, set) {
     factRow('Cardmarket price', trend != null ? formatEuro(trend) : null),
   ].join('')
 
+  const warning = PRICE_WARNINGS[card.id]
+  const warningHtml = warning
+    ? `<p class="prerender-warning"><strong>⚠ Price caveat</strong> ${esc(warningText(warning))}</p>`
+    : ''
+
   const inner =
     `<h1>${esc(card.name)} #${esc(card.localId)}${set ? ` – ${esc(set.name)}` : ''}</h1>` +
     `<p>${esc(meta.description)}${esc(judgement)}</p>` +
+    warningHtml +
     `<dl class="prerender-facts">${facts}</dl>` +
     `<p class="prerender-links">` +
     (set ? `<a href="/set/${esc(set.id)}">All ${esc(set.name)} card prices</a> · ` : '') +
