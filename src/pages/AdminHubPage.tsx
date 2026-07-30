@@ -42,11 +42,16 @@ function UnlockForm() {
   )
 }
 
-// Artwork and Tera were bulk one-time passes and are done — both are now edited
-// per card from the Admin edit panel, so only the ongoing worklist stays here.
-// The bulk pages still exist at their URLs if a whole new set ever needs one.
+// Artwork, Tera and the price audit were bulk one-time passes and are done —
+// artwork and Tera are edited per card from the Admin edit panel now, and the
+// price audit's output lives on as the corrections list below. The bulk pages
+// still exist at their URLs if a whole new set ever needs one.
 const TOOLS = [
-  { href: '/admin/price-audit', title: 'Price audit', desc: 'The biggest market-vs-fair gaps, to spot and fix bad Cardmarket prices.' },
+  {
+    href: '/admin/corrections',
+    title: 'Manual price corrections',
+    desc: 'Cards you priced by hand vs. the current Cardmarket price — hand back the ones it has fixed.',
+  },
 ]
 
 export function AdminHubPage() {

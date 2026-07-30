@@ -984,6 +984,83 @@ details.panel[open] summary {
   font-size: 12px;
 }
 
+/* ---------- Admin corrections list ---------- */
+
+.admin-corrections {
+  max-width: 820px;
+}
+
+.correction-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: var(--surface);
+}
+
+.correction-row.is-close {
+  border-color: var(--good-fg);
+  background: color-mix(in srgb, var(--good-fg) 8%, transparent);
+}
+
+.correction-row img,
+.correction-thumb-ph {
+  width: 46px;
+  aspect-ratio: 733 / 1024;
+  object-fit: contain;
+  border-radius: 4px;
+  background: var(--surface-2);
+  flex: none;
+}
+
+.correction-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.correction-body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.correction-prices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 13px;
+}
+
+.correction-gap {
+  color: var(--warn-fg);
+  font-size: 12px;
+}
+
+.correction-gap.close {
+  color: var(--good-fg);
+  font-weight: 600;
+}
+
+.correction-resolve {
+  flex: none;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.correction-resolve:hover {
+  border-color: var(--good-fg);
+}
+
 /* ---------- Price warning (public card page) ---------- */
 
 .price-warning {

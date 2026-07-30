@@ -145,6 +145,11 @@ async function ingestSet(setId) {
           : null,
       priceFlagged,
       priceCorrected: corrected != null,
+      // For a hand-corrected card, keep the CURRENT automatic Cardmarket price
+      // alongside the manual one — the admin corrections list shows them side by
+      // side so a fixed Cardmarket bug (raw price back in line) is easy to spot.
+      // Only stored for corrected cards; absent everywhere else.
+      ...(corrected != null && cm ? { rawMarket: { trend: cm.trend ?? null, updated: cm.updated ?? null } } : {}),
       baseValue,
       factors: breakdown,
       // The three variant estimates behind baseValue (their median). Rounded:

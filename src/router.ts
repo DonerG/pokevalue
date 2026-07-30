@@ -29,6 +29,7 @@ export type Route =
   | { page: 'admin-hub' }
   | { page: 'admin-artwork' }
   | { page: 'admin-tera' }
+  | { page: 'admin-corrections' }
   | { page: 'admin-price-audit' }
 
 const SORT_KEYS: SetSortKey[] = ['number', 'deviation', 'market', 'fair']
@@ -52,6 +53,7 @@ export function parsePath(pathname: string, search: string): Route {
   if (parts[0] === 'admin' && !parts[1]) return { page: 'admin-hub' }
   if (parts[0] === 'admin' && parts[1] === 'artwork') return { page: 'admin-artwork' }
   if (parts[0] === 'admin' && parts[1] === 'tera') return { page: 'admin-tera' }
+  if (parts[0] === 'admin' && parts[1] === 'corrections') return { page: 'admin-corrections' }
   if (parts[0] === 'admin' && parts[1] === 'price-audit') return { page: 'admin-price-audit' }
   return { page: 'home' }
 }

@@ -18,6 +18,9 @@ const AdminArtworkPage = lazy(() =>
 const AdminTeraPage = lazy(() =>
   import('./pages/AdminTeraPage').then((m) => ({ default: m.AdminTeraPage })),
 )
+const AdminCorrectionsPage = lazy(() =>
+  import('./pages/AdminCorrectionsPage').then((m) => ({ default: m.AdminCorrectionsPage })),
+)
 const AdminPriceAuditPage = lazy(() =>
   import('./pages/AdminPriceAuditPage').then((m) => ({ default: m.AdminPriceAuditPage })),
 )
@@ -120,6 +123,12 @@ function App() {
         gated(
           <Suspense fallback={<p className="muted">Loading…</p>}>
             <AdminTeraPage />
+          </Suspense>,
+        )}
+      {route.page === 'admin-corrections' &&
+        gated(
+          <Suspense fallback={<p className="muted">Loading…</p>}>
+            <AdminCorrectionsPage />
           </Suspense>,
         )}
       {route.page === 'admin-price-audit' &&

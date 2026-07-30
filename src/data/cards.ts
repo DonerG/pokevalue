@@ -56,6 +56,8 @@ export interface CardData {
   priceFlagged: boolean
   /** Price was hand-read off Cardmarket to replace a broken one — trend only, no 30-day average. */
   priceCorrected?: boolean
+  /** For corrected cards only: the current automatic Cardmarket price, kept so the admin corrections list can show manual vs. live side by side. */
+  rawMarket?: { trend: number | null; updated: string | null }
   /** Shipped fair value before condition/language: the MEDIAN of the three variant estimates in `fairs`. */
   baseValue: number
   /** The three model variants' fair prices — see /how-it-works: broad (widest comparison circle), standard, local (same rarity, same set). */
@@ -147,6 +149,45 @@ export interface ArtworkCandidate {
 export async function loadArtworkCandidates(): Promise<ArtworkCandidate[]> {
   const mod = await import('./generated/artwork-candidates.json')
   return mod.default as unknown as ArtworkCandidate[]
+}
+
+export interface CorrectionCandidate {
+  id: string
+  name: string
+  localId: string
+  image: string | null
+  setName: string
+  manualTrend: number | null
+  rawTrend: number | null
+  rawUpdated: string | null
+}
+
+/**
+ * Every hand-corrected card, for the /admin/corrections review list: the manual
+ * price we ship next to the current automatic Cardmarket price (rawMarket, kept
+ * by ingest), so the reviewer can spot a card Cardmarket has since fixed and
+ * hand it back to the automatic feed. Built on the fly from the shipped card
+ * JSON — the corrected set is small.
+ */
+export async function loadCorrectionCandidates(): Promise<CorrectionCandidate[]> {
+  const perSet = await Promise.all(
+    SETS.map(async (set) => {
+      const cards = await loadCards(set.id)
+      return cards
+        .filter((c) => c.priceCorrected)
+        .map((c) => ({
+          id: c.id,
+          name: c.name,
+          localId: c.localId,
+          image: c.image,
+          setName: set.name,
+          manualTrend: c.market?.trend ?? null,
+          rawTrend: c.rawMarket?.trend ?? null,
+          rawUpdated: c.rawMarket?.updated ?? null,
+        }))
+    }),
+  )
+  return perSet.flat().sort((a, b) => (b.manualTrend ?? 0) - (a.manualTrend ?? 0))
 }
 
 export interface TeraCandidate {
