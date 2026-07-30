@@ -1,5 +1,5 @@
 {
- "trainedAt": "2026-07-30T11:59:29.957886+00:00",
+ "trainedAt": "2026-07-30T12:43:01.599251+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
@@ -8,52 +8,52 @@
  "alpha": 3.16,
  "pokemonTierExponent": {
   "bulk": 1.0,
-  "mid": 1.3026,
-  "chase": 1.6764
+  "mid": 1.3138,
+  "chase": 1.6821
  },
- "displayedMedianAPE": 0.2724174733860245,
+ "displayedMedianAPE": 0.27680310008911296,
  "displayedWithin20": 0.38136560858643526,
- "displayedTestR2": 0.9629235645065993,
+ "displayedTestR2": 0.9628296210976637,
  "byPriceBand": {
   "0-0.3": {
    "n": 2714,
-   "medianAPE": 0.2487322036809107,
-   "within20": 0.4148857774502579
+   "medianAPE": 0.24774582525080463,
+   "within20": 0.41562269712601324
   },
   "0.3-3": {
    "n": 698,
-   "medianAPE": 0.2949824119886323,
-   "within20": 0.35816618911174786
+   "medianAPE": 0.3003460578049102,
+   "within20": 0.3510028653295129
   },
   "3-30": {
    "n": 769,
-   "medianAPE": 0.3261397287516078,
+   "medianAPE": 0.3211561346936035,
    "within20": 0.32249674902470743
   },
   "30+": {
    "n": 198,
-   "medianAPE": 0.4183439997169356,
-   "within20": 0.23232323232323232
+   "medianAPE": 0.4175680893279554,
+   "within20": 0.2474747474747475
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.3248276961448182,
-   "within20": 0.32496003653802236,
+   "medianAPE": 0.32518344536515686,
+   "within20": 0.3251883991778945,
    "alpha": 1.78
   },
   "standard": {
-   "medianAPE": 0.2772873337034989,
-   "within20": 0.3751998173098881,
+   "medianAPE": 0.2808034214554341,
+   "within20": 0.37542817994976024,
    "alpha": 3.16
   },
   "local": {
-   "medianAPE": 0.2602356130635792,
-   "within20": 0.39209865266042476,
+   "medianAPE": 0.25978714896273614,
+   "within20": 0.3943822790591459,
    "alpha": 3.16
   }
  },
- "verdictAgreement": 0.642612468600137,
+ "verdictAgreement": 0.6428408312400091,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,
@@ -63,7 +63,7 @@
   "cardName": 1435,
   "artwork": 4,
   "rarityYear": 202,
-  "cardTypeYear": 89,
+  "cardTypeYear": 91,
   "raritySet": 793
  }
 }
