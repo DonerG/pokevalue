@@ -19,6 +19,7 @@ const HERE = dirname(fileURLToPath(import.meta.url))
 const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
 const PROMO_STYLES_PATH = join(HERE, '..', '..', 'src', 'data', 'promo-styles.json')
 const ARTWORK_RATINGS_PATH = join(HERE, '..', '..', 'src', 'data', 'artwork-ratings.json')
+const TERA_TAGS_PATH = join(HERE, '..', '..', 'src', 'data', 'tera-tags.json')
 
 // Mirrors VARIANTS in analysis/fit_factors.py — keep both in sync. The three
 // differ only in the comparison window: broad shares every intrinsic-attribute
@@ -53,6 +54,18 @@ function loadPromoStyles() {
     }
   }
   return cachedPromoStyles
+}
+
+let cachedTeraTags = null
+function loadTeraTags() {
+  if (!cachedTeraTags) {
+    try {
+      cachedTeraTags = JSON.parse(readFileSync(TERA_TAGS_PATH, 'utf8'))
+    } catch {
+      cachedTeraTags = {}
+    }
+  }
+  return cachedTeraTags
 }
 
 // There used to be a second shrinkage step here: any factor backed by fewer
@@ -122,7 +135,7 @@ export function computeCardPricing(card, releaseDate) {
   const promoStyles = loadPromoStyles()
   const rarityValue = effectiveRarity(card, promoStyles) ?? 'None'
   const setKey = card.set?.id ?? 'unknown'
-  const cardTypeKey = mapCardType(card) ?? 'Standard'
+  const cardTypeKey = mapCardType(card, loadTeraTags()) ?? 'Standard'
   const year = releaseYear(releaseDate)
   // Price tier decides how strongly the Pokémon premium applies. Derived from
   // each rarity's actual median price at fit time and shipped in factors.json,

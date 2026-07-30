@@ -23,6 +23,7 @@ const OUT_FILE = join(HERE, 'training-data.json')
 const PROMO_STYLES_FILE = join(HERE, '..', 'src', 'data', 'promo-styles.json')
 const PRICE_EXCLUSIONS_FILE = join(HERE, '..', 'src', 'data', 'price-exclusions.json')
 const ARTWORK_RATINGS_FILE = join(HERE, '..', 'src', 'data', 'artwork-ratings.json')
+const TERA_TAGS_FILE = join(HERE, '..', 'src', 'data', 'tera-tags.json')
 
 let promoStyles = {}
 try {
@@ -31,6 +32,14 @@ try {
   // no tags yet
 }
 console.log(`${Object.keys(promoStyles).length} promo cards tagged with a style.`)
+
+let teraTags = {}
+try {
+  teraTags = JSON.parse(await readFile(TERA_TAGS_FILE, 'utf8'))
+} catch {
+  // no tags yet
+}
+console.log(`${Object.keys(teraTags).length} ex cards tagged as Tera.`)
 
 let artworkRatings = {}
 try {
@@ -101,7 +110,7 @@ for (const file of files) {
     rarity: effectiveRarity(card, promoStyles),
     artwork: artworkGrade(card.id, artworkRatings, promoStyles),
     illustrator: card.illustrator ?? null,
-    cardType: mapCardType(card),
+    cardType: mapCardType(card, teraTags),
     setId: card.set?.id ?? null,
     setName: card.set?.name ?? null,
     releaseDate: releaseDateBySet.get(card.set?.id) ?? null,

@@ -901,6 +901,89 @@ details.panel[open] summary {
   margin-bottom: 16px;
 }
 
+/* ---------- Tera ex tagging (/admin/tera) ---------- */
+
+.tera-set-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.tera-set-tab {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tera-set-tab.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* A tap target, not a form control — reset the button chrome. */
+.tera-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0 0 10px;
+  text-align: left;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.tera-card img {
+  width: 100%;
+  aspect-ratio: 733 / 1024;
+  object-fit: contain;
+  background: var(--surface-2);
+}
+
+.tera-card.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft), var(--shadow);
+}
+
+/* Non-Tera cards recede a touch so the tagged ones read at a glance. */
+.tera-card:not(.active) img {
+  opacity: 0.72;
+}
+
+.tera-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tera-card-name {
+  padding: 8px 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tera-card .muted {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
 .rating-card {
   display: flex;
   flex-direction: column;

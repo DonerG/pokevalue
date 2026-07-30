@@ -149,6 +149,55 @@ export async function loadArtworkCandidates(): Promise<ArtworkCandidate[]> {
   return mod.default as unknown as ArtworkCandidate[]
 }
 
+export interface TeraCandidate {
+  id: string
+  name: string
+  localId: string
+  image: string | null
+  rarity: string | null
+  setId: string
+  setName: string
+  releaseDate: string
+  market: number | null
+}
+
+/**
+ * Every ex card from the Scarlet & Violet-era sets, for the /admin/tera tagging
+ * page. Built on the fly from the already-shipped per-set card JSON (filtered
+ * to Scarlet & Violet sets, card type ex) rather than a separate generated
+ * candidate file — the set data is right there, and this list is only ever
+ * fetched by the one hidden admin page. Sorted set-by-set (newest first),
+ * number ascending, so the reviewer can work through a set at a time. Tera is a
+ * Scarlet & Violet mechanic, so Mega-era (me*) sets are deliberately excluded.
+ */
+export async function loadTeraCandidates(): Promise<TeraCandidate[]> {
+  const svSets = SETS.filter((s) => /^sv/.test(s.id))
+  const perSet = await Promise.all(
+    svSets.map(async (set) => {
+      const cards = await loadCards(set.id)
+      return cards
+        .filter((c) => c.cardType != null && /ex/i.test(c.cardType))
+        .map((c) => ({
+          id: c.id,
+          name: c.name,
+          localId: c.localId,
+          image: c.image,
+          rarity: c.rarity,
+          setId: set.id,
+          setName: set.name,
+          releaseDate: set.releaseDate,
+          market: c.market?.trend ?? null,
+        }))
+    }),
+  )
+  return perSet
+    .flat()
+    .sort(
+      (a, b) =>
+        b.releaseDate.localeCompare(a.releaseDate) || a.localId.localeCompare(b.localId, undefined, { numeric: true }),
+    )
+}
+
 export interface OutlierCandidate {
   id: string
   name: string

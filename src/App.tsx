@@ -9,6 +9,9 @@ import { CardPage } from './pages/CardPage'
 const AdminArtworkPage = lazy(() =>
   import('./pages/AdminArtworkPage').then((m) => ({ default: m.AdminArtworkPage })),
 )
+const AdminTeraPage = lazy(() =>
+  import('./pages/AdminTeraPage').then((m) => ({ default: m.AdminTeraPage })),
+)
 const AdminPriceAuditPage = lazy(() =>
   import('./pages/AdminPriceAuditPage').then((m) => ({ default: m.AdminPriceAuditPage })),
 )
@@ -64,6 +67,11 @@ function App() {
       {route.page === 'admin-artwork' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <AdminArtworkPage />
+        </Suspense>
+      )}
+      {route.page === 'admin-tera' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <AdminTeraPage />
         </Suspense>
       )}
       {route.page === 'admin-price-audit' && (

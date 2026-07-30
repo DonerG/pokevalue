@@ -31,6 +31,16 @@ const CACHE_SETS_DIR = join(HERE, '.cache', 'sets')
 const API = 'https://api.tcgdex.net/v2/en'
 const CONCURRENCY = 8
 
+// Hand-tagged Tera ex cards (see cardMapping.mjs). Loaded once here so the
+// cardType baked into each displayed card's JSON matches what computeCardPricing
+// scores it under — a tagged card shows "Tera ex" on its page and in training.
+let teraTags = {}
+try {
+  teraTags = JSON.parse(await readFile(join(OUT_DIR, '..', 'tera-tags.json'), 'utf8'))
+} catch {
+  // no tags yet
+}
+
 // Cards hand-reviewed via #/admin/price-audit — see build-training-data.mjs
 // for the "wrong" vs "verified" distinction. A "wrong" flag doesn't just
 // stop a card from corrupting other cards' factors during training — it
@@ -125,7 +135,7 @@ async function ingestSet(setId) {
       category: card.category ?? 'Pokemon',
       rarity: card.rarity ?? null,
       illustrator: card.illustrator ?? null,
-      cardType: mapCardType(card),
+      cardType: mapCardType(card, teraTags),
       dexIds,
       image: card.image ?? null,
       market: corrected

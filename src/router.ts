@@ -27,6 +27,7 @@ export type Route =
   | { page: 'card'; cardId: string }
   | { page: 'how-it-works' }
   | { page: 'admin-artwork' }
+  | { page: 'admin-tera' }
   | { page: 'admin-price-audit' }
 
 const SORT_KEYS: SetSortKey[] = ['number', 'deviation', 'market', 'fair']
@@ -48,6 +49,7 @@ export function parsePath(pathname: string, search: string): Route {
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: decodeURIComponent(parts[1]) }
   if (parts[0] === 'how-it-works') return { page: 'how-it-works' }
   if (parts[0] === 'admin' && parts[1] === 'artwork') return { page: 'admin-artwork' }
+  if (parts[0] === 'admin' && parts[1] === 'tera') return { page: 'admin-tera' }
   if (parts[0] === 'admin' && parts[1] === 'price-audit') return { page: 'admin-price-audit' }
   return { page: 'home' }
 }

@@ -134,12 +134,23 @@ export function isArtworkRateable(rarity) {
 
 const SPECIAL_STAGES = new Set(['VMAX', 'VSTAR', 'BREAK', 'V-UNION', 'LEVEL-UP', 'RESTORED'])
 
-export function mapCardType(card) {
+// A "Tera" Pokémon ex is a Scarlet & Violet-era treatment (the crystalline
+// card frame) that trades at a premium over a plain ex of the same rarity.
+// TCGdex does not mark it — checked: the Obsidian Flames Charizard ex, a Tera
+// card, carries no Tera field, subtype or rule text — so the distinction is
+// hand-tagged on /admin/tera and stored in src/data/tera-tags.json, then split
+// off into its own card type here. Only ex cards are ever tagged, so the split
+// can't reach V / GX / Mega / vintage EX (which stays "EX", separated from
+// modern ex by the card-type × year interaction as before).
+export const TERA_EX = 'Tera ex'
+
+export function mapCardType(card, teraTags) {
   const suffix = card.suffix ? card.suffix.toUpperCase() : null
   const stage = card.stage ?? null
   const isMega = stage === 'MEGA' || /^Mega\s/.test(card.name ?? '')
   if (isMega) return suffix ? `Mega ${suffix}` : 'Mega'
   if (stage && SPECIAL_STAGES.has(stage)) return stage
+  if (suffix === 'EX' && teraTags?.[card.id]) return TERA_EX
   if (suffix) return suffix
   return null
 }
