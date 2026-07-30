@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { defaultConfig } from './data/defaults'
 import { useRoute } from './router'
 import { useAdminUnlocked } from './logic/adminGate'
+import { seedAdminStores } from './logic/adminSeed'
 import { AdminBar } from './components/AdminBar'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
@@ -33,6 +34,12 @@ function App() {
   const route = useRoute()
   const unlocked = useAdminUnlocked()
   const onAdminRoute = ADMIN_PAGES.has(route.page)
+
+  // Once unlocked, load the committed data into the editing stores so the
+  // per-card editor reflects the real current state (see adminSeed).
+  useEffect(() => {
+    if (unlocked) seedAdminStores()
+  }, [unlocked])
 
   // Keep the admin area out of any index that runs JS. The pages are already
   // unlinked and absent from the sitemap; this is the belt to that's braces.

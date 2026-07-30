@@ -42,9 +42,10 @@ function UnlockForm() {
   )
 }
 
+// Artwork and Tera were bulk one-time passes and are done — both are now edited
+// per card from the Admin edit panel, so only the ongoing worklist stays here.
+// The bulk pages still exist at their URLs if a whole new set ever needs one.
 const TOOLS = [
-  { href: '/admin/tera', title: 'Tera ex tagging', desc: 'Mark which Scarlet & Violet ex cards are Tera, set by set.' },
-  { href: '/admin/artwork', title: 'Artwork rating', desc: 'Rate illustration quality on chase cards (10 / 9 / 8 / worse).' },
   { href: '/admin/price-audit', title: 'Price audit', desc: 'The biggest market-vs-fair gaps, to spot and fix bad Cardmarket prices.' },
 ]
 
@@ -61,7 +62,8 @@ export function AdminHubPage() {
           Everything in one place. Edit any card straight from its normal page — the site looks the
           same, but with the admin area unlocked each card page gains an <strong>Admin edit</strong>{' '}
           panel for its artwork rating, trend price and price warning. Bulk tools are below. When
-          you're done, <strong>Export all</strong> gives you one file to send back.
+          you're done, <strong>Export all</strong> gives you one file to send back. Artwork ratings
+          and Tera tags are edited per card from that panel now — the bulk pass is finished.
         </p>
         <div className="admin-toolbar">
           <button type="button" onClick={exportAllAdminData}>

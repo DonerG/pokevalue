@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { CardData } from '../data/cards'
 import { formatEuro } from '../logic/pricing'
 import { loadRatings, saveRatings } from '../logic/artworkRatings'
+import { loadTeraTags, saveTeraTags } from '../logic/teraTags'
 import { loadPriceExclusions, savePriceExclusions } from '../logic/priceExclusions'
 import { reviewKind } from '../logic/priceReview.js'
 import { loadPriceWarnings, savePriceWarnings, WARNING_PRESETS, type WarningKind } from '../logic/priceWarnings'
@@ -40,6 +41,9 @@ export function AdminCardControls({ card, onChange }: Props) {
   const kind = reviewKind(review)
   const warnings = loadPriceWarnings()
   const warning = warnings[card.id]
+  const isTera = !!loadTeraTags()[card.id]
+  // Tera is an ex-only treatment; the toggle only makes sense on an ex card.
+  const isEx = card.cardType != null && /ex/i.test(card.cardType)
 
   const [priceInput, setPriceInput] = useState(
     card.market?.trend != null ? String(card.market.trend) : '',
@@ -67,6 +71,14 @@ export function AdminCardControls({ card, onChange }: Props) {
   const saveCorrectedPrice = () => {
     const n = Number(priceInput.replace(',', '.'))
     if (Number.isFinite(n) && n > 0) saveReview({ corrected: n })
+  }
+
+  const toggleTera = () => {
+    const next = { ...loadTeraTags() }
+    if (next[card.id]) delete next[card.id]
+    else next[card.id] = true
+    saveTeraTags(next)
+    bump()
   }
 
   const setWarning = (wkind: WarningKind) => {
@@ -111,6 +123,21 @@ export function AdminCardControls({ card, onChange }: Props) {
           )}
         </div>
       </div>
+
+      {isEx && (
+        <div className="admin-edit-block">
+          <span className="admin-edit-label">Tera ex</span>
+          <div className="admin-edit-row">
+            <button
+              type="button"
+              className={isTera ? 'rating-btn active' : 'rating-btn'}
+              onClick={toggleTera}
+            >
+              {isTera ? 'Tera ✓ (tap to clear)' : 'Mark as Tera'}
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="admin-edit-block">
         <span className="admin-edit-label">
