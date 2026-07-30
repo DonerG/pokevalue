@@ -102,14 +102,31 @@ DISPLAYED_SETS = HERE.parent / "src" / "data" / "generated" / "sets.json"
 FACTORS_OUT = HERE / "factors.json"
 REPORT_OUT = HERE / "model_report.json"
 
-BROAD_CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName"]
-STANDARD_CATEGORIES = BROAD_CATEGORIES + ["rarityYear", "cardTypeYear", "artwork"]
+# The three variants differ on ONE axis only: the time-and-place window they
+# compare a card against. Everything that describes what the card intrinsically
+# IS — Pokémon (with its tier exponent), rarity, illustrator, set, card type,
+# card name, artwork — is shared by all three. The two things that get added,
+# one per step, are the only context terms:
+#   broad  -> standard : the ERA interaction (how this rarity / card type is
+#                        priced in the card's own release year, vs the all-time
+#                        average the base rarity/type factors carry).
+#   standard -> local  : the SET interaction (how this rarity is priced inside
+#                        this specific set).
+# So a broad↔standard disagreement is purely an era effect, and a
+# standard↔local disagreement is purely a within-set effect — which is exactly
+# what the three on-site sentences claim ("vs the broad average" / "vs cards
+# from this era" / "vs the same rarity in this set"). The tier exponent is in
+# all three deliberately: it's a non-linearity on the Pokémon factor, not a
+# context term, so leaving it out of broad would smuggle a second difference
+# into the broad↔standard step and blur the clean "era only" reading.
+BROAD_CATEGORIES = ["pokemon", "rarity", "illustrator", "set", "cardType", "cardName", "artwork"]
+STANDARD_CATEGORIES = BROAD_CATEGORIES + ["rarityYear", "cardTypeYear"]
 LOCAL_CATEGORIES = STANDARD_CATEGORIES + ["raritySet"]
 ALL_CATEGORIES = LOCAL_CATEGORIES
 
 # Mirrors VARIANT_CATEGORIES in scripts/lib/factors.mjs — keep both in sync.
 VARIANTS = {
-    "broad": {"categories": BROAD_CATEGORIES, "tier_exponent": False},
+    "broad": {"categories": BROAD_CATEGORIES, "tier_exponent": True},
     "standard": {"categories": STANDARD_CATEGORIES, "tier_exponent": True},
     "local": {"categories": LOCAL_CATEGORIES, "tier_exponent": True},
 }

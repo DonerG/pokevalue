@@ -20,11 +20,15 @@ const FACTORS_PATH = join(HERE, '..', '..', 'analysis', 'factors.json')
 const PROMO_STYLES_PATH = join(HERE, '..', '..', 'src', 'data', 'promo-styles.json')
 const ARTWORK_RATINGS_PATH = join(HERE, '..', '..', 'src', 'data', 'artwork-ratings.json')
 
-// Mirrors VARIANTS in analysis/fit_factors.py — keep both in sync.
+// Mirrors VARIANTS in analysis/fit_factors.py — keep both in sync. The three
+// differ only in the comparison window: broad shares every intrinsic-attribute
+// factor (artwork included) and the tier exponent, standard adds the ERA terms,
+// local adds the SET term. So broad↔standard is a pure era effect and
+// standard↔local a pure within-set effect.
 const VARIANT_CATEGORIES = {
-  broad: ['pokemon', 'rarity', 'illustrator', 'set', 'cardType', 'cardName'],
-  standard: ['pokemon', 'rarity', 'illustrator', 'set', 'cardType', 'cardName', 'rarityYear', 'cardTypeYear', 'artwork'],
-  local: ['pokemon', 'rarity', 'illustrator', 'set', 'cardType', 'cardName', 'rarityYear', 'cardTypeYear', 'artwork', 'raritySet'],
+  broad: ['pokemon', 'rarity', 'illustrator', 'set', 'cardType', 'cardName', 'artwork'],
+  standard: ['pokemon', 'rarity', 'illustrator', 'set', 'cardType', 'cardName', 'artwork', 'rarityYear', 'cardTypeYear'],
+  local: ['pokemon', 'rarity', 'illustrator', 'set', 'cardType', 'cardName', 'artwork', 'rarityYear', 'cardTypeYear', 'raritySet'],
 }
 
 let cachedArtworkRatings = null

@@ -36,17 +36,21 @@ A website that estimates a fair price for Pokémon cards with a regression model
 
 `analysis/fit_factors.py` fits a log-linear ridge regression — in price terms, purely multiplicative — on `scripts/training-data.json` (~19,000 English-language cards with a real Cardmarket price). **It is fitted three times**, as three variants that differ only in how finely they slice a card's comparison group:
 
-| variant | adds | answers |
+The three differ on **one axis only: the time-and-place window** a card is compared against. Everything that describes what the card intrinsically *is* — Pokémon (with its tier exponent), rarity, illustrator, set, card type, card name, artwork — is shared by all three. Each step adds exactly one *context* term:
+
+| variant | adds | compares the card against |
 |---|---|---|
-| **broad** | Pokémon, rarity, illustrator, set, card type, card name | "cheap for this kind of card, anywhere?" |
-| **standard** | + rarity × year, card type × year, artwork, Pokémon tier exponent | the balanced default |
-| **local** | + rarity × set | "cheap next to its direct neighbours?" |
+| **broad** | (the shared base factors + tier exponent) | the all-time average for a card like this |
+| **standard** | + rarity × year, card type × year | cards of its kind **from its own era** |
+| **local** | + rarity × set | the **same rarity within its own set** |
 
 ```
 fair price (standard) = typical card (€0.71) × factor(Pokémon)^tierExponent × factor(rarity)
                         × factor(illustrator) × factor(set) × factor(card type) × factor(card name)
-                        × factor(rarity × year) × factor(card type × year) × factor(artwork)
+                        × factor(artwork) × factor(rarity × year) × factor(card type × year)
 ```
+
+Because only the context terms move between variants, a **broad↔standard** disagreement is purely an *era* effect (this rarity/type is priced differently now than its all-time average) and a **standard↔local** disagreement is purely a *within-set* effect. The tier exponent sits in all three deliberately — it's a non-linearity on the Pokémon factor, not a context term, so excluding it from broad would smuggle a second difference into the broad↔standard step and blur the clean "era only" reading. Earlier, broad also lacked artwork and the tier exponent, which made a broad↔standard gap ambiguous (era, or artwork, or popularity?); folding both into the shared base fixed that and nudged broad's own out-of-fold error from 33.3% to 32.4%.
 
 **Why three:** the variants answer genuinely different questions, and any single choice silently decides the question for the visitor. Measured symptoms of picking one: with only coarse terms, Black Bolt (a set that is 40% expensive Illustration Rares) polluted the 2025 rarity-year bucket and made every ordinary 2025 IR read as a fake bargain; with rarity × set, only 5 of 147 (set, rarity) groups could still be flagged as collectively mispriced, versus 34 without it — the model had absorbed the very signal the site exists to show.
 
@@ -76,13 +80,13 @@ Regularization strength is picked via 5-fold cross-validation; a 60-resample boo
 
 **Trained on more sets than are displayed.** The site shows only the Scarlet & Violet + Mega Evolution main sets (`src/data/generated/sets.json`), but the model fits on TCGdex's full English catalog — ~170 sets back to 1999. That breadth is deliberate: a Pokémon or illustrator with only 2 appearances across the displayed sets but 40 across history would otherwise get a near-meaningless factor. Rows from non-displayed sets are down-weighted to 0.2× (`TRAINING_ONLY_WEIGHT`) — swept, and both dropping them entirely and counting them fully score worse. Alpha and every reported number come *only* from held-out displayed-set cards.
 
-**Accuracy, measured the way the site is used** — median error vs. the trend price, on the displayed sets, cross-validated: **27.9% median, 38% of cards within 20%**. Broken out by price, because one median over four orders of magnitude hides exactly what matters:
+**Accuracy, measured the way the site is used** — median error vs. the trend price, on the displayed sets, cross-validated: **27.6% median, 38% of cards within 20%**. Broken out by price, because one median over four orders of magnitude hides exactly what matters:
 
 | price band | median error |
 |---|---|
 | under €0.30 (62% of all cards) | 25% |
-| €0.30 – €3 | 31% |
-| €3 – €30 | 34% |
+| €0.30 – €3 | 30% |
+| €3 – €30 | 33% |
 | €30+ | 43% |
 
 Over half of all cards trade under €0.30, where Cardmarket's 1-cent price steps alone floor the achievable error — so the headline is dominated by cards nobody looks up, and the expensive end is where this is genuinely hardest. For reference: two *real* price fields for the same card (`avg30` vs `trend`) differ by a median 11.6%, and predicting every card by the median of its own set × rarity group scores 31.7% — so the model is doing real work beyond a lookup table, but a large part of what's left is genuine market noise no card-attribute model can reach.

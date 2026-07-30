@@ -19,12 +19,12 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04173209034576133,
+  "baseValue": 0.040231874040585106,
   "factors": {
    "pokemon": {
     "key": "102",
-    "factor": 0.8686,
-    "displayFactor": 0.8686,
+    "factor": 0.8685,
+    "displayFactor": 0.8685,
     "n": 32,
     "usedFallback": false,
     "tier": "bulk",
@@ -65,6 +65,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -78,18 +85,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.042956,
-   "standard": 0.041732,
+   "broad": 0.040232,
+   "standard": 0.041721,
    "local": 0.035843
   }
  },
@@ -113,7 +113,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03454136886135476,
+  "baseValue": 0.034541368861354754,
   "factors": {
    "pokemon": {
     "key": "103",
@@ -159,6 +159,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -172,18 +179,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.033231,
-   "standard": 0.035095,
+   "broad": 0.033524,
+   "standard": 0.03509,
    "local": 0.034541
   }
  },
@@ -207,7 +207,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.031943342844281866,
+  "baseValue": 0.031938826607487834,
   "factors": {
    "pokemon": {
     "key": "127",
@@ -253,6 +253,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -266,18 +273,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.036452,
-   "standard": 0.031943,
+   "broad": 0.034699,
+   "standard": 0.031939,
    "local": 0.029236
   }
  },
@@ -301,7 +301,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05079965754707496,
+  "baseValue": 0.050792475353161906,
   "factors": {
    "pokemon": {
     "key": "406",
@@ -347,6 +347,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -360,18 +367,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.052556,
-   "standard": 0.0508,
+   "broad": 0.052889,
+   "standard": 0.050792,
    "local": 0.048111
   }
  },
@@ -441,6 +441,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -454,18 +461,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.22674,
-   "standard": 0.1411,
+   "broad": 0.19782,
+   "standard": 0.14108,
    "local": 0.15776
   }
  },
@@ -489,7 +489,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.5890018189156325,
+  "baseValue": 1.693019434520301,
   "factors": {
    "pokemon": {
     "key": "470",
@@ -523,8 +523,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -533,6 +533,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -548,18 +555,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.589,
-   "standard": 1.4568,
+   "broad": 1.693,
+   "standard": 1.4567,
    "local": 1.9613
   }
  },
@@ -583,7 +583,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.024245561708087032,
+  "baseValue": 0.02424213380455132,
   "factors": {
    "pokemon": {
     "key": "546",
@@ -629,6 +629,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -642,18 +649,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.027864,
-   "standard": 0.024246,
+   "broad": 0.02501,
+   "standard": 0.024242,
    "local": 0.022546
   }
  },
@@ -677,7 +677,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.06034750535183831,
+  "baseValue": 0.05784932825838033,
   "factors": {
    "pokemon": {
     "key": "547",
@@ -723,6 +723,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -736,18 +743,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.060348,
-   "standard": 0.050062,
+   "broad": 0.057849,
+   "standard": 0.050055,
    "local": 0.061042
   }
  },
@@ -771,7 +771,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.045201463748289726,
+  "baseValue": 0.04519507304226,
   "factors": {
    "pokemon": {
     "key": "840",
@@ -817,6 +817,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -830,18 +837,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.048522,
-   "standard": 0.045201,
+   "broad": 0.045965,
+   "standard": 0.045195,
    "local": 0.041031
   }
  },
@@ -865,7 +865,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.050058754529876064,
+  "baseValue": 0.05005167708684908,
   "factors": {
    "pokemon": {
     "key": "1011",
@@ -911,6 +911,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -924,18 +931,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.054368,
-   "standard": 0.050059,
+   "broad": 0.053435,
+   "standard": 0.050052,
    "local": 0.046994
   }
  },
@@ -959,7 +959,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.629053223394381,
+  "baseValue": 0.6011859650770724,
   "factors": {
    "pokemon": {
     "key": "1019",
@@ -993,8 +993,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -1003,6 +1003,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -1018,18 +1025,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.62905,
-   "standard": 0.58552,
+   "broad": 0.60119,
+   "standard": 0.58546,
    "local": 0.9128
   }
  },
@@ -1053,7 +1053,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.6769274474467791,
+  "baseValue": 0.713742509904875,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -1087,8 +1087,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -1097,6 +1097,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -1112,18 +1119,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.67693,
-   "standard": 0.63176,
+   "broad": 0.71374,
+   "standard": 0.6317,
    "local": 0.87054
   }
  },
@@ -1147,7 +1147,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.1866248227895811,
+  "baseValue": 0.18662482278958106,
   "factors": {
    "pokemon": {
     "key": "136",
@@ -1193,6 +1193,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -1206,18 +1213,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.23998,
-   "standard": 0.17269,
+   "broad": 0.24232,
+   "standard": 0.17267,
    "local": 0.18662
   }
  },
@@ -1241,7 +1241,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.234335798651362,
+  "baseValue": 2.4239152293133683,
   "factors": {
    "pokemon": {
     "key": "136",
@@ -1275,8 +1275,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -1285,6 +1285,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -1300,18 +1307,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 2.2343,
-   "standard": 1.9953,
+   "broad": 2.4239,
+   "standard": 1.9951,
    "local": 2.6093
   }
  },
@@ -1335,7 +1335,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03227048287187681,
+  "baseValue": 0.030468082615167952,
   "factors": {
    "pokemon": {
     "key": "667",
@@ -1381,6 +1381,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -1394,18 +1401,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.033105,
-   "standard": 0.03227,
+   "broad": 0.030468,
+   "standard": 0.032266,
    "local": 0.030445
   }
  },
@@ -1429,7 +1429,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.030445531686616158,
+  "baseValue": 0.029810780593857018,
   "factors": {
    "pokemon": {
     "key": "668",
@@ -1475,6 +1475,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -1488,18 +1495,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.030446,
-   "standard": 0.03071,
+   "broad": 0.029811,
+   "standard": 0.030706,
    "local": 0.029307
   }
  },
@@ -1523,7 +1523,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.6769274474467791,
+  "baseValue": 0.713742509904875,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -1557,8 +1557,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -1567,6 +1567,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -1582,18 +1589,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.67693,
-   "standard": 0.63176,
+   "broad": 0.71374,
+   "standard": 0.6317,
    "local": 0.87054
   }
  },
@@ -1617,7 +1617,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05363801634109699,
+  "baseValue": 0.05289585060068104,
   "factors": {
    "pokemon": {
     "key": "79",
@@ -1663,6 +1663,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -1676,18 +1683,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.058305,
-   "standard": 0.053638,
+   "broad": 0.052896,
+   "standard": 0.05363,
    "local": 0.048217
   }
  },
@@ -1711,7 +1711,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0603107943100776,
+  "baseValue": 0.060302267405749864,
   "factors": {
    "pokemon": {
     "key": "199",
@@ -1757,6 +1757,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -1770,18 +1777,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.067233,
-   "standard": 0.060311,
+   "broad": 0.067875,
+   "standard": 0.060302,
    "local": 0.057828
   }
  },
@@ -1805,7 +1805,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.041839327047196,
+  "baseValue": 0.04050836206907691,
   "factors": {
    "pokemon": {
     "key": "118",
@@ -1851,6 +1851,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -1864,18 +1871,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.043095,
-   "standard": 0.041839,
+   "broad": 0.040508,
+   "standard": 0.041833,
    "local": 0.039552
   }
  },
@@ -1899,7 +1899,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03850201293788465,
+  "baseValue": 0.03849656941845331,
   "factors": {
    "pokemon": {
     "key": "119",
@@ -1945,6 +1945,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -1958,18 +1965,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.044198,
-   "standard": 0.038502,
+   "broad": 0.041356,
+   "standard": 0.038497,
    "local": 0.036803
   }
  },
@@ -2039,6 +2039,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -2052,18 +2059,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.30509,
-   "standard": 0.18671,
+   "broad": 0.30447,
+   "standard": 0.18668,
    "local": 0.19384
   }
  },
@@ -2087,7 +2087,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.3747023195402868,
+  "baseValue": 2.6525976648339187,
   "factors": {
    "pokemon": {
     "key": "134",
@@ -2121,8 +2121,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -2131,6 +2131,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -2146,18 +2153,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 2.3747,
-   "standard": 2.2307,
+   "broad": 2.6526,
+   "standard": 2.2305,
    "local": 2.892
   }
  },
@@ -2181,7 +2181,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.08020620936562388,
+  "baseValue": 0.08019486959333974,
   "factors": {
    "pokemon": {
     "key": "245",
@@ -2227,6 +2227,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -2240,18 +2247,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.0979,
-   "standard": 0.080206,
+   "broad": 0.08957,
+   "standard": 0.080195,
    "local": 0.078076
   }
  },
@@ -2275,7 +2275,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.13323824747895438,
+  "baseValue": 0.1332382474789544,
   "factors": {
    "pokemon": {
     "key": "471",
@@ -2321,6 +2321,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -2334,18 +2341,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.15505,
-   "standard": 0.11959,
+   "broad": 0.14905,
+   "standard": 0.11957,
    "local": 0.13324
   }
  },
@@ -2369,7 +2369,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.5514665593150554,
+  "baseValue": 1.6112213129200614,
   "factors": {
    "pokemon": {
     "key": "471",
@@ -2403,8 +2403,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -2413,6 +2413,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -2428,18 +2435,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.5515,
-   "standard": 1.4159,
+   "broad": 1.6112,
+   "standard": 1.4157,
    "local": 1.884
   }
  },
@@ -2463,7 +2463,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.6769274474467791,
+  "baseValue": 0.713742509904875,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -2497,8 +2497,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -2507,6 +2507,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -2522,18 +2529,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.67693,
-   "standard": 0.63176,
+   "broad": 0.71374,
+   "standard": 0.6317,
    "local": 0.87054
   }
  },
@@ -2557,7 +2557,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 3.076783735561783,
+  "baseValue": 3.076487461994291,
   "factors": {
    "pokemon": {
     "key": "25",
@@ -2591,8 +2591,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -2601,6 +2601,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -2616,18 +2623,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 2.95,
-   "standard": 3.0768,
+   "broad": 2.8354,
+   "standard": 3.0765,
    "local": 4.4671
   }
  },
@@ -2651,7 +2651,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.1208949610406724,
+  "baseValue": 0.12089496104067238,
   "factors": {
    "pokemon": {
     "key": "135",
@@ -2697,6 +2697,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -2710,18 +2717,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.19199,
-   "standard": 0.11262,
+   "broad": 0.17909,
+   "standard": 0.11261,
    "local": 0.12089
   }
  },
@@ -2745,7 +2745,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.4697562792262948,
+  "baseValue": 1.479119596740986,
   "factors": {
    "pokemon": {
     "key": "135",
@@ -2779,8 +2779,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -2789,6 +2789,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -2804,18 +2811,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.4698,
-   "standard": 1.2513,
+   "broad": 1.4791,
+   "standard": 1.2512,
    "local": 1.6875
   }
  },
@@ -2839,7 +2839,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.6046589137653172,
+  "baseValue": 0.6470049642884099,
   "factors": {
    "pokemon": {
     "key": "992",
@@ -2873,8 +2873,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -2883,6 +2883,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -2898,18 +2905,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.60466,
-   "standard": 0.59504,
+   "broad": 0.647,
+   "standard": 0.59498,
    "local": 0.80701
   }
  },
@@ -2933,7 +2933,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.5974851148354102,
+  "baseValue": 0.5533324219939866,
   "factors": {
    "pokemon": {
     "key": "995",
@@ -2967,8 +2967,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -2977,6 +2977,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -2992,18 +2999,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.59749,
-   "standard": 0.54578,
+   "broad": 0.55333,
+   "standard": 0.54573,
    "local": 0.75193
   }
  },
@@ -3027,7 +3027,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.20319836462792834,
+  "baseValue": 0.20319836462792837,
   "factors": {
    "pokemon": {
     "key": "196",
@@ -3073,6 +3073,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -3086,18 +3093,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.3303,
-   "standard": 0.19325,
+   "broad": 0.3348,
+   "standard": 0.19322,
    "local": 0.2032
   }
  },
@@ -3121,7 +3121,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.433313042369143,
+  "baseValue": 2.6695046836236926,
   "factors": {
    "pokemon": {
     "key": "196",
@@ -3155,8 +3155,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -3165,6 +3165,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -3180,18 +3187,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 2.4333,
-   "standard": 2.1591,
+   "broad": 2.6695,
+   "standard": 2.1589,
    "local": 2.8626
   }
  },
@@ -3215,7 +3215,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0489759024347004,
+  "baseValue": 0.0487017580963764,
   "factors": {
    "pokemon": {
     "key": "355",
@@ -3261,6 +3261,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -3274,18 +3281,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.048976,
-   "standard": 0.052684,
+   "broad": 0.047796,
+   "standard": 0.052676,
    "local": 0.048702
   }
  },
@@ -3309,7 +3309,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.043912399959027376,
+  "baseValue": 0.04390619150434634,
   "factors": {
    "pokemon": {
     "key": "356",
@@ -3355,6 +3355,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -3368,18 +3375,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.054883,
-   "standard": 0.043912,
+   "broad": 0.053252,
+   "standard": 0.043906,
    "local": 0.039564
   }
  },
@@ -3403,7 +3403,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.08926056432137928,
+  "baseValue": 0.08616852045971904,
   "factors": {
    "pokemon": {
     "key": "477",
@@ -3449,6 +3449,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -3462,18 +3469,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.098917,
-   "standard": 0.080864,
+   "broad": 0.086169,
+   "standard": 0.080853,
    "local": 0.089261
   }
  },
@@ -3497,7 +3497,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03429390115460577,
+  "baseValue": 0.03428905258947717,
   "factors": {
    "pokemon": {
     "key": "682",
@@ -3543,6 +3543,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -3556,18 +3563,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03595,
-   "standard": 0.034294,
+   "broad": 0.036139,
+   "standard": 0.034289,
    "local": 0.03225
   }
  },
@@ -3591,7 +3591,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03940815987338794,
+  "baseValue": 0.03940258824043539,
   "factors": {
    "pokemon": {
     "key": "683",
@@ -3637,6 +3637,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -3650,18 +3657,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.04352,
-   "standard": 0.039408,
+   "broad": 0.043955,
+   "standard": 0.039403,
    "local": 0.035577
   }
  },
@@ -3731,6 +3731,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -3744,18 +3751,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.1975,
-   "standard": 0.13067,
+   "broad": 0.1995,
+   "standard": 0.13065,
    "local": 0.145
   }
  },
@@ -3779,7 +3779,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.7068392931916645,
+  "baseValue": 1.7881234331050568,
   "factors": {
    "pokemon": {
     "key": "700",
@@ -3813,8 +3813,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -3823,6 +3823,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -3838,18 +3845,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.7068,
-   "standard": 1.5755,
+   "broad": 1.7881,
+   "standard": 1.5753,
    "local": 2.1831
   }
  },
@@ -3873,7 +3873,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.033024054467172194,
+  "baseValue": 0.0330240544671722,
   "factors": {
    "pokemon": {
     "key": "985",
@@ -3919,6 +3919,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -3932,18 +3939,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.030798,
-   "standard": 0.034828,
+   "broad": 0.02925,
+   "standard": 0.034823,
    "local": 0.033024
   }
  },
@@ -3967,7 +3967,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.069966913262096,
+  "baseValue": 0.06848231924014608,
   "factors": {
    "pokemon": {
     "key": "987",
@@ -4013,6 +4013,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -4026,18 +4033,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.069967,
-   "standard": 0.068492,
+   "broad": 0.065643,
+   "standard": 0.068482,
    "local": 0.078977
   }
  },
@@ -4061,7 +4061,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0899386541260514,
+  "baseValue": 0.09500750816927697,
   "factors": {
    "pokemon": {
     "key": "1015",
@@ -4107,6 +4107,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -4120,18 +4127,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.089939,
-   "standard": 0.089114,
+   "broad": 0.095008,
+   "standard": 0.089101,
    "local": 0.099067
   }
  },
@@ -4201,6 +4201,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -4214,18 +4221,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.12506,
-   "standard": 0.086906,
+   "broad": 0.11756,
+   "standard": 0.086893,
    "local": 0.09489
   }
  },
@@ -4249,7 +4249,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.07185825773431231,
+  "baseValue": 0.07114659072229672,
   "factors": {
    "pokemon": {
     "key": "1022",
@@ -4295,6 +4295,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -4308,18 +4315,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.071858,
-   "standard": 0.065266,
+   "broad": 0.071147,
+   "standard": 0.065256,
    "local": 0.072794
   }
  },
@@ -4343,7 +4343,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.028963656324046436,
+  "baseValue": 0.02861688126861852,
   "factors": {
    "pokemon": {
     "key": "246",
@@ -4389,6 +4389,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -4402,18 +4409,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.031288,
-   "standard": 0.028964,
+   "broad": 0.028617,
+   "standard": 0.02896,
    "local": 0.027695
   }
  },
@@ -4437,7 +4437,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.02986091381969665,
+  "baseValue": 0.02985669200238861,
   "factors": {
    "pokemon": {
     "key": "247",
@@ -4483,6 +4483,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -4496,18 +4503,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.033892,
-   "standard": 0.029861,
+   "broad": 0.031207,
+   "standard": 0.029857,
    "local": 0.027657
   }
  },
@@ -4577,6 +4577,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -4590,18 +4597,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.13669,
-   "standard": 0.11173,
+   "broad": 0.13793,
+   "standard": 0.11171,
    "local": 0.12476
   }
  },
@@ -4625,7 +4625,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.051193855291500875,
+  "baseValue": 0.051186617364837296,
   "factors": {
    "pokemon": {
     "key": "447",
@@ -4671,6 +4671,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -4684,18 +4691,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.058736,
-   "standard": 0.051194,
+   "broad": 0.055948,
+   "standard": 0.051187,
    "local": 0.044312
   }
  },
@@ -4719,7 +4719,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.0676615638596005,
+  "baseValue": 1.0210825634510952,
   "factors": {
    "pokemon": {
     "key": "448",
@@ -4753,8 +4753,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -4763,6 +4763,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -4778,18 +4785,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.0677,
-   "standard": 1.0212,
+   "broad": 1.0175,
+   "standard": 1.0211,
    "local": 1.418
   }
  },
@@ -4813,7 +4813,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.040025886876221266,
+  "baseValue": 0.04002022790734296,
   "factors": {
    "pokemon": {
     "key": "449",
@@ -4859,6 +4859,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -4872,18 +4879,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.041788,
-   "standard": 0.040026,
+   "broad": 0.040168,
+   "standard": 0.04002,
    "local": 0.037437
   }
  },
@@ -4907,7 +4907,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.02874738790521315,
+  "baseValue": 0.028472283115323738,
   "factors": {
    "pokemon": {
     "key": "450",
@@ -4953,6 +4953,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -4966,18 +4973,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03009,
-   "standard": 0.028747,
+   "broad": 0.028472,
+   "standard": 0.028743,
    "local": 0.026322
   }
  },
@@ -5021,8 +5021,8 @@
    },
    "illustrator": {
     "key": "Souichirou Gunjima",
-    "factor": 0.9575,
-    "displayFactor": 0.9575,
+    "factor": 0.9576,
+    "displayFactor": 0.9576,
     "n": 100,
     "usedFallback": false
    },
@@ -5047,6 +5047,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -5060,18 +5067,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.079503,
-   "standard": 0.069984,
+   "broad": 0.083618,
+   "standard": 0.069981,
    "local": 0.078953
   }
  },
@@ -5141,6 +5141,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -5154,18 +5161,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.02853,
-   "standard": 0.034064,
+   "broad": 0.027466,
+   "standard": 0.034059,
    "local": 0.033411
   }
  },
@@ -5189,7 +5189,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.529866732842625,
+  "baseValue": 0.531431155152186,
   "factors": {
    "pokemon": {
     "key": "989",
@@ -5223,8 +5223,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -5233,6 +5233,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -5248,18 +5255,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.52987,
-   "standard": 0.51126,
+   "broad": 0.53143,
+   "standard": 0.51121,
    "local": 0.69432
   }
  },
@@ -5283,7 +5283,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.06413228886834033,
+  "baseValue": 0.06487639569911538,
   "factors": {
    "pokemon": {
     "key": "1014",
@@ -5303,8 +5303,8 @@
    },
    "illustrator": {
     "key": "Souichirou Gunjima",
-    "factor": 0.9575,
-    "displayFactor": 0.9575,
+    "factor": 0.9576,
+    "displayFactor": 0.9576,
     "n": 100,
     "usedFallback": false
    },
@@ -5329,6 +5329,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -5342,18 +5349,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.059559,
-   "standard": 0.064132,
+   "broad": 0.064876,
+   "standard": 0.06413,
    "local": 0.070198
   }
  },
@@ -5377,7 +5377,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.6769274474467791,
+  "baseValue": 0.713742509904875,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -5411,8 +5411,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -5421,6 +5421,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -5436,18 +5443,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.67693,
-   "standard": 0.63176,
+   "broad": 0.71374,
+   "standard": 0.6317,
    "local": 0.87054
   }
  },
@@ -5471,7 +5471,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.34521568872870245,
+  "baseValue": 0.3452156887287025,
   "factors": {
    "pokemon": {
     "key": "197",
@@ -5517,6 +5517,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -5530,18 +5537,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.48031,
-   "standard": 0.32394,
+   "broad": 0.5165,
+   "standard": 0.3239,
    "local": 0.34522
   }
  },
@@ -5565,7 +5565,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 5.362152627805598,
+  "baseValue": 6.562255278770374,
   "factors": {
    "pokemon": {
     "key": "197",
@@ -5599,8 +5599,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -5609,6 +5609,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -5624,18 +5631,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 5.3281,
-   "standard": 5.3622,
+   "broad": 6.5623,
+   "standard": 5.3616,
    "local": 6.8824
   }
  },
@@ -5659,7 +5659,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03208608242778835,
+  "baseValue": 0.03245419156744214,
   "factors": {
    "pokemon": {
     "key": "215",
@@ -5705,6 +5705,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -5718,18 +5725,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.032086,
-   "standard": 0.032607,
+   "broad": 0.032454,
+   "standard": 0.032602,
    "local": 0.030089
   }
  },
@@ -5753,7 +5753,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.026478260902051468,
+  "baseValue": 0.026474517333424003,
   "factors": {
    "pokemon": {
     "key": "228",
@@ -5799,6 +5799,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -5812,18 +5819,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03036,
-   "standard": 0.026478,
+   "broad": 0.02654,
+   "standard": 0.026475,
    "local": 0.025071
   }
  },
@@ -5847,7 +5847,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05118344419891003,
+  "baseValue": 0.051176207744195075,
   "factors": {
    "pokemon": {
     "key": "229",
@@ -5893,6 +5893,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -5906,18 +5913,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.065613,
-   "standard": 0.051183,
+   "broad": 0.061059,
+   "standard": 0.051176,
    "local": 0.045904
   }
  },
@@ -5941,7 +5941,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.2710430477735088,
+  "baseValue": 1.2078746010796177,
   "factors": {
    "pokemon": {
     "key": "248",
@@ -5975,8 +5975,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -5985,6 +5985,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -6000,18 +6007,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.271,
-   "standard": 1.0888,
+   "broad": 1.2079,
+   "standard": 1.0887,
    "local": 1.5846
   }
  },
@@ -6035,7 +6035,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.08257844367397353,
+  "baseValue": 0.08188523207567468,
   "factors": {
    "pokemon": {
     "key": "1005",
@@ -6081,6 +6081,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -6094,18 +6101,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.082578,
-   "standard": 0.081897,
+   "broad": 0.080501,
+   "standard": 0.081885,
    "local": 0.089825
   }
  },
@@ -6129,7 +6129,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.02857689522415166,
+  "baseValue": 0.028213304279797367,
   "factors": {
    "pokemon": {
     "key": "436",
@@ -6149,8 +6149,8 @@
    },
    "illustrator": {
     "key": "Souichirou Gunjima",
-    "factor": 0.9575,
-    "displayFactor": 0.9575,
+    "factor": 0.9576,
+    "displayFactor": 0.9576,
     "n": 100,
     "usedFallback": false
    },
@@ -6175,6 +6175,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -6188,18 +6195,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.028577,
-   "standard": 0.030925,
+   "broad": 0.028213,
+   "standard": 0.030924,
    "local": 0.027839
   }
  },
@@ -6223,12 +6223,12 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.036348525414146765,
+  "baseValue": 0.036338900076685464,
   "factors": {
    "pokemon": {
     "key": "437",
-    "factor": 0.8101,
-    "displayFactor": 0.8101,
+    "factor": 0.81,
+    "displayFactor": 0.81,
     "n": 28,
     "usedFallback": false,
     "tier": "bulk",
@@ -6269,6 +6269,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -6282,18 +6289,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.038153,
-   "standard": 0.036349,
+   "broad": 0.038303,
+   "standard": 0.036339,
    "local": 0.032706
   }
  },
@@ -6317,7 +6317,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.039112486189462795,
+  "baseValue": 0.0391124861894628,
   "factors": {
    "pokemon": {
     "key": "485",
@@ -6363,6 +6363,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -6376,18 +6383,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03474,
-   "standard": 0.04036,
+   "broad": 0.035978,
+   "standard": 0.040355,
    "local": 0.039112
   }
  },
@@ -6411,7 +6411,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.026585748905721098,
+  "baseValue": 0.026189499516788884,
   "factors": {
    "pokemon": {
     "key": "884",
@@ -6457,6 +6457,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -6470,18 +6477,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.026719,
-   "standard": 0.026586,
+   "broad": 0.026189,
+   "standard": 0.026582,
    "local": 0.024424
   }
  },
@@ -6505,7 +6505,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.059583826148458384,
+  "baseValue": 0.061506653434677726,
   "factors": {
    "pokemon": {
     "key": "1018",
@@ -6551,6 +6551,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -6564,18 +6571,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.059584,
-   "standard": 0.057419,
+   "broad": 0.061507,
+   "standard": 0.057411,
    "local": 0.065492
   }
  },
@@ -6599,7 +6599,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.039050800752040114,
+  "baseValue": 0.039045279643493226,
   "factors": {
    "pokemon": {
     "key": "885",
@@ -6645,6 +6645,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -6658,18 +6665,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.040339,
-   "standard": 0.039051,
+   "broad": 0.03932,
+   "standard": 0.039045,
    "local": 0.034558
   }
  },
@@ -6693,7 +6693,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04390255429646519,
+  "baseValue": 0.043900851271060755,
   "factors": {
    "pokemon": {
     "key": "886",
@@ -6713,8 +6713,8 @@
    },
    "illustrator": {
     "key": "cochi8i",
-    "factor": 0.9746,
-    "displayFactor": 0.9746,
+    "factor": 0.9747,
+    "displayFactor": 0.9747,
     "n": 14,
     "usedFallback": false
    },
@@ -6739,6 +6739,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -6752,18 +6759,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.047623,
-   "standard": 0.043903,
+   "broad": 0.045895,
+   "standard": 0.043901,
    "local": 0.040259
   }
  },
@@ -6787,7 +6787,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.014247118021858,
+  "baseValue": 1.0340000629396289,
   "factors": {
    "pokemon": {
     "key": "887",
@@ -6821,8 +6821,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -6831,6 +6831,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -6846,18 +6853,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.0142,
-   "standard": 0.8906,
+   "broad": 1.034,
+   "standard": 0.89051,
    "local": 1.2413
   }
  },
@@ -6881,7 +6881,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.09880262922756342,
+  "baseValue": 0.09878866024280057,
   "factors": {
    "pokemon": {
     "key": "133",
@@ -6927,6 +6927,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -6940,18 +6947,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.12898,
-   "standard": 0.098803,
+   "broad": 0.11451,
+   "standard": 0.098789,
    "local": 0.08695
   }
  },
@@ -6975,7 +6975,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.0583805188101056,
+  "baseValue": 1.9809823285733155,
   "factors": {
    "pokemon": {
     "key": "133",
@@ -7009,8 +7009,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -7019,6 +7019,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -7034,18 +7041,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 2.0584,
-   "standard": 1.9812,
+   "broad": 1.979,
+   "standard": 1.981,
    "local": 2.7283
   }
  },
@@ -7069,7 +7069,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.633122690442932,
+  "baseValue": 1.672695684390445,
   "factors": {
    "pokemon": {
     "key": "143",
@@ -7103,8 +7103,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -7113,6 +7113,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -7128,18 +7135,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.4707,
-   "standard": 1.6331,
+   "broad": 1.6727,
+   "standard": 1.633,
    "local": 2.3554
   }
  },
@@ -7163,7 +7163,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.027326659720130837,
+  "baseValue": 0.02732665972013084,
   "factors": {
    "pokemon": {
     "key": "163",
@@ -7209,6 +7209,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -7222,18 +7229,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.027025,
-   "standard": 0.027773,
+   "broad": 0.026588,
+   "standard": 0.027769,
    "local": 0.027327
   }
  },
@@ -7257,7 +7257,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.08571287797209455,
+  "baseValue": 0.08783299451360224,
   "factors": {
    "pokemon": {
     "key": "164",
@@ -7303,6 +7303,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -7316,18 +7323,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.085713,
-   "standard": 0.081953,
+   "broad": 0.087833,
+   "standard": 0.081941,
    "local": 0.091416
   }
  },
@@ -7351,7 +7351,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0534389829312247,
+  "baseValue": 0.05343142758230186,
   "factors": {
    "pokemon": {
     "key": "206",
@@ -7397,6 +7397,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -7410,18 +7417,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.058244,
-   "standard": 0.053439,
+   "broad": 0.058542,
+   "standard": 0.053431,
    "local": 0.048401
   }
  },
@@ -7445,7 +7445,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.11326360305853242,
+  "baseValue": 0.11419448983338305,
   "factors": {
    "pokemon": {
     "key": "982",
@@ -7491,6 +7491,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Rare | 2025",
     "factor": 0.1633,
@@ -7504,18 +7511,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.11326,
-   "standard": 0.099535,
+   "broad": 0.11575,
+   "standard": 0.099521,
    "local": 0.11419
   }
  },
@@ -7539,7 +7539,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.042384352639824464,
+  "baseValue": 0.04237836022463433,
   "factors": {
    "pokemon": {
     "key": "241",
@@ -7585,6 +7585,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -7598,18 +7605,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.04594,
-   "standard": 0.042384,
+   "broad": 0.045608,
+   "standard": 0.042378,
    "local": 0.037442
   }
  },
@@ -7633,7 +7633,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 3.165619957272529,
+  "baseValue": 3.9906594566321814,
   "factors": {
    "pokemon": {
     "key": "249",
@@ -7667,8 +7667,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -7677,6 +7677,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -7692,18 +7699,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 3.0654,
-   "standard": 3.1656,
+   "broad": 3.9907,
+   "standard": 3.1653,
    "local": 4.1903
   }
  },
@@ -7727,7 +7727,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04070813858358553,
+  "baseValue": 0.040702383156103056,
   "factors": {
    "pokemon": {
     "key": "427",
@@ -7773,6 +7773,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -7786,18 +7793,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.045971,
-   "standard": 0.040708,
+   "broad": 0.042372,
+   "standard": 0.040702,
    "local": 0.037511
   }
  },
@@ -7821,7 +7821,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04017786843013882,
+  "baseValue": 0.040172187973694574,
   "factors": {
    "pokemon": {
     "key": "428",
@@ -7867,6 +7867,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -7880,18 +7887,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.041558,
-   "standard": 0.040178,
+   "broad": 0.044144,
+   "standard": 0.040172,
    "local": 0.035425
   }
  },
@@ -7915,7 +7915,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.030350536244598172,
+  "baseValue": 0.030346245203138462,
   "factors": {
    "pokemon": {
     "key": "479",
@@ -7961,6 +7961,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -7974,18 +7981,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.033109,
-   "standard": 0.030351,
+   "broad": 0.030512,
+   "standard": 0.030346,
    "local": 0.02785
   }
  },
@@ -8009,7 +8009,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05361662516654199,
+  "baseValue": 0.0536090447020762,
   "factors": {
    "pokemon": {
     "key": "486",
@@ -8055,6 +8055,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -8068,18 +8075,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.055565,
-   "standard": 0.053617,
+   "broad": 0.056384,
+   "standard": 0.053609,
    "local": 0.052854
   }
  },
@@ -8103,7 +8103,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03798571206607673,
+  "baseValue": 0.03798034154266856,
   "factors": {
    "pokemon": {
     "key": "492",
@@ -8149,6 +8149,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -8162,18 +8169,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.033343,
-   "standard": 0.037986,
+   "broad": 0.031947,
+   "standard": 0.03798,
    "local": 0.038667
   }
  },
@@ -8197,7 +8197,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.033333643902077596,
+  "baseValue": 0.03332893110073418,
   "factors": {
    "pokemon": {
     "key": "676",
@@ -8243,6 +8243,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -8256,18 +8263,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03652,
-   "standard": 0.033334,
+   "broad": 0.034653,
+   "standard": 0.033329,
    "local": 0.031284
   }
  },
@@ -8291,7 +8291,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03558145537225457,
+  "baseValue": 0.03693077705019683,
   "factors": {
    "pokemon": {
     "key": "701",
@@ -8337,6 +8337,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -8350,18 +8357,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.035388,
-   "standard": 0.036936,
+   "broad": 0.037172,
+   "standard": 0.036931,
    "local": 0.035581
   }
  },
@@ -8431,6 +8431,13 @@
     "n": 16235,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -8444,18 +8451,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.030845,
-   "standard": 0.03251,
+   "broad": 0.029974,
+   "standard": 0.032505,
    "local": 0.030989
   }
  },
@@ -8479,7 +8479,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.594368890669943,
+  "baseValue": 0.5553404920860661,
   "factors": {
    "pokemon": {
     "key": "715",
@@ -8513,8 +8513,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -8523,6 +8523,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -8538,18 +8545,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.59437,
-   "standard": 0.53418,
+   "broad": 0.55534,
+   "standard": 0.53412,
    "local": 0.76213
   }
  },
@@ -8573,7 +8573,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.8263583894338606,
+  "baseValue": 0.875978614124027,
   "factors": {
    "pokemon": {
     "key": "1024",
@@ -8607,8 +8607,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -8617,6 +8617,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -8632,18 +8639,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.82636,
-   "standard": 0.79603,
+   "broad": 0.87598,
+   "standard": 0.79595,
    "local": 1.1532
   }
  },
@@ -8665,7 +8665,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03359688739979766,
+  "baseValue": 0.03292166887130224,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -8711,6 +8711,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -8724,18 +8731,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.035383,
-   "standard": 0.032926,
+   "broad": 0.032818,
+   "standard": 0.032922,
    "local": 0.033597
   }
  },
@@ -8757,7 +8757,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.06402496411003,
+  "baseValue": 0.06401591208626217,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -8803,6 +8803,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -8816,18 +8823,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.069964,
-   "standard": 0.064025,
+   "broad": 0.070916,
+   "standard": 0.064016,
    "local": 0.062095
   }
  },
@@ -8849,7 +8849,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.041348245683682394,
+  "baseValue": 0.04134239975611508,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -8895,6 +8895,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -8908,18 +8915,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.045278,
-   "standard": 0.041348,
+   "broad": 0.041968,
+   "standard": 0.041342,
    "local": 0.039062
   }
  },
@@ -8941,7 +8941,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03888834793781369,
+  "baseValue": 0.03888284979728805,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -8987,6 +8987,13 @@
     "n": 10,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -9000,18 +9007,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.040931,
-   "standard": 0.038888,
+   "broad": 0.040769,
+   "standard": 0.038883,
    "local": 0.037767
   }
  },
@@ -9033,7 +9033,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03888834793781369,
+  "baseValue": 0.03888284979728805,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9079,6 +9079,13 @@
     "n": 10,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -9092,18 +9099,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.040931,
-   "standard": 0.038888,
+   "broad": 0.040769,
+   "standard": 0.038883,
    "local": 0.037767
   }
  },
@@ -9125,7 +9125,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03888834793781369,
+  "baseValue": 0.03888284979728805,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9171,6 +9171,13 @@
     "n": 10,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -9184,18 +9191,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.040931,
-   "standard": 0.038888,
+   "broad": 0.040769,
+   "standard": 0.038883,
    "local": 0.037767
   }
  },
@@ -9217,7 +9217,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03888834793781369,
+  "baseValue": 0.03888284979728805,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9263,6 +9263,13 @@
     "n": 10,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -9276,18 +9283,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.040931,
-   "standard": 0.038888,
+   "broad": 0.040769,
+   "standard": 0.038883,
    "local": 0.037767
   }
  },
@@ -9309,7 +9309,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05610282764883341,
+  "baseValue": 0.056094895678290665,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9355,6 +9355,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -9368,18 +9375,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.061215,
-   "standard": 0.056103,
+   "broad": 0.058345,
+   "standard": 0.056095,
    "local": 0.05582
   }
  },
@@ -9401,7 +9401,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0860353436939571,
+  "baseValue": 0.08602317978278873,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9447,6 +9447,13 @@
     "n": 5,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -9460,18 +9467,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.097028,
-   "standard": 0.086035,
+   "broad": 0.10084,
+   "standard": 0.086023,
    "local": 0.079589
   }
  },
@@ -9493,7 +9493,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.06746636052553022,
+  "baseValue": 0.06745682194776612,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9539,6 +9539,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -9552,18 +9559,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.071518,
-   "standard": 0.067466,
+   "broad": 0.071561,
+   "standard": 0.067457,
    "local": 0.064856
   }
  },
@@ -9585,7 +9585,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05767588276368727,
+  "baseValue": 0.057667728390328916,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9631,6 +9631,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -9644,18 +9651,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.059604,
-   "standard": 0.057676,
+   "broad": 0.06037,
+   "standard": 0.057668,
    "local": 0.054336
   }
  },
@@ -9677,7 +9677,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.07118687295880279,
+  "baseValue": 0.07117680836485979,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9723,6 +9723,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -9736,18 +9743,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.07447,
-   "standard": 0.071187,
+   "broad": 0.077258,
+   "standard": 0.071177,
    "local": 0.068428
   }
  },
@@ -9769,7 +9769,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.08032490065624467,
+  "baseValue": 0.0803135441030627,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9815,6 +9815,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -9828,18 +9835,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.085265,
-   "standard": 0.080325,
+   "broad": 0.090301,
+   "standard": 0.080314,
    "local": 0.079213
   }
  },
@@ -9861,7 +9861,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.061586655015405424,
+  "baseValue": 0.06157794772641698,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9907,6 +9907,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -9920,18 +9927,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.066081,
-   "standard": 0.061587,
+   "broad": 0.064292,
+   "standard": 0.061578,
    "local": 0.06067
   }
  },
@@ -9953,7 +9953,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0543963704495037,
+  "baseValue": 0.05338118353614954,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -9999,6 +9999,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -10012,18 +10019,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.056702,
-   "standard": 0.054396,
+   "broad": 0.053381,
+   "standard": 0.054389,
    "local": 0.05158
   }
  },
@@ -10045,7 +10045,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0629283303402568,
+  "baseValue": 0.0629194333615575,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10091,6 +10091,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -10104,18 +10111,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.065717,
-   "standard": 0.062928,
+   "broad": 0.066981,
+   "standard": 0.062919,
    "local": 0.060661
   }
  },
@@ -10137,7 +10137,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0394648666454923,
+  "baseValue": 0.03751226169698611,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10183,6 +10183,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -10196,18 +10203,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.039569,
-   "standard": 0.037518,
+   "broad": 0.035997,
+   "standard": 0.037512,
    "local": 0.039465
   }
  },
@@ -10275,6 +10275,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -10288,18 +10295,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.042927,
-   "standard": 0.03721,
+   "broad": 0.039286,
+   "standard": 0.037205,
    "local": 0.038347
   }
  },
@@ -10321,7 +10321,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05199131601156071,
+  "baseValue": 0.051908821847025804,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10367,6 +10367,13 @@
     "n": 1,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -10380,18 +10387,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.054418,
-   "standard": 0.051991,
+   "broad": 0.051909,
+   "standard": 0.051984,
    "local": 0.047904
   }
  },
@@ -10413,7 +10413,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.06805935617020563,
+  "baseValue": 0.06804973375310254,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10459,6 +10459,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -10472,18 +10479,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.071284,
-   "standard": 0.068059,
+   "broad": 0.075114,
+   "standard": 0.06805,
    "local": 0.063353
   }
  },
@@ -10505,7 +10505,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.06209531129765952,
+  "baseValue": 0.06208653209346081,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10551,6 +10551,13 @@
     "n": 5,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -10564,18 +10571,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.066759,
-   "standard": 0.062095,
+   "broad": 0.068184,
+   "standard": 0.062087,
    "local": 0.059025
   }
  },
@@ -10597,7 +10597,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04965506008235969,
+  "baseValue": 0.04964803971475296,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10643,6 +10643,13 @@
     "n": 5,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -10656,18 +10663,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.053011,
-   "standard": 0.049655,
+   "broad": 0.052075,
+   "standard": 0.049648,
    "local": 0.04854
   }
  },
@@ -10689,7 +10689,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04262222929588662,
+  "baseValue": 0.042616203249047115,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10735,6 +10735,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -10748,18 +10755,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.040676,
-   "standard": 0.042622,
+   "broad": 0.039376,
+   "standard": 0.042616,
    "local": 0.044599
   }
  },
@@ -10781,7 +10781,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.9483376926504066,
+  "baseValue": 0.9482036140850664,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10827,6 +10827,13 @@
     "n": 1,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "ACE SPEC Rare | 2025",
     "factor": 0.7223,
@@ -10840,18 +10847,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.0637,
-   "standard": 0.94834,
+   "broad": 1.015,
+   "standard": 0.9482,
    "local": 0.87026
   }
  },
@@ -10873,7 +10873,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.9070307297310445,
+  "baseValue": 0.9069024912566023,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -10919,6 +10919,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "ACE SPEC Rare | 2025",
     "factor": 0.7223,
@@ -10932,18 +10939,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.0295,
-   "standard": 0.90703,
+   "broad": 1.0497,
+   "standard": 0.9069,
    "local": 0.82093
   }
  },
@@ -10965,7 +10965,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03608871611402705,
+  "baseValue": 0.03533434175961731,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -11011,6 +11011,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -11024,18 +11031,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.040161,
-   "standard": 0.036089,
+   "broad": 0.035334,
+   "standard": 0.036084,
    "local": 0.034273
   }
  },
@@ -11057,7 +11057,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.8744107161505265,
+  "baseValue": 0.8742870895824292,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -11103,6 +11103,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "ACE SPEC Rare | 2025",
     "factor": 0.7223,
@@ -11116,18 +11123,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.99628,
-   "standard": 0.87441,
+   "broad": 0.92367,
+   "standard": 0.87429,
    "local": 0.77643
   }
  },
@@ -11149,7 +11149,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.052618510022168746,
+  "baseValue": 0.04996909913157115,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -11195,6 +11195,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -11208,18 +11215,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.054714,
-   "standard": 0.052619,
+   "broad": 0.049969,
+   "standard": 0.052611,
    "local": 0.049445
   }
  },
@@ -11287,6 +11287,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -11300,18 +11307,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.048353,
-   "standard": 0.0539,
+   "broad": 0.047355,
+   "standard": 0.053893,
    "local": 0.051752
   }
  },
@@ -11333,7 +11333,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04369498779699868,
+  "baseValue": 0.04300072436397594,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -11379,6 +11379,13 @@
     "n": 21,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -11392,18 +11399,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.043695,
-   "standard": 0.045976,
+   "broad": 0.042825,
+   "standard": 0.04597,
    "local": 0.043001
   }
  },
@@ -11471,6 +11471,13 @@
     "n": 21,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -11484,18 +11491,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03911,
-   "standard": 0.045137,
+   "broad": 0.040116,
+   "standard": 0.04513,
    "local": 0.044292
   }
  },
@@ -11563,6 +11563,13 @@
     "n": 21,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -11576,18 +11583,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03911,
-   "standard": 0.045137,
+   "broad": 0.040116,
+   "standard": 0.04513,
    "local": 0.044292
   }
  },
@@ -11655,6 +11655,13 @@
     "n": 21,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -11668,18 +11675,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.03911,
-   "standard": 0.045137,
+   "broad": 0.040116,
+   "standard": 0.04513,
    "local": 0.044292
   }
  },
@@ -11701,7 +11701,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03866293929945196,
+  "baseValue": 0.03865747302781341,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -11747,6 +11747,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -11760,18 +11767,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.043941,
-   "standard": 0.038663,
+   "broad": 0.0394,
+   "standard": 0.038657,
    "local": 0.037587
   }
  },
@@ -11793,7 +11793,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05732860182590922,
+  "baseValue": 0.05732049655207551,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -11839,6 +11839,13 @@
     "n": 1,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Common | 2025",
     "factor": 0.4351,
@@ -11852,18 +11859,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.059996,
-   "standard": 0.057329,
+   "broad": 0.060119,
+   "standard": 0.05732,
    "local": 0.052823
   }
  },
@@ -11885,7 +11885,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.7273404413468778,
+  "baseValue": 0.7272376079747093,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -11931,6 +11931,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "ACE SPEC Rare | 2025",
     "factor": 0.7223,
@@ -11944,18 +11951,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.84061,
-   "standard": 0.72734,
+   "broad": 0.73344,
+   "standard": 0.72724,
    "local": 0.63314
   }
  },
@@ -11977,7 +11977,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.6873497400966857,
+  "baseValue": 0.6837060858883507,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12023,6 +12023,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "ACE SPEC Rare | 2025",
     "factor": 0.7223,
@@ -12036,18 +12043,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.77783,
-   "standard": 0.6838,
+   "broad": 0.6581,
+   "standard": 0.68371,
    "local": 0.68735
   }
  },
@@ -12069,7 +12069,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03281543350680144,
+  "baseValue": 0.03280383691504883,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12115,6 +12115,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Uncommon | 2025",
     "factor": 0.3455,
@@ -12128,18 +12135,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.035875,
-   "standard": 0.032808,
+   "broad": 0.032306,
+   "standard": 0.032804,
    "local": 0.032815
   }
  },
@@ -12161,7 +12161,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.5752388745462614,
+  "baseValue": 0.5404811634135706,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12207,6 +12207,13 @@
     "n": 1,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "ACE SPEC Rare | 2025",
     "factor": 0.7223,
@@ -12220,18 +12227,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 0.64243,
-   "standard": 0.57524,
+   "broad": 0.53372,
+   "standard": 0.57516,
    "local": 0.54048
   }
  },
@@ -12253,7 +12253,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.1565403243780716,
+  "baseValue": 1.1563271249204374,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12266,8 +12266,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12299,6 +12299,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12312,18 +12319,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.3006,
-   "standard": 1.1565,
+   "broad": 1.183,
+   "standard": 1.1563,
    "local": 0.77021
   }
  },
@@ -12345,7 +12345,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.0507854763614939,
+  "baseValue": 0.9903811788587898,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12358,8 +12358,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12391,6 +12391,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12404,18 +12411,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.0508,
-   "standard": 1.0959,
+   "broad": 0.99038,
+   "standard": 1.0957,
    "local": 0.76323
   }
  },
@@ -12437,7 +12437,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.2026547222841377,
+  "baseValue": 1.1067986885655212,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12450,8 +12450,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12483,6 +12483,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12496,18 +12503,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.3141,
-   "standard": 1.2027,
+   "broad": 1.1068,
+   "standard": 1.2024,
    "local": 0.85305
   }
  },
@@ -12529,7 +12529,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.3766617864470483,
+  "baseValue": 1.3176695147186757,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12542,8 +12542,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12575,6 +12575,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12588,18 +12595,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.4875,
-   "standard": 1.3767,
+   "broad": 1.3177,
+   "standard": 1.3764,
    "local": 0.90563
   }
  },
@@ -12621,7 +12621,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.5328811564057585,
+  "baseValue": 1.5325985813633887,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12634,8 +12634,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12667,6 +12667,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12680,18 +12687,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.5374,
-   "standard": 1.5329,
+   "broad": 1.5389,
+   "standard": 1.5326,
    "local": 0.95668
   }
  },
@@ -12713,7 +12713,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.3178081427398587,
+  "baseValue": 1.2976401931690305,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12726,8 +12726,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12759,6 +12759,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12772,18 +12779,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.4545,
-   "standard": 1.3178,
+   "broad": 1.2976,
+   "standard": 1.3176,
    "local": 0.90473
   }
  },
@@ -12805,7 +12805,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.1021552283789247,
+  "baseValue": 0.9828954220786922,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12818,8 +12818,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12851,6 +12851,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12864,18 +12871,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.1022,
-   "standard": 1.2095,
+   "broad": 0.9829,
+   "standard": 1.2093,
    "local": 0.79338
   }
  },
@@ -12897,7 +12897,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.4951789368930892,
+  "baseValue": 1.419469171007298,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -12910,8 +12910,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -12943,6 +12943,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -12956,18 +12963,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.4952,
-   "standard": 1.4971,
+   "broad": 1.4195,
+   "standard": 1.4968,
    "local": 1.0224
   }
  },
@@ -12989,7 +12989,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.4325000711531768,
+  "baseValue": 1.4322360006043222,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -13002,8 +13002,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -13035,6 +13035,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -13048,18 +13055,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.5668,
-   "standard": 1.4325,
+   "broad": 1.4327,
+   "standard": 1.4322,
    "local": 0.92236
   }
  },
@@ -13081,7 +13081,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.3069090195752078,
+  "baseValue": 1.2249634800168558,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -13094,8 +13094,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -13127,6 +13127,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -13140,18 +13147,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.3069,
-   "standard": 1.349,
+   "broad": 1.225,
+   "standard": 1.3487,
    "local": 0.94811
   }
  },
@@ -13173,7 +13173,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.4746328789545766,
+  "baseValue": 1.3815223940226549,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -13186,8 +13186,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -13219,6 +13219,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -13232,18 +13239,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.4746,
-   "standard": 1.4923,
+   "broad": 1.3815,
+   "standard": 1.4921,
    "local": 1.0035
   }
  },
@@ -13265,7 +13265,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.4673314228162966,
+  "baseValue": 1.445693515807015,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -13278,8 +13278,8 @@
    },
    "rarity": {
     "key": "Ultra Rare",
-    "factor": 6.9823,
-    "displayFactor": 6.9823,
+    "factor": 6.982,
+    "displayFactor": 6.982,
     "n": 1389,
     "usedFallback": false
    },
@@ -13311,6 +13311,13 @@
     "n": 2,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Ultra Rare | 2025",
     "factor": 0.6078,
@@ -13324,18 +13331,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 1.5979,
-   "standard": 1.4673,
+   "broad": 1.4457,
+   "standard": 1.4671,
    "local": 0.99001
   }
  },
@@ -13359,7 +13359,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 230.1895609280107,
+  "baseValue": 230.16184443428727,
   "factors": {
    "pokemon": {
     "key": "470",
@@ -13372,8 +13372,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -13393,8 +13393,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -13403,6 +13403,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "top",
+    "factor": 1.9313,
+    "displayFactor": 1.9313,
+    "n": 37,
     "usedFallback": false
    },
    "rarityYear": {
@@ -13418,18 +13425,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "top",
-    "factor": 1.9313,
-    "displayFactor": 1.9313,
-    "n": 37,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 94.269,
-   "standard": 230.19,
+   "broad": 188.04,
+   "standard": 230.16,
    "local": 249.9
   }
  },
@@ -13453,7 +13453,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 31.517921479227795,
+  "baseValue": 31.514126492742154,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -13466,8 +13466,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -13487,8 +13487,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -13497,6 +13497,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -13512,18 +13519,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 29.161,
-   "standard": 31.518,
+   "broad": 23.289,
+   "standard": 31.514,
    "local": 33.343
   }
  },
@@ -13547,7 +13547,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 281.07321063172446,
+  "baseValue": 281.03936737729146,
   "factors": {
    "pokemon": {
     "key": "136",
@@ -13560,8 +13560,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -13581,8 +13581,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -13591,6 +13591,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -13606,18 +13613,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 128.16,
-   "standard": 281.07,
+   "broad": 238.35,
+   "standard": 281.04,
    "local": 303.48
   }
  },
@@ -13641,7 +13641,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 66.22805161559991,
+  "baseValue": 66.22007727753905,
   "factors": {
    "pokemon": {
     "key": "937",
@@ -13654,8 +13654,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -13675,8 +13675,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -13685,6 +13685,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -13700,18 +13707,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 56.831,
-   "standard": 66.228,
+   "broad": 46.878,
+   "standard": 66.22,
    "local": 70.798
   }
  },
@@ -13735,7 +13735,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 31.517921479227795,
+  "baseValue": 31.514126492742154,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -13748,8 +13748,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -13769,8 +13769,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -13779,6 +13779,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -13794,18 +13801,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 29.161,
-   "standard": 31.518,
+   "broad": 23.289,
+   "standard": 31.514,
    "local": 33.343
   }
  },
@@ -13829,7 +13829,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 239.59142556970215,
+  "baseValue": 239.5625770232423,
   "factors": {
    "pokemon": {
     "key": "134",
@@ -13842,8 +13842,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -13863,8 +13863,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -13873,6 +13873,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -13888,18 +13895,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 102.19,
-   "standard": 239.59,
+   "broad": 182.43,
+   "standard": 239.56,
    "local": 263.85
   }
  },
@@ -13923,7 +13923,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 206.77699325355502,
+  "baseValue": 206.75209580289498,
   "factors": {
    "pokemon": {
     "key": "471",
@@ -13936,8 +13936,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -13957,8 +13957,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -13967,6 +13967,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -13982,18 +13989,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 112.76,
-   "standard": 206.78,
+   "broad": 178.79,
+   "standard": 206.75,
    "local": 216.97
   }
  },
@@ -14017,7 +14017,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 32.8121754803488,
+  "baseValue": 30.041992103177,
   "factors": {
    "pokemon": {
     "key": "964",
@@ -14030,8 +14030,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14051,8 +14051,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14061,6 +14061,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14076,18 +14083,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 33.381,
-   "standard": 30.046,
+   "broad": 26.353,
+   "standard": 30.042,
    "local": 32.812
   }
  },
@@ -14111,7 +14111,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 31.517921479227795,
+  "baseValue": 31.514126492742154,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -14124,8 +14124,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14145,8 +14145,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14155,6 +14155,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14170,18 +14177,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 29.161,
-   "standard": 31.518,
+   "broad": 23.289,
+   "standard": 31.514,
    "local": 33.343
   }
  },
@@ -14205,7 +14205,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 141.53703638749363,
+  "baseValue": 141.51999430111553,
   "factors": {
    "pokemon": {
     "key": "135",
@@ -14218,8 +14218,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14239,8 +14239,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14249,6 +14249,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14264,18 +14271,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 65.8,
-   "standard": 141.54,
+   "broad": 103.17,
+   "standard": 141.52,
    "local": 148.22
   }
  },
@@ -14299,7 +14299,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 26.326151266374634,
+  "baseValue": 26.196433566332374,
   "factors": {
    "pokemon": {
     "key": "992",
@@ -14312,8 +14312,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14333,8 +14333,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14343,6 +14343,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "weak",
+    "factor": 0.6512,
+    "displayFactor": 0.6512,
+    "n": 95,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14358,18 +14365,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "weak",
-    "factor": 0.6512,
-    "displayFactor": 0.6512,
-    "n": 95,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 28.811,
-   "standard": 26.2,
+   "broad": 15.354,
+   "standard": 26.196,
    "local": 26.326
   }
  },
@@ -14393,7 +14393,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 331.2676426976666,
+  "baseValue": 343.44252000787327,
   "factors": {
    "pokemon": {
     "key": "196",
@@ -14406,8 +14406,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14427,8 +14427,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14437,6 +14437,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "top",
+    "factor": 1.9313,
+    "displayFactor": 1.9313,
+    "n": 37,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14452,18 +14459,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "top",
-    "factor": 1.9313,
-    "displayFactor": 1.9313,
-    "n": 37,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 128.83,
-   "standard": 331.27,
+   "broad": 343.44,
+   "standard": 331.23,
    "local": 364.81
   }
  },
@@ -14487,7 +14487,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 224.79980163006297,
+  "baseValue": 224.77273410247489,
   "factors": {
    "pokemon": {
     "key": "700",
@@ -14500,8 +14500,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14521,8 +14521,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14531,6 +14531,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "top",
+    "factor": 1.9313,
+    "displayFactor": 1.9313,
+    "n": 37,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14546,18 +14553,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "top",
-    "factor": 1.9313,
-    "displayFactor": 1.9313,
-    "n": 37,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 87.422,
-   "standard": 224.8,
+   "broad": 184.68,
+   "standard": 224.77,
    "local": 254.64
   }
  },
@@ -14581,7 +14581,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 57.599868092776035,
+  "baseValue": 57.59293265062986,
   "factors": {
    "pokemon": {
     "key": "1006",
@@ -14594,8 +14594,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14615,8 +14615,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14625,6 +14625,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14640,18 +14647,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 31.564,
-   "standard": 57.6,
+   "broad": 28.109,
+   "standard": 57.593,
    "local": 63.093
   }
  },
@@ -14675,7 +14675,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 34.56914474563879,
+  "baseValue": 33.37055063281513,
   "factors": {
    "pokemon": {
     "key": "1023",
@@ -14688,8 +14688,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14709,8 +14709,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14719,6 +14719,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14734,18 +14741,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 36.06,
-   "standard": 33.375,
+   "broad": 24.166,
+   "standard": 33.371,
    "local": 34.569
   }
  },
@@ -14782,8 +14782,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14803,8 +14803,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14813,6 +14813,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14828,18 +14835,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 31.389,
-   "standard": 33.882,
+   "broad": 22.597,
+   "standard": 33.878,
    "local": 33.281
   }
  },
@@ -14863,7 +14863,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 31.517921479227795,
+  "baseValue": 31.514126492742154,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -14876,8 +14876,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14897,8 +14897,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -14907,6 +14907,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -14922,18 +14929,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 29.161,
-   "standard": 31.518,
+   "broad": 23.289,
+   "standard": 31.514,
    "local": 33.343
   }
  },
@@ -14957,7 +14957,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 930.0937511740799,
+  "baseValue": 929.9817611363355,
   "factors": {
    "pokemon": {
     "key": "197",
@@ -14970,8 +14970,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -14991,8 +14991,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15001,6 +15001,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "top",
+    "factor": 1.9313,
+    "displayFactor": 1.9313,
+    "n": 37,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15016,18 +15023,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "top",
-    "factor": 1.9313,
-    "displayFactor": 1.9313,
-    "n": 37,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 290.78,
-   "standard": 930.09,
+   "broad": 912.25,
+   "standard": 929.98,
    "local": 994.98
   }
  },
@@ -15051,7 +15051,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 125.59243155036079,
+  "baseValue": 125.57730931012213,
   "factors": {
    "pokemon": {
     "key": "1005",
@@ -15064,8 +15064,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15085,8 +15085,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15095,6 +15095,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15110,18 +15117,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 74.494,
-   "standard": 125.59,
+   "broad": 71.48,
+   "standard": 125.58,
    "local": 131.89
   }
  },
@@ -15145,7 +15145,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 33.496290266052775,
+  "baseValue": 30.906349723972518,
   "factors": {
    "pokemon": {
     "key": "1025",
@@ -15158,8 +15158,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15179,8 +15179,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15189,6 +15189,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "weak",
+    "factor": 0.6512,
+    "displayFactor": 0.6512,
+    "n": 95,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15204,18 +15211,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "weak",
-    "factor": 0.6512,
-    "displayFactor": 0.6512,
-    "n": 95,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 37.763,
-   "standard": 30.91,
+   "broad": 22.634,
+   "standard": 30.906,
    "local": 33.496
   }
  },
@@ -15252,8 +15252,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15273,8 +15273,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15283,6 +15283,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15298,18 +15305,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 33.55,
-   "standard": 36.491,
+   "broad": 23.308,
+   "standard": 36.487,
    "local": 36.405
   }
  },
@@ -15333,7 +15333,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 49.8607716310684,
+  "baseValue": 49.85476803230228,
   "factors": {
    "pokemon": {
     "key": "887",
@@ -15346,8 +15346,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15367,8 +15367,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15377,6 +15377,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15392,18 +15399,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 43.214,
-   "standard": 49.861,
+   "broad": 35.728,
+   "standard": 49.855,
    "local": 51.664
   }
  },
@@ -15427,7 +15427,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 71.50880766278681,
+  "baseValue": 71.50019748337306,
   "factors": {
    "pokemon": {
     "key": "1021",
@@ -15440,8 +15440,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15461,8 +15461,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15471,6 +15471,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15486,18 +15493,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 47.812,
-   "standard": 71.509,
+   "broad": 51.859,
+   "standard": 71.5,
    "local": 80.531
   }
  },
@@ -15521,7 +15521,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 318.4152792138573,
+  "baseValue": 318.3769397033589,
   "factors": {
    "pokemon": {
     "key": "133",
@@ -15534,8 +15534,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15555,8 +15555,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15565,6 +15565,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15580,18 +15587,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 152.06,
-   "standard": 318.42,
+   "broad": 240.31,
+   "standard": 318.38,
    "local": 343.76
   }
  },
@@ -15615,7 +15615,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 38.05600074296004,
+  "baseValue": 38.05141852428132,
   "factors": {
    "pokemon": {
     "key": "901",
@@ -15628,8 +15628,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15649,8 +15649,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15659,6 +15659,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15674,18 +15681,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 28.527,
-   "standard": 38.056,
+   "broad": 25.359,
+   "standard": 38.051,
    "local": 43.03
   }
  },
@@ -15709,7 +15709,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 31.806923936875375,
+  "baseValue": 26.9804765225542,
   "factors": {
    "pokemon": {
     "key": "1024",
@@ -15722,8 +15722,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15743,8 +15743,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -15753,6 +15753,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "weak",
+    "factor": 0.6512,
+    "displayFactor": 0.6512,
+    "n": 95,
     "usedFallback": false
    },
    "rarityYear": {
@@ -15768,18 +15775,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "weak",
-    "factor": 0.6512,
-    "displayFactor": 0.6512,
-    "n": 95,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 36.564,
-   "standard": 26.984,
+   "broad": 17.352,
+   "standard": 26.98,
    "local": 31.807
   }
  },
@@ -15801,7 +15801,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 16.519096475459783,
+  "baseValue": 16.516362637298545,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -15814,8 +15814,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15847,6 +15847,13 @@
     "n": 3,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Special illustration rare | 2025",
     "factor": 1.9825,
@@ -15860,18 +15867,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 16.254,
-   "standard": 16.519,
+   "broad": 12.7,
+   "standard": 16.516,
    "local": 18.533
   }
  },
@@ -15893,7 +15893,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 34.104618292072644,
+  "baseValue": 34.098974127024036,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -15906,8 +15906,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -15939,6 +15939,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Special illustration rare | 2025",
     "factor": 1.9825,
@@ -15952,18 +15959,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 32.65,
-   "standard": 34.105,
+   "broad": 30.596,
+   "standard": 34.099,
    "local": 35.642
   }
  },
@@ -15985,7 +15985,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 20.322960093903436,
+  "baseValue": 20.319596732963177,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -15998,8 +15998,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -16031,6 +16031,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Special illustration rare | 2025",
     "factor": 1.9825,
@@ -16044,18 +16051,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 19.553,
-   "standard": 20.323,
+   "broad": 16.327,
+   "standard": 20.32,
    "local": 20.674
   }
  },
@@ -16077,7 +16077,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 26.24895387620277,
+  "baseValue": 26.2446097892301,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -16090,8 +16090,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -16123,6 +16123,13 @@
     "n": 4,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Special illustration rare | 2025",
     "factor": 1.9825,
@@ -16136,18 +16143,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 24.781,
-   "standard": 26.249,
+   "broad": 21.424,
+   "standard": 26.245,
    "local": 28.379
   }
  },
@@ -16182,8 +16182,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -16215,6 +16215,13 @@
     "n": 5,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Special illustration rare | 2025",
     "factor": 1.9825,
@@ -16228,18 +16235,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 25.801,
-   "standard": 28.199,
+   "broad": 20.877,
+   "standard": 28.194,
    "local": 27.934
   }
  },
@@ -16261,7 +16261,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 21.681182920135804,
+  "baseValue": 21.677594779262847,
   "factors": {
    "pokemon": {
     "key": "none",
@@ -16274,8 +16274,8 @@
    },
    "rarity": {
     "key": "Special illustration rare",
-    "factor": 29.026,
-    "displayFactor": 29.026,
+    "factor": 29.0253,
+    "displayFactor": 29.0253,
     "n": 222,
     "usedFallback": false
    },
@@ -16307,6 +16307,13 @@
     "n": 5,
     "usedFallback": false
    },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
+    "usedFallback": false
+   },
    "rarityYear": {
     "key": "Special illustration rare | 2025",
     "factor": 1.9825,
@@ -16320,18 +16327,11 @@
     "displayFactor": 0.6143,
     "n": 1095,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 20.367,
-   "standard": 21.681,
+   "broad": 17.124,
+   "standard": 21.678,
    "local": 22.71
   }
  },
@@ -16355,7 +16355,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 7.0501257445920595,
+  "baseValue": 6.558020439203598,
   "factors": {
    "pokemon": {
     "key": "1010",
@@ -16368,8 +16368,8 @@
    },
    "rarity": {
     "key": "Hyper rare",
-    "factor": 11.1094,
-    "displayFactor": 11.1094,
+    "factor": 11.1093,
+    "displayFactor": 11.1093,
     "n": 69,
     "usedFallback": false
    },
@@ -16389,8 +16389,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -16399,6 +16399,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -16414,18 +16421,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 7.0501,
-   "standard": 8.5158,
+   "broad": 5.8213,
+   "standard": 8.5149,
    "local": 6.558
   }
  },
@@ -16449,7 +16449,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 7.837775289406291,
+  "baseValue": 7.320046246589119,
   "factors": {
    "pokemon": {
     "key": "1017",
@@ -16462,8 +16462,8 @@
    },
    "rarity": {
     "key": "Hyper rare",
-    "factor": 11.1094,
-    "displayFactor": 11.1094,
+    "factor": 11.1093,
+    "displayFactor": 11.1093,
     "n": 69,
     "usedFallback": false
    },
@@ -16483,8 +16483,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -16493,6 +16493,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -16508,18 +16515,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 7.8378,
-   "standard": 9.8207,
+   "broad": 7.32,
+   "standard": 9.8197,
    "local": 6.4004
   }
  },
@@ -16543,7 +16543,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 8.302108812028736,
+  "baseValue": 7.47596028259727,
   "factors": {
    "pokemon": {
     "key": "1009",
@@ -16556,8 +16556,8 @@
    },
    "rarity": {
     "key": "Hyper rare",
-    "factor": 11.1094,
-    "displayFactor": 11.1094,
+    "factor": 11.1093,
+    "displayFactor": 11.1093,
     "n": 69,
     "usedFallback": false
    },
@@ -16577,8 +16577,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -16587,6 +16587,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -16602,18 +16609,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 8.3021,
-   "standard": 9.7597,
+   "broad": 6.879,
+   "standard": 9.7587,
    "local": 7.476
   }
  },
@@ -16650,8 +16650,8 @@
    },
    "rarity": {
     "key": "Hyper rare",
-    "factor": 11.1094,
-    "displayFactor": 11.1094,
+    "factor": 11.1093,
+    "displayFactor": 11.1093,
     "n": 69,
     "usedFallback": false
    },
@@ -16671,8 +16671,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -16681,6 +16681,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "strong",
+    "factor": 1.5963,
+    "displayFactor": 1.5963,
+    "n": 197,
     "usedFallback": false
    },
    "rarityYear": {
@@ -16696,18 +16703,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "strong",
-    "factor": 1.5963,
-    "displayFactor": 1.5963,
-    "n": 197,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 54.188,
-   "standard": 190.73,
+   "broad": 124.12,
+   "standard": 190.71,
    "local": 168.59
   }
  },
@@ -16731,7 +16731,7 @@
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 9.56795501397882,
+  "baseValue": 9.60833613317323,
   "factors": {
    "pokemon": {
     "key": "1024",
@@ -16744,8 +16744,8 @@
    },
    "rarity": {
     "key": "Hyper rare",
-    "factor": 11.1094,
-    "displayFactor": 11.1094,
+    "factor": 11.1093,
+    "displayFactor": 11.1093,
     "n": 69,
     "usedFallback": false
    },
@@ -16765,8 +16765,8 @@
    },
    "cardType": {
     "key": "EX",
-    "factor": 2.2175,
-    "displayFactor": 2.2175,
+    "factor": 2.2176,
+    "displayFactor": 2.2176,
     "n": 1050,
     "usedFallback": false
    },
@@ -16775,6 +16775,13 @@
     "factor": 0.9911,
     "displayFactor": 0.9911,
     "n": 16235,
+    "usedFallback": false
+   },
+   "artwork": {
+    "key": "none",
+    "factor": 0.996,
+    "displayFactor": 0.996,
+    "n": 18926,
     "usedFallback": false
    },
    "rarityYear": {
@@ -16790,18 +16797,11 @@
     "displayFactor": 0.5859,
     "n": 170,
     "usedFallback": false
-   },
-   "artwork": {
-    "key": "none",
-    "factor": 0.996,
-    "displayFactor": 0.996,
-    "n": 18926,
-    "usedFallback": false
    }
   },
   "fairs": {
-   "broad": 9.568,
-   "standard": 13.187,
+   "broad": 9.6083,
+   "standard": 13.186,
    "local": 9.4672
   }
  }
