@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { defaultConfig } from './data/defaults'
 import { useRoute } from './router'
 import { useAdminUnlocked } from './logic/adminGate'
+import { AdminBar } from './components/AdminBar'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
 import { CardPage } from './pages/CardPage'
@@ -59,6 +60,7 @@ function App() {
 
   return (
     <div className="app">
+      <AdminBar />
       <header className="app-header">
         {/* Deliberately NOT an <h1>: this logo is on all 4,400+ pages, so as an
             h1 it told a crawler the same thing about every one of them and the

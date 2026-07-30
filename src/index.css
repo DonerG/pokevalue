@@ -1003,6 +1003,50 @@ details.panel[open] summary {
   color: var(--warn-fg);
 }
 
+/* ---------- Admin bar (site-wide while unlocked) ---------- */
+
+.admin-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+}
+
+.admin-bar-label {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.admin-bar a,
+.admin-bar button {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 7px;
+  padding: 3px 10px;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.admin-bar a:hover,
+.admin-bar button:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.admin-bar-hint {
+  margin-left: auto;
+  opacity: 0.85;
+  font-size: 12px;
+}
+
 /* ---------- Admin hub + unlock ---------- */
 
 .admin-hub {

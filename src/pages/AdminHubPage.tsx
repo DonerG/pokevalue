@@ -1,27 +1,6 @@
 import { useState } from 'react'
 import { isAdminUnlocked, lockAdmin, unlockAdmin, useAdminUnlocked } from '../logic/adminGate'
-import { loadRatings } from '../logic/artworkRatings'
-import { loadTeraTags } from '../logic/teraTags'
-import { loadPriceExclusions } from '../logic/priceExclusions'
-import { loadPriceWarnings } from '../logic/priceWarnings'
-
-/** One JSON with everything an editing session produced, so it's a single attachment to send back. */
-function exportAll() {
-  const bundle = {
-    artworkRatings: loadRatings(),
-    teraTags: loadTeraTags(),
-    priceExclusions: loadPriceExclusions(),
-    priceWarnings: loadPriceWarnings(),
-    exportedAt: new Date().toISOString(),
-  }
-  const blob = new Blob([JSON.stringify(bundle, null, 1)], { type: 'application/json' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'pokevalue-admin-export.json'
-  a.click()
-  URL.revokeObjectURL(url)
-}
+import { exportAllAdminData } from '../logic/adminExport'
 
 function UnlockForm() {
   const [pw, setPw] = useState('')
@@ -85,7 +64,7 @@ export function AdminHubPage() {
           you're done, <strong>Export all</strong> gives you one file to send back.
         </p>
         <div className="admin-toolbar">
-          <button type="button" onClick={exportAll}>
+          <button type="button" onClick={exportAllAdminData}>
             ⬇ Export all (one JSON)
           </button>
           <button type="button" onClick={lockAdmin}>
