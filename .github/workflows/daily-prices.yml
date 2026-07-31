@@ -17,7 +17,11 @@ name: Daily prices
 
 on:
   schedule:
-    - cron: '0 9 * * *' # 09:00 UTC daily (after Cardmarket's ~08:00 update)
+    # 09:17 UTC daily. Deliberately an odd minute, not 09:00: GitHub delays or
+    # drops scheduled runs at the top of the hour (everyone piles onto round
+    # times), so an off-peak minute lands far more reliably. Still after
+    # Cardmarket's ~08:00 update.
+    - cron: '17 9 * * *'
   workflow_dispatch: {} # allow a manual run from the Actions tab
 
 permissions:
