@@ -13,6 +13,7 @@ import { ResultPanel } from '../components/ResultPanel'
 import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
 import { CollectionControls } from '../components/CollectionControls'
+import { PriceHistoryChart } from '../components/PriceHistoryChart'
 import { useDocumentMeta } from '../logic/documentMeta'
 import { cardMeta } from '../logic/pageMeta.js'
 import { useAdminUnlocked } from '../logic/adminGate'
@@ -131,6 +132,7 @@ export function CardPage({ cardId, config }: Props) {
             config={config}
             market={card.market?.trend ?? null}
           />
+          <PriceHistoryChart cardId={card.id} />
           {admin && (
             <Suspense fallback={<p className="muted">Loading editor…</p>}>
               <AdminCardControls card={card} onChange={() => setWarnTick((n) => n + 1)} />

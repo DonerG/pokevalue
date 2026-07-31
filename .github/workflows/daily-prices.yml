@@ -1,0 +1,71 @@
+# Daily price refresh + model refit + history snapshot.
+#
+# Runs the same pipeline we run by hand: re-fetch every displayed card's
+# Cardmarket price, rebuild the training data, refit the model (so the fair
+# price is "live" too, per the chosen design), rebake all sets, regenerate the
+# search index / sitemap / candidate lists, and append today's trend + fair to
+# the per-card history (public/history/<set>.json). Then it commits the changed
+# data back, which triggers Vercel to redeploy.
+#
+# Hand-corrected prices are untouched: ingest always lays the manual value from
+# price-exclusions.json over the freshly fetched one, so a pinned card stays
+# pinned and its history is a flat line until you change it.
+#
+# Needs "Read and write permissions" for Actions (repo Settings → Actions →
+# General → Workflow permissions) so the built-in token can push.
+name: Daily prices
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # 09:00 UTC daily (after Cardmarket's ~08:00 update)
+  workflow_dispatch: {} # allow a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-prices
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pandas scikit-learn scipy statsmodels
+
+      - name: Refresh prices, refit, rebake, snapshot
+        run: |
+          set -e
+          node scripts/refresh-prices.mjs
+          node scripts/build-training-data.mjs
+          python analysis/fit_factors.py
+          SETS=$(node -e "console.log(JSON.parse(require('fs').readFileSync('src/data/generated/sets.json','utf8')).map(s=>s.id).join(' '))")
+          node scripts/ingest.mjs $SETS
+          node scripts/build-search-index.mjs
+          node scripts/build-sitemap.mjs
+          node scripts/build-outlier-candidates.mjs
+          node scripts/build-factor-highlights.mjs
+          node scripts/snapshot-prices.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes today."
+          else
+            git commit -m "Daily price refresh + history snapshot ($(date -u +%Y-%m-%d))"
+            git push
+          fi

@@ -1080,6 +1080,68 @@ details.panel[open] summary {
   color: var(--warn-fg);
 }
 
+/* ---------- Price history chart ---------- */
+
+.price-history {
+  margin-top: 16px;
+}
+
+.price-history-legend {
+  display: flex;
+  gap: 16px;
+  margin: -4px 0 8px;
+  font-size: 12.5px;
+}
+
+.ph-key::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.ph-trend::before {
+  background: var(--accent);
+}
+
+.ph-fair::before {
+  background: var(--text-2);
+}
+
+.price-history-svg {
+  width: 100%;
+  height: auto;
+}
+
+.ph-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.ph-trend-line {
+  stroke: var(--accent);
+}
+
+.ph-fair-line {
+  stroke: var(--text-2);
+  stroke-dasharray: 4 3;
+}
+
+.ph-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.ph-axis {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
 /* ---------- Watchlist + portfolio ---------- */
 
 .nav-count {
