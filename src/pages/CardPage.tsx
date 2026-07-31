@@ -13,6 +13,7 @@ import { ResultPanel } from '../components/ResultPanel'
 import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
 import { CollectionControls } from '../components/CollectionControls'
+import { CardPrevNext } from '../components/CardPrevNext'
 import { PriceHistoryChart } from '../components/PriceHistoryChart'
 import { useDocumentMeta } from '../logic/documentMeta'
 import { cardMeta } from '../logic/pageMeta.js'
@@ -87,6 +88,8 @@ export function CardPage({ cardId, config }: Props) {
         <a href="/">Sets</a> /{' '}
         {set ? <a href={`/set/${set.id}`}>{set.name}</a> : 'Set'} / <strong>{card.name}</strong>
       </nav>
+
+      <CardPrevNext cardId={card.id} />
 
       <div className="card-layout">
         <div className="card-visual">

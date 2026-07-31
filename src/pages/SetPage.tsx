@@ -7,6 +7,8 @@ import { useDocumentMeta } from '../logic/documentMeta'
 import { setMeta as buildSetMeta } from '../logic/pageMeta.js'
 import { VerdictChip } from '../components/VerdictChip'
 import { RetryImage } from '../components/RetryImage'
+import { CardQuickActions } from '../components/CardQuickActions'
+import { setNavList } from '../logic/cardNav'
 
 interface Props {
   setId: string
@@ -63,6 +65,11 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
     return sorted
   }, [cards, config, query, sort, minPrice])
 
+  // Remember this exact order so a card page can offer prev/next through it.
+  useEffect(() => {
+    setNavList(rows.map((r) => r.card.id))
+  }, [rows])
+
   const meta = buildSetMeta(set)
   useDocumentMeta(meta.title, meta.description, `/set/${setId}`, set ? setLogo(set) : null)
 
@@ -117,33 +124,36 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
           {rows.map(({ card, fair, market }) => {
             const img = cardImage(card, 'low')
             return (
-              <a key={card.id} className="card-tile" href={`/card/${card.id}`}>
-                {img ? (
-                  <RetryImage
-                    src={img}
-                    alt={card.name}
-                    loading="lazy"
-                    placeholder={<div className="card-tile-placeholder">{card.name}</div>}
-                  />
-                ) : (
-                  <div className="card-tile-placeholder">{card.name}</div>
-                )}
-                <div className="card-tile-body">
-                  <div className="card-tile-name-block">
-                    <strong>{card.name}</strong>
-                    <span className="muted">
-                      #{card.localId} · {card.rarity ?? 'unknown'}
-                    </span>
+              <div key={card.id} className="card-tile">
+                <CardQuickActions cardId={card.id} />
+                <a className="card-tile-link" href={`/card/${card.id}`}>
+                  {img ? (
+                    <RetryImage
+                      src={img}
+                      alt={card.name}
+                      loading="lazy"
+                      placeholder={<div className="card-tile-placeholder">{card.name}</div>}
+                    />
+                  ) : (
+                    <div className="card-tile-placeholder">{card.name}</div>
+                  )}
+                  <div className="card-tile-body">
+                    <div className="card-tile-name-block">
+                      <strong>{card.name}</strong>
+                      <span className="muted">
+                        #{card.localId} · {card.rarity ?? 'unknown'}
+                      </span>
+                    </div>
+                    <div className="card-tile-value-block">
+                      <span title="Cardmarket trend price">
+                        Market {market != null ? formatEuro(market) : '–'}
+                      </span>
+                      <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
+                      <VerdictChip market={market} fair={fair} config={config} fairs={card.fairs} />
+                    </div>
                   </div>
-                  <div className="card-tile-value-block">
-                    <span title="Cardmarket trend price">
-                      Market {market != null ? formatEuro(market) : '–'}
-                    </span>
-                    <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
-                    <VerdictChip market={market} fair={fair} config={config} fairs={card.fairs} />
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             )
           })}
         </div>

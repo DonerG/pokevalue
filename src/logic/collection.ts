@@ -53,7 +53,9 @@ export function isWatched(id: string): boolean {
   return watchCache.includes(id)
 }
 export function toggleWatch(id: string): void {
-  writeWatch(watchCache.includes(id) ? watchCache.filter((x) => x !== id) : [...watchCache, id])
+  const adding = !watchCache.includes(id)
+  writeWatch(adding ? [...watchCache, id] : watchCache.filter((x) => x !== id))
+  if (adding) bumpUnseen('watch')
 }
 
 // ---------------------------------------------------------------- portfolio
@@ -86,13 +88,54 @@ export function portfolioQty(id: string): number {
   return portfolioCache[id] ?? 0
 }
 export function setPortfolioQty(id: string, qty: number): void {
+  const isNew = !(id in portfolioCache) && qty > 0
   const next = { ...portfolioCache }
   if (qty <= 0) delete next[id]
   else next[id] = qty
   writePortfolio(next)
+  if (isNew) bumpUnseen('portfolio')
 }
 export function addToPortfolio(id: string, delta = 1): void {
   setPortfolioQty(id, (portfolioCache[id] ?? 0) + delta)
+}
+
+// ---------------------------------------------------------------- unseen badges
+//
+// The nav badge is a "new since you last looked" counter, not the total: it
+// counts cards ADDED since the list was last opened, and resets to nothing when
+// you open the list. So adding one card shows a "1", visiting the page clears
+// it, and removing a card never raises it.
+
+const UNSEEN_KEYS = { watch: 'pokevalue-watch-unseen-v1', portfolio: 'pokevalue-portfolio-unseen-v1' } as const
+type Which = keyof typeof UNSEEN_KEYS
+
+function readInt(key: string): number {
+  try {
+    return Number(localStorage.getItem(key)) || 0
+  } catch {
+    return 0
+  }
+}
+const unseen: Record<Which, number> = { watch: readInt(UNSEEN_KEYS.watch), portfolio: readInt(UNSEEN_KEYS.portfolio) }
+
+function bumpUnseen(which: Which): void {
+  unseen[which] += 1
+  try {
+    localStorage.setItem(UNSEEN_KEYS[which], String(unseen[which]))
+  } catch {
+    // localStorage unavailable
+  }
+  notify()
+}
+export function markSeen(which: Which): void {
+  if (unseen[which] === 0) return
+  unseen[which] = 0
+  try {
+    localStorage.setItem(UNSEEN_KEYS[which], '0')
+  } catch {
+    // localStorage unavailable
+  }
+  notify()
 }
 
 // ---------------------------------------------------------------- hooks
@@ -102,4 +145,11 @@ export function useWatchlist(): string[] {
 }
 export function usePortfolio(): Portfolio {
   return useSyncExternalStore(subscribe, loadPortfolio, () => portfolioCache)
+}
+export function useUnseen(which: Which): number {
+  return useSyncExternalStore(
+    subscribe,
+    () => unseen[which],
+    () => 0,
+  )
 }

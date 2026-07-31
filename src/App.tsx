@@ -4,7 +4,7 @@ import { defaultConfig } from './data/defaults'
 import { useRoute } from './router'
 import { useAdminUnlocked } from './logic/adminGate'
 import { seedAdminStores } from './logic/adminSeed'
-import { usePortfolio, useWatchlist } from './logic/collection'
+import { markSeen, useUnseen } from './logic/collection'
 import { AdminBar } from './components/AdminBar'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
@@ -47,8 +47,14 @@ function App() {
   const route = useRoute()
   const unlocked = useAdminUnlocked()
   const noindex = NOINDEX_PAGES.has(route.page)
-  const watchCount = useWatchlist().length
-  const portfolioCount = Object.keys(usePortfolio()).length
+  // Badges count what's been ADDED since the list was last opened, and clear
+  // when it is — see logic/collection.
+  const watchCount = useUnseen('watch')
+  const portfolioCount = useUnseen('portfolio')
+  useEffect(() => {
+    if (route.page === 'watchlist') markSeen('watch')
+    if (route.page === 'portfolio') markSeen('portfolio')
+  }, [route.page])
 
   // Once unlocked, load the committed data into the editing stores so the
   // per-card editor reflects the real current state (see adminSeed).

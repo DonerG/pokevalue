@@ -56,7 +56,7 @@ export function WatchlistPage({ config }: { config: Config }) {
                 >
                   ✕
                 </button>
-                <a href={`/card/${card.id}`}>
+                <a className="card-tile-link" href={`/card/${card.id}`}>
                   {img ? (
                     <RetryImage src={img} alt={card.name} loading="lazy" placeholder={<div className="card-tile-placeholder">{card.name}</div>} />
                   ) : (

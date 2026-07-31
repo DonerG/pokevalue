@@ -585,6 +585,7 @@ details.panel[open] summary {
 }
 
 .card-tile {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -595,6 +596,88 @@ details.panel[open] summary {
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: border-color 0.12s, transform 0.12s;
+}
+
+/* The clickable body of a tile. display:contents so the image and text stay
+   direct flex children of .card-tile (the quick-action buttons sit outside the
+   link). color/underline reset so tile text never looks like a link. */
+.card-tile-link {
+  display: contents;
+  color: inherit;
+  text-decoration: none;
+}
+
+.quick-actions {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+  display: flex;
+  gap: 4px;
+}
+
+.quick-btn {
+  min-width: 26px;
+  height: 26px;
+  padding: 0 6px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.quick-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.quick-btn.is-on {
+  background: var(--accent);
+}
+
+.quick-portfolio {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Prev / next through the browsing order, on a card page. */
+.card-prevnext {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+}
+
+.prevnext-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+a.prevnext-btn:hover {
+  border-color: var(--accent);
+}
+
+.prevnext-btn.is-disabled {
+  opacity: 0.4;
+}
+
+.prevnext-hint {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .prevnext-hint {
+    display: none;
+  }
 }
 
 .card-tile:hover {
