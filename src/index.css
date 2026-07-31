@@ -584,6 +584,47 @@ details.panel[open] summary {
   gap: 10px;
 }
 
+/* Desktop-only "fewer, larger cards" density. Scoped to desktop widths so it
+   never overrides the fixed 4-column phone layout below. */
+@media (min-width: 641px) {
+  .card-grid.is-large {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* The size switch in the set toolbar — desktop only (phones use the fixed grid). */
+.density-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.density-toggle button {
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-2);
+  cursor: pointer;
+  padding: 5px 10px;
+  font: inherit;
+  font-size: 13px;
+}
+
+.density-toggle button.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .density-toggle {
+    display: none;
+  }
+}
+
 .card-tile {
   position: relative;
   display: flex;
@@ -614,6 +655,21 @@ details.panel[open] summary {
   z-index: 1;
   display: flex;
   gap: 4px;
+}
+
+/* On a device that can hover (desktop), keep the icons hidden until the tile is
+   hovered or holds keyboard focus, so they don't clutter the grid. On touch —
+   where there is no hover — they stay visible, since there'd be no other way to
+   reach them. */
+@media (hover: hover) {
+  .quick-actions {
+    opacity: 0;
+    transition: opacity 0.12s;
+  }
+  .card-tile:hover .quick-actions,
+  .card-tile:focus-within .quick-actions {
+    opacity: 1;
+  }
 }
 
 .quick-btn {

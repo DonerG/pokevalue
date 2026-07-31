@@ -18,12 +18,33 @@ interface Props {
   config: Config
 }
 
+// Desktop card-grid density, remembered across sets.
+const DENSITY_KEY = 'pokevalue-grid-density-v1'
+type Density = 'normal' | 'large'
+function loadDensity(): Density {
+  try {
+    return localStorage.getItem(DENSITY_KEY) === 'large' ? 'large' : 'normal'
+  } catch {
+    return 'normal'
+  }
+}
+
 export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, config }: Props) {
   const set = getSet(setId)
   const [cards, setCards] = useState<CardData[] | null>(null)
   const [query, setQuery] = useState(initialQuery)
   const [sort, setSort] = useState<SetSortKey>(initialSort)
   const [minPrice, setMinPrice] = useState(initialMinPrice)
+  const [density, setDensity] = useState<Density>(loadDensity)
+
+  const changeDensity = (d: Density) => {
+    setDensity(d)
+    try {
+      localStorage.setItem(DENSITY_KEY, d)
+    } catch {
+      // preference just won't persist
+    }
+  }
 
   useEffect(() => {
     setCards(null)
@@ -114,13 +135,31 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
             <input type="checkbox" checked={minPrice} onChange={(e) => setMinPrice(e.target.checked)} />
             Only ≥ €1 market price
           </label>
+          <div className="density-toggle" role="group" aria-label="Card size">
+            <button
+              type="button"
+              className={density === 'normal' ? 'active' : ''}
+              onClick={() => changeDensity('normal')}
+              title="More, smaller cards"
+            >
+              Compact
+            </button>
+            <button
+              type="button"
+              className={density === 'large' ? 'active' : ''}
+              onClick={() => changeDensity('large')}
+              title="Fewer, larger cards"
+            >
+              Large
+            </button>
+          </div>
         </div>
       </header>
 
       {!cards && <p className="muted">Loading cards…</p>}
 
       {cards && (
-        <div className="card-grid">
+        <div className={density === 'large' ? 'card-grid is-large' : 'card-grid'}>
           {rows.map(({ card, fair, market }) => {
             const img = cardImage(card, 'low')
             return (
