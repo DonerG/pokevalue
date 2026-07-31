@@ -10,7 +10,7 @@
  *
  * Usage: node scripts/refresh-prices.mjs
  */
-import { readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -51,6 +51,10 @@ async function mapLimited(items, limit, fn) {
   return { done, failed }
 }
 
+// The cache is gitignored, so on a fresh checkout (e.g. CI) it doesn't exist
+// yet — create it, or the very first writeFile below would crash the run.
+await mkdir(CACHE_DIR, { recursive: true })
+
 const sets = JSON.parse(await readFile(join(GENERATED_DIR, 'sets.json'), 'utf8'))
 const ids = []
 for (const s of sets) {
@@ -60,9 +64,14 @@ for (const s of sets) {
 console.log(`Refreshing ${ids.length} displayed cards from ${sets.length} sets …`)
 
 const { failed } = await mapLimited(ids, CONCURRENCY, async (id) => {
-  const detail = await fetchJson(`${API}/cards/${encodeURIComponent(id)}`)
-  if (!detail) return false
-  await writeFile(join(CACHE_DIR, `${encodeURIComponent(id)}.json`), JSON.stringify(detail))
-  return true
+  try {
+    const detail = await fetchJson(`${API}/cards/${encodeURIComponent(id)}`)
+    if (!detail) return false
+    await writeFile(join(CACHE_DIR, `${encodeURIComponent(id)}.json`), JSON.stringify(detail))
+    return true
+  } catch {
+    // One card failing (network, write) must not abort the whole refresh.
+    return false
+  }
 })
 console.log(`Done. ${ids.length - failed} refreshed, ${failed} failed${failed ? ' (re-run to retry)' : ''}.`)

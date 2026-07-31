@@ -1,15 +1,20 @@
 # Daily price refresh + model refit + history snapshot.
 #
-# Runs the same pipeline we run by hand: re-fetch every displayed card's
-# Cardmarket price, rebuild the training data, refit the model (so the fair
-# price is "live" too, per the chosen design), rebake all sets, regenerate the
-# search index / sitemap / candidate lists, and append today's trend + fair to
-# the per-card history (public/history/<set>.json). Then it commits the changed
-# data back, which triggers Vercel to redeploy.
+# Re-fetches every displayed card's Cardmarket price, refreshes those prices
+# inside the committed training data, refits the model (so the fair price is
+# "live" too), rebakes all sets, regenerates the indexes, and appends today's
+# trend + fair to the per-card history (public/history/<set>.json). Then it
+# commits the changed data, which triggers Vercel to redeploy.
 #
-# Hand-corrected prices are untouched: ingest always lays the manual value from
-# price-exclusions.json over the freshly fetched one, so a pinned card stays
-# pinned and its history is a flat line until you change it.
+# Deliberately does NOT run build-training-data.mjs: that reads the ~19k-card
+# cache, which is gitignored and absent on a fresh CI checkout. refresh-prices
+# only refetches the ~4.4k displayed cards, so refresh-training-prices.mjs
+# patches just those rows into the committed training set instead — keeping the
+# model's full historical breadth. No npm install: the scripts use only Node
+# built-ins and repo-local modules.
+#
+# Hand-corrected prices are untouched everywhere: both the training patch and
+# ingest lay the manual value over the fetched one.
 #
 # Needs "Read and write permissions" for Actions (repo Settings → Actions →
 # General → Workflow permissions) so the built-in token can push.
@@ -17,10 +22,8 @@ name: Daily prices
 
 on:
   schedule:
-    # 09:17 UTC daily. Deliberately an odd minute, not 09:00: GitHub delays or
-    # drops scheduled runs at the top of the hour (everyone piles onto round
-    # times), so an off-peak minute lands far more reliably. Still after
-    # Cardmarket's ~08:00 update.
+    # 09:17 UTC — an odd minute, not the top of the hour, which GitHub delays or
+    # drops under load. Still after Cardmarket's ~08:00 update.
     - cron: '17 9 * * *'
   workflow_dispatch: {} # allow a manual run from the Actions tab
 
@@ -41,7 +44,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm ci
 
       - uses: actions/setup-python@v5
         with:
@@ -51,8 +53,9 @@ jobs:
       - name: Refresh prices, refit, rebake, snapshot
         run: |
           set -e
+          mkdir -p scripts/.cache/cards
           node scripts/refresh-prices.mjs
-          node scripts/build-training-data.mjs
+          node scripts/refresh-training-prices.mjs
           python analysis/fit_factors.py
           SETS=$(node -e "console.log(JSON.parse(require('fs').readFileSync('src/data/generated/sets.json','utf8')).map(s=>s.id).join(' '))")
           node scripts/ingest.mjs $SETS
