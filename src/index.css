@@ -2050,8 +2050,10 @@ a.prevnext-btn:hover {
 }
 
 .price-verdict.verdict-overvalued {
-  border-color: var(--warn-fg);
-  background: color-mix(in srgb, var(--warn-fg) 10%, transparent);
+  /* Match the red the market/fair numbers already use (--bad-fg, applied by the
+     global .verdict-overvalued colour rule) rather than the amber warn tone. */
+  border-color: var(--bad-fg);
+  background: color-mix(in srgb, var(--bad-fg) 10%, transparent);
 }
 
 .price-verdict-nums {
@@ -2088,7 +2090,7 @@ a.prevnext-btn:hover {
 }
 
 .verdict-overvalued .price-verdict-line {
-  color: var(--warn-fg);
+  color: var(--bad-fg);
 }
 
 /* ---------- Three views, each expandable ---------- */
@@ -2162,17 +2164,30 @@ a.prevnext-btn:hover {
   border-top: 1px solid var(--border);
 }
 
+/* The plain-language takeaway, given its own callout so it isn't skimmed past. */
 .views-summary {
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.5;
-  margin: 0 0 10px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--text-2);
 }
 
 /* Agreement is coloured neutrally, not green: three views agreeing on
    "overvalued" is still agreement, and green reads as "good/undervalued".
    Only disagreement gets an accent, because that's the line worth noticing. */
-.views-agree { color: var(--text-2); }
-.views-disagree { color: var(--warn-fg); }
+.views-agree {
+  color: var(--text);
+}
+
+.views-disagree {
+  color: var(--text);
+  border-left-color: var(--warn-fg);
+}
 
 @media (max-width: 560px) {
   .view-details > summary {
