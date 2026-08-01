@@ -1,5 +1,5 @@
 {
- "trainedAt": "2026-08-01T10:51:43.996384+00:00",
+ "trainedAt": "2026-08-01T15:11:40.955849+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
@@ -8,52 +8,52 @@
  "alpha": 5.62,
  "pokemonTierExponent": {
   "bulk": 1.0,
-  "mid": 1.4944,
-  "chase": 1.8376
+  "mid": 1.4937,
+  "chase": 1.8374
  },
- "displayedMedianAPE": 0.2690232683558137,
- "displayedWithin20": 0.38136560858643526,
- "displayedTestR2": 0.9607548033449624,
+ "displayedMedianAPE": 0.2688219828802906,
+ "displayedWithin20": 0.38296414706554005,
+ "displayedTestR2": 0.9607992390649549,
  "byPriceBand": {
   "0-0.3": {
    "n": 2713,
-   "medianAPE": 0.24207337064329723,
-   "within20": 0.4201990416513085
+   "medianAPE": 0.24271036859164244,
+   "within20": 0.42167342425359383
   },
   "0.3-3": {
-   "n": 706,
-   "medianAPE": 0.3229533395631692,
-   "within20": 0.3356940509915014
+   "n": 705,
+   "medianAPE": 0.3211203285925827,
+   "within20": 0.3375886524822695
   },
   "3-30": {
-   "n": 769,
-   "medianAPE": 0.31527057812806125,
-   "within20": 0.3211963589076723
+   "n": 770,
+   "medianAPE": 0.3129560777440825,
+   "within20": 0.3233766233766234
   },
   "30+": {
    "n": 191,
-   "medianAPE": 0.42119550241032777,
+   "medianAPE": 0.42096728146547197,
    "within20": 0.24083769633507854
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.317948633312731,
-   "within20": 0.322219684859557,
+   "medianAPE": 0.31827142268430986,
+   "within20": 0.32039278374058006,
    "alpha": 3.16
   },
   "standard": {
-   "medianAPE": 0.273354098995953,
-   "within20": 0.37314455355103904,
+   "medianAPE": 0.2738770085960181,
+   "within20": 0.37497145467001597,
    "alpha": 5.62
   },
   "local": {
-   "medianAPE": 0.25890342779998676,
-   "within20": 0.40397350993377484,
+   "medianAPE": 0.25764687377840895,
+   "within20": 0.4048869604932633,
    "alpha": 3.16
   }
  },
- "verdictAgreement": 0.6421557433203928,
+ "verdictAgreement": 0.6428408312400091,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,

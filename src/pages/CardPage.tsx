@@ -9,7 +9,6 @@ import {
   loadCard,
   type CardData,
 } from '../data/cards'
-import { ResultPanel } from '../components/ResultPanel'
 import { PriceBreakdown } from '../components/PriceBreakdown'
 import { RetryImage } from '../components/RetryImage'
 import { CollectionControls } from '../components/CollectionControls'
@@ -33,14 +32,9 @@ interface Props {
   config: Config
 }
 
-function trendToInput(trend: number | null | undefined): string {
-  return trend != null ? trend.toLocaleString('en-IE', { maximumFractionDigits: 2 }) : ''
-}
-
 export function CardPage({ cardId, config }: Props) {
   // undefined = still loading, null = confirmed not found
   const [card, setCard] = useState<CardData | null | undefined>(undefined)
-  const [marketInput, setMarketInput] = useState('')
   const admin = useAdminUnlocked()
   // Bumped when the admin edits a warning, so the public note below re-reads it.
   const [warnTick, setWarnTick] = useState(0)
@@ -49,7 +43,6 @@ export function CardPage({ cardId, config }: Props) {
     setCard(undefined)
     loadCard(cardId).then((c) => {
       setCard(c ?? null)
-      if (c) setMarketInput(trendToInput(c.market?.trend))
     })
   }, [cardId])
 
@@ -142,15 +135,6 @@ export function CardPage({ cardId, config }: Props) {
             </Suspense>
           )}
         </div>
-
-        <aside className="card-result">
-          <ResultPanel
-            fair={card.baseValue}
-            marketInput={marketInput}
-            onMarketInput={setMarketInput}
-            config={config}
-          />
-        </aside>
       </div>
     </div>
   )

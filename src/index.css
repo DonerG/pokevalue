@@ -896,18 +896,9 @@ a.prevnext-btn:hover {
 
 .card-layout {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr) 360px;
-  gap: 20px;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
-}
-
-@media (max-width: 1100px) {
-  .card-layout {
-    grid-template-columns: 260px minmax(0, 1fr);
-  }
-  .card-result {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (max-width: 720px) {
@@ -2043,23 +2034,110 @@ a.prevnext-btn:hover {
 .chip-dot-overvalued { background: var(--bad-fg); }
 .chip-dot-fair { background: var(--muted); }
 
-.views-list {
-  list-style: none;
-  margin: 14px 0 4px;
-  padding: 10px 12px;
-  background: var(--surface-2);
+/* ---------- Prominent price verdict ---------- */
+
+.price-verdict {
+  margin: 2px 0 18px;
+  padding: 14px 16px;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  border-radius: 12px;
+  background: var(--surface-2);
 }
 
-.views-list li {
+.price-verdict.verdict-undervalued {
+  border-color: var(--good-fg);
+  background: color-mix(in srgb, var(--good-fg) 10%, transparent);
+}
+
+.price-verdict.verdict-overvalued {
+  border-color: var(--warn-fg);
+  background: color-mix(in srgb, var(--warn-fg) 10%, transparent);
+}
+
+.price-verdict-nums {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.price-verdict-nums > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.price-verdict-nums strong {
+  font-size: 26px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.5px;
+}
+
+.price-verdict-vs {
+  color: var(--muted);
+  padding-bottom: 5px;
+}
+
+.price-verdict-line {
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.verdict-undervalued .price-verdict-line {
+  color: var(--good-fg);
+}
+
+.verdict-overvalued .price-verdict-line {
+  color: var(--warn-fg);
+}
+
+/* ---------- Three views, each expandable ---------- */
+
+.views-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin: 0 0 8px;
+}
+
+.views-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.view-details {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.view-details > summary {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
   font-size: 13px;
+  list-style: none;
+}
+
+.view-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.view-details > summary::before {
+  content: '▸';
+  color: var(--muted);
+  font-size: 11px;
+  transition: transform 0.12s;
+}
+
+.view-details[open] > summary::before {
+  transform: rotate(90deg);
 }
 
 .views-label {
@@ -2073,27 +2151,31 @@ a.prevnext-btn:hover {
   white-space: nowrap;
 }
 
-.views-list .chip {
+.view-details .chip {
   font-size: 11px;
   padding: 2px 7px;
 }
 
-.views-summary {
+.view-details .breakdown-list {
+  margin: 0;
+  padding: 2px 12px 10px 12px;
   border-top: 1px solid var(--border);
-  padding-top: 8px;
-  margin-top: 2px;
-  font-size: 12.5px;
-  line-height: 1.5;
 }
 
-/* Agreement is coloured neutrally, not green: the three views agreeing on
-   "overvalued" is still agreement, and green here reads as "good/undervalued".
+.views-summary {
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+/* Agreement is coloured neutrally, not green: three views agreeing on
+   "overvalued" is still agreement, and green reads as "good/undervalued".
    Only disagreement gets an accent, because that's the line worth noticing. */
 .views-agree { color: var(--text-2); }
 .views-disagree { color: var(--warn-fg); }
 
 @media (max-width: 560px) {
-  .views-list li {
+  .view-details > summary {
     flex-wrap: wrap;
     row-gap: 2px;
   }

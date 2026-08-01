@@ -27,18 +27,21 @@ export interface FactorEntry {
   usedFallback: boolean
 }
 
-export interface CardFactors {
-  /** `displayFactor` already has the tier exponent applied — see scripts/lib/factors.mjs. */
-  pokemon: FactorEntry & { tier: 'bulk' | 'mid' | 'chase'; tierExponent: number }
-  rarity: FactorEntry
-  illustrator: FactorEntry
-  set: FactorEntry
-  cardType: FactorEntry
-  cardName: FactorEntry
-  rarityYear: FactorEntry
-  cardTypeYear: FactorEntry
-  /** Hand-rated illustration quality; 'none' (×1) for anything unrated or not worth judging. */
-  artwork: FactorEntry
+/** One view's per-factor breakdown. Only the categories that view uses are
+    present (broad: no year/set terms; standard: no set term; local: all), so
+    entries are looked up by key rather than assumed. `pokemon` carries the tier
+    fields; `displayFactor` already includes the tier exponent. */
+export type Breakdown = Partial<
+  Record<
+    'pokemon' | 'rarity' | 'illustrator' | 'set' | 'cardType' | 'cardName' | 'rarityYear' | 'cardTypeYear' | 'artwork' | 'raritySet',
+    FactorEntry & { tier?: 'bulk' | 'mid' | 'chase'; tierExponent?: number }
+  >
+>
+
+export interface CardBreakdowns {
+  broad: Breakdown
+  standard: Breakdown
+  local: Breakdown
 }
 
 export interface CardData {
@@ -62,8 +65,8 @@ export interface CardData {
   baseValue: number
   /** The three model variants' fair prices — see /how-it-works: broad (widest comparison circle), standard, local (same rarity, same set). */
   fairs: { broad: number; standard: number; local: number }
-  /** Per-factor breakdown of the STANDARD variant (the middle one). */
-  factors: CardFactors
+  /** Per-factor breakdown for each of the three views — see PriceBreakdown. */
+  breakdowns: CardBreakdowns
 }
 
 export interface SetMeta {

@@ -127,7 +127,7 @@ async function ingestSet(setId) {
     // instead of leaving stale numbers beside a fixed one — CardPage then
     // shows the trend price alone. See src/logic/priceReview.js.
     const corrected = correctedTrend(review)
-    const { baseValue, fairs, breakdown } = computeCardPricing(card, set.releaseDate)
+    const { baseValue, fairs, breakdowns } = computeCardPricing(card, set.releaseDate)
     return {
       id: card.id,
       localId: String(card.localId),
@@ -151,7 +151,7 @@ async function ingestSet(setId) {
       // Only stored for corrected cards; absent everywhere else.
       ...(corrected != null && cm ? { rawMarket: { trend: cm.trend ?? null, updated: cm.updated ?? null } } : {}),
       baseValue,
-      factors: breakdown,
+      breakdowns,
       // The three variant estimates behind baseValue (their median). Rounded:
       // full doubles would bloat every cards-*.json for precision nobody sees.
       fairs: {

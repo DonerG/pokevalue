@@ -164,16 +164,20 @@ export function computeCardPricing(card, releaseDate) {
   }
 
   const fairs = {}
-  let breakdown = null
+  // A per-factor breakdown for EACH view now, not just standard — the card page
+  // lets you expand any of the three and see the factors that view actually
+  // uses (broad has the fewest, local the most), each multiplying out to that
+  // view's own fair price.
+  const breakdowns = {}
   for (const [name, cats] of Object.entries(VARIANT_CATEGORIES)) {
-    const { value, breakdown: b } = variantValue(variantData[name], pick(cats), tier, name === 'standard')
+    const { value, breakdown } = variantValue(variantData[name], pick(cats), tier, true)
     fairs[name] = value
-    if (b) breakdown = b
+    breakdowns[name] = breakdown
   }
 
   // The shipped number: the middle of the three estimates.
   const sorted = [fairs.broad, fairs.standard, fairs.local].sort((a, b) => a - b)
   const baseValue = sorted[1]
 
-  return { baseValue, fairs, breakdown }
+  return { baseValue, fairs, breakdowns }
 }
