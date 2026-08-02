@@ -211,6 +211,49 @@ export async function loadCorrectionCandidates(): Promise<CorrectionCandidate[]>
   return perSet.flat().sort((a, b) => (b.manualTrend ?? 0) - (a.manualTrend ?? 0))
 }
 
+export interface UndervaluedPick {
+  id: string
+  name: string
+  localId: string
+  setName: string
+  image: string | null
+  market: number
+  fair: number
+  upside: number
+  /** Each of the three views' verdict: 'u' undervalued, 'f' fair, 'o' overvalued. */
+  views: ('u' | 'f' | 'o')[]
+  unanimous: boolean
+}
+
+export async function loadUndervalued(): Promise<UndervaluedPick[]> {
+  const mod = await import('./generated/undervalued.json')
+  return mod.default as unknown as UndervaluedPick[]
+}
+
+export interface Mover {
+  id: string
+  name: string
+  localId: string
+  setName: string
+  image: string | null
+  market: number
+  fair: number
+  upside: number
+  /** Change in upside (percentage points) since the previous snapshot. */
+  delta: number
+}
+
+export interface Movers {
+  asOf: string
+  up: Mover[]
+  down: Mover[]
+}
+
+export async function loadMovers(): Promise<Movers> {
+  const mod = await import('./generated/movers.json')
+  return mod.default as unknown as Movers
+}
+
 export interface TeraCandidate {
   id: string
   name: string

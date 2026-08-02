@@ -64,6 +64,8 @@ jobs:
           node scripts/build-outlier-candidates.mjs
           node scripts/build-factor-highlights.mjs
           node scripts/snapshot-prices.mjs
+          node scripts/build-undervalued.mjs
+          node scripts/build-movers.mjs
 
       - name: Commit if anything changed
         run: |

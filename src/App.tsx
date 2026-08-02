@@ -34,6 +34,9 @@ const WatchlistPage = lazy(() =>
 const PortfolioPage = lazy(() =>
   import('./pages/PortfolioPage').then((m) => ({ default: m.PortfolioPage })),
 )
+const UndervaluedPage = lazy(() =>
+  import('./pages/UndervaluedPage').then((m) => ({ default: m.UndervaluedPage })),
+)
 
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
@@ -104,6 +107,9 @@ function App() {
           <a href="/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
             Sets
           </a>
+          <a href="/undervalued" className={route.page === 'undervalued' ? 'active' : ''}>
+            Undervalued
+          </a>
           <a href="/watchlist" className={route.page === 'watchlist' ? 'active' : ''}>
             Watchlist{watchCount > 0 && <span className="nav-count">{watchCount}</span>}
           </a>
@@ -141,6 +147,11 @@ function App() {
       {route.page === 'portfolio' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <PortfolioPage config={CONFIG} />
+        </Suspense>
+      )}
+      {route.page === 'undervalued' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <UndervaluedPage />
         </Suspense>
       )}
       {route.page === 'admin-hub' && (

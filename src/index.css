@@ -1272,6 +1272,156 @@ a.prevnext-btn:hover {
   font-size: 11px;
 }
 
+/* ---------- Undervalued page ---------- */
+
+.undervalued-page > h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.undervalued-page .intro {
+  max-width: 70ch;
+  margin: 0 0 24px;
+}
+
+.movers {
+  margin-bottom: 28px;
+}
+
+.movers h2,
+.picks h2 {
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+.movers-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.movers-title {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.movers-title.up {
+  color: var(--good-fg);
+}
+
+.movers-title.down {
+  color: var(--bad-fg);
+}
+
+.mover-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 7px;
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+}
+
+.mover-row:hover {
+  border-color: var(--accent);
+}
+
+.mover-row img,
+.mover-thumb-ph {
+  width: 34px;
+  aspect-ratio: 733 / 1024;
+  object-fit: contain;
+  border-radius: 4px;
+  background: var(--surface-2);
+  flex: none;
+}
+
+.mover-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+  font-size: 13px;
+}
+
+.mover-delta {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.mover-delta.up {
+  color: var(--good-fg);
+}
+
+.mover-delta.down {
+  color: var(--bad-fg);
+}
+
+.picks-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.pick-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.pick-upside {
+  color: var(--good-fg);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.pick-prices {
+  font-size: 12px;
+}
+
+.pick-dots {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.pick-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-u {
+  background: var(--good-fg);
+}
+
+.dot-f {
+  background: var(--muted);
+}
+
+.dot-o {
+  background: var(--bad-fg);
+}
+
+@media (max-width: 560px) {
+  .movers-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Watchlist + portfolio ---------- */
 
 .nav-count {

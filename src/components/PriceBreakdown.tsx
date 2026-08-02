@@ -144,16 +144,16 @@ export function PriceBreakdown({ card, setName, config, market }: Props) {
   const allAgree = viewVerdicts.length > 0 && viewVerdicts.every((k) => k != null && k === viewVerdicts[0])
 
   const headline = market != null ? verdict(market, card.baseValue, config) : null
-  // How far the market sits from fair, as a share of fair — the plain reading.
-  const rel = market != null && card.baseValue > 0 ? (market - card.baseValue) / card.baseValue : null
-  const pct = rel != null ? `${Math.abs(rel * 100).toFixed(0)}%` : ''
+  // deviation is the move to reach fair, relative to the current market price:
+  // positive = upside (room to rise), negative = downside (room to fall).
+  const potential = headline ? Math.round(Math.abs(headline.deviation) * 100) : 0
   const line =
     headline == null
       ? 'No market price to compare against.'
       : headline.kind === 'undervalued'
-        ? `The market price is ${pct} below the fair price — this card looks undervalued.`
+        ? `Upside potential: +${potential}% — room to rise to the fair price.`
         : headline.kind === 'overvalued'
-          ? `The market price is ${pct} above the fair price — this card looks overvalued.`
+          ? `Downside potential: −${potential}% — room to fall to the fair price.`
           : 'The market price sits within the fair range for this card.'
 
   return (
