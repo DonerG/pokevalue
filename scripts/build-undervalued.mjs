@@ -5,8 +5,11 @@
  * A card qualifies when its shipped fair price is above the market trend by more
  * than the site's threshold AND the market price is at least €1 (below that a
  * one-cent wobble reads as a huge percentage but means nothing). Each entry
- * carries the three views' verdicts so the page can show the dots and filter to
- * the unanimous ones (three green). Sorted by upside, biggest first.
+ * carries the three views' verdicts (for the dots + unanimous filter), the
+ * percentage upside AND the absolute euro gap to fair — the page sorts by
+ * either and can slice to the top 100. Every qualifying card is written, not a
+ * fixed top-N, so re-sorting by euro gap in the browser still sees the whole
+ * field (a card can be a big euro gap without a big percentage, and vice versa).
  *
  * Run after ingest. Usage: node scripts/build-undervalued.mjs
  */
@@ -19,7 +22,6 @@ const HERE = dirname(fileURLToPath(import.meta.url))
 const GENERATED_DIR = join(HERE, '..', 'src', 'data', 'generated')
 const CONFIG = { thresholds: DEFAULT_THRESHOLDS }
 const MIN_MARKET = 1
-const LIMIT = 60
 const KIND = { undervalued: 'u', fair: 'f', overvalued: 'o' }
 
 const sets = JSON.parse(await readFile(join(GENERATED_DIR, 'sets.json'), 'utf8'))
@@ -42,6 +44,7 @@ for (const set of sets) {
       market,
       fair: Number(c.baseValue.toFixed(2)),
       upside: Number((headline.deviation * 100).toFixed(0)),
+      diff: Number((c.baseValue - market).toFixed(2)),
       views,
       unanimous: views.every((v) => v === 'u'),
     })
@@ -49,6 +52,5 @@ for (const set of sets) {
 }
 
 picks.sort((a, b) => b.upside - a.upside)
-const out = picks.slice(0, LIMIT)
-await writeFile(join(GENERATED_DIR, 'undervalued.json'), JSON.stringify(out))
-console.log(`Wrote ${out.length} undervalued picks (${picks.filter((p) => p.unanimous).length} unanimous, of ${picks.length} total ≥ €${MIN_MARKET}).`)
+await writeFile(join(GENERATED_DIR, 'undervalued.json'), JSON.stringify(picks))
+console.log(`Wrote ${picks.length} undervalued picks (${picks.filter((p) => p.unanimous).length} unanimous), each with % upside + € gap.`)

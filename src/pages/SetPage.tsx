@@ -190,6 +190,22 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
                       <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
                       <VerdictChip market={market} fair={fair} config={config} fairs={card.fairs} />
                     </div>
+                    {density === 'large' && (
+                      <div
+                        className="card-tile-fairs"
+                        title="The three model views behind the fair price — their median is the fair price above"
+                      >
+                        <span>
+                          <span className="fair-view-label">Wide</span> {formatEuro(card.fairs.broad)}
+                        </span>
+                        <span>
+                          <span className="fair-view-label">Standard</span> {formatEuro(card.fairs.standard)}
+                        </span>
+                        <span>
+                          <span className="fair-view-label">Close-up</span> {formatEuro(card.fairs.local)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </a>
               </div>

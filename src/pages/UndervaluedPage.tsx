@@ -49,16 +49,22 @@ export function UndervaluedPage() {
   const [picks, setPicks] = useState<UndervaluedPick[] | null>(null)
   const [movers, setMovers] = useState<Movers | null>(null)
   const [onlyUnanimous, setOnlyUnanimous] = useState(false)
+  const [minGap, setMinGap] = useState(false)
+  const [sortKey, setSortKey] = useState<'upside' | 'diff'>('upside')
 
   useEffect(() => {
     loadUndervalued().then(setPicks)
     loadMovers().then(setMovers).catch(() => setMovers(null))
   }, [])
 
-  const shown = useMemo(
-    () => (picks ?? []).filter((p) => !onlyUnanimous || p.unanimous),
-    [picks, onlyUnanimous],
-  )
+  const LIMIT = 100
+  const shown = useMemo(() => {
+    const filtered = (picks ?? []).filter(
+      (p) => (!onlyUnanimous || p.unanimous) && (!minGap || p.diff > 2),
+    )
+    filtered.sort((a, b) => (sortKey === 'diff' ? b.diff - a.diff : b.upside - a.upside))
+    return filtered.slice(0, LIMIT)
+  }, [picks, onlyUnanimous, minGap, sortKey])
   const hasMovers = movers && (movers.up.length > 0 || movers.down.length > 0)
 
   return (
@@ -96,11 +102,36 @@ export function UndervaluedPage() {
       <section className="picks">
         <div className="picks-head">
           <h2>Most undervalued</h2>
-          <label className="admin-checkbox">
-            <input type="checkbox" checked={onlyUnanimous} onChange={(e) => setOnlyUnanimous(e.target.checked)} />
-            Only unanimous (three green dots)
-          </label>
+          <div className="picks-controls">
+            <div className="sort-toggle" role="group" aria-label="Sort by">
+              <button
+                type="button"
+                className={sortKey === 'upside' ? 'active' : ''}
+                onClick={() => setSortKey('upside')}
+                title="Biggest percentage gap first"
+              >
+                By upside %
+              </button>
+              <button
+                type="button"
+                className={sortKey === 'diff' ? 'active' : ''}
+                onClick={() => setSortKey('diff')}
+                title="Biggest euro gap first"
+              >
+                By € gap
+              </button>
+            </div>
+            <label className="admin-checkbox">
+              <input type="checkbox" checked={minGap} onChange={(e) => setMinGap(e.target.checked)} />
+              Only gap over €2
+            </label>
+            <label className="admin-checkbox">
+              <input type="checkbox" checked={onlyUnanimous} onChange={(e) => setOnlyUnanimous(e.target.checked)} />
+              Only unanimous (three green dots)
+            </label>
+          </div>
         </div>
+        <p className="muted picks-note">Top {LIMIT} cards, {sortKey === 'diff' ? 'biggest euro gap' : 'biggest percentage upside'} first.</p>
 
         {!picks ? (
           <p className="muted">Loading…</p>
@@ -124,6 +155,7 @@ export function UndervaluedPage() {
                     </div>
                     <div className="pick-value">
                       <span className="pick-upside">+{p.upside}%</span>
+                      <span className="pick-gap">+{formatEuro(p.diff)}</span>
                       <Dots views={p.views} />
                     </div>
                     <span className="muted pick-prices">

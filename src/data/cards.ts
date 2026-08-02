@@ -219,7 +219,10 @@ export interface UndervaluedPick {
   image: string | null
   market: number
   fair: number
+  /** Percentage the fair price sits above the market trend. */
   upside: number
+  /** Absolute euro gap to fair (fair − market). */
+  diff: number
   /** Each of the three views' verdict: 'u' undervalued, 'f' fair, 'o' overvalued. */
   views: ('u' | 'f' | 'o')[]
   unanimous: boolean
