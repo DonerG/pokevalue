@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { formatEuro } from '../logic/pricing'
 import { loadMovers, loadUndervalued, type Movers, type UndervaluedPick, type Mover } from '../data/cards'
 import { RetryImage } from '../components/RetryImage'
+import { CardQuickActions } from '../components/CardQuickActions'
 import { useDocumentMeta } from '../logic/documentMeta'
 
 const DOT_CLASS: Record<string, string> = { u: 'dot-u', f: 'dot-f', o: 'dot-o' }
@@ -142,27 +143,30 @@ export function UndervaluedPage() {
             {shown.map((p) => {
               const img = p.image ? `${p.image}/low.webp` : null
               return (
-                <a key={p.id} className="card-tile pick-tile" href={`/card/${p.id}`}>
-                  {img ? (
-                    <RetryImage src={img} alt={p.name} loading="lazy" placeholder={<div className="card-tile-placeholder">{p.name}</div>} />
-                  ) : (
-                    <div className="card-tile-placeholder">{p.name}</div>
-                  )}
-                  <div className="card-tile-body">
-                    <div className="card-tile-name-block">
-                      <strong>{p.name}</strong>
-                      <span className="muted">#{p.localId} · {p.setName}</span>
+                <div key={p.id} className="card-tile pick-tile">
+                  <CardQuickActions cardId={p.id} />
+                  <a className="card-tile-link" href={`/card/${p.id}`}>
+                    {img ? (
+                      <RetryImage src={img} alt={p.name} loading="lazy" placeholder={<div className="card-tile-placeholder">{p.name}</div>} />
+                    ) : (
+                      <div className="card-tile-placeholder">{p.name}</div>
+                    )}
+                    <div className="card-tile-body">
+                      <div className="card-tile-name-block">
+                        <strong>{p.name}</strong>
+                        <span className="muted">#{p.localId} · {p.setName}</span>
+                      </div>
+                      <div className="pick-value">
+                        <span className="pick-upside">+{p.upside}%</span>
+                        <span className="pick-gap">+{formatEuro(p.diff)}</span>
+                        <Dots views={p.views} />
+                      </div>
+                      <span className="muted pick-prices">
+                        {formatEuro(p.market)} → {formatEuro(p.fair)} fair
+                      </span>
                     </div>
-                    <div className="pick-value">
-                      <span className="pick-upside">+{p.upside}%</span>
-                      <span className="pick-gap">+{formatEuro(p.diff)}</span>
-                      <Dots views={p.views} />
-                    </div>
-                    <span className="muted pick-prices">
-                      {formatEuro(p.market)} → {formatEuro(p.fair)} fair
-                    </span>
-                  </div>
-                </a>
+                  </a>
+                </div>
               )
             })}
           </div>
