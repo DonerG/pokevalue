@@ -6,6 +6,7 @@ import { useAdminUnlocked } from './logic/adminGate'
 import { seedAdminStores } from './logic/adminSeed'
 import { markSeen, useUnseen } from './logic/collection'
 import { AdminBar } from './components/AdminBar'
+import { HeaderSearch } from './components/HeaderSearch'
 import { HomePage } from './pages/HomePage'
 import { SetPage } from './pages/SetPage'
 import { CardPage } from './pages/CardPage'
@@ -104,6 +105,7 @@ function App() {
           <span className="brand-name">PokéValue</span>
         </a>
         <nav className="main-nav">
+          <HeaderSearch />
           <a href="/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
             Sets
           </a>
