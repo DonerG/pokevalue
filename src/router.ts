@@ -19,7 +19,7 @@ if (window.location.hash.startsWith('#/')) {
   history.replaceState(null, '', legacy)
 }
 
-export type SetSortKey = 'number' | 'deviation' | 'market' | 'fair'
+export type SetSortKey = 'number' | 'deviation' | 'market' | 'gap'
 
 export type Route =
   | { page: 'home' }
@@ -35,7 +35,7 @@ export type Route =
   | { page: 'admin-corrections' }
   | { page: 'admin-price-audit' }
 
-const SORT_KEYS: SetSortKey[] = ['number', 'deviation', 'market', 'fair']
+const SORT_KEYS: SetSortKey[] = ['number', 'deviation', 'market', 'gap']
 
 export function parsePath(pathname: string, search: string): Route {
   const parts = pathname.split('/').filter(Boolean)

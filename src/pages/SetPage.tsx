@@ -82,7 +82,14 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
     if (sort === 'deviation')
       sorted.sort((a, b) => (a.deviation ?? Infinity) - (b.deviation ?? Infinity))
     if (sort === 'market') sorted.sort((a, b) => (b.market ?? -1) - (a.market ?? -1))
-    if (sort === 'fair') sorted.sort((a, b) => b.fair - a.fair)
+    // Largest undervaluation in euros first: fair − market. Cards with no market
+    // price sink to the bottom; overvalued cards (negative gap) trail the
+    // undervalued ones.
+    if (sort === 'gap') {
+      const euroGap = (r: { fair: number; market: number | null }) =>
+        r.market != null ? r.fair - r.market : -Infinity
+      sorted.sort((a, b) => euroGap(b) - euroGap(a))
+    }
     return sorted
   }, [cards, config, query, sort, minPrice])
 
@@ -127,8 +134,8 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
             <select value={sort} onChange={(e) => setSort(e.target.value as SetSortKey)}>
               <option value="number">Number</option>
               <option value="deviation">Deviation (undervalued first)</option>
+              <option value="gap">Undervaluation € (biggest first)</option>
               <option value="market">Market price (highest first)</option>
-              <option value="fair">Fair price (highest first)</option>
             </select>
           </label>
           <label className="admin-checkbox">
