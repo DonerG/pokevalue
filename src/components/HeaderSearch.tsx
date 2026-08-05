@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadSearchIndex, SETS, type SearchIndexCard } from '../data/cards'
+import { navigate } from '../router'
 import { RetryImage } from './RetryImage'
 
 const MAX_CARDS = 8
@@ -51,6 +52,15 @@ export function HeaderSearch() {
     setOpen(false)
   }
 
+  // Enter (or the footer link) opens the home page as a full results list for
+  // the term — the dropdown is only a peek at the top matches.
+  const showAll = () => {
+    const term = query.trim()
+    if (!term) return
+    navigate(`/?q=${encodeURIComponent(term)}`)
+    clear()
+  }
+
   const showDropdown = open && q.length > 0
   const hasResults = sets.length > 0 || cards.length > 0
 
@@ -74,6 +84,8 @@ export function HeaderSearch() {
           if (e.key === 'Escape') {
             setOpen(false)
             ;(e.target as HTMLInputElement).blur()
+          } else if (e.key === 'Enter') {
+            showAll()
           }
         }}
       />
@@ -105,6 +117,9 @@ export function HeaderSearch() {
                   </a>
                 )
               })}
+              <button type="button" className="header-search-all" onClick={showAll}>
+                See all results for “{query.trim()}” ↵
+              </button>
             </>
           )}
         </div>

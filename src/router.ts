@@ -22,7 +22,7 @@ if (window.location.hash.startsWith('#/')) {
 export type SetSortKey = 'number' | 'deviation' | 'market' | 'gap'
 
 export type Route =
-  | { page: 'home' }
+  | { page: 'home'; query: string }
   | { page: 'set'; setId: string; query: string; sort: SetSortKey; minPrice: boolean }
   | { page: 'card'; cardId: string }
   | { page: 'how-it-works' }
@@ -61,7 +61,7 @@ export function parsePath(pathname: string, search: string): Route {
   if (parts[0] === 'admin' && parts[1] === 'tera') return { page: 'admin-tera' }
   if (parts[0] === 'admin' && parts[1] === 'corrections') return { page: 'admin-corrections' }
   if (parts[0] === 'admin' && parts[1] === 'price-audit') return { page: 'admin-price-audit' }
-  return { page: 'home' }
+  return { page: 'home', query: params.get('q') ?? '' }
 }
 
 function currentRoute(): Route {

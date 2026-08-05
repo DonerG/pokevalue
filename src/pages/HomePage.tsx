@@ -3,7 +3,7 @@ import { formatDate, loadSearchIndex, SETS, setLogo, type SearchIndexCard, type 
 import { RetryImage } from '../components/RetryImage'
 import { useDocumentMeta } from '../logic/documentMeta'
 
-const MAX_CARD_RESULTS = 30
+const MAX_CARD_RESULTS = 300
 
 function cardThumb(c: SearchIndexCard): string | null {
   return c.image ? `${c.image}/low.webp` : null
@@ -22,8 +22,8 @@ function groupBySeries(sets: SetMeta[]): [string, SetMeta[]][] {
   return [...groups.entries()]
 }
 
-export function HomePage() {
-  const [query, setQuery] = useState('')
+export function HomePage({ initialQuery = '' }: { initialQuery?: string }) {
+  const [query, setQuery] = useState(initialQuery)
   const [cardIndex, setCardIndex] = useState<SearchIndexCard[] | null>(null)
 
   // Kicked off on mount, not on first keystroke — it's a ~200KB gzipped
@@ -31,6 +31,12 @@ export function HomePage() {
   useEffect(() => {
     loadSearchIndex().then(setCardIndex)
   }, [])
+
+  // Enter in the header search lands here as /?q=… — adopt that term (and any
+  // later one, e.g. a second search while already on the home page).
+  useEffect(() => {
+    setQuery(initialQuery)
+  }, [initialQuery])
 
   const groups = useMemo(() => {
     const q = query.trim().toLowerCase()

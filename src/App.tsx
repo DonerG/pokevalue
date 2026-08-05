@@ -124,7 +124,7 @@ function App() {
         </nav>
       </header>
 
-      {route.page === 'home' && <HomePage />}
+      {route.page === 'home' && <HomePage initialQuery={route.query} />}
       {route.page === 'set' && (
         <SetPage
           key={route.setId}

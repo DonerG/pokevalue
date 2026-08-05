@@ -193,6 +193,27 @@ body {
   flex: none;
 }
 
+.header-search-all {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border: none;
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 8px 8px;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.header-search-all:hover {
+  background: var(--surface-2);
+}
+
 @media (max-width: 640px) {
   .header-search input[type='search'] {
     width: 140px;
