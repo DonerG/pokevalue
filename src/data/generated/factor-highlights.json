@@ -2,32 +2,32 @@
  "model": {
   "cards": 4379,
   "cardsTotal": 19255,
-  "testR2": 0.9623158127613288,
-  "medianError": 0.2749572928080029,
-  "within20": 0.38296414706554005,
+  "testR2": 0.9628785556028834,
+  "medianError": 0.27377714748883547,
+  "within20": 0.3818223338661795,
   "byPriceBand": {
    "0-0.3": {
-    "n": 2715,
-    "medianAPE": 0.24426471959137494,
-    "within20": 0.42173112338858193
+    "n": 2714,
+    "medianAPE": 0.24479517375847226,
+    "within20": 0.41967575534266766
    },
    "0.3-3": {
-    "n": 711,
-    "medianAPE": 0.31865400328369387,
-    "within20": 0.34177215189873417
+    "n": 712,
+    "medianAPE": 0.31468253820665193,
+    "within20": 0.33146067415730335
    },
    "3-30": {
     "n": 761,
-    "medianAPE": 0.3067884732357479,
-    "within20": 0.32588699080157685
+    "medianAPE": 0.3062829777576315,
+    "within20": 0.3311432325886991
    },
    "30+": {
     "n": 192,
-    "medianAPE": 0.40714474346363594,
-    "within20": 0.21354166666666666
+    "medianAPE": 0.4063146939690304,
+    "within20": 0.234375
    }
   },
-  "anchor": 0.7108,
+  "anchor": 0.7112,
   "categories": {
    "pokemon": 1026,
    "rarity": 35,
@@ -44,124 +44,124 @@
  "topPokemon": [
   {
    "label": "Gengar",
-   "factor": 4.6761,
+   "factor": 4.6783,
    "n": 46
   },
   {
    "label": "Charizard",
-   "factor": 4.3996,
+   "factor": 4.4105,
    "n": 88
   },
   {
    "label": "Pikachu",
-   "factor": 4.1801,
+   "factor": 4.1859,
    "n": 128
   },
   {
    "label": "Umbreon",
-   "factor": 4.0217,
+   "factor": 4.0315,
    "n": 41
   },
   {
    "label": "Mew",
-   "factor": 3.5115,
+   "factor": 3.5202,
    "n": 35
   },
   {
    "label": "Rayquaza",
-   "factor": 3.2543,
+   "factor": 3.2603,
    "n": 44
   },
   {
    "label": "Lugia",
-   "factor": 3.0846,
+   "factor": 3.0915,
    "n": 32
   },
   {
    "label": "Snorlax",
-   "factor": 2.6085,
+   "factor": 2.6104,
    "n": 50
   },
   {
    "label": "Psyduck",
-   "factor": 2.5646,
+   "factor": 2.5686,
    "n": 37
   },
   {
    "label": "Ditto",
-   "factor": 2.5503,
+   "factor": 2.551,
    "n": 31
   },
   {
    "label": "Arceus",
-   "factor": 2.459,
+   "factor": 2.4589,
    "n": 22
   },
   {
    "label": "Squirtle",
-   "factor": 2.4303,
+   "factor": 2.43,
    "n": 30
   }
  ],
  "rarities": [
   {
    "label": "Special illustration rare",
-   "factor": 28.3812,
+   "factor": 28.374,
    "n": 222
   },
   {
    "label": "Illustration rare",
-   "factor": 20.553,
+   "factor": 20.5566,
    "n": 491
   },
   {
    "label": "Secret Rare",
-   "factor": 18.9228,
+   "factor": 18.9244,
    "n": 581
   },
   {
    "label": "Rare Holo LV.X",
-   "factor": 10.5434,
+   "factor": 10.5397,
    "n": 43
   },
   {
    "label": "Shiny rare",
-   "factor": 10.397,
+   "factor": 10.3919,
    "n": 224
   },
   {
    "label": "Hyper rare",
-   "factor": 10.3472,
+   "factor": 10.3659,
    "n": 69
   },
   {
    "label": "Promo (Stamped)",
-   "factor": 9.4841,
+   "factor": 9.4963,
    "n": 50
   },
   {
    "label": "Ultra Rare",
-   "factor": 6.9193,
+   "factor": 6.9247,
    "n": 1389
   },
   {
    "label": "Rare Holo",
-   "factor": 4.6264,
+   "factor": 4.6242,
    "n": 279
   },
   {
    "label": "Holo Rare VMAX",
-   "factor": 4.6028,
+   "factor": 4.6033,
    "n": 91
   },
   {
    "label": "Holo Rare VSTAR",
-   "factor": 4.5532,
+   "factor": 4.5557,
    "n": 32
   },
   {
    "label": "ACE SPEC Rare",
-   "factor": 3.6001,
+   "factor": 3.6053,
    "n": 33
   },
   {
@@ -171,163 +171,163 @@
   },
   {
    "label": "Holo Rare V",
-   "factor": 2.9977,
+   "factor": 2.9958,
    "n": 235
   }
  ],
  "topIllustrators": [
   {
    "label": "Asako Ito",
-   "factor": 2.1676,
+   "factor": 2.1654,
    "n": 36
   },
   {
    "label": "Hironobu Yoshida",
-   "factor": 2.0787,
+   "factor": 2.0793,
    "n": 30
   },
   {
    "label": "Shinji Kanda",
-   "factor": 1.7676,
+   "factor": 1.7575,
    "n": 28
   },
   {
    "label": "Tomokazu Komiya",
-   "factor": 1.6453,
+   "factor": 1.645,
    "n": 247
   },
   {
    "label": "Yuka Morii",
-   "factor": 1.5263,
+   "factor": 1.5254,
    "n": 207
   },
   {
    "label": "Hikaru Koike",
-   "factor": 1.5119,
+   "factor": 1.5125,
    "n": 47
   },
   {
    "label": "Atsushi Furusawa",
-   "factor": 1.3492,
+   "factor": 1.3509,
    "n": 50
   },
   {
-   "label": "Studio Bora Inc.",
-   "factor": 1.2913,
-   "n": 115
-  },
-  {
    "label": "akagi",
-   "factor": 1.2913,
+   "factor": 1.2941,
    "n": 30
   },
   {
+   "label": "Studio Bora Inc.",
+   "factor": 1.2931,
+   "n": 115
+  },
+  {
    "label": "Megumi Mizutani",
-   "factor": 1.2593,
+   "factor": 1.2598,
    "n": 119
   },
   {
    "label": "Unknown",
-   "factor": 1.2527,
+   "factor": 1.2529,
    "n": 389
   },
   {
    "label": "Shin-ichi Yoshida",
-   "factor": 1.2356,
+   "factor": 1.2361,
    "n": 53
   }
  ],
  "cardTypes": [
   {
    "label": "EX",
-   "factor": 2.2185,
+   "factor": 2.2208,
    "n": 916
   },
   {
    "label": "LEVEL-UP",
-   "factor": 1.8553,
+   "factor": 1.8584,
    "n": 42
   },
   {
    "label": "TAG TEAM-GX",
-   "factor": 1.6303,
+   "factor": 1.6363,
    "n": 87
   },
   {
    "label": "Mega EX",
-   "factor": 1.4487,
+   "factor": 1.4628,
    "n": 128
   },
   {
    "label": "BREAK",
-   "factor": 1.2686,
+   "factor": 1.2732,
    "n": 30
   },
   {
    "label": "Tera ex",
-   "factor": 1.0152,
+   "factor": 1.0183,
    "n": 134
   },
   {
    "label": "PRIME",
-   "factor": 0.9851,
+   "factor": 0.987,
    "n": 27
   },
   {
    "label": "VMAX",
-   "factor": 0.9515,
+   "factor": 0.9533,
    "n": 206
   },
   {
    "label": "VSTAR",
-   "factor": 0.8496,
+   "factor": 0.8519,
    "n": 91
   },
   {
    "label": "GX",
-   "factor": 0.8076,
+   "factor": 0.8104,
    "n": 348
   }
  ],
  "rarityAcrossEras": [
   {
    "label": "1999",
-   "factor": 3.4787,
+   "factor": 3.4801,
    "n": 93
   },
   {
    "label": "2003",
-   "factor": 2.6081,
+   "factor": 2.606,
    "n": 259
   },
   {
    "label": "2007",
-   "factor": 1.3194,
+   "factor": 1.3158,
    "n": 122
   },
   {
    "label": "2011",
-   "factor": 1.0147,
+   "factor": 1.0153,
    "n": 114
   },
   {
    "label": "2015",
-   "factor": 1.0996,
+   "factor": 1.0995,
    "n": 133
   },
   {
    "label": "2019",
-   "factor": 0.8152,
+   "factor": 0.8148,
    "n": 250
   },
   {
    "label": "2023",
-   "factor": 0.3345,
+   "factor": 0.3349,
    "n": 163
   },
   {
    "label": "2026",
-   "factor": 0.2278,
+   "factor": 0.2269,
    "n": 58
   }
  ]
