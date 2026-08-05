@@ -59,44 +59,140 @@ export function toggleWatch(id: string): void {
 }
 
 // ---------------------------------------------------------------- portfolio
+//
+// A portfolio is a list of LOTS — one entry per card copy bought, each with the
+// price it was bought at (buy) and when it was added (ts). A card held in
+// several copies is several lots, so different buy prices for the same card are
+// kept apart and each copy can be sold on its own terms. Quantity of a card is
+// just how many lots carry its id.
+//
+// Selling a lot moves it out of holdings and into the sales log (below) as a
+// realised gain/loss, so the portfolio value reflects only what's still held.
 
-export type Portfolio = Record<string, number>
+export interface Lot {
+  cardId: string
+  /** Price paid for this one copy. null for legacy holdings migrated from the
+   *  old quantity-only model, where no buy price was ever recorded. */
+  buy: number | null
+  /** Added-at epoch ms — also the lot's identity for removal/sale (FIFO). */
+  ts: number
+}
 
-let portfolioCache: Portfolio = readPortfolio()
-function readPortfolio(): Portfolio {
+// v1 was Record<cardId, qty> with no buy prices; v2 is the lot list.
+const PORTFOLIO_V2_KEY = 'pokevalue-portfolio-v2'
+
+let portfolioCache: Lot[] = readPortfolio()
+function readPortfolio(): Lot[] {
   try {
-    const v = JSON.parse(localStorage.getItem(PORTFOLIO_KEY) ?? '{}')
-    return v && typeof v === 'object' ? v : {}
+    const raw = localStorage.getItem(PORTFOLIO_V2_KEY)
+    if (raw != null) {
+      const v = JSON.parse(raw)
+      return Array.isArray(v) ? v : []
+    }
+    // One-time migration from the quantity-only v1 store: each unit becomes a
+    // lot with an unknown (null) buy price. v1 is left in place, harmless.
+    const legacy = JSON.parse(localStorage.getItem(PORTFOLIO_KEY) ?? '{}')
+    const lots: Lot[] = []
+    if (legacy && typeof legacy === 'object') {
+      let ts = Date.now()
+      for (const [cardId, qty] of Object.entries(legacy)) {
+        for (let i = 0; i < Number(qty); i++) lots.push({ cardId, buy: null, ts: ts++ })
+      }
+    }
+    if (lots.length) writeRaw(PORTFOLIO_V2_KEY, lots)
+    return lots
   } catch {
-    return {}
+    return []
   }
 }
 
-export function loadPortfolio(): Portfolio {
+export function loadPortfolio(): Lot[] {
   return portfolioCache
 }
-function writePortfolio(p: Portfolio): void {
-  portfolioCache = p
-  try {
-    localStorage.setItem(PORTFOLIO_KEY, JSON.stringify(p))
-  } catch {
-    // localStorage unavailable
-  }
+function writePortfolio(lots: Lot[]): void {
+  portfolioCache = lots
+  writeRaw(PORTFOLIO_V2_KEY, lots)
   notify()
 }
-export function portfolioQty(id: string): number {
-  return portfolioCache[id] ?? 0
+function writeRaw(key: string, value: unknown): void {
+  try {
+    localStorage.setItem(key, JSON.stringify(value))
+  } catch {
+    // localStorage unavailable — lasts for this session only
+  }
 }
-export function setPortfolioQty(id: string, qty: number): void {
-  const isNew = !(id in portfolioCache) && qty > 0
-  const next = { ...portfolioCache }
-  if (qty <= 0) delete next[id]
-  else next[id] = qty
-  writePortfolio(next)
+
+export function lotsFor(id: string): Lot[] {
+  return portfolioCache.filter((l) => l.cardId === id)
+}
+export function portfolioQty(id: string): number {
+  return lotsFor(id).length
+}
+
+/** Adds one copy of a card at the given buy price (null = price not recorded). */
+export function addLot(cardId: string, buy: number | null): void {
+  const isNew = portfolioQty(cardId) === 0
+  writePortfolio([...portfolioCache, { cardId, buy, ts: Date.now() }])
   if (isNew) bumpUnseen('portfolio')
 }
-export function addToPortfolio(id: string, delta = 1): void {
-  setPortfolioQty(id, (portfolioCache[id] ?? 0) + delta)
+
+/** Removes the newest lot of a card without recording a sale (an "undo add"). */
+export function removeLot(cardId: string): void {
+  const lots = lotsFor(cardId)
+  if (!lots.length) return
+  const newest = lots.reduce((a, b) => (b.ts > a.ts ? b : a))
+  writePortfolio(portfolioCache.filter((l) => l !== newest))
+}
+
+/** Removes every lot of a card (the row's ✕), no sale recorded. */
+export function removeCard(cardId: string): void {
+  writePortfolio(portfolioCache.filter((l) => l.cardId !== cardId))
+}
+
+/**
+ * Sells one copy of a card at `sell`, oldest lot first (FIFO): the lot leaves
+ * holdings and a realised gain/loss lands in the sales log with its buy price.
+ */
+export function sellLot(cardId: string, sell: number): void {
+  const lots = lotsFor(cardId)
+  if (!lots.length) return
+  const oldest = lots.reduce((a, b) => (b.ts < a.ts ? b : a))
+  writePortfolio(portfolioCache.filter((l) => l !== oldest))
+  writeSales([...salesCache, { cardId, buy: oldest.buy, sell, ts: Date.now() }])
+}
+
+// ---------------------------------------------------------------- sales log
+
+export interface Sale {
+  cardId: string
+  buy: number | null
+  sell: number
+  /** Sold-at epoch ms. */
+  ts: number
+}
+
+const SALES_KEY = 'pokevalue-portfolio-sales-v1'
+
+let salesCache: Sale[] = readSales()
+function readSales(): Sale[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(SALES_KEY) ?? '[]')
+    return Array.isArray(v) ? v : []
+  } catch {
+    return []
+  }
+}
+export function loadSales(): Sale[] {
+  return salesCache
+}
+function writeSales(sales: Sale[]): void {
+  salesCache = sales
+  writeRaw(SALES_KEY, sales)
+  notify()
+}
+/** Removes a ledger entry (does not restore the holding). */
+export function deleteSale(ts: number): void {
+  writeSales(salesCache.filter((s) => s.ts !== ts))
 }
 
 // ---------------------------------------------------------------- unseen badges
@@ -143,8 +239,11 @@ export function markSeen(which: Which): void {
 export function useWatchlist(): string[] {
   return useSyncExternalStore(subscribe, loadWatchlist, () => watchCache)
 }
-export function usePortfolio(): Portfolio {
+export function usePortfolio(): Lot[] {
   return useSyncExternalStore(subscribe, loadPortfolio, () => portfolioCache)
+}
+export function useSales(): Sale[] {
+  return useSyncExternalStore(subscribe, loadSales, () => salesCache)
 }
 export function useUnseen(which: Which): number {
   return useSyncExternalStore(

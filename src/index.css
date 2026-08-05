@@ -1702,6 +1702,216 @@ a.prevnext-btn:hover {
   }
 }
 
+/* Inline "price paid" field on a grid tile's + button. Kept visible while
+   focused via .card-tile:focus-within (see .quick-actions rules above). */
+.quick-add {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.quick-add input {
+  width: 66px;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font: inherit;
+  font-size: 12px;
+}
+
+.quick-add-ok {
+  border: none;
+  border-radius: 4px;
+  background: var(--good-fg);
+  color: #fff;
+  cursor: pointer;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+/* Add-with-price form on the card page + inline add/sell on the portfolio row. */
+.portfolio-add-form,
+.portfolio-inline-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.portfolio-add-form input,
+.portfolio-inline-form input {
+  width: 118px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+}
+
+.portfolio-inline-form input {
+  width: 96px;
+}
+
+.portfolio-add-cancel {
+  border: none;
+  background: none;
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+}
+
+/* Portfolio summary + rows: gain badges, per-row buy gap, add/sell controls. */
+.portfolio-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.portfolio-gap {
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.portfolio-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+}
+
+.portfolio-mini {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  cursor: pointer;
+  padding: 5px 9px;
+  font: inherit;
+  font-size: 12px;
+}
+
+.portfolio-mini:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.pl-pos {
+  color: var(--good-fg);
+}
+
+.pl-neg {
+  color: var(--bad-fg);
+}
+
+.pl-flat {
+  color: var(--text-2);
+}
+
+/* Realised-gain ledger. */
+.sales-log {
+  margin-top: 26px;
+}
+
+.sales-log-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.sales-log-head h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.realized {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.sales-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sales-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 13px;
+}
+
+.sales-date {
+  flex: none;
+  width: 108px;
+}
+
+.sales-name {
+  flex: 1;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sales-name:hover {
+  color: var(--accent);
+}
+
+.sales-prices {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.sales-pl {
+  flex: none;
+  width: 76px;
+  text-align: right;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.sales-row .tile-remove {
+  position: static;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  flex: none;
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+
+@media (max-width: 560px) {
+  .portfolio-row {
+    flex-wrap: wrap;
+  }
+  .portfolio-row-actions {
+    flex-wrap: wrap;
+  }
+  .sales-date {
+    width: 88px;
+  }
+}
+
 /* ---------- Admin bar (site-wide while unlocked) ---------- */
 
 .admin-bar {

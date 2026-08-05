@@ -1,16 +1,26 @@
-import { isWatched, portfolioQty, setPortfolioQty, toggleWatch, useWatchlist, usePortfolio } from '../logic/collection'
+import { useState } from 'react'
+import { addLot, isWatched, portfolioQty, toggleWatch, useWatchlist, usePortfolio } from '../logic/collection'
 
 /**
- * Watch toggle and portfolio quantity for a card, shown on its page. Public —
- * everything is this browser's own localStorage (see logic/collection). The
- * hooks are read so the control re-renders when the same card is changed from
- * the watchlist/portfolio pages in another tab of the app.
+ * Watch toggle and portfolio add for a card, shown on its page. Public —
+ * everything is this browser's own localStorage (see logic/collection). Adding
+ * to the portfolio opens a field for the price paid, which is stored with the
+ * copy; managing/selling copies happens on the portfolio page.
  */
 export function CollectionControls({ cardId }: { cardId: string }) {
   useWatchlist()
   usePortfolio()
   const watched = isWatched(cardId)
   const qty = portfolioQty(cardId)
+  const [adding, setAdding] = useState(false)
+  const [price, setPrice] = useState('')
+
+  const submit = () => {
+    const n = Number(price.replace(',', '.'))
+    addLot(cardId, price.trim() !== '' && Number.isFinite(n) && n >= 0 ? n : null)
+    setPrice('')
+    setAdding(false)
+  }
 
   return (
     <div className="collection-controls">
@@ -24,18 +34,47 @@ export function CollectionControls({ cardId }: { cardId: string }) {
       </button>
 
       <div className="portfolio-add">
-        {qty > 0 ? (
-          <div className="qty-stepper" role="group" aria-label="Quantity in portfolio">
-            <button type="button" onClick={() => setPortfolioQty(cardId, qty - 1)} aria-label="One fewer">
-              −
+        {qty > 0 && <span className="qty-value">{qty} in portfolio</span>}
+        {adding ? (
+          <form
+            className="portfolio-add-form"
+            onSubmit={(e) => {
+              e.preventDefault()
+              submit()
+            }}
+          >
+            <input
+              type="text"
+              inputMode="decimal"
+              autoFocus
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') {
+                  setAdding(false)
+                  setPrice('')
+                }
+              }}
+              placeholder="Price paid (€)"
+              aria-label="Purchase price"
+            />
+            <button type="submit" className="portfolio-btn">
+              Add
             </button>
-            <span className="qty-value">{qty} in portfolio</span>
-            <button type="button" onClick={() => setPortfolioQty(cardId, qty + 1)} aria-label="One more">
-              +
+            <button
+              type="button"
+              className="portfolio-add-cancel"
+              aria-label="Cancel"
+              onClick={() => {
+                setAdding(false)
+                setPrice('')
+              }}
+            >
+              ✕
             </button>
-          </div>
+          </form>
         ) : (
-          <button type="button" className="portfolio-btn" onClick={() => setPortfolioQty(cardId, 1)}>
+          <button type="button" className="portfolio-btn" onClick={() => setAdding(true)}>
             + Add to portfolio
           </button>
         )}
