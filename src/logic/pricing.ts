@@ -16,7 +16,7 @@ export { verdict, viewsSentence } from './verdict.js'
 
 // Live in plain JS so the Node prerender script can format prices identically —
 // see src/logic/format.js. Re-exported here so app code keeps its old import.
-export { formatEuro, formatPercent } from './format.js'
+export { formatEuro, formatEuro1, formatPercent } from './format.js'
 
 /** Parses number input using either a comma or a dot as the decimal separator. */
 export function parseNumber(input: string): number {

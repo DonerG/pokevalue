@@ -1,6 +1,6 @@
 import type { Config } from '../data/defaults'
 import { pokemonSpeciesName, type Breakdown, type CardData } from '../data/cards'
-import { formatEuro, verdict, viewsSentence } from '../logic/pricing'
+import { formatEuro, formatEuro1, verdict, viewsSentence } from '../logic/pricing'
 import { VerdictChip } from './VerdictChip'
 
 const multFmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
@@ -148,7 +148,7 @@ export function PriceBreakdown({ card, setName, config, market }: Props) {
   // positive = upside (room to rise), negative = downside (room to fall).
   const potential = headline ? Math.round(Math.abs(headline.deviation) * 100) : 0
   // Same room expressed in euros: how far the market sits from fair.
-  const potentialEuro = market != null ? formatEuro(Math.abs(card.baseValue - market)) : ''
+  const potentialEuro = market != null ? formatEuro1(Math.abs(card.baseValue - market)) : ''
   const line =
     headline == null
       ? 'No market price to compare against.'

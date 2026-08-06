@@ -928,20 +928,9 @@ a.prevnext-btn:hover {
   white-space: nowrap;
 }
 
-/* Absolute room to the fair price, in euros, under the verdict chip. */
-.tile-potential {
-  font-size: 11.5px;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-.pot-undervalued {
-  color: var(--good-fg);
-}
-.pot-overvalued {
-  color: var(--bad-fg);
-}
-.pot-fair {
-  color: var(--text-2);
+/* The absolute euro room shown next to the percentage inside a verdict chip. */
+.chip-euro {
+  opacity: 0.85;
 }
 
 /* The three model views behind the fair price — only shown in the "Large"
@@ -1437,6 +1426,53 @@ a.prevnext-btn:hover {
 .ph-axis {
   fill: var(--muted);
   font-size: 11px;
+}
+
+.price-history-svg {
+  cursor: crosshair;
+}
+
+.ph-hover {
+  pointer-events: none;
+}
+
+.ph-hover-line {
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.ph-dot-trend {
+  fill: var(--accent);
+}
+
+.ph-dot-fair {
+  fill: var(--text-2);
+}
+
+.ph-tooltip-bg {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 1;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.ph-tooltip-date {
+  fill: var(--muted);
+  font-size: 10.5px;
+}
+
+.ph-tooltip-row {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.ph-tt-market {
+  fill: var(--accent);
+}
+
+.ph-tt-fair {
+  fill: var(--text-2);
 }
 
 /* ---------- Undervalued page ---------- */

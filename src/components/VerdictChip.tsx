@@ -1,5 +1,5 @@
 import type { Config } from '../data/defaults'
-import { formatPercent, verdict, type VerdictKind } from '../logic/pricing'
+import { formatEuro1, formatPercent, verdict, type VerdictKind } from '../logic/pricing'
 
 const CHIP: Record<string, { icon: string; label: string }> = {
   undervalued: { icon: '▲', label: 'undervalued' },
@@ -23,13 +23,18 @@ interface Props {
    * is visible at a glance: three matching dots = a solid verdict, mixed dots
    * = a boundary case where the answer depends on how you compare. */
   fairs?: { broad: number; standard: number; local: number }
+  /** Also show the absolute room to fair in euros, next to the percentage. */
+  withEuro?: boolean
 }
 
-export function VerdictChip({ market, fair, config, fairs }: Props) {
+export function VerdictChip({ market, fair, config, fairs, withEuro }: Props) {
   if (market == null) return <span className="chip chip-none">no market price</span>
   const v = verdict(market, fair, config)
   if (!v) return <span className="chip chip-none">–</span>
   const { icon, label } = CHIP[v.kind]
+  // Absolute room to fair (+ upside / − downside), one decimal to stay compact.
+  const euroGap = fair - market
+  const euroText = `${euroGap >= 0 ? '+' : '−'}${formatEuro1(Math.abs(euroGap))}`
 
   let dots: { kind: VerdictKind; title: string }[] | null = null
   if (fairs) {
@@ -48,7 +53,10 @@ export function VerdictChip({ market, fair, config, fairs }: Props) {
     <span className={`chip chip-${v.kind}`}>
       <span aria-hidden="true">{icon}</span>
       <span className="chip-label">{label}</span>
-      <span className="chip-value">{formatPercent(v.deviation)}</span>
+      <span className="chip-value">
+        {formatPercent(v.deviation)}
+        {withEuro && <span className="chip-euro"> / {euroText}</span>}
+      </span>
       {dots && (
         <span className="chip-dots" aria-label="agreement of the three views">
           {dots.map((d, i) => (

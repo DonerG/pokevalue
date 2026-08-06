@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
 import { cardImage, formatDate, loadCardsByIds, type CardData } from '../data/cards'
-import { formatEuro, formatPercent, verdict } from '../logic/pricing'
+import { formatEuro, formatEuro1, formatPercent, verdict } from '../logic/pricing'
 import {
   addLot,
   deleteSale,
@@ -158,6 +158,8 @@ export function PortfolioPage({ config }: { config: Config }) {
   }, [sales])
 
   const totalVerdict = totals.market != null ? verdict(totals.market, totals.fair, config) : null
+  // Absolute euro distance of the whole portfolio's market value from its fair value.
+  const marketFairGap = totals.market != null ? formatEuro1(Math.abs(totals.fair - totals.market)) : ''
   const qtyByCard = useMemo(() => Object.fromEntries(rows.map((r) => [r.card.id, r.qty])), [rows])
   const sortedSales = useMemo(() => [...sales].sort((a, b) => b.ts - a.ts), [sales])
 
@@ -194,8 +196,8 @@ export function PortfolioPage({ config }: { config: Config }) {
                       {totalVerdict.kind === 'fair'
                         ? 'Fairly valued vs. market'
                         : totalVerdict.kind === 'undervalued'
-                          ? `Market ${formatPercent(Math.abs(totalVerdict.deviation)).replace('+', '')} below fair`
-                          : `Market ${formatPercent(Math.abs(totalVerdict.deviation)).replace('+', '')} above fair`}
+                          ? `Market ${formatPercent(Math.abs(totalVerdict.deviation)).replace('+', '')} / ${marketFairGap} below fair`
+                          : `Market ${formatPercent(Math.abs(totalVerdict.deviation)).replace('+', '')} / ${marketFairGap} above fair`}
                     </span>
                   )}
                   {totals.unreal && (

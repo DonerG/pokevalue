@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { formatEuro } from '../logic/pricing'
+import { ChartHover } from './ChartHover'
 
 interface CardHistory {
   d: string[]
@@ -93,6 +94,7 @@ async function aggregate(qtyByCard: Record<string, number>): Promise<Aggregated 
 
 export function PortfolioHistoryChart({ qtyByCard }: { qtyByCard: Record<string, number> }) {
   const [data, setData] = useState<Aggregated | null | undefined>(undefined)
+  const [hover, setHover] = useState<number | null>(null)
   // Re-aggregate whenever the holdings change; the key captures ids + quantities.
   const key = Object.entries(qtyByCard)
     .sort()
@@ -139,7 +141,19 @@ export function PortfolioHistoryChart({ qtyByCard }: { qtyByCard: Record<string,
         <span className="ph-key ph-trend">Market value</span>
         <span className="ph-key ph-fair">Fair value</span>
       </div>
-      <svg viewBox={`0 0 ${W} ${H}`} className="price-history-svg" role="img" aria-label="Portfolio market and fair value over time">
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        className="price-history-svg"
+        role="img"
+        aria-label="Portfolio market and fair value over time"
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect()
+          const svgX = ((e.clientX - rect.left) / rect.width) * W
+          const i = Math.round(((svgX - PAD.l) / innerW) * (n - 1))
+          setHover(Math.max(0, Math.min(n - 1, i)))
+        }}
+        onMouseLeave={() => setHover(null)}
+      >
         {[min, (min + max) / 2, max].map((v, i) => (
           <g key={i}>
             <line x1={PAD.l} y1={y(v)} x2={W - PAD.r} y2={y(v)} className="ph-grid" />
@@ -158,6 +172,20 @@ export function PortfolioHistoryChart({ qtyByCard }: { qtyByCard: Record<string,
         <text x={W - PAD.r} y={H - 6} className="ph-axis" textAnchor="end">
           {fmtDate(data.d[n - 1])}
         </text>
+        {hover != null && (
+          <ChartHover
+            idx={hover}
+            dates={data.d}
+            t={data.t}
+            f={data.f}
+            x={x}
+            y={y}
+            W={W}
+            H={H}
+            pad={PAD}
+            labels={{ market: 'Market', fair: 'Fair' }}
+          />
+        )}
       </svg>
     </section>
   )

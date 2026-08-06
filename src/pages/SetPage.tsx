@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Config } from '../data/defaults'
-import { formatEuro, verdict } from '../logic/pricing'
+import { formatEuro } from '../logic/pricing'
 import { cardImage, formatDate, getSet, loadCards, setLogo, type CardData } from '../data/cards'
 import { currentLocationKey, restoreScrollSoon, updateSetFilters, type SetSortKey } from '../router'
 import { useDocumentMeta } from '../logic/documentMeta'
@@ -69,10 +69,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
       const fair = card.baseValue
       const market = card.market?.trend ?? null
       const deviation = market != null && fair > 0 ? (market - fair) / fair : null
-      // Absolute room to the fair price, in euros (+ = upside, − = downside).
-      const euro = market != null ? fair - market : null
-      const kind = market != null ? verdict(market, fair, config)?.kind ?? null : null
-      return { card, fair, market, deviation, euro, kind }
+      return { card, fair, market, deviation }
     })
     const q = query.trim().toLowerCase()
     let filtered = q
@@ -170,7 +167,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
 
       {cards && (
         <div className={density === 'large' ? 'card-grid is-large' : 'card-grid'}>
-          {rows.map(({ card, fair, market, euro, kind }) => {
+          {rows.map(({ card, fair, market }) => {
             const img = cardImage(card, 'low')
             return (
               <div key={card.id} className="card-tile">
@@ -198,16 +195,7 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
                         Market {market != null ? formatEuro(market) : '–'}
                       </span>
                       <span title="Fair price per the formula">Fair {formatEuro(fair)}</span>
-                      <VerdictChip market={market} fair={fair} config={config} fairs={card.fairs} />
-                      {euro != null && (
-                        <span
-                          className={`tile-potential pot-${kind ?? 'fair'}`}
-                          title="Absolute room to the fair price"
-                        >
-                          {euro >= 0 ? '+' : '−'}
-                          {formatEuro(Math.abs(euro))} potential
-                        </span>
-                      )}
+                      <VerdictChip market={market} fair={fair} config={config} fairs={card.fairs} withEuro />
                     </div>
                     {density === 'large' && (
                       <div

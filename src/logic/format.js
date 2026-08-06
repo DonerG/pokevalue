@@ -17,6 +17,12 @@ const euroFmtRound = new Intl.NumberFormat('en-IE', {
   currency: 'EUR',
   maximumFractionDigits: 0,
 })
+const euroFmt1 = new Intl.NumberFormat('en-IE', {
+  style: 'currency',
+  currency: 'EUR',
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+})
 
 /**
  * @param {number} value
@@ -24,6 +30,17 @@ const euroFmtRound = new Intl.NumberFormat('en-IE', {
  */
 export function formatEuro(value) {
   return value >= 1000 ? euroFmtRound.format(value) : euroFmt.format(value)
+}
+
+/**
+ * Compact one-decimal euro (e.g. "€33.4"), for tight spots where two decimals
+ * would just add noise — the absolute over/undervaluation shown next to a
+ * percentage.
+ * @param {number} value
+ * @returns {string}
+ */
+export function formatEuro1(value) {
+  return euroFmt1.format(value)
 }
 
 /**

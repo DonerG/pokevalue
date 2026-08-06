@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { formatEuro } from '../logic/pricing'
+import { ChartHover } from './ChartHover'
 
 interface History {
   d: string[]
@@ -36,6 +37,7 @@ function segments(values: (number | null)[]): number[][] {
  */
 export function PriceHistoryChart({ cardId }: { cardId: string }) {
   const [data, setData] = useState<History | null | undefined>(undefined)
+  const [hover, setHover] = useState<number | null>(null)
 
   useEffect(() => {
     let live = true
@@ -75,7 +77,19 @@ export function PriceHistoryChart({ cardId }: { cardId: string }) {
         <span className="ph-key ph-trend">Market trend</span>
         <span className="ph-key ph-fair">Fair price</span>
       </div>
-      <svg viewBox={`0 0 ${W} ${H}`} className="price-history-svg" role="img" aria-label="Trend and fair price over time">
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        className="price-history-svg"
+        role="img"
+        aria-label="Trend and fair price over time"
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect()
+          const svgX = ((e.clientX - rect.left) / rect.width) * W
+          const i = Math.round(((svgX - PAD.l) / innerW) * (n - 1))
+          setHover(Math.max(0, Math.min(n - 1, i)))
+        }}
+        onMouseLeave={() => setHover(null)}
+      >
         {/* y gridlines at min / mid / max */}
         {[min, (min + max) / 2, max].map((v, i) => (
           <g key={i}>
@@ -98,6 +112,20 @@ export function PriceHistoryChart({ cardId }: { cardId: string }) {
         <text x={W - PAD.r} y={H - 6} className="ph-axis" textAnchor="end">
           {fmtDate(data.d[n - 1])}
         </text>
+        {hover != null && (
+          <ChartHover
+            idx={hover}
+            dates={data.d}
+            t={data.t}
+            f={data.f}
+            x={x}
+            y={y}
+            W={W}
+            H={H}
+            pad={PAD}
+            labels={{ market: 'Market', fair: 'Fair' }}
+          />
+        )}
       </svg>
     </section>
   )
