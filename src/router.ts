@@ -34,6 +34,7 @@ export type Route =
   | { page: 'admin-tera' }
   | { page: 'admin-corrections' }
   | { page: 'admin-price-audit' }
+  | { page: 'admin-usage' }
 
 const SORT_KEYS: SetSortKey[] = ['number', 'deviation', 'market', 'gap']
 
@@ -64,6 +65,7 @@ export function parsePath(pathname: string, search: string): Route {
   if (parts[0] === 'admin' && parts[1] === 'tera') return { page: 'admin-tera' }
   if (parts[0] === 'admin' && parts[1] === 'corrections') return { page: 'admin-corrections' }
   if (parts[0] === 'admin' && parts[1] === 'price-audit') return { page: 'admin-price-audit' }
+  if (parts[0] === 'admin' && parts[1] === 'usage') return { page: 'admin-usage' }
   return { page: 'home', query: params.get('q') ?? '' }
 }
 

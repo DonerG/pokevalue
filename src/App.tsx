@@ -26,6 +26,9 @@ const AdminCorrectionsPage = lazy(() =>
 const AdminPriceAuditPage = lazy(() =>
   import('./pages/AdminPriceAuditPage').then((m) => ({ default: m.AdminPriceAuditPage })),
 )
+const AdminUsagePage = lazy(() =>
+  import('./pages/AdminUsagePage').then((m) => ({ default: m.AdminUsagePage })),
+)
 const HowItWorksPage = lazy(() =>
   import('./pages/HowItWorksPage').then((m) => ({ default: m.HowItWorksPage })),
 )
@@ -42,7 +45,7 @@ const UndervaluedPage = lazy(() =>
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
 
-const ADMIN_PAGES = new Set(['admin-hub', 'admin-artwork', 'admin-tera', 'admin-corrections', 'admin-price-audit'])
+const ADMIN_PAGES = new Set(['admin-hub', 'admin-artwork', 'admin-tera', 'admin-corrections', 'admin-price-audit', 'admin-usage'])
 // Nothing personal or admin-only belongs in a search index — the watchlist and
 // portfolio are this browser's own, empty to a crawler.
 const NOINDEX_PAGES = new Set([...ADMIN_PAGES, 'watchlist', 'portfolio'])
@@ -183,6 +186,12 @@ function App() {
         gated(
           <Suspense fallback={<p className="muted">Loading…</p>}>
             <AdminPriceAuditPage />
+          </Suspense>,
+        )}
+      {route.page === 'admin-usage' &&
+        gated(
+          <Suspense fallback={<p className="muted">Loading…</p>}>
+            <AdminUsagePage />
           </Suspense>,
         )}
 

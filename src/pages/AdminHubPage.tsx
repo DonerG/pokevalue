@@ -52,6 +52,11 @@ const TOOLS = [
     title: 'Manual price corrections',
     desc: 'Cards you priced by hand vs. the current Cardmarket price — hand back the ones it has fixed.',
   },
+  {
+    href: '/admin/usage',
+    title: 'Usage',
+    desc: 'Anonymous, aggregate counts of watchlist and portfolio adds, and the most-saved cards.',
+  },
 ]
 
 export function AdminHubPage() {

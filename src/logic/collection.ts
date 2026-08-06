@@ -10,14 +10,14 @@
  * returning a fresh array/object on every render would loop.
  */
 import { useSyncExternalStore } from 'react'
-import { track } from '@vercel/analytics'
+import { recordUsage } from './usage'
 
-// Anonymous, cookieless usage counting (Vercel custom events): every add fires
-// one event carrying only the card id — no user/session identifier, no IP kept,
-// no per-person trail. The dashboard shows aggregate counts (how much each
-// feature is used, which cards get saved most), never who saved what. A no-op
-// off Vercel / in development. Deliberately fires on ADD only; removes aren't
-// counted. The card id is data about a card, not a person.
+// Anonymous, aggregate usage counting: every add pings our own /api/track with
+// just the card id — no user/session identifier, no IP kept, no per-person
+// trail. The counters live in a serverless key-value store and are read back on
+// the owner-only /admin/usage page (how much each feature is used, which cards
+// get saved most), never who saved what. Deliberately fires on ADD only;
+// removes aren't counted. The card id is data about a card, not a person.
 
 const WATCH_KEY = 'pokevalue-watchlist-v1'
 const PORTFOLIO_KEY = 'pokevalue-portfolio-v1'
@@ -65,7 +65,7 @@ export function toggleWatch(id: string): void {
   writeWatch(adding ? [...watchCache, id] : watchCache.filter((x) => x !== id))
   if (adding) {
     bumpUnseen('watch')
-    track('watchlist_add', { card: id })
+    recordUsage('watchlist_add', id)
   }
 }
 
@@ -145,7 +145,7 @@ export function addLot(cardId: string, buy: number | null): void {
   const isNew = portfolioQty(cardId) === 0
   writePortfolio([...portfolioCache, { cardId, buy, ts: Date.now() }])
   if (isNew) bumpUnseen('portfolio')
-  track('portfolio_add', { card: cardId })
+  recordUsage('portfolio_add', cardId)
 }
 
 /** Removes the newest lot of a card without recording a sale (an "undo add"). */
