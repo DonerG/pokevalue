@@ -24,6 +24,24 @@ const BOX_W = 158
 const BOX_H = 54
 
 /**
+ * Which day index a pointer at `clientX` is over, for the mouse/touch handlers
+ * on the chart svg. Maps screen px → viewBox px → nearest data index, clamped.
+ */
+export function indexAtClientX(
+  clientX: number,
+  svg: SVGSVGElement,
+  W: number,
+  padL: number,
+  innerW: number,
+  n: number,
+): number {
+  const rect = svg.getBoundingClientRect()
+  const svgX = ((clientX - rect.left) / rect.width) * W
+  const i = Math.round(((svgX - padL) / innerW) * (n - 1))
+  return Math.max(0, Math.min(n - 1, i))
+}
+
+/**
  * The read-out drawn on a price-history chart at the day under the cursor: a
  * vertical guide, a dot on each line, and a small box with that day's date,
  * market and fair value. Pure SVG so it scales with the chart; pointer-events

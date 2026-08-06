@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { formatEuro } from '../logic/pricing'
-import { ChartHover } from './ChartHover'
+import { ChartHover, indexAtClientX } from './ChartHover'
 
 interface CardHistory {
   d: string[]
@@ -146,13 +146,10 @@ export function PortfolioHistoryChart({ qtyByCard }: { qtyByCard: Record<string,
         className="price-history-svg"
         role="img"
         aria-label="Portfolio market and fair value over time"
-        onMouseMove={(e) => {
-          const rect = e.currentTarget.getBoundingClientRect()
-          const svgX = ((e.clientX - rect.left) / rect.width) * W
-          const i = Math.round(((svgX - PAD.l) / innerW) * (n - 1))
-          setHover(Math.max(0, Math.min(n - 1, i)))
-        }}
+        onMouseMove={(e) => setHover(indexAtClientX(e.clientX, e.currentTarget, W, PAD.l, innerW, n))}
         onMouseLeave={() => setHover(null)}
+        onTouchStart={(e) => setHover(indexAtClientX(e.touches[0].clientX, e.currentTarget, W, PAD.l, innerW, n))}
+        onTouchMove={(e) => setHover(indexAtClientX(e.touches[0].clientX, e.currentTarget, W, PAD.l, innerW, n))}
       >
         {[min, (min + max) / 2, max].map((v, i) => (
           <g key={i}>

@@ -1430,6 +1430,8 @@ a.prevnext-btn:hover {
 
 .price-history-svg {
   cursor: crosshair;
+  /* Horizontal drags scrub the read-out; vertical drags still scroll the page. */
+  touch-action: pan-y;
 }
 
 .ph-hover {
