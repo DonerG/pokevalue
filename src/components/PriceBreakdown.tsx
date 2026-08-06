@@ -147,13 +147,15 @@ export function PriceBreakdown({ card, setName, config, market }: Props) {
   // deviation is the move to reach fair, relative to the current market price:
   // positive = upside (room to rise), negative = downside (room to fall).
   const potential = headline ? Math.round(Math.abs(headline.deviation) * 100) : 0
+  // Same room expressed in euros: how far the market sits from fair.
+  const potentialEuro = market != null ? formatEuro(Math.abs(card.baseValue - market)) : ''
   const line =
     headline == null
       ? 'No market price to compare against.'
       : headline.kind === 'undervalued'
-        ? `Upside potential: +${potential}% — room to rise to the fair price.`
+        ? `Upside potential: +${potentialEuro} (+${potential}%) — room to rise to the fair price.`
         : headline.kind === 'overvalued'
-          ? `Downside potential: −${potential}% — room to fall to the fair price.`
+          ? `Downside potential: −${potentialEuro} (−${potential}%) — room to fall to the fair price.`
           : 'The market price sits within the fair range for this card.'
 
   return (

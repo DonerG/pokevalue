@@ -928,6 +928,22 @@ a.prevnext-btn:hover {
   white-space: nowrap;
 }
 
+/* Absolute room to the fair price, in euros, under the verdict chip. */
+.tile-potential {
+  font-size: 11.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.pot-undervalued {
+  color: var(--good-fg);
+}
+.pot-overvalued {
+  color: var(--bad-fg);
+}
+.pot-fair {
+  color: var(--text-2);
+}
+
 /* The three model views behind the fair price — only shown in the "Large"
    grid, where there's room. The fair price above is their median. */
 .card-tile-fairs {

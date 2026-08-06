@@ -47,8 +47,11 @@ export function parsePath(pathname: string, search: string): Route {
       page: 'set',
       setId: decodeURIComponent(parts[1]),
       query: params.get('q') ?? '',
-      sort: SORT_KEYS.includes(sortParam as SetSortKey) ? (sortParam as SetSortKey) : 'number',
-      minPrice: params.get('min1') === '1',
+      // Defaults: highest market price first, and hide sub-€1 cards — the
+      // absence of a param means the default, so ?sort=number / ?min1=0 encode
+      // the non-default choices.
+      sort: SORT_KEYS.includes(sortParam as SetSortKey) ? (sortParam as SetSortKey) : 'market',
+      minPrice: params.get('min1') !== '0',
     }
   }
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: decodeURIComponent(parts[1]) }
@@ -103,8 +106,8 @@ export function navigate(url: string, options: { replace?: boolean } = {}): void
 export function updateSetFilters(setId: string, query: string, sort: SetSortKey, minPrice: boolean): void {
   const params = new URLSearchParams()
   if (query) params.set('q', query)
-  if (sort !== 'number') params.set('sort', sort)
-  if (minPrice) params.set('min1', '1')
+  if (sort !== 'market') params.set('sort', sort)
+  if (!minPrice) params.set('min1', '0')
   const qs = params.toString()
   history.replaceState(null, '', `/set/${setId}${qs ? `?${qs}` : ''}`)
 }
