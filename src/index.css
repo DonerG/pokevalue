@@ -781,9 +781,7 @@ details.panel[open] summary {
 }
 
 /* On a device that can hover (desktop), keep the icons hidden until the tile is
-   hovered or holds keyboard focus, so they don't clutter the grid. On touch —
-   where there is no hover — they stay visible, since there'd be no other way to
-   reach them. */
+   hovered or holds keyboard focus, so they don't clutter the grid. */
 @media (hover: hover) {
   .quick-actions {
     opacity: 0;
@@ -792,6 +790,15 @@ details.panel[open] summary {
   .card-tile:hover .quick-actions,
   .card-tile:focus-within .quick-actions {
     opacity: 1;
+  }
+}
+
+/* On touch there's no hover to reveal them, and always-on icons just clutter
+   every tile — so hide them. Adding to the watchlist/portfolio happens from the
+   card's own page (tap the card), which has its own buttons. */
+@media (hover: none) {
+  .quick-actions {
+    display: none;
   }
 }
 
