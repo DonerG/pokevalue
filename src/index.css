@@ -98,6 +98,43 @@ body {
   margin-left: auto;
 }
 
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Phone: search on its own full-width row, tabs as a horizontally scrollable
+   strip below — so the last tab is reachable by swiping the strip, not by
+   moving the whole page. min-width:0 lets the strip shrink below its content
+   width so overflow-x actually scrolls instead of widening the page. */
+@media (max-width: 640px) {
+  .main-nav {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header-search {
+    width: 100%;
+  }
+  .nav-tabs {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-tabs a {
+    flex: none;
+    white-space: nowrap;
+  }
+}
+
 /* Always-available search sitting to the left of the nav tabs. */
 .header-search {
   position: relative;
@@ -118,6 +155,15 @@ body {
 .header-search input[type='search']:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+/* Placed after the base width/max-width so it wins at phone widths: the search
+   takes its own full row above the scrollable tab strip. */
+@media (max-width: 640px) {
+  .header-search input[type='search'] {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .header-search-results {
@@ -214,11 +260,6 @@ body {
   background: var(--surface-2);
 }
 
-@media (max-width: 640px) {
-  .header-search input[type='search'] {
-    width: 140px;
-  }
-}
 
 .main-nav a {
   text-decoration: none;

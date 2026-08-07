@@ -109,21 +109,26 @@ function App() {
         </a>
         <nav className="main-nav">
           <HeaderSearch />
-          <a href="/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
-            Sets
-          </a>
-          <a href="/undervalued" className={route.page === 'undervalued' ? 'active' : ''}>
-            Undervalued
-          </a>
-          <a href="/watchlist" className={route.page === 'watchlist' ? 'active' : ''}>
-            Watchlist{watchCount > 0 && <span className="nav-count">{watchCount}</span>}
-          </a>
-          <a href="/portfolio" className={route.page === 'portfolio' ? 'active' : ''}>
-            Portfolio{portfolioCount > 0 && <span className="nav-count">{portfolioCount}</span>}
-          </a>
-          <a href="/how-it-works" className={route.page === 'how-it-works' ? 'active' : ''}>
-            How it works
-          </a>
+          {/* The tabs live in their own strip so it can scroll horizontally on a
+              phone without dragging the whole page — and without clipping the
+              search's dropdown, which sits outside this overflow container. */}
+          <div className="nav-tabs">
+            <a href="/" className={route.page === 'home' || route.page === 'set' || route.page === 'card' ? 'active' : ''}>
+              Sets
+            </a>
+            <a href="/undervalued" className={route.page === 'undervalued' ? 'active' : ''}>
+              Undervalued
+            </a>
+            <a href="/watchlist" className={route.page === 'watchlist' ? 'active' : ''}>
+              Watchlist{watchCount > 0 && <span className="nav-count">{watchCount}</span>}
+            </a>
+            <a href="/portfolio" className={route.page === 'portfolio' ? 'active' : ''}>
+              Portfolio{portfolioCount > 0 && <span className="nav-count">{portfolioCount}</span>}
+            </a>
+            <a href="/how-it-works" className={route.page === 'how-it-works' ? 'active' : ''}>
+              How it works
+            </a>
+          </div>
         </nav>
       </header>
 
