@@ -57,6 +57,11 @@ const TOOLS = [
     title: 'Usage',
     desc: 'Anonymous, aggregate counts of watchlist and portfolio adds, and the most-saved cards.',
   },
+  {
+    href: '/admin/guarded',
+    title: 'Guarded prices',
+    desc: 'Cards whose feed made an implausible >20% jump — held at the old price until you review them.',
+  },
 ]
 
 export function AdminHubPage() {

@@ -55,6 +55,7 @@ jobs:
           set -e
           mkdir -p scripts/.cache/cards
           node scripts/refresh-prices.mjs
+          node scripts/guard-price-spikes.mjs
           node scripts/refresh-training-prices.mjs
           python analysis/fit_factors.py
           SETS=$(node -e "console.log(JSON.parse(require('fs').readFileSync('src/data/generated/sets.json','utf8')).map(s=>s.id).join(' '))")

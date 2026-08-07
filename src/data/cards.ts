@@ -211,6 +211,50 @@ export async function loadCorrectionCandidates(): Promise<CorrectionCandidate[]>
   return perSet.flat().sort((a, b) => (b.manualTrend ?? 0) - (a.manualTrend ?? 0))
 }
 
+export interface GuardEntry {
+  kept: number
+  rejected: number
+  since: string
+  seen: string
+}
+
+export interface GuardedCard {
+  id: string
+  name: string
+  localId: string
+  image: string | null
+  setName: string
+  kept: number
+  rejected: number
+  since: string
+}
+
+/**
+ * Cards the price guard is currently holding at their old price because the feed
+ * made an implausible >20% single-day jump (see scripts/guard-price-spikes.mjs).
+ * Joins the small guard map with the search index for names. For /admin/guarded.
+ */
+export async function loadGuardedCards(): Promise<GuardedCard[]> {
+  const [guardMod, index] = await Promise.all([import('./price-guard.json'), loadSearchIndex()])
+  const guard = (guardMod.default ?? {}) as Record<string, GuardEntry>
+  const byId = new Map(index.map((c) => [c.id, c]))
+  return Object.entries(guard)
+    .map(([id, g]) => {
+      const c = byId.get(id)
+      return {
+        id,
+        name: c?.name ?? id,
+        localId: c?.localId ?? '',
+        image: c?.image ?? null,
+        setName: c?.setName ?? '',
+        kept: g.kept,
+        rejected: g.rejected,
+        since: g.since,
+      }
+    })
+    .sort((a, b) => b.rejected - a.rejected)
+}
+
 export interface UndervaluedPick {
   id: string
   name: string
