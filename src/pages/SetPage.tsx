@@ -58,6 +58,16 @@ function loadDirPref(sort: SetSortKey): SortDir {
     return DEFAULT_DIR[sort]
   }
 }
+// The "only ≥ €1 market price" filter is remembered globally too.
+const MINPRICE_KEY = 'pokevalue-set-min1-v1'
+function loadMinPricePref(fallback: boolean): boolean {
+  try {
+    const v = localStorage.getItem(MINPRICE_KEY)
+    return v == null ? fallback : v === '1'
+  } catch {
+    return fallback
+  }
+}
 function savePref(key: string, value: string): void {
   try {
     localStorage.setItem(key, value)
@@ -72,8 +82,13 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
   const [query, setQuery] = useState(initialQuery)
   const [sort, setSort] = useState<SetSortKey>(() => loadSortPref(initialSort))
   const [dir, setDir] = useState<SortDir>(() => loadDirPref(loadSortPref(initialSort)))
-  const [minPrice, setMinPrice] = useState(initialMinPrice)
+  const [minPrice, setMinPrice] = useState(() => loadMinPricePref(initialMinPrice))
   const [density, setDensity] = useState<Density>(loadDensity)
+
+  const changeMinPrice = (on: boolean) => {
+    setMinPrice(on)
+    savePref(MINPRICE_KEY, on ? '1' : '0')
+  }
 
   const changeDensity = (d: Density) => {
     setDensity(d)
@@ -202,10 +217,13 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
             title="Reverse order"
             aria-label="Reverse sort order"
           >
-            {dir === 'desc' ? '↓' : '↑'}
+            {/* The arrow points the way the shown value runs. For Deviation the
+                displayed % runs opposite the internal sort key, so it's flipped:
+                its default (biggest upside first) reads as a downward arrow. */}
+            {(sort === 'deviation' ? dir === 'asc' : dir === 'desc') ? '↓' : '↑'}
           </button>
           <label className="admin-checkbox">
-            <input type="checkbox" checked={minPrice} onChange={(e) => setMinPrice(e.target.checked)} />
+            <input type="checkbox" checked={minPrice} onChange={(e) => changeMinPrice(e.target.checked)} />
             Only ≥ €1 market price
           </label>
           <div className="density-toggle" role="group" aria-label="Card size">
