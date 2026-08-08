@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, type ReactNode } from 'react'
+import { lazy, Suspense, useEffect, useRef, type ReactNode } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import { defaultConfig } from './data/defaults'
 import { useRoute } from './router'
@@ -66,6 +66,34 @@ function App() {
     if (route.page === 'portfolio') markSeen('portfolio')
   }, [route.page])
 
+  // Auto-hiding header: it slides away while you scroll down through a set and
+  // reappears the moment you scroll back up, so switching set/tab never needs a
+  // trip to the very top. Toggled straight on the DOM node (not via state) so a
+  // scroll never re-renders the whole app.
+  const headerRef = useRef<HTMLElement>(null)
+  useEffect(() => {
+    let lastY = window.scrollY
+    let ticking = false
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        const y = window.scrollY
+        const el = headerRef.current
+        if (el) {
+          el.classList.toggle('is-stuck', y > 4)
+          // Near the top, or any upward scroll → show; a clear downward scroll → hide.
+          if (y < 90 || y < lastY - 6) el.classList.remove('is-hidden')
+          else if (y > lastY + 6) el.classList.add('is-hidden')
+        }
+        lastY = y
+        ticking = false
+      })
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   // Once unlocked, load the committed data into the editing stores so the
   // per-card editor reflects the real current state (see adminSeed).
   useEffect(() => {
@@ -100,7 +128,7 @@ function App() {
   return (
     <div className="app">
       <AdminBar />
-      <header className="app-header">
+      <header ref={headerRef} className="app-header">
         {/* Deliberately NOT an <h1>: this logo is on all 4,400+ pages, so as an
             h1 it told a crawler the same thing about every one of them and the
             page's real subject (the card, the set) was demoted to an h2. Each
