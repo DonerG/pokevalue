@@ -26,6 +26,8 @@ export type Route =
   | { page: 'set'; setId: string; query: string; sort: SetSortKey; minPrice: boolean }
   | { page: 'card'; cardId: string }
   | { page: 'how-it-works' }
+  | { page: 'impressum' }
+  | { page: 'datenschutz' }
   | { page: 'watchlist' }
   | { page: 'portfolio' }
   | { page: 'undervalued' }
@@ -58,6 +60,8 @@ export function parsePath(pathname: string, search: string): Route {
   }
   if (parts[0] === 'card' && parts[1]) return { page: 'card', cardId: decodeURIComponent(parts[1]) }
   if (parts[0] === 'how-it-works') return { page: 'how-it-works' }
+  if (parts[0] === 'impressum') return { page: 'impressum' }
+  if (parts[0] === 'datenschutz') return { page: 'datenschutz' }
   if (parts[0] === 'watchlist') return { page: 'watchlist' }
   if (parts[0] === 'portfolio') return { page: 'portfolio' }
   if (parts[0] === 'undervalued') return { page: 'undervalued' }

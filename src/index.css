@@ -1203,6 +1203,34 @@ a.prevnext-btn:hover {
   color: var(--accent);
 }
 
+.footer-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+/* ---------- Legal pages (Impressum / Privacy) ---------- */
+
+.legal-page {
+  max-width: 74ch;
+}
+
+.legal-page h1 {
+  font-size: 26px;
+  margin: 0 0 18px;
+}
+
+.legal-page h2 {
+  font-size: 17px;
+  margin: 24px 0 6px;
+}
+
+.legal-page p {
+  margin: 0 0 10px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
 /* ---------- Artwork rating admin page ---------- */
 
 .admin-header h2 {

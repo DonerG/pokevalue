@@ -35,6 +35,12 @@ const AdminGuardedPage = lazy(() =>
 const HowItWorksPage = lazy(() =>
   import('./pages/HowItWorksPage').then((m) => ({ default: m.HowItWorksPage })),
 )
+const ImpressumPage = lazy(() =>
+  import('./pages/LegalPages').then((m) => ({ default: m.ImpressumPage })),
+)
+const DatenschutzPage = lazy(() =>
+  import('./pages/LegalPages').then((m) => ({ default: m.DatenschutzPage })),
+)
 const WatchlistPage = lazy(() =>
   import('./pages/WatchlistPage').then((m) => ({ default: m.WatchlistPage })),
 )
@@ -180,6 +186,16 @@ function App() {
           <HowItWorksPage />
         </Suspense>
       )}
+      {route.page === 'impressum' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <ImpressumPage />
+        </Suspense>
+      )}
+      {route.page === 'datenschutz' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <DatenschutzPage />
+        </Suspense>
+      )}
       {route.page === 'watchlist' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <WatchlistPage config={CONFIG} />
@@ -238,14 +254,20 @@ function App() {
         )}
 
       <footer className="app-footer">
-        PokéValue estimates a fair price from real Cardmarket data across thousands of cards using
-        a machine-learning model — not a hand-tuned formula. Not financial advice. Card data and
-        prices from{' '}
-        <a href="https://tcgdex.dev" target="_blank" rel="noreferrer">
-          TCGdex
-        </a>{' '}
-        (Cardmarket). Unofficial fan project — not endorsed or supported by Nintendo, Game Freak, or
-        The Pokémon Company.
+        <p>
+          PokéValue estimates a fair price from real Cardmarket data across thousands of cards using
+          a machine-learning model — not a hand-tuned formula. Not financial advice. Card data and
+          prices from{' '}
+          <a href="https://tcgdex.dev" target="_blank" rel="noreferrer">
+            TCGdex
+          </a>{' '}
+          (Cardmarket). Unofficial fan project — not endorsed or supported by Nintendo, Game Freak,
+          or The Pokémon Company.
+        </p>
+        <nav className="footer-links">
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Privacy</a>
+        </nav>
       </footer>
       <Analytics />
     </div>

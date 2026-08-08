@@ -41,6 +41,7 @@ import {
 } from '../src/logic/pageMeta.js'
 import { DEFAULT_THRESHOLDS, verdict } from '../src/logic/verdict.js'
 import { warningText } from '../src/logic/warningText.js'
+import { impressum, datenschutz } from '../src/data/legal.js'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const DIST = join(HERE, '..', 'dist')
@@ -288,6 +289,15 @@ function howItWorksShell() {
   return shell([{ name: 'Sets', path: '/' }, { name: 'How it works' }], inner)
 }
 
+function legalShell(doc) {
+  const inner =
+    `<h1>${esc(doc.title)}</h1>` +
+    doc.sections
+      .map((s) => (s.h ? `<h2>${esc(s.h)}</h2>` : '') + s.p.map((p) => `<p>${esc(p)}</p>`).join(''))
+      .join('')
+  return shell([{ name: 'Sets', path: '/' }, { name: doc.title }], inner)
+}
+
 // ------------------------------------------------------------------ writing
 
 // The home page is written back over dist/index.html, which is also the
@@ -349,6 +359,23 @@ pages.push({
     body: howItWorksShell(),
   }),
 })
+
+for (const doc of [impressum, datenschutz]) {
+  const path = doc === impressum ? '/impressum' : '/datenschutz'
+  pages.push({
+    path,
+    html: renderPage({
+      head: headBlock({ title: doc.title, description: doc.description, path }),
+      structuredData: jsonLd(
+        breadcrumbs([
+          { name: 'Sets', path: '/' },
+          { name: doc.title, path },
+        ]),
+      ),
+      body: legalShell(doc),
+    }),
+  })
+}
 
 let cardCount = 0
 for (const set of sets) {
@@ -434,5 +461,5 @@ if (scriptSrc && !assets.includes(scriptSrc)) {
 }
 
 console.log(
-  `Prerendered ${pages.length} pages (1 home + 1 how-it-works + ${sets.length} sets + ${cardCount} cards) into ${DIST}`,
+  `Prerendered ${pages.length} pages (1 home + 1 how-it-works + 2 legal + ${sets.length} sets + ${cardCount} cards) into ${DIST}`,
 )
