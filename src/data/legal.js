@@ -15,7 +15,7 @@
  */
 
 const OPERATOR = 'Daniel Leitmann'
-const ADDRESS = 'Jahnstraße 9, Salzburg, Austria'
+const ADDRESS = 'Jahnstraße 9, 5020 Salzburg, Austria'
 const EMAIL = 'aureliacapital@gmx.at'
 const UPDATED = '8 August 2026'
 
