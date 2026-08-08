@@ -29,11 +29,49 @@ function loadDensity(): Density {
   }
 }
 
+// Sort mechanism + direction, remembered globally across sets until changed —
+// so a sort chosen on one set applies to every set you open next.
+const SORT_KEY = 'pokevalue-set-sort-v1'
+const SORT_DIR_KEY = 'pokevalue-set-sortdir-v1'
+type SortDir = 'asc' | 'desc'
+const SORTS: SetSortKey[] = ['number', 'deviation', 'market', 'gap']
+// The order each sort starts in (its natural direction); the reverse button flips it.
+const DEFAULT_DIR: Record<SetSortKey, SortDir> = {
+  number: 'asc',
+  deviation: 'asc',
+  market: 'desc',
+  gap: 'desc',
+}
+function loadSortPref(fallback: SetSortKey): SetSortKey {
+  try {
+    const v = localStorage.getItem(SORT_KEY)
+    return v && SORTS.includes(v as SetSortKey) ? (v as SetSortKey) : fallback
+  } catch {
+    return fallback
+  }
+}
+function loadDirPref(sort: SetSortKey): SortDir {
+  try {
+    const v = localStorage.getItem(SORT_DIR_KEY)
+    return v === 'asc' || v === 'desc' ? v : DEFAULT_DIR[sort]
+  } catch {
+    return DEFAULT_DIR[sort]
+  }
+}
+function savePref(key: string, value: string): void {
+  try {
+    localStorage.setItem(key, value)
+  } catch {
+    // preference just won't persist
+  }
+}
+
 export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, config }: Props) {
   const set = getSet(setId)
   const [cards, setCards] = useState<CardData[] | null>(null)
   const [query, setQuery] = useState(initialQuery)
-  const [sort, setSort] = useState<SetSortKey>(initialSort)
+  const [sort, setSort] = useState<SetSortKey>(() => loadSortPref(initialSort))
+  const [dir, setDir] = useState<SortDir>(() => loadDirPref(loadSortPref(initialSort)))
   const [minPrice, setMinPrice] = useState(initialMinPrice)
   const [density, setDensity] = useState<Density>(loadDensity)
 
@@ -44,6 +82,23 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
     } catch {
       // preference just won't persist
     }
+  }
+
+  // Picking a sort resets to its natural direction; the reverse button flips it.
+  // Both are saved so the choice carries to every other set.
+  const changeSort = (key: SetSortKey) => {
+    const d = DEFAULT_DIR[key]
+    setSort(key)
+    setDir(d)
+    savePref(SORT_KEY, key)
+    savePref(SORT_DIR_KEY, d)
+  }
+  const toggleDir = () => {
+    setDir((prev) => {
+      const next = prev === 'asc' ? 'desc' : 'asc'
+      savePref(SORT_DIR_KEY, next)
+      return next
+    })
   }
 
   useEffect(() => {
@@ -90,8 +145,10 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
         r.market != null ? r.fair - r.market : -Infinity
       sorted.sort((a, b) => euroGap(b) - euroGap(a))
     }
+    // The sorts above produce each key's natural order; flip it when reversed.
+    if (dir !== DEFAULT_DIR[sort]) sorted.reverse()
     return sorted
-  }, [cards, config, query, sort, minPrice])
+  }, [cards, config, query, sort, dir, minPrice])
 
   // Remember this exact order so a card page can offer prev/next through it.
   useEffect(() => {
@@ -131,13 +188,22 @@ export function SetPage({ setId, initialQuery, initialSort, initialMinPrice, con
           />
           <label>
             Sort by{' '}
-            <select value={sort} onChange={(e) => setSort(e.target.value as SetSortKey)}>
+            <select value={sort} onChange={(e) => changeSort(e.target.value as SetSortKey)}>
               <option value="number">Number</option>
               <option value="deviation">Deviation (%)</option>
               <option value="gap">Deviation (€)</option>
               <option value="market">Market price</option>
             </select>
           </label>
+          <button
+            type="button"
+            className="sort-dir"
+            onClick={toggleDir}
+            title="Reverse order"
+            aria-label="Reverse sort order"
+          >
+            {dir === 'desc' ? '↓' : '↑'}
+          </button>
           <label className="admin-checkbox">
             <input type="checkbox" checked={minPrice} onChange={(e) => setMinPrice(e.target.checked)} />
             Only ≥ €1 market price
