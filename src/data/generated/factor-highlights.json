@@ -115,16 +115,6 @@
    "n": 491
   },
   {
-   "label": "Secret Rare",
-   "factor": 18.9613,
-   "n": 581
-  },
-  {
-   "label": "Rare Holo LV.X",
-   "factor": 10.5386,
-   "n": 43
-  },
-  {
    "label": "Shiny rare",
    "factor": 10.3655,
    "n": 224
@@ -135,29 +125,9 @@
    "n": 69
   },
   {
-   "label": "Promo (Stamped)",
-   "factor": 9.4712,
-   "n": 50
-  },
-  {
    "label": "Ultra Rare",
    "factor": 6.9603,
    "n": 1389
-  },
-  {
-   "label": "Rare Holo",
-   "factor": 4.6181,
-   "n": 279
-  },
-  {
-   "label": "Holo Rare VMAX",
-   "factor": 4.6152,
-   "n": 91
-  },
-  {
-   "label": "Holo Rare VSTAR",
-   "factor": 4.5756,
-   "n": 32
   },
   {
    "label": "ACE SPEC Rare",
@@ -165,14 +135,24 @@
    "n": 33
   },
   {
-   "label": "None",
-   "factor": 3.4048,
-   "n": 262
+   "label": "Double rare",
+   "factor": 1.7046,
+   "n": 317
   },
   {
-   "label": "Holo Rare V",
-   "factor": 3.0016,
-   "n": 235
+   "label": "Rare",
+   "factor": 1.3548,
+   "n": 3805
+  },
+  {
+   "label": "Uncommon",
+   "factor": 0.3914,
+   "n": 4745
+  },
+  {
+   "label": "Common",
+   "factor": 0.2801,
+   "n": 5347
   }
  ],
  "topIllustrators": [
@@ -244,49 +224,14 @@
    "n": 916
   },
   {
-   "label": "LEVEL-UP",
-   "factor": 1.8513,
-   "n": 42
-  },
-  {
-   "label": "TAG TEAM-GX",
-   "factor": 1.6341,
-   "n": 87
-  },
-  {
    "label": "Mega EX",
    "factor": 1.4548,
    "n": 128
   },
   {
-   "label": "BREAK",
-   "factor": 1.2677,
-   "n": 30
-  },
-  {
    "label": "Tera ex",
    "factor": 1.0223,
    "n": 134
-  },
-  {
-   "label": "PRIME",
-   "factor": 0.9821,
-   "n": 27
-  },
-  {
-   "label": "VMAX",
-   "factor": 0.9536,
-   "n": 206
-  },
-  {
-   "label": "VSTAR",
-   "factor": 0.8454,
-   "n": 91
-  },
-  {
-   "label": "GX",
-   "factor": 0.8096,
-   "n": 348
   }
  ],
  "rarityAcrossEras": [

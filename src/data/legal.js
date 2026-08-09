@@ -87,6 +87,7 @@ export const datenschutz = {
       h: 'Data stored in your browser (no cookies)',
       p: [
         'PokéValue does not use cookies. Your watchlist, your portfolio (including any purchase and sale prices you enter), and your display preferences are stored solely in your browser’s local storage, on your own device. This data is never transmitted to us and stays under your control — you can delete it at any time via your browser settings.',
+        'This storage is technically necessary to provide the very functions you actively request (adding a card to a list, keeping a setting): it is the local-storage equivalent of a strictly necessary cookie and therefore does not require prior consent or a cookie banner. No storage on your device is used for advertising or cross-site tracking.',
       ],
     },
     {
