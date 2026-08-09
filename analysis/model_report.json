@@ -1,59 +1,59 @@
 {
- "trainedAt": "2026-08-08T09:57:03.884937+00:00",
+ "trainedAt": "2026-08-09T09:59:32.957684+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
  "displayedSetWeight": 1.0,
  "trainingOnlyWeight": 0.2,
- "alpha": 1.78,
+ "alpha": 3.16,
  "pokemonTierExponent": {
   "bulk": 1.0,
-  "mid": 1.1527,
-  "chase": 1.4827
+  "mid": 1.2809,
+  "chase": 1.6256
  },
- "displayedMedianAPE": 0.2730514597665747,
- "displayedWithin20": 0.388673213062343,
- "displayedTestR2": 0.9631152714510854,
+ "displayedMedianAPE": 0.27672957618268434,
+ "displayedWithin20": 0.3795387074674583,
+ "displayedTestR2": 0.9629807161872754,
  "byPriceBand": {
   "0-0.3": {
-   "n": 2715,
-   "medianAPE": 0.2483498207478653,
-   "within20": 0.42099447513812155
+   "n": 2713,
+   "medianAPE": 0.25184779846144295,
+   "within20": 0.41319572429045337
   },
   "0.3-3": {
-   "n": 712,
-   "medianAPE": 0.3033730042329496,
-   "within20": 0.35814606741573035
+   "n": 713,
+   "medianAPE": 0.3038187834299714,
+   "within20": 0.34782608695652173
   },
   "3-30": {
-   "n": 764,
-   "medianAPE": 0.29616774540018903,
-   "within20": 0.3416230366492147
+   "n": 769,
+   "medianAPE": 0.3071688187976347,
+   "within20": 0.32639791937581275
   },
   "30+": {
-   "n": 188,
-   "medianAPE": 0.39288951471931477,
-   "within20": 0.22872340425531915
+   "n": 184,
+   "medianAPE": 0.410601474688994,
+   "within20": 0.22826086956521738
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.31772244902431884,
-   "within20": 0.3277003882164878,
-   "alpha": 1.78
+   "medianAPE": 0.3216554978656969,
+   "within20": 0.3199360584608358,
+   "alpha": 3.16
   },
   "standard": {
-   "medianAPE": 0.2774822560455038,
-   "within20": 0.3806805206668189,
-   "alpha": 1.78
+   "medianAPE": 0.27900068062758265,
+   "within20": 0.37976707010733046,
+   "alpha": 3.16
   },
   "local": {
-   "medianAPE": 0.25450198262958695,
-   "within20": 0.40443023521351906,
+   "medianAPE": 0.2545803887614921,
+   "within20": 0.3978077186572277,
    "alpha": 3.16
   }
  },
- "verdictAgreement": 0.6252569079698561,
+ "verdictAgreement": 0.6453528202786024,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,
