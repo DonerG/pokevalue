@@ -120,6 +120,17 @@ export function HomePage({ initialQuery = '' }: { initialQuery?: string }) {
         <section key={serie} className="serie-group">
           <h4 className="serie-title">{serie}</h4>
           <div className="set-grid">
+            {serie === 'Mega Evolution' && (
+              <a className="set-tile sealed-tile" href="/sealed">
+                <span className="sealed-tile-icon" aria-hidden="true">
+                  📦
+                </span>
+                <div className="set-tile-meta">
+                  <strong>Sealed products</strong>
+                  <span>Booster · Sleeved · Bundle — DE vs EN</span>
+                </div>
+              </a>
+            )}
             {sets.map((s) => {
               const logo = setLogo(s)
               return (

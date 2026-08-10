@@ -53,6 +53,7 @@ const PortfolioPage = lazy(() =>
 const UndervaluedPage = lazy(() =>
   import('./pages/UndervaluedPage').then((m) => ({ default: m.UndervaluedPage })),
 )
+const SealedPage = lazy(() => import('./pages/SealedPage').then((m) => ({ default: m.SealedPage })))
 
 // Fixed for every visitor — pricing is model-driven, not user-tunable. See PriceBreakdown for the "why this number" explanation.
 const CONFIG = defaultConfig()
@@ -212,6 +213,11 @@ function App() {
       {route.page === 'undervalued' && (
         <Suspense fallback={<p className="muted">Loading…</p>}>
           <UndervaluedPage />
+        </Suspense>
+      )}
+      {route.page === 'sealed' && (
+        <Suspense fallback={<p className="muted">Loading…</p>}>
+          <SealedPage />
         </Suspense>
       )}
       {route.page === 'admin-hub' && (

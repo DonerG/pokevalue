@@ -31,6 +31,7 @@ export type Route =
   | { page: 'watchlist' }
   | { page: 'portfolio' }
   | { page: 'undervalued' }
+  | { page: 'sealed' }
   | { page: 'admin-hub' }
   | { page: 'admin-artwork' }
   | { page: 'admin-tera' }
@@ -66,6 +67,7 @@ export function parsePath(pathname: string, search: string): Route {
   if (parts[0] === 'watchlist') return { page: 'watchlist' }
   if (parts[0] === 'portfolio') return { page: 'portfolio' }
   if (parts[0] === 'undervalued') return { page: 'undervalued' }
+  if (parts[0] === 'sealed') return { page: 'sealed' }
   if (parts[0] === 'admin' && !parts[1]) return { page: 'admin-hub' }
   if (parts[0] === 'admin' && parts[1] === 'artwork') return { page: 'admin-artwork' }
   if (parts[0] === 'admin' && parts[1] === 'tera') return { page: 'admin-tera' }
