@@ -15,10 +15,12 @@ import artworkCommitted from '../data/artwork-ratings.json'
 import teraCommitted from '../data/tera-tags.json'
 import warningsCommitted from '../data/price-warnings.json'
 import exclusionsCommitted from '../data/price-exclusions.json'
+import sealedCommitted from '../data/sealed-prices.json'
 import { loadRatings, saveRatings, type Ratings } from './artworkRatings'
 import { loadTeraTags, saveTeraTags, type TeraTags } from './teraTags'
 import { loadPriceWarnings, savePriceWarnings, type PriceWarnings } from './priceWarnings'
 import { loadPriceExclusions, savePriceExclusions, type PriceExclusions } from './priceExclusions'
+import { loadSealedPrices, saveSealedPrices, type SealedPrices } from './sealedPrices'
 
 const SEEDED_KEY = 'pokevalue-admin-seeded-v1'
 
@@ -29,6 +31,7 @@ export function seedAdminStores(): void {
     saveTeraTags({ ...(teraCommitted as TeraTags), ...loadTeraTags() })
     savePriceWarnings({ ...(warningsCommitted as PriceWarnings), ...loadPriceWarnings() })
     savePriceExclusions({ ...(exclusionsCommitted as PriceExclusions), ...loadPriceExclusions() })
+    saveSealedPrices({ ...(sealedCommitted as SealedPrices), ...loadSealedPrices() })
     localStorage.setItem(SEEDED_KEY, '1')
   } catch {
     // localStorage unavailable — nothing to seed

@@ -8,6 +8,7 @@ import { loadRatings } from './artworkRatings'
 import { loadTeraTags } from './teraTags'
 import { loadPriceExclusions } from './priceExclusions'
 import { loadPriceWarnings } from './priceWarnings'
+import { loadSealedPrices } from './sealedPrices'
 
 export function exportAllAdminData(): void {
   const bundle = {
@@ -15,6 +16,7 @@ export function exportAllAdminData(): void {
     teraTags: loadTeraTags(),
     priceExclusions: loadPriceExclusions(),
     priceWarnings: loadPriceWarnings(),
+    sealedPrices: loadSealedPrices(),
     exportedAt: new Date().toISOString(),
   }
   const blob = new Blob([JSON.stringify(bundle, null, 1)], { type: 'application/json' })

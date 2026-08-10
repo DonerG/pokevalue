@@ -62,6 +62,11 @@ const TOOLS = [
     title: 'Guarded prices',
     desc: 'Cards whose feed made an implausible >20% jump — held at the old price until you review them.',
   },
+  {
+    href: '/admin/sealed',
+    title: 'Sealed product prices',
+    desc: 'Booster, Sleeved Booster and Bundle prices in DE and EN per set — read the spreads between products and languages.',
+  },
 ]
 
 export function AdminHubPage() {
