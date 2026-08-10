@@ -4,10 +4,13 @@
  * Cardmarket's feed occasionally reports a fantasy price for a day (a chase card
  * suddenly at €0.02, or a €5 card at €900). This guard compares each displayed
  * card's freshly fetched trend against the price currently committed (yesterday's
- * shipped value): if it moved by more than THRESHOLD and the established price is
- * over MIN_MARKET €, the new price is dropped — the cache is patched back to the
- * old price so the refit, rebake and history all keep the old number — and the
- * card is recorded in src/data/price-guard.json for review on /admin/guarded.
+ * shipped value): a move is only held if it clears one of two bands — a big-money
+ * move (>20% AND >€10 absolute) or a small-card multiplier (>100% AND >€1
+ * absolute). Requiring a meaningful euro swing keeps cheap cards drifting a few
+ * cents out of the review queue. When held, the new price is dropped — the cache
+ * is patched back to the old price so the refit, rebake and history all keep the
+ * old number — and the card is recorded in src/data/price-guard.json for review
+ * on /admin/guarded.
  *
  * Runs in the daily pipeline AFTER refresh-prices.mjs (fresh prices in the
  * cache) and BEFORE refresh-training-prices.mjs / ingest.mjs, so both training
@@ -34,8 +37,12 @@ const CACHE_DIR = join(HERE, '.cache', 'cards')
 const EXCLUSIONS_FILE = join(HERE, '..', 'src', 'data', 'price-exclusions.json')
 const GUARD_FILE = join(HERE, '..', 'src', 'data', 'price-guard.json')
 
-const THRESHOLD = 0.2 // >20% day-over-day move
-const MIN_MARKET = 1 // only guard cards whose established price is over €1
+// Hold a day-over-day move only if it clears one of two bands. Each needs both a
+// percentage jump AND a euro jump, so cheap cents-drift never gets flagged.
+const BIG_PCT = 0.2 // band A: >20% …
+const BIG_ABS = 10 // … AND >€10 absolute
+const MULT_PCT = 1 // band B: >100% …
+const MULT_ABS = 1 // … AND >€1 absolute
 const DRY = !!process.env.GUARD_DRY
 
 const readJson = async (p, fallback) => {
@@ -62,7 +69,7 @@ for (const set of sets) {
     if (exclusions[card.id] != null) continue
     const old = card.market // committed = the price we shipped last run
     const oldTrend = old?.trend
-    if (oldTrend == null || oldTrend <= MIN_MARKET) continue
+    if (oldTrend == null || oldTrend <= 0) continue
 
     const cachePath = join(CACHE_DIR, `${encodeURIComponent(card.id)}.json`)
     if (!existsSync(cachePath)) continue
@@ -76,8 +83,12 @@ for (const set of sets) {
     if (newTrend == null) continue
 
     scanned++
-    const jump = Math.abs(newTrend - oldTrend) / oldTrend
-    if (jump <= THRESHOLD) continue // within range → let the new price through (and, if it was held, this releases it)
+    const absJump = Math.abs(newTrend - oldTrend)
+    const jump = absJump / oldTrend
+    // Flag only big-money moves or small-card multipliers; otherwise let the new
+    // price through (and, if it was held, this releases it).
+    const flagged = (jump > BIG_PCT && absJump > BIG_ABS) || (jump > MULT_PCT && absJump > MULT_ABS)
+    if (!flagged) continue
 
     // Hold: patch the cache back to the committed price so ingest/training/history
     // all keep it, and record the rejected price for review.
@@ -106,7 +117,8 @@ const released = Object.keys(prevGuard).filter((id) => !(id in nextGuard))
 if (!DRY) await writeFile(GUARD_FILE, JSON.stringify(nextGuard, null, 1) + '\n')
 
 console.log(
-  `Guard${DRY ? ' (dry run)' : ''}: held ${held.length} spike(s) (>${THRESHOLD * 100}% on market >€${MIN_MARKET}); ` +
+  `Guard${DRY ? ' (dry run)' : ''}: held ${held.length} spike(s) ` +
+    `(>${BIG_PCT * 100}% & >€${BIG_ABS}, or >${MULT_PCT * 100}% & >€${MULT_ABS}); ` +
     `released ${released.length}; scanned ${scanned}.`,
 )
 for (const line of held.slice(0, 40)) console.log('  · ' + line)
