@@ -2,32 +2,32 @@
  "model": {
   "cards": 4379,
   "cardsTotal": 19255,
-  "testR2": 0.9597807397674443,
-  "medianError": 0.26799875566527653,
-  "within20": 0.38479104818451704,
+  "testR2": 0.9594896977748277,
+  "medianError": 0.27207252821879074,
+  "within20": 0.37497145467001597,
   "byPriceBand": {
    "0-0.3": {
-    "n": 2716,
-    "medianAPE": 0.24486241505563328,
-    "within20": 0.41494845360824745
+    "n": 2712,
+    "medianAPE": 0.24945137230575565,
+    "within20": 0.40634218289085544
    },
    "0.3-3": {
-    "n": 711,
-    "medianAPE": 0.3052420322309369,
-    "within20": 0.35443037974683544
+    "n": 708,
+    "medianAPE": 0.3081775730957214,
+    "within20": 0.3531073446327684
    },
    "3-30": {
-    "n": 771,
-    "medianAPE": 0.305776759378832,
-    "within20": 0.3424124513618677
+    "n": 775,
+    "medianAPE": 0.30524819852434176,
+    "within20": 0.32903225806451614
    },
    "30+": {
-    "n": 181,
-    "medianAPE": 0.41166390937821484,
-    "within20": 0.23204419889502761
+    "n": 184,
+    "medianAPE": 0.40295812279340976,
+    "within20": 0.19021739130434784
    }
   },
-  "anchor": 0.7179,
+  "anchor": 0.7165,
   "categories": {
    "pokemon": 1026,
    "rarity": 35,
@@ -44,235 +44,235 @@
  "topPokemon": [
   {
    "label": "Gengar",
-   "factor": 6.1141,
+   "factor": 6.26,
    "n": 46
   },
   {
    "label": "Umbreon",
-   "factor": 5.5636,
+   "factor": 5.5793,
    "n": 41
   },
   {
    "label": "Charizard",
-   "factor": 5.3833,
+   "factor": 5.4101,
    "n": 88
   },
   {
    "label": "Pikachu",
-   "factor": 4.6953,
+   "factor": 4.6862,
    "n": 128
   },
   {
    "label": "Mew",
-   "factor": 4.4291,
+   "factor": 4.4113,
    "n": 35
   },
   {
    "label": "Rayquaza",
-   "factor": 3.9583,
+   "factor": 3.9657,
    "n": 44
   },
   {
    "label": "Lugia",
-   "factor": 3.8763,
+   "factor": 3.855,
    "n": 32
   },
   {
    "label": "Arceus",
-   "factor": 3.1599,
+   "factor": 3.1623,
    "n": 22
   },
   {
    "label": "Snorlax",
-   "factor": 3.0612,
+   "factor": 3.0465,
    "n": 50
   },
   {
    "label": "Ditto",
-   "factor": 2.9642,
+   "factor": 3.0022,
    "n": 31
   },
   {
    "label": "Psyduck",
-   "factor": 2.9029,
+   "factor": 2.8947,
    "n": 37
   },
   {
    "label": "Squirtle",
-   "factor": 2.8519,
+   "factor": 2.8919,
    "n": 30
   }
  ],
  "rarities": [
   {
    "label": "Special illustration rare",
-   "factor": 27.05,
+   "factor": 27.1588,
    "n": 222
   },
   {
    "label": "Illustration rare",
-   "factor": 19.6624,
+   "factor": 20.0209,
    "n": 491
   },
   {
    "label": "Hyper rare",
-   "factor": 10.8383,
+   "factor": 10.7407,
    "n": 69
   },
   {
    "label": "Shiny rare",
-   "factor": 10.5315,
+   "factor": 10.6556,
    "n": 224
   },
   {
    "label": "Ultra Rare",
-   "factor": 6.7999,
+   "factor": 6.7811,
    "n": 1389
   },
   {
    "label": "ACE SPEC Rare",
-   "factor": 3.4986,
+   "factor": 3.506,
    "n": 33
   },
   {
    "label": "Double rare",
-   "factor": 1.699,
+   "factor": 1.7017,
    "n": 317
   },
   {
    "label": "Rare",
-   "factor": 1.3701,
+   "factor": 1.3716,
    "n": 3805
   },
   {
    "label": "Uncommon",
-   "factor": 0.3962,
+   "factor": 0.3956,
    "n": 4745
   },
   {
    "label": "Common",
-   "factor": 0.2803,
+   "factor": 0.28,
    "n": 5347
   }
  ],
  "topIllustrators": [
   {
    "label": "Hironobu Yoshida",
-   "factor": 2.293,
+   "factor": 2.315,
    "n": 30
   },
   {
    "label": "Asako Ito",
-   "factor": 2.2067,
+   "factor": 2.2256,
    "n": 36
   },
   {
    "label": "Tomokazu Komiya",
-   "factor": 1.7872,
+   "factor": 1.7825,
    "n": 247
   },
   {
-   "label": "Yuka Morii",
-   "factor": 1.5228,
-   "n": 207
-  },
-  {
    "label": "Shinji Kanda",
-   "factor": 1.4419,
+   "factor": 1.5704,
    "n": 28
   },
   {
+   "label": "Yuka Morii",
+   "factor": 1.5093,
+   "n": 207
+  },
+  {
    "label": "Atsushi Furusawa",
-   "factor": 1.4133,
+   "factor": 1.3672,
    "n": 50
   },
   {
    "label": "Hikaru Koike",
-   "factor": 1.364,
+   "factor": 1.3653,
    "n": 47
   },
   {
    "label": "Studio Bora Inc.",
-   "factor": 1.287,
+   "factor": 1.2905,
    "n": 115
   },
   {
    "label": "Megumi Mizutani",
-   "factor": 1.2865,
+   "factor": 1.268,
    "n": 119
   },
   {
    "label": "Unknown",
-   "factor": 1.2514,
+   "factor": 1.246,
    "n": 389
   },
   {
    "label": "AYUMI ODASHIMA",
-   "factor": 1.2258,
+   "factor": 1.2325,
    "n": 76
   },
   {
-   "label": "Shin-ichi Yoshida",
-   "factor": 1.2148,
-   "n": 53
+   "label": "yuu",
+   "factor": 1.2209,
+   "n": 34
   }
  ],
  "cardTypes": [
   {
    "label": "EX",
-   "factor": 2.4193,
+   "factor": 2.4286,
    "n": 916
   },
   {
    "label": "Mega EX",
-   "factor": 1.5374,
+   "factor": 1.5499,
    "n": 128
   },
   {
    "label": "Tera ex",
-   "factor": 0.953,
+   "factor": 0.9569,
    "n": 134
   }
  ],
  "rarityAcrossEras": [
   {
    "label": "1999",
-   "factor": 3.7038,
+   "factor": 3.7004,
    "n": 93
   },
   {
    "label": "2003",
-   "factor": 2.6382,
+   "factor": 2.6441,
    "n": 259
   },
   {
    "label": "2007",
-   "factor": 1.3955,
+   "factor": 1.3947,
    "n": 122
   },
   {
    "label": "2011",
-   "factor": 1.0525,
+   "factor": 1.0512,
    "n": 114
   },
   {
    "label": "2015",
-   "factor": 1.1841,
+   "factor": 1.1854,
    "n": 133
   },
   {
    "label": "2019",
-   "factor": 0.8044,
+   "factor": 0.8053,
    "n": 250
   },
   {
    "label": "2023",
-   "factor": 0.3089,
+   "factor": 0.3082,
    "n": 163
   },
   {
    "label": "2026",
-   "factor": 0.2273,
+   "factor": 0.2254,
    "n": 58
   }
  ]
