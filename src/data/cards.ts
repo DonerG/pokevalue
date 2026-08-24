@@ -211,9 +211,17 @@ export async function loadCorrectionCandidates(): Promise<CorrectionCandidate[]>
   return perSet.flat().sort((a, b) => (b.manualTrend ?? 0) - (a.manualTrend ?? 0))
 }
 
+/** Why the guard flagged a card — see scripts/guard-price-spikes.mjs. */
+export type GuardReason = 'spike' | 'implausible-feed' | 'unresolved'
+
 export interface GuardEntry {
+  /** False for 'unresolved': nothing is being held back, the card just needs a human. */
+  held: boolean
+  reason: GuardReason
   kept: number
   rejected: number
+  /** The feed's own 30-day average, the anchor the plausibility test used. */
+  avg30: number | null
   since: string
   seen: string
 }
@@ -224,14 +232,19 @@ export interface GuardedCard {
   localId: string
   image: string | null
   setName: string
+  held: boolean
+  reason: GuardReason
   kept: number
   rejected: number
+  avg30: number | null
   since: string
 }
 
 /**
- * Cards the price guard is currently holding at their old price because the feed
- * made an implausible >20% single-day jump (see scripts/guard-price-spikes.mjs).
+ * Cards the price guard flagged on the last run: either held at their old price
+ * (the feed value was an implausible jump, or fell outside its own 30-day
+ * average), or shipped-but-unresolved (both the old and the new price look
+ * broken, so a human has to pick). See scripts/guard-price-spikes.mjs.
  * Joins the small guard map with the search index for names. For /admin/guarded.
  */
 export async function loadGuardedCards(): Promise<GuardedCard[]> {
@@ -247,8 +260,11 @@ export async function loadGuardedCards(): Promise<GuardedCard[]> {
         localId: c?.localId ?? '',
         image: c?.image ?? null,
         setName: c?.setName ?? '',
+        held: g.held ?? true,
+        reason: g.reason ?? 'spike',
         kept: g.kept,
         rejected: g.rejected,
+        avg30: g.avg30 ?? null,
         since: g.since,
       }
     })

@@ -38,15 +38,22 @@ export function AdminGuardedPage() {
       <header className="admin-header">
         <h2>Guarded prices</h2>
         <p className="muted">
-          Cards whose Cardmarket feed made an implausible <strong>&gt;20% single-day jump</strong> on
-          a price over €1. The old price is kept everywhere (site, model, history) and the feed value
-          is ignored — until the feed settles back within 20% (auto-released) or you review it here.
+          Cards whose Cardmarket price the guard distrusts — either an implausible{' '}
+          <strong>single-day jump</strong>, or a trend price that has drifted far outside its own{' '}
+          <strong>30-day average</strong>. A held card keeps its old price everywhere (site, model,
+          history) until the feed comes back in line, and a jump-hold is released automatically after
+          three days, because a move the feed sticks to isn’t a spike any more.
         </p>
         <p className="muted">
-          If the jump is real, hit <strong>Accept</strong> to take the new price (the card is marked
-          verified and the guard lets it through from the next update). If it’s a bad feed value,
-          leave it — the old price simply stays. To pin a specific price by hand instead, open the
-          card and use <strong>Save price</strong>. Your choices are saved in this browser; use{' '}
+          <strong>Unresolved</strong> rows are different: there the old price looks just as broken as
+          the new one, so nothing is being held back — the current feed price is live on the site and
+          only you can say what it should be. Open the card and use <strong>Save price</strong> to
+          pin a hand-read value.
+        </p>
+        <p className="muted">
+          If a held jump is real, hit <strong>Accept</strong> to take the new price (the card is
+          marked verified and the guard lets it through from the next update). If it’s a bad feed
+          value, leave it — the old price simply stays. Your choices are saved in this browser; use{' '}
           <strong>Export all</strong> on the <a href="/admin">admin hub</a> to apply them.
         </p>
       </header>
@@ -54,7 +61,7 @@ export function AdminGuardedPage() {
       {!rows ? (
         <p className="muted">Loading…</p>
       ) : rows.length === 0 ? (
-        <p className="muted">Nothing on hold — no price spikes caught.</p>
+        <p className="muted">Nothing flagged — every price looks plausible.</p>
       ) : (
         <ul className="portfolio-list">
           {rows.map((r) => {
@@ -71,17 +78,39 @@ export function AdminGuardedPage() {
                   <a href={`/card/${r.id}`}>
                     <strong>{r.name}</strong> <span className="muted">#{r.localId} · {r.setName}</span>
                   </a>
-                  <span className="muted">held since {r.since}</span>
+                  <span className="muted">
+                    {r.reason === 'unresolved'
+                      ? `unresolved since ${r.since} — no sane fallback price`
+                      : r.reason === 'implausible-feed'
+                        ? `held since ${r.since} — feed is off its own 30-day average`
+                        : `held since ${r.since} — single-day jump`}
+                  </span>
                 </div>
                 <div className="portfolio-row-value">
-                  <strong>{formatEuro(r.kept)} kept</strong>
-                  <span className="muted">feed said {formatEuro(r.rejected)}</span>
+                  {r.held ? (
+                    <>
+                      <strong>{formatEuro(r.kept)} kept</strong>
+                      <span className="muted">feed said {formatEuro(r.rejected)}</span>
+                    </>
+                  ) : (
+                    <>
+                      <strong>{formatEuro(r.kept)} live</strong>
+                      <span className="muted">nothing held back</span>
+                    </>
+                  )}
+                  {r.avg30 != null && <span className="muted">30-day avg {formatEuro(r.avg30)}</span>}
                 </div>
                 <div className="guarded-actions">
                   {kind == null ? (
-                    <button type="button" className="portfolio-mini" onClick={() => accept(r.id)}>
-                      Accept {formatEuro(r.rejected)}
-                    </button>
+                    r.held ? (
+                      <button type="button" className="portfolio-mini" onClick={() => accept(r.id)}>
+                        Accept {formatEuro(r.rejected)}
+                      </button>
+                    ) : (
+                      <a className="portfolio-mini" href={`/card/${r.id}`}>
+                        Review
+                      </a>
+                    )
                   ) : (
                     <>
                       <span className="guarded-done">

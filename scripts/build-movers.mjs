@@ -8,7 +8,9 @@
  *
  * "Upside" is (fair − trend) / trend at each snapshot; the mover is the change
  * in that from the previous day to the latest. Restricted to cards trading at
- * ≥ €1 so a one-cent wobble on a bulk card doesn't dominate.
+ * ≥ €1 so a one-cent wobble on a bulk card doesn't dominate, and to
+ * cards whose trend price is plausible against their own 30-day average, so a
+ * broken feed value doesn't headline the page as the day's biggest move.
  *
  * Run after snapshot-prices. Usage: node scripts/build-movers.mjs
  */
@@ -16,6 +18,8 @@ import { readFile, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+
+import { isImplausibleTrend } from './lib/priceSanity.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const GENERATED_DIR = join(HERE, '..', 'src', 'data', 'generated')
@@ -43,6 +47,10 @@ for (const set of sets) {
     const f0 = h.f[n - 2]
     if (h.d[n - 1] > latestDate) latestDate = h.d[n - 1]
     if (t1 == null || t0 == null || t1 < MIN_MARKET) continue
+    // Skip cards whose current trend price is implausible against its own
+    // 30-day average — a broken price produces the biggest "move" of the day
+    // every time, which is how bad feed data ends up headlining the homepage.
+    if (isImplausibleTrend(t1, cards.get(id)?.market?.avg30)) continue
     const up1 = (f1 - t1) / t1
     const up0 = (f0 - t0) / t0
     const delta = up1 - up0

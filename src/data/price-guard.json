@@ -1,145 +1,91 @@
 {
- "me02.5-272": {
-  "kept": 58.91,
-  "rejected": 113.17,
-  "since": "2026-08-13",
-  "seen": "2026-08-24"
- },
- "me02.5-279": {
-  "kept": 34.94,
-  "rejected": 47.71,
-  "since": "2026-08-19",
-  "seen": "2026-08-24"
- },
- "me02.5-280": {
-  "kept": 107.51,
-  "rejected": 141.02,
-  "since": "2026-08-16",
-  "seen": "2026-08-24"
- },
- "me02-130": {
-  "kept": 191.67,
-  "rejected": 261.38,
-  "since": "2026-08-13",
-  "seen": "2026-08-24"
- },
- "sv10.5b-093": {
-  "kept": 0.36,
-  "rejected": 5.1,
-  "since": "2026-08-21",
-  "seen": "2026-08-24"
- },
- "sv10.5w-151": {
-  "kept": 22.16,
-  "rejected": 34.4,
-  "since": "2026-08-20",
-  "seen": "2026-08-24"
- },
- "sv10-234": {
-  "kept": 26.16,
-  "rejected": 58.79,
-  "since": "2026-08-12",
-  "seen": "2026-08-24"
- },
- "sv08.5-146": {
-  "kept": 110.77,
-  "rejected": 142.58,
-  "since": "2026-08-21",
-  "seen": "2026-08-24"
- },
- "sv08.5-151": {
-  "kept": 41.34,
-  "rejected": 58.25,
-  "since": "2026-08-23",
-  "seen": "2026-08-24"
- },
- "sv08.5-156": {
-  "kept": 174.19,
-  "rejected": 211.33,
-  "since": "2026-08-20",
-  "seen": "2026-08-24"
- },
- "sv08.5-169": {
-  "kept": 17.58,
-  "rejected": 31.23,
+ "sv10.5b-124": {
+  "held": false,
+  "reason": "unresolved",
+  "kept": 0.02,
+  "rejected": 0.02,
+  "avg30": 10.59,
   "since": "2026-08-24",
   "seen": "2026-08-24"
  },
- "sv08-203": {
-  "kept": 38,
-  "rejected": 60.92,
-  "since": "2026-08-19",
+ "sv08.5-151": {
+  "held": true,
+  "reason": "spike",
+  "kept": 41.34,
+  "rejected": 58.25,
+  "avg30": 67.61,
+  "since": "2026-08-23",
   "seen": "2026-08-24"
  },
- "sv07-170": {
-  "kept": 20.67,
-  "rejected": 31.36,
-  "since": "2026-08-14",
-  "seen": "2026-08-24"
- },
- "sv06.5-066": {
-  "kept": 26.16,
-  "rejected": 39.04,
-  "since": "2026-08-16",
-  "seen": "2026-08-24"
- },
- "sv06.5-094": {
-  "kept": 23.96,
-  "rejected": 45.61,
-  "since": "2026-08-21",
-  "seen": "2026-08-24"
- },
- "sv06-176": {
-  "kept": 1.36,
-  "rejected": 3.61,
-  "since": "2026-08-17",
+ "sv08.5-169": {
+  "held": true,
+  "reason": "spike",
+  "kept": 17.58,
+  "rejected": 31.23,
+  "avg30": 38.01,
+  "since": "2026-08-24",
   "seen": "2026-08-24"
  },
  "sv05-157": {
+  "held": true,
+  "reason": "spike",
   "kept": 0.89,
   "rejected": 3.7,
+  "avg30": 0.99,
   "since": "2026-08-23",
-  "seen": "2026-08-24"
- },
- "sv05-205": {
-  "kept": 36.81,
-  "rejected": 50,
-  "since": "2026-08-18",
   "seen": "2026-08-24"
  },
  "sv05-206": {
+  "held": true,
+  "reason": "spike",
   "kept": 39.63,
   "rejected": 51.63,
+  "avg30": 50.58,
   "since": "2026-08-23",
   "seen": "2026-08-24"
  },
+ "sv05-210": {
+  "held": false,
+  "reason": "unresolved",
+  "kept": 5.88,
+  "rejected": 5.88,
+  "avg30": 18.04,
+  "since": "2026-08-24",
+  "seen": "2026-08-24"
+ },
  "sv04.5-126": {
+  "held": true,
+  "reason": "spike",
   "kept": 2.21,
   "rejected": 4.8,
+  "avg30": 2.34,
   "since": "2026-08-23",
   "seen": "2026-08-24"
  },
  "sv04.5-131": {
+  "held": true,
+  "reason": "implausible-feed",
   "kept": 46.62,
   "rejected": 13.19,
+  "avg30": 87.88,
   "since": "2026-08-16",
   "seen": "2026-08-24"
  },
- "sv03-205": {
-  "kept": 3.52,
-  "rejected": 10.46,
-  "since": "2026-08-18",
-  "seen": "2026-08-24"
- },
- "sv02-203": {
-  "kept": 140.09,
-  "rejected": 281.13,
-  "since": "2026-08-18",
+ "sv03-015": {
+  "held": false,
+  "reason": "unresolved",
+  "kept": 0.34,
+  "rejected": 0.34,
+  "avg30": 1.42,
+  "since": "2026-08-24",
   "seen": "2026-08-24"
  },
  "sv02-271": {
+  "held": true,
+  "reason": "spike",
   "kept": 5.06,
   "rejected": 13.55,
+  "avg30": 5.65,
   "since": "2026-08-23",
   "seen": "2026-08-24"
  }
