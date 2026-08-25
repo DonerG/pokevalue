@@ -1,5 +1,5 @@
 {
- "trainedAt": "2026-08-24T10:07:03.758046+00:00",
+ "trainedAt": "2026-08-25T09:53:53.632217+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
@@ -8,52 +8,52 @@
  "alpha": 5.62,
  "pokemonTierExponent": {
   "bulk": 1.0,
-  "mid": 1.4709,
-  "chase": 1.8242
+  "mid": 1.4712,
+  "chase": 1.8227
  },
- "displayedMedianAPE": 0.2815861465486176,
- "displayedWithin20": 0.37108928979219,
- "displayedTestR2": 0.9574485922574976,
+ "displayedMedianAPE": 0.28138073079736853,
+ "displayedWithin20": 0.3697191139529573,
+ "displayedTestR2": 0.9574920486066882,
  "byPriceBand": {
   "0-0.3": {
    "n": 2714,
-   "medianAPE": 0.25762527732258433,
-   "within20": 0.4023581429624171
+   "medianAPE": 0.25777767750008995,
+   "within20": 0.40309506263817246
   },
   "0.3-3": {
    "n": 709,
-   "medianAPE": 0.3173413448720412,
-   "within20": 0.3385049365303244
+   "medianAPE": 0.31609392869347985,
+   "within20": 0.3314527503526093
   },
   "3-30": {
    "n": 777,
-   "medianAPE": 0.30080894686963366,
-   "within20": 0.3268983268983269
+   "medianAPE": 0.3008186460125053,
+   "within20": 0.32432432432432434
   },
   "30+": {
    "n": 179,
-   "medianAPE": 0.4362123129562719,
-   "within20": 0.21787709497206703
+   "medianAPE": 0.44047612949882525,
+   "within20": 0.2122905027932961
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.3272607651967751,
-   "within20": 0.32199132221968485,
+   "medianAPE": 0.32613171255586004,
+   "within20": 0.32153459693994063,
    "alpha": 3.16
   },
   "standard": {
-   "medianAPE": 0.28341505506298825,
-   "within20": 0.37611326786937654,
+   "medianAPE": 0.2824897171081734,
+   "within20": 0.3747430920301439,
    "alpha": 5.62
   },
   "local": {
-   "medianAPE": 0.25920630489273205,
-   "within20": 0.39872116921671613,
+   "medianAPE": 0.2591403771864047,
+   "within20": 0.39757935601735556,
    "alpha": 1.78
   }
  },
- "verdictAgreement": 0.6213747430920301,
+ "verdictAgreement": 0.621146380452158,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,
