@@ -1,5 +1,5 @@
 {
- "trainedAt": "2026-10-22T14:33:03.534063+00:00",
+ "trainedAt": "2026-10-23T14:16:59.520037+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
@@ -8,52 +8,52 @@
  "alpha": 3.16,
  "pokemonTierExponent": {
   "bulk": 1.0,
-  "mid": 1.3015,
-  "chase": 1.7685
+  "mid": 1.3072,
+  "chase": 1.7658
  },
- "displayedMedianAPE": 0.2747366917652286,
- "displayedWithin20": 0.3861612240237497,
- "displayedTestR2": 0.9544242805515701,
+ "displayedMedianAPE": 0.2695321400277571,
+ "displayedWithin20": 0.38638958666362183,
+ "displayedTestR2": 0.9549007058203234,
  "byPriceBand": {
   "0-0.3": {
-   "n": 2714,
-   "medianAPE": 0.2532561202050007,
-   "within20": 0.41046425939572584
+   "n": 2715,
+   "medianAPE": 0.24660731429079363,
+   "within20": 0.40920810313075506
   },
   "0.3-3": {
-   "n": 756,
-   "medianAPE": 0.29190512855188744,
-   "within20": 0.36243386243386244
+   "n": 752,
+   "medianAPE": 0.2857546414579744,
+   "within20": 0.37367021276595747
   },
   "3-30": {
-   "n": 748,
-   "medianAPE": 0.2955446671066734,
-   "within20": 0.34893048128342247
+   "n": 749,
+   "medianAPE": 0.2997031345841066,
+   "within20": 0.3484646194926569
   },
   "30+": {
-   "n": 161,
-   "medianAPE": 0.4557136593078562,
-   "within20": 0.2608695652173913
+   "n": 163,
+   "medianAPE": 0.44203672834578406,
+   "within20": 0.2392638036809816
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.32853606655187517,
-   "within20": 0.3199360584608358,
+   "medianAPE": 0.3281049654792192,
+   "within20": 0.32450331125827814,
    "alpha": 3.16
   },
   "standard": {
-   "medianAPE": 0.27726533829647804,
+   "medianAPE": 0.27256187492668016,
    "within20": 0.3836492349851564,
    "alpha": 3.16
   },
   "local": {
-   "medianAPE": 0.2537669946237048,
-   "within20": 0.4080840374514729,
+   "medianAPE": 0.2511203898442079,
+   "within20": 0.41493491664763643,
    "alpha": 3.16
   }
  },
- "verdictAgreement": 0.6576844028316967,
+ "verdictAgreement": 0.6624800182690112,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,
