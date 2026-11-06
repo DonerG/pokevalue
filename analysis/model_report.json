@@ -1,5 +1,5 @@
 {
- "trainedAt": "2026-11-05T17:27:24.046246+00:00",
+ "trainedAt": "2026-11-06T16:48:21.304308+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
@@ -8,52 +8,52 @@
  "alpha": 5.62,
  "pokemonTierExponent": {
   "bulk": 1.0,
-  "mid": 1.4657,
-  "chase": 1.9981
+  "mid": 1.4653,
+  "chase": 1.9957
  },
- "displayedMedianAPE": 0.2581274202271066,
- "displayedWithin20": 0.3930121032199132,
- "displayedTestR2": 0.95264614983503,
+ "displayedMedianAPE": 0.2567495715260806,
+ "displayedWithin20": 0.4035167846540306,
+ "displayedTestR2": 0.9533937188842975,
  "byPriceBand": {
   "0-0.3": {
    "n": 2717,
-   "medianAPE": 0.2349796121296798,
-   "within20": 0.4313581155686419
+   "medianAPE": 0.23163472942880728,
+   "within20": 0.4416635995583364
   },
   "0.3-3": {
-   "n": 746,
-   "medianAPE": 0.2899053770882991,
-   "within20": 0.3605898123324397
+   "n": 749,
+   "medianAPE": 0.28897016217565147,
+   "within20": 0.3684913217623498
   },
   "3-30": {
    "n": 756,
-   "medianAPE": 0.29575532676794636,
-   "within20": 0.32275132275132273
+   "medianAPE": 0.30341353540572197,
+   "within20": 0.3306878306878307
   },
   "30+": {
-   "n": 160,
-   "medianAPE": 0.4219887763579267,
-   "within20": 0.225
+   "n": 157,
+   "medianAPE": 0.4293386804742813,
+   "within20": 0.2611464968152866
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.30842194754795504,
-   "within20": 0.33386617949303493,
+   "medianAPE": 0.3039499570748635,
+   "within20": 0.3432290477277917,
    "alpha": 1.78
   },
   "standard": {
-   "medianAPE": 0.2626514997406691,
-   "within20": 0.3898150262617036,
+   "medianAPE": 0.2584667789235084,
+   "within20": 0.39712263073761134,
    "alpha": 5.62
   },
   "local": {
-   "medianAPE": 0.24972966870034974,
-   "within20": 0.41128111440968257,
+   "medianAPE": 0.24296692944517181,
+   "within20": 0.4213290705640557,
    "alpha": 5.62
   }
  },
- "verdictAgreement": 0.6599680292304179,
+ "verdictAgreement": 0.658141128111441,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,
