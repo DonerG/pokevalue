@@ -2,28 +2,28 @@
  "model": {
   "cards": 4379,
   "cardsTotal": 19255,
-  "testR2": 0.9530631615013305,
-  "medianError": 0.2517677168372806,
+  "testR2": 0.9530638900798118,
+  "medianError": 0.2513886736599282,
   "within20": 0.41379310344827586,
   "byPriceBand": {
    "0-0.3": {
     "n": 2719,
-    "medianAPE": 0.22120074604879184,
-    "within20": 0.457153365207797
+    "medianAPE": 0.2211955505455958,
+    "within20": 0.4567855829349025
    },
    "0.3-3": {
     "n": 746,
-    "medianAPE": 0.30241915732726127,
+    "medianAPE": 0.3022264891765097,
     "within20": 0.3646112600536193
    },
    "3-30": {
     "n": 755,
-    "medianAPE": 0.29383943770081206,
-    "within20": 0.34172185430463575
+    "medianAPE": 0.2938040077821584,
+    "within20": 0.343046357615894
    },
    "30+": {
     "n": 159,
-    "medianAPE": 0.43976446873242464,
+    "medianAPE": 0.43986978441234625,
     "within20": 0.24528301886792453
    }
   },
@@ -44,42 +44,42 @@
  "topPokemon": [
   {
    "label": "Gengar",
-   "factor": 3.7224,
+   "factor": 3.7228,
    "n": 46
   },
   {
    "label": "Pikachu",
-   "factor": 3.5014,
+   "factor": 3.5021,
    "n": 128
   },
   {
    "label": "Charizard",
-   "factor": 3.1881,
+   "factor": 3.1878,
    "n": 88
   },
   {
    "label": "Umbreon",
-   "factor": 3.1239,
+   "factor": 3.1236,
    "n": 41
   },
   {
    "label": "Mew",
-   "factor": 2.7444,
+   "factor": 2.744,
    "n": 35
   },
   {
    "label": "Rayquaza",
-   "factor": 2.6943,
+   "factor": 2.6942,
    "n": 44
   },
   {
    "label": "Lugia",
-   "factor": 2.4125,
+   "factor": 2.4126,
    "n": 32
   },
   {
    "label": "Snorlax",
-   "factor": 2.1757,
+   "factor": 2.1758,
    "n": 50
   },
   {
@@ -94,49 +94,49 @@
   },
   {
    "label": "Psyduck",
-   "factor": 2.0713,
+   "factor": 2.0711,
    "n": 37
   },
   {
    "label": "Squirtle",
-   "factor": 1.9962,
+   "factor": 1.9961,
    "n": 30
   }
  ],
  "rarities": [
   {
    "label": "Special illustration rare",
-   "factor": 25.3646,
+   "factor": 25.3644,
    "n": 222
   },
   {
    "label": "Illustration rare",
-   "factor": 18.1868,
+   "factor": 18.1858,
    "n": 491
   },
   {
    "label": "Hyper rare",
-   "factor": 10.271,
+   "factor": 10.2709,
    "n": 69
   },
   {
    "label": "Shiny rare",
-   "factor": 10.0764,
+   "factor": 10.0766,
    "n": 224
   },
   {
    "label": "Ultra Rare",
-   "factor": 6.9846,
+   "factor": 6.9848,
    "n": 1389
   },
   {
    "label": "ACE SPEC Rare",
-   "factor": 3.595,
+   "factor": 3.5951,
    "n": 33
   },
   {
    "label": "Double rare",
-   "factor": 1.8537,
+   "factor": 1.8538,
    "n": 317
   },
   {
@@ -220,7 +220,7 @@
  "cardTypes": [
   {
    "label": "EX",
-   "factor": 2.0259,
+   "factor": 2.0261,
    "n": 916
   },
   {
@@ -230,7 +230,7 @@
   },
   {
    "label": "Tera ex",
-   "factor": 0.9967,
+   "factor": 0.9968,
    "n": 134
   }
  ],
