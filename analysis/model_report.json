@@ -1,5 +1,5 @@
 {
- "trainedAt": "2026-11-16T19:39:35.082109+00:00",
+ "trainedAt": "2026-11-17T18:37:30.771234+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
@@ -8,52 +8,52 @@
  "alpha": 3.16,
  "pokemonTierExponent": {
   "bulk": 1.0,
-  "mid": 1.2705,
-  "chase": 1.7625
+  "mid": 1.2798,
+  "chase": 1.7607
  },
- "displayedMedianAPE": 0.27137412978286074,
- "displayedWithin20": 0.39209865266042476,
- "displayedTestR2": 0.9503048094712894,
+ "displayedMedianAPE": 0.2705717088974424,
+ "displayedWithin20": 0.38136560858643526,
+ "displayedTestR2": 0.9501036284770058,
  "byPriceBand": {
   "0-0.3": {
    "n": 2720,
-   "medianAPE": 0.24711487909531,
-   "within20": 0.41875
+   "medianAPE": 0.2508049643637812,
+   "within20": 0.40661764705882353
   },
   "0.3-3": {
-   "n": 759,
-   "medianAPE": 0.29992109525907995,
-   "within20": 0.37812911725955206
+   "n": 760,
+   "medianAPE": 0.29508420627845444,
+   "within20": 0.37105263157894736
   },
   "3-30": {
-   "n": 748,
-   "medianAPE": 0.3109188126238932,
-   "within20": 0.3382352941176471
+   "n": 747,
+   "medianAPE": 0.3157216454703334,
+   "within20": 0.32663989290495316
   },
   "30+": {
    "n": 152,
-   "medianAPE": 0.4144044315756509,
+   "medianAPE": 0.425548711075759,
    "within20": 0.25
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.3189650678484832,
-   "within20": 0.3345512674126513,
-   "alpha": 3.16
+   "medianAPE": 0.32023000285504566,
+   "within20": 0.3251883991778945,
+   "alpha": 1.78
   },
   "standard": {
-   "medianAPE": 0.27070914917131167,
-   "within20": 0.38935830098195934,
+   "medianAPE": 0.27220225854669605,
+   "within20": 0.38090888330669104,
    "alpha": 3.16
   },
   "local": {
-   "medianAPE": 0.2539955465360944,
-   "within20": 0.4067138616122402,
+   "medianAPE": 0.2593974505488329,
+   "within20": 0.3982644439369719,
    "alpha": 3.16
   }
  },
- "verdictAgreement": 0.6643069193879881,
+ "verdictAgreement": 0.6604247545101621,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,
