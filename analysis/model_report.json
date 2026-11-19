@@ -1,5 +1,5 @@
 {
- "trainedAt": "2026-11-18T18:08:38.291746+00:00",
+ "trainedAt": "2026-11-19T18:20:33.335827+00:00",
  "target": "trend",
  "nRows": 19255,
  "nDisplayedRows": 4379,
@@ -11,49 +11,49 @@
   "mid": 1.2867,
   "chase": 1.7538
  },
- "displayedMedianAPE": 0.2729276809302683,
- "displayedWithin20": 0.38547613610413334,
- "displayedTestR2": 0.9498086931357751,
+ "displayedMedianAPE": 0.27272821183313606,
+ "displayedWithin20": 0.38524777346426126,
+ "displayedTestR2": 0.9498102982367291,
  "byPriceBand": {
   "0-0.3": {
    "n": 2725,
-   "medianAPE": 0.2526523899555186,
-   "within20": 0.40990825688073396
+   "medianAPE": 0.25241497364550347,
+   "within20": 0.4095412844036697
   },
   "0.3-3": {
    "n": 751,
-   "medianAPE": 0.29097356981345224,
+   "medianAPE": 0.2887191282125462,
    "within20": 0.38615179760319573
   },
   "3-30": {
    "n": 751,
-   "medianAPE": 0.3118615614748323,
+   "medianAPE": 0.31189703726247026,
    "within20": 0.3249001331557923
   },
   "30+": {
    "n": 152,
-   "medianAPE": 0.43648104607215116,
+   "medianAPE": 0.43664546460300113,
    "within20": 0.24342105263157895
   }
  },
  "perVariant": {
   "broad": {
-   "medianAPE": 0.32012020789745943,
+   "medianAPE": 0.31985803119370126,
    "within20": 0.3265585750171272,
    "alpha": 3.16
   },
   "standard": {
-   "medianAPE": 0.27309157354547725,
+   "medianAPE": 0.27309862054317874,
    "within20": 0.38524777346426126,
    "alpha": 3.16
   },
   "local": {
-   "medianAPE": 0.26007398255797104,
+   "medianAPE": 0.2600740580046013,
    "within20": 0.4007764329755652,
    "alpha": 3.16
   }
  },
- "verdictAgreement": 0.6713861612240237,
+ "verdictAgreement": 0.6711577985841516,
  "categoryCardinality": {
   "pokemon": 1026,
   "rarity": 35,

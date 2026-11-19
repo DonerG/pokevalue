@@ -15,33 +15,33 @@
    "trend": 1.7,
    "avg30": 1.59,
    "low": 0.45,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.6720009862716732,
+  "baseValue": 1.6722000306754325,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "3",
-     "factor": 1.7281,
-     "displayFactor": 1.9489929346843216,
+     "factor": 1.7279,
+     "displayFactor": 1.9491441250791772,
      "n": 42,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Saki Hayashiro",
-     "factor": 0.8802,
-     "displayFactor": 0.8802,
+     "factor": 0.8799,
+     "displayFactor": 0.8799,
      "n": 40,
      "usedFallback": false
     },
@@ -54,8 +54,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -217,7 +217,7 @@
    }
   },
   "fairs": {
-   "broad": 1.672,
+   "broad": 1.6722,
    "standard": 1.6277,
    "local": 1.6874
   }
@@ -238,7 +238,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.991Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -247,8 +247,8 @@
    "broad": {
     "pokemon": {
      "key": "165",
-     "factor": 0.8036,
-     "displayFactor": 0.8036,
+     "factor": 0.8038,
+     "displayFactor": 0.8038,
      "n": 14,
      "usedFallback": false,
      "tier": "bulk",
@@ -263,8 +263,8 @@
     },
     "illustrator": {
      "key": "Whisker",
-     "factor": 0.8453,
-     "displayFactor": 0.8453,
+     "factor": 0.8452,
+     "displayFactor": 0.8452,
      "n": 13,
      "usedFallback": false
     },
@@ -277,8 +277,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -440,7 +440,7 @@
    }
   },
   "fairs": {
-   "broad": 0.029793,
+   "broad": 0.0298,
    "standard": 0.033383,
    "local": 0.033321
   }
@@ -461,17 +461,17 @@
    "trend": 0.17,
    "avg30": 0.09,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0733335583699768,
+  "baseValue": 0.07333189652849911,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "166",
-     "factor": 0.749,
-     "displayFactor": 0.749,
+     "factor": 0.7489,
+     "displayFactor": 0.7489,
      "n": 14,
      "usedFallback": false,
      "tier": "bulk",
@@ -500,8 +500,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -663,7 +663,7 @@
    }
   },
   "fairs": {
-   "broad": 0.073334,
+   "broad": 0.073332,
    "standard": 0.072603,
    "local": 0.080419
   }
@@ -684,7 +684,7 @@
    "trend": 0.05,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -693,8 +693,8 @@
    "broad": {
     "pokemon": {
      "key": "251",
-     "factor": 1.9666,
-     "displayFactor": 1.9666,
+     "factor": 1.9671,
+     "displayFactor": 1.9671,
      "n": 26,
      "usedFallback": false,
      "tier": "bulk",
@@ -709,8 +709,8 @@
     },
     "illustrator": {
      "key": "satoma",
-     "factor": 0.7781,
-     "displayFactor": 0.7781,
+     "factor": 0.7779,
+     "displayFactor": 0.7779,
      "n": 26,
      "usedFallback": false
     },
@@ -723,8 +723,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -886,7 +886,7 @@
    }
   },
   "fairs": {
-   "broad": 0.075988,
+   "broad": 0.075997,
    "standard": 0.068119,
    "local": 0.063703
   }
@@ -907,17 +907,17 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.039276509544347166,
+  "baseValue": 0.03929756631752481,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "345",
-     "factor": 0.8494,
-     "displayFactor": 0.8494,
+     "factor": 0.8496,
+     "displayFactor": 0.8496,
      "n": 10,
      "usedFallback": false,
      "tier": "bulk",
@@ -932,8 +932,8 @@
     },
     "illustrator": {
      "key": "Ounishi",
-     "factor": 1.0543,
-     "displayFactor": 1.0543,
+     "factor": 1.0545,
+     "displayFactor": 1.0545,
      "n": 11,
      "usedFallback": false
     },
@@ -946,8 +946,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -1109,7 +1109,7 @@
    }
   },
   "fairs": {
-   "broad": 0.039277,
+   "broad": 0.039298,
    "standard": 0.038111,
    "local": 0.041048
   }
@@ -1130,7 +1130,7 @@
    "trend": 0.14,
    "avg30": 0.1,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -1139,8 +1139,8 @@
    "broad": {
     "pokemon": {
      "key": "346",
-     "factor": 1.0794,
-     "displayFactor": 1.0794,
+     "factor": 1.0792,
+     "displayFactor": 1.0792,
      "n": 9,
      "usedFallback": false,
      "tier": "bulk",
@@ -1155,8 +1155,8 @@
     },
     "illustrator": {
      "key": "miki kudo",
-     "factor": 0.8135,
-     "displayFactor": 0.8135,
+     "factor": 0.8133,
+     "displayFactor": 0.8133,
      "n": 63,
      "usedFallback": false
     },
@@ -1169,8 +1169,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -1332,7 +1332,7 @@
    }
   },
   "fairs": {
-   "broad": 0.10101,
+   "broad": 0.10098,
    "standard": 0.087584,
    "local": 0.09518
   }
@@ -1353,7 +1353,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -1362,8 +1362,8 @@
    "broad": {
     "pokemon": {
      "key": "455",
-     "factor": 0.855,
-     "displayFactor": 0.855,
+     "factor": 0.8551,
+     "displayFactor": 0.8551,
      "n": 16,
      "usedFallback": false,
      "tier": "bulk",
@@ -1378,8 +1378,8 @@
     },
     "illustrator": {
      "key": "Mousho",
-     "factor": 0.9462,
-     "displayFactor": 0.9462,
+     "factor": 0.9461,
+     "displayFactor": 0.9461,
      "n": 17,
      "usedFallback": false
     },
@@ -1392,8 +1392,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -1555,7 +1555,7 @@
    }
   },
   "fairs": {
-   "broad": 0.035482,
+   "broad": 0.035486,
    "standard": 0.034984,
    "local": 0.035403
   }
@@ -1576,7 +1576,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -1585,8 +1585,8 @@
    "broad": {
     "pokemon": {
      "key": "479",
-     "factor": 0.9231,
-     "displayFactor": 0.9231,
+     "factor": 0.9234,
+     "displayFactor": 0.9234,
      "n": 49,
      "usedFallback": false,
      "tier": "bulk",
@@ -1615,8 +1615,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -1778,7 +1778,7 @@
    }
   },
   "fairs": {
-   "broad": 0.026397,
+   "broad": 0.026408,
    "standard": 0.029294,
    "local": 0.030712
   }
@@ -1799,7 +1799,7 @@
    "trend": 0.02,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -1824,8 +1824,8 @@
     },
     "illustrator": {
      "key": "Jerky",
-     "factor": 0.7927,
-     "displayFactor": 0.7927,
+     "factor": 0.7925,
+     "displayFactor": 0.7925,
      "n": 45,
      "usedFallback": false
     },
@@ -1838,8 +1838,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -2001,7 +2001,7 @@
    }
   },
   "fairs": {
-   "broad": 0.026134,
+   "broad": 0.026131,
    "standard": 0.027579,
    "local": 0.029648
   }
@@ -2022,17 +2022,17 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.024819014219489833,
+  "baseValue": 0.02480850579787873,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "829",
-     "factor": 0.8295,
-     "displayFactor": 0.8295,
+     "factor": 0.8293,
+     "displayFactor": 0.8293,
      "n": 8,
      "usedFallback": false,
      "tier": "bulk",
@@ -2047,8 +2047,8 @@
     },
     "illustrator": {
      "key": "Heisuke Kitazawa",
-     "factor": 0.6822,
-     "displayFactor": 0.6822,
+     "factor": 0.682,
+     "displayFactor": 0.682,
      "n": 5,
      "usedFallback": false
     },
@@ -2061,8 +2061,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -2224,7 +2224,7 @@
    }
   },
   "fairs": {
-   "broad": 0.024819,
+   "broad": 0.024809,
    "standard": 0.024231,
    "local": 0.02556
   }
@@ -2245,7 +2245,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -2270,8 +2270,8 @@
     },
     "illustrator": {
      "key": "Yuka Tanaka",
-     "factor": 1.0152,
-     "displayFactor": 1.0152,
+     "factor": 1.015,
+     "displayFactor": 1.015,
      "n": 3,
      "usedFallback": false
     },
@@ -2284,8 +2284,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -2447,7 +2447,7 @@
    }
   },
   "fairs": {
-   "broad": 0.036061,
+   "broad": 0.036058,
    "standard": 0.03605,
    "local": 0.033688
   }
@@ -2468,7 +2468,7 @@
    "trend": 0.02,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.991Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -2493,8 +2493,8 @@
     },
     "illustrator": {
      "key": "Yoriyuki Ikegami",
-     "factor": 0.7572,
-     "displayFactor": 0.7572,
+     "factor": 0.7573,
+     "displayFactor": 0.7573,
      "n": 24,
      "usedFallback": false
     },
@@ -2507,8 +2507,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -2670,7 +2670,7 @@
    }
   },
   "fairs": {
-   "broad": 0.03418,
+   "broad": 0.034188,
    "standard": 0.035198,
    "local": 0.037259
   }
@@ -2691,7 +2691,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -2716,8 +2716,8 @@
     },
     "illustrator": {
      "key": "Souichirou Gunjima",
-     "factor": 0.8082,
-     "displayFactor": 0.8082,
+     "factor": 0.8085,
+     "displayFactor": 0.8085,
      "n": 100,
      "usedFallback": false
     },
@@ -2730,8 +2730,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -2893,7 +2893,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034373,
+   "broad": 0.034389,
    "standard": 0.037939,
    "local": 0.039356
   }
@@ -2914,7 +2914,7 @@
    "trend": 1.02,
    "avg30": 0.99,
    "low": 0.2,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -2923,24 +2923,24 @@
    "broad": {
     "pokemon": {
      "key": "1019",
-     "factor": 0.8287,
-     "displayFactor": 0.7951570496818323,
+     "factor": 0.8286,
+     "displayFactor": 0.7949802085700078,
      "n": 6,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -2953,8 +2953,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -3116,7 +3116,7 @@
    }
   },
   "fairs": {
-   "broad": 0.70687,
+   "broad": 0.70691,
    "standard": 0.71623,
    "local": 0.79799
   }
@@ -3137,17 +3137,17 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.034987542256989114,
+  "baseValue": 0.034989543778583786,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "919",
-     "factor": 0.7475,
-     "displayFactor": 0.7475,
+     "factor": 0.7476,
+     "displayFactor": 0.7476,
      "n": 8,
      "usedFallback": false,
      "tier": "bulk",
@@ -3162,8 +3162,8 @@
     },
     "illustrator": {
      "key": "HYOGONOSUKE",
-     "factor": 1.0672,
-     "displayFactor": 1.0672,
+     "factor": 1.067,
+     "displayFactor": 1.067,
      "n": 85,
      "usedFallback": false
     },
@@ -3176,8 +3176,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -3339,7 +3339,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034988,
+   "broad": 0.03499,
    "standard": 0.034215,
    "local": 0.036795
   }
@@ -3360,7 +3360,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -3385,8 +3385,8 @@
     },
     "illustrator": {
      "key": "akagi",
-     "factor": 0.9632,
-     "displayFactor": 0.9632,
+     "factor": 0.9631,
+     "displayFactor": 0.9631,
      "n": 30,
      "usedFallback": false
     },
@@ -3399,8 +3399,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -3583,11 +3583,11 @@
    "trend": 0.04,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0316391613241147,
+  "baseValue": 0.031639024362665684,
   "breakdowns": {
    "broad": {
     "pokemon": {
@@ -3608,8 +3608,8 @@
     },
     "illustrator": {
      "key": "Tetsu Kayama",
-     "factor": 0.8682,
-     "displayFactor": 0.8682,
+     "factor": 0.8681,
+     "displayFactor": 0.8681,
      "n": 27,
      "usedFallback": false
     },
@@ -3622,8 +3622,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -3806,7 +3806,7 @@
    "trend": 0.04,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -3831,8 +3831,8 @@
     },
     "illustrator": {
      "key": "DOM",
-     "factor": 0.9002,
-     "displayFactor": 0.9002,
+     "factor": 0.9001,
+     "displayFactor": 0.9001,
      "n": 46,
      "usedFallback": false
     },
@@ -3845,8 +3845,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -4029,17 +4029,17 @@
    "trend": 0.06,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.058709740806543974,
+  "baseValue": 0.05871562766071735,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "77",
-     "factor": 1.0883,
-     "displayFactor": 1.0883,
+     "factor": 1.0882,
+     "displayFactor": 1.0882,
      "n": 30,
      "usedFallback": false,
      "tier": "bulk",
@@ -4054,8 +4054,8 @@
     },
     "illustrator": {
      "key": "Atsushi Furusawa",
-     "factor": 1.23,
-     "displayFactor": 1.23,
+     "factor": 1.2301,
+     "displayFactor": 1.2301,
      "n": 50,
      "usedFallback": false
     },
@@ -4068,8 +4068,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -4231,7 +4231,7 @@
    }
   },
   "fairs": {
-   "broad": 0.05871,
+   "broad": 0.058716,
    "standard": 0.060603,
    "local": 0.058653
   }
@@ -4252,7 +4252,7 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -4261,8 +4261,8 @@
    "broad": {
     "pokemon": {
      "key": "78",
-     "factor": 0.9975,
-     "displayFactor": 0.9975,
+     "factor": 0.9974,
+     "displayFactor": 0.9974,
      "n": 32,
      "usedFallback": false,
      "tier": "bulk",
@@ -4291,8 +4291,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -4454,7 +4454,7 @@
    }
   },
   "fairs": {
-   "broad": 0.042644,
+   "broad": 0.042645,
    "standard": 0.04499,
    "local": 0.042946
   }
@@ -4475,7 +4475,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -4500,8 +4500,8 @@
     },
     "illustrator": {
      "key": "0313",
-     "factor": 0.8638,
-     "displayFactor": 0.8638,
+     "factor": 0.8635,
+     "displayFactor": 0.8635,
      "n": 66,
      "usedFallback": false
     },
@@ -4514,8 +4514,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -4677,7 +4677,7 @@
    }
   },
   "fairs": {
-   "broad": 0.027455,
+   "broad": 0.027449,
    "standard": 0.026933,
    "local": 0.027397
   }
@@ -4698,17 +4698,17 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05607723107840558,
+  "baseValue": 0.05608822378098113,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "643",
-     "factor": 1.097,
-     "displayFactor": 1.097,
+     "factor": 1.0972,
+     "displayFactor": 1.0972,
      "n": 32,
      "usedFallback": false,
      "tier": "bulk",
@@ -4723,8 +4723,8 @@
     },
     "illustrator": {
      "key": "Iwamoto05",
-     "factor": 1.0294,
-     "displayFactor": 1.0294,
+     "factor": 1.0293,
+     "displayFactor": 1.0293,
      "n": 5,
      "usedFallback": false
     },
@@ -4737,8 +4737,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -4900,7 +4900,7 @@
    }
   },
   "fairs": {
-   "broad": 0.056077,
+   "broad": 0.056088,
    "standard": 0.057676,
    "local": 0.053356
   }
@@ -4921,7 +4921,7 @@
    "trend": 0.02,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -4930,8 +4930,8 @@
    "broad": {
     "pokemon": {
      "key": "757",
-     "factor": 0.8185,
-     "displayFactor": 0.8185,
+     "factor": 0.8187,
+     "displayFactor": 0.8187,
      "n": 14,
      "usedFallback": false,
      "tier": "bulk",
@@ -4946,8 +4946,8 @@
     },
     "illustrator": {
      "key": "Felicia Chen",
-     "factor": 0.9362,
-     "displayFactor": 0.9362,
+     "factor": 0.936,
+     "displayFactor": 0.936,
      "n": 7,
      "usedFallback": false
     },
@@ -4960,8 +4960,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -5123,7 +5123,7 @@
    }
   },
   "fairs": {
-   "broad": 0.033608,
+   "broad": 0.033613,
    "standard": 0.033963,
    "local": 0.034482
   }
@@ -5144,7 +5144,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -5153,8 +5153,8 @@
    "broad": {
     "pokemon": {
      "key": "758",
-     "factor": 0.7254,
-     "displayFactor": 0.7254,
+     "factor": 0.7253,
+     "displayFactor": 0.7253,
      "n": 19,
      "usedFallback": false,
      "tier": "bulk",
@@ -5183,8 +5183,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -5346,7 +5346,7 @@
    }
   },
   "fairs": {
-   "broad": 0.03264,
+   "broad": 0.032639,
    "standard": 0.034924,
    "local": 0.034053
   }
@@ -5367,7 +5367,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -5392,8 +5392,8 @@
     },
     "illustrator": {
      "key": "AKIRA EGAWA",
-     "factor": 0.8707,
-     "displayFactor": 0.8707,
+     "factor": 0.8704,
+     "displayFactor": 0.8704,
      "n": 85,
      "usedFallback": false
     },
@@ -5406,8 +5406,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -5569,7 +5569,7 @@
    }
   },
   "fairs": {
-   "broad": 0.027808,
+   "broad": 0.027802,
    "standard": 0.031392,
    "local": 0.033309
   }
@@ -5590,7 +5590,7 @@
    "trend": 0.02,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.991Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -5599,8 +5599,8 @@
    "broad": {
     "pokemon": {
      "key": "813",
-     "factor": 0.9194,
-     "displayFactor": 0.9194,
+     "factor": 0.9195,
+     "displayFactor": 0.9195,
      "n": 12,
      "usedFallback": false,
      "tier": "bulk",
@@ -5629,8 +5629,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -5792,7 +5792,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034892,
+   "broad": 0.0349,
    "standard": 0.036242,
    "local": 0.03706
   }
@@ -5813,7 +5813,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -5838,8 +5838,8 @@
     },
     "illustrator": {
      "key": "aspara",
-     "factor": 0.8931,
-     "displayFactor": 0.8931,
+     "factor": 0.893,
+     "displayFactor": 0.893,
      "n": 19,
      "usedFallback": false
     },
@@ -5852,8 +5852,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -6036,7 +6036,7 @@
    "trend": 1.06,
    "avg30": 0.89,
    "low": 0.25,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -6046,23 +6046,23 @@
     "pokemon": {
      "key": "815",
      "factor": 0.8488,
-     "displayFactor": 0.8187469062356336,
+     "displayFactor": 0.8186932205696497,
      "n": 20,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -6075,8 +6075,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -6238,7 +6238,7 @@
    }
   },
   "fairs": {
-   "broad": 0.70651,
+   "broad": 0.70662,
    "standard": 0.84458,
    "local": 0.91798
   }
@@ -6259,7 +6259,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -6284,8 +6284,8 @@
     },
     "illustrator": {
      "key": "Krgc",
-     "factor": 0.773,
-     "displayFactor": 0.773,
+     "factor": 0.7726,
+     "displayFactor": 0.7726,
      "n": 15,
      "usedFallback": false
     },
@@ -6298,8 +6298,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -6461,7 +6461,7 @@
    }
   },
   "fairs": {
-   "broad": 0.032723,
+   "broad": 0.03271,
    "standard": 0.030788,
    "local": 0.03117
   }
@@ -6482,7 +6482,7 @@
    "trend": 3.36,
    "avg30": 3.42,
    "low": 0.5,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -6492,23 +6492,23 @@
     "pokemon": {
      "key": "9",
      "factor": 2.0042,
-     "displayFactor": 2.3352742812959986,
+     "displayFactor": 2.335923806694796,
      "n": 40,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "PLANETA Igarashi",
-     "factor": 0.7945,
-     "displayFactor": 0.7945,
+     "factor": 0.7946,
+     "displayFactor": 0.7946,
      "n": 48,
      "usedFallback": false
     },
@@ -6521,8 +6521,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -6684,7 +6684,7 @@
    }
   },
   "fairs": {
-   "broad": 1.8083,
+   "broad": 1.8097,
    "standard": 1.9339,
    "local": 1.9891
   }
@@ -6705,7 +6705,7 @@
    "trend": 0.05,
    "avg30": 0.06,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.974Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -6714,8 +6714,8 @@
    "broad": {
     "pokemon": {
      "key": "131",
-     "factor": 1.2966,
-     "displayFactor": 1.2966,
+     "factor": 1.297,
+     "displayFactor": 1.297,
      "n": 45,
      "usedFallback": false,
      "tier": "bulk",
@@ -6730,8 +6730,8 @@
     },
     "illustrator": {
      "key": "rika",
-     "factor": 0.7357,
-     "displayFactor": 0.7357,
+     "factor": 0.7356,
+     "displayFactor": 0.7356,
      "n": 22,
      "usedFallback": false
     },
@@ -6744,8 +6744,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -6907,7 +6907,7 @@
    }
   },
   "fairs": {
-   "broad": 0.04737,
+   "broad": 0.047383,
    "standard": 0.051296,
    "local": 0.051885
   }
@@ -6928,33 +6928,33 @@
    "trend": 1.44,
    "avg30": 1.47,
    "low": 0.25,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.1846183398204362,
+  "baseValue": 1.1854488802787682,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "131",
-     "factor": 1.2966,
-     "displayFactor": 1.3728151410910914,
+     "factor": 1.297,
+     "displayFactor": 1.3734746648260878,
      "n": 45,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -6967,8 +6967,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -7130,7 +7130,7 @@
    }
   },
   "fairs": {
-   "broad": 1.1846,
+   "broad": 1.1854,
    "standard": 1.1826,
    "local": 1.2504
   }
@@ -7151,7 +7151,7 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -7160,8 +7160,8 @@
    "broad": {
     "pokemon": {
      "key": "183",
-     "factor": 1.0946,
-     "displayFactor": 1.0946,
+     "factor": 1.0945,
+     "displayFactor": 1.0945,
      "n": 23,
      "usedFallback": false,
      "tier": "bulk",
@@ -7176,8 +7176,8 @@
     },
     "illustrator": {
      "key": "MARINA Chikazawa",
-     "factor": 1.0771,
-     "displayFactor": 1.0771,
+     "factor": 1.0768,
+     "displayFactor": 1.0768,
      "n": 23,
      "usedFallback": false
     },
@@ -7190,8 +7190,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -7353,7 +7353,7 @@
    }
   },
   "fairs": {
-   "broad": 0.051709,
+   "broad": 0.051696,
    "standard": 0.052955,
    "local": 0.052808
   }
@@ -7374,7 +7374,7 @@
    "trend": 0.06,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.974Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -7383,8 +7383,8 @@
    "broad": {
     "pokemon": {
      "key": "184",
-     "factor": 1.0964,
-     "displayFactor": 1.0964,
+     "factor": 1.0966,
+     "displayFactor": 1.0966,
      "n": 22,
      "usedFallback": false,
      "tier": "bulk",
@@ -7399,8 +7399,8 @@
     },
     "illustrator": {
      "key": "Jerky",
-     "factor": 0.7927,
-     "displayFactor": 0.7927,
+     "factor": 0.7925,
+     "displayFactor": 0.7925,
      "n": 45,
      "usedFallback": false
     },
@@ -7413,8 +7413,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -7576,7 +7576,7 @@
    }
   },
   "fairs": {
-   "broad": 0.043159,
+   "broad": 0.043161,
    "standard": 0.040994,
    "local": 0.042011
   }
@@ -7597,7 +7597,7 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -7606,8 +7606,8 @@
    "broad": {
     "pokemon": {
      "key": "456",
-     "factor": 0.927,
-     "displayFactor": 0.927,
+     "factor": 0.9269,
+     "displayFactor": 0.9269,
      "n": 7,
      "usedFallback": false,
      "tier": "bulk",
@@ -7622,8 +7622,8 @@
     },
     "illustrator": {
      "key": "Yukiko Baba",
-     "factor": 0.9569,
-     "displayFactor": 0.9569,
+     "factor": 0.9563,
+     "displayFactor": 0.9563,
      "n": 153,
      "usedFallback": false
     },
@@ -7636,8 +7636,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -7799,7 +7799,7 @@
    }
   },
   "fairs": {
-   "broad": 0.038905,
+   "broad": 0.03888,
    "standard": 0.035032,
    "local": 0.035328
   }
@@ -7820,7 +7820,7 @@
    "trend": 0.04,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.974Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -7829,8 +7829,8 @@
    "broad": {
     "pokemon": {
      "key": "457",
-     "factor": 0.8719,
-     "displayFactor": 0.8719,
+     "factor": 0.872,
+     "displayFactor": 0.872,
      "n": 11,
      "usedFallback": false,
      "tier": "bulk",
@@ -7845,8 +7845,8 @@
     },
     "illustrator": {
      "key": "Shigenori Negishi",
-     "factor": 0.8515,
-     "displayFactor": 0.8515,
+     "factor": 0.8514,
+     "displayFactor": 0.8514,
      "n": 151,
      "usedFallback": false
     },
@@ -7859,8 +7859,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -8022,7 +8022,7 @@
    }
   },
   "fairs": {
-   "broad": 0.036868,
+   "broad": 0.036872,
    "standard": 0.034661,
    "local": 0.033785
   }
@@ -8043,7 +8043,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -8052,8 +8052,8 @@
    "broad": {
     "pokemon": {
      "key": "564",
-     "factor": 0.9629,
-     "displayFactor": 0.9629,
+     "factor": 0.963,
+     "displayFactor": 0.963,
      "n": 6,
      "usedFallback": false,
      "tier": "bulk",
@@ -8082,8 +8082,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -8245,7 +8245,7 @@
    }
   },
   "fairs": {
-   "broad": 0.043938,
+   "broad": 0.043947,
    "standard": 0.045571,
    "local": 0.045312
   }
@@ -8266,7 +8266,7 @@
    "trend": 0.11,
    "avg30": 0.09,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -8291,8 +8291,8 @@
     },
     "illustrator": {
      "key": "LINNE",
-     "factor": 0.8915,
-     "displayFactor": 0.8915,
+     "factor": 0.8916,
+     "displayFactor": 0.8916,
      "n": 11,
      "usedFallback": false
     },
@@ -8305,8 +8305,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -8468,7 +8468,7 @@
    }
   },
   "fairs": {
-   "broad": 0.093706,
+   "broad": 0.093726,
    "standard": 0.096595,
    "local": 0.10724
   }
@@ -8489,7 +8489,7 @@
    "trend": 0.04,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -8498,8 +8498,8 @@
    "broad": {
     "pokemon": {
      "key": "656",
-     "factor": 0.953,
-     "displayFactor": 0.953,
+     "factor": 0.9531,
+     "displayFactor": 0.9531,
      "n": 16,
      "usedFallback": false,
      "tier": "bulk",
@@ -8514,8 +8514,8 @@
     },
     "illustrator": {
      "key": "MINAMINAMI Take",
-     "factor": 0.8878,
-     "displayFactor": 0.8878,
+     "factor": 0.8877,
+     "displayFactor": 0.8877,
      "n": 20,
      "usedFallback": false
     },
@@ -8528,8 +8528,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -8691,7 +8691,7 @@
    }
   },
   "fairs": {
-   "broad": 0.037108,
+   "broad": 0.037112,
    "standard": 0.038621,
    "local": 0.040197
   }
@@ -8712,7 +8712,7 @@
    "trend": 0.03,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -8721,8 +8721,8 @@
    "broad": {
     "pokemon": {
      "key": "657",
-     "factor": 0.9524,
-     "displayFactor": 0.9524,
+     "factor": 0.9526,
+     "displayFactor": 0.9526,
      "n": 11,
      "usedFallback": false,
      "tier": "bulk",
@@ -8737,8 +8737,8 @@
     },
     "illustrator": {
      "key": "Ryuta Fuse",
-     "factor": 0.7902,
-     "displayFactor": 0.7902,
+     "factor": 0.7901,
+     "displayFactor": 0.7901,
      "n": 101,
      "usedFallback": false
     },
@@ -8751,8 +8751,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -8914,7 +8914,7 @@
    }
   },
   "fairs": {
-   "broad": 0.037373,
+   "broad": 0.03738,
    "standard": 0.040036,
    "local": 0.038377
   }
@@ -8935,7 +8935,7 @@
    "trend": 0.82,
    "avg30": 0.86,
    "low": 0.37,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -8944,24 +8944,24 @@
    "broad": {
     "pokemon": {
      "key": "658",
-     "factor": 1.6873,
-     "displayFactor": 1.893005582544777,
+     "factor": 1.6872,
+     "displayFactor": 1.8932648039775577,
      "n": 30,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -8974,8 +8974,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -9137,7 +9137,7 @@
    }
   },
   "fairs": {
-   "broad": 1.6828,
+   "broad": 1.6835,
    "standard": 1.5039,
    "local": 1.5749
   }
@@ -9158,7 +9158,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -9167,8 +9167,8 @@
    "broad": {
     "pokemon": {
      "key": "740",
-     "factor": 0.612,
-     "displayFactor": 0.612,
+     "factor": 0.6119,
+     "displayFactor": 0.6119,
      "n": 11,
      "usedFallback": false,
      "tier": "bulk",
@@ -9183,8 +9183,8 @@
     },
     "illustrator": {
      "key": "nagimiso",
-     "factor": 0.8593,
-     "displayFactor": 0.8593,
+     "factor": 0.8594,
+     "displayFactor": 0.8594,
      "n": 152,
      "usedFallback": false
     },
@@ -9197,8 +9197,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -9360,7 +9360,7 @@
    }
   },
   "fairs": {
-   "broad": 0.026115,
+   "broad": 0.026117,
    "standard": 0.026359,
    "local": 0.026566
   }
@@ -9381,7 +9381,7 @@
    "trend": 0.08,
    "avg30": 0.07,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -9390,8 +9390,8 @@
    "broad": {
     "pokemon": {
      "key": "833",
-     "factor": 0.9141,
-     "displayFactor": 0.9141,
+     "factor": 0.914,
+     "displayFactor": 0.914,
      "n": 6,
      "usedFallback": false,
      "tier": "bulk",
@@ -9406,8 +9406,8 @@
     },
     "illustrator": {
      "key": "Yuka Morii",
-     "factor": 1.6549,
-     "displayFactor": 1.6549,
+     "factor": 1.6546,
+     "displayFactor": 1.6546,
      "n": 207,
      "usedFallback": false
     },
@@ -9420,8 +9420,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -9583,7 +9583,7 @@
    }
   },
   "fairs": {
-   "broad": 0.066347,
+   "broad": 0.066335,
    "standard": 0.061845,
    "local": 0.062377
   }
@@ -9604,7 +9604,7 @@
    "trend": 0.08,
    "avg30": 0.07,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -9643,8 +9643,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -9806,7 +9806,7 @@
    }
   },
   "fairs": {
-   "broad": 0.064427,
+   "broad": 0.064435,
    "standard": 0.067953,
    "local": 0.075073
   }
@@ -9827,7 +9827,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -9836,8 +9836,8 @@
    "broad": {
     "pokemon": {
      "key": "976",
-     "factor": 0.7575,
-     "displayFactor": 0.7575,
+     "factor": 0.7576,
+     "displayFactor": 0.7576,
      "n": 6,
      "usedFallback": false,
      "tier": "bulk",
@@ -9852,8 +9852,8 @@
     },
     "illustrator": {
      "key": "GOTO minori",
-     "factor": 0.8512,
-     "displayFactor": 0.8512,
+     "factor": 0.851,
+     "displayFactor": 0.851,
      "n": 12,
      "usedFallback": false
     },
@@ -9866,8 +9866,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -10050,7 +10050,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -10059,8 +10059,8 @@
    "broad": {
     "pokemon": {
      "key": "125",
-     "factor": 0.8645,
-     "displayFactor": 0.8645,
+     "factor": 0.8646,
+     "displayFactor": 0.8646,
      "n": 30,
      "usedFallback": false,
      "tier": "bulk",
@@ -10075,8 +10075,8 @@
     },
     "illustrator": {
      "key": "Oswaldo KATO",
-     "factor": 0.7738,
-     "displayFactor": 0.7738,
+     "factor": 0.7742,
+     "displayFactor": 0.7742,
      "n": 93,
      "usedFallback": false
     },
@@ -10089,8 +10089,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -10252,7 +10252,7 @@
    }
   },
   "fairs": {
-   "broad": 0.029339,
+   "broad": 0.029361,
    "standard": 0.028096,
    "local": 0.029043
   }
@@ -10273,7 +10273,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -10312,8 +10312,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -10475,7 +10475,7 @@
    }
   },
   "fairs": {
-   "broad": 0.038512,
+   "broad": 0.038517,
    "standard": 0.042645,
    "local": 0.040635
   }
@@ -10496,7 +10496,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -10505,8 +10505,8 @@
    "broad": {
     "pokemon": {
      "key": "170",
-     "factor": 0.714,
-     "displayFactor": 0.714,
+     "factor": 0.7138,
+     "displayFactor": 0.7138,
      "n": 27,
      "usedFallback": false,
      "tier": "bulk",
@@ -10521,8 +10521,8 @@
     },
     "illustrator": {
      "key": "Souichirou Gunjima",
-     "factor": 0.8082,
-     "displayFactor": 0.8082,
+     "factor": 0.8085,
+     "displayFactor": 0.8085,
      "n": 100,
      "usedFallback": false
     },
@@ -10535,8 +10535,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -10698,7 +10698,7 @@
    }
   },
   "fairs": {
-   "broad": 0.025309,
+   "broad": 0.025314,
    "standard": 0.029519,
    "local": 0.030948
   }
@@ -10719,7 +10719,7 @@
    "trend": 0.04,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -10728,8 +10728,8 @@
    "broad": {
     "pokemon": {
      "key": "171",
-     "factor": 0.7874,
-     "displayFactor": 0.7874,
+     "factor": 0.7873,
+     "displayFactor": 0.7873,
      "n": 26,
      "usedFallback": false,
      "tier": "bulk",
@@ -10744,8 +10744,8 @@
     },
     "illustrator": {
      "key": "Akira Komayama",
-     "factor": 0.9268,
-     "displayFactor": 0.9268,
+     "factor": 0.9267,
+     "displayFactor": 0.9267,
      "n": 236,
      "usedFallback": false
     },
@@ -10758,8 +10758,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -10921,7 +10921,7 @@
    }
   },
   "fairs": {
-   "broad": 0.036239,
+   "broad": 0.036235,
    "standard": 0.032045,
    "local": 0.030938
   }
@@ -10942,7 +10942,7 @@
    "trend": 0.06,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -10967,8 +10967,8 @@
     },
     "illustrator": {
      "key": "Nisota Niso",
-     "factor": 0.7622,
-     "displayFactor": 0.7622,
+     "factor": 0.7621,
+     "displayFactor": 0.7621,
      "n": 50,
      "usedFallback": false
     },
@@ -10981,8 +10981,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -11165,7 +11165,7 @@
    "trend": 0.84,
    "avg30": 0.79,
    "low": 0.08,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -11174,24 +11174,24 @@
    "broad": {
     "pokemon": {
      "key": "596",
-     "factor": 0.8325,
-     "displayFactor": 0.7996072754863595,
+     "factor": 0.8324,
+     "displayFactor": 0.7994314450215441,
      "n": 17,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -11204,8 +11204,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -11388,7 +11388,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -11427,8 +11427,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -11590,7 +11590,7 @@
    }
   },
   "fairs": {
-   "broad": 0.026941,
+   "broad": 0.026944,
    "standard": 0.027722,
    "local": 0.027414
   }
@@ -11611,7 +11611,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -11620,8 +11620,8 @@
    "broad": {
     "pokemon": {
      "key": "738",
-     "factor": 0.6942,
-     "displayFactor": 0.6942,
+     "factor": 0.694,
+     "displayFactor": 0.694,
      "n": 14,
      "usedFallback": false,
      "tier": "bulk",
@@ -11636,8 +11636,8 @@
     },
     "illustrator": {
      "key": "Shiburingaru",
-     "factor": 0.837,
-     "displayFactor": 0.837,
+     "factor": 0.8368,
+     "displayFactor": 0.8368,
      "n": 43,
      "usedFallback": false
     },
@@ -11650,8 +11650,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -11813,7 +11813,7 @@
    }
   },
   "fairs": {
-   "broad": 0.028854,
+   "broad": 0.028842,
    "standard": 0.031299,
    "local": 0.029678
   }
@@ -11834,7 +11834,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -11843,8 +11843,8 @@
    "broad": {
     "pokemon": {
      "key": "777",
-     "factor": 0.8281,
-     "displayFactor": 0.8281,
+     "factor": 0.8282,
+     "displayFactor": 0.8282,
      "n": 12,
      "usedFallback": false,
      "tier": "bulk",
@@ -11859,8 +11859,8 @@
     },
     "illustrator": {
      "key": "Rianti Hidayat",
-     "factor": 0.7629,
-     "displayFactor": 0.7629,
+     "factor": 0.7626,
+     "displayFactor": 0.7626,
      "n": 9,
      "usedFallback": false
     },
@@ -11873,8 +11873,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -12036,7 +12036,7 @@
    }
   },
   "fairs": {
-   "broad": 0.031372,
+   "broad": 0.031367,
    "standard": 0.029739,
    "local": 0.029142
   }
@@ -12057,7 +12057,7 @@
    "trend": 0.02,
    "avg30": 0.07,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -12066,8 +12066,8 @@
    "broad": {
     "pokemon": {
      "key": "807",
-     "factor": 0.8459,
-     "displayFactor": 0.8459,
+     "factor": 0.8461,
+     "displayFactor": 0.8461,
      "n": 28,
      "usedFallback": false,
      "tier": "bulk",
@@ -12082,8 +12082,8 @@
     },
     "illustrator": {
      "key": "Anesaki Dynamic",
-     "factor": 0.7497,
-     "displayFactor": 0.7497,
+     "factor": 0.7496,
+     "displayFactor": 0.7496,
      "n": 141,
      "usedFallback": false
     },
@@ -12096,8 +12096,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -12259,7 +12259,7 @@
    }
   },
   "fairs": {
-   "broad": 0.072954,
+   "broad": 0.072969,
    "standard": 0.0733,
    "local": 0.084663
   }
@@ -12280,7 +12280,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -12305,8 +12305,8 @@
     },
     "illustrator": {
      "key": "Natsumi Yoshida",
-     "factor": 0.5697,
-     "displayFactor": 0.5697,
+     "factor": 0.5696,
+     "displayFactor": 0.5696,
      "n": 19,
      "usedFallback": false
     },
@@ -12319,8 +12319,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -12482,7 +12482,7 @@
    }
   },
   "fairs": {
-   "broad": 0.020544,
+   "broad": 0.020542,
    "standard": 0.021397,
    "local": 0.022905
   }
@@ -12503,7 +12503,7 @@
    "trend": 2.41,
    "avg30": 2,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -12512,8 +12512,8 @@
    "broad": {
     "pokemon": {
      "key": "79",
-     "factor": 1.5835,
-     "displayFactor": 1.5835,
+     "factor": 1.5834,
+     "displayFactor": 1.5834,
      "n": 35,
      "usedFallback": false,
      "tier": "bulk",
@@ -12528,8 +12528,8 @@
     },
     "illustrator": {
      "key": "Teeziro",
-     "factor": 0.9626,
-     "displayFactor": 0.9626,
+     "factor": 0.963,
+     "displayFactor": 0.963,
      "n": 91,
      "usedFallback": false
     },
@@ -12542,8 +12542,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -12705,7 +12705,7 @@
    }
   },
   "fairs": {
-   "broad": 0.066853,
+   "broad": 0.066884,
    "standard": 0.071472,
    "local": 0.074734
   }
@@ -12726,7 +12726,7 @@
    "trend": 0.08,
    "avg30": 0.11,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -12735,8 +12735,8 @@
    "broad": {
     "pokemon": {
      "key": "199",
-     "factor": 1.3018,
-     "displayFactor": 1.3018,
+     "factor": 1.3021,
+     "displayFactor": 1.3021,
      "n": 26,
      "usedFallback": false,
      "tier": "bulk",
@@ -12751,8 +12751,8 @@
     },
     "illustrator": {
      "key": "Tetsu Kayama",
-     "factor": 0.8682,
-     "displayFactor": 0.8682,
+     "factor": 0.8681,
+     "displayFactor": 0.8681,
      "n": 27,
      "usedFallback": false
     },
@@ -12765,8 +12765,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -12928,7 +12928,7 @@
    }
   },
   "fairs": {
-   "broad": 0.056125,
+   "broad": 0.056138,
    "standard": 0.049693,
    "local": 0.049347
   }
@@ -12949,7 +12949,7 @@
    "trend": 0.13,
    "avg30": 0.08,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -12958,8 +12958,8 @@
    "broad": {
     "pokemon": {
      "key": "150",
-     "factor": 2.2597,
-     "displayFactor": 2.2597,
+     "factor": 2.2588,
+     "displayFactor": 2.2588,
      "n": 57,
      "usedFallback": false,
      "tier": "bulk",
@@ -12974,8 +12974,8 @@
     },
     "illustrator": {
      "key": "kantaro",
-     "factor": 0.92,
-     "displayFactor": 0.92,
+     "factor": 0.9197,
+     "displayFactor": 0.9197,
      "n": 43,
      "usedFallback": false
     },
@@ -12988,8 +12988,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -13151,7 +13151,7 @@
    }
   },
   "fairs": {
-   "broad": 0.10324,
+   "broad": 0.10317,
    "standard": 0.10015,
    "local": 0.094547
   }
@@ -13172,7 +13172,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -13181,8 +13181,8 @@
    "broad": {
     "pokemon": {
      "key": "425",
-     "factor": 1.1434,
-     "displayFactor": 1.1434,
+     "factor": 1.144,
+     "displayFactor": 1.144,
      "n": 19,
      "usedFallback": false,
      "tier": "bulk",
@@ -13197,8 +13197,8 @@
     },
     "illustrator": {
      "key": "Miki Tanaka",
-     "factor": 0.8503,
-     "displayFactor": 0.8503,
+     "factor": 0.8509,
+     "displayFactor": 0.8509,
      "n": 195,
      "usedFallback": false
     },
@@ -13211,8 +13211,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -13374,7 +13374,7 @@
    }
   },
   "fairs": {
-   "broad": 0.042641,
+   "broad": 0.042698,
    "standard": 0.03886,
    "local": 0.039231
   }
@@ -13395,7 +13395,7 @@
    "trend": 0.05,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -13420,8 +13420,8 @@
     },
     "illustrator": {
      "key": "sowsow",
-     "factor": 0.9958,
-     "displayFactor": 0.9958,
+     "factor": 0.9955,
+     "displayFactor": 0.9955,
      "n": 111,
      "usedFallback": false
     },
@@ -13434,8 +13434,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -13597,7 +13597,7 @@
    }
   },
   "fairs": {
-   "broad": 0.042364,
+   "broad": 0.042356,
    "standard": 0.040031,
    "local": 0.039075
   }
@@ -13618,11 +13618,11 @@
    "trend": 0.03,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03612110192509898,
+  "baseValue": 0.03612177021416947,
   "breakdowns": {
    "broad": {
     "pokemon": {
@@ -13643,8 +13643,8 @@
     },
     "illustrator": {
      "key": "aoki",
-     "factor": 1.0828,
-     "displayFactor": 1.0828,
+     "factor": 1.0827,
+     "displayFactor": 1.0827,
      "n": 20,
      "usedFallback": false
     },
@@ -13657,8 +13657,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -13820,7 +13820,7 @@
    }
   },
   "fairs": {
-   "broad": 0.036121,
+   "broad": 0.036122,
    "standard": 0.03605,
    "local": 0.036241
   }
@@ -13841,7 +13841,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -13850,8 +13850,8 @@
    "broad": {
     "pokemon": {
      "key": "764",
-     "factor": 0.9111,
-     "displayFactor": 0.9111,
+     "factor": 0.911,
+     "displayFactor": 0.911,
      "n": 6,
      "usedFallback": false,
      "tier": "bulk",
@@ -13866,8 +13866,8 @@
     },
     "illustrator": {
      "key": "saino misaki",
-     "factor": 0.9319,
-     "displayFactor": 0.9319,
+     "factor": 0.9316,
+     "displayFactor": 0.9316,
      "n": 42,
      "usedFallback": false
     },
@@ -13880,8 +13880,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -14043,7 +14043,7 @@
    }
   },
   "fairs": {
-   "broad": 0.037238,
+   "broad": 0.037227,
    "standard": 0.03656,
    "local": 0.037089
   }
@@ -14064,7 +14064,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -14089,8 +14089,8 @@
     },
     "illustrator": {
      "key": "OKACHEKE",
-     "factor": 0.8336,
-     "displayFactor": 0.8336,
+     "factor": 0.8334,
+     "displayFactor": 0.8334,
      "n": 70,
      "usedFallback": false
     },
@@ -14103,8 +14103,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -14266,7 +14266,7 @@
    }
   },
   "fairs": {
-   "broad": 0.033427,
+   "broad": 0.033423,
    "standard": 0.033488,
    "local": 0.035686
   }
@@ -14287,17 +14287,17 @@
    "trend": 0.11,
    "avg30": 0.08,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.05505763530656863,
+  "baseValue": 0.05504096731256529,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "869",
-     "factor": 0.8401,
-     "displayFactor": 0.8401,
+     "factor": 0.8399,
+     "displayFactor": 0.8399,
      "n": 13,
      "usedFallback": false,
      "tier": "bulk",
@@ -14312,8 +14312,8 @@
     },
     "illustrator": {
      "key": "Natsumi Yoshida",
-     "factor": 0.5697,
-     "displayFactor": 0.5697,
+     "factor": 0.5696,
+     "displayFactor": 0.5696,
      "n": 19,
      "usedFallback": false
     },
@@ -14326,8 +14326,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -14489,7 +14489,7 @@
    }
   },
   "fairs": {
-   "broad": 0.055058,
+   "broad": 0.055041,
    "standard": 0.054083,
    "local": 0.059757
   }
@@ -14510,7 +14510,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -14519,8 +14519,8 @@
    "broad": {
     "pokemon": {
      "key": "926",
-     "factor": 0.8714,
-     "displayFactor": 0.8714,
+     "factor": 0.8715,
+     "displayFactor": 0.8715,
      "n": 6,
      "usedFallback": false,
      "tier": "bulk",
@@ -14535,8 +14535,8 @@
     },
     "illustrator": {
      "key": "Narumi Sato",
-     "factor": 0.9618,
-     "displayFactor": 0.9618,
+     "factor": 0.9617,
+     "displayFactor": 0.9617,
      "n": 50,
      "usedFallback": false
     },
@@ -14549,8 +14549,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -14712,7 +14712,7 @@
    }
   },
   "fairs": {
-   "broad": 0.036759,
+   "broad": 0.036763,
    "standard": 0.03615,
    "local": 0.036177
   }
@@ -14733,26 +14733,26 @@
    "trend": 1.05,
    "avg30": 0.84,
    "low": 0.1,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.8660440522831883,
+  "baseValue": 0.8664364143191375,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "927",
-     "factor": 0.8238,
-     "displayFactor": 0.7894252234596226,
+     "factor": 0.8239,
+     "displayFactor": 0.7894809514468234,
      "n": 6,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
@@ -14772,8 +14772,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -14935,7 +14935,7 @@
    }
   },
   "fairs": {
-   "broad": 0.86604,
+   "broad": 0.86644,
    "standard": 0.86531,
    "local": 0.94807
   }
@@ -14956,17 +14956,17 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03530757705137709,
+  "baseValue": 0.03531153791235146,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "955",
-     "factor": 0.8919,
-     "displayFactor": 0.8919,
+     "factor": 0.892,
+     "displayFactor": 0.892,
      "n": 10,
      "usedFallback": false,
      "tier": "bulk",
@@ -14981,8 +14981,8 @@
     },
     "illustrator": {
      "key": "Yuu Nishida",
-     "factor": 0.9026,
-     "displayFactor": 0.9026,
+     "factor": 0.9025,
+     "displayFactor": 0.9025,
      "n": 67,
      "usedFallback": false
     },
@@ -14995,8 +14995,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -15158,7 +15158,7 @@
    }
   },
   "fairs": {
-   "broad": 0.035308,
+   "broad": 0.035312,
    "standard": 0.0348,
    "local": 0.035526
   }
@@ -15179,7 +15179,7 @@
    "trend": 0.05,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -15188,8 +15188,8 @@
    "broad": {
     "pokemon": {
      "key": "956",
-     "factor": 0.7688,
-     "displayFactor": 0.7688,
+     "factor": 0.7687,
+     "displayFactor": 0.7687,
      "n": 8,
      "usedFallback": false,
      "tier": "bulk",
@@ -15204,8 +15204,8 @@
     },
     "illustrator": {
      "key": "Ryota Murayama",
-     "factor": 0.8231,
-     "displayFactor": 0.8231,
+     "factor": 0.8228,
+     "displayFactor": 0.8228,
      "n": 56,
      "usedFallback": false
     },
@@ -15218,8 +15218,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -15381,7 +15381,7 @@
    }
   },
   "fairs": {
-   "broad": 0.027754,
+   "broad": 0.027743,
    "standard": 0.032577,
    "local": 0.035384
   }
@@ -15402,7 +15402,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -15411,8 +15411,8 @@
    "broad": {
     "pokemon": {
      "key": "971",
-     "factor": 0.9147,
-     "displayFactor": 0.9147,
+     "factor": 0.9148,
+     "displayFactor": 0.9148,
      "n": 9,
      "usedFallback": false,
      "tier": "bulk",
@@ -15427,8 +15427,8 @@
     },
     "illustrator": {
      "key": "Miki Tanaka",
-     "factor": 0.8503,
-     "displayFactor": 0.8503,
+     "factor": 0.8509,
+     "displayFactor": 0.8509,
      "n": 195,
      "usedFallback": false
     },
@@ -15441,8 +15441,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -15604,7 +15604,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034112,
+   "broad": 0.034144,
    "standard": 0.030761,
    "local": 0.030197
   }
@@ -15625,7 +15625,7 @@
    "trend": 0.05,
    "avg30": 0.06,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -15634,8 +15634,8 @@
    "broad": {
     "pokemon": {
      "key": "1022",
-     "factor": 0.6445,
-     "displayFactor": 0.6445,
+     "factor": 0.6443,
+     "displayFactor": 0.6443,
      "n": 7,
      "usedFallback": false,
      "tier": "bulk",
@@ -15650,8 +15650,8 @@
     },
     "illustrator": {
      "key": "GIDORA",
-     "factor": 0.8811,
-     "displayFactor": 0.8811,
+     "factor": 0.8813,
+     "displayFactor": 0.8813,
      "n": 78,
      "usedFallback": false
     },
@@ -15664,8 +15664,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -15827,7 +15827,7 @@
    }
   },
   "fairs": {
-   "broad": 0.065326,
+   "broad": 0.065328,
    "standard": 0.066555,
    "local": 0.076666
   }
@@ -15848,17 +15848,17 @@
    "trend": 0.06,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04761260205100697,
+  "baseValue": 0.04762063743912672,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "104",
-     "factor": 1.1923,
-     "displayFactor": 1.1923,
+     "factor": 1.1925,
+     "displayFactor": 1.1925,
      "n": 22,
      "usedFallback": false,
      "tier": "bulk",
@@ -15873,8 +15873,8 @@
     },
     "illustrator": {
      "key": "svlt",
-     "factor": 0.9105,
-     "displayFactor": 0.9105,
+     "factor": 0.9104,
+     "displayFactor": 0.9104,
      "n": 9,
      "usedFallback": false
     },
@@ -15887,8 +15887,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -16050,7 +16050,7 @@
    }
   },
   "fairs": {
-   "broad": 0.047613,
+   "broad": 0.047621,
    "standard": 0.046948,
    "local": 0.048196
   }
@@ -16071,7 +16071,7 @@
    "trend": 0.05,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -16080,8 +16080,8 @@
    "broad": {
     "pokemon": {
      "key": "105",
-     "factor": 0.8756,
-     "displayFactor": 0.8756,
+     "factor": 0.8755,
+     "displayFactor": 0.8755,
      "n": 21,
      "usedFallback": false,
      "tier": "bulk",
@@ -16096,8 +16096,8 @@
     },
     "illustrator": {
      "key": "cochi8i",
-     "factor": 1.0093,
-     "displayFactor": 1.0093,
+     "factor": 1.0092,
+     "displayFactor": 1.0092,
      "n": 14,
      "usedFallback": false
     },
@@ -16110,8 +16110,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -16273,7 +16273,7 @@
    }
   },
   "fairs": {
-   "broad": 0.043886,
+   "broad": 0.043881,
    "standard": 0.041673,
    "local": 0.040867
   }
@@ -16294,7 +16294,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -16303,8 +16303,8 @@
    "broad": {
     "pokemon": {
      "key": "111",
-     "factor": 0.8794,
-     "displayFactor": 0.8794,
+     "factor": 0.8792,
+     "displayFactor": 0.8792,
      "n": 25,
      "usedFallback": false,
      "tier": "bulk",
@@ -16319,8 +16319,8 @@
     },
     "illustrator": {
      "key": "kodama",
-     "factor": 0.8227,
-     "displayFactor": 0.8227,
+     "factor": 0.8223,
+     "displayFactor": 0.8223,
      "n": 95,
      "usedFallback": false
     },
@@ -16333,8 +16333,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -16496,7 +16496,7 @@
    }
   },
   "fairs": {
-   "broad": 0.031731,
+   "broad": 0.031712,
    "standard": 0.036235,
    "local": 0.036863
   }
@@ -16517,7 +16517,7 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -16526,8 +16526,8 @@
    "broad": {
     "pokemon": {
      "key": "112",
-     "factor": 0.9455,
-     "displayFactor": 0.9455,
+     "factor": 0.9454,
+     "displayFactor": 0.9454,
      "n": 20,
      "usedFallback": false,
      "tier": "bulk",
@@ -16542,8 +16542,8 @@
     },
     "illustrator": {
      "key": "Ryuta Fuse",
-     "factor": 0.7902,
-     "displayFactor": 0.7902,
+     "factor": 0.7901,
+     "displayFactor": 0.7901,
      "n": 101,
      "usedFallback": false
     },
@@ -16556,8 +16556,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -16719,7 +16719,7 @@
    }
   },
   "fairs": {
-   "broad": 0.032768,
+   "broad": 0.032764,
    "standard": 0.031146,
    "local": 0.032097
   }
@@ -16740,7 +16740,7 @@
    "trend": 0.14,
    "avg30": 0.09,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -16749,8 +16749,8 @@
    "broad": {
     "pokemon": {
      "key": "464",
-     "factor": 0.8034,
-     "displayFactor": 0.8034,
+     "factor": 0.8032,
+     "displayFactor": 0.8032,
      "n": 13,
      "usedFallback": false,
      "tier": "bulk",
@@ -16765,8 +16765,8 @@
     },
     "illustrator": {
      "key": "Mitsuhiro Arita",
-     "factor": 1.2682,
-     "displayFactor": 1.2682,
+     "factor": 1.2675,
+     "displayFactor": 1.2675,
      "n": 677,
      "usedFallback": false
     },
@@ -16779,8 +16779,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -16942,7 +16942,7 @@
    }
   },
   "fairs": {
-   "broad": 0.11721,
+   "broad": 0.11713,
    "standard": 0.086764,
    "local": 0.095965
   }
@@ -16963,17 +16963,17 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0262634720235573,
+  "baseValue": 0.026263944898868425,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "307",
-     "factor": 0.7035,
-     "displayFactor": 0.7035,
+     "factor": 0.7036,
+     "displayFactor": 0.7036,
      "n": 22,
      "usedFallback": false,
      "tier": "bulk",
@@ -16988,8 +16988,8 @@
     },
     "illustrator": {
      "key": "GOTO minori",
-     "factor": 0.8512,
-     "displayFactor": 0.8512,
+     "factor": 0.851,
+     "displayFactor": 0.851,
      "n": 12,
      "usedFallback": false
     },
@@ -17002,8 +17002,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -17165,7 +17165,7 @@
    }
   },
   "fairs": {
-   "broad": 0.026263,
+   "broad": 0.026264,
    "standard": 0.025819,
    "local": 0.027087
   }
@@ -17186,7 +17186,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -17195,8 +17195,8 @@
    "broad": {
     "pokemon": {
      "key": "307",
-     "factor": 0.7035,
-     "displayFactor": 0.7035,
+     "factor": 0.7036,
+     "displayFactor": 0.7036,
      "n": 22,
      "usedFallback": false,
      "tier": "bulk",
@@ -17211,8 +17211,8 @@
     },
     "illustrator": {
      "key": "Yuu Nishida",
-     "factor": 0.9026,
-     "displayFactor": 0.9026,
+     "factor": 0.9025,
+     "displayFactor": 0.9025,
      "n": 67,
      "usedFallback": false
     },
@@ -17225,8 +17225,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -17388,7 +17388,7 @@
    }
   },
   "fairs": {
-   "broad": 0.027849,
+   "broad": 0.027853,
    "standard": 0.027948,
    "local": 0.029383
   }
@@ -17409,7 +17409,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -17434,8 +17434,8 @@
     },
     "illustrator": {
      "key": "Fujimoto Gold",
-     "factor": 1.0008,
-     "displayFactor": 1.0008,
+     "factor": 1.0006,
+     "displayFactor": 1.0006,
      "n": 8,
      "usedFallback": false
     },
@@ -17448,8 +17448,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -17611,7 +17611,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034176,
+   "broad": 0.034173,
    "standard": 0.032487,
    "local": 0.032273
   }
@@ -17632,7 +17632,7 @@
    "trend": 0.66,
    "avg30": 0.64,
    "low": 0.05,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -17642,23 +17642,23 @@
     "pokemon": {
      "key": "308",
      "factor": 0.7786,
-     "displayFactor": 0.7369099758884954,
+     "displayFactor": 0.7368362125798684,
      "n": 25,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "PLANETA Yamashita",
-     "factor": 0.8838,
-     "displayFactor": 0.8838,
+     "factor": 0.8834,
+     "displayFactor": 0.8834,
      "n": 23,
      "usedFallback": false
     },
@@ -17671,8 +17671,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -17834,7 +17834,7 @@
    }
   },
   "fairs": {
-   "broad": 0.63477,
+   "broad": 0.63466,
    "standard": 0.57813,
    "local": 0.61137
   }
@@ -17855,7 +17855,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -17864,8 +17864,8 @@
    "broad": {
     "pokemon": {
      "key": "447",
-     "factor": 1.0878,
-     "displayFactor": 1.0878,
+     "factor": 1.088,
+     "displayFactor": 1.088,
      "n": 31,
      "usedFallback": false,
      "tier": "bulk",
@@ -17880,8 +17880,8 @@
     },
     "illustrator": {
      "key": "Souichirou Gunjima",
-     "factor": 0.8082,
-     "displayFactor": 0.8082,
+     "factor": 0.8085,
+     "displayFactor": 0.8085,
      "n": 100,
      "usedFallback": false
     },
@@ -17894,8 +17894,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -18057,7 +18057,7 @@
    }
   },
   "fairs": {
-   "broad": 0.038559,
+   "broad": 0.038585,
    "standard": 0.040104,
    "local": 0.040519
   }
@@ -18078,7 +18078,7 @@
    "trend": 1.36,
    "avg30": 1.02,
    "low": 0.1,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -18087,24 +18087,24 @@
    "broad": {
     "pokemon": {
      "key": "448",
-     "factor": 1.4321,
-     "displayFactor": 1.5497865348312103,
+     "factor": 1.4324,
+     "displayFactor": 1.55040542859059,
      "n": 47,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "PLANETA Igarashi",
-     "factor": 0.7945,
-     "displayFactor": 0.7945,
+     "factor": 0.7946,
+     "displayFactor": 0.7946,
      "n": 48,
      "usedFallback": false
     },
@@ -18117,8 +18117,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -18280,7 +18280,7 @@
    }
   },
   "fairs": {
-   "broad": 1.2001,
+   "broad": 1.2012,
    "standard": 1.3173,
    "local": 1.3903
   }
@@ -18301,7 +18301,7 @@
    "trend": 0.02,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -18310,8 +18310,8 @@
    "broad": {
     "pokemon": {
      "key": "619",
-     "factor": 0.7761,
-     "displayFactor": 0.7761,
+     "factor": 0.776,
+     "displayFactor": 0.776,
      "n": 11,
      "usedFallback": false,
      "tier": "bulk",
@@ -18340,8 +18340,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -18524,7 +18524,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -18549,8 +18549,8 @@
     },
     "illustrator": {
      "key": "MINAMINAMI Take",
-     "factor": 0.8878,
-     "displayFactor": 0.8878,
+     "factor": 0.8877,
+     "displayFactor": 0.8877,
      "n": 20,
      "usedFallback": false
     },
@@ -18563,8 +18563,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -18747,7 +18747,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -18772,8 +18772,8 @@
     },
     "illustrator": {
      "key": "Tomomi Ozaki",
-     "factor": 0.8724,
-     "displayFactor": 0.8724,
+     "factor": 0.8723,
+     "displayFactor": 0.8723,
      "n": 17,
      "usedFallback": false
     },
@@ -18786,8 +18786,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -18970,7 +18970,7 @@
    "trend": 0.05,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -18979,8 +18979,8 @@
    "broad": {
     "pokemon": {
      "key": "719",
-     "factor": 1.1058,
-     "displayFactor": 1.1058,
+     "factor": 1.1059,
+     "displayFactor": 1.1059,
      "n": 13,
      "usedFallback": false,
      "tier": "bulk",
@@ -18995,8 +18995,8 @@
     },
     "illustrator": {
      "key": "Jiro Sasumo",
-     "factor": 0.8991,
-     "displayFactor": 0.8991,
+     "factor": 0.8989,
+     "displayFactor": 0.8989,
      "n": 35,
      "usedFallback": false
     },
@@ -19009,8 +19009,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -19172,7 +19172,7 @@
    }
   },
   "fairs": {
-   "broad": 0.049372,
+   "broad": 0.049371,
    "standard": 0.04826,
    "local": 0.048256
   }
@@ -19193,7 +19193,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -19202,8 +19202,8 @@
    "broad": {
     "pokemon": {
      "key": "739",
-     "factor": 0.8625,
-     "displayFactor": 0.8625,
+     "factor": 0.8626,
+     "displayFactor": 0.8626,
      "n": 8,
      "usedFallback": false,
      "tier": "bulk",
@@ -19218,8 +19218,8 @@
     },
     "illustrator": {
      "key": "Scav",
-     "factor": 0.8974,
-     "displayFactor": 0.8974,
+     "factor": 0.8973,
+     "displayFactor": 0.8973,
      "n": 41,
      "usedFallback": false
     },
@@ -19232,8 +19232,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -19395,7 +19395,7 @@
    }
   },
   "fairs": {
-   "broad": 0.033947,
+   "broad": 0.033951,
    "standard": 0.034143,
    "local": 0.03397
   }
@@ -19416,7 +19416,7 @@
    "trend": 0.04,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -19455,8 +19455,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -19618,7 +19618,7 @@
    }
   },
   "fairs": {
-   "broad": 0.032821,
+   "broad": 0.032824,
    "standard": 0.033106,
    "local": 0.034734
   }
@@ -19639,33 +19639,33 @@
    "trend": 0.53,
    "avg30": 0.61,
    "low": 0.1,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.5758385630266942,
+  "baseValue": 0.5758132921135005,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "934",
-     "factor": 0.7005,
-     "displayFactor": 0.6477589011314151,
+     "factor": 0.7004,
+     "displayFactor": 0.6475538525150163,
      "n": 7,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -19678,8 +19678,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -19841,7 +19841,7 @@
    }
   },
   "fairs": {
-   "broad": 0.57584,
+   "broad": 0.57581,
    "standard": 0.53686,
    "local": 0.62308
   }
@@ -19862,7 +19862,7 @@
    "trend": 0.02,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -19887,8 +19887,8 @@
     },
     "illustrator": {
      "key": "kawayoo",
-     "factor": 0.92,
-     "displayFactor": 0.92,
+     "factor": 0.9205,
+     "displayFactor": 0.9205,
      "n": 201,
      "usedFallback": false
     },
@@ -19901,8 +19901,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -20064,7 +20064,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034118,
+   "broad": 0.034141,
    "standard": 0.035967,
    "local": 0.0349
   }
@@ -20085,17 +20085,17 @@
    "trend": 0.08,
    "avg30": 0.06,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.04301437562983005,
+  "baseValue": 0.04300593794595046,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "316",
-     "factor": 1.0289,
-     "displayFactor": 1.0289,
+     "factor": 1.0288,
+     "displayFactor": 1.0288,
      "n": 11,
      "usedFallback": false,
      "tier": "bulk",
@@ -20110,8 +20110,8 @@
     },
     "illustrator": {
      "key": "Shimaris Yukichi",
-     "factor": 0.9532,
-     "displayFactor": 0.9532,
+     "factor": 0.953,
+     "displayFactor": 0.953,
      "n": 22,
      "usedFallback": false
     },
@@ -20124,8 +20124,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -20287,7 +20287,7 @@
    }
   },
   "fairs": {
-   "broad": 0.043014,
+   "broad": 0.043006,
    "standard": 0.04146,
    "local": 0.045455
   }
@@ -20308,7 +20308,7 @@
    "trend": 0.06,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -20317,8 +20317,8 @@
    "broad": {
     "pokemon": {
      "key": "317",
-     "factor": 1.0356,
-     "displayFactor": 1.0356,
+     "factor": 1.0354,
+     "displayFactor": 1.0354,
      "n": 8,
      "usedFallback": false,
      "tier": "bulk",
@@ -20333,8 +20333,8 @@
     },
     "illustrator": {
      "key": "OKACHEKE",
-     "factor": 0.8336,
-     "displayFactor": 0.8336,
+     "factor": 0.8334,
+     "displayFactor": 0.8334,
      "n": 70,
      "usedFallback": false
     },
@@ -20347,8 +20347,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -20510,7 +20510,7 @@
    }
   },
   "fairs": {
-   "broad": 0.042869,
+   "broad": 0.042855,
    "standard": 0.040609,
    "local": 0.040233
   }
@@ -20531,17 +20531,17 @@
    "trend": 0.02,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.02620875769795136,
+  "baseValue": 0.026197137524221818,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "675",
-     "factor": 0.6475,
-     "displayFactor": 0.6475,
+     "factor": 0.6473,
+     "displayFactor": 0.6473,
      "n": 13,
      "usedFallback": false,
      "tier": "bulk",
@@ -20556,8 +20556,8 @@
     },
     "illustrator": {
      "key": "KEIICHIRO ITO",
-     "factor": 0.8151,
-     "displayFactor": 0.8151,
+     "factor": 0.8149,
+     "displayFactor": 0.8149,
      "n": 62,
      "usedFallback": false
     },
@@ -20570,8 +20570,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -20733,7 +20733,7 @@
    }
   },
   "fairs": {
-   "broad": 0.026209,
+   "broad": 0.026197,
    "standard": 0.026762,
    "local": 0.025395
   }
@@ -20754,7 +20754,7 @@
    "trend": 0.04,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -20779,8 +20779,8 @@
     },
     "illustrator": {
      "key": "Tomokazu Komiya",
-     "factor": 1.7532,
-     "displayFactor": 1.7532,
+     "factor": 1.7515,
+     "displayFactor": 1.7515,
      "n": 247,
      "usedFallback": false
     },
@@ -20793,8 +20793,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -20956,7 +20956,7 @@
    }
   },
   "fairs": {
-   "broad": 0.065213,
+   "broad": 0.065157,
    "standard": 0.058568,
    "local": 0.057958
   }
@@ -20977,11 +20977,11 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.030623223852840966,
+  "baseValue": 0.030623115500631258,
   "breakdowns": {
    "broad": {
     "pokemon": {
@@ -21002,8 +21002,8 @@
     },
     "illustrator": {
      "key": "Mékayu",
-     "factor": 0.8742,
-     "displayFactor": 0.8742,
+     "factor": 0.8741,
+     "displayFactor": 0.8741,
      "n": 14,
      "usedFallback": false
     },
@@ -21016,8 +21016,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -21200,7 +21200,7 @@
    "trend": 0.09,
    "avg30": 0.06,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -21239,8 +21239,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -21402,7 +21402,7 @@
    }
   },
   "fairs": {
-   "broad": 0.068334,
+   "broad": 0.068342,
    "standard": 0.074242,
    "local": 0.08447
   }
@@ -21423,7 +21423,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -21448,8 +21448,8 @@
     },
     "illustrator": {
      "key": "Aya Kusube",
-     "factor": 1.0152,
-     "displayFactor": 1.0152,
+     "factor": 1.0149,
+     "displayFactor": 1.0149,
      "n": 131,
      "usedFallback": false
     },
@@ -21462,8 +21462,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -21625,7 +21625,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034512,
+   "broad": 0.034505,
    "standard": 0.030135,
    "local": 0.0308
   }
@@ -21646,7 +21646,7 @@
    "trend": 0.09,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -21655,8 +21655,8 @@
    "broad": {
     "pokemon": {
      "key": "385",
-     "factor": 1.6237,
-     "displayFactor": 1.6237,
+     "factor": 1.624,
+     "displayFactor": 1.624,
      "n": 23,
      "usedFallback": false,
      "tier": "bulk",
@@ -21671,8 +21671,8 @@
     },
     "illustrator": {
      "key": "Kuroimori",
-     "factor": 1.0382,
-     "displayFactor": 1.0382,
+     "factor": 1.0377,
+     "displayFactor": 1.0377,
      "n": 13,
      "usedFallback": false
     },
@@ -21685,8 +21685,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -21848,7 +21848,7 @@
    }
   },
   "fairs": {
-   "broad": 0.083711,
+   "broad": 0.083695,
    "standard": 0.076878,
    "local": 0.071856
   }
@@ -21869,11 +21869,11 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.02759178742560163,
+  "baseValue": 0.027587956283107163,
   "breakdowns": {
    "broad": {
     "pokemon": {
@@ -21894,8 +21894,8 @@
     },
     "illustrator": {
      "key": "osare",
-     "factor": 0.801,
-     "displayFactor": 0.801,
+     "factor": 0.8008,
+     "displayFactor": 0.8008,
      "n": 18,
      "usedFallback": false
     },
@@ -21908,8 +21908,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -22071,7 +22071,7 @@
    }
   },
   "fairs": {
-   "broad": 0.027592,
+   "broad": 0.027588,
    "standard": 0.026825,
    "local": 0.028518
   }
@@ -22092,7 +22092,7 @@
    "trend": 0.05,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -22101,8 +22101,8 @@
    "broad": {
     "pokemon": {
      "key": "600",
-     "factor": 0.859,
-     "displayFactor": 0.859,
+     "factor": 0.8591,
+     "displayFactor": 0.8591,
      "n": 13,
      "usedFallback": false,
      "tier": "bulk",
@@ -22131,8 +22131,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -22294,7 +22294,7 @@
    }
   },
   "fairs": {
-   "broad": 0.033131,
+   "broad": 0.033139,
    "standard": 0.03199,
    "local": 0.03208
   }
@@ -22315,7 +22315,7 @@
    "trend": 0.06,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -22340,8 +22340,8 @@
     },
     "illustrator": {
      "key": "Tonji Matsuno",
-     "factor": 0.7611,
-     "displayFactor": 0.7611,
+     "factor": 0.761,
+     "displayFactor": 0.761,
      "n": 21,
      "usedFallback": false
     },
@@ -22354,8 +22354,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -22517,7 +22517,7 @@
    }
   },
   "fairs": {
-   "broad": 0.065623,
+   "broad": 0.065621,
    "standard": 0.073119,
    "local": 0.084527
   }
@@ -22538,7 +22538,7 @@
    "trend": 0.13,
    "avg30": 0.07,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -22547,8 +22547,8 @@
    "broad": {
     "pokemon": {
      "key": "808",
-     "factor": 0.9101,
-     "displayFactor": 0.9101,
+     "factor": 0.9103,
+     "displayFactor": 0.9103,
      "n": 9,
      "usedFallback": false,
      "tier": "bulk",
@@ -22563,8 +22563,8 @@
     },
     "illustrator": {
      "key": "Yuka Morii",
-     "factor": 1.6549,
-     "displayFactor": 1.6549,
+     "factor": 1.6546,
+     "displayFactor": 1.6546,
      "n": 207,
      "usedFallback": false
     },
@@ -22577,8 +22577,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -22740,7 +22740,7 @@
    }
   },
   "fairs": {
-   "broad": 0.066057,
+   "broad": 0.066067,
    "standard": 0.059717,
    "local": 0.058588
   }
@@ -22761,7 +22761,7 @@
    "trend": 0.06,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -22770,8 +22770,8 @@
    "broad": {
     "pokemon": {
      "key": "808",
-     "factor": 0.9101,
-     "displayFactor": 0.9101,
+     "factor": 0.9103,
+     "displayFactor": 0.9103,
      "n": 9,
      "usedFallback": false,
      "tier": "bulk",
@@ -22786,8 +22786,8 @@
     },
     "illustrator": {
      "key": "Apios",
-     "factor": 0.8829,
-     "displayFactor": 0.8829,
+     "factor": 0.8828,
+     "displayFactor": 0.8828,
      "n": 8,
      "usedFallback": false
     },
@@ -22800,8 +22800,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -22963,7 +22963,7 @@
    }
   },
   "fairs": {
-   "broad": 0.035242,
+   "broad": 0.035249,
    "standard": 0.034917,
    "local": 0.034521
   }
@@ -22984,7 +22984,7 @@
    "trend": 0.06,
    "avg30": 0.06,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -22993,8 +22993,8 @@
    "broad": {
     "pokemon": {
      "key": "809",
-     "factor": 0.7405,
-     "displayFactor": 0.7405,
+     "factor": 0.7404,
+     "displayFactor": 0.7404,
      "n": 14,
      "usedFallback": false,
      "tier": "bulk",
@@ -23009,8 +23009,8 @@
     },
     "illustrator": {
      "key": "Takumi Wada",
-     "factor": 0.656,
-     "displayFactor": 0.656,
+     "factor": 0.6559,
+     "displayFactor": 0.6559,
      "n": 20,
      "usedFallback": false
     },
@@ -23023,8 +23023,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -23186,7 +23186,7 @@
    }
   },
   "fairs": {
-   "broad": 0.055882,
+   "broad": 0.055872,
    "standard": 0.063037,
    "local": 0.072691
   }
@@ -23207,7 +23207,7 @@
    "trend": 0.53,
    "avg30": 0.57,
    "low": 0.09,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -23216,24 +23216,24 @@
    "broad": {
     "pokemon": {
      "key": "809",
-     "factor": 0.7405,
-     "displayFactor": 0.6931602092927578,
+     "factor": 0.7404,
+     "displayFactor": 0.6929627026887815,
      "n": 14,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "takuyoa",
-     "factor": 1.0202,
-     "displayFactor": 1.0202,
+     "factor": 1.0199,
+     "displayFactor": 1.0199,
      "n": 81,
      "usedFallback": false
     },
@@ -23246,8 +23246,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -23409,7 +23409,7 @@
    }
   },
   "fairs": {
-   "broad": 0.68923,
+   "broad": 0.68909,
    "standard": 0.74393,
    "local": 0.78709
   }
@@ -23430,11 +23430,11 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.023083154378761336,
+  "baseValue": 0.023082175446404476,
   "breakdowns": {
    "broad": {
     "pokemon": {
@@ -23455,8 +23455,8 @@
     },
     "illustrator": {
      "key": "Takeshi Nakamura",
-     "factor": 0.6525,
-     "displayFactor": 0.6525,
+     "factor": 0.6524,
+     "displayFactor": 0.6524,
      "n": 27,
      "usedFallback": false
     },
@@ -23469,8 +23469,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -23632,7 +23632,7 @@
    }
   },
   "fairs": {
-   "broad": 0.023083,
+   "broad": 0.023082,
    "standard": 0.023053,
    "local": 0.023938
   }
@@ -23653,7 +23653,7 @@
    "trend": 0.07,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -23662,8 +23662,8 @@
    "broad": {
     "pokemon": {
      "key": "1018",
-     "factor": 0.6837,
-     "displayFactor": 0.6837,
+     "factor": 0.6836,
+     "displayFactor": 0.6836,
      "n": 7,
      "usedFallback": false,
      "tier": "bulk",
@@ -23678,8 +23678,8 @@
     },
     "illustrator": {
      "key": "Oswaldo KATO",
-     "factor": 0.7738,
-     "displayFactor": 0.7738,
+     "factor": 0.7742,
+     "displayFactor": 0.7742,
      "n": 93,
      "usedFallback": false
     },
@@ -23692,8 +23692,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -23855,7 +23855,7 @@
    }
   },
   "fairs": {
-   "broad": 0.06086,
+   "broad": 0.06089,
    "standard": 0.062915,
    "local": 0.068704
   }
@@ -23876,7 +23876,7 @@
    "trend": 0.02,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -23901,8 +23901,8 @@
     },
     "illustrator": {
      "key": "Shiburingaru",
-     "factor": 0.837,
-     "displayFactor": 0.837,
+     "factor": 0.8368,
+     "displayFactor": 0.8368,
      "n": 43,
      "usedFallback": false
     },
@@ -23915,8 +23915,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -24078,7 +24078,7 @@
    }
   },
   "fairs": {
-   "broad": 0.026427,
+   "broad": 0.026424,
    "standard": 0.028771,
    "local": 0.029024
   }
@@ -24099,7 +24099,7 @@
    "trend": 0.03,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.462Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -24108,8 +24108,8 @@
    "broad": {
     "pokemon": {
      "key": "966",
-     "factor": 0.6022,
-     "displayFactor": 0.6022,
+     "factor": 0.6021,
+     "displayFactor": 0.6021,
      "n": 12,
      "usedFallback": false,
      "tier": "bulk",
@@ -24124,8 +24124,8 @@
     },
     "illustrator": {
      "key": "GOSSAN",
-     "factor": 0.8104,
-     "displayFactor": 0.8104,
+     "factor": 0.8102,
+     "displayFactor": 0.8102,
      "n": 75,
      "usedFallback": false
     },
@@ -24138,8 +24138,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -24301,7 +24301,7 @@
    }
   },
   "fairs": {
-   "broad": 0.024235,
+   "broad": 0.024227,
    "standard": 0.029807,
    "local": 0.031042
   }
@@ -24322,7 +24322,7 @@
    "trend": 0.67,
    "avg30": 0.59,
    "low": 0.05,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -24332,23 +24332,23 @@
     "pokemon": {
      "key": "968",
      "factor": 0.4847,
-     "displayFactor": 0.41334104847254965,
+     "displayFactor": 0.41322132502389375,
      "n": 5,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "PLANETA Yamashita",
-     "factor": 0.8838,
-     "displayFactor": 0.8838,
+     "factor": 0.8834,
+     "displayFactor": 0.8834,
      "n": 23,
      "usedFallback": false
     },
@@ -24361,8 +24361,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -24524,7 +24524,7 @@
    }
   },
   "fairs": {
-   "broad": 0.35605,
+   "broad": 0.35592,
    "standard": 0.36165,
    "local": 0.38369
   }
@@ -24545,7 +24545,7 @@
    "trend": 0.16,
    "avg30": 0.12,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -24554,8 +24554,8 @@
    "broad": {
     "pokemon": {
      "key": "1021",
-     "factor": 1.026,
-     "displayFactor": 1.026,
+     "factor": 1.0261,
+     "displayFactor": 1.0261,
      "n": 7,
      "usedFallback": false,
      "tier": "bulk",
@@ -24570,8 +24570,8 @@
     },
     "illustrator": {
      "key": "kodama",
-     "factor": 0.8227,
-     "displayFactor": 0.8227,
+     "factor": 0.8223,
+     "displayFactor": 0.8223,
      "n": 95,
      "usedFallback": false
     },
@@ -24584,8 +24584,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -24747,7 +24747,7 @@
    }
   },
   "fairs": {
-   "broad": 0.097102,
+   "broad": 0.097075,
    "standard": 0.097335,
    "local": 0.11263
   }
@@ -24768,17 +24768,17 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03749177173884745,
+  "baseValue": 0.03748780997395459,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "128",
-     "factor": 0.8851,
-     "displayFactor": 0.8851,
+     "factor": 0.885,
+     "displayFactor": 0.885,
      "n": 37,
      "usedFallback": false,
      "tier": "bulk",
@@ -24793,8 +24793,8 @@
     },
     "illustrator": {
      "key": "Uninori",
-     "factor": 0.9658,
-     "displayFactor": 0.9658,
+     "factor": 0.9657,
+     "displayFactor": 0.9657,
      "n": 24,
      "usedFallback": false
     },
@@ -24807,8 +24807,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -24970,7 +24970,7 @@
    }
   },
   "fairs": {
-   "broad": 0.037492,
+   "broad": 0.037488,
    "standard": 0.036673,
    "local": 0.037706
   }
@@ -24991,7 +24991,7 @@
    "trend": 0.1,
    "avg30": 0.08,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -25000,8 +25000,8 @@
    "broad": {
     "pokemon": {
      "key": "133",
-     "factor": 2.4206,
-     "displayFactor": 2.4206,
+     "factor": 2.4201,
+     "displayFactor": 2.4201,
      "n": 73,
      "usedFallback": false,
      "tier": "bulk",
@@ -25030,8 +25030,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -25193,7 +25193,7 @@
    }
   },
   "fairs": {
-   "broad": 0.093361,
+   "broad": 0.093352,
    "standard": 0.093197,
    "local": 0.092514
   }
@@ -25214,17 +25214,17 @@
    "trend": 0.07,
    "avg30": 0.09,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03307883896112031,
+  "baseValue": 0.033077121977606844,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "163",
-     "factor": 0.9933,
-     "displayFactor": 0.9933,
+     "factor": 0.9934,
+     "displayFactor": 0.9934,
      "n": 15,
      "usedFallback": false,
      "tier": "bulk",
@@ -25239,8 +25239,8 @@
     },
     "illustrator": {
      "key": "Yukihiro Tada",
-     "factor": 0.7593,
-     "displayFactor": 0.7593,
+     "factor": 0.7591,
+     "displayFactor": 0.7591,
      "n": 17,
      "usedFallback": false
     },
@@ -25253,8 +25253,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -25416,7 +25416,7 @@
    }
   },
   "fairs": {
-   "broad": 0.033079,
+   "broad": 0.033077,
    "standard": 0.032115,
    "local": 0.036354
   }
@@ -25437,7 +25437,7 @@
    "trend": 0.11,
    "avg30": 0.1,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -25446,8 +25446,8 @@
    "broad": {
     "pokemon": {
      "key": "164",
-     "factor": 0.9975,
-     "displayFactor": 0.9975,
+     "factor": 0.9976,
+     "displayFactor": 0.9976,
      "n": 18,
      "usedFallback": false,
      "tier": "bulk",
@@ -25476,8 +25476,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -25639,7 +25639,7 @@
    }
   },
   "fairs": {
-   "broad": 0.096023,
+   "broad": 0.096043,
    "standard": 0.10512,
    "local": 0.11164
   }
@@ -25660,7 +25660,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -25685,8 +25685,8 @@
     },
     "illustrator": {
      "key": "Yuriko Akase",
-     "factor": 0.9544,
-     "displayFactor": 0.9544,
+     "factor": 0.9543,
+     "displayFactor": 0.9543,
      "n": 12,
      "usedFallback": false
     },
@@ -25699,8 +25699,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -25883,7 +25883,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -25922,8 +25922,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -26085,7 +26085,7 @@
    }
   },
   "fairs": {
-   "broad": 0.035525,
+   "broad": 0.035529,
    "standard": 0.034848,
    "local": 0.035009
   }
@@ -26106,17 +26106,17 @@
    "trend": 0.07,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.025595267035476987,
+  "baseValue": 0.02560642382426164,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "479",
-     "factor": 0.9231,
-     "displayFactor": 0.9231,
+     "factor": 0.9234,
+     "displayFactor": 0.9234,
      "n": 49,
      "usedFallback": false,
      "tier": "bulk",
@@ -26145,8 +26145,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -26308,7 +26308,7 @@
    }
   },
   "fairs": {
-   "broad": 0.025595,
+   "broad": 0.025606,
    "standard": 0.025076,
    "local": 0.026305
   }
@@ -26329,7 +26329,7 @@
    "trend": 0.12,
    "avg30": 0.11,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -26338,8 +26338,8 @@
    "broad": {
     "pokemon": {
      "key": "626",
-     "factor": 0.7959,
-     "displayFactor": 0.7959,
+     "factor": 0.7958,
+     "displayFactor": 0.7958,
      "n": 16,
      "usedFallback": false,
      "tier": "bulk",
@@ -26354,8 +26354,8 @@
     },
     "illustrator": {
      "key": "GOSSAN",
-     "factor": 0.8104,
-     "displayFactor": 0.8104,
+     "factor": 0.8102,
+     "displayFactor": 0.8102,
      "n": 75,
      "usedFallback": false
     },
@@ -26368,8 +26368,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -26531,7 +26531,7 @@
    }
   },
   "fairs": {
-   "broad": 0.074199,
+   "broad": 0.07418,
    "standard": 0.074521,
    "local": 0.089783
   }
@@ -26552,7 +26552,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -26561,8 +26561,8 @@
    "broad": {
     "pokemon": {
      "key": "641",
-     "factor": 0.6458,
-     "displayFactor": 0.6458,
+     "factor": 0.6457,
+     "displayFactor": 0.6457,
      "n": 15,
      "usedFallback": false,
      "tier": "bulk",
@@ -26577,8 +26577,8 @@
     },
     "illustrator": {
      "key": "Uninori",
-     "factor": 0.9658,
-     "displayFactor": 0.9658,
+     "factor": 0.9657,
+     "displayFactor": 0.9657,
      "n": 24,
      "usedFallback": false
     },
@@ -26591,8 +26591,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -26754,7 +26754,7 @@
    }
   },
   "fairs": {
-   "broad": 0.030973,
+   "broad": 0.030968,
    "standard": 0.032515,
    "local": 0.031944
   }
@@ -26775,7 +26775,7 @@
    "trend": 0.03,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -26784,8 +26784,8 @@
    "broad": {
     "pokemon": {
      "key": "661",
-     "factor": 0.8267,
-     "displayFactor": 0.8267,
+     "factor": 0.8268,
+     "displayFactor": 0.8268,
      "n": 16,
      "usedFallback": false,
      "tier": "bulk",
@@ -26800,8 +26800,8 @@
     },
     "illustrator": {
      "key": "Teeziro",
-     "factor": 0.9626,
-     "displayFactor": 0.9626,
+     "factor": 0.963,
+     "displayFactor": 0.963,
      "n": 91,
      "usedFallback": false
     },
@@ -26814,8 +26814,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -26977,7 +26977,7 @@
    }
   },
   "fairs": {
-   "broad": 0.034902,
+   "broad": 0.034925,
    "standard": 0.037262,
    "local": 0.040151
   }
@@ -26998,7 +26998,7 @@
    "trend": 0.03,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -27007,8 +27007,8 @@
    "broad": {
     "pokemon": {
      "key": "662",
-     "factor": 0.8569,
-     "displayFactor": 0.8569,
+     "factor": 0.857,
+     "displayFactor": 0.857,
      "n": 14,
      "usedFallback": false,
      "tier": "bulk",
@@ -27023,8 +27023,8 @@
     },
     "illustrator": {
      "key": "Julie Hang",
-     "factor": 0.8352,
-     "displayFactor": 0.8352,
+     "factor": 0.835,
+     "displayFactor": 0.835,
      "n": 8,
      "usedFallback": false
     },
@@ -27037,8 +27037,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -27221,7 +27221,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -27230,8 +27230,8 @@
    "broad": {
     "pokemon": {
      "key": "663",
-     "factor": 0.7673,
-     "displayFactor": 0.7673,
+     "factor": 0.7672,
+     "displayFactor": 0.7672,
      "n": 16,
      "usedFallback": false,
      "tier": "bulk",
@@ -27246,8 +27246,8 @@
     },
     "illustrator": {
      "key": "Nurikabe",
-     "factor": 1.0164,
-     "displayFactor": 1.0164,
+     "factor": 1.0163,
+     "displayFactor": 1.0163,
      "n": 22,
      "usedFallback": false
     },
@@ -27260,8 +27260,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -27423,7 +27423,7 @@
    }
   },
   "fairs": {
-   "broad": 0.038728,
+   "broad": 0.038723,
    "standard": 0.039356,
    "local": 0.039039
   }
@@ -27444,17 +27444,17 @@
    "trend": 0.06,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.03410894193709759,
+  "baseValue": 0.03410925336449314,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "831",
-     "factor": 0.8519,
-     "displayFactor": 0.8519,
+     "factor": 0.852,
+     "displayFactor": 0.852,
      "n": 10,
      "usedFallback": false,
      "tier": "bulk",
@@ -27469,8 +27469,8 @@
     },
     "illustrator": {
      "key": "Wintr Wandr",
-     "factor": 0.9129,
-     "displayFactor": 0.9129,
+     "factor": 0.9127,
+     "displayFactor": 0.9127,
      "n": 10,
      "usedFallback": false
     },
@@ -27483,8 +27483,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -27667,7 +27667,7 @@
    "trend": 0.02,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -27692,8 +27692,8 @@
     },
     "illustrator": {
      "key": "HYOGONOSUKE",
-     "factor": 1.0672,
-     "displayFactor": 1.0672,
+     "factor": 1.067,
+     "displayFactor": 1.067,
      "n": 85,
      "usedFallback": false
     },
@@ -27706,8 +27706,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -27869,7 +27869,7 @@
    }
   },
   "fairs": {
-   "broad": 0.029466,
+   "broad": 0.029463,
    "standard": 0.032999,
    "local": 0.032259
   }
@@ -27890,7 +27890,7 @@
    "trend": 0.02,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -27929,8 +27929,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -28092,7 +28092,7 @@
    }
   },
   "fairs": {
-   "broad": 0.033364,
+   "broad": 0.033367,
    "standard": 0.03249,
    "local": 0.033277
   }
@@ -28113,7 +28113,7 @@
    "trend": 0.03,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -28122,8 +28122,8 @@
    "broad": {
     "pokemon": {
      "key": "967",
-     "factor": 0.6977,
-     "displayFactor": 0.6977,
+     "factor": 0.6976,
+     "displayFactor": 0.6976,
      "n": 12,
      "usedFallback": false,
      "tier": "bulk",
@@ -28138,8 +28138,8 @@
     },
     "illustrator": {
      "key": "Nurikabe",
-     "factor": 1.0164,
-     "displayFactor": 1.0164,
+     "factor": 1.0163,
+     "displayFactor": 1.0163,
      "n": 22,
      "usedFallback": false
     },
@@ -28152,8 +28152,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -28315,7 +28315,7 @@
    }
   },
   "fairs": {
-   "broad": 0.031102,
+   "broad": 0.031098,
    "standard": 0.032442,
    "local": 0.034283
   }
@@ -28336,7 +28336,7 @@
    "trend": 0.86,
    "avg30": 0.88,
    "low": 0.3,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -28346,23 +28346,23 @@
     "pokemon": {
      "key": "1024",
      "factor": 1.0015,
-     "displayFactor": 1.0018301516703774,
+     "displayFactor": 1.0018307523182752,
      "n": 11,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Double rare",
-     "factor": 3.0118,
-     "displayFactor": 3.0118,
+     "factor": 3.0131,
+     "displayFactor": 3.0131,
      "n": 317,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -28375,8 +28375,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -28538,7 +28538,7 @@
    }
   },
   "fairs": {
-   "broad": 0.86449,
+   "broad": 0.86468,
    "standard": 0.92466,
    "local": 1.0096
   }
@@ -28557,17 +28557,17 @@
    "trend": 0.05,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.0425302067482146,
+  "baseValue": 0.04252714088193028,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -28582,8 +28582,8 @@
     },
     "illustrator": {
      "key": "AYUMI ODASHIMA",
-     "factor": 1.0587,
-     "displayFactor": 1.0587,
+     "factor": 1.0585,
+     "displayFactor": 1.0585,
      "n": 76,
      "usedFallback": false
     },
@@ -28596,15 +28596,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Antique Cover Fossil",
-     "factor": 0.9252,
-     "displayFactor": 0.9252,
+     "factor": 0.9253,
+     "displayFactor": 0.9253,
      "n": 2,
      "usedFallback": false
     },
@@ -28759,7 +28759,7 @@
    }
   },
   "fairs": {
-   "broad": 0.04253,
+   "broad": 0.042527,
    "standard": 0.042386,
    "local": 0.045518
   }
@@ -28778,17 +28778,17 @@
    "trend": 0.06,
    "avg30": 0.06,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.051581436437712506,
+  "baseValue": 0.051572143935603554,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -28803,8 +28803,8 @@
     },
     "illustrator": {
      "key": "AYUMI ODASHIMA",
-     "factor": 1.0587,
-     "displayFactor": 1.0587,
+     "factor": 1.0585,
+     "displayFactor": 1.0585,
      "n": 76,
      "usedFallback": false
     },
@@ -28817,8 +28817,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -28980,7 +28980,7 @@
    }
   },
   "fairs": {
-   "broad": 0.051581,
+   "broad": 0.051572,
    "standard": 0.050959,
    "local": 0.052005
   }
@@ -28999,7 +28999,7 @@
    "trend": 0.07,
    "avg30": 0.07,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -29008,8 +29008,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -29024,8 +29024,8 @@
     },
     "illustrator": {
      "key": "MARINA Chikazawa",
-     "factor": 1.0771,
-     "displayFactor": 1.0771,
+     "factor": 1.0768,
+     "displayFactor": 1.0768,
      "n": 23,
      "usedFallback": false
     },
@@ -29038,8 +29038,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -29201,7 +29201,7 @@
    }
   },
   "fairs": {
-   "broad": 0.067244,
+   "broad": 0.067226,
    "standard": 0.062334,
    "local": 0.061459
   }
@@ -29220,7 +29220,7 @@
    "trend": 0.04,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -29229,8 +29229,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -29245,8 +29245,8 @@
     },
     "illustrator": {
      "key": "Naoki Saito",
-     "factor": 1.0591,
-     "displayFactor": 1.0591,
+     "factor": 1.0592,
+     "displayFactor": 1.0592,
      "n": 244,
      "usedFallback": false
     },
@@ -29259,15 +29259,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Briar",
-     "factor": 0.9515,
-     "displayFactor": 0.9515,
+     "factor": 0.9514,
+     "displayFactor": 0.9514,
      "n": 4,
      "usedFallback": false
     },
@@ -29441,7 +29441,7 @@
    "trend": 0.16,
    "avg30": 0.13,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.460Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -29450,8 +29450,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -29466,8 +29466,8 @@
     },
     "illustrator": {
      "key": "GIDORA",
-     "factor": 0.8811,
-     "displayFactor": 0.8811,
+     "factor": 0.8813,
+     "displayFactor": 0.8813,
      "n": 78,
      "usedFallback": false
     },
@@ -29480,8 +29480,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -29643,7 +29643,7 @@
    }
   },
   "fairs": {
-   "broad": 0.081816,
+   "broad": 0.081836,
    "standard": 0.081075,
    "local": 0.078704
   }
@@ -29662,21 +29662,21 @@
    "trend": 0.24,
    "avg30": 0.34,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.579111573192693,
+  "baseValue": 0.5791703171509717,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9750487205431998,
+     "factor": 0.9794,
+     "displayFactor": 0.9749191690173823,
      "n": 3020,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "ACE SPEC Rare",
@@ -29687,8 +29687,8 @@
     },
     "illustrator": {
      "key": "inose yukie",
-     "factor": 0.801,
-     "displayFactor": 0.801,
+     "factor": 0.8012,
+     "displayFactor": 0.8012,
      "n": 31,
      "usedFallback": false
     },
@@ -29701,15 +29701,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Deluxe Bomb",
-     "factor": 0.7924,
-     "displayFactor": 0.7924,
+     "factor": 0.7923,
+     "displayFactor": 0.7923,
      "n": 1,
      "usedFallback": false
     },
@@ -29864,7 +29864,7 @@
    }
   },
   "fairs": {
-   "broad": 0.57911,
+   "broad": 0.57917,
    "standard": 0.60603,
    "local": 0.43646
   }
@@ -29883,7 +29883,7 @@
    "trend": 0.11,
    "avg30": 0.07,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -29892,8 +29892,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -29908,8 +29908,8 @@
     },
     "illustrator": {
      "key": "Toyste Beach",
-     "factor": 0.938,
-     "displayFactor": 0.938,
+     "factor": 0.9387,
+     "displayFactor": 0.9387,
      "n": 300,
      "usedFallback": false
     },
@@ -29922,15 +29922,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Glass Trumpet",
-     "factor": 1.1876,
-     "displayFactor": 1.1876,
+     "factor": 1.1875,
+     "displayFactor": 1.1875,
      "n": 4,
      "usedFallback": false
     },
@@ -30085,7 +30085,7 @@
    }
   },
   "fairs": {
-   "broad": 0.054765,
+   "broad": 0.054802,
    "standard": 0.049489,
    "local": 0.050429
   }
@@ -30104,21 +30104,21 @@
    "trend": 0.58,
    "avg30": 0.52,
    "low": 0.04,
-   "updated": "2026-11-17T22:16:19.846Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.8853003655783138,
+  "baseValue": 0.8850170595385224,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9750487205431998,
+     "factor": 0.9794,
+     "displayFactor": 0.9749191690173823,
      "n": 3020,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "ACE SPEC Rare",
@@ -30129,8 +30129,8 @@
     },
     "illustrator": {
      "key": "AYUMI ODASHIMA",
-     "factor": 1.0587,
-     "displayFactor": 1.0587,
+     "factor": 1.0585,
+     "displayFactor": 1.0585,
      "n": 76,
      "usedFallback": false
     },
@@ -30143,15 +30143,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Grand Tree",
-     "factor": 0.9165,
-     "displayFactor": 0.9165,
+     "factor": 0.9164,
+     "displayFactor": 0.9164,
      "n": 1,
      "usedFallback": false
     },
@@ -30306,7 +30306,7 @@
    }
   },
   "fairs": {
-   "broad": 0.8853,
+   "broad": 0.88502,
    "standard": 0.96075,
    "local": 0.68167
   }
@@ -30325,7 +30325,7 @@
    "trend": 0.06,
    "avg30": 0.05,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -30334,8 +30334,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -30350,8 +30350,8 @@
     },
     "illustrator": {
      "key": "Toyste Beach",
-     "factor": 0.938,
-     "displayFactor": 0.938,
+     "factor": 0.9387,
+     "displayFactor": 0.9387,
      "n": 300,
      "usedFallback": false
     },
@@ -30364,15 +30364,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Gravity Gemstone",
-     "factor": 1.0985,
-     "displayFactor": 1.0985,
+     "factor": 1.0986,
+     "displayFactor": 1.0986,
      "n": 1,
      "usedFallback": false
     },
@@ -30527,7 +30527,7 @@
    }
   },
   "fairs": {
-   "broad": 0.050656,
+   "broad": 0.050699,
    "standard": 0.047516,
    "local": 0.045706
   }
@@ -30546,7 +30546,7 @@
    "trend": 0.05,
    "avg30": 0.04,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -30555,8 +30555,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -30585,15 +30585,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Kofu",
-     "factor": 0.9085,
-     "displayFactor": 0.9085,
+     "factor": 0.9086,
+     "displayFactor": 0.9086,
      "n": 2,
      "usedFallback": false
     },
@@ -30748,7 +30748,7 @@
    }
   },
   "fairs": {
-   "broad": 0.04653,
+   "broad": 0.046536,
    "standard": 0.045903,
    "local": 0.043956
   }
@@ -30767,7 +30767,7 @@
    "trend": 0.04,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -30776,8 +30776,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -30806,8 +30806,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -30969,7 +30969,7 @@
    }
   },
   "fairs": {
-   "broad": 0.051549,
+   "broad": 0.05155,
    "standard": 0.048355,
    "local": 0.046496
   }
@@ -30988,7 +30988,7 @@
    "trend": 0.02,
    "avg30": 0.02,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -30997,8 +30997,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -31013,8 +31013,8 @@
     },
     "illustrator": {
      "key": "Studio Bora Inc.",
-     "factor": 1.1429,
-     "displayFactor": 1.1429,
+     "factor": 1.1431,
+     "displayFactor": 1.1431,
      "n": 115,
      "usedFallback": false
     },
@@ -31027,15 +31027,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Occa Berry",
-     "factor": 0.8044,
-     "displayFactor": 0.8044,
+     "factor": 0.8043,
+     "displayFactor": 0.8043,
      "n": 1,
      "usedFallback": false
     },
@@ -31190,7 +31190,7 @@
    }
   },
   "fairs": {
-   "broad": 0.045197,
+   "broad": 0.0452,
    "standard": 0.043988,
    "local": 0.042058
   }
@@ -31209,7 +31209,7 @@
    "trend": 0.04,
    "avg30": 0.03,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -31218,8 +31218,8 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9795,
+     "factor": 0.9794,
+     "displayFactor": 0.9794,
      "n": 3020,
      "usedFallback": false,
      "tier": "bulk",
@@ -31234,8 +31234,8 @@
     },
     "illustrator": {
      "key": "Studio Bora Inc.",
-     "factor": 1.1429,
-     "displayFactor": 1.1429,
+     "factor": 1.1431,
+     "displayFactor": 1.1431,
      "n": 115,
      "usedFallback": false
     },
@@ -31248,15 +31248,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Payapa Berry",
-     "factor": 0.9505,
-     "displayFactor": 0.9505,
+     "factor": 0.9504,
+     "displayFactor": 0.9504,
      "n": 1,
      "usedFallback": false
     },
@@ -31411,7 +31411,7 @@
    }
   },
   "fairs": {
-   "broad": 0.053406,
+   "broad": 0.05341,
    "standard": 0.051985,
    "local": 0.049705
   }
@@ -31430,21 +31430,21 @@
    "trend": 0.32,
    "avg30": 0.37,
    "low": 0.02,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.5901811745595531,
+  "baseValue": 0.5907798949283602,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9750487205431998,
+     "factor": 0.9794,
+     "displayFactor": 0.9749191690173823,
      "n": 3020,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "ACE SPEC Rare",
@@ -31455,8 +31455,8 @@
     },
     "illustrator": {
      "key": "Toyste Beach",
-     "factor": 0.938,
-     "displayFactor": 0.938,
+     "factor": 0.9387,
+     "displayFactor": 0.9387,
      "n": 300,
      "usedFallback": false
     },
@@ -31469,15 +31469,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Sparkling Crystal",
-     "factor": 0.6896,
-     "displayFactor": 0.6896,
+     "factor": 0.6898,
+     "displayFactor": 0.6898,
      "n": 2,
      "usedFallback": false
     },
@@ -31632,7 +31632,7 @@
    }
   },
   "fairs": {
-   "broad": 0.59018,
+   "broad": 0.59078,
    "standard": 0.64085,
    "local": 0.45458
   }
@@ -31653,33 +31653,33 @@
    "trend": 60.09,
    "avg30": 67.22,
    "low": 42,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 44.93645567006764,
+  "baseValue": 44.99558727578794,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "1",
-     "factor": 2.0809,
-     "displayFactor": 3.4788906971472255,
+     "factor": 2.0812,
+     "displayFactor": 3.480509242660763,
      "n": 28,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Orca",
-     "factor": 1.0874,
-     "displayFactor": 1.0874,
+     "factor": 1.0875,
+     "displayFactor": 1.0875,
      "n": 12,
      "usedFallback": false
     },
@@ -31692,8 +31692,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -31706,8 +31706,8 @@
     },
     "artwork": {
      "key": "strong",
-     "factor": 1.4171,
-     "displayFactor": 1.4171,
+     "factor": 1.4183,
+     "displayFactor": 1.4183,
      "n": 200,
      "usedFallback": false
     }
@@ -31855,7 +31855,7 @@
    }
   },
   "fairs": {
-   "broad": 44.936,
+   "broad": 44.996,
    "standard": 46.014,
    "local": 44.336
   }
@@ -31876,33 +31876,33 @@
    "trend": 4.24,
    "avg30": 4.2,
    "low": 1.5,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 5.4524390562087515,
+  "baseValue": 5.449223953540566,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "166",
-     "factor": 0.749,
-     "displayFactor": 0.6115837203131832,
+     "factor": 0.7489,
+     "displayFactor": 0.6113917724973157,
      "n": 14,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "HYOGONOSUKE",
-     "factor": 1.0672,
-     "displayFactor": 1.0672,
+     "factor": 1.067,
+     "displayFactor": 1.067,
      "n": 85,
      "usedFallback": false
     },
@@ -31915,8 +31915,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -32078,7 +32078,7 @@
    }
   },
   "fairs": {
-   "broad": 5.4524,
+   "broad": 5.4492,
    "standard": 5.7638,
    "local": 4.7386
   }
@@ -32099,33 +32099,33 @@
    "trend": 4.83,
    "avg30": 4.63,
    "low": 2,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 4.847485725470839,
+  "baseValue": 4.848128435556087,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "345",
-     "factor": 0.8494,
-     "displayFactor": 0.7575279864636622,
+     "factor": 0.8496,
+     "displayFactor": 0.7577944139368844,
      "n": 10,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Mori Yuu",
-     "factor": 0.766,
-     "displayFactor": 0.766,
+     "factor": 0.7659,
+     "displayFactor": 0.7659,
      "n": 10,
      "usedFallback": false
     },
@@ -32138,8 +32138,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -32301,7 +32301,7 @@
    }
   },
   "fairs": {
-   "broad": 4.8475,
+   "broad": 4.8481,
    "standard": 4.9989,
    "local": 4.4103
   }
@@ -32322,7 +32322,7 @@
    "trend": 3.27,
    "avg30": 3.07,
    "low": 1.49,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -32332,23 +32332,23 @@
     "pokemon": {
      "key": "776",
      "factor": 0.7282,
-     "displayFactor": 0.5829711630356715,
+     "displayFactor": 0.5829156937166091,
      "n": 14,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Yukihiro Tada",
-     "factor": 0.7593,
-     "displayFactor": 0.7593,
+     "factor": 0.7591,
+     "displayFactor": 0.7591,
      "n": 17,
      "usedFallback": false
     },
@@ -32361,8 +32361,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -32524,7 +32524,7 @@
    }
   },
   "fairs": {
-   "broad": 3.6979,
+   "broad": 3.6962,
    "standard": 3.5045,
    "local": 3.3107
   }
@@ -32545,33 +32545,33 @@
    "trend": 4.8,
    "avg30": 5.2,
    "low": 1.4,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 5.258393157238238,
+  "baseValue": 5.257068484900772,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "814",
      "factor": 0.9124,
-     "displayFactor": 0.855585096755536,
+     "displayFactor": 0.8555615658909164,
      "n": 8,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "rika",
-     "factor": 0.7357,
-     "displayFactor": 0.7357,
+     "factor": 0.7356,
+     "displayFactor": 0.7356,
      "n": 22,
      "usedFallback": false
     },
@@ -32584,8 +32584,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -32747,7 +32747,7 @@
    }
   },
   "fairs": {
-   "broad": 5.2584,
+   "broad": 5.2571,
    "standard": 6.1098,
    "local": 5.1109
   }
@@ -32768,7 +32768,7 @@
    "trend": 69.49,
    "avg30": 72.8,
    "low": 39.9,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -32777,17 +32777,17 @@
    "broad": {
     "pokemon": {
      "key": "7",
-     "factor": 2.3081,
-     "displayFactor": 4.14958902835116,
+     "factor": 2.3088,
+     "displayFactor": 4.1527726102450835,
      "n": 30,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
@@ -32807,8 +32807,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -32821,8 +32821,8 @@
     },
     "artwork": {
      "key": "strong",
-     "factor": 1.4171,
-     "displayFactor": 1.4171,
+     "factor": 1.4183,
+     "displayFactor": 1.4183,
      "n": 200,
      "usedFallback": false
     }
@@ -32970,7 +32970,7 @@
    }
   },
   "fairs": {
-   "broad": 48.809,
+   "broad": 48.883,
    "standard": 55.589,
    "local": 52.115
   }
@@ -32991,7 +32991,7 @@
    "trend": 2.55,
    "avg30": 2.41,
    "low": 0.5,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -33000,24 +33000,24 @@
    "broad": {
     "pokemon": {
      "key": "740",
-     "factor": 0.612,
-     "displayFactor": 0.4337107577352237,
+     "factor": 0.6119,
+     "displayFactor": 0.4335263099284213,
      "n": 11,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Mitsuhiro Arita",
-     "factor": 1.2682,
-     "displayFactor": 1.2682,
+     "factor": 1.2675,
+     "displayFactor": 1.2675,
      "n": 677,
      "usedFallback": false
     },
@@ -33030,8 +33030,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -33044,8 +33044,8 @@
     },
     "artwork": {
      "key": "weak",
-     "factor": 0.7288,
-     "displayFactor": 0.7288,
+     "factor": 0.7291,
+     "displayFactor": 0.7291,
      "n": 95,
      "usedFallback": false
     }
@@ -33193,7 +33193,7 @@
    }
   },
   "fairs": {
-   "broad": 3.3602,
+   "broad": 3.358,
    "standard": 2.66,
    "local": 2.3199
   }
@@ -33214,33 +33214,33 @@
    "trend": 4.22,
    "avg30": 4.16,
    "low": 2.2,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 8.098927853366131,
+  "baseValue": 8.095805206171997,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "595",
      "factor": 0.94,
-     "displayFactor": 0.900082705980942,
+     "displayFactor": 0.9000659982417685,
      "n": 20,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "MARINA Chikazawa",
-     "factor": 1.0771,
-     "displayFactor": 1.0771,
+     "factor": 1.0768,
+     "displayFactor": 1.0768,
      "n": 23,
      "usedFallback": false
     },
@@ -33253,8 +33253,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -33416,7 +33416,7 @@
    }
   },
   "fairs": {
-   "broad": 8.0989,
+   "broad": 8.0958,
    "standard": 8.3469,
    "local": 6.6775
   }
@@ -33437,7 +33437,7 @@
    "trend": 7.94,
    "avg30": 8.37,
    "low": 3.4,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -33446,17 +33446,17 @@
    "broad": {
     "pokemon": {
      "key": "807",
-     "factor": 0.8459,
-     "displayFactor": 0.7522251631165547,
+     "factor": 0.8461,
+     "displayFactor": 0.7524900405887166,
      "n": 28,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
@@ -33476,8 +33476,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -33639,7 +33639,7 @@
    }
   },
   "fairs": {
-   "broad": 4.5829,
+   "broad": 4.5841,
    "standard": 6.0965,
    "local": 4.8838
   }
@@ -33660,26 +33660,26 @@
    "trend": 6.24,
    "avg30": 6.51,
    "low": 3,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 5.664368043172509,
+  "baseValue": 5.663714473671217,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "868",
      "factor": 0.9143,
-     "displayFactor": 0.8586184946301366,
+     "displayFactor": 0.8585954161680049,
      "n": 8,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
@@ -33699,8 +33699,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -33862,7 +33862,7 @@
    }
   },
   "fairs": {
-   "broad": 5.6644,
+   "broad": 5.6637,
    "standard": 6.1293,
    "local": 4.9601
   }
@@ -33883,7 +33883,7 @@
    "trend": 4.86,
    "avg30": 4.95,
    "low": 2,
-   "updated": "2026-11-17T22:16:19.447Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -33892,24 +33892,24 @@
    "broad": {
     "pokemon": {
      "key": "307",
-     "factor": 0.7035,
-     "displayFactor": 0.5497312383405709,
+     "factor": 0.7036,
+     "displayFactor": 0.5498062009121283,
      "n": 22,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Yuriko Akase",
-     "factor": 0.9544,
-     "displayFactor": 0.9544,
+     "factor": 0.9543,
+     "displayFactor": 0.9543,
      "n": 12,
      "usedFallback": false
     },
@@ -33922,8 +33922,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -34085,7 +34085,7 @@
    }
   },
   "fairs": {
-   "broad": 4.383,
+   "broad": 4.3827,
    "standard": 4.0937,
    "local": 3.2757
   }
@@ -34106,33 +34106,33 @@
    "trend": 5.31,
    "avg30": 6.88,
    "low": 2,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 6.951018023132807,
+  "baseValue": 6.94755946055548,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "316",
-     "factor": 1.0289,
-     "displayFactor": 1.0496644031470275,
+     "factor": 1.0288,
+     "displayFactor": 1.0494997851597334,
      "n": 11,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Jerky",
-     "factor": 0.7927,
-     "displayFactor": 0.7927,
+     "factor": 0.7925,
+     "displayFactor": 0.7925,
      "n": 45,
      "usedFallback": false
     },
@@ -34145,8 +34145,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -34308,7 +34308,7 @@
    }
   },
   "fairs": {
-   "broad": 6.951,
+   "broad": 6.9476,
    "standard": 7.7645,
    "local": 6.8986
   }
@@ -34329,26 +34329,26 @@
    "trend": 2.6,
    "avg30": 2.71,
    "low": 1.3,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.7656701959792134,
+  "baseValue": 2.7644218319137916,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "1018",
-     "factor": 0.6837,
-     "displayFactor": 0.5236689344720182,
+     "factor": 0.6836,
+     "displayFactor": 0.5234788927945278,
      "n": 7,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Illustration rare",
-     "factor": 58.1894,
-     "displayFactor": 58.1894,
+     "factor": 58.1778,
+     "displayFactor": 58.1778,
      "n": 491,
      "usedFallback": false
     },
@@ -34368,8 +34368,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -34531,7 +34531,7 @@
    }
   },
   "fairs": {
-   "broad": 2.7657,
+   "broad": 2.7644,
    "standard": 3.5908,
    "local": 2.7359
   }
@@ -34552,33 +34552,33 @@
    "trend": 2.12,
    "avg30": 2.04,
    "low": 0.75,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.132690718760104,
+  "baseValue": 2.1327207634281806,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "1019",
-     "factor": 0.8287,
-     "displayFactor": 0.7951570496818323,
+     "factor": 0.8286,
+     "displayFactor": 0.7949802085700078,
      "n": 6,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -34591,8 +34591,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -34623,8 +34623,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -34754,7 +34754,7 @@
    }
   },
   "fairs": {
-   "broad": 2.5841,
+   "broad": 2.583,
    "standard": 2.1327,
    "local": 2.1205
   }
@@ -34775,33 +34775,33 @@
    "trend": 2.5,
    "avg30": 2.62,
    "low": 0.99,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.5148735747309208,
+  "baseValue": 2.514909003469436,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "815",
      "factor": 0.8488,
-     "displayFactor": 0.8187469062356336,
+     "displayFactor": 0.8186932205696497,
      "n": 20,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -34814,8 +34814,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -34846,8 +34846,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -34977,7 +34977,7 @@
    }
   },
   "fairs": {
-   "broad": 2.5827,
+   "broad": 2.582,
    "standard": 2.5149,
    "local": 2.4393
   }
@@ -34998,33 +34998,33 @@
    "trend": 3.73,
    "avg30": 4,
    "low": 1.8,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 3.5213109130529037,
+  "baseValue": 3.521360520160323,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "131",
-     "factor": 1.2966,
-     "displayFactor": 1.3728151410910914,
+     "factor": 1.297,
+     "displayFactor": 1.3734746648260878,
      "n": 45,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -35037,8 +35037,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -35069,8 +35069,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -35200,8 +35200,8 @@
    }
   },
   "fairs": {
-   "broad": 4.3306,
-   "standard": 3.5213,
+   "broad": 4.3316,
+   "standard": 3.5214,
    "local": 3.3226
   }
  },
@@ -35221,33 +35221,33 @@
    "trend": 1.61,
    "avg30": 1.73,
    "low": 0.25,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 2.157983512884639,
+  "baseValue": 2.1580139138695493,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "596",
-     "factor": 0.8325,
-     "displayFactor": 0.7996072754863595,
+     "factor": 0.8324,
+     "displayFactor": 0.7994314450215441,
      "n": 17,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -35260,8 +35260,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -35292,8 +35292,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -35423,7 +35423,7 @@
    }
   },
   "fairs": {
-   "broad": 2.5224,
+   "broad": 2.5212,
    "standard": 2.158,
    "local": 2.0091
   }
@@ -35444,33 +35444,33 @@
    "trend": 1.63,
    "avg30": 1.9,
    "low": 0.29,
-   "updated": "2026-11-17T22:16:19.511Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.634593475388368,
+  "baseValue": 1.6346165030210087,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "927",
-     "factor": 0.8238,
-     "displayFactor": 0.7894252234596226,
+     "factor": 0.8239,
+     "displayFactor": 0.7894809514468234,
      "n": 6,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "PLANETA Mochizuki",
-     "factor": 0.7154,
-     "displayFactor": 0.7154,
+     "factor": 0.7156,
+     "displayFactor": 0.7156,
      "n": 143,
      "usedFallback": false
     },
@@ -35483,8 +35483,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -35515,8 +35515,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -35646,7 +35646,7 @@
    }
   },
   "fairs": {
-   "broad": 2.0122,
+   "broad": 2.0128,
    "standard": 1.6346,
    "local": 1.6189
   }
@@ -35667,33 +35667,33 @@
    "trend": 1,
    "avg30": 1.2,
    "low": 0.19,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 1.7214698357408802,
+  "baseValue": 1.7214940872600353,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "308",
      "factor": 0.7786,
-     "displayFactor": 0.7369099758884954,
+     "displayFactor": 0.7368362125798684,
      "n": 25,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "PLANETA Yamashita",
-     "factor": 0.8838,
-     "displayFactor": 0.8838,
+     "factor": 0.8834,
+     "displayFactor": 0.8834,
      "n": 23,
      "usedFallback": false
     },
@@ -35706,8 +35706,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -35738,8 +35738,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -35869,7 +35869,7 @@
    }
   },
   "fairs": {
-   "broad": 2.3205,
+   "broad": 2.319,
    "standard": 1.7215,
    "local": 1.6246
   }
@@ -35890,33 +35890,33 @@
    "trend": 0.87,
    "avg30": 1.07,
    "low": 0.2,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 0.8674173083605988,
+  "baseValue": 0.8674295282595671,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "968",
      "factor": 0.4847,
-     "displayFactor": 0.41334104847254965,
+     "displayFactor": 0.41322132502389375,
      "n": 5,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "PLANETA Mochizuki",
-     "factor": 0.7154,
-     "displayFactor": 0.7154,
+     "factor": 0.7156,
+     "displayFactor": 0.7156,
      "n": 143,
      "usedFallback": false
     },
@@ -35929,8 +35929,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -35961,8 +35961,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -36092,8 +36092,8 @@
    }
   },
   "fairs": {
-   "broad": 1.0536,
-   "standard": 0.86742,
+   "broad": 1.0535,
+   "standard": 0.86743,
    "local": 0.85572
   }
  },
@@ -36111,7 +36111,7 @@
    "trend": 1.63,
    "avg30": 1.55,
    "low": 0.83,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -36120,24 +36120,24 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9750487205431998,
+     "factor": 0.9794,
+     "displayFactor": 0.9749191690173823,
      "n": 3020,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Naoki Saito",
-     "factor": 1.0591,
-     "displayFactor": 1.0591,
+     "factor": 1.0592,
+     "displayFactor": 1.0592,
      "n": 244,
      "usedFallback": false
     },
@@ -36150,15 +36150,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Briar",
-     "factor": 0.9515,
-     "displayFactor": 0.9515,
+     "factor": 0.9514,
+     "displayFactor": 0.9514,
      "n": 4,
      "usedFallback": false
     },
@@ -36182,8 +36182,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -36313,8 +36313,8 @@
    }
   },
   "fairs": {
-   "broad": 1.5698,
-   "standard": 1.3485,
+   "broad": 1.5697,
+   "standard": 1.3486,
    "local": 1.4175
   }
  },
@@ -36332,7 +36332,7 @@
    "trend": 6.02,
    "avg30": 6.03,
    "low": 3.99,
-   "updated": "2026-11-17T22:16:19.483Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -36341,24 +36341,24 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9750487205431998,
+     "factor": 0.9794,
+     "displayFactor": 0.9749191690173823,
      "n": 3020,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
     "illustrator": {
      "key": "GIDORA",
-     "factor": 0.8811,
-     "displayFactor": 0.8811,
+     "factor": 0.8813,
+     "displayFactor": 0.8813,
      "n": 78,
      "usedFallback": false
     },
@@ -36371,8 +36371,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -36403,8 +36403,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -36534,7 +36534,7 @@
    }
   },
   "fairs": {
-   "broad": 2.5924,
+   "broad": 2.5929,
    "standard": 2.3589,
    "local": 2.4931
   }
@@ -36553,7 +36553,7 @@
    "trend": 0.91,
    "avg30": 0.94,
    "low": 0.29,
-   "updated": "2026-11-17T22:16:19.472Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -36562,17 +36562,17 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9750487205431998,
+     "factor": 0.9794,
+     "displayFactor": 0.9749191690173823,
      "n": 3020,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
@@ -36592,15 +36592,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Kofu",
-     "factor": 0.9085,
-     "displayFactor": 0.9085,
+     "factor": 0.9086,
+     "displayFactor": 0.9086,
      "n": 2,
      "usedFallback": false
     },
@@ -36624,8 +36624,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -36755,7 +36755,7 @@
    }
   },
   "fairs": {
-   "broad": 1.4743,
+   "broad": 1.4745,
    "standard": 1.3356,
    "local": 1.3924
   }
@@ -36774,7 +36774,7 @@
    "trend": 1.75,
    "avg30": 1.77,
    "low": 0.48,
-   "updated": "2026-11-17T22:16:19.462Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -36783,17 +36783,17 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9750487205431998,
+     "factor": 0.9794,
+     "displayFactor": 0.9749191690173823,
      "n": 3020,
      "usedFallback": false,
      "tier": "mid",
-     "tierExponent": 1.2199
+     "tierExponent": 1.2203
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 11.0101,
-     "displayFactor": 11.0101,
+     "factor": 11.0099,
+     "displayFactor": 11.0099,
      "n": 1389,
      "usedFallback": false
     },
@@ -36813,8 +36813,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -36845,8 +36845,8 @@
     },
     "rarity": {
      "key": "Ultra Rare",
-     "factor": 7.0984,
-     "displayFactor": 7.0984,
+     "factor": 7.0985,
+     "displayFactor": 7.0985,
      "n": 1389,
      "usedFallback": false
     },
@@ -36976,7 +36976,7 @@
    }
   },
   "fairs": {
-   "broad": 1.6334,
+   "broad": 1.6333,
    "standard": 1.4069,
    "local": 1.4729
   }
@@ -36997,33 +36997,33 @@
    "trend": 24.98,
    "avg30": 25.06,
    "low": 18.93,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 23.420269141498213,
+  "baseValue": 23.42009562010545,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "1019",
-     "factor": 0.8287,
-     "displayFactor": 0.7263892236355332,
+     "factor": 0.8286,
+     "displayFactor": 0.7261991414338106,
      "n": 6,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 90.5784,
-     "displayFactor": 90.5784,
+     "factor": 90.5591,
+     "displayFactor": 90.5591,
      "n": 222,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Teeziro",
-     "factor": 0.9626,
-     "displayFactor": 0.9626,
+     "factor": 0.963,
+     "displayFactor": 0.963,
      "n": 91,
      "usedFallback": false
     },
@@ -37036,8 +37036,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -37068,8 +37068,8 @@
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 26.9941,
-     "displayFactor": 26.9941,
+     "factor": 26.9939,
+     "displayFactor": 26.9939,
      "n": 222,
      "usedFallback": false
     },
@@ -37199,7 +37199,7 @@
    }
   },
   "fairs": {
-   "broad": 20.496,
+   "broad": 20.493,
    "standard": 23.42,
    "local": 23.799
   }
@@ -37220,33 +37220,33 @@
    "trend": 18.73,
    "avg30": 18.17,
    "low": 7.5,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.987Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 22.435109255975068,
+  "baseValue": 22.415993485386007,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "596",
-     "factor": 0.8325,
-     "displayFactor": 0.7320651137320384,
+     "factor": 0.8324,
+     "displayFactor": 0.7318752367970945,
      "n": 17,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 90.5784,
-     "displayFactor": 90.5784,
+     "factor": 90.5591,
+     "displayFactor": 90.5591,
      "n": 222,
      "usedFallback": false
     },
     "illustrator": {
      "key": "MARINA Chikazawa",
-     "factor": 1.0771,
-     "displayFactor": 1.0771,
+     "factor": 1.0768,
+     "displayFactor": 1.0768,
      "n": 23,
      "usedFallback": false
     },
@@ -37259,8 +37259,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -37291,8 +37291,8 @@
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 26.9941,
-     "displayFactor": 26.9941,
+     "factor": 26.9939,
+     "displayFactor": 26.9939,
      "n": 222,
      "usedFallback": false
     },
@@ -37422,7 +37422,7 @@
    }
   },
   "fairs": {
-   "broad": 22.435,
+   "broad": 22.416,
    "standard": 24.066,
    "local": 21.668
   }
@@ -37443,7 +37443,7 @@
    "trend": 30.64,
    "avg30": 32.1,
    "low": 16.98,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.978Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -37452,24 +37452,24 @@
    "broad": {
     "pokemon": {
      "key": "927",
-     "factor": 0.8238,
-     "displayFactor": 0.7190972158381252,
+     "factor": 0.8239,
+     "displayFactor": 0.7192039336152205,
      "n": 6,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 90.5784,
-     "displayFactor": 90.5784,
+     "factor": 90.5591,
+     "displayFactor": 90.5591,
      "n": 222,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Yuu Nishida",
-     "factor": 0.9026,
-     "displayFactor": 0.9026,
+     "factor": 0.9025,
+     "displayFactor": 0.9025,
      "n": 67,
      "usedFallback": false
     },
@@ -37482,8 +37482,8 @@
     },
     "cardType": {
      "key": "EX",
-     "factor": 2.0332,
-     "displayFactor": 2.0332,
+     "factor": 2.0331,
+     "displayFactor": 2.0331,
      "n": 916,
      "usedFallback": false
     },
@@ -37514,8 +37514,8 @@
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 26.9941,
-     "displayFactor": 26.9941,
+     "factor": 26.9939,
+     "displayFactor": 26.9939,
      "n": 222,
      "usedFallback": false
     },
@@ -37645,7 +37645,7 @@
    }
   },
   "fairs": {
-   "broad": 19.025,
+   "broad": 19.021,
    "standard": 19.618,
    "local": 19.077
   }
@@ -37666,7 +37666,7 @@
    "trend": 34.81,
    "avg30": 32.53,
    "low": 16.49,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -37676,16 +37676,16 @@
     "pokemon": {
      "key": "1024",
      "factor": 1.0015,
-     "displayFactor": 1.002553292061532,
+     "displayFactor": 1.002553742872591,
      "n": 11,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 90.5784,
-     "displayFactor": 90.5784,
+     "factor": 90.5591,
+     "displayFactor": 90.5591,
      "n": 222,
      "usedFallback": false
     },
@@ -37705,8 +37705,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -37737,8 +37737,8 @@
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 26.9941,
-     "displayFactor": 26.9941,
+     "factor": 26.9939,
+     "displayFactor": 26.9939,
      "n": 222,
      "usedFallback": false
     },
@@ -37868,7 +37868,7 @@
    }
   },
   "fairs": {
-   "broad": 28.246,
+   "broad": 28.237,
    "standard": 29.56,
    "local": 29.208
   }
@@ -37887,33 +37887,33 @@
    "trend": 12.45,
    "avg30": 12.8,
    "low": 9.3,
-   "updated": "2026-11-17T22:16:19.427Z"
+   "updated": "2026-11-18T22:16:18.967Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 12.170577927627468,
+  "baseValue": 12.170487755494092,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9653745698510177,
+     "factor": 0.9794,
+     "displayFactor": 0.965200872052855,
      "n": 3020,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 90.5784,
-     "displayFactor": 90.5784,
+     "factor": 90.5591,
+     "displayFactor": 90.5591,
      "n": 222,
      "usedFallback": false
     },
     "illustrator": {
      "key": "DOM",
-     "factor": 0.9002,
-     "displayFactor": 0.9002,
+     "factor": 0.9001,
+     "displayFactor": 0.9001,
      "n": 46,
      "usedFallback": false
     },
@@ -37926,15 +37926,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Briar",
-     "factor": 0.9515,
-     "displayFactor": 0.9515,
+     "factor": 0.9514,
+     "displayFactor": 0.9514,
      "n": 4,
      "usedFallback": false
     },
@@ -37958,8 +37958,8 @@
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 26.9941,
-     "displayFactor": 26.9941,
+     "factor": 26.9939,
+     "displayFactor": 26.9939,
      "n": 222,
      "usedFallback": false
     },
@@ -38089,8 +38089,8 @@
    }
   },
   "fairs": {
-   "broad": 10.868,
-   "standard": 12.171,
+   "broad": 10.862,
+   "standard": 12.17,
    "local": 12.805
   }
  },
@@ -38108,33 +38108,33 @@
    "trend": 16.08,
    "avg30": 15.74,
    "low": 9.9,
-   "updated": "2026-11-17T22:16:19.476Z"
+   "updated": "2026-11-18T22:16:18.984Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
-  "baseValue": 11.837924083044868,
+  "baseValue": 11.837836375552614,
   "breakdowns": {
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9653745698510177,
+     "factor": 0.9794,
+     "displayFactor": 0.965200872052855,
      "n": 3020,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 90.5784,
-     "displayFactor": 90.5784,
+     "factor": 90.5591,
+     "displayFactor": 90.5591,
      "n": 222,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Souichirou Gunjima",
-     "factor": 0.8082,
-     "displayFactor": 0.8082,
+     "factor": 0.8085,
+     "displayFactor": 0.8085,
      "n": 100,
      "usedFallback": false
     },
@@ -38147,8 +38147,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -38179,8 +38179,8 @@
     },
     "rarity": {
      "key": "Special illustration rare",
-     "factor": 26.9941,
-     "displayFactor": 26.9941,
+     "factor": 26.9939,
+     "displayFactor": 26.9939,
      "n": 222,
      "usedFallback": false
     },
@@ -38310,7 +38310,7 @@
    }
   },
   "fairs": {
-   "broad": 10.761,
+   "broad": 10.762,
    "standard": 11.838,
    "local": 12.186
   }
@@ -38331,7 +38331,7 @@
    "trend": 11.98,
    "avg30": 11.73,
    "low": 5.99,
-   "updated": "2026-11-17T22:16:19.424Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -38341,23 +38341,23 @@
     "pokemon": {
      "key": "1024",
      "factor": 1.0015,
-     "displayFactor": 1.002553292061532,
+     "displayFactor": 1.002553742872591,
      "n": 11,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Hyper rare",
-     "factor": 26.2974,
-     "displayFactor": 26.2974,
+     "factor": 26.2921,
+     "displayFactor": 26.2921,
      "n": 69,
      "usedFallback": false
     },
     "illustrator": {
      "key": "5ban Graphics",
-     "factor": 0.9121,
-     "displayFactor": 0.9121,
+     "factor": 0.912,
+     "displayFactor": 0.912,
      "n": 1443,
      "usedFallback": false
     },
@@ -38370,8 +38370,8 @@
     },
     "cardType": {
      "key": "Tera ex",
-     "factor": 1.9736,
-     "displayFactor": 1.9736,
+     "factor": 1.9734,
+     "displayFactor": 1.9734,
      "n": 134,
      "usedFallback": false
     },
@@ -38533,7 +38533,7 @@
    }
   },
   "fairs": {
-   "broad": 7.5537,
+   "broad": 7.5506,
    "standard": 10.135,
    "local": 8.9503
   }
@@ -38552,7 +38552,7 @@
    "trend": 6.83,
    "avg30": 9.07,
    "low": 4,
-   "updated": "2026-11-17T22:16:19.484Z"
+   "updated": "2026-11-18T22:16:18.997Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -38561,24 +38561,24 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9653745698510177,
+     "factor": 0.9794,
+     "displayFactor": 0.965200872052855,
      "n": 3020,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Hyper rare",
-     "factor": 26.2974,
-     "displayFactor": 26.2974,
+     "factor": 26.2921,
+     "displayFactor": 26.2921,
      "n": 69,
      "usedFallback": false
     },
     "illustrator": {
      "key": "MARINA Chikazawa",
-     "factor": 1.0771,
-     "displayFactor": 1.0771,
+     "factor": 1.0768,
+     "displayFactor": 1.0768,
      "n": 23,
      "usedFallback": false
     },
@@ -38591,8 +38591,8 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
@@ -38754,7 +38754,7 @@
    }
   },
   "fairs": {
-   "broad": 5.0386,
+   "broad": 5.0358,
    "standard": 6.5434,
    "local": 6.244
   }
@@ -38773,7 +38773,7 @@
    "trend": 4.42,
    "avg30": 4.6,
    "low": 2.29,
-   "updated": "2026-11-17T22:16:19.520Z"
+   "updated": "2026-11-18T22:16:18.980Z"
   },
   "priceFlagged": false,
   "priceCorrected": false,
@@ -38782,24 +38782,24 @@
    "broad": {
     "pokemon": {
      "key": "none",
-     "factor": 0.9795,
-     "displayFactor": 0.9653745698510177,
+     "factor": 0.9794,
+     "displayFactor": 0.965200872052855,
      "n": 3020,
      "usedFallback": false,
      "tier": "chase",
-     "tierExponent": 1.7013
+     "tierExponent": 1.7016
     },
     "rarity": {
      "key": "Hyper rare",
-     "factor": 26.2974,
-     "displayFactor": 26.2974,
+     "factor": 26.2921,
+     "displayFactor": 26.2921,
      "n": 69,
      "usedFallback": false
     },
     "illustrator": {
      "key": "Toyste Beach",
-     "factor": 0.938,
-     "displayFactor": 0.938,
+     "factor": 0.9387,
+     "displayFactor": 0.9387,
      "n": 300,
      "usedFallback": false
     },
@@ -38812,15 +38812,15 @@
     },
     "cardType": {
      "key": "Standard",
-     "factor": 0.902,
-     "displayFactor": 0.902,
+     "factor": 0.9021,
+     "displayFactor": 0.9021,
      "n": 16582,
      "usedFallback": false
     },
     "cardName": {
      "key": "Bravery Charm",
-     "factor": 1.2467,
-     "displayFactor": 1.2467,
+     "factor": 1.2466,
+     "displayFactor": 1.2466,
      "n": 2,
      "usedFallback": false
     },
@@ -38975,7 +38975,7 @@
    }
   },
   "fairs": {
-   "broad": 4.3077,
+   "broad": 4.3094,
    "standard": 5.2467,
    "local": 4.9284
   }
